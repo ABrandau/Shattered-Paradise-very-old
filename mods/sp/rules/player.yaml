@@ -1,0 +1,59 @@
+Player:
+	AlwaysVisible:
+	TechTree:
+	GlobalUpgradeManager:
+	ClassicProductionQueue@Building:
+		Type: Building
+		BuildSpeed: .4
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		BuildTimeSpeedReduction: 100, 80, 65, 50, 35, 30
+		SpeedUp: True
+	ClassicProductionQueue@Defense:
+		Type: Defense
+		BuildSpeed: .47
+		LowPowerSlowdown: 3
+		QueuedAudio: Building
+		ReadyAudio: ConstructionComplete
+		BuildTimeSpeedReduction: 100, 80, 65, 50, 35, 30
+		SpeedUp: True
+	ClassicProductionQueue@Vehicle:
+		Type: Vehicle
+		BuildSpeed: .47
+		LowPowerSlowdown: 3
+		BuildTimeSpeedReduction: 100, 85, 75, 65, 55, 45, 37, 30
+		SpeedUp: True
+	ClassicProductionQueue@Infantry:
+		Type: Infantry
+		BuildSpeed: .47
+		LowPowerSlowdown: 3
+		BuildTimeSpeedReduction: 100, 92, 88, 84, 80, 76, 72, 68, 64, 60, 56, 52, 48, 44, 40, 36, 30
+		SpeedUp: True
+	ClassicProductionQueue@Air:
+		Type: Air
+		BuildSpeed: .4
+		LowPowerSlowdown: 3
+		SpeedUp: True
+	PlaceBuilding:
+		Palette: placebuilding
+	SupportPowerManager:
+	ScriptTriggers:
+	MissionObjectives:
+	ConquestVictoryConditions:
+	PowerManager:
+	AllyRepair:
+	PlayerResources:
+		SelectableCash: 5000, 10000, 20000
+	ActorGroupProxy:
+	DeveloperMode:
+		Enabled: true
+	Shroud:
+	FrozenActorLayer:
+	BaseAttackNotifier:
+		AllyNotification: OurAllyIsUnderAttack
+	HarvesterAttackNotifier:
+	PlayerStatistics:
+	PlaceBeacon:
+	# ResourceStorageWarning:
+	InsufficientFundsWarning:

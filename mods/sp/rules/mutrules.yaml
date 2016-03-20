@@ -1,0 +1,1243 @@
+############################################
+# Infantry
+############################################
+MARAUDER:
+	Inherits: ^Mutant
+	Inherits@1: ^MutRender	
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 18
+		Prerequisites: ~murax
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Marauder
+		Description: Forgotten Basic Infantry, equipped with shotgun.\nThey can generate tiberium fortifications for themselves.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft, Base Defences.
+	Voiced:
+		VoiceSet: Rocket
+	Health:
+		HP: 110
+	AutoTarget:
+		ScanRadius: 5
+	Mobile:
+		Speed: 42
+	Armament@PRIMARY:
+		Weapon: MarauderShotgun
+		Name: OnFoot
+	Armament@PRIMARY2:
+		Weapon: MarauderShotgun
+		Name: OnFoot		
+	Armament@PRIMARY3:
+		Weapon: MarauderShotgun
+		Name: OnFoot		
+	Armament@PRIMARY4:
+		Weapon: MarauderShotgun
+		Name: OnFoot				
+	Armament@GARRISON1:
+		Weapon: GMarauderShotgun
+	Armament@GARRISON2:
+		Weapon: GMarauderShotgun	
+	Armament@GARRISON3:
+		Weapon: GMarauderShotgun	
+	Armament@GARRISON4:
+		Weapon: GMarauderShotgun			
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+	SpawnActorOnDeath@tiberium:
+		Probability: 7
+		DeathType:
+	SpawnActorOnDeath@tiberium2:
+		Probability: 7
+		DeathType:
+E3:
+	Inherits: ^Mutant
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 19
+		Prerequisites: ~murax
+	Valued:
+		Cost: 170
+	Tooltip:
+		Name: Skirmisher
+		Description: Anti-tank infantry.\n  Strong vs Vehicles, Aircraft, Buildings\n  Weak vs Infantry
+	Voiced:
+		VoiceSet: Rocket
+	Health:
+		HP: 95
+	Mobile:
+		Speed: 42
+	Armament@PRIMARY:
+		Weapon: SkirmisherRocket
+		LocalOffset: 128,0,640
+		Name: OnFoot
+	Armament@GARRISON:
+		Weapon: GSkirmisherRocket
+		LocalOffset: 128,0,640		
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+	SpawnActorOnDeath@tiberium:
+		Probability: 7
+		DeathType:
+	SpawnActorOnDeath@tiberium2:
+		Probability: 7
+		DeathType:		
+
+E2:
+	Inherits: ^Mutant
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Mechanic
+		Description: Infiltrates and captures enemy structures.\n  Unarmed
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 20
+		Prerequisites: ~murax
+	Voiced:
+		VoiceSet: Engineer
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 80
+	Passenger:
+		PipType: Yellow
+	EngineerRepair:
+	RepairsBridges:
+	AttackFrontal:
+	Armament:
+		Weapon: MechanicRepair
+		TargetStances: Ally
+		ForceTargetStances: None			
+	Captures:
+		CaptureTypes: building
+	AutoTarget:
+		ScanRadius: 5
+	-GainsExperience:
+	RenderSprites:
+	WithInfantryBody:
+		AttackSequence: throw
+	SpawnActorOnDeath@tiberium:
+		Probability: 6
+		DeathType:
+	SpawnActorOnDeath@tiberium2:
+		Probability: 6
+		DeathType:
+	
+RANGER:
+	Inherits: ^Mutant
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 21
+		Prerequisites: ~murax, muradr
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Ranger
+		Description: Scout Infantry, cloaks when idle.\n  Detects cloaked units.\n  Strong vs Infantry.\n  Weak vs Vehicles.
+	Voiced:
+		VoiceSet: Umagon
+	Health:
+		HP: 110
+	Mobile:
+		Speed: 75
+	RevealsShroud:
+		Range: 11c0		
+	Cloak@CLOAKGENERATOR:
+		UpgradeMinEnabledLevel: 0
+		InitialDelay: 15
+		CloakDelay: 15
+		IsPlayerPalette: true
+		UncloakOn: Attack, Move
+	Infiltrates:
+		Types: SpyInfiltrate		
+	Armament@PRIMARY:
+		Weapon: RangerRifle
+		LocalOffset: 128,0,640
+		Name: OnFoot
+	Armament@GARRISON:
+		Weapon: GRangerRifle
+		LocalOffset: 128,0,640
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+	RenderSprites:
+		Image: UMAGON
+		
+MUTFIEND:
+	Inherits: ^Mutant
+	Tooltip:
+		Name: Tiberian Fiend
+		Description: Tiberian Beast, fires tiberium shards at enemies.\nCannot be crushed.\n  Strong vs Infantry, Vehicles.\n  Weak vs Aircraft, Armor Piercing Weapons.
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 22
+		Prerequisites: ~murax, mustable
+	SpawnActorOnDeath@conversion:
+		Actor: cybdog
+		Probability: 100
+		OwnerType: Killer
+		DeathType: CabalDeathInfantry
+		RequiresLobbyCreeps: true
+	Valued:
+		Cost: 450
+	Health:
+		HP: 220
+		Shape: Circle
+			Radius: 213		
+	-Crushable:	
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 80
+	Voiced:
+		VoiceSet: Fiend
+	Targetable:
+		TargetTypes: Infantry, Ground
+	RenderSprites:
+		Image: doggie
+	Armament@Primary:
+		Weapon: FiendShard2
+		Name: OnFoot
+	Armament@Garrison:
+		Weapon: GFiendShard2
+	PoisonedByTiberium@buff:	
+		Weapon: FiendBuffer
+	Cloak@CLOAKGENERATOR:
+		UpgradeTypes: FiendCloak
+		UpgradeMinEnabledLevel: 1
+		InitialDelay: 15
+		CloakDelay: 15
+		IsPlayerPalette: true
+		UncloakOn: Attack, Move		
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+		
+AWARRIOR:
+	Inherits: ^Mutant
+	Inherits@1: ^MutRender		
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 23
+		Prerequisites: ~murax, muhall
+	Valued:
+		Cost: 350
+	Tooltip:
+		Name: Forgotten Knight
+		Description: Suicide Infantry\nTurns into berserkers when killed.\n  Strong vs Infantry, Vehicles, Buildings.\n  Weak vs Aircraft, Anti Infantry Weapons.
+	Voiced:
+		VoiceSet: Rocket
+	Health:
+		HP: 150
+	Mobile:
+		Speed: 75
+	-SpawnActorOnDeath@conversion:
+	Armament@PRIMARY:
+		Weapon: WarriorAcid
+		Name: OnFoot
+		LocalOffset: 128,0,400
+	Armament@GARRISON:
+		Weapon: GWarriorAcid
+		LocalOffset: 128,0,400		
+	AttackFrontal:
+		Voice: Attack
+	SpawnActorOnDeath:
+		Actor: berserker
+		probability: 100
+
+PSYKER:
+	Inherits: ^Mutant
+	Inherits@1: ^MutRender		
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 24
+		Prerequisites: ~murax, muhall
+		BuildLimit: 1
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: Mind Walker
+		Description: Forgotten Commando. Pure strain\nforgotten that can call down lightning.\nAttacks from afar.\n  Strong vs Vehicles, Aircraft, Buildings\n  Weak vs Infantry
+	Voiced:
+		VoiceSet: Umagon
+	Health:
+		HP: 100
+	Mobile:
+		Speed: 75
+	Targetable:
+		TargetTypes: Ground, Infantry, MindControlInmune		
+	Armament@PRIMARY:
+		Weapon: PsykerRay
+		Name: OnFoot
+		LocalOffset: 128,0,640
+	Armament@GARRISON:
+		Weapon: GPsykerRay
+		LocalOffset: 128,0,640		
+	AttackFrontal:
+		Voice: Attack
+		Armament: OnFoot
+		
+WOLF:
+	Inherits: ^Mutant
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 27
+		Prerequisites: ~muweap, mustable
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Tiberian Bull
+		Description: Tiberian Beast, it emits tiberium radiation\naffecting nearby units.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
+	Voiced:
+		VoiceSet: Fiend	
+	SpawnActorOnDeath@conversion:
+		Actor: cybdog
+		Probability: 100
+		OwnerType: Killer
+		DeathType: CabalDeathInfantry
+		RequiresLobbyCreeps: true
+	WithRangeCircle:
+		Range: 6c0
+		Type: cloakgenerator
+	UpgradeActorsNear@lobo:
+		Upgrades: ForgInfantryBuff
+		Range: 6c0
+	UpgradeActorsNear@qlo:
+		Upgrades: ForgInfantrydeBuff
+		Range: 6c0
+		ValidStances: Enemy
+	AutoTarget:
+		ScanRadius: 5
+	Health:
+		HP: 300
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 42
+		SharesCell: false
+	Armament@PRIMARY:
+		Weapon: WolfBlow
+		LocalOffset: 128,0,640
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: shoot
+################################################
+# Vehicles
+################################################
+MUTAPC:
+	Inherits: ^VoxelTank
+	Inherits@1:	^Ra2vxl	
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: IFV
+		Description: Light combat vehicle equipped with a\nMachinegun, can transport up to 3 soldiers.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 25
+		Prerequisites: ~muweap
+	Targetable:
+		TargetTypes: Ground, Vehicle, Repair, Disruptor
+	Mobile:
+		TurnSpeed: 7
+		Speed: 150
+		Crushes: wall, crate, infantry
+	Health:
+		HP: 190
+	Armor:
+		Type: Light
+	Armament:
+		Weapon: IFVulcan
+		LocalOffset: -50,0,410
+	Cargo:
+		Types: Infantry
+		MaxWeight: 3
+		PipCount: 3
+		UnloadVoice: Unload
+		LoadingUpgrades: notmobile		
+	AttackTurreted:
+		Voice: Attack
+	RenderVoxels:
+		Scale: 0.7
+	Turreted:
+		TurnSpeed: 10
+		# Offset: -170,0,0
+	AutoTarget:
+	WithVoxelTurret:
+
+MUTTANK:
+	Inherits: ^VoxelTank
+	Inherits@1:	^Ra2vxl	
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Leonid Tank
+		Description: Light Tank, average\nquality but cheap.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 26
+		Prerequisites: ~muweap
+	Targetable:
+		TargetTypes: Ground, Vehicle, Repair, Disruptor
+	Mobile:
+		TurnSpeed: 8
+		Speed: 110
+		Crushes: wall, crate, infantry
+	# WithTurret:
+		# Recoils: True
+	Health:
+		HP: 250
+	Armor:
+		Type: Heavy
+	Armament:
+		Weapon: LeonidCannon
+		LocalOffset: -50,0,410
+	AttackTurreted:
+		Voice: Attack
+	RenderVoxels:
+		Scale: 0.75
+	Turreted:
+		TurnSpeed: 10
+		# Offset: -170,0,0
+	AutoTarget:
+	WithVoxelTurret:	
+
+MUTQUAD:
+	Inherits: ^VoxelTank
+	Inherits@1:	^Ra2vxl	
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: Quad Cannon
+		Description: Medium truck equiped with a quad cannon.\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles.
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 27
+		Prerequisites: ~muweap, muradr
+	Targetable:
+		TargetTypes: Ground, Vehicle, Repair, Disruptor
+	Mobile:
+		TurnSpeed: 7
+		Speed: 90
+		Crushes: wall, crate, infantry
+	Health:
+		HP: 300
+	Armor:
+		Type: Light
+	RenderVoxels:
+		Scale: 0.75
+	# WithMuzzleOverlay:
+	Armament@primary:
+		Weapon: QuadFire
+		MuzzleSequence: muzzle
+		LocalOffset: 600,0,450
+	Armament@Secondary:
+		Weapon: QuadFireAA
+		MuzzleSequence: muzzle
+		MuzzlePalette: apgrey
+		LocalOffset: 600,0,450		
+	AttackTurreted:
+		Voice: Attack
+	Turreted:
+		TurnSpeed: 7
+		Offset: -100,0,0
+	AutoTarget:
+	WithVoxelTurret:		
+	
+MLRS:
+	Inherits: ^VoxelTank
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Ostwind
+		Description: Light artillery outfitted with \nTiberium fueled rockets, deals damage\non a wide area.\n  Strong vs Infantry, Buildings\n  Weak vs Armored Targets.
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 28 
+		Prerequisites: ~muweap, muradr
+	Targetable:
+		TargetTypes: Ground, Vehicle, Repair, Disruptor
+	Mobile:
+		TurnSpeed: 9
+		Speed: 90
+		Crushes: wall, crate, infantry
+	Health:
+		HP: 150
+	Armor:
+		Type: Wood
+	RenderVoxels:
+		LightAmbientColor: 0.5,0.5,0.5
+		LightDiffuseColor: 0.7,0.7,0.7
+		Scale: 0.95
+	Armament:
+		Weapon: tiberianrocket
+		LocalOffset: -50,0,410
+	AttackTurreted:
+		Voice: Attack
+	Turreted:
+		TurnSpeed: 5
+		Offset: -300,0,0
+	AutoTarget:
+	WithVoxelTurret:	
+	
+HVRTRUK3:
+	Inherits: ^VoxelVehicle
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Demo Truck
+		Description: Hover demolitions truck.\nDetonates it's warhead when destroyed.\nCan move on water.\n  Unarmed
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 29
+		Prerequisites: ~muweap, muhall
+	Mobile:
+		TurnSpeed: 5
+		Speed: 100
+		TerrainSpeeds:
+			Water: 60
+	Health:
+		HP: 125
+	Hovers:	
+	Armor:
+		Type: Wood
+	Explodes:
+		Weapon: MiniNuke
+		EmptyWeapon: MiniNuke
+	AttackSuicides:		
+	RenderVoxels:
+		Scale: 1
+	WithVoxelBody:
+	LeavesTrails:
+		Image: wake
+		Palette: effect
+		TerrainTypes: Water
+		StationaryInterval: 18
+		MovingInterval: 6	
+	
+FORTRESS:
+	Inherits: ^VoxelVehicle
+	Inherits@1:	^Ra2vxl	
+	Valued:
+		Cost: 1300
+	Tooltip:
+		Name: Battle Fortress
+		Description: Armored battle wagon.\nWorks as an APC.\nInfantry can fire from inside.\nCan move over water.\n  Weak vs anti armor weapons
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 30
+		Prerequisites: ~muweap, muhall
+	Selectable:
+		Bounds: 80,60		
+	Mobile:
+		TurnSpeed: 6
+		Speed: 75
+		TerrainSpeeds:
+			Water: 60
+	Health:
+		HP: 500
+	Armor:
+		Type: Heavy
+	RenderVoxels:
+		Scale: 0.85
+	Cargo:
+		Types: Infantry
+		MaxWeight: 8
+		PipCount: 8
+		InitialUnits: e3, e3, marauder, marauder
+		UnloadVoice: Unload
+		LoadingUpgrades: notmobile
+	AttackGarrisoned:
+		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
+		PortYaws: 0, 176, 341, 512, 682, 853#10, 10, 10, 10, 10, 10
+		PortCones: 1086, 86, 86, 86, 86, 86#10, 10, 10, 10, 10, 
+	AutoTarget:
+	WithVoxelBody:
+	LeavesTrails:
+		Image: wake
+		Palette: effect
+		TerrainTypes: Water
+		StationaryInterval: 18
+		MovingInterval: 6	
+##########################################################
+# Aircraft
+##########################################################	
+MUTBIRD:
+	Inherits: ^Helicopter
+	Inherits@1: ^SpriteActor
+	Inherits@2: ^MutRender	
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Minelayer Bird
+		Description: Scout Bird, places mines.\n  Unnarmed.
+	Buildable:
+		Queue: Air
+		BuildPaletteOrder: 20
+		Prerequisites: ~muair, mustable
+	Selectable:
+		Bounds: 30,24
+	Aircraft:
+		TurnSpeed: 6
+		Speed: 100
+		CanHover: false
+		Repulsable: true
+		MoveIntoShroud: true
+		TakeoffSound: orcaup1.aud
+		LandingSound: orcadwn1.aud
+	Health:
+		HP: 150
+	Armor:
+		Type: Wood
+	Minelayer:
+		Mine: mumine
+	AmmoPool:
+		Ammo: 10
+		PipCount: 10
+		PipType: Ammo
+		SelfReloadTicks: 600
+		SelfReloads: true
+		PipTypeEmpty: AmmoEmpty
+	-RenderVoxels:
+	-WithVoxelBody:	
+	WithShadow:
+	RenderSprites:
+	# WithFacingSpriteBody:
+	WithInfantryBody:
+		IdleSequences: run
+	# WithMoveAnimation:
+		# MoveSequence: run
+	BodyOrientation:
+		QuantizedFacings: 8
+
+MUTHELI:
+	Inherits: ^Helicopter
+	Inherits@1:	^Ra2vxl		
+	Inherits@3: ^BasicStealthDetection	
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Gargoyle
+		Description: Heavy assault gunship with\ndual missile launchers.\n  Strong vs Infantry, Light Vehicles.\n  Weak vs Anti air.
+	Buildable:
+		Queue: Air
+		BuildPaletteOrder: 20
+		Prerequisites: ~muair
+	Selectable:
+		Bounds: 30,24
+	Aircraft:
+		TurnSpeed: 7
+		Speed: 75
+		MoveIntoShroud: true
+		TakeoffSound: orcaup1.aud
+		LandingSound: orcadwn1.aud
+		RearmBuildings: muair, gahpad, nahpad
+	Health:
+		HP: 225
+	RenderVoxels:
+		Scale: 1
+	Armor:
+		Type: Light
+	WithSpriteRotorOverlay
+		Offset: -50,0,480
+	Armament@primary:
+		Weapon: GargoylVulcan
+	Armament@secondary:
+		Weapon: GargoylRocket
+	Armament@tertiary:
+		Weapon: GargoylRocketAA		
+	AttackHeli:
+		FacingTolerance: 20
+		Voice: Attack
+	AmmoPool:
+		Ammo: 30
+		PipCount: 8
+		ReloadCount: 15
+		ReloadTicks: 200		
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+	AutoTarget:
+	RenderSprites:
+	SpawnActorOnDeath:
+		Actor: MUTHELI.Husk		
+		
+WETP:
+	Inherits: ^Plane
+	Inherits@1:	^Ra2vxl	
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Falcon
+		Description: Light Bomber.\n  Strong vs Light armored targets.\n  Weak vs Aircraft, Anti air units.
+	Buildable:
+		Queue: Air
+		BuildPaletteOrder: 20
+		Prerequisites: ~muair, muhall
+	Selectable:
+		Bounds: 30,24
+	Aircraft:
+		CruiseAltitude: 3072
+		MaximumPitch: 120
+		TurnSpeed: 6
+		Speed: 180
+		AirborneUpgrades: airborne
+		MoveIntoShroud: true
+		TakeoffSound: orcaup1.aud
+		LandingSound: orcadwn1.aud
+	Health:
+		HP: 150
+	Armor:
+		Type: Light
+	Armament:
+		Weapon: FalconPunch
+	Armament@1:
+		Weapon: FalconPunch		
+	RenderVoxels:
+		Scale: 0.7
+	AttackPlane:
+		Voice: Attack
+		FacingTolerance: 20
+	AmmoPool:
+		Ammo: 16
+		PipCount: 1
+		ReloadCount: 20
+		ReloadTicks: 150	
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+		RearmBuildings: muair, gahpad, nahpad
+	AutoTarget:
+		ScanRadius: 5
+	RenderSprites:
+	Hovers@CRUISING:
+		UpgradeTypes: cruising
+		UpgradeMinEnabledLevel: 1
+	SpawnActorOnDeath:
+		Actor: WETP.Husk	
+##########################################################
+# Structures
+##########################################################	
+MUPOWR:
+	Inherits: ^Building
+	Inherits@1: ^MutRender
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 0
+		Prerequisites: ~structures.mut
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Mutant Power Plant
+		Description: Provides power for other structures.
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 500
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 4c0
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	Selectable:
+		Bounds: 90, 48, 0, -6
+	Power:
+		Amount: 70
+	InfiltrateForPowerOutage:
+	AffectedByPowerOutage:
+	Targetable:
+		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate
+	ScalePowerWithHealth:
+	DisabledOverlay:
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 90, 84, 0, -12
+
+MURAX:
+	Inherits: ^Building
+	Inherits@1: ^MutRender
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 30
+		Prerequisites: anypower, ~structures.mut
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Mutant Armory
+		Description: Forgotten Weapons stash, arms soldiers for battle.
+	ProvidesPrerequisite:
+		Prerequisite: murax
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 88, 48, 0, -8
+	Health:
+		HP: 800
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+	RallyPoint:
+		Offset: 2,3
+		Palette: mouse
+		IsPlayerPalette: false
+	Exit@1:
+		SpawnOffset: -256,1024,0
+		ExitCell: 2,2
+	Production:
+		Produces: Infantry
+	PrimaryBuilding:
+	ProductionBar:
+	Power:
+		Amount: -20
+	# ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 88, 56, 0, -8
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		Palette: ra
+		ReferencePoint: Top
+		ZOffset: 256
+		UpgradeTypes: primary
+		UpgradeMinEnabledLevel: 1
+		
+MUWEAP:
+	Inherits: ^Building
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Mutant War Factory
+		Description: Produces vehicles.
+	ProvidesPrerequisite:
+		Prerequisite: factory
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 50
+		Prerequisites: proc, ~structures.mut
+	Building:
+		Footprint: xxx= xxx= xxx=
+		Dimensions: 4,3
+	Selectable:
+		Bounds: 154, 96, -2, -12
+	Health:
+		HP: 1300
+	RevealsShroud:
+		Range: 4c0
+	RallyPoint:
+		Offset: 4,1
+		Palette: mouse
+		IsPlayerPalette: false
+	Exit@1:
+		SpawnOffset: -384,-384,0
+		ExitCell: 3,1
+		ExitDelay: 5
+	Production:
+		Produces: Vehicle
+	PrimaryBuilding:
+	ProductionBar:
+	WithIdleOverlay@ROOF:
+		Sequence: idle-roof
+	WithProductionDoorOverlay@DOOR:
+	WithProductionOverlay@REDLIGHTS:
+		Sequence: production-lights
+	WithIdleOverlay@BIB:
+		Sequence: bib
+	Power:
+		Amount: -30
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 154, 100, -2, -12
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		Palette: ra
+		ReferencePoint: Top
+		ZOffset: 256
+		UpgradeTypes: primary
+		UpgradeMinEnabledLevel: 1	
+
+MUAIR:
+	Inherits: ^Building
+	Inherits@1: ^MutRender	
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Mutant Airstrip
+		Description: Produces, rearms and\nrepairs helicopters and Jets.
+	Buildable:
+		BuildPaletteOrder: 60
+		Queue: Building
+		Prerequisites: proc, ~structures.mut
+	Building:
+		Footprint: xxxx xxxx
+		Dimensions: 2,4
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 5c0
+	Exit@1:
+		SpawnOffset: 0,-256,250
+	RallyPoint:
+		Palette: mouse
+		IsPlayerPalette: false
+	Production:
+		Produces: Air
+	PrimaryBuilding:
+	Reservable:
+	RepairsUnits:
+		Interval: 1
+	ProductionBar:
+	Power:
+		Amount: 0
+	Selectable:
+		Bounds: 88, 66, 0, -5
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 88, 66, 0, -5
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		Palette: ra
+		ReferencePoint: Top
+		ZOffset: 256
+		UpgradeTypes: primary
+		UpgradeMinEnabledLevel: 1		
+		
+MURADR:
+	Inherits: ^Building
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 90
+		Prerequisites: proc, ~structures.mut
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Dome Radar
+		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
+	ProvidesPrerequisite:
+		Prerequisite: radar
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 96, 48, 0, -6
+	Health:
+		HP: 1000
+	Armor:
+		Type: Wood
+	RequiresPower:
+	CanPowerDown:
+		IndicatorPalette: mouse
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+	ProvidesRadar:
+	InfiltrateForExploration:
+	DetectCloaked:
+		Range: 10c0
+	RenderDetectionCircle:
+	RevealsShroud:
+		Range: 10c0
+	Targetable:
+		TargetTypes: Building, Ground, C4, SpyInfiltrate
+	Power:
+		Amount: -50
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 96, 118, 0, -38		
+
+MUHALL:
+	Inherits: ^Building
+	Inherits@1: ^MutRender	
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 100
+		Prerequisites: muweap, muradr, ~structures.mut
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Forgotten Hall
+		Description: Provides access to contact with Forgotten Leaders.
+	ProvidesPrerequisite:
+		Prerequisite: tech
+	Building:
+		Footprint: xxx xxx xxx xxx
+		Dimensions: 3,4
+	Selectable:
+		Bounds: 110, 60, 3, -4
+	Health:
+		HP: 500
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 4c0
+	Power:
+		Amount: -150
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 110, 60, 3, -4		
+		
+MUSTABLE:
+	Inherits: ^Building
+	Inherits@1: ^MutRender		
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 100
+		Prerequisites: murax, ~structures.mut
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Mutant Stable
+		Description: Allows beast herding.
+	ProvidesPrerequisite:
+		Prerequisite: tech
+	Building:
+		Footprint: xx xx xx
+		Dimensions: 2,3
+	Selectable:
+		Bounds: 110, 60, 3, -4
+	Health:
+		HP: 230
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 4c0
+	Power:
+		Amount: -40
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 110, 60, 3, -4		
+##############################################
+# Defences
+##############################################
+MUTWALL:
+	Inherits: ^Wall
+	Inherits@2: ^MutRender
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 1001
+		Prerequisites: ~structures.mut, !structures.cab
+	SoundOnDamageTransition:
+		DamagedSounds:
+		DestroyedSounds:
+	Valued:
+		Cost: 50
+	CustomSellValue:
+		Value: 0
+	Tooltip:
+		Name: Forgotten Wall
+		Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks\nMay make you sell your conyard\nIf you're not careful.
+	Health:
+		HP: 300
+	-Cloak@CLOAKGENERATOR:
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		Image: wall.mut
+	BlocksProjectiles:
+		Height: 640
+	Crushable:
+		CrushClasses: heavywall
+	LineBuild:
+		NodeTypes: wall, turret
+
+MUTGATE_A:
+	Inherits: ^Gate_A
+	Inherits@2: ^MutRender	
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 100
+		Prerequisites: ~structures.mut
+	Tooltip:
+		Name: Forgotten Gate
+	Gate:
+		CloseDelay: 100		
+
+MUTGATE_B:
+	Inherits: ^Gate_B
+	Inherits@2: ^MutRender	
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 100
+		Prerequisites: ~structures.mut
+	Tooltip:
+		Name: Forgotten Gate
+	Gate:
+		CloseDelay: 100		
+		
+MUFLAK:
+	Inherits: ^Defense
+	Inherits@1: ^MutRender
+	Inherits@2: ^TowerStealthDetection	
+	Valued:
+		Cost: 350
+	Tooltip:
+		Name: Flak Station
+		Description: Anti-Air base defense.\nDoesn't require power to operate.\n  Strong vs Aircraft\n  Weak vs Ground units
+	Buildable:
+		Queue: Defense
+		Prerequisites: murax, ~structures.mut
+		BuildPaletteOrder: 60
+	Building:
+	Selectable:
+		Bounds: 40, 30, -3, -8
+	RequiresPower:
+	DisabledOverlay:
+	Health:
+		HP: 350
+	Armor:
+		Type: Light
+	BodyOrientation:
+		QuantizedFacings: 32
+	RenderRangeCircle:
+		RangeCircleType: aa
+	Turreted:
+		TurnSpeed: 10
+		InitialFacing: 50
+	AttackTurreted:
+	WithMuzzleOverlay:	
+	WithSpriteTurret:
+		Recoils: no
+	Armament:
+		Weapon: FlakFire
+		MuzzleSequence: muzzle
+		MuzzlePalette: apgrey		
+		LocalOffset: 450,0,350
+	Power:
+		Amount: -10
+	SelectionDecorations:
+		VisualBounds: 40, 36, -3, -8		
+		
+MUBUNKR:
+	Inherits: ^Defense
+	Inherits@1: ^MutRender
+	Inherits@2: ^TowerStealthDetection
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Bunker
+		Description: Advanced base defense.\nRequires power to operate.\nCannot target air units.\n  Strong vs Ground units\n  Weak vs Aircraft
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 90
+		Prerequisites: murax, ~structures.mut
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 88, 42, 0, -6
+	# RequiresPower:
+	DisabledOverlay:
+	-EmitInfantryOnSell@gdi:
+	-EmitInfantryOnSell@nod:
+	-EmitInfantryOnSell@mut:
+	-EmitInfantryOnSell@cab:
+	-EmitInfantryOnSell@scr:	
+	Health:
+		HP: 600
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 8c0
+	Cargo:
+		InitialUnits: e3, e3, marauder, marauder
+		MaxWeight: 8
+		PipCount: 8
+		Types: Infantry
+	AutoTarget:
+	AttackGarrisoned:
+		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
+		PortYaws: 0, 176, 341, 512, 682, 853
+		PortCones: 86, 86, 86, 86, 86, 86
+	RangeMultiplier:
+		Modifier: 300
+		BaseLevel: 0
+	Power:
+		Amount: -10
+	SelectionDecorations:
+		VisualBounds: 88, 72, 0, -12		
+
+MUMINE:
+	Inherits: ^DeployedVehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Forgotten Mine
+	Health:
+		HP: 50
+	-AttackTurreted:
+	-AutoTarget:		
+	-RenderRangeCircle:
+	-Voiced:
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 3c0
+	BodyOrientation:
+		QuantizedFacings: 32
+	Cloak@cloakgenerator:
+		UpgradeTypes:
+		CloakSound:
+		UncloakSound:
+		Palette: playermut
+		IsPlayerPalette: true		
+		CloakTypes: cloakgenerator
+	Mine:
+		CrushClasses: crate
+		DetonateClasses: crate
+		AvoidFriendly: true		
+	Explodes:
+		Weapon: MineExplode			
+		
+MUVENTI:
+	Inherits: ^Building
+	Inherits@1: ^MutRender
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 95
+		Prerequisites: ~structures.mut, muhall
+	Valued:
+		Cost: 1300
+	Tooltip:
+		Name: Tiberium Ventilator
+		Description: Provides an area buff and debuff for nearby units.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 750
+	Armor:
+		Type: Wood
+	WithRangeCircle:
+		Range: 12c0
+		Type: cloakgenerator		
+	UpgradeActorsNear@lobo:
+		Upgrades: ForgInfantryBuff
+		Range: 12c0
+	UpgradeActorsNear@qlo:
+		Upgrades: ForgInfantrydeBuff
+		Range: 12c0
+		ValidStances: Enemy		
+	RevealsShroud:
+		Range: 4c0
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	Selectable:
+		Bounds: 90, 48, 0, -6
+	Power:
+		Amount: -100
+	Targetable:
+		TargetTypes: Building, Ground, C4, DetonateAttack
+	DisabledOverlay:
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 90, 84, 0, -12		

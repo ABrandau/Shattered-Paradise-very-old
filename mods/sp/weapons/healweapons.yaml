@@ -1,0 +1,20 @@
+
+
+Repair:
+	ReloadDelay: 80
+	Range: 1c819
+	Report: REPAIR11.AUD
+	ValidTargets: Repair
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		DebugOverlayColor: 00FF00
+		Spread: 213
+		Damage: -50
+		ValidTargets: Repair
+
+TiberiumHeal:
+	ReloadDelay: 16
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: -2

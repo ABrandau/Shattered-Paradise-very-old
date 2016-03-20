@@ -1,0 +1,1384 @@
+############################################
+# Infantry
+############################################
+ALTNODE1:
+	Inherits: ^Soldier
+	Inherits@1: ^GainsExperienceNOD
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 6
+		Prerequisites: ~nahand
+	Valued:
+		Cost: 190
+	Tooltip:
+		Name: Flame Warrior
+		Description: Light infantry variant.\nCarries a Flamethrower.\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft
+	Health:
+		HP: 95
+	Mobile:
+		Speed: 76	
+	Armament@PRIMARY:
+		Weapon: MilitantFireball
+		LocalOffset: 0,0,200
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: shoot
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+	RenderSprites:
+
+CRUSADER:
+	Inherits: ^Soldier
+	Inherits@1: ^GainsExperienceNOD	
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 7
+		Prerequisites: ~nahand
+	Valued:
+		Cost: 210
+	Tooltip:
+		Name: Crusader Torpedo Infantry
+		Description: Anti Armour Infantry, equiped with a Rocket launcher\nbackpack, fires many rockets per turn but has a big\nreload time.\nCannot target infantry.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry.
+	Health:
+		HP: 110
+	Mobile:
+		Speed: 65
+	Armament@PRIMARY:
+		Weapon: CrusaderBazooka	
+		LocalOffset: 0,0,600
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: shoot
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+	RenderSprites:
+
+TEMPLAR:
+	Inherits: ^Soldier
+	Inherits@1: ^GainsExperienceNOD	
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 8
+		Prerequisites: ~nahand, naradr
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Templar
+		Description: Heavy weapons Infantry.\nHeals on Tiberium.\nDeals full damage to all units.\n  Weak vs Anti infantry weapons, Aircraft.
+	Health:
+		HP: 200
+	Mobile:
+		Speed: 55
+	Armament@PRIMARY:
+		Weapon: TemplarLasor
+		LocalOffset: 200,-50,320
+	PoisonedByTiberium:
+		Weapon: TiberiumHeal
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: shoot
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+	RenderSprites:
+	
+MHIJACK:
+	Inherits: ^Soldier
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 9
+		Prerequisites: ~nahand, naradr
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Hijacker
+		Description: NOD Agent.\nCan steal enemy vehicles\nand infiltrate powerplants.\nCloaks when idle.\n  Unarmed
+	Voiced:
+		VoiceSet: Spy
+	-Crushable:		
+	Health:
+		HP: 110
+	PoisonedByTiberium:
+		Weapon: TiberiumHeal
+	Targetable:
+		TargetTypes: Ground, Infantry, MindControlInmune		
+	Mobile:
+		Speed: 80
+	Infiltrates:
+		Types: SpyInfiltrate		
+	Captures:
+		CaptureTypes: Vehicle
+	Captures:	
+	Cloak@CLOAKGENERATOR:
+		UpgradeMinEnabledLevel: 0
+		InitialDelay: 50
+		CloakDelay: 50
+		IsPlayerPalette: true
+		UncloakOn: Attack
+	RenderSprites:
+		Image: Chamspy
+	-AutoTarget:
+	WithInfantryBody:
+		AttackSequence: shoot	
+	
+BHS:
+	Inherits: ^Soldier
+	Inherits@1: ^GainsExperienceNOD	
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~nahand, natech
+		BuildLimit: 1
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Hand of Kane
+		Description: NOD Commando, sniper unit.\nCloaked when not attacking.\nCan demolish structures using C4.\nInfantry killed by this unit explode.\nHeals on Tiberium.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Health:
+		HP: 190
+	Mobile:
+		Speed: 80
+	PoisonedByTiberium:
+		Weapon: TiberiumHeal		
+	Voiced:
+		VoiceSet: Oxanna	
+	Armament@PRIMARY:
+		Weapon: BHRifle
+		UpgradeTypes: eliteweapon
+	RevealsShroud:
+		Range: 12c0
+	AttackFrontal:
+		Voice: Attack
+	C4Demolition:
+		C4Delay: 45
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: shoot
+	Cloak@CLOAKGENERATOR:
+		UpgradeMinEnabledLevel: 0
+		InitialDelay: 50
+		CloakDelay: 50
+		# CloakSound: cloak5.aud
+		# UncloakSound: cloak5.aud
+		IsPlayerPalette: true
+		UncloakOn: Attack
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+	RenderSprites:	
+	
+BLACKHANDDUMMY:
+	Inherits: ^BasicBuilding
+	Targetable:
+		TargetTypes:
+	-WithSpriteBody:
+	-WithBuildingExplosion:
+	-ShakeOnDeath:	
+	AutoSelectionSize:
+	Selectable:
+		Bounds: 1,1
+	SelfHealing:
+		Step: -5
+		HealIfBelow: 2
+	RenderSprites:	
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+################################################
+# Vehicles
+################################################
+BGGY:
+	Inherits: ^VoxelVehicle
+	Inherits@1: ^GainsExperienceNOD
+	Inherits@3: ^BasicStealthDetection
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Raider Buggy
+		Description: Fast scout designed for harassment.\n  Strong vs Infantry, Aircraft.\n  Weak vs Vehicles.
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 9
+		Prerequisites: ~naweap
+	Mobile:
+		TurnSpeed: 8
+		Speed: 142
+		Crushes: crate
+	Health:
+		HP: 200
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 7c0
+	Armament@PRIMARY:
+		Weapon: BikeMissile
+		LocalOffset: -128,-170,213, -128,170,213		
+	Armament:
+		Weapon: BuggyCannon
+		LocalOffset: 0,-43,384, 0,43,384
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+	Turreted:
+		Rof: 10
+	AttackTurreted:
+		Voice: Attack
+	AutoTarget:
+	WithMuzzleOverlay:
+
+BIKE:
+	Inherits: ^VoxelVehicle
+	Inherits@1: ^GainsExperienceNOD	
+
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: Demo Cycle
+		Description: Suicide Vehicle armed with an explosive warhead.\nExplodes its warhead when destroyed.\n Strong vs Infantry, Vehicles\n  Weak vs Structures.
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 10
+		Prerequisites: ~naweap
+	Mobile:
+		TurnSpeed: 10
+		Speed: 180
+		Crushes: crate	
+	Health:
+		HP: 100
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 7c0
+	Explodes:
+		Weapon: BikeExplo
+		EmptyWeapon: BikeExplo
+	AttackSuicides:
+
+TTNK:
+	Inherits: ^VoxelTank
+	Inherits@1: ^GainsExperienceNOD	
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Tick Tank
+		Description: Main Battle Tank.\nCan deploy to gain extra protection.\nTick tanks self repair when not deployed.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+	SelfHealing@lel:
+		Step: 2
+		Ticks: 100
+		HealIfBelow: 0.75
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 11
+		Prerequisites: ~naweap
+	Mobile:
+		TurnSpeed: 4
+		Speed: 85
+		Crushes: wall, crate, infantry
+	Health:
+		HP: 400
+	Armor:
+		Type: Heavy
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+	Armament@PRIMARY:
+		Weapon: Tick90mm
+		LocalOffset: 256,0,256
+	WithMuzzleOverlay:
+	Transforms:
+		IntoActor: gatick
+		Facing: 159
+		TransformSounds: place2.aud
+		NoTransformSounds:
+		Voice: Move
+
+SAPC:
+	Inherits: ^VoxelTank
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Subterranean APC
+		Description: Troop transport that can move\nunderground to avoid detection.\n  Unarmed
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 12
+		Prerequisites: ~naweap
+	Mobile:
+		TurnSpeed: 7
+		Speed: 100
+	Health:
+		HP: 175
+	Armor:
+		Type: Light
+	Cargo:
+		Types: Infantry
+		MaxWeight: 5
+		PipCount: 5
+		UnloadVoice: Unload
+		LoadingUpgrades: notmobile
+
+LIMPED:
+	Inherits: ^Vehicle
+	Inherits@2: ^ScrinRender	
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 13
+		Prerequisites: ~naweap, naradr
+	Valued:
+		Cost: 450
+	Tooltip:
+		Name: Toxin Drone
+		Description: Hover Drone, cloaks when deployed.\nSpreads invisible gas around\n slowing and weaking whoever passes through.\nUnnarmed.
+	Health:
+		HP: 220
+	Armor:
+		Type: Wood
+	Mobile:
+		Speed: 140
+		Crushes: wall, mine, crate, infantry
+	Transforms:
+		IntoActor: dlimpet
+		Facing: 96
+		TransformSounds: place2.aud
+		NoTransformSounds:
+		Voice: Move
+	WithSpriteBody:		
+	RevealsShroud:
+		Range: 5c0
+	RenderSprites:	
+	BodyOrientation:
+		QuantizedFacings: 32
+	Hovers:		
+		
+ARMH:
+	Inherits: ^VoxelTank
+	Inherits@1: ^GainsExperienceNOD
+	Inherits@2:	^Ra2vxl
+	Valued:
+		Cost: 1100
+	Tooltip:
+		Name: Beam Cannon
+		Description: Core unit, artillery, fires a beam of\nenergy through long distances.\n  Strong vs Ground units\n  Weak vs Aircraft
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 14
+		Prerequisites: ~naweap, natech
+	Health:
+		HP: 160
+	Armor:
+		Type: Wood
+	Mobile:
+		Speed: 60
+		TurnSpeed: 10
+	RevealsShroud:
+		Range: 9c0
+	RenderVoxels:
+		LightAmbientColor: 0.6, 0.6, 0.6
+		Scale: 0.7	
+	Armament:
+		Weapon: BCLazor
+		LocalOffset: 300,0,500
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+	Voiced:
+		VoiceSet: BeamCannonVO
+		Volume: 1.4
+
+SUBTANK:
+	Inherits: ^VoxelTank
+	Inherits@1: ^GainsExperienceNOD	
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Devil's Tongue
+		Description: Subterranean Flame Tank.\nIs able to move underground.\n  Strong vs Infantry, Buildings\n  Weak vs Tanks, Aircraft
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 15
+		Prerequisites: ~naweap, natech
+	Mobile:
+		TurnSpeed: 6
+		Speed: 81
+		Crushes: wall, crate, infantry
+	Health:
+		HP: 300
+	Armor:
+		Type: Heavy
+	Armament:
+		Weapon: DevilsFlame
+		LocalOffset: 0,200,0		
+	Armament@secondary:
+		Weapon: DevilsFlame
+		LocalOffset: 0,-200,0
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+	
+SGEN:
+	Inherits: ^VoxelTank
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Mobile Stealth Generator
+		Description: High tech vehicle that can cloak\nnearby units when deployed.\nDoes not cloak structures.\n  Unarmed
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 16
+		Prerequisites: ~naweap, naradr
+	Mobile:
+		TurnSpeed: 6
+		Speed: 80
+	Health:
+		HP: 200
+	Armor:
+		Type: Wood
+	Transforms:
+		IntoActor: mastl
+		# Offset: -1,-1
+		Facing: 96
+		TransformSounds: place2.aud
+		NoTransformSounds:
+		Voice: Move
+		
+STNK:
+	Inherits: ^VoxelTank
+	Inherits@1: ^GainsExperienceNOD	
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Stealth Tank
+		Description: Lightly armoured tank equipped with a personal\nstealth generator. Armed with missiles.\nCan be spotted by infantry at close range.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+	Buildable:
+		BuildPaletteOrder: 17
+		Prerequisites: ~naweap, natech
+		Queue: Vehicle
+	Mobile:
+		TurnSpeed: 7
+		Speed: 100
+		Crushes: wall, crate, infantry
+	Health:
+		HP: 210
+	Armor:
+		Type: Light
+	Cloak@cloakgenerator:
+		UpgradeTypes:
+		InitialDelay: 60
+		CloakDelay: 60
+		CloakSound: cloak5.aud
+		UncloakSound: cloak5.aud
+		IsPlayerPalette: true
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+	Armament:
+		Weapon: StealthRocket
+		LocalOffset: 213,43,128, 213,-43,128
+	Armament@Secondary:
+		Weapon: StealthRocketAA
+		LocalOffset: 213,43,128, 213,-43,128		
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: ReturnFire
+	-MustBeDestroyed:
+
+##########################################################
+# Aircraft
+##########################################################	
+APACHE:
+	Inherits: ^Helicopter
+	Inherits@1: ^GainsExperienceNOD
+	Inherits@3: ^BasicStealthDetection		
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Harpy
+		Description: Scout helicopter\narmed with dual chain guns.\nDetects cloaked units.\nCloaks when idle.\nDetects cloaked units.\n  Strong vs Infantry, Light armor, Aircraft\n  Weak vs Vehicles
+	Buildable:
+		Queue: Air
+		BuildPaletteOrder: 20
+		Prerequisites: ~nahpad
+	Selectable:
+		Bounds: 30,24
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 130
+		MoveIntoShroud: true
+	Health:
+		HP: 150
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 15c0
+		Type: CenterPosition
+	Cloak:
+		InitialDelay: 90
+		CloakDelay: 90
+		CloakSound: cloak5.aud
+		UncloakSound: cloak5.aud
+		IsPlayerPalette: true
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage, Move
+	Armament:
+		Weapon: HarpyClaw
+	AttackHeli:
+		FacingTolerance: 20
+		Voice: Attack
+	AmmoPool:
+		Ammo: 12
+		PipCount: 4
+		ReloadCount: 4
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+		ReloadTicks: 100	
+	AutoTarget:
+		InitialStance: HoldFire
+		InitialStanceAI: ReturnFire
+	WithSpriteRotorOverlay:
+		Offset: 85,0,384
+	RenderSprites:
+	SpawnActorOnDeath:
+		Actor: APACHE.Husk
+		
+SCRIN:
+	Inherits: ^Plane
+	Inherits@1: ^GainsExperienceNOD	
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Banshee Fighter
+		Description: Advanced fighter-bomber craft\nwith twin plasma cannons.\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
+	Buildable:
+		Queue: Air
+		BuildPaletteOrder: 20
+		Prerequisites: ~nahpad, natech
+	Selectable:
+		Bounds: 30,24
+	Voiced:
+		VoiceSet: Scrin
+	Aircraft:
+		MaximumPitch: 90
+		TurnSpeed: 3
+		Speed: 175
+		AirborneUpgrades: airborne
+		MoveIntoShroud: true
+		TakeoffSound: dropup1.aud
+		LandingSound: dropdwn1.aud
+	Health:
+		HP: 230
+	Armor:
+		Type: Wood
+	Armament:
+		Weapon: Proton
+	AttackPlane:
+		Voice: Attack
+		FacingTolerance: 20
+	AmmoPool:
+		Ammo: 9
+		PipCount: 3
+		ReloadCount: 3
+		ReloadTicks: 100
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+	AutoTarget:
+	RenderSprites:
+	DeathSounds:
+	SpawnActorOnDeath:
+		Actor: SCRIN.Husk
+		
+##########################################################
+# Structures
+##########################################################	
+NAPOWR:
+	Inherits: ^Building
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 0
+		Prerequisites: ~structures.nod
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Nod Power Plant
+		Description: Provides power for other structures.
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2	
+	Selectable:
+		Bounds: 88, 48, 2, -6
+	Health:
+		HP: 750
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 4c0
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	Power:
+		Amount: 100
+	InfiltrateForPowerOutage:
+	AffectedByPowerOutage:
+	Targetable:
+		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate
+	ScalePowerWithHealth:
+	DisabledOverlay:
+	SelectionDecorations:
+		VisualBounds: 88, 80, 2, -12
+
+NAAPWR:
+	Inherits: ^Building
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 5
+		Prerequisites: factory, ~structures.nod
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Advanced Power Plant
+		Description: Provides twice as much power as\nthe normal Power Plant.
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 2,3
+	Selectable:
+		Bounds: 100, 54, 0, -4
+	Health:
+		HP: 900
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 4c0
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	Power:
+		Amount: 200
+	InfiltrateForPowerOutage:
+	AffectedByPowerOutage:
+	Targetable:
+		TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
+	ScalePowerWithHealth:
+	DisabledOverlay:
+	SelectionDecorations:
+		VisualBounds: 100, 74, 0, -12
+
+NAHAND:
+	Inherits: ^Building
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 30
+		Prerequisites: anypower, ~structures.nod
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Hand of Nod
+		Description: Produces infantry.
+	ProvidesPrerequisite:
+		Prerequisite: barracks
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	Selectable:
+		Bounds: 116, 60, 3, -6
+	Health:
+		HP: 800
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+	Exit@1:
+		SpawnOffset: 384,768,0
+		ExitCell: 3,2
+	RallyPoint:
+		Offset: 3,3
+		Palette: mouse
+		IsPlayerPalette: false
+	Production:
+		Produces: Infantry
+	PrimaryBuilding:
+	ProductionBar:
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	WithProductionOverlay@LIGHT:
+		Sequence: production-light
+	Power:
+		Amount: -20
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 116, 78, 3, -8
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		Palette: ra
+		ReferencePoint: Top
+		ZOffset: 256
+		UpgradeTypes: primary
+		UpgradeMinEnabledLevel: 1
+
+NAWEAP:
+	Inherits: ^Building
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Nod War Factory
+		Description: Produces vehicles.
+	ProvidesPrerequisite:
+		Prerequisite: factory
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 50
+		Prerequisites: proc, ~structures.nod
+	Building:
+		Footprint: xxx= xxx= xxx=
+		Dimensions: 4,3
+	Selectable:
+		Bounds: 149, 80, -3, -10
+	Health:
+		HP: 1300
+	RevealsShroud:
+		Range: 4c0
+	RallyPoint:
+		Offset: 4,1
+		Palette: mouse
+		IsPlayerPalette: false
+	Exit@1:
+		SpawnOffset: -384,-384,0
+		ExitCell: 3,1
+		ExitDelay: 5
+	Production:
+		Produces: Vehicle
+	PrimaryBuilding:
+	ProductionBar:
+	WithIdleOverlay@ROOF:
+		Sequence: idle-roof
+	WithProductionDoorOverlay@DOOR:
+	WithProductionOverlay@LIGHTS:
+		Sequence: production-lights
+	WithIdleOverlay@BIB:
+		Sequence: bib
+	Power:
+		Amount: -30
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 149, 116, -3, -20
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		Palette: ra
+		ReferencePoint: Top
+		ZOffset: 256
+		UpgradeTypes: primary
+		UpgradeMinEnabledLevel: 1
+
+NAHPAD:
+	Inherits: ^Building
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Helipad
+		Description: Produces, rearms and\nrepairs helicopters.
+	Buildable:
+		BuildPaletteOrder: 60
+		Queue: Building
+		Prerequisites: proc, ~structures.nod
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 5c0
+	Exit@1:
+		SpawnOffset: 0,-256,0
+	RallyPoint:
+		Palette: mouse
+		IsPlayerPalette: false
+	Production:
+		Produces: Air
+	PrimaryBuilding:
+		Interval: 1
+	Reservable:
+	RepairsUnits:
+	ProductionBar:
+	WithIdleOverlay@PLATFORM:
+		Sequence: idle-platform
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	WithDeathAnimation@BIB:
+		DeathSequence: dead-platform
+		UseDeathTypeSuffix: false
+	Power:
+		Amount: -10
+	Selectable:
+		Bounds: 78, 48, 0, -6
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 78, 54, 0, -8
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		Palette: ra
+		ReferencePoint: Top
+		ZOffset: 256
+		UpgradeTypes: primary
+		UpgradeMinEnabledLevel: 1
+
+NARADR:
+	Inherits: ^Building
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 90
+		Prerequisites: proc, ~structures.nod
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Nod Radar
+		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
+	ProvidesPrerequisite:
+		Prerequisite: radar
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 96, 48, 0, -6
+	Health:
+		HP: 1000
+	Armor:
+		Type: Wood
+	RequiresPower:
+	CanPowerDown:
+		IndicatorPalette: mouse
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+	ProvidesRadar:
+	InfiltrateForExploration:
+	DetectCloaked:
+		Range: 10c0
+	RenderDetectionCircle:
+	RevealsShroud:
+		Range: 10c0
+	WithIdleOverlay@DISH:
+		Sequence: idle-dish
+		PauseOnLowPower: yes
+	Targetable:
+		TargetTypes: Building, Ground, C4, SpyInfiltrate
+	Power:
+		Amount: -50
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 96, 72, 0, -12
+
+NATECH:
+	Inherits: ^Building
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 100
+		Prerequisites: naweap, naradr, ~structures.nod
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Nod Tech Center
+		Description: Provides access to advanced Nod technologies.
+	ProvidesPrerequisite:
+		Prerequisite: tech
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 86, 48, 0, -4
+	Health:
+		HP: 500
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 4c0
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	Power:
+		Amount: -150
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 86, 58, 0, -4
+
+NATMPL:
+	Inherits: ^Building
+	# Buildable:
+		# Queue: Building
+		# BuildPaletteOrder: 200
+		# Prerequisites: natech, ~structures.nod
+	ProvidesPrerequisite@buildingname:
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Temple of Nod
+		Description: Provides access to advanced Nod technologies.
+	Building:
+		Adjacent: 3
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4,3
+	Selectable:
+		Bounds: 134, 120, 12, -12
+	Health:
+		HP: 1000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 6c0
+	Power:
+		Amount: -200
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	ProduceActorPower:
+		Description: Hunter Seeker
+		LongDesc: Releases a drone that will acquire and destroy an enemy target.
+		Icon: hunterseeker
+		Actors: hunter
+		Type: HunterSeeker
+		ChargeTime: 720
+	Production:
+		Produces: HunterSeeker
+	Exit@1:
+
+NASTLH:
+	Inherits: ^Building
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Stealth Generator
+		Description: Generates a cloaking field\nto hide your forces from the enemy.
+	Buildable:
+		BuildPaletteOrder: 80
+		Prerequisites: proc, natech, ~structures.nod
+		Queue: Defense
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	Health:
+		HP: 600
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 6c0
+	WithIdleOverlay@pulse:
+		Sequence: pulse
+		PauseOnLowPower: true
+	WithRangeCircle:
+		Range: 12c0
+		Type: cloakgenerator
+	Power:
+		Amount: -300
+	RequiresPower:
+	CanPowerDown:
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+		IndicatorPalette: mouse
+	UpgradeActorsNear:
+		Upgrades: cloakgenerator
+		Range: 12c0
+		EnableSound: cloak5.aud
+		DisableSound: cloak5.aud
+		AffectsParent: false
+	UpgradeActorsNear@mini:
+		Upgrades: cloakgeneratormini
+		Range: 12c0
+		EnableSound: cloak5.aud
+		DisableSound: cloak5.aud
+		AffectsParent: false		
+	Selectable:
+		Bounds: 106, 48, 8, -6
+	SelectionDecorations:
+		VisualBounds: 106, 60, 8, -15
+
+NAWAST:
+	Inherits: ^Building
+	Valued:
+		Cost: 1600
+	Tooltip:
+		Name: Waste Refinery
+		Description: Processes Veins\ninto useable resources.
+	# Buildable:
+		# BuildPaletteOrder: 110
+		# Prerequisites: natech, ~structures.nod
+		# Queue: Building
+		# BuildLimit: 1
+	Building:
+		Footprint: =x= xx= =x=
+		Dimensions: 3,3
+	Selectable:
+		Bounds: 100, 60, 5, -5
+	Health:
+		HP: 400
+	RevealsShroud:
+		Range: 6c0
+	TiberianSunRefinery:
+		DockAngle: 160
+		DockOffset: 2,1
+	StoresResources:
+		PipColor: Red
+		PipCount: 15
+		Capacity: 56
+	# FreeActor:
+		# Actor: WEED
+		# SpawnOffset: 3,1
+		# Facing: 160
+	WithIdleOverlay@GLOW:
+		Sequence: idle-glow
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	WithIdleOverlay@BIB:
+		Sequence: bib
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 100, 60, 5, -5
+	RenderSprites:
+
+##############################################
+# Defences
+##############################################
+NAWALL:
+	Inherits: ^Wall
+	# Buildable:
+		# Queue: Defense
+		# BuildPaletteOrder: 20
+		# Prerequisites: ~structures.nod
+	SoundOnDamageTransition:
+		DamagedSounds:
+		DestroyedSounds:
+	Valued:
+		Cost: 50
+	CustomSellValue:
+		Value: 0
+	Tooltip:
+		Name: NOD Wall
+		Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
+	Health:
+		HP: 300
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		Image: wall.nod
+	BlocksProjectiles:
+		Height: 640
+	Crushable:
+		CrushClasses: heavywall
+	LineBuild:
+		NodeTypes: wall, turret
+	
+NALASR:
+	Inherits: ^Defense
+	Inherits@1: ^TowerStealthDetection	
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Laser Turret
+		Description: Basic base defense.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft
+	Buildable:
+		Queue: Defense
+		Prerequisites: nahand, ~structures.nod
+		BuildPaletteOrder: 50
+	Building:
+	Selectable:
+		Bounds: 40, 30, -8, -6
+	RequiresPower:
+	DisabledOverlay:
+	Health:
+		HP: 200
+	Armor:
+		Type: Heavy
+	Turreted:
+		TurnSpeed: 10
+		InitialFacing: 300
+		Offset: 298,-171,0
+	AttackTurreted:
+	Armament:
+		Weapon: TurretLaserFire
+		LocalOffset: 0, 0, 200
+	RenderVoxels:
+	WithVoxelTurret:
+	Power:
+		Amount: -50
+	SelectionDecorations:
+		VisualBounds: 40, 36, -8, -8
+
+NAOBEL:
+	Inherits: ^Defense
+	Inherits@1: ^TowerStealthDetection		
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Obelisk of Light
+		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 90
+		Prerequisites: natech, ~structures.nod
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 88, 42, 0, -6
+	RequiresPower:
+	DisabledOverlay:
+	Health:
+		HP: 600
+	Armor:
+		Type: Heavy
+	Armament:
+		Weapon: ObeliskLaserFire
+		LocalOffset: 1400,210,800
+	AttackCharge:
+		ChargeAudio: obelpowr.aud
+		ReloadTime: 125
+		InitialChargeDelay: 125
+	WithChargeOverlay:
+		Sequence: active
+		Palette: player
+		IsPlayerPalette: true
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	Power:
+		Amount: -150
+	SelectionDecorations:
+		VisualBounds: 88, 72, 0, -12
+
+NASAM:
+	Inherits: ^Defense
+	Inherits@1: ^TowerStealthDetection	
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: S.A.M. Site
+		Description: Nod Anti-Air base defense.\nRequires power to operate.\n  Strong vs Aircraft\n  Weak vs Ground units
+	Buildable:
+		Queue: Defense
+		Prerequisites: nahand, ~structures.nod
+		BuildPaletteOrder: 60
+	Building:
+	Selectable:
+		Bounds: 40, 30, -3, -8
+	RequiresPower:
+	DisabledOverlay:
+	Health:
+		HP: 500
+	Armor:
+		Type: Light
+	BodyOrientation:
+		QuantizedFacings: 32
+	RenderRangeCircle:
+		RangeCircleType: aa
+	Turreted:
+		TurnSpeed: 10
+		InitialFacing: 50
+	AttackTurreted:
+	WithSpriteTurret:
+		Recoils: no
+	Armament:
+		Weapon: RedEye2
+		LocalOffset: 512,0,512
+	Power:
+		Amount: -30
+	SelectionDecorations:
+		VisualBounds: 40, 36, -3, -8
+
+GATICK:
+	Inherits: ^DeployedVehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Deployed Tick Tank
+	Health:
+		HP: 400
+	Armor:
+		Type: Concrete
+	RevealsShroud:
+		Range: 5c0
+	Turreted:
+		TurnSpeed: 6
+		InitialFacing: 128
+		Offset: 170,0,213
+	Armament@PRIMARY:
+		Weapon: Tick90mm
+		LocalOffset: 384,0,128
+		MuzzleSequence: muzzle
+	BodyOrientation:
+		QuantizedFacings: 32
+	RenderVoxels:
+	WithVoxelBarrel:
+		LocalOffset: 170,0,0
+	WithVoxelTurret:
+	Transforms:
+		IntoActor: ttnk
+		Facing: 159
+		TransformSounds: place2.aud
+		NoTransformSounds:
+		Voice: Move
+	WithMuzzleOverlay:
+
+MASTL:
+	Inherits: ^DeployedVehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Deployed Stealth Generator
+	Health:
+		HP: 250
+	-AttackTurreted:
+	-AutoTarget:		
+	-RenderRangeCircle:
+	WithRangeCircle:
+		Range: 6c0
+		Type: cloakgenerator	
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 6c0
+	BodyOrientation:
+		QuantizedFacings: 32
+	Transforms:
+		IntoActor: sgen
+		Facing: 96
+		TransformSounds: place2.aud
+		NoTransformSounds:
+		Voice: Move
+	UpgradeActorsNear:
+		Upgrades: cloakgenerator
+		Range: 5c0
+		EnableSound: cloak5.aud
+		DisableSound: cloak5.aud
+		AffectsParent: true
+	
+DLIMPET:
+	Inherits: ^DeployedVehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Deployed Toxin Mine
+	Health:
+		HP: 250
+	-AttackTurreted:
+	-AutoTarget:		
+	-RenderRangeCircle:
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 6c0
+	BodyOrientation:
+		QuantizedFacings: 32
+	Transforms:
+		IntoActor: limped
+		Facing: 96
+		TransformSounds: place2.aud
+		NoTransformSounds:
+		Voice: Move
+	Cloak:
+		CloakSound:
+		UncloakSound:
+		IsPlayerPalette: true
+		CloakTypes: cloakgenerator
+	WithRangeCircle:
+		Range: 5c0
+		Type: cloakgenerator			
+	UpgradeActorsNear@toxin:
+		Upgrades: NodToxindebuff
+		ValidStances: Enemy
+		Range: 8c0
+	
+GAARTY:
+	Inherits@1: ^DeployedVehicle
+	Valued:
+		Cost: 975
+	Tooltip:
+		Name: Deployed Artillery
+	Health:
+		HP: 300
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 9c0
+	Turreted:
+		TurnSpeed: 5
+		InitialFacing: 128
+		Offset: 0,0,171
+	Armament:
+		Weapon: 155mm
+		LocalOffset: 811,0,0
+		MuzzleSequence: muzzle
+	BodyOrientation:
+		QuantizedFacings: 32
+	RenderVoxels:
+		LightAmbientColor: 0.4, 0.4, 0.4
+	WithVoxelBarrel:
+		LocalOffset: 0,0,-512
+	WithVoxelTurret:
+	Transforms:
+		IntoActor: art2
+		Facing: 96
+		TransformSounds: place2.aud
+		NoTransformSounds:
+		Voice: Move
+	WithMuzzleOverlay:
+
+NAMISL:
+	Inherits: ^Building
+	# Buildable:
+		# Queue: Defense
+		# BuildPaletteOrder: 100
+		# Prerequisites: natech, ~structures.nod
+		# BuildLimit: 1
+	Valued:
+		Cost: 1300
+	Tooltip:
+		Name: Nod Missile Silo
+		Description: Launches a devastating missile\nat a target location.\nRequires power to operate.
+	ProvidesPrerequisite:
+		Prerequisite: tech
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 75,48
+	Health:
+		HP: 1000
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 4c0
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	Power:
+		Amount: -50
+	CanPowerDown:
+		IndicatorPalette: mouse
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+	RequiresPower:
+	DisabledOverlay:
+	ProvidesPrerequisite@buildingname:
+	SupportPowerChargeBar:
+	NukePower:
+		Cursor: nuke
+		Icon: clustermissile
+		ChargeTime: 540
+		Description: Cluster Missile
+		LongDesc: Launches a conventional warhead\nat a target location.
+		BeginChargeSound:
+		EndChargeSound: 00-i154.aud
+		SelectTargetSound:
+		InsufficientPowerSound:
+		IncomingSound: 00-i150.aud
+		LaunchSound: icbm1.aud
+		MissileWeapon: ClusterMissile
+		SpawnOffset: 0,427,0
+		DisplayTimer: False
+		DisplayBeacon: False
+		DisplayRadarPing: True
+		BeaconPoster:
+		CameraActor: camera
+	SelectionDecorations:
+		VisualBounds: 75,48

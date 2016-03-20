@@ -1,0 +1,345 @@
+############################################################
+#		GDI
+############################################################
+DSHP.Husk:
+	Inherits: ^AircraftHusk
+	Tooltip:
+		Name: Dropship
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 168
+	RenderSprites:
+		Image: dshp
+	RenderVoxels:
+		Image: dshp
+
+ORCA.Husk:
+	Inherits: ^AircraftHusk
+	Tooltip:
+		Name: Orca Fighter
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 186
+	RenderSprites:
+		Image: orca
+	RenderVoxels:
+		Image: orca
+
+ORCAB.Husk:
+	Inherits: ^AircraftHusk
+	Tooltip:
+		Name: Orca Bomber
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 96
+	RenderSprites:
+		Image: orcab
+	RenderVoxels:
+		Image: orcab
+	FallsToEarth:
+		Moves: true
+		Spins: false
+
+ORCATRAN.Husk:
+	Inherits: ^AircraftHusk
+	Tooltip:
+		Name: Orca Transport
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 84
+	RenderSprites:
+		Image: orcatran
+	RenderVoxels:
+		Image: orcatran
+
+TRNSPORT.Husk:
+	Inherits: ^AircraftHusk
+	Tooltip:
+		Name: Carryall
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 149
+	RenderSprites:
+		Image: trnsport
+	RenderVoxels:
+		Image: trnsport
+		
+GUARDIAN.Husk:		
+	Inherits: ^AircraftHusk
+	Tooltip:
+		Name: Guardian Platform
+	Selectable:
+		Bounds: 1,1		
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 149
+	FallsToEarth:
+		Spins: False
+	WithShadow:
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32	
+	RenderSprites:
+		Image: guardian
+		Scale: 0.5		
+	-RenderVoxels:
+	-WithVoxelBody:
+	
+############################################################
+#		NOD
+############################################################	
+SCRIN.Husk:
+	Inherits: ^AircraftHusk
+	Tooltip:
+		Name: Banshee Fighter
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 168
+	RenderSprites:
+		Image: scrin
+	RenderVoxels:
+		Image: scrin
+	FallsToEarth:
+		Moves: true
+		Spins: false		
+
+APACHE.Husk:
+	Inherits: ^AircraftHusk
+	Tooltip:
+		Name: Harpy
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 130
+	WithSpriteRotorOverlay:
+		Offset: 85,0,384
+	RenderSprites:
+		Image: apache
+	RenderVoxels:
+		Image: apache
+
+############################################################
+#		MUT
+############################################################
+MUTHELI.Husk:
+	Inherits: ^AircraftHusk
+	Inherits@1:	^Ra2vxl		
+	Tooltip:
+		Name: Banshee Fighter
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 168	
+	WithSpriteRotorOverlay
+		Offset: -50,0,480			
+	RenderSprites:
+		Image: mutheli
+	RenderVoxels:
+		Image: mutheli
+		Scale: 1		
+		
+WETP.Husk:
+	Inherits: ^AircraftHusk
+	Inherits@1:	^Ra2vxl		
+	Tooltip:
+		Name: Banshee Fighter
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 168
+	RenderSprites:
+		Image: wetp
+	FallsToEarth:
+		Moves: true
+		Spins: false		
+	RenderVoxels:
+		Image: wetp
+		Scale: 0.7		
+############################################################
+#		CABAL
+############################################################
+WASP.Husk:		
+	Inherits: ^AircraftHusk
+	Tooltip:
+		Name: Wasp
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 149
+	Selectable:
+		Bounds: 1,1	
+	WithShadow:
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32	
+	RenderSprites:
+		Image: wasp
+		Scale: 0.4		
+	-RenderVoxels:
+	-WithVoxelBody:
+	
+FIREFLY.Husk:		
+	Inherits: ^AircraftHusk
+	Tooltip:
+		Name: Firefly
+	Selectable:
+		Bounds: 1,1
+	WithShadow:
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32			
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 149
+	RenderSprites:
+		Image: firefly
+	-RenderVoxels:
+	-WithVoxelBody:
+	
+BASILISK.Husk:
+	Inherits: ^AircraftHusk
+	Inherits@1:	^Ra2vxl		
+	Tooltip:
+		Name: Basilisk
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 168	
+	RenderSprites:
+		Image: basilisk
+	RenderVoxels:
+		Image: basilisk
+		Scale: 1
+############################################################
+#		SCRIN
+############################################################	
+STORMRIDER.Husk:
+	Inherits: ^AircraftHusk
+	Tooltip:
+		Name: Stormrider
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 168
+	RenderSprites:
+		Image: stormrider
+	RenderVoxels:
+		Image: stormrider
+		Scale: 0.7		
+	FallsToEarth:
+		Moves: true
+		Spins: false
+		
+GLYDER1.Husk:		
+	Inherits: ^AircraftHusk
+	Inherits@2: ^ScrinRender	
+	-Cloak@CLOAKGENERATOR:
+	Tooltip:
+		Name: Destroyer
+	Selectable:
+		Bounds: 1,1
+	WithShadow:
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32			
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 149
+	RenderSprites:
+		Image: scrglyder1
+	-RenderVoxels:
+	-WithVoxelBody:
+		
+DRACHE.Husk:		
+	Inherits: ^AircraftHusk
+	Inherits@2: ^ScrinRender
+	-Cloak@CLOAKGENERATOR:
+	Tooltip:
+		Name: Drache
+	Selectable:
+		Bounds: 1,1
+	WithShadow:
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32			
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 149
+	RenderSprites:
+		Image: drache.falling
+	-RenderVoxels:
+	-WithVoxelBody:		
+		
+SCRDESTROYER.Husk:		
+	Inherits: ^AircraftHusk
+	Inherits@2: ^ScrinRender	
+	-Cloak@CLOAKGENERATOR:
+	Tooltip:
+		Name: Destroyer
+	Selectable:
+		Bounds: 1,1
+	WithShadow:
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32			
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 149
+	RenderSprites:
+		Image: scrdestroyer
+	-RenderVoxels:
+	-WithVoxelBody:
+
+SCRBATTLESHIP.Husk:		
+	Inherits: ^AircraftHusk
+	Inherits@2: ^ScrinRender
+	-Cloak@CLOAKGENERATOR:
+	Tooltip:
+		Name: Battlecruiser
+	Selectable:
+		Bounds: 1,1
+	WithShadow:
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32			
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 149
+	RenderSprites:
+		Image: scrbattleship
+	-RenderVoxels:
+	-WithVoxelBody:
+
+SCRTRANS.Husk:		
+	Inherits: ^AircraftHusk
+	Inherits@2: ^ScrinRender	
+	-Cloak@CLOAKGENERATOR:
+	Tooltip:
+		Name: Scrin Transport
+	Selectable:
+		Bounds: 1,1
+	WithShadow:
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32			
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 149
+	RenderSprites:
+		Image: scrtrans
+	-RenderVoxels:
+	-WithVoxelBody:
+
+SCRCOUNCIL.Husk:		
+	Inherits: ^AircraftHusk
+	Inherits@2: ^ScrinRender	
+	-Cloak@CLOAKGENERATOR:
+	Tooltip:
+		Name: Scrin Council
+	Selectable:
+		Bounds: 1,1
+	WithShadow:
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32			
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 149
+	RenderSprites:
+		Image: scrincouncil
+	-RenderVoxels:
+	-WithVoxelBody:	

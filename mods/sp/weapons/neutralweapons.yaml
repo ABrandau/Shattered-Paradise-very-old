@@ -1,0 +1,110 @@
+FireballLauncher:
+	ReloadDelay: 50
+	Range: 4c256
+	Report: flamtnk1.aud
+	Projectile: Bullet
+		Speed: 64
+		Image: FLAMEALL
+		Inaccuracy: 384
+	Burst: 5
+	BurstDelay: 5
+	Warhead@1Dam: SpreadDamage
+		Spread: 341
+		Damage: 25
+		Versus:
+			None: 600
+			Wood: 148
+			Light: 59
+			Heavy: 6
+			Concrete: 2
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: SmallScorch
+
+Hellfire:
+	ReloadDelay: 50
+	Range: 6c0
+	Report: orcamis1.aud
+	Burst: 2
+	ValidTargets: Ground
+	Projectile: Missile
+		MaximumLaunchSpeed: 256
+		Arm: 2
+		Blockable: false
+		Shadow: true
+		Inaccuracy: 128
+		Image: DRAGON
+		TrailImage: small_smoke_trail
+		HorizontalRateOfTurn: 8
+		RangeLimit: 35
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 85
+		Damage: 30
+		ValidTargets: Ground
+		Versus:
+			None: 30
+			Wood: 65
+			Light: 150
+			Heavy: 100
+			Concrete: 30
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: small_clsn
+		ImpactSound: expnew12.aud
+		InvalidImpactTypes: Water, Air, AirHit
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4EffAir: CreateEffect
+		Explosions: small_twlt
+		ValidImpactTypes: Air, AirHit
+		ImpactSound: expnew06.aud
+	Warhead@5Smu: LeaveSmudge
+		SmudgeType: SmallCrater		
+		
+LtRail:
+	ReloadDelay: 60
+	Range: 6c0
+	Report: biggun1.aud
+	Projectile: AreaBeam
+		Speed: 20c0
+		Duration: 3
+		DamageInterval: 2
+		Width: 0c128
+		BeyondTargetRange: 0c64
+		Blockable: true
+		Color: 0080FFC8
+	Warhead@1Dam: SpreadDamage
+		Range: 0, 32
+		Falloff: 100, 100
+		Damage: 150
+		InfDeath: 6
+		AffectsParent: false
+		ValidStances: Neutral, Enemy
+		Versus:
+			None: 100
+			Wood: 130
+			Light: 150
+			Heavy: 110
+			Concrete: 5
+		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Dam: SpreadDamage
+		Range: 0, 32
+		Falloff: 50, 50 # Only does half damage to friendly units
+		Damage: 150
+		InfDeath: 6
+		AffectsParent: false
+		ValidStances: Ally
+		Versus:
+			None: 100
+			Wood: 130
+			Light: 150
+			Heavy: 110
+			Concrete: 5
+		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+
+
+

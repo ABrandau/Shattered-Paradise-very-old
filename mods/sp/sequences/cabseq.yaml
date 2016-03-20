@@ -1,0 +1,1062 @@
+##########################################################
+# Infantry
+##########################################################	
+worker:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 402
+	run:
+		Start: 8
+		Length: 12
+		Facings: 8
+		ShadowStart: 410
+	idle1:
+		Start: 104
+		Length: 42
+		ShadowStart: 506
+	idle2:
+		Start: 146
+		Length: 42
+		ShadowStart: 548
+	prone-run:
+		Start: 188
+		Length: 9
+		Facings: 8
+		ShadowStart: 590
+	prone-stand:
+		Start: 188
+		Facings: 8
+		Stride: 8
+		ShadowStart: 590
+	die1:
+		Start: 274
+		Length: 9
+		ShadowStart: 675
+	die2:
+		Start: 287
+		Length: 13
+		ShadowStart: 689
+		Tick: 80
+	die3: # TODO: copy-paste of die2
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+	die4: # TODO: copy-paste of die2
+		Start: 149
+		Length: 15
+		ShadowStart: 441		
+	die-crushed:
+		Start: 267
+		Length: 5
+		ShadowStart: 451
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 314
+		Length: 5
+		Facings: 8
+		ShadowStart: 716
+	prone-shoot:
+		Start: 354
+		Length: 5
+		Facings: 8
+		ShadowStart: 756
+	standup-0:
+		Start: 260
+		Length: 2
+		Facings: 8
+		ShadowStart: 552
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
+	icon: workericon
+
+paladin2:
+	stand:
+		Facings: 8
+		ShadowStart: 41
+	run:
+		Facings: 8
+		ShadowStart: 41
+	turret:
+		Start: 8
+		Facings: 32
+		ShadowStart: 49
+	muzzle: gunfire
+		Length: *
+	icon: sentinelicon	
+
+cybdog:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 286
+	run:
+		Start: 8
+		Tick: 60
+		Length: 13
+		Facings: 8
+		ShadowStart: 294
+	idle1:
+		Tick: 200
+		Start: 112
+		Length: 29
+		ShadowStart: 398
+	idle2:
+		Start: 142
+		Length: 33
+		ShadowStart: 429
+	die1:
+		Start: 254
+		Length: 12
+		ShadowStart: 504
+	die2:
+		Start: 149
+		Length: 23
+		ShadowStart: 519
+	shoot:
+		Start: 174
+		Length: 10
+		Facings: 8
+		ShadowStart: 460
+	die5: # TODO: unused running frame 322 and following
+		Start: 254
+		Length: 12
+		ShadowStart: 504
+	die4: s_bang34
+		Length: *	
+	die3:
+		Start: 254
+		Length: 12
+		ShadowStart: 504
+	die6: electro
+		Length: *
+	icon: dogicon
+
+cabsentry:
+	stand:
+		Facings: -32
+		ShadowStart: 40
+	run:
+		Facings: -32
+		ShadowStart: 40	
+	idle:
+		Start: 39
+		ShadowStart: 79
+	make:
+		Start: 32
+		Length: 8
+		ShadowStart: 72
+	muzzle: gunfire
+		Length: *
+	emp-overlay: emp_fx01
+		Length: *
+		ZOffset: 512
+		BlendMode: Additive		
+	icon: cabsentryicon		
+	
+cyborg:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 370
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 378
+	idle1:
+		Start: 56
+		Length: 15
+		ShadowStart: 426
+	idle2:
+		Start: 71
+		Length: 15
+		ShadowStart: 441
+	crippled-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		ShadowStart: 456
+	crippled-stand:
+		Start: 86
+		Facings: 8
+		Stride: 6
+		ShadowStart: 456
+	die1:
+		Start: 134
+		Length: 15
+		ShadowStart: 504
+	die2:
+		Start: 149
+		Length: 15
+		ShadowStart: 519
+	die3:
+		Start: 307
+		Length: 14
+		ShadowStart: 677
+	die4: s_bang34
+		Length: *
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		ShadowStart: 534
+	crippled-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		ShadowStart: 582
+	die5: # TODO: unused running frame 322 and following
+		Start: 292
+		Length: 14
+		ShadowStart: 662
+	die6: electro
+		Length: *
+	emp-overlay: emp_fx01
+		Length: *
+		ZOffset: 512
+		BlendMode: Additive
+	icon: cybiicon
+
+pdrone:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 210
+	run:
+		Tick: 40
+		Start: 8
+		Length: 7
+		Facings: 8
+		ShadowStart: 218
+	Idle1:
+		Tick: 40
+		Start: 64
+		Length: 13
+		ShadowStart: 274
+	Idle2:
+		Tick: 40
+		Start: 108
+		Length: 18
+		ShadowStart: 317
+	shoot:
+		Start: 146
+		Length: 8
+		Facings: 8
+		ShadowStart: 356
+	die1: 
+		Start: 127
+		Length: 10
+		ShadowStart: 336
+	die2: worker
+		Start: 287
+		Length: 13
+		ShadowStart: 689
+		Tick: 80
+	die3: worker # TODO: copy-paste of die2
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+	die4: s_bang34
+		Length: *	
+	die-crushed: worker
+		Start: 159
+		Length: 5
+		ShadowStart: 451
+		Tick: 800
+		ZOffset: -511
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive		
+	icon: processingicon
+	
+swarmling:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 104
+	run:
+		Tick: 40
+		Start: 8
+		Length: 12
+		Facings: 8
+		ShadowStart: 112
+	die1: worker
+		Start: 274
+		Length: 9
+		ShadowStart: 675
+	die2: worker
+		Start: 287
+		Length: 13
+		ShadowStart: 689
+		Tick: 80
+	die3: worker # TODO: copy-paste of die2
+		Start: 287
+		Length: 13
+		ShadowStart: 689
+	die4: worker # TODO: copy-paste of die2
+		Start: 287
+		Length: 13
+		ShadowStart: 689		
+	die-crushed: worker
+		Start: 159
+		Length: 5
+		ShadowStart: 451
+		Tick: 800
+		ZOffset: -511
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
+	icon: swarmlingicon	
+	
+reapercab:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: -8
+		ShadowStart: 117
+	run:
+		Start: 8
+		Tick: 60
+		Length: 12
+		Facings: -8
+		ShadowStart: 125
+	die1:
+		Start: 104
+		Length: 13
+		ShadowStart: 221
+	die2:
+		Start: 104
+		Length: 13
+		ShadowStart: 221
+	shoot:
+		Facings: -8
+		ShadowStart: 117
+	die5: # TODO: unused running frame 322 and following
+		Start: 104
+		Length: 13
+		ShadowStart: 221
+	die4:
+		Start: 104
+		Length: 13
+		ShadowStart: 221	
+	die3:
+		Start: 104
+		Length: 13
+		ShadowStart: 221
+	die6: electro
+		Length: *
+	icon: reapercabicon
+	
+glad:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 485
+	run:
+		Start: 8
+		Tick: 60
+		Length: 12
+		Facings: 8
+		ShadowStart: 493
+	crippled-stand:
+		Start: 301
+		Facings: 8
+		ShadowStart: 786
+	crippled-run:
+		Start: 309
+		Tick: 60
+		Length: 10
+		Facings: 8
+		ShadowStart: 794		
+	idle1:
+		Start: 104
+		Length: 28
+		ShadowStart: 589
+	idle2:
+		Start: 130
+		Length: 30
+		ShadowStart: 615
+	die1:
+		Start: 161
+		Length: 12
+		ShadowStart: 646
+	die2:
+		Start: 161
+		Length: 12
+		ShadowStart: 646
+	die3:
+		Start: 161
+		Length: 12
+		ShadowStart: 646
+	die4:
+		Start: 161
+		Length: 13
+		ShadowStart: 646		
+	shoot:
+		Tick: 60
+		Start: 229
+		Length: 9
+		Facings: 8
+		ShadowStart: 714
+	crippled-shoot:
+		Tick: 60
+		Start: 389
+		Length: 7
+		Facings: 8
+		ShadowStart: 874
+	die5: # TODO: unused running frame 322 and following
+		Start: 161
+		Length: 12
+		ShadowStart: 646
+	die6: electro
+		Length: *
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive		
+	icon: gladicon
+	
+cyc2:
+	stand:
+		Facings: 8
+		ShadowStart: 308
+	run:
+		Start: 8
+		Length: 9
+		Facings: 8
+		ShadowStart: 316
+	idle1:
+		Start: 80
+		Length: 15
+		ShadowStart: 388
+	idle2:
+		Start: 95
+		Length: 15
+		ShadowStart: 403
+	crippled-run:
+		Start: 110
+		Length: 9
+		Facings: 8
+		ShadowStart: 418
+	crippled-stand:
+		Start: 110
+		Facings: 8
+		Stride: 9
+		ShadowStart: 418
+	die1:
+		Start: 182
+		Length: 15
+		ShadowStart: 490
+	die2:
+		Start: 197
+		Length: 15
+		ShadowStart: 505
+	die3: infexpl
+		Length: *
+	die4: s_bang34
+		Length: *
+	shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		ShadowStart: 520
+	crippled-shoot:
+		Start: 260
+		Length: 6
+		Facings: 8
+		ShadowStart: 568
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
+	emp-overlay: emp_fx01
+		Length: *
+		ZOffset: 512
+		BlendMode: Additive
+	icon: cybcicon
+##########################################################
+# Vehicles
+##########################################################	
+jenn:
+	shoot:
+		Start: 96
+		Facings: -8
+		ShadowStart: 216
+	idle:
+		Start: 96
+		Facings: -8
+		ShadowStart: 216	
+	stand:
+		Start: 96
+		Facings: -8
+		ShadowStart: 216
+	run:
+		Length: 12
+		Facings: -8
+		ShadowStart: 120
+	muzzle: gunfire
+		Length: *
+	emp-overlay: emp_fx01
+		Length: *
+		ZOffset: 512
+		BlendMode: Additive		
+	icon: jennicon
+	
+centurion:
+	stand:
+		Facings: -8
+		ShadowStart: 155
+	run:
+		Start: 8
+		Tick: 100
+		Length: 8
+		Facings: -8
+		ShadowStart: 163
+	turret:
+		Start: 72
+		Facings: -32		
+	muzzle: gunfire
+		Length: *
+	icon: centurionicon
+	make:
+		Start: 104
+		Length: 19
+		ShadowStart: 259
+	idle:
+		Start: 122
+		ShadowStart:  277
+	damaged-idle:	
+		Start: 122
+		ShadowStart:  277
+	turret2:
+		Start: 123
+		Facings: -32
+		ShadowStart:  278	
+		Offset: 0, 12
+	emp-overlay: emp_fx01
+		Length: *
+		ZOffset: 512
+		BlendMode: Additive		
+	
+cabapc:
+	icon: cabapcicon
+	idle:	
+	emp-overlay: emp_fx01
+		Length: *
+		ZOffset: 512
+		BlendMode: Additive	
+
+ecm:
+	icon: ecmicon
+	idle:
+	emp-overlay: emp_fx01
+		Length: *
+		ZOffset: 512
+		BlendMode: Additive	
+	
+blaster:	
+	icon: blastericon
+	emp-overlay: emp_fx01
+		Length: *
+		ZOffset: 512
+		BlendMode: Additive	
+	
+grinder:
+	icon: grindericon
+	emp-overlay: emp_fx01
+		Length: *
+		ZOffset: 512
+		BlendMode: Additive	
+	
+paladin:
+	stand:
+		Facings: 8
+		ShadowStart: 136
+	idle:
+		Facings: 8
+		ShadowStart: 136		
+	run:
+		Tick: 100
+		Start: 8
+		Length: 7
+		Facings: 8
+		ShadowStart: 144
+	shoot:
+		Start: 64
+		Length: 9
+		Facings: 8
+		ShadowStart: 200
+	emp-overlay: emp_fx01
+		Length: *
+		ZOffset: 512
+		BlendMode: Additive		
+	icon: paladinicon	
+##########################################################
+# Aircraft
+##########################################################	
+wasp:
+	idle:
+		Facings: -32
+	stand:
+		Facings: -32
+	run:
+		Tick: 90
+		Facings: -32
+	muzzle: gunfire
+		Length: *
+	icon: waspicon	
+	
+firefly:
+	idle:
+		Facings: -32
+	stand:
+		Facings: -32
+	run:
+		Tick: 90
+		Facings: -32
+	muzzle: gunfire
+		Length: *
+	icon: fireflyicon		
+	
+basilisk:
+	icon: basiliskicon		
+##########################################################
+# Structures
+##########################################################	
+cabpowr:
+	Defaults:
+		Offset: 0, -24
+		UseTilesetCode: true
+	idle:
+		Start: 31
+		ShadowStart: 81
+	damaged-idle:
+		Start: 40
+		ShadowStart: 92
+	dead:
+		Start: 40
+		ShadowStart: 92
+		Tick: 400
+	idle-lights:
+		Start: 31
+		Length: 8
+		Tick: 100
+	damaged-idle-lights:
+		Start: 41
+		Length: 8
+		Tick: 100
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive		
+	make:
+		Length: 30
+		ShadowStart: 50
+	icon: cabpowricon
+		Offset: 0, 0
+		UseTilesetCode: false
+		
+cabclaw:
+	Defaults:
+		Offset: 8, -32
+		UseTilesetCode: true
+	idle:
+		Start: 30
+		ShadowStart: 62
+	damaged-idle:
+		Start: 31
+		ShadowStart: 63
+	dead:
+		Start: 31
+		ShadowStart: 63
+		Tick: 400
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive		
+	make:
+		Length: 30
+		ShadowStart: 32
+	icon: cabclawicon
+		Offset: 0, 0
+		UseTilesetCode: false		
+
+cabgrinder:
+	Defaults:
+		Offset: 8, -32
+		UseTilesetCode: true
+	idle:
+		Start: 30
+		ShadowStart: 62
+	damaged-idle:
+		Start: 31
+		ShadowStart: 63
+	dead:
+		Start: 31
+		ShadowStart: 63
+		Tick: 400
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive		
+	make:
+		Length: 29
+	icon: cabgrindericon
+		Offset: 0, 0
+		UseTilesetCode: false				
+		
+cabobelisk:
+	Defaults: 
+		Offset: 0, -24
+		UseTilesetCode: true
+	idle: ctbelisk
+		Start: 25
+		ShadowStart: 52
+	damaged-idle: ctbelisk
+		Start: 26
+		ShadowStart: 53
+	dead: ctbelisk
+		Start: 26
+		ShadowStart: 53
+		Tick: 400
+	# active: ntobel_b
+		# Length: 12
+		# Tick: 200
+	# idle-lights: ntobel_a
+		# Length: 12
+		# Tick: 80
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive		
+	make: ctbelisk
+		Length: 24
+		ShadowStart: 27
+	icon: cabobeliskicon
+		Offset: 0, 0
+		UseTilesetCode: false
+	
+
+		
+cabradr:
+	Defaults:
+		Offset: 0, -36
+		UseTilesetCode: true
+	idle:
+		Start: 30
+		ShadowStart: 91
+	damaged-idle:
+		Start: 45
+		ShadowStart: 106
+	dead:
+		Start: 45
+		ShadowStart: 106
+		Tick: 400
+	idle-lights:
+		Start: 31
+		Length: 14
+		Tick: 100
+		ShadowStart: 92
+	damaged-idle-lights:
+		Start: 46
+		Length: 14
+		Tick: 400
+		ShadowStart: 107
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive		
+	make:
+		Length: 29
+	icon: cabradricon
+		Offset: 0, 0
+		UseTilesetCode: false
+
+cabweap:
+	Defaults:
+		Offset: -12, -42
+		UseTilesetCode: true
+	idle: ctbweap_1
+		ShadowStart: 3
+		ZOffset: -1026
+	damaged-idle: ctbweap_1
+		Start: 1
+		ShadowStart: 3
+		ZOffset: -1026
+	idle-roof: ctbweap_2
+		ShadowStart: 3
+		ZOffset: 1024
+	damaged-idle-roof: ctbweap_2
+		Start: 1
+		ShadowStart: 3
+		ZOffset: 1024
+	dead: ctbweap
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	# production-lights: ctbweap_a
+		# Length: 16
+		# Tick: 100
+		# ZOffset: 2048
+	# damaged-production-lights: ctbweap_a
+		# Start: 16
+		# Length: 16
+		# Tick: 100
+		# ZOffset: 2048
+	build-door: ctbweap_b
+		Length: 11
+		ZOffset: -2048
+	damaged-build-door: ctbweap_b
+		Length: 11
+		ZOffset: -2048
+	make: ctbweapmk
+		Length: 30
+		Tick: 80
+		ShadowStart: 29
+	bib: ctbweap_bb
+		ZOffset: -2048
+	damaged-bib: ctbweap_bb
+		Start: 1
+		ZOffset: -2048
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive		
+	dead-bib: ctbweap_bb
+		Start: 2
+		ZOffset: -2048
+	icon: cabweapicon
+		Offset: 0, 0
+		UseTilesetCode: false
+cabair:
+	Defaults:
+		Offset: 0, -36
+		UseTilesetCode: true
+	idle:
+		Start: 20
+		ShadowStart: 42
+	damaged-idle:
+		Start: 21
+		ShadowStart: 43
+	dead:
+		Start: 21
+		ShadowStart: 43
+		Tick: 400
+	ground: gtdeptbb
+		ShadowStart: 3
+		ZOffset: -1c611
+	damaged-ground: gtdeptbb
+		Start: 1
+		ShadowStart: 4
+		ZOffset: -1c611
+	dead-ground: gtdeptbb
+		Start: 2
+		ShadowStart: 5
+		ZOffset: -1c611
+		Tick: 400
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive		
+	make:
+		Length: 20
+		Tick: 60
+		ShadowStart: 22
+	icon: cabairicon
+		Offset: 0, 0
+		UseTilesetCode: false
+		
+cabtech:
+	Defaults:
+		Offset: -12, -30
+		UseTilesetCode: true
+	idle:
+		Start: 30
+		ShadowStart: 62
+	damaged-idle:
+		Start: 31
+		ShadowStart: 63
+	dead:	
+		Start: 31
+		ShadowStart: 63
+		Tick: 400
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive		
+	make:
+		Length: 30
+	icon: cabtechicon
+		Offset: 0, 0
+		UseTilesetCode: false		
+##########################################################
+# Defences
+##########################################################	
+cabsentryturret:
+	Defaults:
+		Offset: 0, -12
+		UseTilesetCode: true
+	idle: dot	
+			# ZOffset: -512
+	damaged-idle: dot
+			# ZOffset: -512
+	dead: dot
+			# ZOffset: -512	
+		Tick: 400
+	make:		
+	turret:
+		Facings: -32
+		ZOffset: -512
+	damaged-turret:
+		Facings: -32
+		ZOffset: -512
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive		
+	icon: cabcannonicon
+		Offset: 0, 0
+		UseTilesetCode: false	
+
+cabcannon:
+	Defaults:
+		Offset: 0, -12
+		UseTilesetCode: true
+	idle: dot	
+			# ZOffset: -512
+	damaged-idle: dot
+			# ZOffset: -512
+	dead: dot
+			# ZOffset: -512	
+		Tick: 400
+	turret:
+		Start: 31
+		Facings: 32
+		ShadowStart: 127
+		Offset: 0,-12#-4, 0
+	damaged-turret:
+		Start: 64
+		Facings: 32
+		Offset: 0,-12#-4, 0
+		ShadowStart: 160
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive		
+	make:
+		Length: 25
+		ShadowStart: 97
+	icon: cabcannonicon
+		Offset: 0, 0
+		UseTilesetCode: false	
+
+cabblast:
+	Defaults:
+		Offset: 0, -12
+		UseTilesetCode: true
+	idle:
+		Start: 94
+	damaged-idle:
+		Start: 94
+	dead:
+		Start: 94
+		Tick: 400
+	turret:
+		Start: 30
+		Facings: 32
+		Shadowstart: 125
+	damaged-turret:
+		Start: 62
+		Facings: 32
+		Shadowstart: 157
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive		
+	make:
+		Length: 29
+		ShadowStart: 95
+	icon: cablasticon
+		Offset: 0, 0
+		UseTilesetCode: false	
+
+cabrail:
+	Defaults:
+		Offset: 0, -12
+		UseTilesetCode: true
+	idle: dot	
+			# ZOffset: -512
+	damaged-idle: dot
+			# ZOffset: -512
+	dead: dot
+			# ZOffset: -512	
+	turret:
+		Start: 26
+		Facings: 32
+		Shadowstart: 125
+	damaged-turret:
+		Start: 26
+		Facings: 32
+		Shadowstart: 157
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive		
+	make:
+		Length: 24
+		ShadowStart: 95
+	icon: cabrailicon
+		Offset: 0, 0
+		UseTilesetCode: false	

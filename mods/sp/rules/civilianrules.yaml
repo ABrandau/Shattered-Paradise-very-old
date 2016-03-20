@@ -1,0 +1,2160 @@
+##############################################
+# Infantry
+##############################################
+GHOST:
+	Inherits: ^Soldier
+	Valued:
+		Cost: 1750
+	Tooltip:
+		Name: Ghost Stalker
+		Description: Elite commando infantry, armed with\na railgun and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\n  Special Ability: Destroy Building with C4\nMaximum 1 can be trained.
+	# Buildable:
+		# Queue: Infantry
+		# BuildPaletteOrder: 50
+		# Prerequisites: ~gapile, gatech
+		# BuildLimit: 1
+	Voiced:
+		VoiceSet: Ghost
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 200
+	PoisonedByTiberium:
+		Weapon: TiberiumHeal
+	Passenger:
+	RevealsShroud:
+		Range: 6c0
+	Armament:
+		Weapon: LtRail
+		LocalOffset: 85,0,384
+	Crushable:
+		CrushSound: squishy2.aud
+	AttackFrontal:
+		Voice: Attack
+	C4Demolition:
+		C4Delay: 45
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: shoot
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+
+WEEDGUY:
+	Inherits: ^Soldier
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Chem Spray Infantry
+	Voiced:
+		VoiceSet: Weed
+	Mobile:
+		Speed: 42
+	Health:
+		HP: 130
+	Crushable:
+		CrushSound: squishy2.aud
+	Armament:
+		Weapon: FireballLauncher
+		LocalOffset: 85,0,384
+	AttackFrontal:
+		Voice: Attack
+
+UMAGON:
+	Inherits: ^Soldier
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Umagon
+	Voiced:
+		VoiceSet: Umagon
+	Mobile:
+		Speed: 71
+	Health:
+		HP: 150
+	PoisonedByTiberium:
+		Weapon: TiberiumHeal
+	Passenger:
+	RevealsShroud:
+		Range: 7c0
+	Armament:
+		Weapon: Sniper
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: shoot
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+CHAMSPY:
+	Inherits: ^Soldier
+	Valued:
+		Cost: 700
+	DisguiseToolTip:
+		Name: Chameleon Spy
+	Voiced:
+		VoiceSet: Spy
+	Health:
+		HP: 120
+	Mobile:
+		Speed: 85
+	RevealsShroud:
+		Range: 9c0
+	Passenger:
+	Disguise:
+	WithDecoration@disguise:
+		Image: pips
+		Sequence: pip-disguise
+		Palette: pips
+		ReferencePoint: Top, Right
+		ZOffset: 256
+		UpgradeTypes: disguise
+		UpgradeMinEnabledLevel: 1
+	Infiltrates:
+		Types: SpyInfiltrate
+	-AutoTarget:
+	-WithInfantryBody:
+	WithDisguisingInfantryBody:
+		IdleSequences: idle1,idle2
+
+MUTANT:
+	Inherits: ^Soldier
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Mutant
+	Voiced:
+		VoiceSet: Mutant
+	Health:
+		HP: 50
+	PoisonedByTiberium:
+		Weapon: TiberiumHeal
+	Mobile:
+		Speed: 56
+	RevealsShroud:
+		Range: 4c0
+	Armament:
+		Weapon: Vulcan
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: shoot
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+MWMN:
+	Inherits: ^Soldier
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Mutant Soldier
+	Voiced:
+		VoiceSet: CivilianFemale
+	Health:
+		HP: 50
+	PoisonedByTiberium:
+		Weapon: TiberiumHeal
+	Mobile:
+		Speed: 56
+	RevealsShroud:
+		Range: 4c0
+	Armament:
+		Weapon: Vulcan
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: shoot
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+MUTANT3:
+	Inherits: ^Soldier
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Mutant Sergeant
+	Voiced:
+		VoiceSet: Mutant
+	Health:
+		HP: 50
+	PoisonedByTiberium:
+		Weapon: TiberiumHeal
+	Mobile:
+		Speed: 56
+	RevealsShroud:
+		Range: 4c0
+	Armament:
+		Weapon: Vulcan
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: shoot
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+TRATOS:
+	Inherits: ^Soldier
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Tratos
+	Voiced:
+		VoiceSet: Tratos
+	Health:
+		HP: 200
+	PoisonedByTiberium:
+		Weapon: TiberiumHeal
+	Mobile:
+		Speed: 71
+	RevealsShroud:
+		Range: 4c0
+	-AutoTarget:
+	WithInfantryBody:
+		AttackSequence: shoot
+
+OXANNA:
+	Inherits: ^Soldier
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Oxanna
+	Voiced:
+		VoiceSet: Oxanna
+	Health:
+		HP: 50
+	Mobile:
+		Speed: 56
+	RevealsShroud:
+		Range: 4c0
+	-AutoTarget:
+	WithInfantryBody:
+		AttackSequence: shoot
+
+SLAV:
+	Inherits: ^Soldier
+	Valued:
+		Cost: 100
+	Tooltip:
+		Name: Slavick
+	Voiced:
+		VoiceSet: Slavick
+	Health:
+		HP: 300
+	Mobile:
+		Speed: 56
+	RevealsShroud:
+		Range: 4c0
+	-AutoTarget:
+	WithInfantryBody:
+		AttackSequence: shoot
+
+DOGGIE:
+	Inherits: ^Infantry
+	Tooltip:
+		Name: Tiberian Fiend
+	Health:
+		HP: 250
+		Shape: Circle
+			Radius: 213
+	PoisonedByTiberium:
+		Weapon: TiberiumHeal
+	Valued:
+		Cost: 100
+	Armor:
+		Type: Light
+	-RevealsShroud:
+	Mobile:
+		Speed: 113
+		Crushes:
+	Voiced:
+		VoiceSet: Fiend
+	Targetable:
+		TargetTypes: Infantry, Ground
+	Armament:
+		Weapon: FiendShard
+	AttackFrontal:
+		Voice: Attack
+	AttackWander:
+		WanderMoveRadius: 2
+		MinMoveDelayInTicks: 25
+		MaxMoveDelayInTicks: 45
+
+VISC_SML:
+	Inherits: ^Viceroid
+	Tooltip:
+		Name: Baby Visceroid
+		Description: infantry transmorgifies into this
+	Health:
+		HP: 150
+	Armor:
+		Type: none
+	AttackWander:
+		WanderMoveRadius: 2
+		MinMoveDelayInTicks: 30
+		MaxMoveDelayInTicks: 60	
+	RenderSprites:
+		Image: vislrg
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall		
+	Armament:
+		Weapon: SlimeAttack
+	AutoTarget:
+	AttackFrontal:
+		Voice: Attack		
+
+VISC_LRG:
+	Inherits: ^Viceroid
+	Tooltip:
+		Name: Adult Visceroid
+		Description: 2 small visceroids combine into this
+	Health:
+		HP: 200
+	Armor:
+		Type: wood
+	Armament:
+		Weapon: SlimeAttack
+	AutoTarget:
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall	
+	RevealsShroud:
+		Range: 4c0
+	AttackFrontal:
+		Voice: Attack
+	AttackWander:
+		WanderMoveRadius: 2
+		MinMoveDelayInTicks: 50
+		MaxMoveDelayInTicks: 90
+	Mobile:
+		Crushes:
+	RenderSprites:
+		Image: vislrg
+		
+ZOMBIE:
+	Inherits: ^Soldier
+	Tooltip:
+		Name: Zombie
+	# Buildable:
+		# Queue: Infantry
+		# BuildPaletteOrder: 18
+		# Prerequisites: ~murax	
+	-GainsExperience:		
+	Health:
+		HP: 75
+		Shape: Circle
+			Radius: 213
+	PoisonedByTiberium:
+		Weapon: TiberiumHeal
+	Valued:
+		Cost: 100
+	Armor:
+		Type: None
+	RevealsShroud:
+		Range: 4c0
+	Explodes:
+		Weapon: ZombieExplosion
+		EmptyWeapon: ZombieExplosion
+		Chance: 80
+	Mobile:
+		Speed: 113
+		Crushes:
+	-SpawnActorOnDeath@conversion:	
+	Voiced:
+		VoiceSet: Fiend
+	Targetable:
+		TargetTypes: Ground
+	Armament:
+		Weapon: SlimeAttack
+	WithInfantryBody:
+		AttackSequence: shoot
+	AttackFrontal:
+		Voice: Attack
+	AttackWander:
+		WanderMoveRadius: 2
+		MinMoveDelayInTicks: 25
+		MaxMoveDelayInTicks: 45
+		
+CRAB:
+	Inherits: ^Soldier
+	Inherits@1: ^MutRender	
+	Tooltip:
+		Name: Crab
+	# Buildable:
+		# Queue: Infantry
+		# BuildPaletteOrder: 18
+		# Prerequisites: ~murax	
+	-GainsExperience:		
+	Health:
+		HP: 200
+		Shape: Circle
+			Radius: 213
+	PoisonedByTiberium:
+		Weapon: TiberiumHeal
+	Valued:
+		Cost: 100
+	Armor:
+		Type: None
+	RevealsShroud:
+		Range: 5c0
+	-SpawnActorOnDeath@conversion:		
+	Mobile:
+		Speed: 90
+		Crushes:
+	Voiced:
+		VoiceSet: Fiend
+	Targetable:
+		TargetTypes: Infantry, Ground
+	Armament:
+		Weapon: WarriorAcid
+	WithInfantryBody:
+		AttackSequence: shoot
+		IdleSequences: Idle1, Idle2
+	AttackFrontal:
+		Voice: Attack
+	AttackWander:
+		WanderMoveRadius: 2
+		MinMoveDelayInTicks: 25
+		MaxMoveDelayInTicks: 45	
+		
+BERSERKER:
+	Inherits: ^Soldier
+	Inherits@1: ^MutRender	
+	Tooltip:
+		Name: Berserker
+	# Buildable:
+		# Queue: Infantry
+		# BuildPaletteOrder: 18
+		# Prerequisites: ~murax	
+	-GainsExperience:		
+	Health:
+		HP: 250
+		Shape: Circle
+			Radius: 213
+	PoisonedByTiberium:
+		Weapon: TiberiumHeal
+	Valued:
+		Cost: 100
+	Armor:
+		Type: None
+	RevealsShroud:
+		Range: 5c0
+	-SpawnActorOnDeath@conversion:		
+	Explodes:
+		Weapon: ZombieExplosion
+		EmptyWeapon: ZombieExplosion
+		Chance: 40
+	SelfHealing:
+		Step: 10
+		Ticks: 200
+	Mobile:
+		Speed: 90
+		Crushes:
+	Voiced:
+		VoiceSet: Fiend
+	Targetable:
+		TargetTypes: Infantry, Ground
+	Armament:
+		Weapon: BerserkerBlow
+	AutoTarget:
+		ScanRadius: 5
+	WithInfantryBody:
+		AttackSequence: shoot
+		IdleSequences: Idle1, Idle2, Idle3
+	AttackFrontal:
+		Voice: Attack
+		
+
+STALKER:
+	Inherits: ^ScrinSoldier
+	# Buildable:
+		# Queue: Infantry
+		# BuildPaletteOrder: 26
+		# Prerequisites: ~scrrax, scrtech
+	Selectable:
+		Class: Stalker
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Stalker
+		Description: Infiltration Unit, always cloaked, even when\n attacking. reduces the range of enemy units\nalong with their resistance to damage.\nCan move through water.\n  Weak vs Infantry, Vehicles, Aircraft
+	Health:
+		HP: 130
+	Mobile:
+		Speed: 80
+		TerrainSpeeds:
+			Water: 80
+	RevealsShroud:
+		Range: 6c0			
+	Armament@prim:
+		Weapon: StalkerRail
+	Cloak@cloakgenerator:
+		UpgradeTypes:
+		Palette: cloakscrin		
+		CloakDelay: 25
+		InitialDelay: 25
+		UncloakOn: Unload
+		IsPlayerPalette: true
+	Explodes:
+		Weapon: StalkerExplode
+		EmptyWeapon: StalkerExplode
+		LoadedChance: 100
+		Chance: 100
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: throw
+	-TakeCover:	
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded			
+
+CIV1:
+	Inherits: ^CivilianInfantry
+	WithInfantryBody:
+		AttackSequence: shoot
+	Armament:
+		Weapon: Pistola
+	AttackFrontal:
+		Voice: Attack
+
+CIV2:
+	Inherits: ^CivilianInfantry
+	-AutoTarget:
+
+CIV3:
+	Inherits: ^CivilianInfantry
+	WithInfantryBody:
+		AttackSequence: shoot
+	Armament:
+		Weapon: Pistola
+	AttackFrontal:
+		Voice: Attack
+##############################################
+# Vehicles
+##############################################
+4TNK:
+	Inherits: ^VoxelTank
+	Valued:
+		Cost: 1700
+	Tooltip:
+		Name: Mammoth Tank
+	Mobile:
+		Speed: 56
+		TurnSpeed: 5
+		Crushes: wall, crate, infantry
+	Health:
+		HP: 600
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 6c0
+	Turreted:
+		TurnSpeed: 3
+	Armament@PRIMARY:
+		Weapon: 120mmx
+		LocalOffset: 500,60,360, 500,-85,360
+		MuzzleSequence: muzzle
+	Armament@SECONDARY:
+		Weapon: MammothTusk
+		LocalOffset: 0,200,410, 0,-200,410
+	AttackTurreted:
+		Voice: Attack
+	AutoTarget:
+	SelfHealing:
+		Ticks: 10
+		HealIfBelow: 50%
+		DamageCooldown: 200
+	WithVoxelTurret:
+	WithVoxelBarrel:
+	WithMuzzleOverlay:
+
+^TRUCK:
+	Inherits: ^CivilianVoxelVehicle
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Truck
+	Health:
+		HP: 200
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 56
+	RevealsShroud:
+		Range: 5c0
+
+TRUCKA:
+	Inherits: ^TRUCK
+
+TRUCKB:
+	Inherits: ^TRUCK
+
+ICBM:
+	Inherits: ^CivilianVoxelVehicle
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Ballistic Missile Launcher
+	Health:
+		HP: 500
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 85
+		TurnSpeed: 5
+	RevealsShroud:
+		Range: 7c0
+	Transforms:
+		IntoActor: gaicbm
+		Offset: -1,-1
+		Facing: 96
+		TransformSounds:
+		NoTransformSounds:
+		Voice: Move
+
+BUS:
+	Inherits: ^CivilianVoxelVehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: School Bus
+	Mobile:
+		TurnSpeed: 5
+		Speed: 113
+	Health:
+		HP: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 5c0
+	# Cargo:
+		# Types: Infantry
+		# MaxWeight: 20
+		# PipCount: 5
+		# UnloadVoice: Unload
+		# LoadingUpgrades: notmobile
+
+PICK:
+	Inherits: ^CivilianVoxelVehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Pickup
+	Mobile:
+		TurnSpeed: 5
+		Speed: 113
+	Health:
+		HP: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 5c0
+	# Cargo:
+		# Types: Infantry
+		# MaxWeight: 2
+		# PipCount: 5
+		# UnloadVoice: Unload
+		# LoadingUpgrades: notmobile
+
+CAR:
+	Inherits: ^CivilianVoxelVehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Automobile
+	Mobile:
+		TurnSpeed: 5
+		Speed: 113
+	Health:
+		HP: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 5c0
+	# Cargo:
+		# Types: Infantry
+		# MaxWeight: 4
+		# PipCount: 5
+		# UnloadVoice: Unload
+		# LoadingUpgrades: notmobile
+
+WINI:
+	Inherits: ^CivilianVoxelVehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Recreational Vehicle
+	Mobile:
+		TurnSpeed: 5
+		Speed: 113
+	Health:
+		HP: 200
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 5c0
+	# Cargo:
+		# Types: Infantry
+		# MaxWeight: 5
+		# PipCount: 5
+		# UnloadVoice: Unload
+		# LoadingUpgrades: notmobile
+
+LOCOMOTIVE:
+	Inherits: ^Train
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Train Locomotive
+	# Cargo:
+		# MaxWeight: 2
+		# PipCount: 2
+
+TRAINCAR:
+	Inherits: ^Train
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Passenger Car
+	# Cargo:
+		# MaxWeight: 10
+		# PipCount: 5
+
+CARGOCAR:
+	Inherits: ^Train
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Cargo Car
+	# Cargo:
+		# MaxWeight: 10
+		# PipCount: 5
+
+##############################################
+# Structures
+##############################################
+ABAN01:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: WS Logging Company
+	Building:
+		Footprint: xx xx xx xx xx xx
+		Dimensions: 2, 6
+	Armor:
+		Type: wood
+	Health:
+		HP: 600
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE
+
+ABAN02:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Panullo Hacienda
+	Building:
+		Footprint: xxxxx xxxxx xxxxx
+		Dimensions: 5, 3
+	Armor:
+		Type: heavy
+	Health:
+		HP: 600
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE
+
+ABAN03:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Abandoned Factory
+	Building:
+		Footprint: xx xx xx xx xx
+		Dimensions: 2, 5
+	Armor:
+		Type: wood
+	Health:
+		HP: 500
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE
+
+ABAN04:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: City Hall
+	Building:
+		Footprint: xxxx xxxx
+		Dimensions: 4, 2
+	Armor:
+		Type: heavy
+	Health:
+		HP: 400
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE
+
+ABAN05:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Hunting Lodge
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3, 2
+	Armor:
+		Type: wood
+	Health:
+		HP: 500
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE
+
+ABAN06:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Local Inn & Lodging
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: wood
+	Health:
+		HP: 500
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE
+
+ABAN07:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Church
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: heavy
+	Health:
+		HP: 350
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE
+
+ABAN08:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Abandoned Warehouse
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: heavy
+	Health:
+		HP: 500
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE
+
+ABAN09:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Tall's Residence
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: heavy
+	Health:
+		HP: 350
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE
+
+ABAN10:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Denzil's Last Chance Motel
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: wood
+	Health:
+		HP: 500
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE
+
+ABAN11:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Miele Manor
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: wood
+	Health:
+		HP: 400
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE
+
+ABAN12:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Kettler's Place
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: wood
+	Health:
+		HP: 400
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE
+
+ABAN13:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Long's Home
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Armor:
+		Type: wood
+	Health:
+		HP: 400
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE
+
+ABAN14:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Local Store
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Armor:
+		Type: heavy
+	Health:
+		HP: 300
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE
+
+ABAN15:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Adam's House
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Armor:
+		Type: heavy
+	Health:
+		HP: 400
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE
+
+ABAN16:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Gas Station
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: wood
+	Health:
+		HP: 400
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE
+
+ABAN17:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Gas Pumps
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Armor:
+		Type: wood
+	Health:
+		HP: 400
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE
+
+ABAN18:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Gas Station Sign
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Armor:
+		Type: wood
+	Health:
+		HP: 400
+	EditorTilesetFilter:
+		ExcludeTilesets: TEMPERATE
+
+AMMOCRAT:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Ammo Crates
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Armor:
+		Type: none
+	Health:
+		HP: 1
+	RenderSprites:
+		Palette: player
+
+BBOARD01:
+	Inherits: ^CivBillboard
+	Tooltip:
+		Name: Eat at Rade's Roadhouse
+
+BBOARD02:
+	Inherits: ^CivBillboard
+	Tooltip:
+		Name: Drink YEO-CA Cola!
+
+BBOARD03:
+	Inherits: ^CivBillboard
+	Tooltip:
+		Name: Hamburgers $.99
+
+BBOARD04:
+	Inherits: ^CivBillboard
+	Tooltip:
+		Name: Visit Scenic Las Vegas
+
+BBOARD05:
+	Inherits: ^CivBillboard
+	Tooltip:
+		Name: Rooms $29 a nite
+
+BBOARD06:
+	Inherits: ^CivBillboard
+	Tooltip:
+		Name: Kaspm's Tiberium Warhouse
+	Building:
+		Footprint: x x
+		Dimensions: 1, 2
+
+BBOARD07:
+	Inherits: ^CivBillboard
+	Tooltip:
+		Name: Alkaline's Battery Superstore
+	Building:
+		Footprint: x x
+		Dimensions: 1, 2
+
+BBOARD08:
+	Inherits: ^CivBillboard
+	Tooltip:
+		Name: Alex-gators petshop just ahead!
+	Building:
+		Footprint: x x
+		Dimensions: 1, 2
+
+BBOARD09:
+	Inherits: ^CivBillboard
+	Tooltip:
+		Name: TacticX games rock!
+
+BBOARD10:
+	Inherits: ^CivBillboard
+	Tooltip:
+		Name: WW Surf and Turf hits the spot!
+
+BBOARD11:
+	Inherits: ^CivBillboard
+	Tooltip:
+		Name: Only 11 miles to Zydeko's cafe!
+
+BBOARD12:
+	Inherits: ^CivBillboard
+	Tooltip:
+		Name: No escape from Archer's Asylum!
+
+BBOARD13:
+	Inherits: ^CivBillboard
+	Tooltip:
+		Name: Stop in at Hewitt's hair salon
+
+BBOARD14:
+	Inherits: ^CivBillboard
+	Tooltip:
+		Name: Billy Bob's Harvester school
+	Building:
+		Footprint: xx
+		Dimensions: 2, 1
+
+BBOARD15:
+	Inherits: ^CivBillboard
+	Tooltip:
+		Name: Pannullo's hacienda es bueno
+	Building:
+		Footprint: xx
+		Dimensions: 2, 1
+
+BBOARD16:
+	Inherits: ^CivBillboard
+	Tooltip:
+		Name: Join GDI: We save lives.
+	Building:
+		Footprint: xx
+		Dimensions: 2, 1
+
+CA0001:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Rade's Roadhouse
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3, 3
+	Armor:
+		Type: heavy
+	Health:
+		HP: 400
+
+CA0002:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Sandberg and Son's
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3, 3
+	Armor:
+		Type: heavy
+	Health:
+		HP: 400
+
+CA0003:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Temp Housing
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: light
+	Health:
+		HP: 300
+
+CA0004:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Waystation
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: light
+	Health:
+		HP: 300
+
+CA0005:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Ferbie's 4 Sale
+	Building:
+		Footprint: x x
+		Dimensions: 1, 2
+	Armor:
+		Type: light
+	Health:
+		HP: 300
+
+CA0006:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Deluxe Accomodations
+	Building:
+		Footprint: x x
+		Dimensions: 1, 2
+	Armor:
+		Type: heavy
+	Health:
+		HP: 300
+
+CA0007:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Field Generator
+	Building:
+		Footprint: x x
+		Dimensions: 1, 2
+	Armor:
+		Type: light
+	Health:
+		HP: 400
+
+CA0008:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Subterranean Dwelling
+	Building:
+		Footprint: xx xx xx
+		Dimensions: 2, 3
+	Armor:
+		Type: heavy
+	Health:
+		HP: 400
+
+CA0009:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Subterranean Dwelling
+	Building:
+		Footprint: xx xx xx
+		Dimensions: 2, 3
+	Armor:
+		Type: heavy
+	Health:
+		HP: 400
+
+CA0010:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Leary Traveller Inn
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: heavy
+	Health:
+		HP: 300
+
+CA0011:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Water Tank
+	Building:
+		Footprint: x x
+		Dimensions: 1, 2
+	Armor:
+		Type: heavy
+	Health:
+		HP: 200
+
+CA0012:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Greenhouse
+	Building:
+		Footprint: x x
+		Dimensions: 1, 2
+	Armor:
+		Type: light
+	Health:
+		HP: 100
+
+CA0013:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Water Purifier
+	Building:
+		Footprint: xx
+		Dimensions: 2, 1
+	Armor:
+		Type: heavy
+	Health:
+		HP: 300
+
+CA0014:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Observation Tower
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Armor:
+		Type: heavy
+	Health:
+		HP: 300
+
+CA0015:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Port-A-Shack
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Armor:
+		Type: light
+	Health:
+		HP: 300
+
+CA0016:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Port-A-Shack Deluxe
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Armor:
+		Type: light
+	Health:
+		HP: 300
+
+CA0017:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Energy Transformer
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Armor:
+		Type: heavy
+	Health:
+		HP: 300
+
+CA0018:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Solar Panel
+	Building:
+		Footprint: x x
+		Dimensions: 1, 2
+	Armor:
+		Type: light
+	Health:
+		HP: 200
+
+CA0019:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Solar Panel
+	Building:
+		Footprint: x x
+		Dimensions: 1, 2
+	Armor:
+		Type: light
+	Health:
+		HP: 200
+
+CA0020:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Solar Panel
+	Building:
+		Footprint: x x
+		Dimensions: 1, 2
+	Armor:
+		Type: light
+	Health:
+		HP: 200
+
+CA0021:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Solar Panel
+	Building:
+		Footprint: x x
+		Dimensions: 1, 2
+	Armor:
+		Type: light
+	Health:
+		HP: 200
+
+CAARAY:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Civilian Array
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: concrete
+	Health:
+		HP: 400
+	RenderSprites:
+		Palette: player
+
+CAARMR:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Civilian Armory
+	Building:
+		Footprint: xxxx xxxx xxxx xxxx
+		Dimensions: 4, 4
+	Armor:
+		Type: concrete
+	Health:
+		HP: 800
+	RenderSprites:
+		Palette: player
+	ProvidesPrerequisite:
+		Prerequisite: barracks.upgraded
+	Capturable:
+
+CABHUT:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Bridge repair hut
+	Building:
+		Adjacent: 0
+		Footprint: x
+		Dimensions: 1, 1
+	Health:
+		HP: 2000
+	RenderSprites:
+		Palette: player
+
+CACRSH01:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Crash 1
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Armor:
+		Type: concrete
+	Health:
+		HP: 400
+
+CACRSH02:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Crash 2
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Armor:
+		Type: concrete
+	Health:
+		HP: 400
+
+CACRSH03:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Crash 3
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Armor:
+		Type: concrete
+	Health:
+		HP: 400
+
+CACRSH04:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Crash 4
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Armor:
+		Type: concrete
+	Health:
+		HP: 400
+
+CACRSH05:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Crash 5
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Armor:
+		Type: concrete
+	Health:
+		HP: 400
+
+CAHOSP:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Civilian Hospital
+	Building:
+		Footprint: xxx xxx xxx xxx
+		Dimensions: 3, 4
+	Armor:
+		Type: concrete
+	Health:
+		HP: 800
+	RenderSprites:
+		Palette: player
+
+CAPYR01:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Pyramid
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: concrete
+	Health:
+		HP: 400
+	EditorTilesetFilter:
+		ExcludeTilesets: SNOW
+
+CAPYR02:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Pyramid
+	Building:
+		Footprint: xxxx xxxx xxxx xxxx
+		Dimensions: 4, 4
+	Armor:
+		Type: concrete
+	Health:
+		HP: 400
+	EditorTilesetFilter:
+		ExcludeTilesets: SNOW
+
+CAPYR03:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Pyramid
+	Building:
+		Footprint: xxxx xxxx xxxx xxxx
+		Dimensions: 4, 4
+	Armor:
+		Type: concrete
+	Health:
+		HP: 400
+	EditorTilesetFilter:
+		ExcludeTilesets: SNOW
+
+CITY01:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Connelly Court Apts.
+	Building:
+		Footprint: xxxx xxxx
+		Dimensions: 4, 2
+	Armor:
+		Type: wood
+	Health:
+		HP: 400
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+
+CITY02:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Lightner's Luxury Suites
+	Building:
+		Footprint: xx xx xx
+		Dimensions: 2, 3
+	Armor:
+		Type: heavy
+	Health:
+		HP: 700
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+
+CITY03:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Office Building
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3, 2
+	Armor:
+		Type: heavy
+	Health:
+		HP: 500
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+
+CITY04:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Westwood Stock Exchange
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3, 2
+	Armor:
+		Type: heavy
+	Health:
+		HP: 600
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+
+CITY05:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Daily Sun Times
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3, 2
+	Armor:
+		Type: heavy
+	Health:
+		HP: 600
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+
+CITY06:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: YEO-CA Cola Corp.
+	Building:
+		Footprint: xxxx xxxx
+		Dimensions: 4, 2
+	Armor:
+		Type: concrete
+	Health:
+		HP: 500
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+
+CITY07:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Urban Housing
+	Building:
+		Footprint: xxxx xxxx
+		Dimensions: 4, 2
+	Armor:
+		Type: wood
+	Health:
+		HP: 400
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+
+CITY08:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Yee's Discount Liquor
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: heavy
+	Health:
+		HP: 300
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+
+CITY09:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Abandoned Warehouse
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: wood
+	Health:
+		HP: 400
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+
+CITY10:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Urban Storefront
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: heavy
+	Health:
+		HP: 300
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+
+CITY11:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Ambrose Lounge
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: heavy
+	Health:
+		HP: 500
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+
+CITY12:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Bostic Tower
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: concrete
+	Health:
+		HP: 600
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+
+CITY13:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Hewitt Hair Salon
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: wood
+	Health:
+		HP: 500
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+
+CITY14:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Business Offices
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Armor:
+		Type: heavy
+	Health:
+		HP: 600
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+
+CITY15:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: 2nd National Bank
+	Building:
+		Footprint: xxxx xxxx
+		Dimensions: 4, 2
+	Armor:
+		Type: heavy
+	Health:
+		HP: 500
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+
+CITY16:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Highrise Hotel
+	Building:
+		Footprint: xxxx xxxx
+		Dimensions: 4, 2
+	Armor:
+		Type: wood
+	Health:
+		HP: 500
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+
+CITY17:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: The Projects
+	Building:
+		Footprint: xxxx xxxx xxxx
+		Dimensions: 4, 3
+	Armor:
+		Type: wood
+	Health:
+		HP: 300
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+
+CITY18:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Archer Asylum
+	Building:
+		Footprint: xxx xxx xxx xxx xxx
+		Dimensions: 3, 5
+	Armor:
+		Type: concrete
+	Health:
+		HP: 600
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+
+CITY19:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Fill'er Up-Pump'N'Go
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: wood
+	Health:
+		HP: 500
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+
+CITY20:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Gas Pump
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Armor:
+		Type: wood
+	Health:
+		HP: 250
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+
+CITY21:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Gas Station Sign
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Armor:
+		Type: none
+	Health:
+		HP: 100
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+
+CITY22:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Church
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: none
+	Health:
+		HP: 100
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+
+CTDAM:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Hydroelectric Dam
+		Description: Provides power for other structures
+	Building:
+		Footprint: xx xx xx xx xx
+		Dimensions: 2, 5
+	Power:
+		Amount: 200
+	Armor:
+		Type: heavy
+	Health:
+		HP: 1000
+	ProvidesPrerequisite:
+		Prerequisite: anypower
+	EditorTilesetFilter:
+		ExcludeTilesets: SNOW
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	WithIdleOverlay@WATER:
+		Sequence: idle-water
+
+CTVEGA:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Vega's Pyramid
+	Building:
+		Footprint: xxxx xxxx xxxx xxxx
+		Dimensions: 4, 4
+	Armor:
+		Type: none
+	Health:
+		HP: 100
+	EditorTilesetFilter:
+		ExcludeTilesets: SNOW
+
+GAKODK:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: GDI Kodiak
+	Building:
+		Footprint: xxxx xxxx
+		Dimensions: 4, 2
+	Armor:
+		Type: heavy
+	Health:
+		HP: 1500
+	RenderSprites:
+		Palette: player
+	WithIdleOverlay@LARGELIGHTS:
+		Sequence: large-lights
+	WithIdleOverlay@SMALLLIGHT:
+		Sequence: small-light
+	WithIdleOverlay@SMALLLIGHTS:
+		Sequence: small-lights
+
+GAOLDCC1:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Old Construction Yard
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: heavy
+	Health:
+		HP: 400
+	RenderSprites:
+		Palette: player
+
+GAOLDCC2:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Old Temple
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: heavy
+	Health:
+		HP: 400
+	RenderSprites:
+		Palette: player
+
+GAOLDCC3:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Old Weapons Factory
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: heavy
+	Health:
+		HP: 400
+	RenderSprites:
+		Palette: player
+
+GAOLDCC4:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Old Refinery
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: heavy
+	Health:
+		HP: 400
+	RenderSprites:
+		Palette: player
+
+GAOLDCC5:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Old Advanced Power Plant
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: heavy
+	Health:
+		HP: 400
+	RenderSprites:
+		Palette: player
+
+GAOLDCC6:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Old Silos
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	Armor:
+		Type: heavy
+	Health:
+		HP: 400
+	RenderSprites:
+		Palette: player
+
+GASAND:
+	Inherits: ^Wall
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 1000
+		Prerequisites: ~disabled
+	SoundOnDamageTransition:
+		DamagedSounds: sandbag1.aud
+		DestroyedSounds: sandbag1.aud
+	Valued:
+		Cost: 25
+	CustomSellValue:
+		Value: 0
+	Tooltip:
+		Name: Sandbags
+		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
+	Health:
+		HP: 250
+	Armor:
+		Type: Light
+	LineBuild:
+		NodeTypes: sandbags
+	LineBuildNode:
+		Types: sandbags
+	WithWallSpriteBody:
+		Type: sandbags
+
+GASPOT:
+	Inherits: ^Building
+	Buildable:
+		Queue: Defense
+		Prerequisites: ~disabled
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Light Tower
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Selectable:
+		Bounds: 48, 30, 0, -4
+	Power:
+		Amount: -10
+	Armor:
+		Type: wood
+	Health:
+		HP: 400
+	RevealsShroud:
+		Range: 6c0
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	SelectionDecorations:
+		VisualBounds: 48, 82, 0, -25
+
+GALITE:
+	Inherits: ^Building
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Light Post
+	RenderSprites:
+		Palette: terraindecoration
+	-WithMakeAnimation:
+	-WithDeathAnimation:
+	Health:
+		HP: 600
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 2c0
+	Power:
+		Amount: 0
+# TODO: should use terrain lighting instead, depends on https://github.com/OpenRA/OpenRA/issues/3605
+	WithIdleOverlay@LIGHTING:
+		Sequence: lighting
+		Palette: alpha
+	Selectable:
+		Bounds: 24, 24, 0, -4
+	Buildable:
+		Queue: Defense
+		Prerequisites: ~disabled
+	SelectionDecorations:
+		VisualBounds: 25, 35, 0, -12
+	-Cloak@CLOAKGENERATOR:
+
+TSTLAMP:
+	Inherits: GALITE
+	RenderSprites:
+		Image: galite
+	Tooltip:
+		Description: light post with alpha blending
+
+GAICBM:
+	Inherits: ^Building
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Deployed ICBM
+	-GivesBuildableArea:
+	Health:
+		HP: 400
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+	Transforms:
+		IntoActor: icbm
+		Offset: 1,1
+		Facing: 96
+		TransformSounds: place2.aud
+		NoTransformSounds:
+	-WithDeathAnimation:
+
+NAMNTK:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: NOD Montauk
+	Building:
+		Footprint: x x x
+		Dimensions: 1, 3
+	Armor:
+		Type: heavy
+	Health:
+		HP: 1500
+	RenderSprites:
+		Palette: player
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+
+NTPYRA:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Nod Pyramid
+	Building:
+		Footprint: xxxx xxxx xxxx xxxx
+		Dimensions: 4, 4
+	Power:
+		Amount: -40
+	Armor:
+		Type: heavy
+	Health:
+		HP: 1500
+	RenderSprites:
+		Palette: player
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+
+UFO:
+	Inherits: ^CivBuilding
+	Building:
+		Dimensions: 6, 4
+		Footprint: xxxxxx xxxxxx xxxxxx xxxxxx
+	RenderSprites:
+		Palette: terraindecoration
+	Selectable:
+		Bounds: 144, 72, 0, 0
+	Tooltip:
+		Name: Scrin Ship
+	Health:
+		HP: 1000
+	Armor:
+		Type: Heavy
+	EditorTilesetFilter:
+		RequireTilesets: TEMPERATE
+	SelectionDecorations:
+		VisualBounds: 144, 72, 0, 0
+
+EGGS:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Eggs
+	Building:
+		Footprint: x
+		Dimensions: 1, 1
+	Armor:
+		Type: wood
+	Health:
+		HP: 250
+	RenderSprites:
+		Palette: playermut
+	SpawnActorOnDeath:
+		Actor: Crab
+		Probability: 100
+		OnwerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@dos:
+		Actor: Crab
+		Probability: 20
+		OnwerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@tres:
+		Actor: Crab
+		Probability: 20
+		OnwerType: InternalName
+		InternalOwner: Creeps
+	SpawnActorOnDeath@cuatro:
+		Actor: Crab
+		Probability: 20
+		OnwerType: InternalName
+		InternalOwner: Creeps			

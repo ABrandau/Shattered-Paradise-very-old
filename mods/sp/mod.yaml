@@ -1,0 +1,305 @@
+Metadata:
+	Title: Shattered Paradise
+	Description: Developer stub, not yet ready for release!\nNote: Do not install SP Assets, install TS assets and the mod will run.
+	Version: {DEV_VERSION}
+	Author: Nolt, with the help of a lot of people.
+
+RequiresMods:
+	modchooser: {DEV_VERSION}
+
+Packages:
+	~^Content/ts
+	.
+	$ts: ts
+	./mods/common: common
+	$ra: ra
+	$cnc: cnc
+	$d2k: d2k
+	$sp: sp
+
+# Tiberian Sun
+	~scores.mix
+	~sidenc01.mix
+	~sidenc02.mix
+	~gmenu.mix
+	~e01scd01.mix
+	~e01scd02.mix
+	~maps01.mix
+	~maps02.mix
+	~movies01.mix
+	~movies02.mix
+	~multi.mix
+	~patch.mix
+	~sidecd01.mix
+	~sidecd02.mix
+	~tibsun.mix
+	cache.mix
+	conquer.mix
+	isosnow.mix
+	isotemp.mix
+	local.mix
+	~sidec01.mix: sidebar-gdi
+	~sidec02.mix: sidebar-nod
+	~sno.mix
+	~snow.mix
+	~sounds.mix
+	~speech01.mix: speech-gdi
+	~speech02.mix: speech-nod
+	tem.mix
+	temperat.mix
+# Firestorm
+	~scores01.mix
+	~expand01.mix
+	~sounds01.mix
+	~e01sc01.mix
+	~e01sc02.mix
+	~e01vox01.mix
+	~e01vox02.mix
+	~ecache01.mix
+	sp|bits
+	sp|bits/audio/music
+	sp|bits/audio/nod
+	sp|bits/pal
+	sp|bits/anims/effects
+	sp|bits/anims/explosions
+	sp|bits/anims/proyectiles
+	sp|bits/anims/trail
+	sp|bits/gdi/infantry
+	sp|bits/nod/infantry
+	sp|bits/mutant/infantry
+	sp|bits/cabal/infantry
+	sp|bits/scrin/infantry
+	sp|bits/gdi/vehicles
+	sp|bits/nod/vehicles
+	sp|bits/mutant/vehicles
+	sp|bits/cabal/vehicles
+	sp|bits/scrin/vehicles
+	sp|bits/gdi/structures
+	sp|bits/nod/structures
+	sp|bits/mutant/structures
+	sp|bits/cabal/structures
+	sp|bits/scrin/structures
+	sp|bits/scrin/air
+	sp|bits/neutral
+	sp|uibits
+
+MapFolders:
+	sp|maps: System
+	~^maps/ts/{DEV_VERSION}: User
+	~^maps/sp/{DEV_VERSION}: User
+
+Rules:
+	sp|rules/ai.yaml
+	sp|rules/misc.yaml
+	sp|rules/player.yaml
+	sp|rules/world.yaml
+	sp|rules/palettes.yaml
+	sp|rules/defaults.yaml
+	sp|rules/husks.yaml
+	sp|rules/trees.yaml
+	sp|rules/gdirules.yaml
+	sp|rules/nodrules.yaml
+	sp|rules/mutrules.yaml
+	sp|rules/cabrules.yaml
+	sp|rules/scrrules.yaml
+	sp|rules/civilianrules.yaml
+	sp|rules/sharedrules.yaml
+
+Weapons:
+	sp|weapons/neutralweapons.yaml
+	sp|weapons/explosions.yaml
+	sp|weapons/healweapons.yaml
+	sp|weapons/largeguns.yaml
+	sp|weapons/missiles.yaml
+	sp|weapons/smallguns.yaml
+	sp|weapons/superweapons.yaml
+	sp|weapons/gdiweapons.yaml
+	sp|weapons/nodweapons.yaml
+	sp|weapons/mutweapons.yaml
+	sp|weapons/cabweapons.yaml
+	sp|weapons/scrweapons.yaml
+	sp|weapons/miscweapons.yaml
+
+Sequences:
+	sp|sequences/misc.yaml
+	sp|sequences/civseq.yaml
+	sp|sequences/sharedseq.yaml
+	sp|sequences/trees.yaml
+	sp|sequences/gdiseq.yaml
+	sp|sequences/nodseq.yaml
+	sp|sequences/neutralseq.yaml
+	sp|sequences/mutseq.yaml
+	sp|sequences/cabseq.yaml
+	sp|sequences/scrseq.yaml
+
+VoxelSequences:
+	sp|sequences/voxels.yaml
+	sp|sequences/voxelsSP.yaml
+
+TileSets:
+	sp|tilesets/temperate.yaml
+	sp|tilesets/snow.yaml
+
+MapGrid:
+	TileSize: 48,24
+	Type: RectangularIsometric
+	MaximumTerrainHeight: 16
+	SubCellOffsets: 0,0,0, -256,128,0, 0,-128,0, 256,128,0
+	DefaultSubCell: 2
+
+Cursors:
+	sp|cursors.yaml
+
+Chrome:
+	sp|chrome.yaml
+
+Assemblies:
+	common|OpenRA.Mods.Common.dll
+	ra|OpenRA.Mods.RA.dll
+	cnc|OpenRA.Mods.Cnc.dll
+	ts|OpenRA.Mods.TS.dll
+	d2k|OpenRA.Mods.D2k.dll
+
+ChromeLayout:
+	ra|chrome/ingame.yaml
+	ra|chrome/ingame-chat.yaml
+	ra|chrome/ingame-fmvplayer.yaml
+	ra|chrome/ingame-menu.yaml
+	sp|chrome/ingame-info.yaml
+	ra|chrome/ingame-infoscripterror.yaml
+	ra|chrome/ingame-infobriefing.yaml
+	ra|chrome/ingame-infoobjectives.yaml
+	ra|chrome/ingame-infostats.yaml
+	d2k|chrome/ingame-observer.yaml
+	ts|chrome/ingame-observerstats.yaml
+	sp|chrome/ingame-player.yaml
+	ra|chrome/ingame-perf.yaml
+	sp|chrome/ingame-debug.yaml
+	ra|chrome/mainmenu.yaml
+	ra|chrome/settings.yaml
+	ra|chrome/credits.yaml
+	ra|chrome/lobby.yaml
+	ra|chrome/lobby-mappreview.yaml
+	ra|chrome/lobby-players.yaml
+	ra|chrome/lobby-options.yaml
+	ra|chrome/lobby-music.yaml
+	ra|chrome/lobby-kickdialogs.yaml
+	ra|chrome/lobby-globalchat.yaml
+	sp|chrome/color-picker.yaml
+	ra|chrome/map-chooser.yaml
+	ra|chrome/multiplayer.yaml
+	ra|chrome/multiplayer-browser.yaml
+	ra|chrome/multiplayer-createserver.yaml
+	ra|chrome/multiplayer-directconnect.yaml
+	ra|chrome/multiplayer-globalchat.yaml
+	ra|chrome/connection.yaml
+	ra|chrome/replaybrowser.yaml
+	sp|chrome/dropdowns.yaml
+	ra|chrome/musicplayer.yaml
+	ra|chrome/tooltips.yaml
+	ra|chrome/assetbrowser.yaml
+	ra|chrome/missionbrowser.yaml
+	ra|chrome/confirmation-dialogs.yaml
+	ra|chrome/editor.yaml
+
+Voices:
+	sp|audio/voices.yaml
+
+Notifications:
+	sp|audio/speech-generic.yaml
+	sp|audio/speech-singleplayer.yaml
+	sp|audio/sounds-generic.yaml
+
+Music:
+	sp|audio/music.yaml
+
+Translations:
+	ts|languages/english.yaml
+
+LoadScreen: LogoStripeLoadScreen
+	Image: sp|uibits/loadscreen.png
+	Text: Exterminating the Martian race..., Sending the tacitus to Earth..., Building Civilization..., Waiting until tiberium becomes a problem..., Starting the third tiberian war..., Reinstalling bugs..., Shattering the Paradise ;)
+
+ContentInstaller:
+	TestFiles: ^Content/ts/cache.mix, ^Content/ts/conquer.mix, ^Content/ts/isosnow.mix, ^Content/ts/isotemp.mix, ^Content/ts/local.mix, ^Content/ts/sidec01.mix, ^Content/ts/sidec02.mix, ^Content/ts/sno.mix, ^Content/ts/snow.mix, ^Content/ts/sounds.mix, ^Content/ts/speech01.mix, ^Content/ts/tem.mix, ^Content/ts/temperat.mix
+	PackageMirrorList: http://www.openra.net/packages/ts-mirrors.txt
+	DiskTestFiles: MULTI.MIX, INSTALL/TIBSUN.MIX
+	CopyFilesFromCD:
+		.: INSTALL/TIBSUN.MIX, SCORES.MIX, MULTI.MIX
+	PackageToExtractFromCD: INSTALL/TIBSUN.MIX
+	ExtractFilesFromCD:
+		.: cache.mix, conquer.mix, isosnow.mix, isotemp.mix, local.mix, sidec01.mix, sidec02.mix, sno.mix, snow.mix, sounds.mix, speech01.mix, tem.mix, temperat.mix
+	ShippedSoundtracks: 2
+	MusicPackageMirrorList: http://www.openra.net/packages/ts-music-mirrors.txt
+	InstallShieldCABFilePackageIds: 332
+	InstallShieldCABFileIds: 323, 364
+
+ServerTraits:
+	LobbyCommands
+	PlayerPinger
+	MasterServerPinger
+	LobbySettingsNotification
+
+ChromeMetrics:
+	common|metrics.yaml
+	ts|metrics.yaml
+
+Fonts:
+	Regular:
+		Font: common|FreeSans.ttf
+		Size:14
+	Bold:
+		Font: common|FreeSansBold.ttf
+		Size:14
+	Title:
+		Font: common|FreeSansBold.ttf
+		Size:32
+	MediumBold:
+		Font: common|FreeSansBold.ttf
+		Size:18
+	BigBold:
+		Font: common|FreeSansBold.ttf
+		Size:24
+	Small:
+		Font: common|FreeSans.ttf
+		Size:12
+	Tiny:
+		Font: common|FreeSans.ttf
+		Size:10
+	TinyBold:
+		Font: common|FreeSansBold.ttf
+		Size:10
+
+SupportsMapsFrom: ts, sp
+
+SoundFormats: Aud, Wav
+
+SpriteFormats: ShpTS, TmpTS, ShpTD
+
+SpriteSequenceFormat: TilesetSpecificSpriteSequence
+	TilesetExtensions:
+		TEMPERATE: .tem
+		SNOW: .sno
+	TilesetCodes:
+		TEMPERATE: t
+		SNOW: t
+
+GameSpeeds:
+	slower:
+		Name: Slower
+		Timestep: 50
+		OrderLatency: 3
+	default:
+		Name: Normal
+		Timestep: 40
+		OrderLatency: 3
+	faster:
+		Name: Faster
+		Timestep: 30
+		OrderLatency: 4
+	fastest:
+		Name: Fastest
+		Timestep: 20
+		OrderLatency: 6
+
+ColorValidator:

@@ -1,0 +1,77 @@
+FiendShard:
+	ReloadDelay: 30
+	Burst: 3
+	Range: 5c0
+	Report: fiend2.aud
+	Projectile: Bullet
+		Speed: 213
+		Image: CRYSTAL4
+		Inaccuracy: 512
+		Shadow: true
+		Angle: 60
+		Palette: greentiberium
+	Warhead@1Dam: SpreadDamage
+		Damage: 35
+		Versus:
+			Light: 60
+			Heavy: 40
+			Concrete: 20
+		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+
+SlimeAttack:
+	ReloadDelay: 80
+	Range: 1c512
+	Report: vicer1.aud
+	Projectile: Bullet
+		Speed: 426
+	Warhead@1Dam: SpreadDamage
+		Damage: 100
+		Versus:
+			Light: 60
+			Heavy: 40
+			Concrete: 20
+		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath
+
+Tiberium:
+	ReloadDelay: 16
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 3
+		DamageTypes: TiberiumDeath
+		
+ScorpBuffer:
+	ReloadDelay: 125
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 1
+			None: 1
+			Wood: 1
+			Light: 1
+			Heavy: 1
+			Concrete: 10		
+		DamageTypes: EnergyDeath # TODO: FIX ME!		
+	Warhead@Buff: GrantUpgrade
+		Range: 1c0
+		Duration: 125
+		Upgrades: ScorpBuff	
+
+FiendBuffer:
+	ReloadDelay: 125
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 1
+			None: 1
+			Wood: 1
+			Light: 1
+			Heavy: 1
+			Concrete: 10		
+		DamageTypes: EnergyDeath # TODO: FIX ME!		
+	Warhead@Buff: GrantUpgrade
+		Range: 1c0
+		Duration: 125
+		Upgrades: FiendCloak			

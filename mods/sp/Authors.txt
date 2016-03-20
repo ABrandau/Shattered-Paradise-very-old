@@ -1,0 +1,34 @@
+First, Thanks to these people
+
+WestWood Studios: I don't think I need to say why.		
+Openra dev team	: for their effort in creating openra (no ORA, no SP).
+Scipción	: Got me Into 3d modelling.
+Penev		: Saved my ass from every bug that could threaten to terminate the mod.
+Graion & Astor	: For their help when I was starting using this engine.
+FiveAces	: Streaming and testing.
+Xanax		: Gave some support when I was starting.
+SchismNavigator	: For helping setting up the discord server and other general contributions.
+BuhDan		: Sound Support.
+
+And now about the assets, all the graphics fall into 3 categories, made by WestWood, by me or 
+by any of the following authors, if an asset doesn't have credit, then either WW or I made it, 
+let me know if I made any mistakes.
+
+The_Dementor	: Skirmisher Icon, EMP pulse Icons, Harvester Icons, MCV Icons (mut and cab).
+Gangster	: His template.
+Zoidzilla	: His template.		
+Zero18		: Gargoil vxl,	Quad Cannon vxl, Basilisk vxl,	Leonid tank vxl.	
+CalChillin	: Ion Storm SHPS				
+ApolloTD	: Gradient Colored Palettes.				
+Moder.U		: Falcon vxl, Battle Fortress vxl, Beam Cannon vxl.
+Super Joe	: Marine shp, Militant shp.			
+Lin Kuei Ominae	: Seeker shp, Tripod shp.
+wirecase.com	: Guardian Platform model.				
+Hassan_2030	: Grinder vxl.				
+Jah		: Storm Rider vxl.				
+Sane Disruption	: Forgotten MRLS vxl.				
+GameMaster0000	: Tiberian Fiend Icon.
+CyborgCommandoKerem: Black Hand Sniper shp.				
+DonutArnold	: Firestorm effect shp.				
+
+SchismNavigator	: Beam Cannon Voice.

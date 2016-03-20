@@ -1,0 +1,564 @@
+SharkJump:
+	ValidTargets: Infantry
+	ReloadDelay: 75
+	Range: 1c0
+	Report: fiend2.aud
+	Warhead@1Dam: SpreadDamage
+		Spread: 50
+		Damage: 20
+		ValidTargets: Infantry
+		ValidStances: Enemy
+		DamageTypes: BulletDeath
+
+LegioNeedler:
+	ReloadDelay: 100
+	Range: 5c0
+	MinRange: 0c512
+	Report: rketinf1.aud
+	Burst: 1
+	BurstDelay: 1
+	ValidTargets: Ground, Air
+	Projectile: Missile
+		Speed: 250
+		Blockable: false
+		Shadow: true
+		Inaccuracy: 128
+		Image: blueballminitrail
+		# Angle: 90
+		RateOfTurn: 8
+		RangeLimit: 50
+		Palette: pips
+	Warhead@1Dam: SpreadDamage
+		Spread: 350
+		Damage: 18
+		ValidTargets: Ground, Air
+		Versus:
+			None: 25
+			Wood: 75
+			Light: 85
+			Heavy: 110
+			Concrete: 70
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: pulse3
+		ImpactSound: expnew12.aud
+		# InvalidImpactTypes: Water, Air, AirHit
+	# Warhead@3EffWater: CreateEffect
+		# Explosion: small_watersplash
+		# ImpactSound: ssplash3.aud
+		# ValidImpactTypes: Water
+	# Warhead@4EffAir: CreateEffect
+		# Explosion: small_twlt
+		# ImpactSound: expnew12.aud
+		# ValidImpactTypes: Air, AirHit
+	Warhead@5Smu: LeaveSmudge
+		SmudgeType: SmallCrater		
+		
+FloatTesla:
+	ReloadDelay: 80
+	Range: 4c0
+	Report: TESLA1.AUD
+	Charges: yes
+	Projectile: TeslaZap
+		palette: pips
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 6
+		Versus:
+			None: 30
+			Wood: 100
+			Light: 150
+			Heavy: 200
+			Concrete: 1
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+
+StalkerRail:
+	ReloadDelay: 100
+	Range: 4c0
+	Report: lastur1.aud
+	Projectile: LaserZap
+		BeamWidth: 2
+		BeamDuration: 5
+	Warhead@1Dam: SpreadDamage
+		Spread: 125
+		Damage: 10
+		Versus:
+			None: 100
+			Wood: 75
+			Light: 50
+			Heavy: 15
+			Concrete: 5	
+		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath		
+
+StalkerExplode:
+	Warhead@1Dam: SpreadDamage
+		Spread: 426
+		Damage: 1
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Versus:
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: large_twlt
+		ImpactSound: expnew09.aud
+	# Warhead@4OwnerChange: ChangeOwner	
+		# Range: 3c0
+		# Duration: 100
+		# InvalidTargets: C4, MindControlInmune		
+		
+BugRail:
+	ReloadDelay: 100
+	Range: 4c0
+	Report: lastur1.aud
+	Projectile: LaserZap
+		BeamWidth: 2
+		BeamDuration: 5
+	Warhead@1Dam: SpreadDamage
+		Spread: 125
+		Damage: 25
+		Versus:
+			None: 800
+			Wood: 75
+			Light: 50
+			Heavy: 15
+			Concrete: 5	
+		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath		
+		
+#################################################
+# Vehicles
+#################################################
+ScorpAcid:
+	ReloadDelay: 100
+	Range: 4c0
+	Burst: 12
+	Report: flamtnk1.aud
+	Projectile: Bullet
+		Speed: 120
+		Image: acidall32
+		Inaccuracy: 1c0
+		Palette: apolredalpha
+	BurstDelay: 4
+	Warhead@1Dam: SpreadDamage
+		Spread: 80
+		Damage: 8
+		Versus:
+			None: 200
+			Wood: 100
+			Light: 45
+			Heavy: 15
+			Concrete: 2
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath, TiberiumDeath
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: SmallScorch		
+		
+ScrMbtCannon:
+	ReloadDelay: 90
+	Range: 6c0
+	Report: 120mmf.aud
+	Burst: 1
+	BurstDelay: 5
+	Projectile: Bullet
+		Speed: 550
+		Image: blueball
+		# Angle: 90
+		Trail: blueballminitrail
+		Shadow: true
+		Angle: 62
+		Palette: pips
+	Warhead@1Dam: SpreadDamage
+		Spread: 512
+		Damage: 80
+		Versus:
+			None: 10
+			Wood: 60
+			Light: 80
+			Heavy: 110
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: pulse2
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: pulse2
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+		
+DronecPlane:
+	ReloadDelay: 100
+	Range: 11c0
+	MinRange: 5c0
+	Report: 120mmf.aud
+	Burst: 1
+	ValidTargets: Ground, Air
+	BurstDelay: 5
+	Projectile: Missile
+		Speed: 130
+		Image: projwyverm
+		ContrailLength: 30
+		Palette: playerscrin
+		Shadow: false
+		Angle: 220
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c0
+		Damage: 50
+		ValidTargets: Ground, Air
+		Versus:
+			None: 150
+			Wood: 90
+			Light: 70
+			Heavy: 50
+			Concrete: 100
+		DamageTypes: Prone50Percent, TriggerProne, ScrinDroneDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: destroexp
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: destroexp
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumCrater		
+
+Glyder2Cannon:
+	ReloadDelay: 100
+	Range: 6c0
+	Burst: 4
+	Report: 120mmf.aud
+	ValidTargets: Air
+	Projectile: Missile
+		Speed: 350
+		Image: torpedo
+		Inaccuracy: 1c0
+		Shadow: true
+		Palette: pips
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c512
+		Damage: 20
+		ValidTargets: Air
+		Versus:
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: medium_clsn
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: SmallCrater
+		
+TripodLaser:
+	ReloadDelay: 80
+	Range: 6c0
+	Report: lastur1.aud
+	Projectile: LaserZap
+		Width: 85
+		BeamDuration: 5
+		ZOffset: 2047
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 40
+		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath			
+		
+#################################################
+# Aircraft
+#################################################
+StormRiderBlast:
+	ReloadDelay: 75
+	Range: 6c512
+	ValidTargets: Ground
+	Projectile: Bullet # TODO: Add bounce effect
+		Speed: 800
+		Blockable: false
+		Shadow: true
+		Angle: 45
+		Palette: pips	
+		Trail: blueballminitrail
+		ContrailLength: 5
+		Inaccuracy: 384
+		Image: blueplasma
+	Warhead@1Dam: SpreadDamage
+		Spread: 171
+		Damage: 30
+		ValidTargets: Ground
+		Versus:
+			Wood: 60
+			Light: 40
+			Heavy: 25
+			Concrete: 10
+		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: large_grey_explosion
+		ImpactSound: expnew13.aud
+		InvalidImpactTypes: Water
+		
+StormRiderBlastAA:
+	ReloadDelay: 75
+	Range: 6c512
+	ValidTargets: Air
+	Projectile: Bullet # TODO: Add bounce effect
+		Speed: 800
+		Blockable: false
+		Shadow: true
+		Angle: 45
+		Palette: pips	
+		Trail: blueballminitrail
+		ContrailLength: 5
+		Inaccuracy: 384
+		Image: blueplasma
+	Warhead@1Dam: SpreadDamage
+		Spread: 171
+		Damage: 25
+		ValidTargets: Air
+		Versus:
+		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: large_grey_explosion
+		ImpactSound: expnew13.aud
+		InvalidImpactTypes: Water		
+		
+Glyder1Cannon:
+	ReloadDelay: 100
+	Range: 6c0
+	Burst: 3
+	Report: 120mmf.aud
+	ValidTargets: Ground
+	Projectile: Bullet
+		Speed: 350
+		Image: torpedo
+		Inaccuracy: 1c0
+		Shadow: true
+		Palette: pips
+	Warhead@1Dam: SpreadDamage
+		Spread: 0c512
+		Damage: 18
+		ValidTargets: Ground
+		Versus:
+			None: 25
+			Wood: 65
+			Light: 75
+			Heavy: 100
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: medium_clsn
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: SmallCrater		
+		
+BattleshipCannon:
+	ReloadDelay: 45
+	Range: 5c768
+	Report: 120mmf.aud
+	Burst: 6
+	BurstDelay: 5
+	ValidTargets: Ground, Air, water
+	Projectile: Bullet
+		Speed: 500
+		Image: purpbullet
+		Trail: purpbullet	
+		Inaccuracy: 1c512
+		ContrailLength: 5
+		Shadow: true
+		Palette: playerscrin
+		Angle: 15
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 60
+		ValidTargets: Ground, Air, water
+		Versus:
+			None: 150
+			Wood: 80
+			Light: 65
+			Heavy: 50
+			Concrete: 20
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: medium_clsn
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	# Warhead@4Smu: LeaveSmudge
+		# SmudgeType: MediumCrater		
+		
+DestroyerCannon:
+	ReloadDelay: 200
+	Range: 16c0
+	MinRange: 5c0
+	Report: 120mmf.aud
+	Burst: 1
+	Inaccuracy: 2c0
+	BurstDelay: 5
+	Projectile: Bullet
+		Speed: 220
+		Image: destroshell
+		Trail: blueballminitrail		
+		Palette: pips
+		Shadow: false
+		Angle: 62
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c0
+		Damage: 80
+		Versus:
+			None: 150
+			Wood: 90
+			Light: 70
+			Heavy: 50
+			Concrete: 100
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: destroexp
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: destroexp
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+
+CouncilSteal:
+	ReloadDelay: 150
+	Range: 6c0
+	Report:
+	ValidTargets: Infantry, Vehicle
+	InvalidTargets: MindControlInmune
+	Projectile: Bullet
+		Speed: 1c682
+		Image: 120mm
+		# Inaccuracy: 1
+		ValidTargets: Infantry, Vehicle
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 1
+		ValidTargets: Infantry, Vehicle
+		Versus:
+			Concrete: 30
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@4OwnerChange: ChangeOwner	
+		Range: 1c512
+		Duration: 75
+		InvalidTargets: C4, MindControlInmune
+#################################################
+# Defences
+#################################################		
+NeedlerCannon:
+	ReloadDelay: 30
+	Range: 6c0
+	Report: 120mmf.aud
+	Burst: 1
+	BurstDelay: 5
+	Projectile: Bullet
+		Speed: 341
+		Image: blueball
+		# Angle: 90
+		Trail: blueballminitrail
+		Shadow: true
+		Angle: 62
+		Palette: pips
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 20
+		Versus:
+			None: 200
+			Wood: 75
+			Light: 85
+			Heavy: 110
+			Concrete: 70
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: pulse2
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: pulse2
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+
+TractorBeam:
+	ReloadDelay: 25
+	Range: 6c0
+	Report: 120mmf.aud
+	Burst: 1
+	BurstDelay: 5
+	ValidTargets: Air
+	Projectile: Missile
+		Speed: 1200
+		Image: blueball
+		Trail: blueballminitrail
+		HorizontalRateOfTurn: 25		
+		Shadow: true
+		Angle: 62
+		Palette: pips
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 6
+		ValidTargets: Air		
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@emp: GrantUpgrade
+		Range: 1c0
+		Duration: 30
+		Upgrades: tractorstop
+		ValidTargets: Air
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+		
+DronePlane:
+	ReloadDelay: 1
+	Range: 11c0
+	MinRange: 2c0
+	Report: 120mmf.aud
+	Burst: 1
+	BurstDelay: 5
+	ValidTargets: Ground, Air
+	Projectile: Missile
+		Speed: 130
+		Image: projwyverm	
+		Palette: playerscrin
+		Shadow: false
+		Angle: 1204
+		ContrailLength: 30
+	Warhead@1Dam: SpreadDamage
+		Spread: 1c0
+		Damage: 70
+		ValidTargets: Ground, Air
+		Versus:
+			None: 50
+			Wood: 70
+			Light: 90
+			Heavy: 120
+			Concrete: 100
+		DamageTypes: Prone50Percent, TriggerProne, ScrinDroneDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: destroexp
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: destroexp
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumCrater			

@@ -1,0 +1,1029 @@
+###############################################################
+# INFANTRY
+###############################################################
+zombie:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 238
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		ShadowStart: 246
+	idle1:
+		Start: 89
+		Length: 17
+		ShadowStart: 327
+	idle2:
+		Start: 71
+		Length: 15
+		ShadowStart: 344
+	die1:
+		Start: 204
+		Length: 9
+		ShadowStart: 442
+	die2:
+		Start: 230
+		Length: 9
+		ShadowStart: 451
+	die3: infdie
+		Length: *
+	die4: s_bang34
+		Length: *
+	die-crushed:
+		Start: 204
+		Length: 10
+		ShadowStart: 442
+	shoot:
+		Start: 140
+		Length: 9
+		Facings: 8
+		ShadowStart: 378
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
+	icon: sidebar-nod|e1icon
+	
+berserker:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: -8
+		ShadowStart: 325
+	run:
+		Start: 8
+		Length: 7
+		Facings: -8
+		Stride: 8
+		ShadowStart: 333
+	idle1:
+		Start: 74
+		Length: 25
+		ShadowStart: 399
+	idle2:
+		Start: 99
+		Length: 18
+		ShadowStart: 424
+	idle3:
+		Start: 116
+		Length: 21
+		ShadowStart: 441
+	die1:
+		Start: 297
+		Length: 11
+		ShadowStart: 622
+	die2:
+		Start: 308
+		Length: 17
+		ShadowStart: 633
+	die3: infdie
+		Length: *
+	die4: s_bang34
+		Length: *
+	die-crushed:
+		Start: 297
+		Length: 11
+		ShadowStart: 622
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 137
+		Length: 19
+		Facings: -8
+		ShadowStart: 462
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
+	icon: sidebar-gdi|e1icon
+
+crab:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: -8
+		ShadowStart: 156
+	run:
+		Start: 8
+		Length: 8
+		Facings: -8
+		ShadowStart: 164
+	idle1:
+		Start: 73
+		Length: 13
+		ShadowStart: 229
+	idle2:
+		Start: 85
+		Length: 17
+		ShadowStart: 241
+	die1:
+		Start: 143
+		Length: 7
+		ShadowStart: 299
+	die2:
+		Start: 150
+		Length: 6
+		ShadowStart: 306
+	die3:
+		Start: 150
+		Length: 6
+		ShadowStart: 306
+	die4:
+		Start: 150
+		Length: 6
+		ShadowStart: 306
+	die-crushed:
+		Start: 150
+		Length: 6
+		ShadowStart: 306
+		ZOffset: -511
+	shoot:
+		Start: 103
+		Length: 5
+		Facings: -8
+		ShadowStart: 259
+	die5:
+		Start: 150
+		Length: 6
+		ShadowStart: 306
+	die6:
+		Start: 143
+		Length: 7
+		ShadowStart: 299
+	icon: sidebar-gdi|e1icon	
+	
+weedguy:
+	Defaults: weed
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 202
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 210
+	shoot:
+		Start: 56
+		Facings: 8
+		ShadowStart: 258
+	prone-shoot:
+		Start: 56
+		Facings: 8
+		ShadowStart: 258
+	standup-0:
+		Start: 112
+		Length: 2
+		Facings: 8
+		ShadowStart: 314
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		ShadowStart: 288
+	prone-stand:
+		Start: 86
+		Facings: 8
+		Stride: 6
+		ShadowStart: 288
+	idle1:
+		Start: 128
+		Length: 8
+		ShadowStart: 330
+	idle2:
+		Start: 136
+		Length: 16
+		ShadowStart: 338
+	die1:
+		Start: 152
+		Length: 8
+		ShadowStart: 354
+	die2:
+		Start: 160
+		Length: 6
+		ShadowStart: 362
+	die3:
+		Start: 166
+		Length: 11
+		ShadowStart: 368
+	die4:
+		Start: 197
+		Length: 5
+		ShadowStart: 399
+	die5:
+		Start: 177
+		Length: 20
+		ShadowStart: 379
+	die6: electro
+		Length: *
+	die-crushed:
+		Start: 174
+		Length: 3
+		ShadowStart: 376
+		Tick: 1000	
+		
+umagon:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 292
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 300
+	idle1:
+		Start: 56
+		Length: 15
+		ShadowStart: 348
+	idle2:
+		Start: 71
+		Length: 15
+		ShadowStart: 363
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		ShadowStart: 378
+	prone-stand:
+		Start: 86
+		Facings: 8
+		Stride: 6
+		ShadowStart: 378
+	die1:
+		Start: 134
+		Length: 15
+		ShadowStart: 426
+	die2:
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+	die3: # TODO: copy-paste of die2
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+	die4: s_bang34
+		Length: *
+	die-crushed:
+		Start: 159
+		Length: 5
+		ShadowStart: 451
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		ShadowStart: 456
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		ShadowStart: 504
+	standup-0:
+		Start: 260
+		Length: 2
+		Facings: 8
+		ShadowStart: 552
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
+	icon: umagicon
+
+ghost:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 292
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 300
+	idle1:
+		Start: 56
+		Length: 15
+		ShadowStart: 348
+	idle2:
+		Start: 71
+		Length: 15
+		ShadowStart: 363
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		ShadowStart: 378
+	prone-stand:
+		Start: 86
+		Facings: 8
+		Stride: 6
+		ShadowStart: 378
+	die1:
+		Start: 134
+		Length: 15
+		ShadowStart: 426
+	die2:
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+	die3: # TODO: copy-paste of die2
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+	die4: s_bang34
+		Length: *
+	die-crushed:
+		Start: 159
+		Length: 5
+		ShadowStart: 451
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		ShadowStart: 456
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		ShadowStart: 504
+	standup-0:
+		Start: 260
+		Length: 2
+		Facings: 8
+		ShadowStart: 552
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
+	icon: gosticon		
+
+mhijack:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 292
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 300
+	idle1:
+		Start: 56
+		Length: 15
+		ShadowStart: 348
+	idle2:
+		Start: 71
+		Length: 15
+		ShadowStart: 363
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		ShadowStart: 378
+	prone-stand:
+		Start: 86
+		Facings: 8
+		Stride: 6
+		ShadowStart: 378
+	die1:
+		Start: 134
+		Length: 15
+		ShadowStart: 426
+	die2:
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+	die3: # TODO: copy-paste of die2
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+	die4: s_bang34
+		Length: *
+	die-crushed:
+		Start: 159
+		Length: 5
+		ShadowStart: 451
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		ShadowStart: 456
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		ShadowStart: 504
+	standup-0:
+		Start: 260
+		Length: 2
+		Facings: 8
+		ShadowStart: 552
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
+	icon: chamicon
+
+mutant:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 292
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 300
+	idle1:
+		Start: 56
+		Length: 15
+		ShadowStart: 348
+	idle2:
+		Start: 71
+		Length: 15
+		ShadowStart: 363
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		ShadowStart: 378
+	prone-stand:
+		Start: 86
+		Facings: 8
+		Stride: 6
+		ShadowStart: 378
+	die1:
+		Start: 134
+		Length: 15
+		ShadowStart: 426
+	die2:
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+	die3: # TODO: copy-paste of die2
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+	die4: s_bang34
+		Length: *
+	die-crushed:
+		Start: 159
+		Length: 5
+		ShadowStart: 451
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		ShadowStart: 456
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		ShadowStart: 504
+	standup-0:
+		Start: 260
+		Length: 2
+		Facings: 8
+		ShadowStart: 552
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
+	icon: mutcicon
+
+mwmn:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 292
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 300
+	idle1:
+		Start: 56
+		Length: 15
+		ShadowStart: 348
+	idle2:
+		Start: 71
+		Length: 15
+		ShadowStart: 363
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		ShadowStart: 378
+	prone-stand:
+		Start: 86
+		Facings: 8
+		Stride: 6
+		ShadowStart: 378
+	die1:
+		Start: 134
+		Length: 15
+		ShadowStart: 426
+	die2:
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+		Tick: 80
+	die3: # TODO: copy-paste of die2
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+	die4: s_bang34
+		Length: *
+	die-crushed:
+		Start: 159
+		Length: 5
+		ShadowStart: 451
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		ShadowStart: 456
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		ShadowStart: 504
+	standup-0:
+		Start: 260
+		Length: 2
+		Facings: 8
+		ShadowStart: 552
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
+	icon: mutcicon
+
+mutant3:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 292
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 300
+	idle1:
+		Start: 56
+		Length: 15
+		ShadowStart: 348
+	idle2:
+		Start: 71
+		Length: 15
+		ShadowStart: 363
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		ShadowStart: 378
+	prone-stand:
+		Start: 86
+		Facings: 8
+		Stride: 6
+		ShadowStart: 378
+	die1:
+		Start: 134
+		Length: 15
+		ShadowStart: 426
+	die2:
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+		Tick: 80
+	die3: # TODO: copy-paste of die2
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+	die4: s_bang34
+		Length: *
+	die-crushed:
+		Start: 159
+		Length: 5
+		ShadowStart: 451
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		ShadowStart: 456
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		ShadowStart: 504
+	standup-0:
+		Start: 260
+		Length: 2
+		Facings: 8
+		ShadowStart: 552
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
+	icon: mutcicon
+
+tratos:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 292
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 300
+	idle1:
+		Start: 56
+		Length: 15
+		ShadowStart: 348
+	idle2:
+		Start: 71
+		Length: 15
+		ShadowStart: 363
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		ShadowStart: 378
+	prone-stand:
+		Start: 86
+		Facings: 8
+		Stride: 6
+		ShadowStart: 378
+	die1:
+		Start: 134
+		Length: 15
+		ShadowStart: 426
+	die2:
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+		Tick: 80
+	die3: # TODO: copy-paste of die2
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+	die4: s_bang34
+		Length: *
+	die-crushed:
+		Start: 159
+		Length: 5
+		ShadowStart: 451
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		ShadowStart: 456
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		ShadowStart: 504
+	standup-0:
+		Start: 260
+		Length: 2
+		Facings: 8
+		ShadowStart: 552
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
+	icon: mutcicon
+
+oxanna:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 292
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 300
+	idle1:
+		Start: 56
+		Length: 15
+		ShadowStart: 348
+	idle2:
+		Start: 71
+		Length: 15
+		ShadowStart: 363
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		ShadowStart: 378
+	prone-stand:
+		Start: 86
+		Facings: 8
+		Stride: 6
+		ShadowStart: 378
+	die1:
+		Start: 134
+		Length: 15
+		ShadowStart: 426
+	die2:
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+		Tick: 80
+	die3: # TODO: copy-paste of die2
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+	die4: s_bang34
+		Length: *
+	die-crushed:
+		Start: 159
+		Length: 5
+		ShadowStart: 451
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		ShadowStart: 456
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		ShadowStart: 504
+	standup-0:
+		Start: 260
+		Length: 2
+		Facings: 8
+		ShadowStart: 552
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
+
+slav:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 292
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 300
+	idle1:
+		Start: 56
+		Length: 15
+		ShadowStart: 348
+	idle2:
+		Start: 71
+		Length: 15
+		ShadowStart: 363
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		ShadowStart: 378
+	prone-stand:
+		Start: 86
+		Facings: 8
+		Stride: 6
+		ShadowStart: 378
+	die1:
+		Start: 134
+		Length: 15
+		ShadowStart: 426
+	die2:
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+		Tick: 80
+	die3: # TODO: copy-paste of die2
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+	die4: s_bang34
+		Length: *
+	die-crushed:
+		Start: 159
+		Length: 5
+		ShadowStart: 451
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		ShadowStart: 456
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		ShadowStart: 504
+	standup-0:
+		Start: 260
+		Length: 2
+		Facings: 8
+		ShadowStart: 552
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
+
+vissml:
+	idle:
+		Length: 90
+		ShadowStart: 90
+		Tick: 80
+
+vislrg:
+	idle:
+		Length: 90
+		ShadowStart: 90
+		Tick: 80
+	muzzle: vislgatk # TODO: unused
+		Length: 5
+		Facings: 8
+		ShadowStart: 40
+		Tick: 80
+########################################################################
+# Vehicles
+########################################################################
+art2:
+	emp-overlay: emp_fx01
+		Length: *
+		BlendMode: Additive
+	icon: artyicon
+
+weed:
+	emp-overlay: emp_fx01
+		Length: *
+		BlendMode: Additive
+	icon: weedicon
+
+gghunt:
+	idle:
+		Facings: 1
+		Length: 8
+		ShadowStart: 8
+	emp-overlay: emp_fx01
+		Length: *
+		BlendMode: Additive
+
+4tnk:
+	emp-overlay: emp_fx01
+		Length: *
+		BlendMode: Additive
+	muzzle: gunfire
+		Length: *
+		
+repair:
+	emp-overlay: emp_fx01
+		Length: *
+		BlendMode: Additive
+	icon: rboticon		
+
+cube:
+	emp-overlay: emp_fx01
+		Length: *
+		BlendMode: Additive
+	icon: rboticon		
+	
+mwarv:
+	icon: mwaricon
+##########################################################
+# Aircraft
+##########################################################
+trnsport:
+	icon: otrnicon	
+########################################################################
+# Structures
+########################################################################	
+eggs:
+	Defaults:
+		Offset: 0, -12
+		UseTilesetCode: true
+	idle:
+	damaged-idle:
+	dead:
+		Tick: 400
+	make:
+
+mwar:
+	Defaults:
+		Offset: -12, -42
+		UseTilesetCode: true
+	idle: mtar_1
+		ShadowStart: 2
+		ZOffset: -1024
+	damaged-idle: mtar_1
+		Start: 1
+		ShadowStart: 3
+		ZOffset: -1024
+	idle-roof: mtar_2
+		ShadowStart: 2
+	damaged-idle-roof: mtar_2
+		Start: 1
+		ShadowStart: 3
+	dead: mtar
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	production-lights-white: mtar_a
+		Length: 5
+		Tick: 100
+		ZOffset: 2048
+	damaged-production-lights-white: mtar_a
+		Length: 5
+		Tick: 100
+		ZOffset: 2048
+	production-lights-red: mtar_b
+		Length: 12
+		Tick: 120
+		ZOffset: 2048
+	damaged-production-lights-red: mtar_b
+		Length: 12
+		Tick: 120
+		ZOffset: 2048
+	idle-turbines: mtar_c
+		Length: 8
+		Tick: 80
+		ZOffset: 2048
+	damaged-idle-turbines: mtar_c
+		Length: 8
+		Tick: 80
+		ZOffset: 2048
+	build-door: mtar_d
+		Length: 11
+		ShadowStart: 12
+	damaged-build-door: mtar_d
+		Length: 11
+		ShadowStart: 12
+	make: mtarmk
+		Length: 20
+		Tick: 80
+		ShadowStart: 20
+	bib: mtarbb
+		Length: 1
+		ZOffset: -1024
+	damaged-bib: mtarbb
+		Start: 1
+		Length: 1
+		ZOffset: -1024
+	dead-bib: mtarbb
+		Start: 2
+		Length: 1
+		ZOffset: -1024
+	icon: weapicon
+		Offset: 0, 0
+		UseTilesetCode: false	

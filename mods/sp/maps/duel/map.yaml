@@ -1,0 +1,267 @@
+MapFormat: 10
+
+RequiresMod: sp
+
+Title: Dueling Islands
+
+Author: Westwood Studios
+
+Tileset: TEMPERATE
+
+MapSize: 88,138
+
+Bounds: 2,4,84,126
+
+Visibility: Lobby
+
+Type: Conquest
+
+Players:
+	PlayerReference@Neutral:
+		Name: Neutral
+		OwnsWorld: True
+		NonCombatant: True
+		Faction: Random
+	PlayerReference@Creeps:
+		Name: Creeps
+		NonCombatant: True
+		Faction: Random
+		Enemies: Multi0, Multi1
+	PlayerReference@Multi0:
+		Name: Multi0
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+	PlayerReference@Multi1:
+		Name: Multi1
+		Playable: True
+		Faction: Random
+		Enemies: Creeps
+
+Actors:
+	Actor0: cabhut
+		Location: 116,-23
+		Owner: Neutral
+		Health: 100
+		Facing: 96
+	Actor1: cabhut
+		Location: 100,-19
+		Owner: Neutral
+		Health: 100
+		Facing: 96
+	Actor2: cabhut
+		Location: 75,-17
+		Owner: Neutral
+		Health: 100
+		Facing: 96
+	Actor3: cabhut
+		Location: 71,7
+		Owner: Neutral
+		Health: 100
+		Facing: 96
+	Actor4: cabhut
+		Location: 50,12
+		Owner: Neutral
+		Health: 100
+		Facing: 96
+	Actor5: cabhut
+		Location: 34,16
+		Owner: Neutral
+		Health: 100
+		Facing: 96
+	Actor6: gaspot
+		Location: 97,-52
+		Owner: Neutral
+		Health: 100
+		Facing: 96
+	Actor7: tstlamp
+		Location: 71,12
+		Owner: Neutral
+		Health: 100
+		Facing: 96
+	Actor8: tstlamp
+		Location: 50,16
+		Owner: Neutral
+		Health: 100
+		Facing: 96
+	Actor9: tstlamp
+		Location: 71,-17
+		Owner: Neutral
+		Health: 100
+		Facing: 96
+	Actor10: tstlamp
+		Location: 100,-23
+		Owner: Neutral
+		Health: 100
+		Facing: 96
+	Actor11: tstlamp
+		Location: 117,-19
+		Owner: Neutral
+		Health: 100
+		Facing: 96
+	Actor12: tstlamp
+		Location: 34,12
+		Owner: Neutral
+		Health: 100
+		Facing: 96
+	Actor13: tibtre01
+		Location: 73,-40
+		Owner: Neutral
+	Actor14: tibtre02
+		Location: 62,30
+		Owner: Neutral
+	Actor15: tibtre02
+		Location: 103,-4
+		Owner: Neutral
+	Actor16: tibtre01
+		Location: 101,6
+		Owner: Neutral
+	Actor17: tibtre03
+		Location: 48,-16
+		Owner: Neutral
+	Actor18: tibtre02
+		Location: 45,-11
+		Owner: Neutral
+	Actor19: tree01
+		Location: 64,7
+		Owner: Neutral
+	Actor20: tree03
+		Location: 65,7
+		Owner: Neutral
+	Actor21: tree04
+		Location: 67,8
+		Owner: Neutral
+	Actor22: tree05
+		Location: 69,7
+		Owner: Neutral
+	Actor23: tree06
+		Location: 70,9
+		Owner: Neutral
+	Actor24: tree07
+		Location: 70,11
+		Owner: Neutral
+	Actor25: tree08
+		Location: 76,31
+		Owner: Neutral
+	Actor26: tree09
+		Location: 52,17
+		Owner: Neutral
+	Actor27: tree10
+		Location: 54,20
+		Owner: Neutral
+	Actor28: tree11
+		Location: 53,22
+		Owner: Neutral
+	Actor29: tree12
+		Location: 56,23
+		Owner: Neutral
+	Actor30: tree13
+		Location: 54,16
+		Owner: Neutral
+	Actor31: tree14
+		Location: 78,4
+		Owner: Neutral
+	Actor32: tree15
+		Location: 81,6
+		Owner: Neutral
+	Actor33: tree16
+		Location: 81,11
+		Owner: Neutral
+	Actor34: tree17
+		Location: 83,12
+		Owner: Neutral
+	Actor35: tree18
+		Location: 82,9
+		Owner: Neutral
+	Actor36: tree19
+		Location: 81,7
+		Owner: Neutral
+	Actor37: tree02
+		Location: 64,-21
+		Owner: Neutral
+	Actor38: tree03
+		Location: 67,-17
+		Owner: Neutral
+	Actor39: tree04
+		Location: 63,-15
+		Owner: Neutral
+	Actor40: tree05
+		Location: 64,-16
+		Owner: Neutral
+	Actor41: tree06
+		Location: 63,-18
+		Owner: Neutral
+	Actor42: tree07
+		Location: 65,-17
+		Owner: Neutral
+	Actor43: tree08
+		Location: 82,-44
+		Owner: Neutral
+	Actor44: tree09
+		Location: 85,-43
+		Owner: Neutral
+	Actor45: tree10
+		Location: 83,-42
+		Owner: Neutral
+	Actor46: tree11
+		Location: 81,-41
+		Owner: Neutral
+	Actor47: tree12
+		Location: 85,-40
+		Owner: Neutral
+	Actor48: tree13
+		Location: 89,-36
+		Owner: Neutral
+	Actor49: tree15
+		Location: 91,-36
+		Owner: Neutral
+	Actor50: tree16
+		Location: 87,-39
+		Owner: Neutral
+	Actor51: tree17
+		Location: 86,-41
+		Owner: Neutral
+	Actor52: tree18
+		Location: 85,-42
+		Owner: Neutral
+	Actor53: tree20
+		Location: 98,-23
+		Owner: Neutral
+	Actor54: tree21
+		Location: 100,-25
+		Owner: Neutral
+	Actor55: tree21
+		Location: 82,-2
+		Owner: Neutral
+	Actor56: tree22
+		Location: 78,-6
+		Owner: Neutral
+	Actor57: tree23
+		Location: 66,-3
+		Owner: Neutral
+	Actor58: tree24
+		Location: 65,-5
+		Owner: Neutral
+	Actor59: tree25
+		Location: 67,0
+		Owner: Neutral
+	Actor60: tree25
+		Location: 84,26
+		Owner: Neutral
+	Actor61: mpspawn
+		Location: 63,19
+		Owner: Neutral
+	Actor62: mpspawn
+		Location: 82,-30
+		Owner: Neutral
+	Actor63: waypoint
+		Location: 71,-1
+		Owner: Neutral
+	Actor64: waypoint
+		Location: 71,-1
+		Owner: Neutral
+
+Rules:
+	World:
+		GlobalLightingPaletteEffect:
+			Ambient: 0.73

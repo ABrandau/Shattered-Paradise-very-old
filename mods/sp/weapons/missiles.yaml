@@ -1,0 +1,67 @@
+Bazooka:
+	ReloadDelay: 60
+	Range: 6c0
+	MinRange: 0c512
+	Report: rketinf1.aud
+	ValidTargets: Ground, Air
+	Projectile: Missile
+		MaximumLaunchSpeed: 213
+		Blockable: false
+		Shadow: true
+		Inaccuracy: 128
+		Image: DRAGON
+		TrailImage: small_smoke_trail
+		HorizontalRateOfTurn: 8
+		RangeLimit: 50
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 25
+		ValidTargets: Ground, Air
+		Versus:
+			None: 25
+			Wood: 65
+			Light: 75
+			Heavy: 100
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: small_clsn
+		ImpactSound: expnew12.aud
+		InvalidImpactTypes: Water, Air, AirHit
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4EffAir: CreateEffect
+		ValidImpactTypes: Air, AirHit
+		Explosion: tiny_twlt
+		ImpactSound: expnew05.aud
+	Warhead@5Smu: LeaveSmudge
+		SmudgeType: SmallCrater
+
+RedEye2:
+	ReloadDelay: 100
+	Range: 10c0
+	Report: samshot1.aud
+	ValidTargets: Air
+	Projectile: Missile
+		MaximumLaunchSpeed: 384
+		Arm: 2
+		Blockable: false
+		Shadow: true
+		Inaccuracy: 128
+		Image: DRAGON
+		TrailImage: small_smoke_trail
+		HorizontalRateOfTurn: 8
+		RangeLimit: 100
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 40
+		ValidTargets: Air
+		DamageTypes: SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: tiny_twlt
+		ImpactSound: expnew05.aud

@@ -1,0 +1,1186 @@
+##########################################################
+# Infantry
+##########################################################	
+altnode1:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 292
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 300
+	idle1:
+		Start: 56
+		Length: 15
+		ShadowStart: 348
+	idle2:
+		Start: 71
+		Length: 15
+		ShadowStart: 363
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		ShadowStart: 378
+	prone-stand:
+		Start: 86
+		Facings: 8
+		Stride: 6
+		ShadowStart: 378
+	die1:
+		Start: 134
+		Length: 15
+		ShadowStart: 426
+	die2:
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+		Tick: 80
+	die3: # TODO: copy-paste of die2
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+	die4: s_bang34
+		Length: *
+	die-crushed:
+		Start: 159
+		Length: 5
+		ShadowStart: 451
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		ShadowStart: 456
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		ShadowStart: 504
+	standup-0:
+		Start: 260
+		Length: 2
+		Facings: 8
+		ShadowStart: 552
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
+	icon: sidebar-nod|e1icon
+	
+crusader:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 338
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		ShadowStart: 346
+	idle1:
+		Start: 72
+		Length: 25
+		ShadowStart: 410
+	idle2:
+		Start: 128
+		Length: 15
+		ShadowStart: 466
+	prone-run:
+		Start: 266
+		Length: 8
+		Facings: 8
+		ShadowStart: 488
+	prone-stand:
+		Start: 330
+		Facings: 8
+		ShadowStart: 596
+	die1:
+		Start: 160
+		Length: 8
+		ShadowStart: 497
+	die2:
+		Start: 194
+		Length: 8
+		ShadowStart: 532
+		Tick: 80
+	die3: # TODO: copy-paste of die2
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+	die4: s_bang34
+		Length: *
+	die-crushed:
+		Start: 159
+		Length: 5
+		ShadowStart: 451
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 202
+		Length: 7
+		Facings: 8
+		ShadowStart: 540
+	prone-shoot:
+		Start: 212
+		Length: 5
+		Facings: 8
+		ShadowStart: 504
+	standup-0:
+		Start: 142
+		Facings: 8
+		ShadowStart: 480
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
+	icon: crusadericon
+	
+templar:
+	Defaults:
+		Tick: 60
+	stand:
+		Facings: 8
+		ShadowStart: 396
+	run:
+		Start: 8
+		Length: 13
+		Facings: 8
+		ShadowStart: 404
+	idle1:
+		Start: 112
+		Length: 21
+		ShadowStart: 508
+	idle2:
+		Start: 133
+		Length: 21
+		ShadowStart: 530
+	prone-run:
+		Start: 154
+		Length: 13
+		Facings: 8
+		ShadowStart: 551
+	prone-stand:
+		Start: 155
+		Facings: 8
+		Stride: 13
+		ShadowStart: 551
+	die1:
+		Start: 258
+		Length: 15
+		ShadowStart: 654
+	die2:
+		Start: 273
+		Length: 11
+		ShadowStart: 670
+	die3: infdie
+		Length: *
+	die4: s_bang34
+		Length: *		
+	die-crushed:
+		Start: 281
+		Length: 3
+		ShadowStart: 451
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 284
+		Length: 7
+		Facings: 8
+		ShadowStart: 680
+	prone-shoot:
+		Start: 340
+		Length: 5
+		Facings: 8
+		ShadowStart: 736
+	standup-0:
+		Start: 381
+		Length: 2
+		Facings: 8
+		ShadowStart: 776
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
+	icon: templaricon
+	
+bhs:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 292
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 300
+	idle1:
+		Start: 56
+		Length: 15
+		ShadowStart: 348
+	idle2:
+		Start: 71
+		Length: 15
+		ShadowStart: 363
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		ShadowStart: 378
+	prone-stand:
+		Start: 86
+		Facings: 8
+		Stride: 6
+		ShadowStart: 378
+	die1:
+		Start: 134
+		Length: 15
+		ShadowStart: 426
+	die2:
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+		Tick: 80
+	die3: # TODO: copy-paste of die2
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+	die4: s_bang34
+		Length: *
+	die-crushed:
+		Start: 159
+		Length: 5
+		ShadowStart: 451
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		ShadowStart: 456
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		ShadowStart: 504
+	standup-0:
+		Start: 260
+		Length: 2
+		Facings: 8
+		ShadowStart: 552
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
+	icon: weaticon
+	
+chamspy:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 292
+	run:
+		Start: 8
+		Length: 6
+		Facings: 8
+		ShadowStart: 300
+	idle1:
+		Start: 56
+		Length: 15
+		ShadowStart: 348
+	idle2:
+		Start: 71
+		Length: 15
+		ShadowStart: 363
+	prone-run:
+		Start: 86
+		Length: 6
+		Facings: 8
+		ShadowStart: 378
+	prone-stand:
+		Start: 86
+		Facings: 8
+		Stride: 6
+		ShadowStart: 378
+	die1:
+		Start: 134
+		Length: 15
+		ShadowStart: 426
+	die2:
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+	die3: # TODO: copy-paste of die2
+		Start: 149
+		Length: 15
+		ShadowStart: 441
+	die4: s_bang34
+		Length: *
+	die-crushed:
+		Start: 159
+		Length: 5
+		ShadowStart: 451
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 164
+		Length: 6
+		Facings: 8
+		ShadowStart: 456
+	prone-shoot:
+		Start: 212
+		Length: 6
+		Facings: 8
+		ShadowStart: 504
+	standup-0:
+		Start: 260
+		Length: 2
+		Facings: 8
+		ShadowStart: 552
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
+	icon: chamicon	
+	
+
+	 	
+
+##########################################################
+# Vehicles
+##########################################################	
+
+
+bike:
+	emp-overlay: emp_fx01
+		Length: *
+		BlendMode: Additive
+	icon: cyclicon
+
+bggy:
+	Defaults:
+		Length: *
+	muzzle0: mgun-n
+	muzzle1: mgun-nw
+	muzzle2: mgun-w
+	muzzle3: mgun-sw
+	muzzle4: mgun-s
+	muzzle5: mgun-se
+	muzzle6: mgun-e
+	muzzle7: mgun-ne
+	emp-overlay: emp_fx01
+		BlendMode: Additive
+	icon: bggyicon
+
+ttnk:
+	muzzle: gunfire
+		Length: *
+	emp-overlay: emp_fx01
+		Length: *
+		BlendMode: Additive
+	icon: tickicon
+	
+sapc:
+	emp-overlay: emp_fx01
+		Length: *
+		BlendMode: Additive
+	icon: sapcicon
+
+subtank:
+	emp-overlay: emp_fx01
+		Length: *
+		BlendMode: Additive
+	icon: subticon	
+
+stnk:
+	emp-overlay: emp_fx01
+		Length: *
+		BlendMode: Additive
+	icon: stnkicon	
+
+sgen:
+	icon: mstlicon
+	emp-overlay: emp_fx01
+		Length: *
+		BlendMode: Additive	
+	
+armh:
+	icon: beamcannonicon	
+	emp-overlay: emp_fx01
+		Length: *
+		BlendMode: Additive	
+
+limped:
+	stand:
+		Facings: 1
+		ShadowStart: 10
+	run:
+		Length: 10
+		facings: 1
+		ShadowStart: 10
+	idle:
+		Facings: 1
+		ShadowStart: 10	
+	make: dlimpmk
+		Length: 41
+		ShadowStart: 42
+	emp-overlay: emp_fx01
+		Length: *
+		BlendMode: Additive		
+	icon: limpicon
+
+dlimpet:
+	stand:
+		Facings: 1
+		ShadowStart: 3
+	idle:
+		Facings: 1
+		ShadowStart: 3	
+	make: dlimpmk
+		Length: 41
+		ShadowStart: 42
+	emp-overlay: emp_fx01
+		Length: *
+		BlendMode: Additive		
+	icon: limpicon
+
+icbm:
+	emp-overlay: emp_fx01
+		Length: *
+		ZOffset: 512
+		BlendMode: Additive	
+##########################################################
+# Structures
+##########################################################	
+
+napowr:
+	Defaults:
+		Offset: 0, -24
+		UseTilesetCode: true
+	idle:
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	dead:
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	idle-lights: ntpowr_a
+		Length: 9
+		Tick: 200
+	damaged-idle-lights: ntpowr_a
+		Start: 9
+		Length: 9
+		Tick: 200
+	make: ntpowrmk
+		Length: 19
+		ShadowStart: 19
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: npwricon
+		Offset: 0, 0
+		UseTilesetCode: false
+
+naapwr:
+	Defaults:
+		Offset: 12, -30
+		UseTilesetCode: true
+	idle:
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	dead:
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	idle-lights: ntapwr_a
+		Length: 9
+		Tick: 200
+	damaged-idle-lights: ntapwr_a
+		Start: 9
+		Length: 9
+		Tick: 200
+	make: ntapwrmk
+		Length: 19
+		ShadowStart: 19
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: apwricon
+		Offset: 0, 0
+		UseTilesetCode: false
+
+nahand:
+	Defaults:
+		Offset: -6, -30
+		UseTilesetCode: true
+	idle:
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	dead:
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	production-light: nthand_a
+		Length: 5
+		Tick: 100
+		ZOffset: 1023
+	damaged-production-light: nthand_a
+		Start: 5
+		Length: 5
+		Tick: 100
+		ZOffset: 1023
+	idle-lights: nthand_b
+		Length: 8
+		Tick: 200
+	damaged-idle-lights: nthand_b
+		Start: 8
+		Length: 8
+		Tick: 200
+	make: nthandmk
+		Length: 15
+		ShadowStart: 15
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: handicon
+		Offset: 0, 0
+		UseTilesetCode: false
+
+naweap:
+	Defaults:
+		Offset: -12, -42
+		UseTilesetCode: true
+	idle: ntweap_1
+		ShadowStart: 2
+		ZOffset: -1024
+	damaged-idle: ntweap_1
+		Start: 1
+		ShadowStart: 3
+		ZOffset: -1024
+	idle-roof: ntweap_2
+		ShadowStart: 2
+		ZOffset: 512
+	damaged-idle-roof: ntweap_2
+		Start: 1
+		ShadowStart: 3
+		ZOffset: 512
+	dead: ntweap
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	production-lights: ntweap_a
+		Length: 16
+		Tick: 100
+		ZOffset: 2048
+	damaged-production-lights: ntweap_a
+		Start: 16
+		Length: 16
+		Tick: 100
+		ZOffset: 2048
+	build-door: ntweap_b
+		Length: 10
+		ShadowStart: 10
+		ZOffset: 512
+	damaged-build-door: ntweap_b
+		Start: 10
+		Length: 10
+		ShadowStart: 20
+		ZOffset: 512
+	make: ntweapmk
+		Length: 22
+		Tick: 80
+		ShadowStart: 22
+	bib: ntweapbb
+		ZOffset: -1024
+	damaged-bib: ntweapbb
+		Start: 1
+		ZOffset: -1024
+	dead-bib: ntweapbb
+		Start: 2
+		ZOffset: -1024
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: nwepicon
+		Offset: 0, 0
+		UseTilesetCode: false
+
+
+nahpad:
+	Defaults:
+		Offset: 0, -24
+		UseTilesetCode: true
+	idle:
+		ShadowStart: 3
+		ZOffset: -1c511
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+		ZOffset: -1c511
+	dead:
+		Start: 2
+		ShadowStart: 5
+		ZOffset: -1c511
+		Tick: 400
+	idle-platform: nthpadbb
+		ShadowStart: 3
+		ZOffset: -1c511
+	damaged-idle-platform: nthpadbb
+		Start: 1
+		ShadowStart: 4
+		ZOffset: -1c511
+	dead-platform: nthpadbb
+		Start: 2
+		ShadowStart: 5
+		ZOffset: -1c511
+		Tick: 400
+	idle-lights: nthpad_a
+		Length: 46
+		ZOffset: -1c511
+		Tick: 120
+	damaged-idle-lights: nthpad_a
+		Start: 46
+		Length: 46
+		Tick: 120
+		ZOffset: -1c511
+	make: nthpadmk
+		Length: 20
+		ShadowStart: 20
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: nhpdicon
+		Offset: 0, 0
+		UseTilesetCode: false		
+
+naradr:
+	Defaults:
+		Offset: 0, -24
+		UseTilesetCode: true
+	idle:
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	dead:
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	idle-dish: ntradr_a
+		Length: 24
+		Tick: 120
+	damaged-idle-dish: ntradr_a
+		Start: 24
+		Length: 24
+		Tick: 120
+	make: ntradrmk
+		Length: 20
+		ShadowStart: 20
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: nradicon
+		Offset: 0, 0
+		UseTilesetCode: false
+
+natech:
+	Defaults:
+		Offset: 0, -24
+		UseTilesetCode: true
+	idle:
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	dead:
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	idle-lights: nttech_a
+		Length: 9
+		Tick: 120
+	damaged-idle-lights: nttech_a
+		Length: 9
+		Tick: 120
+	make: nttechmk
+		Length: 18
+		ShadowStart: 18
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: ntchicon
+		Offset: 0, 0
+		UseTilesetCode: false
+
+natmpl:
+	Defaults:
+		Offset: 0, -24
+		UseTilesetCode: true
+	idle:
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	dead:
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	idle-lights: nttmpl_a
+		Length: 16
+		Tick: 120
+	damaged-idle-lights: nttmpl_a
+		Start: 16
+		Length: 16
+		Tick: 120
+	make: nttmplmk
+		Length: 17
+		ShadowStart: 17
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: tmplicon
+		Offset: 0, 0
+		UseTilesetCode: false
+
+nawast:
+	Defaults: ntwast
+		Offset: 0, -36
+		UseTilesetCode: true
+	idle:
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	dead:
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	make: ntwastmk
+		Length: 19
+		ShadowStart: 19
+	idle-glow: ntwast_a
+		Length: 20
+		ShadowStart: 40
+		Tick: 120
+	damaged-idle-glow: ntwast_a
+		Start: 20
+		Length: 20
+		ShadowStart: 60
+		Tick: 120
+	idle-lights: ntwast_b
+		Length: 16
+		Tick: 120
+	damaged-idle-lights: ntwast_b
+		Start: 16
+		Length: 16
+		Tick: 120
+	bib: ntwastbb
+		ZOffset: -1024
+	damaged-bib: ntwastbb
+		Start: 1
+		ZOffset: -1024
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: wasticon
+		Offset: 0, 0
+		UseTilesetCode: false
+		
+namisl:
+	Defaults:
+		Offset: 0, -24
+		UseTilesetCode: true
+	idle:
+	damaged-idle:
+		Start: 1
+	dead:
+		Start: 2
+		Tick: 400
+	idle-lights: ntmisl_b
+		Length: 10
+		Tick: 120
+	damaged-idle-lights: ntmisl_b
+		Start: 10
+		Length: 10
+		Tick: 120
+	make: ntmislmk
+		Length: 18
+		ShadowStart: 18
+	active: ntmisl_a # TODO: This is an overlay, but currently used as animation
+		Length: 10
+		Tick: 80
+	damaged-active: ntmisl_a # TODO: This is an overlay, but currently used as animation
+		Start: 10
+		Length: 10
+		Tick: 80
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: msslicon
+		Offset: 0, 0
+		UseTilesetCode: false		
+##########################################################
+# Defences
+##########################################################
+wall.nod:
+	Defaults: nawall
+		Offset: 0, -12
+		UseTilesetCode: true
+	idle: nawall
+		Length: 16
+		ShadowStart: 48
+	damaged-idle: nawall
+		Start: 16
+		Length: 16
+		ShadowStart: 64
+	critical-idle: nawall
+		Start: 32
+		Length: 16
+		ShadowStart: 80
+	icon: nwalicon
+		Offset: 0, 0
+		UseTilesetCode: false
+
+gate_a.nod:
+	Defaults: nagate_a
+		Offset: -24, -24
+		UseTilesetCode: true
+		Tick: 80
+	idle: nagate_a
+		Length: 7
+		ShadowStart: 15
+	damaged-idle: nagate_a
+		Start: 7
+		Length: 7
+		ShadowStart: 22
+	dead: nagate_a
+		Start: 14
+		Tick: 400
+		ShadowStart: 29
+	make: nagate_a
+		Frames: 6, 5, 4, 3, 2, 1
+		Length: 6
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: ngaticon
+		Offset: 0, 0
+		UseTilesetCode: false
+
+gate_b.nod:
+	Defaults: nagate_b
+		Offset: 24, -24
+		UseTilesetCode: true
+		Tick: 80
+	idle: nagate_b
+		Length: 7
+		ShadowStart: 15
+	damaged-idle: nagate_b
+		Start: 7
+		Length: 7
+		ShadowStart: 22
+	dead: nagate_b
+		Start: 14
+		Tick: 400
+		ShadowStart: 29
+	make: nagate_b
+		Frames: 6, 5, 4, 3, 2, 1
+		Length: 6
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: nga2icon
+		Offset: 0, 0
+		UseTilesetCode: false		
+
+gatick:
+	Defaults:
+		Offset: 0, -13
+		UseTilesetCode: true
+	idle:
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	muzzle: gunfire
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	make: gatickmk
+		Length: 24
+		ShadowStart: 24
+		
+mastl:
+	Defaults:
+		Offset: 0, -13
+		UseTilesetCode: true
+	idle:
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	make: mtstlmk
+		Length: 20
+		ShadowStart: 20
+		
+gaicbm:
+	Defaults:
+		Offset: 0, -12
+		UseTilesetCode: true
+	idle:
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	make: gaicbmmk
+		Length: 30
+		ShadowStart: 30
+
+gaarty:
+	Defaults:
+		Offset: 0, -12
+		UseTilesetCode: true
+	idle:
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	muzzle: gunfire
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	make: gaartymk
+		Length: 16
+		ShadowStart: 16
+
+naobel:
+	Defaults:
+		Offset: 0, -24
+		UseTilesetCode: true
+	idle:
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	dead:
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	active: ntobel_b
+		Length: 12
+		Tick: 200
+		ZOffset: 2
+	idle-lights: ntobel_a
+		Length: 12
+		Tick: 80
+	make: ntobelmk
+		Length: 19
+		ShadowStart: 19
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: obliicon
+		Offset: 0, 0
+		UseTilesetCode: false
+
+nalasr:
+	Defaults:
+		Offset: 0, -12
+		UseTilesetCode: true
+	idle:
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	dead:
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	make: ntlasrmk
+		Length: 21
+		ShadowStart: 21
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: plticon
+		Offset: 0, 0
+		UseTilesetCode: false
+
+nasam:
+	Defaults:
+		Offset: 0, -12
+		UseTilesetCode: true
+	idle:
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	dead:
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	turret: gtctwr_d
+		Facings: 32
+		Offset: -4, 0
+	make: ntsammk
+		Length: 8
+		ShadowStart: 8
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: samicon
+		Offset: 0, 0
+		UseTilesetCode: false
+		
+
+nastlh:
+	Defaults:
+		Offset: -16, -28
+		UseTilesetCode: true
+	idle:
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	dead:
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	pulse: ntstlh_a
+		Length: 4
+		Tick: 480
+	damaged-pulse: ntstlh_a
+		Start: 4
+		Length: 4
+		Tick: 480
+	make: ntstlhmk
+		Length: 18
+		ShadowStart: 20
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: clckicon
+		Offset: 0, 0
+		UseTilesetCode: false		
+		
+##########################################################
+# Aircraft
+##########################################################
+scrin:
+	icon: proicon
+
+apache:
+	icon: apchicon
+	rotor: lrotor
+		Length: 4
+	slow-rotor: lrotor
+		Start: 4
+		Length: 8	
+##########################################################
+# Other
+##########################################################		
+		
+blackhanddummy:
+	idle: dot
+	stand: dot
+
+fire:
+	idle: dot
+		Length: *
+	1: dot
+		Length: *		

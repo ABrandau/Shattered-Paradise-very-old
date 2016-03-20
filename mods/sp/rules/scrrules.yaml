@@ -1,0 +1,1640 @@
+############################################
+# Infantry
+############################################
+shark:
+	Inherits: ^ScrinSoldier
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 24
+		Prerequisites: ~scrrax
+	Valued:
+		Cost: 330
+	Tooltip:
+		Name: Razorshark
+		Description: Anti-infantry creature, fast and weak, kills infantry instantly.\n  Strong vs Infantry\n  Weak vs Everything else
+	Selectable:
+		Bounds: 12,17,-1,-4
+		Class: Shark
+	SelectionDecorations:
+		VisualBounds: 12,17,-1,-4
+	Health:
+		HP: 30
+	FreeActor@1:
+		Actor: sharkclone
+	FreeActor@2:
+		Actor: sharkclone		
+	Mobile:
+		Speed: 78
+		Voice: Move
+	SpawnActorOnDeath@conversion:
+		Actor: cybdog
+		Probability: 100
+		OwnerType: Killer
+		DeathType: CabalDeathInfantry
+		RequiresLobbyCreeps: true		
+	Guard:
+		Voice: Move
+	Passenger:
+		Voice: Move
+	RevealsShroud:
+		Range: 5c0
+	Armament:
+		Weapon: SharkJump
+	AttackLeap:
+		Voice: Attack
+	AttackMove:
+		Voice: Move
+	AutoTarget:
+		ScanRadius: 5	
+		InitialStance: AttackAnything
+	Targetable:
+		TargetTypes: Ground, Infantry, Razorshark
+	WithInfantryBody:
+		AttackSequence: shoot
+		StandSequences: stand
+		IdleSequences: idle1, idle2, idle3, idle4
+	IgnoresDisguise:
+	DetectCloaked:
+		CloakTypes: Cloak, Hijacker
+	-TakeCover:
+
+LEGIO:
+	Inherits: ^ScrinSoldier	
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 25
+		Prerequisites: ~scrrax
+	Selectable:
+		Class: Legio
+	Valued:
+		Cost: 450
+	Tooltip:
+		Name: Legionaire
+		Description: Scrin Frontile trooper. Resistant\nto damage. Cannot be crushed.\nIts weapon damage spreads to nearby cells.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry
+	Health:
+		HP: 140
+	-Crushable:	
+	FreeActor@1:
+		Actor: legioclone
+	FreeActor@2:
+		Actor: legioclone		
+	Mobile:
+		Speed: 60	
+	Armament:
+		Weapon: LegioNeedler
+		LocalOffset: 500,250,800
+		FireDelay: 5	
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: throw
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+SHAPESHIFTER:
+	Inherits: ^Soldier
+	Inherits@1: ^ScrinSelfHeal	
+	Valued:
+		Cost: 750
+	Selectable:
+		Class: Shapeshifter
+	Tooltip:
+		Name: Shapeshifter
+		Description: Infiltrates and captures enemy structures.\n  Unarmed
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 26
+		Prerequisites: ~scrrax
+	Voiced:
+		VoiceSet: Hijacker
+	WithDisguisingInfantryBody:
+	Disguise:
+	FreeActor@1:
+		Actor: shapeshifterclone
+	FreeActor@2:
+		Actor: shapeshifterclone	
+	Mobile:
+		Speed: 65
+	Health:
+		HP: 80
+	Passenger:
+		PipType: Yellow
+	EngineerRepair:
+	RepairsBridges:
+	WithInfantryBody:
+		IdleSequences: idle1, idle2, idle3, idle4
+	Captures:
+		CaptureTypes: building
+	-AutoTarget:
+	-GainsExperience:
+	RenderSprites:
+		
+FLOAT:
+	Inherits: ^ScrinSoldier
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 27
+		Prerequisites: ~scrrax, scrradr
+	Selectable:
+		Class: FLoat
+	Valued:
+		Cost: 850
+	-Crushable:	
+	Tooltip:
+		Name: Floater
+		Description: Recon unit, suited for harassment.\nCan move through water and Cliffs.\n  Strong vs Buildings, Heavy Vehicles\n  Weak vs Infantry, Aircraft
+	Health:
+		HP: 120
+	FreeActor@1:
+		Actor: floatclone
+	FreeActor@2:
+		Actor: floatclone
+	Mobile:
+		Speed: 100
+		TerrainSpeeds:
+			Cliff: 80
+			Water: 80
+	Armament@prim:
+		Weapon: FloatTesla
+		LocalOffset: 0,-250,500
+		FireDelay: 10
+	Armament@sec:
+		Weapon: FloatTesla
+		LocalOffset: 0,250,500	
+		FireDelay: 10
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: throw
+	-TakeCover:	
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded	
+		
+BUG:
+	Inherits: ^ScrinSoldier		
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 27
+		Prerequisites: ~scrrax, scrtech
+	Selectable:
+		Class: bug
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Purifier
+		Description: Heavy duty alien.\nCan take lots of punishment.\nInstakills infantry.\n  Strong vs infantry\n  Weak vs Vehicles, Aircraft.
+	FreeActor@1:
+		Actor: bugclone
+	FreeActor@2:
+		Actor: bugclone
+	Health:
+		HP: 280
+	Mobile:
+		Speed: 60
+	SpawnActorOnDeath@conversion:
+		Actor: cybdog
+		Probability: 100
+		OwnerType: Killer
+		DeathType: CabalDeathInfantry
+		RequiresLobbyCreeps: true		
+	Armor:
+		Type: light
+	Armament:
+		Weapon: BugRail
+		LocalOffset: 150,0,400
+		FireDelay: 5
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: throw
+	-TakeCover:	
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded			
+##########################################################
+# Clones
+##########################################################	
+SHARKCLONE:
+	Inherits: shark
+	RenderSprites:
+		Image: Shark
+	-Buildable:
+	-FreeActor@1:
+	-FreeActor@2:
+	
+LEGIOCLONE:
+	Inherits: LEGIO
+	RenderSprites:
+		Image: legio
+	-Buildable:	
+	-FreeActor@1:
+	-FreeActor@2:
+	
+FLOATCLONE:
+	Inherits: FLOAT
+	RenderSprites:
+		Image: float
+	-Buildable:	
+	-FreeActor@1:
+	-FreeActor@2:	
+		
+SHAPESHIFTERCLONE:
+	Inherits: SHAPESHIFTER
+	RenderSprites:
+		Image: shapeshifter
+	-Buildable:
+	-FreeActor@1:
+	-FreeActor@2:
+
+BUGCLONE:
+	Inherits: BUG
+	RenderSprites:
+		Image: bug	
+	-Buildable:	
+	-FreeActor@1:
+	-FreeActor@2:	
+		
+################################################
+# Vehicles
+################################################
+SCRHARV:
+	Inherits: ^ScrinTank
+	Valued:
+		Cost: 1600
+	Tooltip:
+		Name: Harvester
+		Description: Collects Tiberium for processing.\nIncompatible with human refineries.\n  Unarmed
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 1
+		Prerequisites: ~scrweap, scrproc
+		InitialActivity: FindResources
+	Selectable:
+		Priority: 7
+		Bounds: 36,36
+	-Capturable:		
+	Targetable:
+		TargetTypes: Ground, Vehicle, Repair, MindControlInmune		
+	Harvester:
+		Capacity: 28
+		Resources: Tiberium, BlueTiberium
+		DeliveryBuildings: scrproc
+		UnloadTicksPerBale: 4
+		LoadTicksPerBale: 10
+		SearchFromProcRadius: 36
+		SearchFromOrderRadius: 18
+		HarvestVoice: Attack
+		DeliverVoice: Move
+	Hovers:
+		OffsetModifier: -20
+	Mobile:
+		Speed: 74
+		Crushes: wall, crate
+		TerrainSpeeds:
+			Water: 80
+			Clear: 90
+			Rough: 70
+			Road: 100
+			Beach: 70
+			Tiberium: 80
+			BlueTiberium: 80
+			Veins: 80
+	Health:
+		HP: 1000
+	SelfHealing:
+		Ticks: 10
+		HealIfBelow: 50%
+		DamageCooldown: 200
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 4c0
+	-GainsExperience:
+	Explodes:
+		Weapon: TiberiumExplosion
+	WithHarvestOverlay:
+		Offset: 384,0,0
+		Palette: effect
+	SelectionDecorations:
+		VisualBounds: 36,36
+	RenderSprites:
+	WithDockingAnimation:
+	WithShadow:
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32
+	
+SCRSCORPION:
+	Inherits: ^ScrinTank		
+	Valued:
+		Cost: 550
+	Tooltip:
+		Name: Ichor Walker
+		Description: Anti-personnel walker. Deals more\ndamange when standing on tiberium fields.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 31
+		Prerequisites: ~scrweap
+	Mobile:
+		TurnSpeed: 6
+		Speed: 91
+		Crushes: crate
+	Health:
+		HP: 200
+	Armor:
+		Type: Light
+	AttackFrontal:
+		Voice: Attack
+	PoisonedByTiberium@buff:
+		Weapon: ScorpBuffer
+	AutoTarget:
+	Armament@PRIMARY:
+		Weapon: ScorpAcid
+		LocalOffset: 100,80,200
+	FirepowerMultiplier@rar:
+		Modifier: 1
+		UpgradeTypes: ScorpBuffer
+		UpgradeMaxEnabledLevel: 0
+		UpgradeMaxAcceptedLevel: 1
+	FirepowerMultiplier@rer:
+		Modifier: 1,5		
+		UpgradeTypes: ScorpBuffer
+		UpgradeMinEnabledLevel: 1
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	WithInfantryBody:
+	Selectable:
+		Bounds: 20, 32, 0, -8
+	
+SCRMBT:
+	Inherits: ^ScrinTank	
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 32
+		Prerequisites: ~scrweap, scrradr
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Hover Tank
+		Description: Light Tank, good for scouting, deals damage\nover an area.\n Strong vs Light, heavy armor\n  Weak vs Infantry, Aircraft
+	Health:
+		HP: 300
+	Armor:
+		Type: Heavy
+	Mobile:
+		Speed: 130
+		Crushes: crate
+		TerrainSpeeds:
+			Water: 100
+			Clear: 90
+			Rough: 70
+			Road: 100
+			Beach: 70
+			Tiberium: 80
+			BlueTiberium: 80
+			Veins: 80
+	Hovers:
+	WithShadow:
+	Turreted:
+		TurnSpeed: 7
+	Armament:
+		Weapon: ScrMbtCannon
+		Recoil: 85
+		RecoilRecovery: 25
+		LocalOffset: 768,0,600
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	# WithMuzzleOverlay:
+	WithSpriteTurret:
+	AutoTarget:	
+	RenderSprites:
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32	
+		
+SCRGLYDER2:
+	Inherits: ^ScrinTank	
+	Inherits@3: ^BasicStealthDetection	
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 31
+		Prerequisites: ~scrweap
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: Glyder
+		Description: Specialized weapons platform.\nCan vary from a ground version and aerial version.\nThe aerial version attacks ground units and vice versa.\n Strong vs Armor.\n  Weak vs Light units.
+	Health:
+		HP: 170
+	Armor:
+		Type: Wood
+	Mobile:
+		Speed: 91
+		Crushes: crate
+		TerrainSpeeds:
+			Water: 80
+			Clear: 90
+			Rough: 70
+			Road: 100
+			Beach: 70
+			Tiberium: 80
+			BlueTiberium: 80
+			Veins: 80
+	Transforms:
+		IntoActor: scrglyder1
+	Hovers:
+	WithShadow:
+	Armament:
+		Weapon: Glyder2Cannon
+		Recoil: 85
+		RecoilRecovery: 25
+		LocalOffset: 768,0,90
+		# MuzzleSequence: muzzle
+	# WithMuzzleOverlay:
+	AutoTarget:	
+	AttackFrontal:
+	RenderSprites:
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32
+
+SCRRECHARGER:
+	Inherits: ^ScrinTank		
+	Valued:
+		Cost: 1100
+	Tooltip:
+		Name: Ichor Battery
+		Description: Support walker. Charges nearby\nScrin units, increasing their damage.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 33
+		Prerequisites: ~scrweap, scrradr
+	Mobile:
+		TurnSpeed: 6
+		Speed: 91
+		Crushes: crate
+	Health:
+		HP: 300
+	Armor:
+		Type: Wood
+	Voiced:
+		VoiceSet: Mech
+	WithRangeCircle:
+		Range: 6c0
+		Type: cloakgenerator		
+	UpgradeActorsNear:
+		Upgrades: batteryboost
+		Range: 6c0
+		ValidStances: Ally
+		AffectsParent: true
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	WithFacingSpriteBody:
+		Sequence: stand
+	WithMoveAnimation:
+		MoveSequence: run
+	Selectable:
+		Bounds: 20, 32, 0, -8		
+
+SCRDRONEC:
+	Inherits: ^ScrinTank	
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 34
+		Prerequisites: ~scrweap, scrtech
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Drone Carrier
+		Description: Hover vehicle designed for scouting and harassment.\nCloaked, doesn't uncloak when attacking.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
+	Health:
+		HP: 240
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 128
+		Crushes: crate
+		TerrainSpeeds:
+			Water: 80
+			Clear: 90
+			Rough: 70
+			Road: 100
+			Beach: 70
+			Tiberium: 80
+			BlueTiberium: 80
+			Veins: 80
+	Hovers:
+	Cloak@CLOAKGENERATOR:
+		UpgradeMinEnabledLevel: 0
+		Palette: cloakscrin
+		InitialDelay: 50
+		CloakDelay: 50
+		CloakSound:
+		UncloakSound:
+		IsPlayerPalette: true
+		UncloakOn: Move, attack
+	WithShadow:
+	Armament:
+		Weapon: DronecPlane
+		Recoil: 85
+		RecoilRecovery: 25
+		LocalOffset: 768,0,400
+		# MuzzleSequence: muzzle
+	# WithMuzzleOverlay:
+	AutoTarget:	
+	AttackFrontal:
+	RenderSprites:
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32
+
+TRIPOD:
+	Inherits: ^ScrinTank	
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Anhilator Tripod
+		Description: Combat walker.\nCan crush vehicles and infantry.\nHas great damage but slow firing rate.\n  Strong vs Ground units in general.\n  Weak vs Aircraft.
+	Selectable:
+		Bounds: 50,100, 0, -30
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 35
+		Prerequisites: ~scrweap, scrtech
+		IconPalette: chromescrin
+	Mobile:
+		TurnSpeed: 8
+		Speed: 80
+		Crushes: crate, Infantry, Vehicle
+	Health:
+		HP: 400
+	Armor:
+		Type: Light
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+	Armament:
+		Weapon: TripodLaser
+		LocalOffset: 100,180,2550
+	Armament@2:
+		Weapon: TripodLaser	
+		LocalOffset: 100,-180,2550
+	WithInfantryBody:
+		AttackSequence: shoot
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+##########################################################
+# Aircraft
+##########################################################	
+SCRPOD:
+	Inherits: ^Plane	
+	Inherits@2: ^ScrinRender	
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Transport Shuttle
+	# Buildable:
+		# Queue: Air
+		# BuildPaletteOrder: 20
+		# Prerequisites: ~scrair
+	-Targetable@GROUND:
+	-Targetable@AIRBORNE:
+	-SelectionDecorations:
+	-AppearsOnRadar:
+	Selectable:
+		Bounds: 1,1
+	Aircraft:
+		MaximumPitch: 90
+		TurnSpeed: 5
+		Speed: 500
+		AirborneUpgrades: airborne
+		MoveIntoShroud: true
+		TakeoffSound: dropup1.aud
+		LandingSound: dropdwn1.aud
+	Health:
+		HP: 300
+	# SelfHealing:
+		# Step: -5
+		# Ticks: 75
+		# HealIfBelow: 1
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 0c0
+		Type: CenterPosition
+	-AttackMove:	
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithFacingSpriteBody:
+	WithShadow:
+	FlyAwayOnIdle:
+	RejectsOrders:		
+
+STORMRIDER:
+	Inherits: ^Plane
+	# Inherits@1: ^ScrinSelfHeal	
+	Inherits@2: ^SelfReloads
+	Valued:
+		Cost: 450
+	Tooltip:
+		Name: Storm Rider
+		Description: Scrin fighter equiped with a blaster turret\nCan fire while moving.\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles, Anti Air weapons.
+	Buildable:
+		Queue: Air
+		BuildPaletteOrder: 18
+		Prerequisites: ~scrair
+	Selectable:
+		Bounds: 30,24
+	Voiced:
+		VoiceSet: Limpet
+	Aircraft:
+		MaximumPitch: 90
+		TurnSpeed: 8
+		Speed: 170
+		AirborneUpgrades: airborne
+		MoveIntoShroud: true
+		TakeoffSound: dropup1.aud
+		LandingSound: dropdwn1.aud
+	Health:
+		HP: 80
+	Armor:
+		Type: Wood
+	Armament:
+		Weapon: StormRiderBlast
+	Armament@aa:
+		Weapon: StormRiderBlastAA		
+	-ReturnOnIdle:	
+	RenderVoxels:
+		Scale: 0.7
+	# AttackPlane:
+		# Voice: Attack
+		# FacingTolerance: 20
+	AttackTurreted:
+	Turreted:
+	AmmoPool:
+		Ammo: 15
+		PipCount: 0
+		ReloadCount: 5
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+	AutoTarget:
+	RenderSprites:
+	DeathSounds:
+	SpawnActorOnDeath:
+		Actor: STORMRIDER.Husk
+
+drache:
+	Inherits: ^Helicopter
+	Inherits@1: ^ScrinSelfHeal		
+	Inherits@2: ^ScrinRender
+	Buildable:
+		Queue: Air
+		BuildPaletteOrder: 110
+		Prerequisites: ~scrair
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Scrin Host Station
+		Description: Deploys into another Construction Yard.\n  Unarmed
+	Selectable:
+		Bounds: 144, 60, 0, -6
+	Health:
+		HP: 600
+	Voiced:
+		VoiceSet: Limpet		
+	Armor:
+		Type: Light	
+	Targetable:
+		TargetTypes: MindControlInmune, Aircraft
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 50
+		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green
+		MoveIntoShroud: true
+		TakeoffSound: orcaup1.aud
+		LandingSound: orcadwn1.aud
+	RevealsShroud:
+		Range: 10c0
+		Type: CenterPosition
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	BaseBuilding:
+	Transforms:
+		IntoActor: drached
+		Offset: -1,-1
+		Facing: 96
+		TransformSounds: place2.aud
+		DeployCursor: deploy
+		NoTransformSounds:
+		Voice: Move
+	SelectionDecorations:
+		VisualBounds: 200,200
+	RenderSprites:
+	Hovers:
+	WithInfantryBody:
+	WithShadow:
+	-RenderVoxels:
+	-WithVoxelBody:
+	SpawnActorOnDeath:
+		Actor: DRACHE.Husk
+	
+SCRGLYDER1:
+	Inherits: ^Helicopter
+	Inherits@1: ^ScrinSelfHeal	
+	Inherits@2: ^ScrinRender	
+	Inherits@3: ^SelfReloads	
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: Glyder
+		Description: Specialized weapons platform.\nCan vary from a ground version and aerial version.\nThe aerial version attacks ground units and vice versa.\n Strong vs Armor.\n  Weak vs Light units.
+	Buildable:
+		Queue: Air
+		BuildPaletteOrder: 20
+		Prerequisites: ~scrair
+	Voiced:
+		VoiceSet: Limpet		
+	Selectable:
+		Bounds: 40,30
+	Transforms:
+		IntoActor: scrglyder2
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 110
+		Repulsable: true
+		MoveIntoShroud: true
+		TakeoffSound: orcaup1.aud
+		LandingSound: orcadwn1.aud
+		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green		
+	Health:
+		HP: 170
+	Armor:
+		Type: Light
+	Armament:
+		Weapon: Glyder1Cannon
+		LocalOffset: -200,0,-100
+	AttackHeli:
+		FacingTolerance: 20
+		Voice: Attack
+	AmmoPool:
+		Ammo: 5
+		PipCount: 0
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+	AutoTarget:
+	-RenderVoxels:
+	-WithVoxelBody:	
+	RenderSprites:	
+	WithFacingSpriteBody:
+	WithShadow:	
+	BodyOrientation:
+		QuantizedFacings: 32
+	SpawnActorOnDeath:
+		Actor: GLYDER1.Husk
+		
+SCRDESTROYER:
+	Inherits: ^Helicopter
+	Inherits@1: ^ScrinSelfHeal	
+	Inherits@2: ^ScrinRender	
+	Inherits@3: ^SelfReloads	
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Destroyer
+		Description: Scrin light frigate, designed for long range harassment.\nEquivalent to an artillery unit.\n Strong vs Infantry, Buildings.\n  Weak vs Aircraft, Anti Air units.
+	Buildable:
+		Queue: Air
+		BuildPaletteOrder: 21
+		Prerequisites: ~scrair, scrradr
+	Voiced:
+		VoiceSet: Limpet		
+	Selectable:
+		Bounds: 100,75
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 90
+		Repulsable: true
+		MoveIntoShroud: true
+		TakeoffSound: orcaup1.aud
+		LandingSound: orcadwn1.aud
+	Health:
+		HP: 450
+	Armor:
+		Type: Light
+	Armament:
+		Weapon: DestroyerCannon
+		LocalOffset: 300,0,0
+	AttackHeli:
+		FacingTolerance: 20
+		Voice: Attack
+	AmmoPool:
+		Ammo: 5
+		PipCount: 0
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+	AutoTarget:
+	-RenderVoxels:
+	-WithVoxelBody:	
+	RenderSprites:	
+	WithFacingSpriteBody:
+	WithShadow:	
+	BodyOrientation:
+		QuantizedFacings: 32
+	SpawnActorOnDeath:
+		Actor: SCRDESTROYER.Husk
+
+SCRTRANS:
+	Inherits: ^Helicopter
+	Inherits@1: ^ScrinSelfHeal		
+	Inherits@2: ^ScrinRender		
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Transport
+		Description: Scrin equivalent to an APC.\nTransports infantry around the field.\n  Unarmed
+	Buildable:
+		Queue: Air
+		Prerequisites: ~scrair
+	Voiced:
+		VoiceSet: Limpet		
+	Cargo:
+		Types: Infantry, Vehicle
+		MaxWeight: 15
+		PipCount: 15
+		UnloadVoice: Unload
+		LoadingUpgrades: notmobile		
+	Selectable:
+		Bounds: 100,50
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 120
+		LandWhenIdle: true
+		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green
+		Repulsable: true
+		MoveIntoShroud: true
+		TakeoffSound: orcaup1.aud
+		LandingSound: orcadwn1.aud
+	Health:
+		HP: 500
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 7c0
+		Type: CenterPosition
+	-RenderVoxels:
+	-WithVoxelBody:	
+	RenderSprites:	
+	WithFacingSpriteBody:
+	WithShadow:	
+	BodyOrientation:
+		QuantizedFacings: 32
+	SpawnActorOnDeath:
+		Actor: SCRTRANS.Husk			
+
+SCRBATTLESHIP:
+	Inherits: ^Helicopter
+	Inherits@1: ^ScrinSelfHeal		
+	Inherits@2: ^ScrinRender
+	Inherits@3: ^SelfReloads
+	Inherits@4: ^BasicStealthDetection	
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Battlecruiser
+		Description: Scrin spacecraft designed for combat on front lines.\nEquipped with blaster turrets and two fighters.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft.
+	Buildable:
+		Queue: Air
+		BuildPaletteOrder: 21
+		Prerequisites: ~scrair, scrtech
+	Voiced:
+		VoiceSet: Limpet		
+	Selectable:
+		Bounds: 175,125
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 80
+		Repulsable: true
+		MoveIntoShroud: true
+		TakeoffSound: orcaup1.aud
+		LandingSound: orcadwn1.aud
+	Health:
+		HP: 800
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 14c0
+		Type: CenterPosition
+	Armament:
+		Weapon: BattleshipCannon
+		LocalOffset:0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
+	AttackTurreted:
+	Turreted:		
+	# AttackHeli:
+		# FacingTolerance: 20
+		# Voice: Attack
+	AmmoPool:
+		Ammo: 25
+		PipCount: 0
+		ReloadTicks: 5
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+	AutoTarget:
+	-RenderVoxels:
+	-WithVoxelBody:	
+	RenderSprites:
+		Scale: 0.8
+	WithFacingSpriteBody:
+	WithShadow:	
+	BodyOrientation:
+		QuantizedFacings: 32
+	SpawnActorOnDeath:
+		Actor: SCRBATTLESHIP.Husk			
+
+SCRINCOUNCIL:
+	Inherits: ^Helicopter
+	Inherits@1: ^ScrinSelfHeal			
+	Inherits@2: ^ScrinRender	
+	Buildable:
+		Queue: Air
+		BuildPaletteOrder: 22
+		Prerequisites: ~scrair, scrtech
+		BuildLimit: 1
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Scrin Council
+		Description: Alien supervisor team, can mind control enemies.\n  Strong vs Ground Units.\n  Weak vs Aircraft, Structures.
+	Selectable:
+		Bounds: 100,90
+	Voiced:
+		VoiceSet: Limpet		
+	Health:
+		HP: 700
+	Armor:
+		Type: Light	
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 186
+		LandableTerrainTypes: Clear, rough, Road, DirtRoad
+		MoveIntoShroud: true
+		TakeoffSound: orcaup1.aud
+		LandingSound: orcadwn1.aud
+	RevealsShroud:
+		Range: 12c0
+		Type: CenterPosition
+	MustBeDestroyed:
+		RequiredForShortGame: true
+	Targetable:
+		TargetTypes: Air, MindControlInmune
+	Turreted:
+	AttackTurreted:
+	AmmoPool:
+	AmmoPool:
+		Ammo: 1
+		PipCount: 1
+		SelfReloads: true
+		ReloadCount: 1
+		SelfReloadsTicks: 300
+		ResetOnFire: false
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty		
+	AutoTarget:
+	Armament:
+		Weapon: CouncilSteal
+	RenderSprites:
+	Hovers:
+	WithInfantryBody:
+	WithShadow:
+	-RenderVoxels:
+	-WithVoxelBody:
+	SpawnActorOnDeath:
+		Actor: SCRCOUNCIL.Husk		
+	
+##########################################################
+# Structures
+##########################################################	
+drached:
+	Inherits: ^Building
+	Inherits@2: ^ScrinRender
+	Building:
+		Footprint: xxx xxx xxx
+		BuildSounds: facbld1.aud
+		Dimensions: 3,3
+	Health:
+		HP: 1500
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+	Production:
+		Produces: Building,Defense
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Deployed Host Station
+		Description: Builds base structures.
+	CustomSellValue:
+		Value: 2500
+	BaseBuilding:
+	Transforms:
+		IntoActor: drache
+		Offset: 1,1
+		Facing: 96
+		DeployCursor: undeploy
+	Targetable:
+		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate, MindControlInmune
+	Power:
+		Amount: 0
+	RenderSprites:
+	Selectable:
+		Bounds: 144, 60, 0, -6
+	ProvidesPrerequisite@scr:
+		Factions: scr
+		Prerequisite: structures.scr
+	SelectionDecorations:
+		VisualBounds: 144, 80, 0, -12
+
+SCRPOWR:
+	Inherits: ^Building
+	Inherits@2: ^ScrinRender
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 0
+		Prerequisites: ~structures.scr
+	Valued:
+		Cost: 550
+	Tooltip:
+		Name: Scrin Leech
+		Description: Provides power for other structures.
+	ProvidesPrerequisite:
+		Prerequisite: scrpowr
+	Building:
+		Footprint: xx xx xx
+		Dimensions: 3,2
+	Health:
+		HP: 750
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 4c0
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	Selectable:
+		Bounds: 90, 48, 0, -6
+	Power:
+		Amount: 160
+	InfiltrateForPowerOutage:
+	AffectedByPowerOutage:
+	Targetable:
+		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate
+	ScalePowerWithHealth:
+	DisabledOverlay:
+	# ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 90, 84, 0, -12
+
+SCRRAX:
+	Inherits: ^Building
+	Inherits@2: ^ScrinRender	
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 30
+		Prerequisites: scrpowr, ~structures.scr
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Landing Zone
+		Description: Safe haven for Infantry deployment.\nDeploys 3 soldiers per order.
+	ProvidesPrerequisite:
+		Prerequisite: scrrax
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 88, 48, 0, -8
+	Health:
+		HP: 800
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+	RallyPoint:
+		Offset: 2,3
+		Palette: mouse
+		IsPlayerPalette: false
+	Exit@1:
+		SpawnOffset: -256,1024,0
+		ExitCell: 2,2
+	ProductionAirdrop:
+		Produces: Infantry
+		ActorType: scrpod
+		ReadyAudio: UnitReady
+	PrimaryBuilding:
+	ProductionBar:
+	Power:
+		Amount: -5
+	SelectionDecorations:
+		VisualBounds: 88, 56, 0, -8
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		Palette: ra
+		ReferencePoint: Top
+		ZOffset: 256
+		UpgradeTypes: primary
+		UpgradeMinEnabledLevel: 1
+		
+scrproc:
+	Inherits: ^Building
+	Inherits@2: ^ScrinRender	
+	Valued:
+		Cost: 2200
+	Tooltip:
+		Name: Scrin Refinery
+		Description: Processes raw Tiberium\ninto useable resources.\nIncompatible with human harvesters.
+	Armor:
+		Type: Heavy			
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 20
+		Prerequisites: scrpowr, ~structures.scr 
+	Building:
+		Footprint: xxx= xx== xxx=
+		Dimensions: 4,3
+	Selectable:
+		Bounds: 134, 96, 0, -12
+	Health:
+		HP: 1200
+	RevealsShroud:
+		Range: 6c0
+	Refinery:
+		DockAngle: 160
+		DockOffset: 2,1
+	StoresResources:
+		PipColor: Green
+		PipCount: 15
+		Capacity: 2500
+	CustomSellValue:
+		Value: 600
+	FreeActor:
+		Actor: SCRHARV
+		SpawnOffset: 3,1
+		Facing: 160
+	Power:
+		Amount: -30
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 134, 122, 0, -18
+	RenderSprites:	
+
+SCRWEAP:
+	Inherits: ^Building
+	Inherits@2: ^ScrinRender	
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Scrin Forge
+		Description: Produces vehicles.
+	ProvidesPrerequisite:
+		Prerequisite: scrweap
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 50
+		Prerequisites: scrproc, ~structures.scr
+	Building:
+		Footprint: xxx xx= xxx
+		Dimensions: 3,3
+	Selectable:
+		Bounds: 154, 96, -2, -12
+	Health:
+		HP: 1300
+	Armor:
+		Type: Heavy			
+	RevealsShroud:
+		Range: 4c0
+	RallyPoint:
+		Offset: 4,1
+		Palette: mouse
+		IsPlayerPalette: false
+	Exit@1:
+		SpawnOffset: -384,-384,0
+		ExitCell: 1,1
+		ExitDelay: 5
+	Production:
+		Produces: Vehicle
+	PrimaryBuilding:
+	ProductionBar:
+	# WithRoof:
+		# Sequence: idle-zaz	
+	WithIdleOverlay@ROOF:
+		Sequence: idle-roof
+	WithProductionOverlay@WHITELIGHTS:
+		Sequence: production-lights-white
+	Power:
+		Amount: -30
+	# ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 154, 100, -2, -12
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		Palette: ra
+		ReferencePoint: Top
+		ZOffset: 256
+		UpgradeTypes: primary
+		UpgradeMinEnabledLevel: 1
+
+SCRAIR:
+	Inherits: ^Building
+	Inherits@2: ^ScrinRender	
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Stargate
+		Description: Delivers Spacecraft from the fleet.
+	Buildable:
+		BuildPaletteOrder: 60
+		Queue: Building
+		Prerequisites: scrproc, ~structures.scr
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	Health:
+		HP: 600
+	RevealsShroud:
+		Range: 5c0
+	Exit@1:
+		SpawnOffset: 0,-256,600
+	RallyPoint:
+		Palette: mouse
+		IsPlayerPalette: false
+	Production:
+		Produces: Air
+	PrimaryBuilding:
+	Reservable:
+	RepairsUnits:
+	ProductionBar:
+	WithIdleOverlay@PLATFORM:
+		Sequence: idle-platform
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	Power:
+		Amount: -60
+	Selectable:
+		Bounds: 88, 66, 0, -5
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 88, 66, 0, -5
+	WithDecoration@primary:
+		RequiresSelection: true
+		Image: pips
+		Sequence: tag-primary
+		Palette: ra
+		ReferencePoint: Top
+		ZOffset: 256
+		UpgradeTypes: primary
+		UpgradeMinEnabledLevel: 1
+
+SCRRADR:
+	Inherits: ^Building
+	Inherits@2: ^ScrinRender	
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 90
+		Prerequisites: scrproc, ~structures.scr
+	Valued:
+		Cost: 1500
+	Tooltip:
+		Name: Scrin Radar
+		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
+	ProvidesPrerequisite:
+		Prerequisite: radar
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	Selectable:
+		Bounds: 96, 48, 0, -6
+	Health:
+		HP: 1000
+	Armor:
+		Type: Wood
+	RequiresPower:
+	CanPowerDown:
+		IndicatorPalette: mouse
+		PowerupSpeech: EnablePower
+		PowerdownSpeech: DisablePower
+	ProvidesRadar:
+	InfiltrateForExploration:
+	DetectCloaked:
+		Range: 10c0
+	RenderDetectionCircle:
+	RevealsShroud:
+		Range: 10c0
+	WithIdleOverlay@DISH:
+		Sequence: idle-dish
+		PauseOnLowPower: yes
+	Targetable:
+		TargetTypes: Building, Ground, C4, SpyInfiltrate
+	Power:
+		Amount: -50
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 96, 118, 0, -38
+
+SCRTECH:
+	Inherits: ^Building
+	Inherits@2: ^ScrinRender	
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 100
+		Prerequisites: scrweap, scrradr, ~structures.scr
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Scrin Laboratory
+		Description: Provides an area for surface sampling\nAllows the Scrin to adapt it's most advanced units\nto the planet atmosphere.
+	ProvidesPrerequisite:
+		Prerequisite: tech
+	Building:
+		Footprint: xx xx xx
+		Dimensions: 2,3
+	Selectable:
+		Bounds: 110, 60, 3, -4
+	Health:
+		HP: 500
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 4c0
+	Power:
+		Amount: -150
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 110, 60, 3, -4	
+
+##############################################
+# Defences
+##############################################
+SCRWALL:
+	Inherits: ^Wall
+	Inherits@2: ^ScrinRender	
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 1001
+		Prerequisites: ~structures.scr, !structures.cab
+	SoundOnDamageTransition:
+		DamagedSounds:
+		DestroyedSounds:
+	Valued:
+		Cost: 50
+	CustomSellValue:
+		Value: 0
+	-Cloak@CLOAKGENERATOR:
+	Tooltip:
+		Name: Energy Wall
+		Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.\nMay make you sell your conyard\nIf you're not careful.
+	Health:
+		HP: 300
+	Armor:
+		Type: Concrete
+	BlocksProjectiles:
+		Height: 640
+	Crushable:
+		CrushClasses: heavywall
+	LineBuild:
+		NodeTypes: wall, turret
+		
+SCRGATE_A:
+	Inherits: ^Gate_A
+	Inherits@2: ^ScrinRender	
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 100
+		Prerequisites: ~structures.scr
+	Tooltip:
+		Name: Energy Gate
+	Gate:
+		CloseDelay: 40		
+
+SCRGATE_B:
+	Inherits: ^Gate_B
+	Inherits@2: ^ScrinRender	
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 100
+		Prerequisites: ~structures.scr
+	Tooltip:
+		Name: Energy Gate
+	Gate:
+		CloseDelay: 40
+
+SCRNEEDLER:
+	Inherits: ^Defense
+	Inherits@1: ^ScrinSelfHeal
+	Inherits@2: ^ScrinRender
+	Inherits@3: ^TowerStealthDetection
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Ichor Waste Turret
+		Description: Basic defense, cloaks when idle.\nHas very high damage but low range.\nRequires power to operate.\n  Strong vs Aircraft\n  Weak vs Ground units
+	Buildable:
+		Queue: Defense
+		Prerequisites: scrrax, ~structures.scr
+		BuildPaletteOrder: 60
+	Building:
+	Selectable:
+		Bounds: 40, 30, -3, -8
+	RequiresPower:
+	DisabledOverlay:
+	Health:
+		HP: 350
+	Armor:
+		Type: Heavy
+	BodyOrientation:
+		QuantizedFacings: 32
+	RenderRangeCircle:
+		RangeCircleType: aa
+	Cloak@CLOAKGENERATOR:
+		UpgradeMinEnabledLevel: 0
+		Palette: cloakscrin
+		InitialDelay: 15
+		CloakDelay: 15
+		# CloakSound: cloak5.aud
+		# UncloakSound: cloak5.aud
+		IsPlayerPalette: true
+		UncloakOn: Move, Attack
+	Turreted:
+		TurnSpeed: 10
+		InitialFacing: 50
+	AttackTurreted:
+	WithSpriteTurret:
+		Recoils: yes
+	Armament:
+		Weapon: ScorpAcid
+		LocalOffset: 512,0,400
+	Power:
+		Amount: -20
+	SelectionDecorations:
+		VisualBounds: 40, 36, -3, -8
+
+SCRTRACTOR:
+	Inherits: ^Defense
+	Inherits@1: ^ScrinSelfHeal
+	Inherits@2: ^ScrinRender
+	Inherits@3: ^TowerStealthDetection
+	Valued:
+		Cost: 450
+	Tooltip:
+		Name: Tractor Beam
+		Description: Scrin Anti-Air base defense, deals little damage\nbut slows down the targetted aircraft.\nRequires power to operate.\n  Strong vs Aircraft\n  Weak vs Ground units
+	Buildable:
+		Queue: Defense
+		Prerequisites: scrrax, ~structures.scr
+		BuildPaletteOrder: 60
+	Building:
+	Selectable:
+		Bounds: 40, 30, -3, -8
+	RequiresPower:
+	DisabledOverlay:
+	Health:
+		HP: 350
+	Armor:
+		Type: Light
+	BodyOrientation:
+		QuantizedFacings: 32
+	RenderRangeCircle:
+		RangeCircleType: aa
+	Turreted:
+		TurnSpeed: 10
+		InitialFacing: 50
+	AttackTurreted:
+	WithSpriteTurret:
+		Recoils: yes
+	Armament:
+		Weapon: TractorBeam
+		LocalOffset: 512,0,512
+	Power:
+		Amount: -20
+	SelectionDecorations:
+		VisualBounds: 40, 36, -3, -8
+		
+SCRDRONE:
+	Inherits: ^Defense
+	Inherits@1: ^ScrinSelfHeal
+	Inherits@2: ^ScrinRender
+	Inherits@3: ^TowerStealthDetection	
+	Valued:
+		Cost: 1100
+	Tooltip:
+		Name: Drone Hive
+		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 90
+		Prerequisites: scrtech, ~structures.scr
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 88, 42, 0, -6
+	RequiresPower:
+	DisabledOverlay:
+	Health:
+		HP: 500
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 12c0
+	Armament:
+		Weapon: DronePlane
+		LocalOffset: 1400,210,800
+	AttackCharge:
+		ChargeAudio: obelpowr.aud
+		ReloadTime: 75
+		InitialChargeDelay: 75
+	Power:
+		Amount: -40
+	SelectionDecorations:
+		VisualBounds: 88, 72, 0, -12
+
+SCRSHIELD:
+	Inherits: ^Building
+	Inherits@1: ^ScrinSelfHeal
+	Inherits@2: ^ScrinRender
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Stasis Field Generator
+		Description: Stasis Field\nBuffs and heals nearby units.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft
+
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 90
+		Prerequisites: scrradr, ~structures.scr
+	GrantUpgradePower:
+		Upgrades: StasisDisable, notmobile
+		OrderName: Stasis Field
+		Description: Stasis Field
+		LongDesc: Disables all units in the area but\nalso makes then invulnerable. 
+		Duration: 200
+		Range: 5
+		ChargeTime: 200
+		Icon: ScrStasis
+		IconPalette: chromescrin
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 88, 42, 0, -6
+	RequiresPower:
+	DisabledOverlay:
+	WithRangeCircle:
+		Range: 12c0
+		Type: cloakgenerator
+	Health:
+		HP: 400
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 8c0
+	Power:
+		Amount: -100
+	SelectionDecorations:
+		VisualBounds: 88, 72, 0, -12
+
+SCRMINE:
+	Inherits: ^DeployedVehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Scrin Mine
+	Health:
+		HP: 50
+	-AttackTurreted:
+	-AutoTarget:		
+	-RenderRangeCircle:
+	-Voiced:
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 3c0
+	BodyOrientation:
+		QuantizedFacings: 32
+	Cloak@cloakgenerator:
+		UpgradeTypes:
+		CloakSound:
+		UncloakSound:
+		Palette: playerscrin
+		IsPlayerPalette: true
+		CloakTypes: cloakgenerator
+	Mine:
+		CrushClasses: crate
+		DetonateClasses: crate
+		AvoidFriendly: true		
+	Explodes:
+		Weapon: MineExplode				
