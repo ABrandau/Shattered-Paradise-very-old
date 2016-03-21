@@ -2,6 +2,10 @@ YEAR - MONTH - DAY
 
 
 [2016 - 02 - 20]
+Removed Infiltration ability from Rangers.
+Fixed mutant airstrip offset.
+Forgotten Rangers now cloak only on tiberium.
+Enhanced Tracking capabilities of the Flak Station bullet (yes, it tracks).
 Enabled Cancer AI, this one is equal to fun AI, except it builds mcvs.
 Militant Flamethrower reload delay decreased to 90 from 100.
 Tiberian Bulls now disable enemies for 4/5 of a second.
