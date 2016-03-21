@@ -3,7 +3,7 @@
 ############################################
 MARAUDER:
 	Inherits: ^Mutant
-	Inherits@1: ^MutRender	
+	Inherits@1: ^MutRender
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 18
@@ -12,7 +12,7 @@ MARAUDER:
 		Cost: 100
 	Tooltip:
 		Name: Marauder
-		Description: Forgotten Basic Infantry, equipped with shotgun.\nThey can generate tiberium fortifications for themselves.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft, Base Defences.
+		Description: Mutant Militia, equipped with shotguns.\nThey can generate tiberium fortifications for themselves.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft, Base Defences.
 	Voiced:
 		VoiceSet: Rocket
 	Health:
@@ -26,21 +26,21 @@ MARAUDER:
 		Name: OnFoot
 	Armament@PRIMARY2:
 		Weapon: MarauderShotgun
-		Name: OnFoot		
+		Name: OnFoot
 	Armament@PRIMARY3:
 		Weapon: MarauderShotgun
-		Name: OnFoot		
+		Name: OnFoot
 	Armament@PRIMARY4:
 		Weapon: MarauderShotgun
-		Name: OnFoot				
+		Name: OnFoot
 	Armament@GARRISON1:
 		Weapon: GMarauderShotgun
 	Armament@GARRISON2:
-		Weapon: GMarauderShotgun	
+		Weapon: GMarauderShotgun
 	Armament@GARRISON3:
-		Weapon: GMarauderShotgun	
+		Weapon: GMarauderShotgun
 	Armament@GARRISON4:
-		Weapon: GMarauderShotgun			
+		Weapon: GMarauderShotgun
 	AttackFrontal:
 		Voice: Attack
 		Armaments: OnFoot
@@ -60,7 +60,7 @@ E3:
 		Cost: 170
 	Tooltip:
 		Name: Skirmisher
-		Description: Anti-tank infantry.\n  Strong vs Vehicles, Aircraft, Buildings\n  Weak vs Infantry
+		Description: Anti-tank Militia.\n  Strong vs Vehicles, Aircraft, Buildings\n  Weak vs Infantry
 	Voiced:
 		VoiceSet: Rocket
 	Health:
@@ -73,7 +73,7 @@ E3:
 		Name: OnFoot
 	Armament@GARRISON:
 		Weapon: GSkirmisherRocket
-		LocalOffset: 128,0,640		
+		LocalOffset: 128,0,640
 	AttackFrontal:
 		Voice: Attack
 		Armaments: OnFoot
@@ -82,7 +82,7 @@ E3:
 		DeathType:
 	SpawnActorOnDeath@tiberium2:
 		Probability: 7
-		DeathType:		
+		DeathType:
 
 E2:
 	Inherits: ^Mutant
@@ -109,7 +109,7 @@ E2:
 	Armament:
 		Weapon: MechanicRepair
 		TargetStances: Ally
-		ForceTargetStances: None			
+		ForceTargetStances: None
 	Captures:
 		CaptureTypes: building
 	AutoTarget:
@@ -124,9 +124,10 @@ E2:
 	SpawnActorOnDeath@tiberium2:
 		Probability: 6
 		DeathType:
-	
+
 RANGER:
 	Inherits: ^Mutant
+	Inherits@3: ^BasicStealthDetection
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 21
@@ -135,23 +136,26 @@ RANGER:
 		Cost: 300
 	Tooltip:
 		Name: Ranger
-		Description: Scout Infantry, cloaks when idle.\n  Detects cloaked units.\n  Strong vs Infantry.\n  Weak vs Vehicles.
+		Description: Scout Soldier.\ncloaks on tiberium.\n  Detects cloaked units.\n  Strong vs Infantry.\n  Weak vs Vehicles.
 	Voiced:
 		VoiceSet: Umagon
 	Health:
 		HP: 110
 	Mobile:
 		Speed: 75
+	PoisonedByTiberium@buff:
+		Weapon: FiendBuffer
 	RevealsShroud:
-		Range: 11c0		
+		Range: 11c0
 	Cloak@CLOAKGENERATOR:
-		UpgradeMinEnabledLevel: 0
+		UpgradeTypes: FiendCloak, cloakgenerator
+		UpgradeMinEnabledLevel: 1
 		InitialDelay: 15
 		CloakDelay: 15
 		IsPlayerPalette: true
+		CloakSound: cloak5.aud
+		UncloakSound: cloak5.aud
 		UncloakOn: Attack, Move
-	Infiltrates:
-		Types: SpyInfiltrate		
 	Armament@PRIMARY:
 		Weapon: RangerRifle
 		LocalOffset: 128,0,640
@@ -164,7 +168,7 @@ RANGER:
 		Armaments: OnFoot
 	RenderSprites:
 		Image: UMAGON
-		
+
 MUTFIEND:
 	Inherits: ^Mutant
 	Tooltip:
@@ -185,8 +189,8 @@ MUTFIEND:
 	Health:
 		HP: 220
 		Shape: Circle
-			Radius: 213		
-	-Crushable:	
+			Radius: 213
+	-Crushable:
 	Armor:
 		Type: Light
 	Mobile:
@@ -202,22 +206,24 @@ MUTFIEND:
 		Name: OnFoot
 	Armament@Garrison:
 		Weapon: GFiendShard2
-	PoisonedByTiberium@buff:	
+	PoisonedByTiberium@buff:
 		Weapon: FiendBuffer
 	Cloak@CLOAKGENERATOR:
-		UpgradeTypes: FiendCloak
+		UpgradeTypes: FiendCloak, cloakgenerator
 		UpgradeMinEnabledLevel: 1
 		InitialDelay: 15
 		CloakDelay: 15
+		CloakSound: cloak5.aud
+		UncloakSound: cloak5.aud    
 		IsPlayerPalette: true
-		UncloakOn: Attack, Move		
+		UncloakOn: Attack, Move
 	AttackFrontal:
 		Voice: Attack
 		Armaments: OnFoot
-		
+
 AWARRIOR:
 	Inherits: ^Mutant
-	Inherits@1: ^MutRender		
+	Inherits@1: ^MutRender
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 23
@@ -240,7 +246,7 @@ AWARRIOR:
 		LocalOffset: 128,0,400
 	Armament@GARRISON:
 		Weapon: GWarriorAcid
-		LocalOffset: 128,0,400		
+		LocalOffset: 128,0,400
 	AttackFrontal:
 		Voice: Attack
 	SpawnActorOnDeath:
@@ -249,7 +255,7 @@ AWARRIOR:
 
 PSYKER:
 	Inherits: ^Mutant
-	Inherits@1: ^MutRender		
+	Inherits@1: ^MutRender
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 24
@@ -267,18 +273,18 @@ PSYKER:
 	Mobile:
 		Speed: 75
 	Targetable:
-		TargetTypes: Ground, Infantry, MindControlInmune		
+		TargetTypes: Ground, Infantry, MindControlInmune
 	Armament@PRIMARY:
 		Weapon: PsykerRay
 		Name: OnFoot
 		LocalOffset: 128,0,640
 	Armament@GARRISON:
 		Weapon: GPsykerRay
-		LocalOffset: 128,0,640		
+		LocalOffset: 128,0,640
 	AttackFrontal:
 		Voice: Attack
 		Armament: OnFoot
-		
+
 WOLF:
 	Inherits: ^Mutant
 	Buildable:
@@ -291,7 +297,7 @@ WOLF:
 		Name: Tiberian Bull
 		Description: Tiberian Beast, it emits tiberium radiation\naffecting nearby units.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
 	Voiced:
-		VoiceSet: Fiend	
+		VoiceSet: Fiend
 	SpawnActorOnDeath@conversion:
 		Actor: cybdog
 		Probability: 100
@@ -329,7 +335,7 @@ WOLF:
 ################################################
 MUTAPC:
 	Inherits: ^VoxelTank
-	Inherits@1:	^Ra2vxl	
+	Inherits@1:	^Ra2vxl
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -357,7 +363,7 @@ MUTAPC:
 		MaxWeight: 3
 		PipCount: 3
 		UnloadVoice: Unload
-		LoadingUpgrades: notmobile		
+		LoadingUpgrades: notmobile
 	AttackTurreted:
 		Voice: Attack
 	RenderVoxels:
@@ -370,7 +376,7 @@ MUTAPC:
 
 MUTTANK:
 	Inherits: ^VoxelTank
-	Inherits@1:	^Ra2vxl	
+	Inherits@1:	^Ra2vxl
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -403,11 +409,11 @@ MUTTANK:
 		TurnSpeed: 10
 		# Offset: -170,0,0
 	AutoTarget:
-	WithVoxelTurret:	
+	WithVoxelTurret:
 
 MUTQUAD:
 	Inherits: ^VoxelTank
-	Inherits@1:	^Ra2vxl	
+	Inherits@1:	^Ra2vxl
 	Valued:
 		Cost: 650
 	Tooltip:
@@ -438,15 +444,15 @@ MUTQUAD:
 		Weapon: QuadFireAA
 		MuzzleSequence: muzzle
 		MuzzlePalette: apgrey
-		LocalOffset: 600,0,450		
+		LocalOffset: 600,0,450
 	AttackTurreted:
 		Voice: Attack
 	Turreted:
 		TurnSpeed: 7
 		Offset: -100,0,0
 	AutoTarget:
-	WithVoxelTurret:		
-	
+	WithVoxelTurret:
+
 MLRS:
 	Inherits: ^VoxelTank
 	Valued:
@@ -456,7 +462,7 @@ MLRS:
 		Description: Light artillery outfitted with \nTiberium fueled rockets, deals damage\non a wide area.\n  Strong vs Infantry, Buildings\n  Weak vs Armored Targets.
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 28 
+		BuildPaletteOrder: 28
 		Prerequisites: ~muweap, muradr
 	Targetable:
 		TargetTypes: Ground, Vehicle, Repair, Disruptor
@@ -481,8 +487,8 @@ MLRS:
 		TurnSpeed: 5
 		Offset: -300,0,0
 	AutoTarget:
-	WithVoxelTurret:	
-	
+	WithVoxelTurret:
+
 HVRTRUK3:
 	Inherits: ^VoxelVehicle
 	Valued:
@@ -501,13 +507,13 @@ HVRTRUK3:
 			Water: 60
 	Health:
 		HP: 125
-	Hovers:	
+	Hovers:
 	Armor:
 		Type: Wood
 	Explodes:
 		Weapon: MiniNuke
 		EmptyWeapon: MiniNuke
-	AttackSuicides:		
+	AttackSuicides:
 	RenderVoxels:
 		Scale: 1
 	WithVoxelBody:
@@ -516,11 +522,11 @@ HVRTRUK3:
 		Palette: effect
 		TerrainTypes: Water
 		StationaryInterval: 18
-		MovingInterval: 6	
-	
+		MovingInterval: 6
+
 FORTRESS:
 	Inherits: ^VoxelVehicle
-	Inherits@1:	^Ra2vxl	
+	Inherits@1:	^Ra2vxl
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -531,7 +537,7 @@ FORTRESS:
 		BuildPaletteOrder: 30
 		Prerequisites: ~muweap, muhall
 	Selectable:
-		Bounds: 80,60		
+		Bounds: 80,60
 	Mobile:
 		TurnSpeed: 6
 		Speed: 75
@@ -553,7 +559,7 @@ FORTRESS:
 	AttackGarrisoned:
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
 		PortYaws: 0, 176, 341, 512, 682, 853#10, 10, 10, 10, 10, 10
-		PortCones: 1086, 86, 86, 86, 86, 86#10, 10, 10, 10, 10, 
+		PortCones: 1086, 86, 86, 86, 86, 86#10, 10, 10, 10, 10,
 	AutoTarget:
 	WithVoxelBody:
 	LeavesTrails:
@@ -561,14 +567,14 @@ FORTRESS:
 		Palette: effect
 		TerrainTypes: Water
 		StationaryInterval: 18
-		MovingInterval: 6	
+		MovingInterval: 6
 ##########################################################
 # Aircraft
-##########################################################	
+##########################################################
 MUTBIRD:
 	Inherits: ^Helicopter
 	Inherits@1: ^SpriteActor
-	Inherits@2: ^MutRender	
+	Inherits@2: ^MutRender
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -602,7 +608,7 @@ MUTBIRD:
 		SelfReloads: true
 		PipTypeEmpty: AmmoEmpty
 	-RenderVoxels:
-	-WithVoxelBody:	
+	-WithVoxelBody:
 	WithShadow:
 	RenderSprites:
 	# WithFacingSpriteBody:
@@ -615,8 +621,8 @@ MUTBIRD:
 
 MUTHELI:
 	Inherits: ^Helicopter
-	Inherits@1:	^Ra2vxl		
-	Inherits@3: ^BasicStealthDetection	
+	Inherits@1:	^Ra2vxl
+	Inherits@3: ^BasicStealthDetection
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -648,7 +654,7 @@ MUTHELI:
 	Armament@secondary:
 		Weapon: GargoylRocket
 	Armament@tertiary:
-		Weapon: GargoylRocketAA		
+		Weapon: GargoylRocketAA
 	AttackHeli:
 		FacingTolerance: 20
 		Voice: Attack
@@ -656,17 +662,17 @@ MUTHELI:
 		Ammo: 30
 		PipCount: 8
 		ReloadCount: 15
-		ReloadTicks: 200		
+		ReloadTicks: 200
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
 	AutoTarget:
 	RenderSprites:
 	SpawnActorOnDeath:
-		Actor: MUTHELI.Husk		
-		
+		Actor: MUTHELI.Husk
+
 WETP:
 	Inherits: ^Plane
-	Inherits@1:	^Ra2vxl	
+	Inherits@1:	^Ra2vxl
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -694,7 +700,7 @@ WETP:
 	Armament:
 		Weapon: FalconPunch
 	Armament@1:
-		Weapon: FalconPunch		
+		Weapon: FalconPunch
 	RenderVoxels:
 		Scale: 0.7
 	AttackPlane:
@@ -704,7 +710,7 @@ WETP:
 		Ammo: 16
 		PipCount: 1
 		ReloadCount: 20
-		ReloadTicks: 150	
+		ReloadTicks: 150
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
 		RearmBuildings: muair, gahpad, nahpad
@@ -715,10 +721,10 @@ WETP:
 		UpgradeTypes: cruising
 		UpgradeMinEnabledLevel: 1
 	SpawnActorOnDeath:
-		Actor: WETP.Husk	
+		Actor: WETP.Husk
 ##########################################################
 # Structures
-##########################################################	
+##########################################################
 MUPOWR:
 	Inherits: ^Building
 	Inherits@1: ^MutRender
@@ -808,7 +814,7 @@ MURAX:
 		ZOffset: 256
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
-		
+
 MUWEAP:
 	Inherits: ^Building
 	Valued:
@@ -863,11 +869,11 @@ MUWEAP:
 		ReferencePoint: Top
 		ZOffset: 256
 		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1	
+		UpgradeMinEnabledLevel: 1
 
 MUAIR:
 	Inherits: ^Building
-	Inherits@1: ^MutRender	
+	Inherits@1: ^MutRender
 	Valued:
 		Cost: 300
 	Tooltip:
@@ -911,8 +917,8 @@ MUAIR:
 		ReferencePoint: Top
 		ZOffset: 256
 		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1		
-		
+		UpgradeMinEnabledLevel: 1
+
 MURADR:
 	Inherits: ^Building
 	Buildable:
@@ -953,11 +959,11 @@ MURADR:
 		Amount: -50
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
-		VisualBounds: 96, 118, 0, -38		
+		VisualBounds: 96, 118, 0, -38
 
 MUHALL:
 	Inherits: ^Building
-	Inherits@1: ^MutRender	
+	Inherits@1: ^MutRender
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 100
@@ -984,11 +990,11 @@ MUHALL:
 		Amount: -150
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
-		VisualBounds: 110, 60, 3, -4		
-		
+		VisualBounds: 110, 60, 3, -4
+
 MUSTABLE:
 	Inherits: ^Building
-	Inherits@1: ^MutRender		
+	Inherits@1: ^MutRender
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 100
@@ -1015,7 +1021,7 @@ MUSTABLE:
 		Amount: -40
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
-		VisualBounds: 110, 60, 3, -4		
+		VisualBounds: 110, 60, 3, -4
 ##############################################
 # Defences
 ##############################################
@@ -1052,7 +1058,7 @@ MUTWALL:
 
 MUTGATE_A:
 	Inherits: ^Gate_A
-	Inherits@2: ^MutRender	
+	Inherits@2: ^MutRender
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 100
@@ -1060,11 +1066,11 @@ MUTGATE_A:
 	Tooltip:
 		Name: Forgotten Gate
 	Gate:
-		CloseDelay: 100		
+		CloseDelay: 100
 
 MUTGATE_B:
 	Inherits: ^Gate_B
-	Inherits@2: ^MutRender	
+	Inherits@2: ^MutRender
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 100
@@ -1072,12 +1078,12 @@ MUTGATE_B:
 	Tooltip:
 		Name: Forgotten Gate
 	Gate:
-		CloseDelay: 100		
-		
+		CloseDelay: 100
+
 MUFLAK:
 	Inherits: ^Defense
 	Inherits@1: ^MutRender
-	Inherits@2: ^TowerStealthDetection	
+	Inherits@2: ^TowerStealthDetection
 	Valued:
 		Cost: 350
 	Tooltip:
@@ -1104,19 +1110,19 @@ MUFLAK:
 		TurnSpeed: 10
 		InitialFacing: 50
 	AttackTurreted:
-	WithMuzzleOverlay:	
+	WithMuzzleOverlay:
 	WithSpriteTurret:
 		Recoils: no
 	Armament:
 		Weapon: FlakFire
 		MuzzleSequence: muzzle
-		MuzzlePalette: apgrey		
+		MuzzlePalette: apgrey
 		LocalOffset: 450,0,350
 	Power:
 		Amount: -10
 	SelectionDecorations:
-		VisualBounds: 40, 36, -3, -8		
-		
+		VisualBounds: 40, 36, -3, -8
+
 MUBUNKR:
 	Inherits: ^Defense
 	Inherits@1: ^MutRender
@@ -1141,7 +1147,7 @@ MUBUNKR:
 	-EmitInfantryOnSell@nod:
 	-EmitInfantryOnSell@mut:
 	-EmitInfantryOnSell@cab:
-	-EmitInfantryOnSell@scr:	
+	-EmitInfantryOnSell@scr:
 	Health:
 		HP: 600
 	Armor:
@@ -1164,7 +1170,7 @@ MUBUNKR:
 	Power:
 		Amount: -10
 	SelectionDecorations:
-		VisualBounds: 88, 72, 0, -12		
+		VisualBounds: 88, 72, 0, -12
 
 MUMINE:
 	Inherits: ^DeployedVehicle
@@ -1175,7 +1181,7 @@ MUMINE:
 	Health:
 		HP: 50
 	-AttackTurreted:
-	-AutoTarget:		
+	-AutoTarget:
 	-RenderRangeCircle:
 	-Voiced:
 	Armor:
@@ -1189,15 +1195,15 @@ MUMINE:
 		CloakSound:
 		UncloakSound:
 		Palette: playermut
-		IsPlayerPalette: true		
+		IsPlayerPalette: true
 		CloakTypes: cloakgenerator
 	Mine:
 		CrushClasses: crate
 		DetonateClasses: crate
-		AvoidFriendly: true		
+		AvoidFriendly: true
 	Explodes:
-		Weapon: MineExplode			
-		
+		Weapon: MineExplode
+
 MUVENTI:
 	Inherits: ^Building
 	Inherits@1: ^MutRender
@@ -1219,14 +1225,14 @@ MUVENTI:
 		Type: Wood
 	WithRangeCircle:
 		Range: 12c0
-		Type: cloakgenerator		
+		Type: cloakgenerator
 	UpgradeActorsNear@lobo:
 		Upgrades: ForgInfantryBuff
 		Range: 12c0
 	UpgradeActorsNear@qlo:
 		Upgrades: ForgInfantrydeBuff
 		Range: 12c0
-		ValidStances: Enemy		
+		ValidStances: Enemy
 	RevealsShroud:
 		Range: 4c0
 	WithIdleOverlay@LIGHTS:
@@ -1240,4 +1246,4 @@ MUVENTI:
 	DisabledOverlay:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
-		VisualBounds: 90, 84, 0, -12		
+		VisualBounds: 90, 84, 0, -12

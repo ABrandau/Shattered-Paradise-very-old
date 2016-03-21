@@ -722,19 +722,19 @@ muair:
 	active:
 		Start: 35
 		ShadowStart: 72
-		# ZOffset: -1c511		
+		ZOffset: -1c511		
 	idle:
 		Start: 35
 		ShadowStart: 72
-		# ZOffset: -1c511	
+		ZOffset: -1c511	
 	damaged-idle:
 		Start: 36
 		ShadowStart: 73
-		# ZOffset: -1c511
+		ZOffset: -1c511
 	dead:
 		Start: 36
 		ShadowStart: 73
-		# ZOffset: -1c511
+		ZOffset: -1c511
 		Tick: 400
 	make:
 		Length: 34

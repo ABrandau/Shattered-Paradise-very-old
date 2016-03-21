@@ -776,6 +776,7 @@ FlakFire:
 		Speed: 900
 		Angle: 30
 		Image: 120mm
+		HorizontalRateOfTurn: 15		
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
