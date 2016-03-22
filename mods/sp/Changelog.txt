@@ -1,6 +1,24 @@
 YEAR - MONTH - DAY
 
 [2016 - 03 - 22]
+Amount of health repaired by the guardian platform reduced to 100 from 200.
+RPG Tower damage reduced to 60 from 110.
+Orca hellfire damage reduced to 30 from 40.
+Bunker cost increased to 900 from 800. hp increased to 800 from 600.
+Nerfed Disruptor damage and duration.
+Disruptor cost increased to 1300 from 1200.
+Jumpjet speed increased to 50 from 42.
+Marine HP reduced to 120 from 125, damage increased to 20 from 18.
+Flame Warrior Speed reduced to 70 from 76, hp increased to 100 from 95.
+Refinery Armor changed to light from heavy.
+Increased Gargoyle rocket damage to 50 from 40.
+Skirmisher speed increased to 50 from 42.
+Ranger cost increased to 350.
+Increased Battle fortress cost to 1600 from 1300, Decreased speed to 68.
+Marauder Speed increased to 55 from 42, cost increased to 110 from 100..
+Corrected a firing animation of the marauder.
+Tiberian Fiend cost reduced to 400 from 450, hp increased to 280 from 220.
+Fixed Ranger and Tiberian fiend cloak noise glitch.
 Refined GDI tooltips.
 
 [2016 - 02 - 20]

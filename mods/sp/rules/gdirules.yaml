@@ -13,7 +13,7 @@ GDIE1:
 		Name: Marine
 		Description: General-Purpose Infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Health:
-		HP: 125
+		HP: 120
 	Mobile:
 		Speed: 60
 	Armament@PRIMARY:
@@ -40,7 +40,7 @@ JUMPJET:
 	Voiced:
 		VoiceSet: JumpJet
 	Mobile:
-		Speed: 42
+		Speed: 50
 	Health:
 		HP: 160
 	Armor:
@@ -350,7 +350,7 @@ JUGGER:
 SONIC:
 	Inherits: ^VoxelTank
 	Valued:
-		Cost: 1200
+		Cost: 1300
 	Tooltip:
 		Name: Disruptor
 		Description: Armored Vehicle with\na long range sonic cannon.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft

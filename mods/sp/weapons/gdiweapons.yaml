@@ -6,7 +6,7 @@ MarineRifle:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 18
+		Damage: 20
 		Versus:
 			Wood: 60
 			Light: 40
@@ -273,8 +273,8 @@ SonicZap:
 	Report: sonic4.aud
 	Projectile: AreaBeam
 		Speed: 0c128
-		Duration: 90
-		DamageInterval: 5 # Roughly 18 impacts.
+		Duration: 80
+		DamageInterval: 4 # Roughly 18 impacts.
 		Width: 0c384
 		Shape: Flat
 		ZOffset: 2047
@@ -284,7 +284,7 @@ SonicZap:
 	Warhead@1Dam: SpreadDamage
 		Range: 0, 32
 		Falloff: 100, 100
-		Damage: 24
+		Damage: 20
 		AffectsParent: false
 		ValidStances: Neutral, Enemy
 		Versus:
@@ -381,7 +381,7 @@ FighterHellfire:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 85
-		Damage: 40
+		Damage: 30
 		ValidTargets: Ground
 		Versus:
 			None: 20
@@ -539,7 +539,7 @@ GuardianRepair:
 		ContrailLength: 30
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
-		Damage: -200
+		Damage: -100
 		ValidTargets: Repair		
 
 #############################################
@@ -607,7 +607,7 @@ RPGTower:
 		Palette: player
 	Warhead@1Dam: SpreadDamage
 		Spread: 1C0
-		Damage: 110
+		Damage: 60
 		Versus:
 			None: 15
 			Wood: 50

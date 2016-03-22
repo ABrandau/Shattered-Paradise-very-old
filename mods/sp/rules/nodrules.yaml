@@ -14,9 +14,9 @@ ALTNODE1:
 		Name: Flame Warrior
 		Description: Light infantry variant.\nCarries a Flamethrower.\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft
 	Health:
-		HP: 95
+		HP: 100
 	Mobile:
-		Speed: 76	
+		Speed: 70	
 	Armament@PRIMARY:
 		Weapon: MilitantFireball
 		LocalOffset: 0,0,200
