@@ -11,7 +11,7 @@ GDIE1:
 		Cost: 130
 	Tooltip:
 		Name: Marine
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: General-Purpose Infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Health:
 		HP: 125
 	Mobile:
@@ -32,7 +32,7 @@ JUMPJET:
 		Cost: 200
 	Tooltip:
 		Name: Jumpjet Infantry
-		Description: Airborne soldier, equiped with armor piercing rifles.\nThey can target helicopters and battleships.\n  Strong vs Heavy Vehicles, Helicopters.\n  Weak vs Infantry, Light vehicles, Structures.
+		Description: Airborne Soldier, equipped with an AP rifle.\n Can target helicopters and battleships.\n  Strong vs Heavy Vehicles, Helicopters.\n  Weak vs Infantry, Light Vehicles, Structures.
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 2
@@ -56,8 +56,8 @@ JUMPJET:
 		AttackSequence: shoot
 	-TakeCover:
 	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded		
-	
+		Prerequisites: barracks.upgraded
+
 GRENADIER:
 	Inherits: ^Soldier
 	Buildable:
@@ -86,7 +86,7 @@ GRENADIER:
 		AttackSequence: shoot
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
-	
+
 MEDIC:
 	Inherits: ^Soldier
 	Valued:
@@ -117,14 +117,14 @@ MEDIC:
 		Ticks: 60
 	Passenger:
 		PipType: Red
-		
+
 EAGLEGUARD:
 	Inherits: ^Soldier
 	Valued:
 		Cost: 800
 	Tooltip:
 		Name: Eagle Guard
-		Description: Elite infantry, armed with power\narmor and a an EMP ray. It's\nattacks disable vehicles briefly.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft.
+		Description: Elite Infantry, armed with power\narmor and a an EMP ray. Its\nattacks disable vehicles briefly.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft.
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 5
@@ -150,7 +150,7 @@ EAGLEGUARD:
 		AttackSequence: shoot
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
-		
+
 #######################################################
 #Vehicles
 #######################################################
@@ -160,7 +160,7 @@ SMECH:
 		Cost: 500
 	Tooltip:
 		Name: Wolverine
-		Description: Anti-personnel walker.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
+		Description: Anti-Personnel Walker.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 2
@@ -196,7 +196,7 @@ MMCH:
 		Cost: 900
 	Tooltip:
 		Name: Titan
-		Description: General purpose mechanized walker.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+		Description: Anti-Armor Walker.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 3
@@ -235,7 +235,7 @@ APC:
 		Cost: 600
 	Tooltip:
 		Name: Amphibious APC
-		Description: Armored infantry transport.\nCan move on water.\n  Unarmed
+		Description: Armored Personnel Carrier.\nCan travel on water.\n  Unarmed
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 4
@@ -268,12 +268,12 @@ APC:
 
 HVR:
 	Inherits: ^VoxelVehicle
-	Inherits@3: ^BasicStealthDetection	
+	Inherits@3: ^BasicStealthDetection
 	Valued:
 		Cost: 700
 	Tooltip:
 		Name: Hover MLRS
-		Description: Hovering vehicle armed with\nlong range missiles.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+		Description: Hover Vehicle armed with\nheat seeking missiles.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 5
@@ -296,7 +296,7 @@ HVR:
 		Type: Wood
 	Armament:
 		Weapon: HoverMissile
-		LocalOffset: 0,171,384, 0,-171,384	
+		LocalOffset: 0,171,384, 0,-171,384
 	Turreted:
 		TurnSpeed: 7
 		Offset: -128,0,85
@@ -311,15 +311,15 @@ HVR:
 		TerrainTypes: Water
 		TrailWhileStationary: True
 		StationaryInterval: 18
-		MovingInterval: 6		
-		
+		MovingInterval: 6
+
 JUGGER:
 	Inherits: ^Tank
 	Valued:
 		Cost: 800
 	Tooltip:
 		Name: Juggernaut
-		Description: GDI light Artillery\n  Weak vs Vehicles, Aircraft
+		Description: GDI Light Artillery\n  Weak vs Vehicles, Aircraft
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 6
@@ -345,15 +345,15 @@ JUGGER:
 	WithMoveAnimation:
 		MoveSequence: run
 	Selectable:
-		Bounds: 30, 35, 0, -8		
-		
+		Bounds: 30, 35, 0, -8
+
 SONIC:
 	Inherits: ^VoxelTank
 	Valued:
 		Cost: 1200
 	Tooltip:
 		Name: Disruptor
-		Description: Armored high-tech vehicle with\nlong range and sonic armament.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft
+		Description: Armored Vehicle with\na long range sonic cannon.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 7
@@ -378,14 +378,14 @@ SONIC:
 		Offset: -170,0,0
 	AutoTarget:
 	WithVoxelTurret:
-	
+
 HMEC:
 	Inherits: ^VoxelTank
 	Valued:
 		Cost: 2500
 	Tooltip:
 		Name: Mammoth Mk. II
-		Description: Slow heavy walker.\nArmed with dual railguns.\nInspire nearby units to fight harder.\n  Strong vs Infantry, Vehicles and Buildings\n  Weak vs  Aircraft\nMaximum 1 can be built.
+		Description: Slow Heavy Walker.\nArmed with dual railguns.\nInspire nearby units to fight harder.\n  Strong vs Infantry, Vehicles and Buildings\n  Weak vs  Aircraft\nMaximum 1 can be built.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 8
@@ -410,7 +410,7 @@ HMEC:
 	UpgradeActorsNear:
 		Upgrades: eagleboost
 		Range: 6c0
-		AffectsParent: false	
+		AffectsParent: false
 	Armament@MISSILES:
 		Weapon: MammothTusk
 		LocalOffset: -172,-260,854, -172,260,854
@@ -418,23 +418,23 @@ HMEC:
 		Weapon: MechRailgun
 		LocalOffset: 260,-220,728, 260,220,728
 	Targetable:
-		TargetTypes: Ground, Vehicle, MindControlInmune, repair			
+		TargetTypes: Ground, Vehicle, MindControlInmune, repair
 	-WithVoxelBody:
 	WithVoxelWalkerBody:
 		TickRate: 1
 	Selectable:
-		Bounds: 40, 40, 0, -8	
-		
+		Bounds: 40, 40, 0, -8
+
 #######################################################
 #Aircraft
-#######################################################		
+#######################################################
 ORCA:
 	Inherits: ^Helicopter
 	Valued:
 		Cost: 900
 	Tooltip:
 		Name: Orca Fighter
-		Description: Fast assault gunship with\ndual missile launchers.\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
+		Description: Rapid Assault Gunship with\ndual missile launchers.\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 20
@@ -454,7 +454,7 @@ ORCA:
 	Armament:
 		Weapon: FighterHellfire
 	Armament@resr:
-		Weapon: AAFighterHellfire		
+		Weapon: AAFighterHellfire
 	AttackHeli:
 		FacingTolerance: 20
 		Voice: Attack
@@ -476,7 +476,7 @@ ORCAB:
 		Cost: 1300
 	Tooltip:
 		Name: Orca Bomber
-		Description: Heavy bomber.\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
+		Description: Heavy Bomber.\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 20
@@ -522,7 +522,7 @@ TRNSPORT:
 		Cost: 750
 	Tooltip:
 		Name: Carryall
-		Description: VTOL aircraft capable of lifting\nand transporting vehicles.\n  Unarmed
+		Description: VTOL Aircraft capable of lifting\nand transporting Vehicles.\n  Unarmed
 	# Buildable:
 		# Queue: Air
 		# BuildPaletteOrder: 10
@@ -549,12 +549,12 @@ TRNSPORT:
 
 GUARDIAN:
 	Inherits: ^Helicopter
-	Inherits@3: ^BasicStealthDetection	
+	Inherits@3: ^BasicStealthDetection
 	Valued:
 		Cost: 1800
 	Tooltip:
 		Name: Guardian Platform
-		Description: Heavy platform designed for defensive operations.\nHas two firing modes.\nFirst mode can deal with air and ground units but has slow speed.\nSecond mode allows it to repair vehicles.\n  Does not need to rearm.
+		Description: Mobile Air Fortress.\nHas two firing modes.\nFirst mode can attack air and ground units (slow ROF).\nSecond mode repairs vehicles.\n  Does not need to rearm.
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 20
@@ -589,7 +589,7 @@ GUARDIAN:
 		UpgradeMaxAcceptedLevel: 1
 	Armament@secondary:
 		Weapon: GuardianTusk
-		UpgradeTypes: weaponswitch		
+		UpgradeTypes: weaponswitch
 		UpgradeMaxEnabledLevel: 0
 		UpgradeMaxAcceptedLevel: 1
 	Armament@Repair:
@@ -617,7 +617,7 @@ GUARDIAN:
 		PipTypeEmpty: AmmoEmpty
 	AutoTarget:
 	-RenderVoxels:
-	-WithVoxelBody:	
+	-WithVoxelBody:
 	WithShadow:
 	RenderSprites:
 		Scale: 0.5
@@ -625,11 +625,11 @@ GUARDIAN:
 	BodyOrientation:
 		QuantizedFacings: 32
 	SpawnActorOnDeath:
-		Actor: GUARDIAN.Husk		
+		Actor: GUARDIAN.Husk
 
 #######################################################
 #Campaign Aircraft
-#######################################################	
+#######################################################
 DPOD:
 	Inherits: ^Helicopter
 	Valued:
@@ -726,7 +726,7 @@ ORCATRAN:
 		PipCount: 5
 		UnloadVoice: Move
 	SpawnActorOnDeath:
-		Actor: ORCATRAN.Husk		
+		Actor: ORCATRAN.Husk
 #######################################################
 #Structures
 #######################################################
@@ -1217,7 +1217,7 @@ GAWALL:
 	Armor:
 		Type: Concrete
 	RenderSprites:
-		Image: wall.gdi		
+		Image: wall.gdi
 	BlocksProjectiles:
 		Height: 640
 	Crushable:
@@ -1226,7 +1226,7 @@ GAWALL:
 		NodeTypes: wall, turret
 
 GACTWR:
-	Inherits: ^Defense	
+	Inherits: ^Defense
 	-WithSpriteBody:
 	WithWallSpriteBody:
 		Type: wall
@@ -1425,9 +1425,9 @@ GAPLUG3:
 	Plug:
 		Type: plug.ioncannon
 	Power:
-		Amount: -100	
+		Amount: -100
 		}
-		
+
 REPAIRTUR:
 	Inherits: ^Defense
 	Valued:
@@ -1435,7 +1435,7 @@ REPAIRTUR:
 	Tooltip:
 		Name: Maintenance Turret
 		Description: GDI utility structure, repairs\nnearby vehciles. Requires power to operate.\n  Unnarmed.
-	Buildable:	
+	Buildable:
 		Queue: Defense
 		Prerequisites: garadr, ~structures.gdi
 		BuildPaletteOrder: 60
@@ -1468,14 +1468,14 @@ REPAIRTUR:
 		Weapon: Repair
 		LocalOffset: 512,0,512
 		TargetStances: Ally
-		ForceTargetStances: None		
-		
+		ForceTargetStances: None
+
 GAFIRE:
 	Inherits: ^Building
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 100
-		Prerequisites: gatech, ~structures.gdi 
+		Prerequisites: gatech, ~structures.gdi
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -1506,4 +1506,4 @@ GAFIRE:
 		Amount: -150
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
-		VisualBounds: 110, 60, 3, -4		
+		VisualBounds: 110, 60, 3, -4

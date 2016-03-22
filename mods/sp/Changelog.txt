@@ -1,5 +1,7 @@
 YEAR - MONTH - DAY
 
+[2016 - 03 - 22]
+Refined GDI tooltips.
 
 [2016 - 02 - 20]
 Removed Infiltration ability from Rangers.
