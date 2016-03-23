@@ -1,10 +1,8 @@
 YEAR - MONTH - DAY
 
 [2016 - 03 - 23]
-Guardian Platform Changes
-Price: 1800 > 2000
-Speed: 80 < 70
-HP: 600 > 725
+Factories can now repair vehicles by ordering vehicles to move into a factory.
+Guardian Platform Changes: Price: 1800 > 2000, Speed: 80 < 70, HP: 600 > 725
 
 [2016 - 03 - 22]
 Changed blaster warhead.

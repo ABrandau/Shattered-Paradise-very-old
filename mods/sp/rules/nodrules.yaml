@@ -739,8 +739,8 @@ NAWEAP:
 		Bounds: 149, 80, -3, -10
 	Health:
 		HP: 1300
-	RevealsShroud:
-		Range: 4c0
+	RepairsUnits:
+		FinishRepairingNotification: UnitRepaired
 	RallyPoint:
 		Offset: 4,1
 		Palette: mouse
