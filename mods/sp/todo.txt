@@ -1,5 +1,9 @@
 [Graphical Issues]
 Correct structure graphic offset.
+Implement Muzzle effects for most of the vehicles.
+Create or look for smoke effects and implement them in the weapons.
+Add more scrin explosions.
+Add more scrin muzzle effects.
 
 [Mechanics]
 Enable purifier desolator logic
@@ -12,3 +16,5 @@ Implement more audio.
 
 [UI]
 Create a new menu map.
+Change mod selector logo.
+Change mod selector presentation image (big image that shows some gameplay).

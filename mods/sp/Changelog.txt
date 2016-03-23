@@ -1,7 +1,8 @@
 YEAR - MONTH - DAY
 
 [2016 - 03 - 23]
-Gargoyle changes 2: Ammo 30 > 40 Reload Count 15 > 20
+Added new song, unhide score and mission selection songs on the music options.
+Gargoyle changes 2: Ammo 30 -> 40 Reload Count 15 -> 20
 Gargoyle changes: Price 800 -> 700, seconds to reload 16 -> 10
 Corrected eagle warrior crush animation.
 Factories can now repair vehicles by ordering vehicles to move into a factory.
