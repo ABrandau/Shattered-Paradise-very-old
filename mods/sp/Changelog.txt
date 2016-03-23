@@ -1,6 +1,8 @@
 YEAR - MONTH - DAY
 
 [2016 - 03 - 22]
+Changed blaster warhead.
+Decreased Drone carrier and destroyer weapon radius damage.
 Amount of health repaired by the guardian platform reduced to 100 from 200.
 RPG Tower damage reduced to 60 from 110.
 Orca hellfire damage reduced to 30 from 40.
