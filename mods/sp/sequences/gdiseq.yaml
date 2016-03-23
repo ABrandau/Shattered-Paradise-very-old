@@ -329,10 +329,10 @@ eagleguard:
 	die4: s_bang34
 		Length: *		
 	die-crushed:
-		Start: 311
-		Length: 15
+		Start: 309
+		Length: 2
 		ShadowStart: 743
-		Tick: 800
+		Tick: 100
 		ZOffset: -511
 	shoot:
 		Start: 322

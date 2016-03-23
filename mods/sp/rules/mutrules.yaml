@@ -624,7 +624,7 @@ MUTHELI:
 	Inherits@1:	^Ra2vxl
 	Inherits@3: ^BasicStealthDetection
 	Valued:
-		Cost: 800
+		Cost: 700
 	Tooltip:
 		Name: Gargoyle
 		Description: Heavy assault gunship with\ndual missile launchers.\n  Strong vs Infantry, Light Vehicles.\n  Weak vs Anti air.
@@ -662,7 +662,7 @@ MUTHELI:
 		Ammo: 30
 		PipCount: 8
 		ReloadCount: 15
-		ReloadTicks: 200
+		ReloadTicks: 125
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
 	AutoTarget:

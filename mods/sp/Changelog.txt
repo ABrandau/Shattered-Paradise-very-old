@@ -1,6 +1,8 @@
 YEAR - MONTH - DAY
 
 [2016 - 03 - 23]
+Gargoyle changes: Price 800 -> 700, seconds to reload 16 -> 10
+Corrected eagle warrior crush animation.
 Factories can now repair vehicles by ordering vehicles to move into a factory.
 Guardian Platform Changes: Price: 1800 > 2000, Speed: 80 < 70, HP: 600 > 725
 
