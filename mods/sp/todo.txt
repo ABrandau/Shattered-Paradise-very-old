@@ -1,0 +1,7 @@
+[Graphical Issues]
+Correct structure graphic offset.
+
+
+[Mechanics]
+Enable purifier desolator logic
+Enable Superweapons.
