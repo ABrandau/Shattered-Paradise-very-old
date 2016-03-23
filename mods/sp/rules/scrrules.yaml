@@ -306,8 +306,6 @@ SCRHARV:
 		DamageCooldown: 200
 	Armor:
 		Type: Heavy
-	RevealsShroud:
-		Range: 4c0
 	-GainsExperience:
 	Explodes:
 		Weapon: TiberiumExplosion
@@ -1156,7 +1154,7 @@ scrproc:
 		Name: Scrin Refinery
 		Description: Processes raw Tiberium\ninto useable resources.\nIncompatible with human harvesters.
 	Armor:
-		Type: Heavy			
+		Type: Light
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 20

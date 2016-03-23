@@ -356,7 +356,7 @@ PROC:
 		Name: Tiberium Refinery
 		Description: Processes raw Tiberium\ninto useable resources.\nIncompatible with scrin harvesters.
 	Armor:
-		Type: Heavy		
+		Type: Light
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 20

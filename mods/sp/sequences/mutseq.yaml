@@ -32,7 +32,7 @@ marauder:
 		ShadowStart: 670
 	die1:
 		Start: 138
-		Length: 8
+		Length: 6
 		ShadowStart: 586
 	die2:
 		Start: 158
@@ -56,10 +56,10 @@ marauder:
 		Facings: 8
 		ShadowStart: 614
 	prone-shoot:
-		Start: 303
+		Start: 302
 		Length: 7
 		Facings: 8
-		ShadowStart: 670
+		ShadowStart: 750
 	standup-0:
 		Start: 286
 		Length: 2
@@ -615,7 +615,7 @@ mupowr:
 		Tick: 150
 	make:
 		Length: 35
-		ShadowStart: 0
+		ShadowStart: 57
 	emp-overlay: emp_fx01
 		Length: *
 		Offset: 0, 0

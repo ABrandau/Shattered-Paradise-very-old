@@ -9,7 +9,7 @@ MARAUDER:
 		BuildPaletteOrder: 18
 		Prerequisites: ~murax
 	Valued:
-		Cost: 100
+		Cost: 110
 	Tooltip:
 		Name: Marauder
 		Description: Mutant Militia, equipped with shotguns.\nThey can generate tiberium fortifications for themselves.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft, Base Defences.
@@ -20,7 +20,7 @@ MARAUDER:
 	AutoTarget:
 		ScanRadius: 5
 	Mobile:
-		Speed: 42
+		Speed: 55
 	Armament@PRIMARY:
 		Weapon: MarauderShotgun
 		Name: OnFoot
@@ -66,7 +66,7 @@ E3:
 	Health:
 		HP: 95
 	Mobile:
-		Speed: 42
+		Speed: 50
 	Armament@PRIMARY:
 		Weapon: SkirmisherRocket
 		LocalOffset: 128,0,640
@@ -133,7 +133,7 @@ RANGER:
 		BuildPaletteOrder: 21
 		Prerequisites: ~murax, muradr
 	Valued:
-		Cost: 300
+		Cost: 350
 	Tooltip:
 		Name: Ranger
 		Description: Scout Soldier.\ncloaks on tiberium.\n  Detects cloaked units.\n  Strong vs Infantry.\n  Weak vs Vehicles.
@@ -153,8 +153,8 @@ RANGER:
 		InitialDelay: 15
 		CloakDelay: 15
 		IsPlayerPalette: true
-		CloakSound: cloak5.aud
-		UncloakSound: cloak5.aud
+		CloakSound:
+		UncloakSound:
 		UncloakOn: Attack, Move
 	Armament@PRIMARY:
 		Weapon: RangerRifle
@@ -185,9 +185,9 @@ MUTFIEND:
 		DeathType: CabalDeathInfantry
 		RequiresLobbyCreeps: true
 	Valued:
-		Cost: 450
+		Cost: 400
 	Health:
-		HP: 220
+		HP: 280
 		Shape: Circle
 			Radius: 213
 	-Crushable:
@@ -213,8 +213,8 @@ MUTFIEND:
 		UpgradeMinEnabledLevel: 1
 		InitialDelay: 15
 		CloakDelay: 15
-		CloakSound: cloak5.aud
-		UncloakSound: cloak5.aud    
+		CloakSound:
+		UncloakSound:   
 		IsPlayerPalette: true
 		UncloakOn: Attack, Move
 	AttackFrontal:
@@ -528,7 +528,7 @@ FORTRESS:
 	Inherits: ^VoxelVehicle
 	Inherits@1:	^Ra2vxl
 	Valued:
-		Cost: 1300
+		Cost: 1600
 	Tooltip:
 		Name: Battle Fortress
 		Description: Armored battle wagon.\nWorks as an APC.\nInfantry can fire from inside.\nCan move over water.\n  Weak vs anti armor weapons
@@ -540,7 +540,7 @@ FORTRESS:
 		Bounds: 80,60
 	Mobile:
 		TurnSpeed: 6
-		Speed: 75
+		Speed: 68
 		TerrainSpeeds:
 			Water: 60
 	Health:
@@ -1128,7 +1128,7 @@ MUBUNKR:
 	Inherits@1: ^MutRender
 	Inherits@2: ^TowerStealthDetection
 	Valued:
-		Cost: 800
+		Cost: 900
 	Tooltip:
 		Name: Bunker
 		Description: Advanced base defense.\nRequires power to operate.\nCannot target air units.\n  Strong vs Ground units\n  Weak vs Aircraft
@@ -1149,7 +1149,7 @@ MUBUNKR:
 	-EmitInfantryOnSell@cab:
 	-EmitInfantryOnSell@scr:
 	Health:
-		HP: 600
+		HP: 800
 	Armor:
 		Type: Heavy
 	RevealsShroud:
