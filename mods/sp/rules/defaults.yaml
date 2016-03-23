@@ -674,6 +674,8 @@
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage		
 	RevealsShroud:
 		Range: 9c0
+	RepairableNear:
+		Buildings: gaweap, naweap, muweap, cabweap, scrweap
 	Selectable:
 		Bounds: 40,30
 	SelectionDecorations:

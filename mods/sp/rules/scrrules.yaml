@@ -1211,8 +1211,8 @@ SCRWEAP:
 		HP: 1300
 	Armor:
 		Type: Heavy			
-	RevealsShroud:
-		Range: 4c0
+	RepairsUnits:
+		FinishRepairingNotification: UnitRepaired
 	RallyPoint:
 		Offset: 4,1
 		Palette: mouse

@@ -414,7 +414,7 @@ DestroyerCannon:
 		Shadow: false
 		Angle: 62
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c0
+		Spread: 750
 		Damage: 80
 		Versus:
 			None: 150
@@ -541,7 +541,7 @@ DronePlane:
 		Angle: 1204
 		ContrailLength: 30
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c0
+		Spread: 500
 		Damage: 70
 		ValidTargets: Ground, Air
 		Versus:

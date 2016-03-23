@@ -214,7 +214,7 @@ MUTFIEND:
 		InitialDelay: 15
 		CloakDelay: 15
 		CloakSound:
-		UncloakSound:   
+		UncloakSound:
 		IsPlayerPalette: true
 		UncloakOn: Attack, Move
 	AttackFrontal:
@@ -624,7 +624,7 @@ MUTHELI:
 	Inherits@1:	^Ra2vxl
 	Inherits@3: ^BasicStealthDetection
 	Valued:
-		Cost: 800
+		Cost: 700
 	Tooltip:
 		Name: Gargoyle
 		Description: Heavy assault gunship with\ndual missile launchers.\n  Strong vs Infantry, Light Vehicles.\n  Weak vs Anti air.
@@ -659,10 +659,10 @@ MUTHELI:
 		FacingTolerance: 20
 		Voice: Attack
 	AmmoPool:
-		Ammo: 30
+		Ammo: 40
 		PipCount: 8
-		ReloadCount: 15
-		ReloadTicks: 200
+		ReloadCount: 20
+		ReloadTicks: 125
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
 	AutoTarget:
@@ -835,8 +835,8 @@ MUWEAP:
 		Bounds: 154, 96, -2, -12
 	Health:
 		HP: 1300
-	RevealsShroud:
-		Range: 4c0
+	RepairsUnits:
+		FinishRepairingNotification: UnitRepaired
 	RallyPoint:
 		Offset: 4,1
 		Palette: mouse

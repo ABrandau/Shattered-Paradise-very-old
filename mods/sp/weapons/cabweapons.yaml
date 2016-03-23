@@ -656,11 +656,11 @@ BlasterProton:
 		Damage: 25
 		ValidTargets: Ground, Vehicle, Infantry, water
 		Versus:
-			None: 55
-			Wood: 65
-			Light: 75
-			Heavy: 100
-			Concrete: 60
+			None: 80
+			Wood: 75
+			Light: 60
+			Heavy: 35
+			Concrete: 50
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn

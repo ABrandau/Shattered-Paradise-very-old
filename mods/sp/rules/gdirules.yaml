@@ -551,7 +551,7 @@ GUARDIAN:
 	Inherits: ^Helicopter
 	Inherits@3: ^BasicStealthDetection
 	Valued:
-		Cost: 1800
+		Cost: 2000
 	Tooltip:
 		Name: Guardian Platform
 		Description: Mobile Air Fortress.\nHas two firing modes.\nFirst mode can attack air and ground units (slow ROF).\nSecond mode repairs vehicles.\n  Does not need to rearm.
@@ -563,13 +563,13 @@ GUARDIAN:
 		Bounds: 110,90
 	Aircraft:
 		TurnSpeed: 5
-		Speed: 80
+		Speed: 70
 		Repulsable: true
 		MoveIntoShroud: true
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 600
+		HP: 725
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -870,8 +870,8 @@ GAWEAP:
 		Bounds: 154, 96, -2, -12
 	Health:
 		HP: 1300
-	RevealsShroud:
-		Range: 4c0
+	RepairsUnits:
+		FinishRepairingNotification: UnitRepaired
 	RallyPoint:
 		Offset: 4,1
 		Palette: mouse
