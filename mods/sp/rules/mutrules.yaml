@@ -214,7 +214,7 @@ MUTFIEND:
 		InitialDelay: 15
 		CloakDelay: 15
 		CloakSound:
-		UncloakSound:   
+		UncloakSound:
 		IsPlayerPalette: true
 		UncloakOn: Attack, Move
 	AttackFrontal:
@@ -659,7 +659,7 @@ MUTHELI:
 		FacingTolerance: 20
 		Voice: Attack
 	AmmoPool:
-		Ammo: 30
+		Ammo: 40
 		PipCount: 8
 		ReloadCount: 15
 		ReloadTicks: 125
