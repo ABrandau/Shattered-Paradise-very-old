@@ -569,7 +569,7 @@ GUARDIAN:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 700
+		HP: 725
 	Armor:
 		Type: Heavy
 	RevealsShroud:
