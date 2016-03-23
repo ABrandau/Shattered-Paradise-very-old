@@ -1,5 +1,11 @@
 YEAR - MONTH - DAY
 
+[2016 - 03 - 23]
+Guardian Platform Changes
+Price: 1800 > 2000
+Speed: 80 < 70
+HP: 600 > 700
+
 [2016 - 03 - 22]
 Changed blaster warhead.
 Decreased Drone carrier and destroyer weapon radius damage.
