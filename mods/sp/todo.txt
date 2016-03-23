@@ -1,7 +1,14 @@
 [Graphical Issues]
 Correct structure graphic offset.
 
-
 [Mechanics]
 Enable purifier desolator logic
 Enable Superweapons.
+
+[Audio]
+Create and add Guardian lines.
+Create and add Marauder and Skirmisher lines.
+Implement more audio.
+
+[UI]
+Create a new menu map.

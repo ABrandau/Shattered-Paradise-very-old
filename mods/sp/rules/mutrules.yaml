@@ -661,7 +661,7 @@ MUTHELI:
 	AmmoPool:
 		Ammo: 40
 		PipCount: 8
-		ReloadCount: 15
+		ReloadCount: 20
 		ReloadTicks: 125
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
