@@ -1033,7 +1033,7 @@ CABWEAP:
 	RallyPoint:
 		Offset: 4,1
 		Palette: mouse
-		IsPlayerPalette: fals
+		IsPlayerPalette: false
 	RevealsShroud:
 		Range: 6c0
 	Exit@1:
