@@ -1254,6 +1254,7 @@
 		Ticks: 20
 		HealifBelow: 1,5
 		UpgradeTypes: NodVehicleRepair
+		UpgradeMinEnabledLevel: 1
 
 ^CyborgSelfHeal:
 	SelfHealing@Scrin:
