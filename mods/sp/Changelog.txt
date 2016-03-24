@@ -1,6 +1,8 @@
 YEAR - MONTH - DAY
 
 [2016 - 03 - 23]
+Switched Floater and purifier tech requirements.
+Decreased Centurion walk animation speed.
 Updated faction descriptions.
 NOD's Repair vehicle weapon now repair units in an area.
 Added NOD Mobile repair vehicle.
@@ -14,6 +16,8 @@ Added new song, unhide score and mission selection songs on the music options.
 Factories can now repair vehicles by ordering vehicles to move into a factory.
 Added new music track.
 Corrected eagle warrior crush animation.
+Floater Changes hp 120 -> 180 Cost 850 -> 1200
+Purifier Changes: hp 280 -> 220. Cost 1200 -> 900.
 Blaster Turret Changes: Cost 1800 -> 1400
 Mechanic Changes: Reload delay 80 -> 100, repair amount: 25 -> 20
 Gargoyle changes 2: Ammo 30 -> 40 Reload Count 15 -> 20

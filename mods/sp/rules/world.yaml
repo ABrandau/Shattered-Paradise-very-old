@@ -30,7 +30,7 @@
 	Faction@4:
 		Name: Scrin
 		InternalName: scr
-		Description: Scrin\nAerial Faction.\n + Versatile.\n + Strong air power.\n + Scrin Battleships slowly repair.\n + High Damage.\n -  Low health.
+		Description: Scrin\nAerial Faction.\n + Versatile.\n + Infantry immune to tiberium radiation.\n + Strong air power.\n + Scrin Battleships slowly repair.\n + High Damage.\n -  Low health.
 	Faction@Random:
 		Name: Random
 		InternalName: Random

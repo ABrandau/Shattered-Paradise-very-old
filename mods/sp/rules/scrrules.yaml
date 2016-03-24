@@ -128,22 +128,63 @@ SHAPESHIFTER:
 	-GainsExperience:
 	RenderSprites:
 		
-FLOAT:
-	Inherits: ^ScrinSoldier
+BUG:
+	Inherits: ^ScrinSoldier		
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 27
 		Prerequisites: ~scrrax, scrradr
 	Selectable:
+		Class: bug
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Purifier
+		Description: Heavy duty alien.\nCan take lots of punishment.\nInstakills infantry.\n  Strong vs infantry\n  Weak vs Vehicles, Aircraft.
+	FreeActor@1:
+		Actor: bugclone
+	FreeActor@2:
+		Actor: bugclone
+	Health:
+		HP: 220
+	Mobile:
+		Speed: 60
+	SpawnActorOnDeath@conversion:
+		Actor: cybdog
+		Probability: 100
+		OwnerType: Killer
+		DeathType: CabalDeathInfantry
+		RequiresLobbyCreeps: true		
+	Armor:
+		Type: light
+	Armament:
+		Weapon: BugRail
+		LocalOffset: 150,0,400
+		FireDelay: 5
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: throw
+	-TakeCover:	
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+		
+FLOAT:
+	Inherits: ^ScrinSoldier
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 27
+		Prerequisites: ~scrrax, scrtech
+	Selectable:
 		Class: FLoat
 	Valued:
-		Cost: 850
+		Cost: 1200
 	-Crushable:	
 	Tooltip:
 		Name: Floater
 		Description: Recon unit, suited for harassment.\nCan move through water and Cliffs.\n  Strong vs Buildings, Heavy Vehicles\n  Weak vs Infantry, Aircraft
 	Health:
-		HP: 120
+		HP: 180
 	FreeActor@1:
 		Actor: floatclone
 	FreeActor@2:
@@ -161,47 +202,6 @@ FLOAT:
 		Weapon: FloatTesla
 		LocalOffset: 0,250,500	
 		FireDelay: 10
-	AttackFrontal:
-		Voice: Attack
-	WithInfantryBody:
-		AttackSequence: throw
-	-TakeCover:	
-	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded	
-		
-BUG:
-	Inherits: ^ScrinSoldier		
-	Buildable:
-		Queue: Infantry
-		BuildPaletteOrder: 27
-		Prerequisites: ~scrrax, scrtech
-	Selectable:
-		Class: bug
-	Valued:
-		Cost: 1200
-	Tooltip:
-		Name: Purifier
-		Description: Heavy duty alien.\nCan take lots of punishment.\nInstakills infantry.\n  Strong vs infantry\n  Weak vs Vehicles, Aircraft.
-	FreeActor@1:
-		Actor: bugclone
-	FreeActor@2:
-		Actor: bugclone
-	Health:
-		HP: 280
-	Mobile:
-		Speed: 60
-	SpawnActorOnDeath@conversion:
-		Actor: cybdog
-		Probability: 100
-		OwnerType: Killer
-		DeathType: CabalDeathInfantry
-		RequiresLobbyCreeps: true		
-	Armor:
-		Type: light
-	Armament:
-		Weapon: BugRail
-		LocalOffset: 150,0,400
-		FireDelay: 5
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:

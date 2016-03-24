@@ -116,9 +116,9 @@ BugRail:
 		Spread: 125
 		Damage: 25
 		Versus:
-			None: 800
+			None: 600
 			Wood: 75
-			Light: 50
+			Light: 45
 			Heavy: 15
 			Concrete: 5	
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath		

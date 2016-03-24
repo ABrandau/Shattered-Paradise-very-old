@@ -1157,7 +1157,7 @@ CABGRINDER:
 	Inherits@1: ^CabRender	
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 70
+		BuildPaletteOrder: 71
 		Prerequisites: cabclaw, ~structures.cab
 	Valued:
 		Cost: 600

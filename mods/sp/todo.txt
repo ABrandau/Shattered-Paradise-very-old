@@ -7,6 +7,14 @@ Scrin:
 Correct structure graphic offset:
 	Mutant Factory Door.
 	Scrin Forge.
+GDI:
+	Add Guardian platform repair mode logo.
+Mutant:
+	Add tiberium radiation effect logo.
+	Redo harvester and EMP cannon logo.
+CABAL:
+	Add "devouring" effect logo.
+	Redo harvester and EMP cannon logo.
 
 Implement Muzzle effects for most of the vehicles.
 Create or look for smoke effects and implement them in the weapons.
@@ -32,6 +40,8 @@ Get more weapon sounds :v
 Create and add Guardian lines.
 Create and add Marauder and Skirmisher lines.
 Implement more audio.
+CABAL:
+	Fix vehicle and aircraft quotes.
 
 [UI]
 Create a new menu map.

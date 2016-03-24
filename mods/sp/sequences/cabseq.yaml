@@ -536,7 +536,7 @@ centurion:
 		ShadowStart: 155
 	run:
 		Start: 8
-		Tick: 100
+		Tick: 120
 		Length: 8
 		Facings: -8
 		ShadowStart: 163
