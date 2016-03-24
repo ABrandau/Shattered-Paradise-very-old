@@ -1,4 +1,4 @@
-##############################################
+s##############################################
 # Infantry
 ##############################################
 GHOST:
@@ -265,7 +265,7 @@ DOGGIE:
 	-RevealsShroud:
 	Mobile:
 		Speed: 113
-		Crushes:
+		Crushes: nada
 	Voiced:
 		VoiceSet: Fiend
 	Targetable:
@@ -300,6 +300,8 @@ VISC_SML:
 	Armament:
 		Weapon: SlimeAttack
 	AutoTarget:
+	Mobile:
+		Crushes: nada
 	AttackFrontal:
 		Voice: Attack		
 
@@ -327,7 +329,7 @@ VISC_LRG:
 		MinMoveDelayInTicks: 50
 		MaxMoveDelayInTicks: 90
 	Mobile:
-		Crushes:
+		Crushes: nada
 	RenderSprites:
 		Image: vislrg
 		
@@ -358,7 +360,7 @@ ZOMBIE:
 		Chance: 80
 	Mobile:
 		Speed: 113
-		Crushes:
+		Crushes: nada
 	-SpawnActorOnDeath@conversion:	
 	Voiced:
 		VoiceSet: Fiend
@@ -394,13 +396,13 @@ CRAB:
 	Valued:
 		Cost: 100
 	Armor:
-		Type: None
+		Type: Light
 	RevealsShroud:
 		Range: 5c0
 	-SpawnActorOnDeath@conversion:		
 	Mobile:
 		Speed: 90
-		Crushes:
+		Crushes: nada
 	Voiced:
 		VoiceSet: Fiend
 	Targetable:
@@ -449,7 +451,7 @@ BERSERKER:
 		Ticks: 200
 	Mobile:
 		Speed: 90
-		Crushes:
+		Crushes: nada
 	Voiced:
 		VoiceSet: Fiend
 	Targetable:
@@ -484,6 +486,7 @@ STALKER:
 		Speed: 80
 		TerrainSpeeds:
 			Water: 80
+		Crushes: nada
 	RevealsShroud:
 		Range: 6c0			
 	Armament@prim:

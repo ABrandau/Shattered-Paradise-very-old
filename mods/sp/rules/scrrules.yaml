@@ -117,7 +117,8 @@ SHAPESHIFTER:
 	FreeActor@1:
 		Actor: shapeshifterclone
 	FreeActor@2:
-		Actor: shapeshifterclone	
+		Actor: shapeshifterclone
+	-PoisonedByTiberium:
 	Mobile:
 		Speed: 65
 	Health:
