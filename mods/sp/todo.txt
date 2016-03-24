@@ -1,20 +1,38 @@
 [Graphical Issues]
-Correct structure graphic offset.
+Scrin:
+	Add more scrin explosions.
+	Add more scrin muzzle effects.
+	Correct forge Zoffset.
+	Delete Forge unwanted shadow pixels.
+Correct structure graphic offset:
+	Mutant Factory Door.
+	Scrin Forge.
+
 Implement Muzzle effects for most of the vehicles.
 Create or look for smoke effects and implement them in the weapons.
-Add more scrin explosions.
-Add more scrin muzzle effects.
+
+[General]
+Rework Tooltips. (add data about its damage type and armor).
+Enable Cyberdogs.
 
 [Mechanics]
-Enable purifier desolator logic
+
+[TODO / requires code]
+Enable purifier desolator logic.
+Code / create Gas clouds.
+Enable Forgotten MRLS to spawn gas clouds.
 Enable Superweapons.
 
+[Knowledge]
+Figure out how volume control works.
+Figure out how missile behaviour works.
+
 [Audio]
+Get more weapon sounds :v
 Create and add Guardian lines.
 Create and add Marauder and Skirmisher lines.
 Implement more audio.
 
 [UI]
 Create a new menu map.
-Change mod selector logo.
 Change mod selector presentation image (big image that shows some gameplay).

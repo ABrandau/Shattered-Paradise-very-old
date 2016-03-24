@@ -66,7 +66,7 @@ SkirmisherRocket:
 		SmudgeType: SmallCrater
 
 MechanicRepair:
-	ReloadDelay: 80
+	ReloadDelay: 100
 	Range: 1c819
 	Report: repair11.aud
 	ValidTargets: Repair
@@ -75,7 +75,7 @@ MechanicRepair:
 	Warhead@1Dam: SpreadDamage
 		DebugOverlayColor: 00FF00
 		Spread: 213
-		Damage: -25
+		Damage: -20
 		ValidTargets: Repair		
 		
 FiendShard2:

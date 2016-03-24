@@ -365,9 +365,7 @@ chamspy:
 
 ##########################################################
 # Vehicles
-##########################################################	
-
-
+##########################################################
 bike:
 	emp-overlay: emp_fx01
 		Length: *
@@ -420,7 +418,13 @@ sgen:
 	emp-overlay: emp_fx01
 		Length: *
 		BlendMode: Additive	
-	
+
+repair:
+	emp-overlay: emp_fx01
+		Length: *
+		BlendMode: Additive
+	icon: rboticon
+
 armh:
 	icon: beamcannonicon	
 	emp-overlay: emp_fx01

@@ -93,7 +93,6 @@ LEGIO:
 
 SHAPESHIFTER:
 	Inherits: ^Soldier
-	Inherits@1: ^ScrinSelfHeal	
 	Valued:
 		Cost: 750
 	Selectable:
@@ -632,7 +631,6 @@ SCRPOD:
 
 STORMRIDER:
 	Inherits: ^Plane
-	# Inherits@1: ^ScrinSelfHeal	
 	Inherits@2: ^SelfReloads
 	Valued:
 		Cost: 450
@@ -684,8 +682,7 @@ STORMRIDER:
 		Actor: STORMRIDER.Husk
 
 drache:
-	Inherits: ^Helicopter
-	Inherits@1: ^ScrinSelfHeal		
+	Inherits: ^Helicopter	
 	Inherits@2: ^ScrinRender
 	Buildable:
 		Queue: Air
@@ -740,7 +737,6 @@ drache:
 	
 SCRGLYDER1:
 	Inherits: ^Helicopter
-	Inherits@1: ^ScrinSelfHeal	
 	Inherits@2: ^ScrinRender	
 	Inherits@3: ^SelfReloads	
 	Valued:
@@ -794,7 +790,6 @@ SCRGLYDER1:
 		
 SCRDESTROYER:
 	Inherits: ^Helicopter
-	Inherits@1: ^ScrinSelfHeal	
 	Inherits@2: ^ScrinRender	
 	Inherits@3: ^SelfReloads	
 	Valued:
@@ -845,8 +840,7 @@ SCRDESTROYER:
 
 SCRTRANS:
 	Inherits: ^Helicopter
-	Inherits@1: ^ScrinSelfHeal		
-	Inherits@2: ^ScrinRender		
+	Inherits@2: ^ScrinRender
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -893,7 +887,6 @@ SCRTRANS:
 
 SCRBATTLESHIP:
 	Inherits: ^Helicopter
-	Inherits@1: ^ScrinSelfHeal		
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^SelfReloads
 	Inherits@4: ^BasicStealthDetection	
@@ -952,8 +945,7 @@ SCRBATTLESHIP:
 
 SCRINCOUNCIL:
 	Inherits: ^Helicopter
-	Inherits@1: ^ScrinSelfHeal			
-	Inherits@2: ^ScrinRender	
+	Inherits@2: ^ScrinRender
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 22
@@ -1432,7 +1424,6 @@ SCRGATE_B:
 
 SCRNEEDLER:
 	Inherits: ^Defense
-	Inherits@1: ^ScrinSelfHeal
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^TowerStealthDetection
 	Valued:
@@ -1482,7 +1473,6 @@ SCRNEEDLER:
 
 SCRTRACTOR:
 	Inherits: ^Defense
-	Inherits@1: ^ScrinSelfHeal
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^TowerStealthDetection
 	Valued:
@@ -1523,7 +1513,6 @@ SCRTRACTOR:
 		
 SCRDRONE:
 	Inherits: ^Defense
-	Inherits@1: ^ScrinSelfHeal
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^TowerStealthDetection	
 	Valued:
@@ -1562,7 +1551,6 @@ SCRDRONE:
 
 SCRSHIELD:
 	Inherits: ^Building
-	Inherits@1: ^ScrinSelfHeal
 	Inherits@2: ^ScrinRender
 	Valued:
 		Cost: 1000

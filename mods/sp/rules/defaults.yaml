@@ -577,7 +577,6 @@
 
 ^ScrinSoldier:
 	Inherits: ^Infantry
-	Inherits@1: ^ScrinSelfHeal
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^batteryboost
 	Voiced:
@@ -601,10 +600,8 @@
 
 ^Cyborg:
 	Inherits@1: ^Infantry
-	Inherits@2: ^CabalSelfHeal	
 	# Inherits@2: ^EmpDisableMobile
 	-SpawnActorOnDeath@conversion:	
-	-GainsExperience:	
 	MustBeDestroyed:
 	-Crushable:
 	WithPermanentInjury:
@@ -614,18 +611,13 @@
 
 ^CabalDroneInfantry:
 	Inherits@1: ^Infantry
-	Inherits@2: ^CabalSelfHeal
+	Inherits@2: ^AircraftSelfHeal
 	-WithDeathAnimation@normal:
 	-WithDeathAnimation@explosion:
 	-WithDeathAnimation@energy:	
 	-SpawnActorOnDeath@conversion:		
 	-PoisonedByTiberium:	
-	-Crushable:	
-	-GainsExperience:	
-	SelfHealing@Cabal:
-		Step: 5
-		Ticks: 100
-		HealIfBelow: 1		
+	-Crushable:
 		
 ^CivilianInfantry:
 	Inherits: ^Infantry
@@ -646,8 +638,9 @@
 	Inherits@5: ^ROTreduction
 	Inherits@7: ^eagleboost
 	Inherits@9: ^NodToxindebuff
+	Inherits@10:^NodVehicleRepair
 	Inherits@11: ^nomnomnom
-	Inherits@12: ^StasisDisable	
+	Inherits@12: ^StasisDisable
 	DrawLineToTarget:
 	TemporaryOwnerManager:	
 	Mobile:
@@ -762,7 +755,6 @@
 
 ^ScrinTank:
 	Inherits: ^Vehicle
-	Inherits@1: ^ScrinSelfHeal	
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^batteryboost
 	Voiced:
@@ -801,7 +793,7 @@
 	Inherits@1: ^GainsExperience
 	Inherits@2: ^ExistsInWorld
 	Inherits@4: ^tractorstop
-	Inherits@5: ^CabalSelfHeal
+	Inherits@5: ^AircraftSelfHeal
 	DrawLineToTarget:
 	TemporaryOwnerManager:
 	Cloak@CLOAKGENERATOR:
@@ -812,7 +804,9 @@
 		IsPlayerPalette: true
 		CloakSound: cloak5.aud
 		UncloakSound: cloak5.aud
-		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage	
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+	RepairableNear:
+		Buildings: gaweap, naweap, muweap, cabweap, scrweap		
 	AppearsOnRadar:
 		UseLocation: yes
 	Targetable@GROUND:
@@ -1204,29 +1198,6 @@
 		CrushedSequencePalette: playerscrin
 		CrushedPaletteIsPlayerPalette: true
 
-^GainsExperienceNOD:
-	GainsExperience:
-		Upgrades:
-			100: rank, speed, selfhealnod
-			250: firepower, damage, reload
-			500: speed, firepower, damage, reload
-			700: rank, firepower, damage, speed, reload, selfhealnod, selfhealnod2
-	SelfHealing@nod:
-		Step: 1
-		Ticks: 50
-		HealifBelow: 0,5
-		DamageCooldown: 75
-		UpgradeTypes: selfhealnod
-		UpgradeMinEnabledLevel: 1
-		UpgradeMaxAcceptedLevel: 2
-	SelfHealing@nod2:
-		Step: 3
-		Ticks: 75
-		HealifBelow: 0,8
-		DamageCooldown: 75
-		UpgradeTypes: selfhealnod2
-		UpgradeMinEnabledLevel: 2
-
 ^MutRender:
 	RenderSprites:
 		PlayerPalette: playermut
@@ -1276,15 +1247,22 @@
 	DetectCloaked:
 		Range: 5c0
 	# RenderDetectionCircle:
+	
+^NodVehicleRepair:
+	SelfHealing@NodVehicleRepair:
+		Step: 30
+		Ticks: 20
+		HealifBelow: 1,5
+		UpgradeTypes: NodVehicleRepair
 
-^ScrinSelfHeal:
+^CyborgSelfHeal:
 	SelfHealing@Scrin:
-		Step: 10
+		Step: 3
 		Ticks: 75
 		HealifBelow: 0,5
-		DamageCooldown: 150
+		DamageCooldown: 70
 
-^CabalSelfHeal:
+^AircraftSelfHeal:
 	SelfHealing@Cabal:
 		Step: 4
 		Ticks: 75

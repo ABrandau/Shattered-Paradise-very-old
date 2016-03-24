@@ -1,13 +1,24 @@
 YEAR - MONTH - DAY
 
 [2016 - 03 - 23]
+Updated faction descriptions.
+NOD's Repair vehicle weapon now repair units in an area.
+Added NOD Mobile repair vehicle.
+Lowered devil's tongue tech requirement to radar.
+Aircraft can now repair near factories.
+Cabal units that do self heal do it until 50% health.
+Removed cabal self heal bonus to all units excep Paladings, grinders, devourers, reapers, aircraft, cyborg commandos and gladiators.
+CABAL units can now gain experience.
+Removed NOD veterancy cap bonus.
 Added new song, unhide score and mission selection songs on the music options.
+Factories can now repair vehicles by ordering vehicles to move into a factory.
+Added new music track.
+Corrected eagle warrior crush animation.
+Blaster Turret Changes: Cost 1800 -> 1400
+Mechanic Changes: Reload delay 80 -> 100, repair amount: 25 -> 20
 Gargoyle changes 2: Ammo 30 -> 40 Reload Count 15 -> 20
 Gargoyle changes: Price 800 -> 700, seconds to reload 16 -> 10
-Corrected eagle warrior crush animation.
-Factories can now repair vehicles by ordering vehicles to move into a factory.
 Guardian Platform Changes: Price: 1800 > 2000, Speed: 80 < 70, HP: 600 > 725
-Added new music track.
 
 [2016 - 03 - 22]
 Changed blaster warhead.
