@@ -755,6 +755,8 @@ NAWEAP:
 		HP: 1300
 	RepairsUnits:
 		FinishRepairingNotification: UnitRepaired
+	RevealsShroud:
+		Range: 6c0		
 	RallyPoint:
 		Offset: 4,1
 		Palette: mouse

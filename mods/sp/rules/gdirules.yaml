@@ -989,6 +989,8 @@ GADEPT:
 	RallyPoint:
 		Palette: mouse
 		IsPlayerPalette: false
+	RevealsShroud:
+		Range: 6c0		
 	WithIdleOverlay@LIGHT:
 		Sequence: idle-light
 	WithIdleOverlay@GROUND:

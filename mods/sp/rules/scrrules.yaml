@@ -15,6 +15,8 @@ shark:
 	Selectable:
 		Bounds: 12,17,-1,-4
 		Class: Shark
+	GivesExperience:
+		Experience: 110
 	SelectionDecorations:
 		VisualBounds: 12,17,-1,-4
 	Health:
@@ -68,6 +70,8 @@ LEGIO:
 		Class: Legio
 	Valued:
 		Cost: 450
+	GivesExperience:
+		Experience: 150		
 	Tooltip:
 		Name: Legionaire
 		Description: Scrin Frontile trooper. Resistant\nto damage. Cannot be crushed.\nIts weapon damage spreads to nearby cells.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry
@@ -97,6 +101,8 @@ SHAPESHIFTER:
 		Cost: 750
 	Selectable:
 		Class: Shapeshifter
+	GivesExperience:
+		Experience: 250		
 	Tooltip:
 		Name: Shapeshifter
 		Description: Infiltrates and captures enemy structures.\n  Unarmed
@@ -136,6 +142,8 @@ BUG:
 		Prerequisites: ~scrrax, scrradr
 	Selectable:
 		Class: bug
+	GivesExperience:
+		Experience: 300		
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -179,6 +187,8 @@ FLOAT:
 		Class: FLoat
 	Valued:
 		Cost: 1200
+	GivesExperience:
+		Experience: 400		
 	-Crushable:	
 	Tooltip:
 		Name: Floater
@@ -1209,6 +1219,8 @@ SCRWEAP:
 		Offset: 4,1
 		Palette: mouse
 		IsPlayerPalette: false
+	RevealsShroud:
+		Range: 6c0		
 	Exit@1:
 		SpawnOffset: -384,-384,0
 		ExitCell: 1,1
