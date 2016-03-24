@@ -15,6 +15,7 @@ Mutant:
 CABAL:
 	Add "devouring" effect logo.
 	Redo harvester and EMP cannon logo.
+	Adjust reaper railgun offset.
 
 Implement Muzzle effects for most of the vehicles.
 Create or look for smoke effects and implement them in the weapons.

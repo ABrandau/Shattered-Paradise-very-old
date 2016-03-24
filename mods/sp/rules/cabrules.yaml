@@ -180,6 +180,8 @@ REAPERCAB:
 		SharesCell: false
 		BuildPaletteOrder: 15
 		Prerequisites: ~cabclaw, cabradr
+	RepairableNear:
+		Buildings: gaweap, naweap, muweap, cabweap, scrweap		
 	Selectable:
 		Bounds: 24,31,0,-10
 	SupplyTruck
@@ -225,7 +227,9 @@ GLAD:
 		Cost: 750
 	SupplyTruck
 		Payload: 375
-		Voice: Move		
+		Voice: Move
+	RepairableNear:
+		Buildings: gaweap, naweap, muweap, cabweap, scrweap
 	Tooltip:
 		Name: Gladiator
 		Description: Advanced cyborg construct, extremely resilient\nand capable of piercing enemy armor.\n  Detects cloaked units.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft.
@@ -271,6 +275,8 @@ CYC2:
 		BuildPaletteOrder: 17
 		Prerequisites: ~cabclaw, cabtech
 		BuildLimit: 1
+	RepairableNear:
+		Buildings: gaweap, naweap, muweap, cabweap, scrweap		
 	SupplyTruck
 		Payload: 600
 		Voice: Move		
@@ -732,9 +738,6 @@ PALADIN:
 	AttackFrontal:
 	RenderSprites:
 		Scale: 0.7
-	SelfHealing@Palading:
-		Step: 20
-		Ticks: 100
 	Armament@primary:
 		Weapon: PalaLazor
 		Recoil: 127

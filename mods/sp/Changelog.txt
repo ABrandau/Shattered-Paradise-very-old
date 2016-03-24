@@ -1,6 +1,7 @@
 YEAR - MONTH - DAY
 
 [2016 - 03 - 23]
+Reaper mortar can now only target infantry.
 Switched Floater and purifier tech requirements.
 Decreased Centurion walk animation speed.
 Updated faction descriptions.
