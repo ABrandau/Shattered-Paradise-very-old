@@ -1247,12 +1247,12 @@
 	DetectCloaked:
 		Range: 5c0
 	# RenderDetectionCircle:
-	
+
 ^NodVehicleRepair:
 	SelfHealing@NodVehicleRepair:
 		Step: 30
 		Ticks: 20
-		HealifBelow: 1,5
+		HealIfBelow: 1
 		UpgradeTypes: NodVehicleRepair
 		UpgradeMinEnabledLevel: 1
 
@@ -1260,7 +1260,6 @@
 	SelfHealing@Scrin:
 		Step: 3
 		Ticks: 75
-		HealifBelow: 0,5
 		DamageCooldown: 70
 
 ^AircraftSelfHeal:
