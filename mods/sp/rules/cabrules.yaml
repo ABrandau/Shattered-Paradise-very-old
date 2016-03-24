@@ -17,7 +17,10 @@ CABSENTRY:
 		Prerequisites: ~cabclaw
 	Explodes:
 		Weapon: UnitExplodeSmall
-		EmptyWeapon: UnitExplodeSmall		
+		EmptyWeapon: UnitExplodeSmall
+	SupplyTruck
+		Payload: 100
+		Voice: Move		
 	Selectable:
 		Bounds: 16,31,0,-10
 	Voiced:
@@ -76,6 +79,9 @@ CYBORG:
 		Prerequisites: ~cabclaw
 	Selectable:
 		Bounds: 16,31,0,-10
+	SupplyTruck
+		Payload: 175
+		Voice: Move		
 	Voiced:
 		VoiceSet: Cyborg
 	Mobile:
@@ -83,9 +89,6 @@ CYBORG:
 	Health:
 		HP: 200
 	Passenger:
-	SelfHealing@Cabal:
-		Step: 8
-		Ticks: 100
 	Armament:
 		Weapon: CyborgVulcan
 	AttackFrontal:
@@ -104,6 +107,9 @@ SWARMLING:
 		Queue: Infantry
 		BuildPaletteOrder: 13
 		Prerequisites: ~cabclaw
+	SupplyTruck
+		Payload: 275
+		Voice: Move		
 	Voiced:
 		VoiceSet: Engineer
 	Mobile:
@@ -117,50 +123,6 @@ SWARMLING:
 	Captures:
 		CaptureTypes: building
 	-AutoTarget:	
-		
-REAPERCAB:
-	Inherits: ^CabalDroneInfantry
-	Valued:
-		Cost: 600
-	Tooltip:
-		Name: Cyborg Reaper
-		Description: Cyborg, has mortar shells that can stop infantry.\nAnd a railgun turret to deal with aircraft.\n  Strong vs Aircraft\n  Weak vs Vehicles, Buildings.
-	Buildable:
-		Queue: Infantry
-		SharesCell: false
-		BuildPaletteOrder: 15
-		Prerequisites: ~cabclaw, cabradr
-	Selectable:
-		Bounds: 24,31,0,-10
-	Voiced:
-		VoiceSet: Cyborg
-	Mobile:
-		Speed: 80
-		SharesCell: False
-		-UpgradeTypes: WebDisable
-	Explodes:
-		Weapon: UnitExplodeSmall
-		EmptyWeapon: UnitExplodeSmall		
-	Health:
-		HP: 400
-	Voiced:
-		VoiceSet: CyborgReap		
-	Passenger:
-	Armor:
-		Type: Wood
-	Armament@primary:
-		Weapon: ReaperMortar
-		LocalOffset: 0,0,500
-	Armament@secondary:	
-		Weapon: ReaperRail
-		LocalOffset: 0,0,2000		
-	AttackFrontal:
-		Voice: Attack
-	SelectionDecorations:
-		VisualBounds: 16,31,0,-10	
-	-UpgradeOverlay@WebDisable:
-	-DisableOnUpgrade@WebDisable:
-	-TimedUpgradeBar@WebDisable:		
 
 PDRONE:
 	Inherits: ^CabalDroneInfantry
@@ -168,6 +130,9 @@ PDRONE:
 		Type: none
 	Valued:
 		Cost: 150
+	SupplyTruck
+		Payload: 75
+		Voice: Move		
 	Tooltip:
 		Name: Reclaimer
 		Description: Utility drone, soldiers killed by this unit will be turned into workers.\nCan only target infantry.\n  Strong vs Infantry\n  Weak vs Everything else.
@@ -200,15 +165,71 @@ PDRONE:
 		VisualBounds: 16,32,-1,-12	
 	-UpgradeOverlay@WebDisable:
 	-DisableOnUpgrade@WebDisable:
-	-TimedUpgradeBar@WebDisable:		
+	-TimedUpgradeBar@WebDisable:
+
+REAPERCAB:
+	Inherits: ^CabalDroneInfantry
+	Inherits@2: ^CyborgSelfHeal
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Cyborg Reaper
+		Description: Cyborg, has mortar shells that can stop infantry.\nAnd a railgun turret to deal with aircraft.\n  Strong vs Aircraft\n  Weak vs Vehicles, Buildings.
+	Buildable:
+		Queue: Infantry
+		SharesCell: false
+		BuildPaletteOrder: 15
+		Prerequisites: ~cabclaw, cabradr
+	RepairableNear:
+		Buildings: gaweap, naweap, muweap, cabweap, scrweap		
+	Selectable:
+		Bounds: 24,31,0,-10
+	SupplyTruck
+		Payload: 300
+		Voice: Move		
+	Voiced:
+		VoiceSet: Cyborg
+	Mobile:
+		Speed: 80
+		SharesCell: False
+		-UpgradeTypes: WebDisable
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall		
+	Health:
+		HP: 400
+	Voiced:
+		VoiceSet: CyborgReap		
+	Passenger:
+	Armor:
+		Type: Wood
+	Armament@primary:
+		Weapon: ReaperMortar
+		LocalOffset: 0,0,500
+	Armament@secondary:	
+		Weapon: ReaperRail
+		LocalOffset: 0,0,2000		
+	AttackFrontal:
+		Voice: Attack
+	SelectionDecorations:
+		VisualBounds: 16,31,0,-10	
+	-UpgradeOverlay@WebDisable:
+	-DisableOnUpgrade@WebDisable:
+	-TimedUpgradeBar@WebDisable:			
 		
 GLAD:
 	Inherits: ^Cyborg
-	Inherits@3: ^BasicStealthDetection	
+	Inherits@2: ^CyborgSelfHeal	
+	Inherits@3: ^BasicStealthDetection
 	Armor:
 		Type: Heavy
 	Valued:
 		Cost: 750
+	SupplyTruck
+		Payload: 375
+		Voice: Move
+	RepairableNear:
+		Buildings: gaweap, naweap, muweap, cabweap, scrweap
 	Tooltip:
 		Name: Gladiator
 		Description: Advanced cyborg construct, extremely resilient\nand capable of piercing enemy armor.\n  Detects cloaked units.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft.
@@ -238,10 +259,10 @@ GLAD:
 		Voice: Attack
 	SelectionDecorations:
 		VisualBounds: 16,32,-1,-12
- 
-		
+
 CYC2:
 	Inherits: ^Cyborg
+	Inherits@2: ^CyborgSelfHeal	
 	Armor:
 		Type: Heavy
 	Valued:
@@ -254,6 +275,11 @@ CYC2:
 		BuildPaletteOrder: 17
 		Prerequisites: ~cabclaw, cabtech
 		BuildLimit: 1
+	RepairableNear:
+		Buildings: gaweap, naweap, muweap, cabweap, scrweap		
+	SupplyTruck
+		Payload: 600
+		Voice: Move		
 	Selectable:
 		Bounds: 16,32,-1,-12
 	Voiced:
@@ -348,10 +374,6 @@ WORKER:
 	SupplyTruck
 		Payload: 45
 		Voice: Move
-	SelfHealing@Cabal:
-		Step: 5
-		Ticks: 100
-		HealIfBelow: 1			
 	Armament@PRIMARY:
 		Weapon: Minigun
 		UpgradeTypes: eliteweapon
@@ -450,7 +472,6 @@ cybdog:
 ################################################
 JENN:
 	Inherits: ^Tank
-	Inherits@2: ^CabalSelfHeal
 	Inherits@3: ^BasicStealthDetection
 	Valued:
 		Cost: 700
@@ -467,7 +488,6 @@ JENN:
 		Crushes: crate
 	Health:
 		HP: 200
-	-GainsExperience:		
 	Armor:
 		Type: wood
 	BodyOrientation:
@@ -488,7 +508,6 @@ JENN:
 
 CENTURION:
 	Inherits: ^Tank
-	Inherits@2: ^CabalSelfHeal	
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -504,11 +523,6 @@ CENTURION:
 		Crushes: wall, crate, infantry
 	Health:
 		HP: 600
-	-GainsExperience:
-	SelfHealing@Cabal:
-		Step: 4
-		Ticks: 75
-		HealIfBelow: 1		
 	Armor:
 		Type: Heavy
 	BodyOrientation:
@@ -541,8 +555,7 @@ CENTURION:
 
 GRINDER:
 	Inherits: ^VoxelVehicle
-	Inherits@1: ^Ra2vxl	
-	Inherits@2: ^CabalSelfHeal	
+	Inherits@1: ^Ra2vxl
 	Valued:
 		Cost: 850
 	Tooltip:
@@ -554,8 +567,7 @@ GRINDER:
 		Prerequisites: ~cabweap, cabradr
 	Mobile:
 		TurnSpeed: 6
-		Speed: 90
-	-GainsExperience:		
+		Speed: 90		
 	Health:
 		HP: 350
 	Armor:
@@ -578,7 +590,6 @@ GRINDER:
 ECM:
 	Inherits: ^VoxelVehicle
 	Inherits@1: ^Ra2vxl	
-	Inherits@2: ^CabalSelfHeal	
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -588,7 +599,6 @@ ECM:
 		Queue: Vehicle
 		BuildPaletteOrder: 21
 		Prerequisites: ~cabweap, cabradr
-	-GainsExperience:		
 	Mobile:
 		TurnSpeed: 6
 		Speed: 75
@@ -623,8 +633,7 @@ ECM:
 				
 CABAPC:
 	Inherits: ^VoxelVehicle
-	Inherits@1: ^Ra2vxl		
-	Inherits@2: ^CabalSelfHeal	
+	Inherits@1: ^Ra2vxl
 	Valued:
 		Cost: 750
 	Tooltip:
@@ -634,7 +643,6 @@ CABAPC:
 		Queue: Vehicle
 		BuildPaletteOrder: 22
 		Prerequisites: ~cabweap, cabradr
-	-GainsExperience:		
 	Mobile:
 		TurnSpeed: 8
 		Speed: 110
@@ -665,8 +673,8 @@ CABAPC:
 
 BLASTER:
 	Inherits: ^VoxelVehicle
-	Inherits@1: ^Ra2vxl		
-	Inherits@2: ^CabalSelfHeal	
+	Inherits@1: ^Ra2vxl
+	Inherits@2: ^CyborgSelfHeal
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -676,7 +684,6 @@ BLASTER:
 		Queue: Vehicle
 		BuildPaletteOrder: 23
 		Prerequisites: ~cabweap, cabtech
-	-GainsExperience:
 	Mobile:
 		TurnSpeed: 6
 		Speed: 113
@@ -706,7 +713,7 @@ BLASTER:
 
 PALADIN:
 	Inherits: ^Tank
-	Inherits@2: ^CabalSelfHeal	
+	Inherits@2: ^CyborgSelfHeal
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -716,7 +723,6 @@ PALADIN:
 		Queue: Vehicle
 		BuildPaletteOrder: 24
 		Prerequisites: ~cabweap, cabtech
-	-GainsExperience:		
 	Mobile:
 		TurnSpeed: 6
 		Speed: 50
@@ -732,9 +738,6 @@ PALADIN:
 	AttackFrontal:
 	RenderSprites:
 		Scale: 0.7
-	SelfHealing@Palading:
-		Step: 20
-		Ticks: 100
 	Armament@primary:
 		Weapon: PalaLazor
 		Recoil: 127
@@ -767,7 +770,6 @@ WASP:
 		Queue: Air
 		BuildPaletteOrder: 20
 		Prerequisites: ~cabair
-	-GainsExperience:		
 	Selectable:
 		Bounds: 30,24
 	Aircraft:
@@ -828,7 +830,6 @@ FIREFLY:
 		Queue: Air
 		BuildPaletteOrder: 20
 		Prerequisites: ~cabair, cabradr
-	-GainsExperience:		
 	Selectable:
 		Bounds: 30,24
 	Aircraft:
@@ -881,7 +882,6 @@ BASILISK:
 		Prerequisites: ~cabair, cabtech
 	Selectable:
 		Bounds: 30,24
-	-GainsExperience:		
 	Aircraft:
 		TurnSpeed: 6
 		Speed: 95
@@ -1160,13 +1160,13 @@ CABGRINDER:
 	Inherits@1: ^CabRender	
 	Buildable:
 		Queue: Building
-		BuildPaletteOrder: 100
-		Prerequisites: cabradr, ~structures.cab
+		BuildPaletteOrder: 71
+		Prerequisites: cabclaw, ~structures.cab
 	Valued:
 		Cost: 600
 	Tooltip:
 		Name: Stasis Chamber
-		Description: Storage site for cyborg canditates.\nYou can "sell" units here for money.
+		Description: Storage site for cyborg canditates.\nIt allows you to refund CABAL\ninfantry for half its cost.
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	AcceptsSupplies:	
@@ -1301,10 +1301,10 @@ CABCANNON:
 CABBLAST:
 	Inherits: ^Defense
 	Inherits@1: ^CabRender		
-	Inherits@2: ^CabalSelfHeal
+	Inherits@2: ^CyborgSelfHeal
 	Inherits@3: ^TowerStealthDetection	
 	Valued:
-		Cost: 1800
+		Cost: 1400
 	Tooltip:
 		Name: Blaster Turret
 		Description: Artillery defence, fires plasma.\nHas a minimun range of fire.\nRequires power to operate.\n  Strong vs Ground Units\n  Weak vs Aircraft
@@ -1342,7 +1342,7 @@ CABBLAST:
 CABRAIL:
 	Inherits: ^Defense
 	Inherits@1: ^CabRender	
-	Inherits@2: ^CabalSelfHeal
+	Inherits@2: ^CyborgSelfHeal
 	Inherits@3: ^TowerStealthDetection	
 	Valued:
 		Cost: 800
@@ -1382,7 +1382,7 @@ CABRAIL:
 		
 CABCENT:
 	Inherits: ^DeployedVehicle
-	Inherits@2: ^CabalSelfHeal		
+	Inherits@2: ^CyborgSelfHeal		
 	Valued:
 		Cost: 800
 	Tooltip:

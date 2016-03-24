@@ -121,7 +121,7 @@ TrooperRail:
 	Warhead@emp: GrantUpgrade
 		Range: 1c0
 		Duration: 40
-		Upgrades: empdisable, notmobile			
+		Upgrades: empdisable, notmobile
 
 #############################################
 # Vehicles

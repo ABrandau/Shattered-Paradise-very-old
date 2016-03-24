@@ -245,6 +245,22 @@ DevilsFlame:
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 
+NODRepair:
+	ReloadDelay: 125
+	Range: 4c0
+	Report: repair11.aud
+	ValidTargets: Repair
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 213
+		Damage: -1
+		ValidTargets: Repair
+	Warhead@emp: GrantUpgrade
+		Range: 300
+		Duration: 100
+		Upgrades: NodVehicleRepair
+
 BCLazor:
 	ReloadDelay: 150
 	Burst: 1

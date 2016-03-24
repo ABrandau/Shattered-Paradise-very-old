@@ -61,6 +61,7 @@ ReaperMortar:
 	Range: 9c0
 	Burst: 3
 	Report: 120mmf.aud
+	ValidTargets: Infantry
 	Projectile: Bullet
 		Speed: 150
 		Image: 120mm
@@ -71,6 +72,7 @@ ReaperMortar:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 10
+		ValidTargets: Infantry
 		Versus:
 			None: 100
 			Wood: 85
@@ -90,6 +92,7 @@ ReaperMortar:
 	Warhead@emp: GrantUpgrade
 		Range: 2c0
 		Duration: 35
+		ValidTargets: Infantry
 		Upgrades: WebDisable	
 	
 ReaperRail:

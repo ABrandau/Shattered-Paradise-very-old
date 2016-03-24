@@ -3,7 +3,6 @@
 ############################################
 ALTNODE1:
 	Inherits: ^Soldier
-	Inherits@1: ^GainsExperienceNOD
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 6
@@ -30,7 +29,6 @@ ALTNODE1:
 
 CRUSADER:
 	Inherits: ^Soldier
-	Inherits@1: ^GainsExperienceNOD	
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 7
@@ -57,7 +55,6 @@ CRUSADER:
 
 TEMPLAR:
 	Inherits: ^Soldier
-	Inherits@1: ^GainsExperienceNOD	
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 8
@@ -125,7 +122,6 @@ MHIJACK:
 	
 BHS:
 	Inherits: ^Soldier
-	Inherits@1: ^GainsExperienceNOD	
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 10
@@ -193,7 +189,6 @@ BLACKHANDDUMMY:
 ################################################
 BGGY:
 	Inherits: ^VoxelVehicle
-	Inherits@1: ^GainsExperienceNOD
 	Inherits@3: ^BasicStealthDetection
 	Valued:
 		Cost: 500
@@ -231,8 +226,6 @@ BGGY:
 
 BIKE:
 	Inherits: ^VoxelVehicle
-	Inherits@1: ^GainsExperienceNOD	
-
 	Valued:
 		Cost: 650
 	Tooltip:
@@ -259,7 +252,6 @@ BIKE:
 
 TTNK:
 	Inherits: ^VoxelTank
-	Inherits@1: ^GainsExperienceNOD	
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -319,6 +311,33 @@ SAPC:
 		PipCount: 5
 		UnloadVoice: Unload
 		LoadingUpgrades: notmobile
+		
+REPAIR:
+	Inherits: ^VoxelTank
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 70
+		Prerequisites: ~naweap, naradr
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Mobile Repair Vehicle
+		Description: Repairs nearby vehicles.\n  Unarmed
+	Health:
+		HP: 200
+	Mobile:
+		Speed: 85
+		TurnSpeed: 5
+	RevealsShroud:
+		Range: 5c0
+	Armament:
+		Weapon: NODRepair
+		Cursor: repair
+		OutsideRangeCursor: repair
+		TargetStances: Ally
+		ForceTargetStances: None
+	AttackFrontal:
+		Voice: Attack
 
 LIMPED:
 	Inherits: ^Vehicle
@@ -351,46 +370,11 @@ LIMPED:
 	RenderSprites:	
 	BodyOrientation:
 		QuantizedFacings: 32
-	Hovers:		
-		
-ARMH:
-	Inherits: ^VoxelTank
-	Inherits@1: ^GainsExperienceNOD
-	Inherits@2:	^Ra2vxl
-	Valued:
-		Cost: 1100
-	Tooltip:
-		Name: Beam Cannon
-		Description: Core unit, artillery, fires a beam of\nenergy through long distances.\n  Strong vs Ground units\n  Weak vs Aircraft
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 14
-		Prerequisites: ~naweap, natech
-	Health:
-		HP: 160
-	Armor:
-		Type: Wood
-	Mobile:
-		Speed: 60
-		TurnSpeed: 10
-	RevealsShroud:
-		Range: 9c0
-	RenderVoxels:
-		LightAmbientColor: 0.6, 0.6, 0.6
-		Scale: 0.7	
-	Armament:
-		Weapon: BCLazor
-		LocalOffset: 300,0,500
-	AttackFrontal:
-		Voice: Attack
-	AutoTarget:
-	Voiced:
-		VoiceSet: BeamCannonVO
-		Volume: 1.4
+	Hovers:
+
 
 SUBTANK:
 	Inherits: ^VoxelTank
-	Inherits@1: ^GainsExperienceNOD	
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -399,7 +383,7 @@ SUBTANK:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 15
-		Prerequisites: ~naweap, natech
+		Prerequisites: ~naweap, naradr
 	Mobile:
 		TurnSpeed: 6
 		Speed: 81
@@ -442,11 +426,44 @@ SGEN:
 		Facing: 96
 		TransformSounds: place2.aud
 		NoTransformSounds:
-		Voice: Move
+		Voice: Move	
+
+ARMH:
+	Inherits: ^VoxelTank
+	Inherits@2:	^Ra2vxl
+	Valued:
+		Cost: 1100
+	Tooltip:
+		Name: Beam Cannon
+		Description: Core unit, artillery, fires a beam of\nenergy through long distances.\n  Strong vs Ground units\n  Weak vs Aircraft
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 14
+		Prerequisites: ~naweap, natech
+	Health:
+		HP: 160
+	Armor:
+		Type: Wood
+	Mobile:
+		Speed: 60
+		TurnSpeed: 10
+	RevealsShroud:
+		Range: 9c0
+	RenderVoxels:
+		LightAmbientColor: 0.6, 0.6, 0.6
+		Scale: 0.7	
+	Armament:
+		Weapon: BCLazor
+		LocalOffset: 300,0,500
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+	Voiced:
+		VoiceSet: BeamCannonVO
+		Volume: 1.7
 		
 STNK:
 	Inherits: ^VoxelTank
-	Inherits@1: ^GainsExperienceNOD	
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -490,7 +507,6 @@ STNK:
 ##########################################################	
 APACHE:
 	Inherits: ^Helicopter
-	Inherits@1: ^GainsExperienceNOD
 	Inherits@3: ^BasicStealthDetection		
 	Valued:
 		Cost: 700
@@ -541,10 +557,9 @@ APACHE:
 	RenderSprites:
 	SpawnActorOnDeath:
 		Actor: APACHE.Husk
-		
+
 SCRIN:
 	Inherits: ^Plane
-	Inherits@1: ^GainsExperienceNOD	
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -587,7 +602,6 @@ SCRIN:
 	DeathSounds:
 	SpawnActorOnDeath:
 		Actor: SCRIN.Husk
-		
 ##########################################################
 # Structures
 ##########################################################	

@@ -14,23 +14,23 @@
 	Faction@0:
 		Name: GDI
 		InternalName: gdi
-		Description: GDI\nSteamroller Faction.\n + Has means to keep units alive.\n + Good Armour.\n + Good Range.\n -  Slow.\n -  Low Rate of fire.
+		Description: GDI\nBalanced Faction.\n + Has means to keep units alive.\n + Good Armour.\n + Good Range.\n -  Slow.\n -  Low Rate of fire.\n -  Lacks anti air power.
 	Faction@1:
 		Name: Nod
 		InternalName: nod
-		Description: NOD\n Hit and Run Faction.\n + Units earn experience faster.\n + Good Speed.\n + Good Damage.\n -  Low Health.\n -  Doesn't have many aerial units.\n -  No way to heal units except of veterancy.
+		Description: NOD\n Hit and Run Faction.\n + Good Speed.\n + Good Damage.\n -  Low Health.\n -  Doesn't have many aerial units.
 	Faction@2:
 		Name: Mutants
 		InternalName: mut	
-		Description: Mutants\nSwarmer Oponent.\n + Cheaper units thanks to tiberium immunity.\n + Infantry heals on tiberium.\n -  Can mutate enemies or allies when something dies.\n -  Average overall stats.\n - Warning: Garrisoning Psykers may cause crashes.
+		Description: Mutants\nSwarmer Oponent.\n + Cheaper units thanks to tiberium immunity.\n + Infantry heals on tiberium.\n -  Can mutate enemies or allies when something dies.\n -  Average overall stats.
 	Faction@3:
 		Name: C.A.B.A.L.
 		InternalName: cab
-		Description: C.A.B.A.L.\nController Faction.\n + Has crowd control.\n + Can convert enemies and process them for money.\n + Cyborg units constantly self repair.\n -  Not immune to tiberium radiation.\n -  Expensive units.\n -  Low damage.\n -  Slow.
+		Description: C.A.B.A.L.\nController Faction.\n + Has crowd control.\n + Can convert enemies and process them for money.\n + Advanced units constantly self repair.\n -  Not immune to tiberium radiation.\n -  Expensive units.\n -  Slow.
 	Faction@4:
 		Name: Scrin
 		InternalName: scr
-		Description: Scrin\nAerial Faction.\n + Versatile (Has many ways to deal with certain units).\n + Strong air power.\n + Scrin units slowly heal up to half health.\n + High Damage.\n -  Low health.
+		Description: Scrin\nAerial Faction.\n + Versatile.\n + Infantry immune to tiberium radiation.\n + Strong air power.\n + Scrin Battleships slowly repair.\n + High Damage.\n -  Low health.
 	Faction@Random:
 		Name: Random
 		InternalName: Random
