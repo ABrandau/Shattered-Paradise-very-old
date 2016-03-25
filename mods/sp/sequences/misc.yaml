@@ -68,6 +68,12 @@ rank:
 		Start: 7
 		Length: 2
 
+tibicon:
+	idle: tibicon
+
+wrenchicon:
+	idle: wrenchicon	
+
 mpspawn:
 	idle:
 		Length: *

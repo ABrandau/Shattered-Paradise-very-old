@@ -321,7 +321,7 @@ WOLF:
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 42
+		Speed: 70
 		SharesCell: false
 	Armament@PRIMARY:
 		Weapon: WolfBlow
@@ -837,6 +837,8 @@ MUWEAP:
 		HP: 1300
 	RepairsUnits:
 		FinishRepairingNotification: UnitRepaired
+	RevealsShroud:
+		Range: 6c0
 	RallyPoint:
 		Offset: 4,1
 		Palette: mouse

@@ -1,5 +1,16 @@
 YEAR - MONTH - DAY
 
+[2016 - 03 - 24]
+Wolf Changes Speed: 42 -> 70
+Corrected some infantry selection boxes.
+Increased infantry selection box width.
+
+[2016 - 03 - 24]
+Added tiberium mutation icon and guardian platform repair icon.
+Fixed Shapeshifter being hurt by tiberium.
+Fixed warfactories having no sight.
+Fixed experience given by killing scrin infantry.
+
 [2016 - 03 - 23]
 Reaper mortar can now only target infantry.
 Switched Floater and purifier tech requirements.
