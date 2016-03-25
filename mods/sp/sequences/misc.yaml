@@ -201,7 +201,9 @@ explosion:
 	scrinexplo3: scrinexplo3
 	scrinexplo4: scrinexplo4
 	scrinexplo5: scrinexplo5
-	scrinexplo2: scrinexplo2
+	scrinexplo6: scrinexplo6
+	scrinvehicleexplo1: scrinvehicleexplo1
+	scrinvehicleexplo2: scrinvehicleexplo2
 
 discus:
 	idle:

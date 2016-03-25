@@ -35,7 +35,7 @@ ScrinUnitExplode:
 			Heavy: 25
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
-		Explosions: scrinexplo2
+		Explosions: scrinvehicleexplo1, scrinvehicleexplo2
 		ExplosionPalette: apolbluealpha
 		ImpactSound: expnew09.aud
 
