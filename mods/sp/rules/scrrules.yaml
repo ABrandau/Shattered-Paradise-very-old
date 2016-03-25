@@ -175,12 +175,50 @@ BUG:
 	-TakeCover:	
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
-		
+
+STALKER:
+	Inherits: ^ScrinSoldier
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 28
+		Prerequisites: ~scrrax, scrtech
+	Selectable:
+		Class: Stalker
+	Valued:
+		Cost: 1000
+	GivesExperience:
+		Experience: 333
+	FreeActor@1:
+		Actor: stalkerclone
+	FreeActor@2:
+		Actor: stalkerclone
+	Tooltip:
+		Name: Stalker
+		Description: Disruption infantry\nConfuses enemies for shorter periods of time.\nchanging their alegiance.\nCan move through water.\n  Unarmed.
+	Health:
+		HP: 130
+	Mobile:
+		Speed: 80
+		TerrainSpeeds:
+			Water: 80
+		Crushes: crate
+	RevealsShroud:
+		Range: 6c0			
+	Armament@prim:
+		Weapon: StalkerSteal
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: throw
+	-TakeCover:	
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
 FLOAT:
 	Inherits: ^ScrinSoldier
 	Buildable:
 		Queue: Infantry
-		BuildPaletteOrder: 27
+		BuildPaletteOrder: 29
 		Prerequisites: ~scrrax, scrtech
 	Selectable:
 		Class: FLoat
@@ -249,6 +287,14 @@ SHAPESHIFTERCLONE:
 	Inherits: SHAPESHIFTER
 	RenderSprites:
 		Image: shapeshifter
+	-Buildable:
+	-FreeActor@1:
+	-FreeActor@2:
+	
+STALKERCLONE:
+	Inherits: STALKER
+	RenderSprites:
+		Image: stalker
 	-Buildable:
 	-FreeActor@1:
 	-FreeActor@2:
@@ -498,15 +544,51 @@ SCRRECHARGER:
 		Sequence: stand
 	WithMoveAnimation:
 		MoveSequence: run
-	Selectable:
-		Bounds: 20, 32, 0, -8		
 
-SCRDRONEC:
+TRIPOD:
 	Inherits: ^ScrinTank	
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Anhilator Tripod
+		Description: Combat walker.\nCan crush vehicles and infantry.\nHas great damage but slow firing rate.\n  Strong vs Ground units in general.\n  Weak vs Aircraft.
+	Selectable:
+		Bounds: 50,100, 0, -30
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 34
+		BuildPaletteOrder: 35
 		Prerequisites: ~scrweap, scrtech
+		IconPalette: chromescrin
+	Mobile:
+		TurnSpeed: 8
+		Speed: 80
+		Crushes: crate, Infantry, Vehicle
+	Health:
+		HP: 400
+	Armor:
+		Type: Light
+	AttackFrontal:
+		Voice: Attack
+	AutoTarget:
+	Armament:
+		Weapon: TripodLaser
+		LocalOffset: 100,180,2550
+	Armament@2:
+		Weapon: TripodLaser	
+		LocalOffset: 100,-180,2550
+	WithInfantryBody:
+		AttackSequence: shoot
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+##########################################################
+# Unused
+##########################################################
+SCRDRONEC:
+	Inherits: ^ScrinTank	
+	# Buildable:
+		# Queue: Vehicle
+		# BuildPaletteOrder: 34
+		# Prerequisites: ~scrweap, scrtech
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -551,43 +633,7 @@ SCRDRONEC:
 	RenderSprites:
 	WithFacingSpriteBody:
 	BodyOrientation:
-		QuantizedFacings: 32
-
-TRIPOD:
-	Inherits: ^ScrinTank	
-	Valued:
-		Cost: 1200
-	Tooltip:
-		Name: Anhilator Tripod
-		Description: Combat walker.\nCan crush vehicles and infantry.\nHas great damage but slow firing rate.\n  Strong vs Ground units in general.\n  Weak vs Aircraft.
-	Selectable:
-		Bounds: 50,100, 0, -30
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 35
-		Prerequisites: ~scrweap, scrtech
-		IconPalette: chromescrin
-	Mobile:
-		TurnSpeed: 8
-		Speed: 80
-		Crushes: crate, Infantry, Vehicle
-	Health:
-		HP: 400
-	Armor:
-		Type: Light
-	AttackFrontal:
-		Voice: Attack
-	AutoTarget:
-	Armament:
-		Weapon: TripodLaser
-		LocalOffset: 100,180,2550
-	Armament@2:
-		Weapon: TripodLaser	
-		LocalOffset: 100,-180,2550
-	WithInfantryBody:
-		AttackSequence: shoot
-	QuantizeFacingsFromSequence:
-		Sequence: stand
+		QuantizedFacings: 32		
 ##########################################################
 # Aircraft
 ##########################################################	
@@ -813,7 +859,7 @@ SCRDESTROYER:
 	Voiced:
 		VoiceSet: Limpet		
 	Selectable:
-		Bounds: 100,75
+		Bounds: 100,75,0,-20
 	Aircraft:
 		TurnSpeed: 5
 		Speed: 90
@@ -1034,6 +1080,9 @@ drached:
 	Tooltip:
 		Name: Deployed Host Station
 		Description: Builds base structures.
+	WithBuildingExplosion:
+		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
+		Palette: apolbluealpha
 	CustomSellValue:
 		Value: 2500
 	BaseBuilding:
@@ -1072,6 +1121,9 @@ SCRPOWR:
 	Building:
 		Footprint: xx xx xx
 		Dimensions: 3,2
+	WithBuildingExplosion:
+		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
+		Palette: apolbluealpha
 	Health:
 		HP: 750
 	Armor:
@@ -1108,6 +1160,9 @@ SCRRAX:
 		Description: Safe haven for Infantry deployment.\nDeploys 3 soldiers per order.
 	ProvidesPrerequisite:
 		Prerequisite: scrrax
+	WithBuildingExplosion:
+		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
+		Palette: apolbluealpha
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1163,6 +1218,9 @@ scrproc:
 	Building:
 		Footprint: xxx= xx== xxx=
 		Dimensions: 4,3
+	WithBuildingExplosion:
+		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
+		Palette: apolbluealpha
 	Selectable:
 		Bounds: 134, 96, 0, -12
 	Health:
@@ -1197,6 +1255,9 @@ SCRWEAP:
 	Tooltip:
 		Name: Scrin Forge
 		Description: Produces vehicles.
+	WithBuildingExplosion:
+		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
+		Palette: apolbluealpha
 	ProvidesPrerequisite:
 		Prerequisite: scrweap
 	Buildable:
@@ -1261,6 +1322,9 @@ SCRAIR:
 		BuildPaletteOrder: 60
 		Queue: Building
 		Prerequisites: scrproc, ~structures.scr
+	WithBuildingExplosion:
+		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
+		Palette: apolbluealpha
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -1314,6 +1378,9 @@ SCRRADR:
 		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
 	ProvidesPrerequisite:
 		Prerequisite: radar
+	WithBuildingExplosion:
+		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
+		Palette: apolbluealpha
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -1360,6 +1427,9 @@ SCRTECH:
 		Description: Provides an area for surface sampling\nAllows the Scrin to adapt it's most advanced units\nto the planet atmosphere.
 	ProvidesPrerequisite:
 		Prerequisite: tech
+	WithBuildingExplosion:
+		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
+		Palette: apolbluealpha
 	Building:
 		Footprint: xx xx xx
 		Dimensions: 2,3
@@ -1416,6 +1486,9 @@ SCRGATE_A:
 		Queue: Defense
 		BuildPaletteOrder: 100
 		Prerequisites: ~structures.scr
+	WithBuildingExplosion:
+		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
+		Palette: apolbluealpha
 	Tooltip:
 		Name: Energy Gate
 	Gate:
@@ -1428,6 +1501,9 @@ SCRGATE_B:
 		Queue: Defense
 		BuildPaletteOrder: 100
 		Prerequisites: ~structures.scr
+	WithBuildingExplosion:
+		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
+		Palette: apolbluealpha
 	Tooltip:
 		Name: Energy Gate
 	Gate:
@@ -1450,6 +1526,9 @@ SCRNEEDLER:
 	Selectable:
 		Bounds: 40, 30, -3, -8
 	RequiresPower:
+	WithBuildingExplosion:
+		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
+		Palette: apolbluealpha
 	DisabledOverlay:
 	Health:
 		HP: 350
@@ -1495,6 +1574,9 @@ SCRTRACTOR:
 		Queue: Defense
 		Prerequisites: scrrax, ~structures.scr
 		BuildPaletteOrder: 60
+	WithBuildingExplosion:
+		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
+		Palette: apolbluealpha
 	Building:
 	Selectable:
 		Bounds: 40, 30, -3, -8
@@ -1535,6 +1617,9 @@ SCRDRONE:
 		Queue: Defense
 		BuildPaletteOrder: 90
 		Prerequisites: scrtech, ~structures.scr
+	WithBuildingExplosion:
+		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
+		Palette: apolbluealpha
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1573,6 +1658,9 @@ SCRSHIELD:
 		Queue: Defense
 		BuildPaletteOrder: 90
 		Prerequisites: scrradr, ~structures.scr
+	WithBuildingExplosion:
+		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
+		Palette: apolbluealpha
 	GrantUpgradePower:
 		Upgrades: StasisDisable, notmobile
 		OrderName: Stasis Field

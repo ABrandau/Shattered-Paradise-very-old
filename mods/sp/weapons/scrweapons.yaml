@@ -40,7 +40,7 @@ LegioNeedler:
 			Concrete: 70
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
-		Explosions: pulse3
+		Explosions: scrinpulse3
 		ImpactSound: expnew12.aud
 		# InvalidImpactTypes: Water, Air, AirHit
 	# Warhead@3EffWater: CreateEffect
@@ -72,39 +72,30 @@ FloatTesla:
 			Concrete: 1
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 
-StalkerRail:
+StalkerSteal:
 	ReloadDelay: 100
-	Range: 4c0
-	Report: lastur1.aud
-	Projectile: LaserZap
-		BeamWidth: 2
-		BeamDuration: 5
+	Range: 6c0
+	Report:
+	ValidTargets: Infantry, Vehicle
+	InvalidTargets: MindControlInmune
+	Projectile: Bullet
+		Speed: 1c682
+		Image: 120mm
+		# Inaccuracy: 1
+		ValidTargets: Infantry, Vehicle
+		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 125
-		Damage: 10
-		Versus:
-			None: 100
-			Wood: 75
-			Light: 50
-			Heavy: 15
-			Concrete: 5	
-		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath		
-
-StalkerExplode:
-	Warhead@1Dam: SpreadDamage
-		Spread: 426
+		Spread: 128
 		Damage: 1
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		ValidTargets: Infantry, Vehicle
 		Versus:
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: large_twlt
-		ImpactSound: expnew09.aud
-	# Warhead@4OwnerChange: ChangeOwner	
-		# Range: 3c0
-		# Duration: 100
-		# InvalidTargets: C4, MindControlInmune		
-		
+			Concrete: 30
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@4OwnerChange: ChangeOwner
+		Range: 300
+		Duration: 50
+		InvalidTargets: C4, MindControlInmune
+
 BugRail:
 	ReloadDelay: 100
 	Range: 4c0
@@ -175,11 +166,11 @@ ScrMbtCannon:
 			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
-		Explosions: pulse2
+		Explosions: scrinpulse2
 		ImpactSound: expnew14.aud
 		InvalidImpactTypes: Water
 	Warhead@3EffWater: CreateEffect
-		Explosions: pulse2
+		Explosions: scrinpulse2
 		ExplosionPalette: player
 		ImpactSound: ssplash3.aud
 		ValidImpactTypes: Water
@@ -243,7 +234,8 @@ Glyder2Cannon:
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
-		Explosions: medium_clsn
+		Explosions: scrinexplo1
+		ExplosionPalette: apolbluealpha
 		ImpactSound: expnew14.aud
 		InvalidImpactTypes: Water
 	Warhead@3EffWater: CreateEffect
@@ -295,7 +287,8 @@ StormRiderBlast:
 			Concrete: 10
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
-		Explosions: large_grey_explosion
+		Explosions: scrinexplo1
+		ExplosionPalette: apolbluealpha
 		ImpactSound: expnew13.aud
 		InvalidImpactTypes: Water
 		
@@ -320,7 +313,8 @@ StormRiderBlastAA:
 		Versus:
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
-		Explosions: large_grey_explosion
+		Explosions: scrinexplo1
+		ExplosionPalette: apolbluealpha
 		ImpactSound: expnew13.aud
 		InvalidImpactTypes: Water		
 		
@@ -348,7 +342,8 @@ Glyder1Cannon:
 			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
-		Explosions: medium_clsn
+		Explosions: scrinexplo1
+		ExplosionPalette: apolbluealpha
 		ImpactSound: expnew14.aud
 		InvalidImpactTypes: Water
 	Warhead@3EffWater: CreateEffect
@@ -387,7 +382,8 @@ BattleshipCannon:
 			Concrete: 20
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
-		Explosions: medium_clsn
+		Explosions: scrinexplo1
+		ExplosionPalette: apolbluealpha
 		ImpactSound: expnew14.aud
 		InvalidImpactTypes: Water
 	Warhead@3EffWater: CreateEffect
@@ -486,11 +482,11 @@ NeedlerCannon:
 			Concrete: 70
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
-		Explosions: pulse2
+		Explosions: scrinpulse2
 		ImpactSound: expnew14.aud
 		InvalidImpactTypes: Water
 	Warhead@3EffWater: CreateEffect
-		Explosions: pulse2
+		Explosions: scrinpulse2
 		ExplosionPalette: player
 		ImpactSound: ssplash3.aud
 		ValidImpactTypes: Water

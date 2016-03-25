@@ -748,12 +748,12 @@ scrweap:
 		Start:41
 		Length: 8
 		Tick: 100
-		ZOffset: 2048
+		ZOffset: -1000
 	damaged-production-lights-white:
 		Start: 53
 		Length: 8
 		Tick: 100
-		ZOffset: 2048
+		ZOffset: -1000
 	make:
 		Length: 39
 		Tick: 40
