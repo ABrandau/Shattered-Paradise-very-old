@@ -12,13 +12,9 @@ shark:
 	Tooltip:
 		Name: Razorshark
 		Description: Anti-infantry creature, fast and weak, kills infantry instantly.\n  Strong vs Infantry\n  Weak vs Everything else
-	Selectable:
-		Bounds: 12,17,-1,-4
 		Class: Shark
 	GivesExperience:
 		Experience: 110
-	SelectionDecorations:
-		VisualBounds: 12,17,-1,-4
 	Health:
 		HP: 30
 	FreeActor@1:
@@ -154,6 +150,8 @@ BUG:
 		Actor: bugclone
 	FreeActor@2:
 		Actor: bugclone
+	Selectable:
+		Bounds: 26,30,0,-10		
 	Health:
 		HP: 220
 	Mobile:

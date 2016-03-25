@@ -60,6 +60,7 @@ Packages:
 	sp|bits/audio/music
 	sp|bits/audio/nod
 	sp|bits/pal
+	sp|bits/anims/icon
 	sp|bits/anims/effects
 	sp|bits/anims/explosions
 	sp|bits/anims/proyectiles

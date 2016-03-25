@@ -20,9 +20,7 @@ CABSENTRY:
 		EmptyWeapon: UnitExplodeSmall
 	SupplyTruck
 		Payload: 100
-		Voice: Move		
-	Selectable:
-		Bounds: 16,31,0,-10
+		Voice: Move
 	Voiced:
 		VoiceSet: Cyborg
 	Mobile:
@@ -37,7 +35,7 @@ CABSENTRY:
 	AttackFrontal:
 		Voice: Attack
 	SelectionDecorations:
-		VisualBounds: 16,31,0,-10
+		VisualBounds: 22,32,-1,-9
 	DeployToUpgrade:
 		DeployedUpgrades: deployed, notmobile
 		UndeployedUpgrades: undeployed
@@ -78,7 +76,7 @@ CYBORG:
 		BuildPaletteOrder: 11
 		Prerequisites: ~cabclaw
 	Selectable:
-		Bounds: 16,31,0,-10
+		Bounds: 22,32,-1,-9
 	SupplyTruck
 		Payload: 175
 		Voice: Move		
@@ -141,7 +139,7 @@ PDRONE:
 		BuildPaletteOrder: 14
 		Prerequisites: ~cabclaw
 	Selectable:
-		Bounds: 16,32,-1,-12
+		Bounds: 22,32,0,0
 	Voiced:
 		VoiceSet: CyborgCommando
 	Hovers:	
@@ -161,8 +159,6 @@ PDRONE:
 		Weapon: ProcessingHuman
 	AttackFrontal:
 		Voice: Attack
-	SelectionDecorations:
-		VisualBounds: 16,32,-1,-12	
 	-UpgradeOverlay@WebDisable:
 	-DisableOnUpgrade@WebDisable:
 	-TimedUpgradeBar@WebDisable:
@@ -183,7 +179,7 @@ REAPERCAB:
 	RepairableNear:
 		Buildings: gaweap, naweap, muweap, cabweap, scrweap		
 	Selectable:
-		Bounds: 24,31,0,-10
+		Bounds: 40,40,0,-10
 	SupplyTruck
 		Payload: 300
 		Voice: Move		
@@ -211,8 +207,6 @@ REAPERCAB:
 		LocalOffset: 0,0,2000		
 	AttackFrontal:
 		Voice: Attack
-	SelectionDecorations:
-		VisualBounds: 16,31,0,-10	
 	-UpgradeOverlay@WebDisable:
 	-DisableOnUpgrade@WebDisable:
 	-TimedUpgradeBar@WebDisable:			
@@ -238,7 +232,7 @@ GLAD:
 		BuildPaletteOrder: 16
 		Prerequisites: ~cabclaw, cabtech
 	Selectable:
-		Bounds: 16,32,-1,-12
+		Bounds: 35,30,0,-10
 	Voiced:
 		VoiceSet: CyborgCommando
 	Mobile:
@@ -257,8 +251,6 @@ GLAD:
 		LocalOffset: 170,85,683			
 	AttackFrontal:
 		Voice: Attack
-	SelectionDecorations:
-		VisualBounds: 16,32,-1,-12
 
 CYC2:
 	Inherits: ^Cyborg
@@ -279,9 +271,7 @@ CYC2:
 		Buildings: gaweap, naweap, muweap, cabweap, scrweap		
 	SupplyTruck
 		Payload: 600
-		Voice: Move		
-	Selectable:
-		Bounds: 16,32,-1,-12
+		Voice: Move
 	Voiced:
 		VoiceSet: CyborgCommando
 	Mobile:

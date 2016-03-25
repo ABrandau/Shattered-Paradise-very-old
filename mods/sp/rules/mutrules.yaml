@@ -321,7 +321,7 @@ WOLF:
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 42
+		Speed: 70
 		SharesCell: false
 	Armament@PRIMARY:
 		Weapon: WolfBlow

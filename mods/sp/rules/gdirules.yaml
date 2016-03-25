@@ -608,6 +608,14 @@ GUARDIAN:
 		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
 		DeploySound: place2.aud
 		UndeploySound: clicky1.aud
+	WithDecoration@weaponswitch:
+		Image: wrenchicon
+		Sequence: idle
+		ReferencePoint: Bottom, Left
+		Palette: player
+		ShowToEnemies: true
+		UpgradeTypes: weaponswitch
+		UpgradeMinEnabledLevel: 1			
 	AmmoPool:
 		Ammo: 10
 		PipCount: 0
