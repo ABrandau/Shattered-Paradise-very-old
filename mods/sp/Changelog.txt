@@ -1,6 +1,7 @@
 YEAR - MONTH - DAY
 
 [2016 - 03 - 24]
+Added new Scrin explosions.
 Wolf Changes Speed: 42 -> 70
 Corrected some infantry selection boxes.
 Increased infantry selection box width.

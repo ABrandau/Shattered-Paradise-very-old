@@ -21,8 +21,40 @@ UnitExplode:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_twlt
-		ImpactSound: expnew09.aud		
-		
+		ImpactSound: expnew09.aud
+
+ScrinUnitExplode:
+	Warhead@1Dam: SpreadDamage
+		Spread: 426
+		Damage: 50
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Versus:
+			None: 90
+			Wood: 75
+			Light: 60
+			Heavy: 25
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: scrinvehicleexplo1, scrinvehicleexplo2
+		ExplosionPalette: apolbluealpha
+		ImpactSound: expnew09.aud
+
+ScrinUnitExplode2:
+	Warhead@1Dam: SpreadDamage
+		Spread: 426
+		Damage: 50
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Versus:
+			None: 90
+			Wood: 75
+			Light: 60
+			Heavy: 25
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: scrinexplo3, scrinexplo4, scrinexplo5
+		ExplosionPalette: apolbluealpha
+		ImpactSound: expnew09.aud
+
 UnitExplodeSmall:
 	Warhead@1Dam: SpreadDamage
 		Spread: 426

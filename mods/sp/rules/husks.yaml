@@ -217,6 +217,8 @@ STORMRIDER.Husk:
 		Speed: 168
 	RenderSprites:
 		Image: stormrider
+	FallsToEarth:
+		Explosion: ScrinUnitExplode2
 	RenderVoxels:
 		Image: stormrider
 		Scale: 0.7		
@@ -234,6 +236,8 @@ GLYDER1.Husk:
 		Bounds: 1,1
 	WithShadow:
 	WithFacingSpriteBody:
+	FallsToEarth:
+		Explosion: ScrinUnitExplode2
 	BodyOrientation:
 		QuantizedFacings: 32			
 	Aircraft:
@@ -250,6 +254,8 @@ DRACHE.Husk:
 	-Cloak@CLOAKGENERATOR:
 	Tooltip:
 		Name: Drache
+	FallsToEarth:
+		Explosion: ScrinUnitExplode2
 	Selectable:
 		Bounds: 1,1
 	WithShadow:
@@ -270,6 +276,8 @@ SCRDESTROYER.Husk:
 	-Cloak@CLOAKGENERATOR:
 	Tooltip:
 		Name: Destroyer
+	FallsToEarth:
+		Explosion: ScrinUnitExplode2
 	Selectable:
 		Bounds: 1,1
 	WithShadow:
@@ -290,6 +298,8 @@ SCRBATTLESHIP.Husk:
 	-Cloak@CLOAKGENERATOR:
 	Tooltip:
 		Name: Battlecruiser
+	FallsToEarth:
+		Explosion: ScrinUnitExplode2
 	Selectable:
 		Bounds: 1,1
 	WithShadow:
@@ -310,6 +320,8 @@ SCRTRANS.Husk:
 	-Cloak@CLOAKGENERATOR:
 	Tooltip:
 		Name: Scrin Transport
+	FallsToEarth:
+		Explosion: ScrinUnitExplode2
 	Selectable:
 		Bounds: 1,1
 	WithShadow:
@@ -334,6 +346,8 @@ SCRCOUNCIL.Husk:
 		Bounds: 1,1
 	WithShadow:
 	WithFacingSpriteBody:
+	FallsToEarth:
+		Explosion: ScrinUnitExplode2
 	BodyOrientation:
 		QuantizedFacings: 32			
 	Aircraft:

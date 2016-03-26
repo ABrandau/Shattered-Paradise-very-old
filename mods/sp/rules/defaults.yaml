@@ -773,6 +773,9 @@
 	Inherits: ^Vehicle
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^batteryboost
+	Explodes:
+		Weapon: ScrinUnitExplode
+		EmptyWeapon: ScrinUnitExplode
 	Voiced:
 		VoiceSet: Limpet	
 	Mobile:

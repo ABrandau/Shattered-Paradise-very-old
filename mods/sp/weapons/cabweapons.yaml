@@ -563,7 +563,7 @@ BasiliskBomb:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: firestormexplo
-		ExplosionPalette: playercab		
+		ExplosionPalette: playercab
 		ImpactSound: expnew12.aud
 		InvalidImpactTypes: Water, Air, AirHit
 	Warhead@3EffWater: CreateEffect

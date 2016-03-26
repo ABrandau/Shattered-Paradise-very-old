@@ -30,7 +30,7 @@ Jah		: Storm Rider vxl.
 Sane Disruption	: Forgotten MRLS vxl.				
 GameMaster0000	: Tiberian Fiend Icon.
 CyborgCommandoKerem: Black Hand Sniper shp.				
-DonutArnold	: Firestorm effect shp.				
+DonutArnold	: Basilisk torpedo explosion effect, scrin structure and aircraft crash explosion effects.
 
 Voice Cast
 

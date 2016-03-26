@@ -465,51 +465,7 @@ BERSERKER:
 		IdleSequences: Idle1, Idle2, Idle3
 	AttackFrontal:
 		Voice: Attack
-		
 
-STALKER:
-	Inherits: ^ScrinSoldier
-	# Buildable:
-		# Queue: Infantry
-		# BuildPaletteOrder: 26
-		# Prerequisites: ~scrrax, scrtech
-	Selectable:
-		Class: Stalker
-	Valued:
-		Cost: 1000
-	Tooltip:
-		Name: Stalker
-		Description: Infiltration Unit, always cloaked, even when\n attacking. reduces the range of enemy units\nalong with their resistance to damage.\nCan move through water.\n  Weak vs Infantry, Vehicles, Aircraft
-	Health:
-		HP: 130
-	Mobile:
-		Speed: 80
-		TerrainSpeeds:
-			Water: 80
-		Crushes: nada
-	RevealsShroud:
-		Range: 6c0			
-	Armament@prim:
-		Weapon: StalkerRail
-	Cloak@cloakgenerator:
-		UpgradeTypes:
-		Palette: cloakscrin		
-		CloakDelay: 25
-		InitialDelay: 25
-		UncloakOn: Unload
-		IsPlayerPalette: true
-	Explodes:
-		Weapon: StalkerExplode
-		EmptyWeapon: StalkerExplode
-		LoadedChance: 100
-		Chance: 100
-	AttackFrontal:
-		Voice: Attack
-	WithInfantryBody:
-		AttackSequence: throw
-	-TakeCover:	
-	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded			
 
 CIV1:
 	Inherits: ^CivilianInfantry
