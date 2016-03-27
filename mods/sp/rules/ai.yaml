@@ -191,8 +191,8 @@
 			scrbattleship: 5
 			scrdestroyer: 5
 		UnitsToBuild:
-			harv: 30%
-			scrharv: 30%
+			harv: 50%
+			scrharv: 50%
 			gdie1: 25%
 			jumpjet: 15%
 			grenadier: 8%
