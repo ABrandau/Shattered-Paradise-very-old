@@ -564,7 +564,7 @@ Player:
 		UnitsCommonNames:
 			Mcv: mcv, drache
 		BuildingLimits:
-			proc: 4
+			proc: 2
 			gasilo: 3
 			gapowr: 8
 			gapile: 2
@@ -609,7 +609,7 @@ Player:
 			scrrax: 2
 			scrweap: 2
 			scrradr: 1
-			scrair: 3
+			scrair: 2
 			scrtech: 1
 			scrneedler: 6
 			scrdrone: 6
@@ -665,7 +665,7 @@ Player:
 			scrdrone: 10%
 			scrtractor: 10%
 		UnitLimits:
-			harv: 6
+			harv: 4
 		UnitsToBuild:
 			harv: 20%
 			scrharv: 20%
@@ -716,10 +716,11 @@ Player:
 			scrscorpion: 4%
 			scrmbt: 8%
 			scrrecharger: 1%
-			scrglyder: 30%
-			tripod: 12%
-			stormrider: 30%
-			scrbattleship: 30%
-			scrdestroyer: 15%
+			scrglyder1: 30%
+			scrglyder2: 30%
+			tripod: 15%
+			stormrider: 50%
+			scrbattleship: 50%
+			scrdestroyer: 25%
 		SquadSize: 15
 		SquadSizeRandomBonus: 30
