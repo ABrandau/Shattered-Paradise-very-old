@@ -80,10 +80,10 @@
 		BuildingFractions:
 			proc: 60%
 			gapowr: 35%
-			gapile: 1%
-			gaweap: 1%
+			gapile: 5%
+			gaweap: 5%
 			garadr: 1%
-			gahpad: 1%
+			gahpad: 3%
 			gatech: 1%
 			gactwr: 20%
 			gavulc: 10%
@@ -98,10 +98,10 @@
 			nasam: 6%
 			naobel: 3%
 			mupowr: 35%
-			murax: 1%
-			muweap: 1%
+			murax: 5%
+			muweap: 5%
 			muradr: 1%
-			muair: 1%
+			muair: 2%
 			muhall: 1%
 			nastlh: 1%
 			nalasr: 10%
@@ -109,20 +109,20 @@
 			muflak: 6%
 			muventi: 4%
 			cabpowr: 35%
-			cabclaw: 1%
-			cabweap: 1%
+			cabclaw: 5%
+			cabweap: 5%
 			cabradr: 1%
 			cabtech: 1%
-			cabair: 1%
+			cabair: 3%
 			cabcannon: 10%
 			cabblast: 10%
 			cabrail: 6%
 			scrproc: 60%
 			scrpowr: 35%
-			scrrax: 1%
-			scrweap: 1%
+			scrrax: 2%
+			scrweap: 2%
 			scrradr: 1%
-			scrair: 3%
+			scrair: 5%
 			scrtech: 1%
 			scrneedler: 10%
 			scrdrone: 10%
