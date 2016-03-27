@@ -709,9 +709,9 @@ Player:
 			blaster: 15%
 			wasp: 10%
 			basilisk: 3%
-			shark: 10%
+			shark: 4%
 			legio: 8%
-			float: 8%
+			float: 4%
 			bug: 4%
 			scrscorpion: 4%
 			scrmbt: 8%
