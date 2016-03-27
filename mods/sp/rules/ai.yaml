@@ -71,10 +71,10 @@
 			cabrail: 4
 			scrproc: 2
 			scrpowr: 8
-			scrrax: 2
-			scrweap: 2
+			scrrax: 1
+			scrweap: 1
 			scrradr: 1
-			scrair: 2
+			scrair: 3
 			scrtech: 1
 			scrneedler: 6
 			scrdrone: 6
@@ -124,11 +124,11 @@
 			cabrail: 6%
 			scrproc: 60%
 			scrpowr: 35%
-			scrrax: 3%
-			scrweap: 3%
-			scrradr: 1%
+			scrrax: 10%
+			scrweap: 10%
+			scrradr: 3%
 			scrair: 10%
-			scrtech: 1%
+			scrtech: 3%
 			scrneedler: 10%
 			scrdrone: 10%
 			scrtractor: 10%
