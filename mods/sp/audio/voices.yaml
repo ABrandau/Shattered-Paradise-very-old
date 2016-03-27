@@ -128,6 +128,7 @@ CyborgCommando:
 	Voices:
 		Select: 23-i000, 23-i002, 23-i004, 23-i006
 		Move: 23-i008, 23-i010, 23-i012, 23-i016
+		Action: 23-i008, 23-i010, 23-i012, 23-i016
 		Attack: 23-i014, 23-i018, 23-i020, 23-i022
 		Die: 22-n104, 22-n108
 		Burned: 22-n106
@@ -197,6 +198,7 @@ Heli:
 	Voices:
 		Select: 30-i000, 30-i002, 30-i004, 30-i006
 		Move: 30-i014, 30-i016, 30-i018, 30-i022
+		Action: 30-i014, 30-i016, 30-i018, 30-i022
 		Attack: 30-i022, 30-i030, 30-i034, 30-i036
 
 Civilian:
