@@ -71,6 +71,11 @@ E3:
 		Weapon: SkirmisherRocket
 		LocalOffset: 128,0,640
 		Name: OnFoot
+		# TargetStances: Ally, Enemy, Neutral
+	# RejectsOrders:
+	# AutoTarget:
+		# InitialStanceAI: HoldFire
+		# InitialStance: HoldFire
 	Armament@GARRISON:
 		Weapon: GSkirmisherRocket
 		LocalOffset: 128,0,640
@@ -821,7 +826,7 @@ MUWEAP:
 		Cost: 2000
 	Tooltip:
 		Name: Mutant War Factory
-		Description: Produces vehicles.
+		Description: Produces and repairs vehicles.
 	ProvidesPrerequisite:
 		Prerequisite: factory
 	Buildable:

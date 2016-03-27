@@ -74,7 +74,7 @@ legio:
 		Length: 13
 		ShadowStart: 450
 	idle2:
-		Start: 155
+		Start: 154
 		Length: 16
 		ShadowStart: 492
 	prone-run:

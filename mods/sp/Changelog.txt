@@ -1,6 +1,12 @@
 YEAR - MONTH - DAY
 
 [2016 - 03 - 24]
+Hand of Kane can no longer be mind controlled.
+Destroyer changes: bullet speed: 220 -> 240
+Ichor Waste Turret Changes cost: 500 -> 700, hp: 350 -> 400, range 4 -> 7, power: 20 -> 40
+Drone hive changes cost: 1100 -> 900 , hp 500 -> 600, 
+
+[2016 - 03 - 25]
 Added new Scrin explosions.
 Wolf Changes Speed: 42 -> 70
 Corrected some infantry selection boxes.
