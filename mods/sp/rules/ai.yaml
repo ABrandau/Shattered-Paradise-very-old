@@ -4,7 +4,7 @@
 		MinimumExcessPower: 60
 		ProtectUnitScanRadius: 15
 		RushAttackScanRadius: 20
-		RushInterval: 650
+		RushInterval: 800
 		StructureProductionActiveDelay: 15
 		StructureProductionRandomBonusDelay: 15
 		AssignRolesInterval: 10
