@@ -132,6 +132,8 @@ BHS:
 	Tooltip:
 		Name: Hand of Kane
 		Description: NOD Commando, sniper unit.\nCloaked when not attacking.\nCan demolish structures using C4.\nInfantry killed by this unit explode.\nHeals on Tiberium.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Targetable:
+		TargetTypes: Ground, Infantry, MindControlInmune
 	Health:
 		HP: 190
 	Mobile:
@@ -739,7 +741,7 @@ NAWEAP:
 		Cost: 2000
 	Tooltip:
 		Name: Nod War Factory
-		Description: Produces vehicles.
+		Description: Produces and repairs vehicles.
 	ProvidesPrerequisite:
 		Prerequisite: factory
 	Buildable:

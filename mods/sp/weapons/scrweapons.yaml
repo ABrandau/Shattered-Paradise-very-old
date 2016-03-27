@@ -139,8 +139,8 @@ ScorpAcid:
 			Concrete: 2
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, TiberiumDeath
 	Warhead@2Smu: LeaveSmudge
-		SmudgeType: SmallScorch		
-		
+		SmudgeType: SmallScorch
+
 ScrMbtCannon:
 	ReloadDelay: 90
 	Range: 6c0
@@ -403,7 +403,7 @@ DestroyerCannon:
 	Inaccuracy: 2c0
 	BurstDelay: 5
 	Projectile: Bullet
-		Speed: 220
+		Speed: 240
 		Image: destroshell
 		Trail: blueballminitrail		
 		Palette: pips
@@ -457,41 +457,29 @@ CouncilSteal:
 #################################################
 # Defences
 #################################################		
-NeedlerCannon:
-	ReloadDelay: 30
-	Range: 6c0
-	Report: 120mmf.aud
-	Burst: 1
-	BurstDelay: 5
+NeedlerAcid:
+	ReloadDelay: 100
+	Range: 7c0
+	Burst: 12
+	Report: flamtnk1.aud
 	Projectile: Bullet
-		Speed: 341
-		Image: blueball
-		# Angle: 90
-		Trail: blueballminitrail
-		Shadow: true
-		Angle: 62
-		Palette: pips
+		Speed: 120
+		Image: acidall32
+		Inaccuracy: 1c0
+		Palette: apolredalpha
+	BurstDelay: 4
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 20
+		Spread: 80
+		Damage: 8
 		Versus:
 			None: 200
-			Wood: 75
-			Light: 85
-			Heavy: 110
-			Concrete: 70
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: scrinpulse2
-		ImpactSound: expnew14.aud
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: scrinpulse2
-		ExplosionPalette: player
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
-	Warhead@4Smu: LeaveSmudge
-		SmudgeType: MediumCrater
+			Wood: 100
+			Light: 45
+			Heavy: 15
+			Concrete: 2
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath, TiberiumDeath
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: SmallScorch
 
 TractorBeam:
 	ReloadDelay: 25
