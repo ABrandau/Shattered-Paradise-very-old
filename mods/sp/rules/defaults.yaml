@@ -110,7 +110,7 @@
 		ShowToEnemies: true
 		ZOffset: 512
 		UpgradeMinEnabledLevel: 1
-	ReloadDelayMultiplier:		
+	ReloadDelayMultiplier:
 		UpgradeTypes: ROTreduction
 		Modifier: 3
 		BaseLevel: 1
@@ -158,8 +158,8 @@
 		ShowToEnemies: true
 		UpgradeTypes: ForgInfantryBuff
 		UpgradeMinEnabledLevel: 1
-		
-^ForgBulldebuff:	
+
+^ForgBulldebuff:
 	ReloadDelayMultiplier@ForgBulldebuff:
 		Modifier: 120
 		UpgradeTypes: ForgBulldebuff
@@ -175,7 +175,7 @@
 		UpgradeTypes: ForgInfantryBuff
 		UpgradeMinEnabledLevel: 1
 
-^NodToxindebuff:	
+^NodToxindebuff:
 	ReloadDelayMultiplier@NodToxindebuff:
 		Modifier: 200
 		UpgradeTypes: NodToxindebuff
@@ -184,50 +184,50 @@
 		UpgradeTypes: NodToxindebuff
 	SpeedMultiplier@NodToxindebuff:
 		Modifier: 30
-		UpgradeTypes: NodToxindebuff		
+		UpgradeTypes: NodToxindebuff
 
 ^EmpDisableMobile:
 	Inherits: ^EmpDisable
 	Mobile:
 		UpgradeTypes: notmobile, StasisDisable
-		UpgradeMaxEnabledLevel: 0	
+		UpgradeMaxEnabledLevel: 0
 
 ^eagleboost:
-	DamageMultiplier:		
+	DamageMultiplier:
 		UpgradeTypes: eagleboost
 		Modifier: 90
 		BaseLevel: 1
-		UpgradeMinEnabledLevel: 1	
+		UpgradeMinEnabledLevel: 1
 
 ^tractorstop:
-	SpeedMultiplier:		
+	SpeedMultiplier:
 		UpgradeTypes: tractorstop
 		Modifier: 15
 		BaseLevel: 1
-		UpgradeMinEnabledLevel: 1	
-	ReloadDelayMultiplier:		
+		UpgradeMinEnabledLevel: 1
+	ReloadDelayMultiplier:
 		UpgradeTypes: tractorstop
 		Modifier: 150
 		BaseLevel: 1
-		UpgradeMinEnabledLevel: 1				
+		UpgradeMinEnabledLevel: 1
 
 ^batteryboost:
-	FirepowerMultiplier:		
+	FirepowerMultiplier:
 		UpgradeTypes: batteryboost
 		Modifier: 130
 		BaseLevel: 1
-		UpgradeMinEnabledLevel: 1				
+		UpgradeMinEnabledLevel: 1
 	SelfHealing@batteryboost
 		Step: 3
 		Ticks: 100
 		HealIfBelow: 1
 		UpgradeTypes: batteryboost
-		UpgradeMinEnabledLevel: 1	
+		UpgradeMinEnabledLevel: 1
 
 ^nomnomnom:
 	DamageMultiplier@nomnomnom:
 		Modifier: 110
-		UpgradeTypes: nomnomnom		
+		UpgradeTypes: nomnomnom
 	SelfHealing@nomnomnom:
 		Step: -30
 		Ticks: 75
@@ -239,7 +239,7 @@
 		Ticks: 75
 		HealIfBelow: 0.2
 		UpgradeTypes: nomnomnom
-		UpgradeMinEnabledLevel: 1	
+		UpgradeMinEnabledLevel: 1
 
 ^BasicBuilding:
 	Inherits@1: ^ExistsInWorld
@@ -249,7 +249,7 @@
 		Modifier: 80
 		UpgradeTypes: FirestormGen
 		BaseLevel: 1
-	DamageMultiplier: 
+	DamageMultiplier:
 		Modifier: 75
 	SelectionDecorations:
 		Palette: pips
@@ -304,13 +304,13 @@
 		Factions: nod
 	EmitInfantryOnSell@cab:
 		ActorTypes: worker
-		Factions: cab		
+		Factions: cab
 	EmitInfantryOnSell@mut:
 		ActorTypes: marauder
 		Factions: mut
 	EmitInfantryOnSell@scr:
 		ActorTypes: legio
-		Factions: scr	
+		Factions: scr
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	CaptureNotification:
@@ -321,7 +321,7 @@
 		Probability: 80
 		OwnerType: Killer
 		DeathType: CabalDeathCrate
-		RequiresLobbyCreeps: true	
+		RequiresLobbyCreeps: true
 	WithMakeAnimation:
 	ThrowsShrapnel:
 		Weapons: LargeDebris
@@ -431,7 +431,7 @@
 		IsPlayerPalette: true
 		CloakSound: cloak5.aud
 		UncloakSound: cloak5.aud
-		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage	
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
 	Health:
 		HP: 50
 		Shape: Circle
@@ -444,7 +444,7 @@
 		Range: 6c0
 	Mobile:
 		Voice: Move
-		UpgradeTypes: StasisDisable		
+		UpgradeTypes: StasisDisable
 		Speed: 71
 		Crushes: crate
 		SharesCell: true
@@ -463,7 +463,7 @@
 		Bounds: 22,30,0,-10
 	Voiced:
 		VoiceSet: Infantry
-	IgnoresDisguise:	
+	IgnoresDisguise:
 	Targetable:
 		TargetTypes: Ground, Infantry
 	QuantizeFacingsFromSequence:
@@ -514,7 +514,7 @@
 		OwnerType: InternalName
 		InternalOwner: Creeps
 		DeathType: TiberiumDeath
-		RequiresLobbyCreeps: true		
+		RequiresLobbyCreeps: true
 	SpawnActorOnDeath@conversion:
 		Actor: worker
 		Probability: 80
@@ -526,7 +526,7 @@
 		Probability: 100
 		OwnerType: Killer
 		DeathType: CabalDeath
-		RequiresLobbyCreeps: false		
+		RequiresLobbyCreeps: false
 	SpawnActorOnDeath@blackhand:
 		Actor: blackhanddummy
 		Probability: 100
@@ -538,7 +538,7 @@
 		Probability: 100
 		OwnerType: Killer
 		DeathType: ScrinDroneDeath
-		RequiresLobbyCreeps: false			
+		RequiresLobbyCreeps: false
 	Guard:
 		Voice: Move
 	Guardable:
@@ -582,14 +582,14 @@
 			Prone350Percent: 350
 		DamageTriggers: TriggerProne
 	PoisonedByTiberium:
-		Weapon: TiberiumHeal		
+		Weapon: TiberiumHeal
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
 		AttackSequence: shoot
 	WithDeathAnimation:
 		CrushedSequence: die-crushed
 		CrushedSequencePalette: player
-		CrushedPaletteIsPlayerPalette: true		
+		CrushedPaletteIsPlayerPalette: true
 
 ^ScrinSoldier:
 	Inherits: ^Infantry
@@ -610,14 +610,14 @@
 			Prone100Percent: 100
 			Prone350Percent: 350
 		DamageTriggers: TriggerProne
-	-PoisonedByTiberium:	
+	-PoisonedByTiberium:
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
 
 ^Cyborg:
 	Inherits@1: ^Infantry
 	# Inherits@2: ^EmpDisableMobile
-	-SpawnActorOnDeath@conversion:	
+	-SpawnActorOnDeath@conversion:
 	MustBeDestroyed:
 	-Crushable:
 	WithPermanentInjury:
@@ -630,11 +630,11 @@
 	Inherits@2: ^AircraftSelfHeal
 	-WithDeathAnimation@normal:
 	-WithDeathAnimation@explosion:
-	-WithDeathAnimation@energy:	
-	-SpawnActorOnDeath@conversion:		
-	-PoisonedByTiberium:	
+	-WithDeathAnimation@energy:
+	-SpawnActorOnDeath@conversion:
+	-PoisonedByTiberium:
 	-Crushable:
-		
+
 ^CivilianInfantry:
 	Inherits: ^Infantry
 	Voiced:
@@ -658,7 +658,7 @@
 	Inherits@11: ^nomnomnom
 	Inherits@12: ^StasisDisable
 	DrawLineToTarget:
-	TemporaryOwnerManager:	
+	TemporaryOwnerManager:
 	Mobile:
 		Crushes: crate
 		TerrainSpeeds:
@@ -680,7 +680,7 @@
 		IsPlayerPalette: true
 		CloakSound: cloak5.aud
 		UncloakSound: cloak5.aud
-		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage		
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
 	RevealsShroud:
 		Range: 9c0
 	RepairableNear:
@@ -700,7 +700,7 @@
 		Probability: 100
 		OwnerType: Killer
 		DeathType: CabalDeath
-		RequiresLobbyCreeps: false		
+		RequiresLobbyCreeps: false
 	SpawnActorOnDeath@egg:
 		Actor: eggs
 		Probability: 10
@@ -720,7 +720,7 @@
 		Probability: 100
 		OwnerType: Killer
 		DeathType: ScrinDroneDeath
-		RequiresLobbyCreeps: false			
+		RequiresLobbyCreeps: false
 	Voiced:
 		VoiceSet: Vehicle
 	Targetable:
@@ -753,7 +753,7 @@
 	ThrowsShrapnel:
 		Weapons: SmallDebris
 		Pieces: 3, 7
-		Range: 2c0, 5c0	
+		Range: 2c0, 5c0
 
 ^Tank:
 	Inherits: ^Vehicle
@@ -777,7 +777,7 @@
 		Weapon: ScrinUnitExplode
 		EmptyWeapon: ScrinUnitExplode
 	Voiced:
-		VoiceSet: Limpet	
+		VoiceSet: Limpet
 	Mobile:
 		Crushes: wall, crate, infantry
 		TerrainSpeeds:
@@ -788,7 +788,7 @@
 			Rough: 60
 			Tiberium: 70
 			BlueTiberium: 70
-			Veins: 70			
+			Veins: 70
 
 ^VoxelVehicle:
 	Inherits: ^Vehicle
@@ -825,7 +825,7 @@
 		UncloakSound: cloak5.aud
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
 	RepairableNear:
-		Buildings: gaweap, naweap, muweap, cabweap, scrweap		
+		Buildings: gaweap, naweap, muweap, cabweap, scrweap
 	AppearsOnRadar:
 		UseLocation: yes
 	Targetable@GROUND:
@@ -879,7 +879,7 @@
 	Targetable@AIRBORNE:
 		TargetTypes: Air, Helicopter
 		UpgradeTypes: airborne
-		UpgradeMinEnabledLevel: 1		
+		UpgradeMinEnabledLevel: 1
 	Hovers@CRUISING:
 		UpgradeTypes: cruising
 		UpgradeMinEnabledLevel: 1
@@ -972,7 +972,7 @@
 		StartsRevealed: true
 	SeedsResource:
 		ResourceType: Tiberium
-		Interval: 45
+		Interval: 35
 	WithIdleAnimation:
 
 ^Tree:
@@ -1201,7 +1201,7 @@
 		WallConnections: 0,-1, 0,3
 	LineBuildNode:
 		Connections: 0,-1, 0,1
-	
+
 ##################################################
 # SP Starts here
 ##################################################
@@ -1210,7 +1210,7 @@
 		IconPalette: chromescrin
 	RenderSprites:
 		PlayerPalette: playerscrin
-	Cloak@CLOAKGENERATOR:	
+	Cloak@CLOAKGENERATOR:
 		Palette: cloakscrin
 	WithDeathAnimation:
 		DeathSequencePalette: playerscrin
@@ -1237,12 +1237,12 @@
 		CrushedSequencePalette: playercab
 		CrushedPaletteIsPlayerPalette: true
 
-^BuildingCloak:		
+^BuildingCloak:
 	Cloak@CLOAKGENERATOR:
 		UpgradeTypes: cloakgenerator
 		UpgradeMinEnabledLevel: 1
 
-^Ra2vxl:		
+^Ra2vxl:
 	RenderVoxels:
 		LightAmbientColor: 0.5,0.5,0.5
 		LightDiffuseColor: 0.7,0.7,0.7
