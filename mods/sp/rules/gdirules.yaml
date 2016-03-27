@@ -864,7 +864,7 @@ GAWEAP:
 		Cost: 2000
 	Tooltip:
 		Name: GDI War Factory
-		Description: Produces vehicles.
+		Description: Produces and repairs vehicles.
 	ProvidesPrerequisite:
 		Prerequisite: factory
 	Buildable:

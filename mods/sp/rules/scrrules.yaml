@@ -69,7 +69,7 @@ LEGIO:
 	GivesExperience:
 		Experience: 150		
 	Tooltip:
-		Name: Legionaire
+		Name: Legionnaire
 		Description: Scrin Frontile trooper. Resistant\nto damage. Cannot be crushed.\nIts weapon damage spreads to nearby cells.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry
 	Health:
 		HP: 140
@@ -473,7 +473,7 @@ SCRGLYDER2:
 	Valued:
 		Cost: 750
 	Tooltip:
-		Name: Glyder
+		Name: Glider
 		Description: Specialized weapons platform.\nCan vary from a ground version and aerial version.\nThe aerial version attacks ground units and vice versa.\n Strong vs Armor.\n  Weak vs Light units.
 	Health:
 		HP: 170
@@ -797,7 +797,7 @@ SCRGLYDER1:
 	Valued:
 		Cost: 750
 	Tooltip:
-		Name: Glyder
+		Name: Glider
 		Description: Specialized weapons platform.\nCan vary from a ground version and aerial version.\nThe aerial version attacks ground units and vice versa.\n Strong vs Armor.\n  Weak vs Light units.
 	Buildable:
 		Queue: Air
@@ -996,7 +996,7 @@ SCRBATTLESHIP:
 	BodyOrientation:
 		QuantizedFacings: 32
 	SpawnActorOnDeath:
-		Actor: SCRBATTLESHIP.Husk			
+		Actor: SCRBATTLESHIP.Husk
 
 SCRINCOUNCIL:
 	Inherits: ^Helicopter
@@ -1254,7 +1254,7 @@ SCRWEAP:
 		Cost: 2000
 	Tooltip:
 		Name: Scrin Forge
-		Description: Produces vehicles.
+		Description: Produces and repairs vehicles.\nCan also repair aircraft.
 	WithBuildingExplosion:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
@@ -1514,10 +1514,10 @@ SCRNEEDLER:
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^TowerStealthDetection
 	Valued:
-		Cost: 500
+		Cost: 700
 	Tooltip:
 		Name: Ichor Waste Turret
-		Description: Basic defense, cloaks when idle.\nHas very high damage but low range.\nRequires power to operate.\n  Strong vs Aircraft\n  Weak vs Ground units
+		Description: Basic defense, cloaks when idle.\nRequires power to operate.\n  Strong vs Aircraft\n  Weak vs Ground units
 	Buildable:
 		Queue: Defense
 		Prerequisites: scrrax, ~structures.scr
@@ -1531,7 +1531,7 @@ SCRNEEDLER:
 		Palette: apolbluealpha
 	DisabledOverlay:
 	Health:
-		HP: 350
+		HP: 400
 	Armor:
 		Type: Heavy
 	BodyOrientation:
@@ -1554,10 +1554,10 @@ SCRNEEDLER:
 	WithSpriteTurret:
 		Recoils: yes
 	Armament:
-		Weapon: ScorpAcid
+		Weapon: NeedlerAcid
 		LocalOffset: 512,0,400
 	Power:
-		Amount: -20
+		Amount: -40
 	SelectionDecorations:
 		VisualBounds: 40, 36, -3, -8
 
@@ -1609,7 +1609,7 @@ SCRDRONE:
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^TowerStealthDetection	
 	Valued:
-		Cost: 1100
+		Cost: 900
 	Tooltip:
 		Name: Drone Hive
 		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft
@@ -1628,7 +1628,7 @@ SCRDRONE:
 	RequiresPower:
 	DisabledOverlay:
 	Health:
-		HP: 500
+		HP: 600
 	Armor:
 		Type: Heavy
 	RevealsShroud:

@@ -1,6 +1,23 @@
 YEAR - MONTH - DAY
 
+[2016 - 03 - 27]
+Falcon Changes: damage per bomb 7 -> 5
+Fixed error that made some units crash the game when sent to repair.
+Flak Cannon changes: Reload delay: 50 -> 75
+Quad Cannon AA Changes: damage 40 -> 20, minimun range: 1-> 3
+Gargoyl AA changes: damage: 15 -> 10, Burst: 1 -> 3, Increased Innacuracy, reload delay: 100 -> 200
+Fixed some typing errors. 
+Added Tay AI. A brand new AI that has teeth!
+Increased blossom tree production.
+
 [2016 - 03 - 24]
+Hand of Kane can no longer be mind controlled.
+Destroyer changes: bullet speed: 220 -> 240
+Ichor Waste Turret Changes cost: 500 -> 700, hp: 350 -> 400, range 4 -> 7, power: 20 -> 40
+Drone hive changes cost: 1100 -> 900 , hp 500 -> 600, 
+
+[2016 - 03 - 25]
+>>>>>>> origin/Bleed
 Added new Scrin explosions.
 Wolf Changes Speed: 42 -> 70
 Corrected some infantry selection boxes.

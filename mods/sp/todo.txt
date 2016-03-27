@@ -8,14 +8,13 @@ Correct structure graphic offset:
 	Mutant Factory Door.
 	Scrin Forge.
 GDI:
-	Add Guardian platform repair mode logo.
 Mutant:
-	Add tiberium radiation effect logo.
-	Redo harvester and EMP cannon logo.
+	Redo harvester and EMP cannon cameo.
 CABAL:
 	Add "devouring" effect logo.
 	Redo harvester and EMP cannon logo.
 	Adjust reaper railgun offset.
+	Remove black dots on structure remap texture
 
 Implement Muzzle effects for most of the vehicles.
 Create or look for smoke effects and implement them in the weapons.
@@ -24,13 +23,18 @@ Create or look for smoke effects and implement them in the weapons.
 Rework Tooltips. (add data about its damage type and armor).
 Enable Cyberdogs.
 
-[Mechanics]
+[Balance]
+Replace Forgotten Battlefortress with a tiberum beast.
+Buff the Wasp AA power or rework the bassilisk.
+Make the reaper T3 or rework it.
 
+[Mechanics]
 [TODO / requires code]
 Enable purifier desolator logic.
 Code / create Gas clouds.
 Enable Forgotten MRLS to spawn gas clouds.
 Enable Superweapons.
+Create new AI personalities.
 
 [Knowledge]
 Figure out how volume control works.

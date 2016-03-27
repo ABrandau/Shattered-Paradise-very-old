@@ -1004,7 +1004,7 @@ CABWEAP:
 		Cost: 2000
 	Tooltip:
 		Name: C.A.B.A.L. War Factory
-		Description: Produces vehicles.
+		Description: Produces and repairs vehicles.\nCan also repair aircraft.
 	ProvidesPrerequisite:
 		Prerequisite: factory
 	Buildable:
