@@ -1,6 +1,10 @@
 YEAR - MONTH - DAY
 
-[2016 - 03 - 24]
+[2016 - 03 - 27]
+Fixed some typing errors. 
+Added Tay AI
+
+[2016 - 03 - 26]
 Added new Scrin explosions.
 Wolf Changes Speed: 42 -> 70
 Corrected some infantry selection boxes.
