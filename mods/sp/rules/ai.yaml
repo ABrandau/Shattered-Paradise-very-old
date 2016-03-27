@@ -2,16 +2,20 @@
 	HackyAI@Tay:
 		Name: Tay
 		MinimumExcessPower: 60
-		ProtectUnitScanRadius: 50
-		RushAttackScanRadius: 15
-		RushInterval: 800
+		ProtectUnitScanRadius: 15
+		RushAttackScanRadius: 20
+		RushInterval: 650
 		StructureProductionActiveDelay: 15
 		StructureProductionRandomBonusDelay: 15
-		IdleBaseUnitsMaximum: 40
+		AssignRolesInterval: 10
+		IdleBaseUnitsMaximum: 30
 		RallyPointScanRadius: 30
 		MinBaseRadius: 2
 		MaxBaseRadius: 30
-		NewProductionCashThreshold: 5000
+		StructureProductionActiveDelay: 4
+		ShouldRepairBuildings: True
+		CheckForNewBasesDelay: 1000
+		NewProductionCashThreshold: 4000
 		BuildingCommonNames:
 			ConstructionYard: gacnst, drached
 			Refinery: proc, scrproc
@@ -45,7 +49,7 @@
 			nastlh: 1
 			naobel: 2
 			nalasr: 8
-			nasam: 4
+			nasam: 5
 			mupowr: 8
 			murax: 2
 			muweap: 2
@@ -151,9 +155,9 @@
 			mutfiend: 5
 			hunter: 5
 			awarrior: 5
-			mutapc: 5
+			mutapc: 2
 			muttank: 5
-			mutquad: 5
+			mutquad: 3
 			mrls: 5
 			wolf: 5
 			fortress: 1
@@ -162,10 +166,10 @@
 			reapercab2: 5
 			PDrone: 5
 			glad: 5
-			jenn: 5
+			jenn: 4
 			centurion: 5
-			grinder: 5
-			paladin: 5
+			grinder: 1
+			paladin: 2
 			blaster: 5
 			wasp: 10
 			basilisk: 5
@@ -241,4 +245,4 @@
 			scrbattleship: 50%
 			scrdestroyer: 25%
 		SquadSize: 15
-		SquadSizeRandomBonus: 30
+		SquadSizeRandomBonus: 35
