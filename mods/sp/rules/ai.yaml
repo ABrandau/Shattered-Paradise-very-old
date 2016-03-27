@@ -133,8 +133,8 @@
 			scrdrone: 10%
 			scrtractor: 10%
 		UnitLimits:
-			harv: 5
-			scrharv: 5
+			harv: 4
+			scrharv: 4
 			gdie1: 10
 			jumpjet: 5
 			grenadier: 5
