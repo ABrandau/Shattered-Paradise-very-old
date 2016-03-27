@@ -12,7 +12,6 @@
 		RallyPointScanRadius: 30
 		MinBaseRadius: 2
 		MaxBaseRadius: 30
-		StructureProductionActiveDelay: 4
 		ShouldRepairBuildings: True
 		CheckForNewBasesDelay: 1000
 		NewProductionCashThreshold: 4000
