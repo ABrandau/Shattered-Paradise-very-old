@@ -494,7 +494,7 @@ QuadFireAA:
 	Range: 9c0
 	Report: cygun1.aud
 	ValidTargets: Air
-	MinRange: 1c0
+	MinRange: 3c0
 	Projectile: Missile
 		Speed: 600
 		Image: 120mm
@@ -505,7 +505,7 @@ QuadFireAA:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		ValidTargets: Air
-		Damage: 40
+		Damage: 20
 		Versus:
 			Concrete: 5
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, TiberiumDeath
@@ -694,11 +694,12 @@ GargoylRocket:
 		SmudgeType: SmallCrater
 		
 GargoylRocketAA:
-	ReloadDelay: 100
+	ReloadDelay: 200
 	Range: 6c0
-	Burst: 1
+	Burst: 3
 	Report: orcamis1.aud
 	ValidTargets:  Air
+	Innacuracy: 0c512
 	Projectile: Missile
 		Speed: 800
 		Arm: 2
@@ -706,12 +707,12 @@ GargoylRocketAA:
 		Shadow: true
 		Image: DRAGON
 		Trail: small_smoke_trail
-		RateOfTurn: 8
+		RateOfTurn: 20
 		RangeLimit: 35
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 85
-		Damage: 15
+		Spread: 250
+		Damage: 10
 		ValidTargets: Air
 		Versus:
 			None: 30
@@ -766,7 +767,7 @@ FalconPunch:
 # Structures
 #################################################################
 FlakFire:
-	ReloadDelay: 50
+	ReloadDelay: 75
 	Range: 6c0
 	Report: cygun1.aud
 	MinRange: 1c0
