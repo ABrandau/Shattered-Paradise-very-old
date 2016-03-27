@@ -9,7 +9,7 @@
 		StructureProductionRandomBonusDelay: 15
 		AssignRolesInterval: 10
 		IdleBaseUnitsMaximum: 30
-		RallyPointScanRadius: 30
+		RallyPointScanRadius: 20
 		MinBaseRadius: 2
 		MaxBaseRadius: 30
 		ShouldRepairBuildings: True
