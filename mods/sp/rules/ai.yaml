@@ -127,46 +127,48 @@
 		UnitLimits:
 			harv: 5
 			scrharv: 5
-			gdie1: 20
-			jumpjet: 20
-			grenadier: 20
-			eagleguard: 20
-			mmch: 20
-			smech: 20
-			hvr: 20
-			sonic: 20
-			altnode1: 20
-			crusader: 20
-			templar: 20
-			bhs: 20
-			bggy: 20
-			ttnk: 20
-			armh: 20
-			subtank: 20
-			stnk: 20
-			marauder: 20
-			e3: 20
-			mutfiend: 20
-			hunter: 20
-			awarrior: 20
-			mutapc: 20
-			muttank: 20
-			mutquad: 20
-			mrls: 20
-			wolf: 20
+			gdie1: 15
+			jumpjet: 5
+			grenadier: 5
+			eagleguard: 5
+			mmch: 5
+			smech: 5
+			hvr: 5
+			sonic: 5
+			jugger: 3
+			hmec: 1
+			altnode1: 15
+			crusader: 5
+			templar: 5
+			bhs: 1
+			bggy: 5
+			ttnk: 5
+			armh: 5
+			subtank: 5
+			stnk: 5
+			marauder: 15
+			e3: 15
+			mutfiend: 5
+			hunter: 5
+			awarrior: 5
+			mutapc: 5
+			muttank: 5
+			mutquad: 5
+			mrls: 5
+			wolf: 5
 			fortress: 1
-			cyborg: 20
-			cabsentry: 20
-			reapercab2: 20
-			PDrone: 20
-			glad: 20
-			jenn: 20
-			centurion: 20
-			grinder: 20
-			paladin: 20
-			blaster: 20
-			wasp: 20
-			basilisk: 20
+			cyborg: 15
+			cabsentry: 5
+			reapercab2: 5
+			PDrone: 5
+			glad: 5
+			jenn: 5
+			centurion: 5
+			grinder: 5
+			paladin: 5
+			blaster: 5
+			wasp: 10
+			basilisk: 5
 			shark: 3
 			legio: 15
 			float: 4
@@ -183,7 +185,7 @@
 		UnitsToBuild:
 			harv: 20%
 			scrharv: 20%
-			gdie1: 60%
+			gdie1: 25%
 			jumpjet: 15%
 			grenadier: 8%
 			eagleguard: 8%
@@ -191,6 +193,8 @@
 			smech: 25%
 			hvr: 45%
 			sonic: 5%
+			jugger: 3%
+			hmec: 25%
 			altnode1: 80%
 			crusader: 8%
 			templar: 5%
@@ -200,8 +204,8 @@
 			armh: 10%
 			subtank: 8%
 			stnk: 8%
-			marauder: 80%
-			e3: 8%
+			marauder: 35%
+			e3: 25%
 			mutfiend: 3%
 			hunter: 5%
 			awarrior: 15%
@@ -219,9 +223,9 @@
 			jenn: 25%
 			centurion: 30%
 			grinder: 10%
-			paladin: 2%
+			paladin: 30%
 			blaster: 15%
-			wasp: 10%
+			wasp: 15%
 			basilisk: 3%
 			shark: 4%
 			legio: 8%
