@@ -163,7 +163,7 @@
 			cyborg: 15
 			cabsentry: 5
 			reapercab2: 5
-			PDrone: 5
+			pdrone: 5
 			glad: 5
 			jenn: 4
 			centurion: 5
@@ -221,7 +221,7 @@
 			cyborg: 16%
 			cabsentry: 8%
 			reapercab2: 4%
-			PDrone: 3%
+			pdrone: 3%
 			glad: 4%
 			jenn: 25%
 			centurion: 30%
