@@ -33,8 +33,9 @@
 			gapile: 2
 			gaweap: 2
 			garadr: 1
-			gahpad: 1
+			gahpad: 4
 			gatech: 1
+			gafire: 1
 			gactwr: 20
 			gavulc: 4
 			garock: 4
@@ -43,12 +44,13 @@
 			nahand: 2
 			naweap: 2
 			naradr: 1
-			nahpad: 5
+			nahpad: 4
 			natech: 1
 			nastlh: 1
+			naapwr: 3
 			naobel: 2
 			nalasr: 8
-			nasam: 5
+			nasam: 4
 			mupowr: 8
 			murax: 2
 			muweap: 2
@@ -79,13 +81,15 @@
 			scrtractor: 6
 		BuildingFractions:
 			proc: 60%
+			gasilo: 10%
 			gapowr: 35%
-			gapile: 5%
-			gaweap: 5%
+			gapile: 10%
+			gaweap: 10%
 			garadr: 1%
-			gahpad: 3%
+			gahpad: 5%
 			gatech: 1%
-			gactwr: 20%
+			gafire: 1%
+			gactwr: 25%
 			gavulc: 10%
 			garock: 10%
 			gacsam: 6%
@@ -97,20 +101,21 @@
 			natech: 1%
 			nasam: 6%
 			naobel: 3%
+			nastlh: 1%
+			naapwr: 1%
+			nalasr: 10%
 			mupowr: 35%
 			murax: 5%
 			muweap: 5%
 			muradr: 1%
 			muair: 2%
 			muhall: 1%
-			nastlh: 1%
-			nalasr: 10%
 			mubunkr: 5%
 			muflak: 6%
 			muventi: 4%
 			cabpowr: 35%
-			cabclaw: 5%
-			cabweap: 5%
+			cabclaw: 10%
+			cabweap: 10%
 			cabradr: 1%
 			cabtech: 1%
 			cabair: 3%
@@ -119,10 +124,10 @@
 			cabrail: 6%
 			scrproc: 60%
 			scrpowr: 35%
-			scrrax: 2%
-			scrweap: 2%
+			scrrax: 3%
+			scrweap: 3%
 			scrradr: 1%
-			scrair: 5%
+			scrair: 10%
 			scrtech: 1%
 			scrneedler: 10%
 			scrdrone: 10%
@@ -130,7 +135,7 @@
 		UnitLimits:
 			harv: 5
 			scrharv: 5
-			gdie1: 15
+			gdie1: 10
 			jumpjet: 5
 			grenadier: 5
 			eagleguard: 5
@@ -140,7 +145,7 @@
 			sonic: 5
 			jugger: 3
 			hmec: 1
-			altnode1: 15
+			altnode1: 10
 			crusader: 5
 			templar: 5
 			bhs: 1
@@ -149,8 +154,8 @@
 			armh: 5
 			subtank: 5
 			stnk: 5
-			marauder: 15
-			e3: 15
+			marauder: 10
+			e3: 10
 			mutfiend: 5
 			hunter: 5
 			awarrior: 5
@@ -159,8 +164,7 @@
 			mutquad: 3
 			mrls: 5
 			wolf: 5
-			fortress: 1
-			cyborg: 15
+			cyborg: 10
 			cabsentry: 5
 			reapercab2: 5
 			pdrone: 5
@@ -186,8 +190,8 @@
 			scrbattleship: 5
 			scrdestroyer: 5
 		UnitsToBuild:
-			harv: 20%
-			scrharv: 20%
+			harv: 30%
+			scrharv: 30%
 			gdie1: 25%
 			jumpjet: 15%
 			grenadier: 8%
@@ -217,7 +221,6 @@
 			mutquad: 10%
 			mrls: 10%
 			wolf: 4%
-			fortress: 3%
 			cyborg: 16%
 			cabsentry: 8%
 			reapercab2: 4%
@@ -240,8 +243,8 @@
 			scrglyder1: 30%
 			scrglyder2: 30%
 			tripod: 15%
-			stormrider: 50%
-			scrbattleship: 50%
-			scrdestroyer: 25%
+			stormrider: 75%
+			scrbattleship: 75%
+			scrdestroyer: 50%
 		SquadSize: 15
 		SquadSizeRandomBonus: 35
