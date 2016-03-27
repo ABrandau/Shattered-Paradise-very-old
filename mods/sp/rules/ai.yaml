@@ -33,7 +33,7 @@
 			gapile: 2
 			gaweap: 2
 			garadr: 1
-			gahpad: 4
+			gahpad: 1
 			gatech: 1
 			gafire: 1
 			gactwr: 20
@@ -44,7 +44,7 @@
 			nahand: 2
 			naweap: 2
 			naradr: 1
-			nahpad: 4
+			nahpad: 1
 			natech: 1
 			nastlh: 1
 			naapwr: 3
@@ -145,6 +145,7 @@
 			sonic: 5
 			jugger: 3
 			hmec: 1
+			guardian: 1
 			altnode1: 10
 			crusader: 5
 			templar: 5
@@ -202,6 +203,7 @@
 			sonic: 5%
 			jugger: 3%
 			hmec: 25%
+			guardian: 5%
 			altnode1: 80%
 			crusader: 8%
 			templar: 5%
