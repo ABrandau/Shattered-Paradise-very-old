@@ -1,544 +1,4 @@
-Player:
-	HackyAI@TestAI:
-		Name: "Fun" AI
-		MinimumExcessPower: 60
-		ProtectUnitScanRadius: 70
-		RushAttackScanRadius: 70
-		StructureProductionActiveDelay: 15
-		StructureProductionRandomBonusDelay: 15
-		NewProductionCashThreshold: 9000
-		BuildingCommonNames:
-			ConstructionYard: gacnst, drached
-			Refinery: proc, scrproc
-			Power: gapowr, napowr, naapwr, cabpowr, mutpowr, scrpowr
-			Barracks: gapile, nahand, mutrax, cabrax, scrrax
-			VehiclesFactory: gaweap, naweap, mutweap, cabweap, scrweap
-			Production: gapile, nahand, mutrax, cabclaw, scrrax, gaweap, naweap, mutweap, cabweap, scrweap
-			Silo: gasilo
-		UnitQueues: Vehicle, Infantry, Air
-		UnitsCommonNames:
-			Mcv: mcv, drache
-		BuildingLimits:
-			proc: 4
-			gasilo: 3
-			gapowr: 8
-			gapile: 2
-			gaweap: 2
-			garadr: 1
-			gahpad: 1
-			gatech: 1
-			gactwr: 20
-			gavulc: 4
-			garock: 4
-			gacsam: 4
-			napowr: 8
-			nahand: 2
-			naweap: 2
-			naradr: 1
-			nahpad: 5
-			natech: 1
-			nastlh: 1
-			naobel: 2
-			nalasr: 8
-			nasam: 4
-			mupowr: 8
-			murax: 2
-			muweap: 2
-			muradr: 1
-			mutair: 1
-			muhall: 1
-			mubunkr: 12
-			muflak: 4
-			cabpowr: 8
-			cabclaw: 2
-			cabweap: 2
-			cabradr: 1
-			cabair: 1
-			cabtech: 1
-			cabcannon: 7
-			cabblast: 7
-			cabrail: 4
-			scrproc: 4
-			scrpowr: 8
-			scrrax: 2
-			scrweap: 2
-			scrradr: 1
-			scrair: 1
-			scrtech: 1
-			scrneedler: 6
-			scrdrone: 6
-			scrtractor: 6
-		BuildingFractions:
-			proc: 60%
-			gapowr: 35%
-			gapile: 1%
-			gaweap: 1%
-			garadr: 1%
-			gahpad: 1%
-			gatech: 1%
-			gactwr: 20%
-			gavulc: 10%
-			garock: 10%
-			gacsam: 6%
-			napowr: 35%
-			nahand: 1%
-			naweap: 1%
-			naradr: 1%
-			nahpad: 1%
-			natech: 1%
-			nasam: 6%
-			naobel: 3%
-			mupowr: 35%
-			murax: 1%
-			muweap: 1%
-			muradr: 1%
-			muair: 1%
-			muhall: 1%
-			nastlh: 1%
-			nalasr: 10%
-			mubunkr: 5%
-			muflak: 6%
-			cabpowr: 35%
-			cabclaw: 1%
-			cabweap: 1%
-			cabradr: 1
-			cabtech: 1%
-			cabair: 1%
-			cabcannon: 10%
-			cabblast: 10%
-			cabrail: 6%
-			scrproc: 60%
-			scrpowr: 35%
-			scrrax: 1%
-			scrweap: 1%
-			scrradr: 1%
-			scrair: 1%
-			scrtech: 1%
-			scrneedler: 10%
-			scrdrone: 10%
-			scrtractor: 10%
-		UnitLimits:
-			harv: 6
-		UnitsToBuild:
-			harv: 20%
-			scrharv: 20%
-			gdie1: 80%
-			JUMPJET: 15%
-			Grenadier: 8%
-			eagleguard: 8%
-			mmch: 15%
-			smech: 25%
-			hvr: 45%
-			sonic: 5%
-			altnode1: 80%
-			crusader: 8%
-			templar: 5%
-			bhs: 4%
-			bggy: 75%
-			ttnk: 45%
-			armh: 10%
-			subtank: 8
-			stnk: 8%
-			marauder: 80%
-			e3: 8%
-			mutfiend: 3%
-			hunter: 5%
-			awarrior: 15%
-			mutapc: 20%
-			muttank: 15%
-			mutquad: 10%
-			mrls: 10%
-			wolf: 4%
-			fortress: 3%
-			cyborg: 16%
-			cabsentry: 8%
-			REAPERCAB2: 4%
-			PDrone: 3%
-			glad: 4%
-			jenn: 25%
-			centurion: 30%
-			grinder: 10%
-			paladin: 2%
-			blaster: 15%
-			wasp: 10%
-			basilisk: 3%
-			shark: 16%
-			legio: 8%
-			float: 8%
-			bug: 4%
-			scrscorpion: 4%
-			scrmbt: 4%
-			scrdronec: 4%
-			scrrecharger: 1%
-			scrglyder: 4%
-			tripod: 4%
-			stormrider: 4%
-			scrbattleship: 4%
-			scrdestroyer: 4%
-		SquadSize: 10
-		SquadSizeRandomBonus: 25
-
-	HackyAI@Weed:
-		Name: Casual AI
-		MinimumExcessPower: 60
-		ProtectUnitScanRadius: 60
-		RushAttackScanRadius: 60
-		StructureProductionActiveDelay: 45
-		StructureProductionRandomBonusDelay: 220
-		NewProductionCashThreshold: 9000
-		BuildingCommonNames:
-			ConstructionYard: gacnst, drached
-			Refinery: proc, scrproc
-			Power: gapowr, napowr, naapwr, cabpowr, mutpowr, scrpowr
-			Barracks: gapile, nahand, mutrax, cabrax, scrrax
-			VehiclesFactory: gaweap, naweap, mutweap, cabweap, scrweap
-			Production: gapile, nahand, mutrax, cabclaw, scrrax, gaweap, naweap, mutweap, cabweap, scrweap
-			Silo: gasilo
-		UnitQueues: Vehicle, Infantry, Air
-		UnitsCommonNames:
-			Mcv: mcv, drache
-		BuildingLimits:
-			proc: 4
-			gasilo: 3
-			gapowr: 8
-			gapile: 2
-			gaweap: 2
-			garadr: 1
-			gahpad: 1
-			gatech: 1
-			gactwr: 20
-			gavulc: 4
-			garock: 4
-			gacsam: 4
-			napowr: 8
-			nahand: 2
-			naweap: 2
-			naradr: 1
-			nahpad: 1
-			natech: 1
-			nastlh: 1
-			naobel: 2
-			nalasr: 8
-			nasam: 4
-			mupowr: 8
-			murax: 2
-			muweap: 2
-			muradr: 1
-			mutair: 1
-			muhall: 1
-			mubunkr: 12
-			muflak: 4
-			cabpowr: 8
-			cabclaw: 2
-			cabweap: 2
-			cabradr: 1
-			cabair: 1
-			cabtech: 1
-			cabcannon: 7
-			cabblast: 7
-			cabrail: 4
-			scrproc: 4
-			scrpowr: 8
-			scrrax: 2
-			scrweap: 2
-			scrradr: 1
-			scrair: 2
-			scrtech: 1
-			scrneedler: 6
-			scrdrone: 6
-			scrtractor: 6
-		BuildingFractions:
-			proc: 60%
-			gapowr: 35%
-			gapile: 1%
-			gaweap: 1%
-			garadr: 1%
-			gahpad: 1%
-			gatech: 1%
-			gactwr: 20%
-			gavulc: 10%
-			garock: 10%
-			gacsam: 6%
-			napowr: 35%
-			nahand: 1%
-			naweap: 1%
-			naradr: 1%
-			nahpad: 1%
-			natech: 1%
-			nasam: 6%
-			naobel: 3%
-			mupowr: 35%
-			murax: 1%
-			muweap: 1%
-			muradr: 1%
-			muair: 1%
-			muhall: 1%
-			nastlh: 1%
-			nalasr: 10%
-			mubunkr: 5%
-			muflak: 6%
-			cabpowr: 35%
-			cabclaw: 1%
-			cabweap: 1%
-			cabradr: 1
-			cabtech: 1%
-			cabair: 1%
-			cabcannon: 10%
-			cabblast: 10%
-			cabrail: 6%
-			scrproc: 60%
-			scrpowr: 35%
-			scrrax: 1%
-			scrweap: 1%
-			scrradr: 1%
-			scrair: 1%
-			scrtech: 1%
-			scrneedler: 10%
-			scrdrone: 10%
-			scrtractor: 10%
-		UnitLimits:
-			harv: 6
-		UnitsToBuild:
-			harv: 20%
-			scrharv: 20%
-			gdie1: 80%
-			JUMPJET: 15%
-			Grenadier: 8%
-			eagleguard: 8%
-			medic: 2%
-			mmch: 15%
-			smech: 25%
-			hvr: 45%
-			sonic: 5%
-			altnode1: 80%
-			crusader: 8%
-			templar: 5%
-			bhs: 4%
-			bggy: 75%
-			ttnk: 45%
-			armh: 10%
-			subtank: 8
-			stnk: 8%
-			marauder: 80%
-			e3: 8%
-			mutfiend: 3%
-			hunter: 5%
-			awarrior: 15%
-			mutapc: 20%
-			muttank: 15%
-			mutquad: 10%
-			mrls: 10%
-			wolf: 4%
-			fortress: 3%
-			cyborg: 16%
-			cabsentry: 8%
-			REAPERCAB2: 4%
-			PDrone: 3%
-			glad: 4%
-			jenn: 25%
-			centurion: 30%
-			grinder: 10%
-			paladin: 2%
-			blaster: 15%
-			wasp: 10%
-			basilisk: 3%
-			shark: 16%
-			legio: 8%
-			float: 8%
-			bug: 4%
-			scrscorpion: 4%
-			scrmbt: 4%
-			scrdronec: 4%
-			scrrecharger: 1%
-			scrglyder: 4%
-			tripod: 4%
-			stormrider: 4%
-			scrbattleship: 4%
-			scrdestroyer: 4%
-		SquadSize: 10
-		SquadSizeRandomBonus: 25
-
-	HackyAI@Cancer:
-		Name: Cancer AI
-		MinimumExcessPower: 60
-		ProtectUnitScanRadius: 70
-		RushAttackScanRadius: 70
-		StructureProductionActiveDelay: 15
-		StructureProductionRandomBonusDelay: 15
-		NewProductionCashThreshold: 9000
-		BuildingCommonNames:
-			ConstructionYard: gacnst, drached
-			Refinery: proc, scrproc
-			Power: gapowr, napowr, naapwr, cabpowr, mutpowr, scrpowr
-			Barracks: gapile, nahand, mutrax, cabrax, scrrax
-			VehiclesFactory: gaweap, naweap, mutweap, cabweap, scrweap
-			Production: gapile, nahand, mutrax, cabclaw, scrrax, gaweap, naweap, mutweap, cabweap, scrweap
-			Silo: gasilo
-		UnitQueues: Vehicle, Infantry, Air
-		UnitsCommonNames:
-			Mcv: mcv, drache
-		BuildingLimits:
-			proc: 4
-			gasilo: 3
-			gapowr: 8
-			gapile: 2
-			gaweap: 2
-			garadr: 1
-			gahpad: 1
-			gatech: 1
-			gactwr: 20
-			gavulc: 4
-			garock: 4
-			gacsam: 4
-			napowr: 8
-			nahand: 2
-			naweap: 2
-			naradr: 1
-			nahpad: 5
-			natech: 1
-			nastlh: 1
-			naobel: 2
-			nalasr: 8
-			nasam: 4
-			mupowr: 8
-			murax: 2
-			muweap: 2
-			muradr: 1
-			mutair: 1
-			muhall: 1
-			mubunkr: 12
-			muflak: 4
-			cabpowr: 8
-			cabclaw: 2
-			cabweap: 2
-			cabradr: 1
-			cabair: 1
-			cabtech: 1
-			cabcannon: 7
-			cabblast: 7
-			cabrail: 4
-			scrproc: 4
-			scrpowr: 8
-			scrrax: 2
-			scrweap: 2
-			scrradr: 1
-			scrair: 1
-			scrtech: 1
-			scrneedler: 6
-			scrdrone: 6
-			scrtractor: 6
-		BuildingFractions:
-			proc: 60%
-			gapowr: 35%
-			gapile: 1%
-			gaweap: 1%
-			garadr: 1%
-			gahpad: 1%
-			gatech: 1%
-			gactwr: 20%
-			gavulc: 10%
-			garock: 10%
-			gacsam: 6%
-			napowr: 35%
-			nahand: 1%
-			naweap: 1%
-			naradr: 1%
-			nahpad: 1%
-			natech: 1%
-			nasam: 6%
-			naobel: 3%
-			mupowr: 35%
-			murax: 1%
-			muweap: 1%
-			muradr: 1%
-			muair: 1%
-			muhall: 1%
-			nastlh: 1%
-			nalasr: 10%
-			mubunkr: 5%
-			muflak: 6%
-			cabpowr: 35%
-			cabclaw: 1%
-			cabweap: 1%
-			cabradr: 1
-			cabtech: 1%
-			cabair: 1%
-			cabcannon: 10%
-			cabblast: 10%
-			cabrail: 6%
-			scrproc: 60%
-			scrpowr: 35%
-			scrrax: 1%
-			scrweap: 1%
-			scrradr: 1%
-			scrair: 1%
-			scrtech: 1%
-			scrneedler: 10%
-			scrdrone: 10%
-			scrtractor: 10%
-		UnitLimits:
-			harv: 6
-		UnitsToBuild:
-			mcv: 5%
-			drache: 5%
-			harv: 20%
-			scrharv: 20%
-			gdie1: 80%
-			JUMPJET: 15%
-			Grenadier: 8%
-			eagleguard: 8%
-			mmch: 15%
-			smech: 25%
-			hvr: 45%
-			sonic: 5%
-			altnode1: 80%
-			crusader: 8%
-			templar: 5%
-			bhs: 4%
-			bggy: 75%
-			ttnk: 45%
-			armh: 10%
-			subtank: 8
-			stnk: 8%
-			marauder: 80%
-			e3: 8%
-			mutfiend: 3%
-			hunter: 5%
-			awarrior: 15%
-			mutapc: 20%
-			muttank: 15%
-			mutquad: 10%
-			mrls: 10%
-			wolf: 4%
-			fortress: 3%
-			cyborg: 16%
-			cabsentry: 8%
-			REAPERCAB2: 4%
-			PDrone: 3%
-			glad: 4%
-			jenn: 25%
-			centurion: 30%
-			grinder: 10%
-			paladin: 2%
-			blaster: 15%
-			wasp: 10%
-			basilisk: 3%
-			shark: 16%
-			legio: 8%
-			float: 8%
-			bug: 4%
-			scrscorpion: 4%
-			scrmbt: 4%
-			scrdronec: 4%
-			scrrecharger: 1%
-			scrglyder: 4%
-			tripod: 4%
-			stormrider: 4%
-			scrbattleship: 4%
-			scrdestroyer: 4%
-		SquadSize: 10
-		SquadSizeRandomBonus: 25
-
+  Player:
 	HackyAI@Tay:
 		Name: Tay
 		MinimumExcessPower: 60
@@ -665,7 +125,62 @@ Player:
 			scrdrone: 10%
 			scrtractor: 10%
 		UnitLimits:
-			harv: 4
+			harv: 5
+			harv: 20
+			scrharv: 20
+			gdie1: 20
+			jumpjet: 20
+			grenadier: 20
+			eagleguard: 20
+			mmch: 20
+			smech: 20
+			hvr: 20
+			sonic: 20
+			altnode1: 20
+			crusader: 20
+			templar: 20
+			bhs: 20
+			bggy: 20
+			ttnk: 20
+			armh: 20
+			subtank: 20
+			stnk: 20
+			marauder: 20
+			e3: 20
+			mutfiend: 20
+			hunter: 20
+			awarrior: 20
+			mutapc: 20
+			muttank: 20
+			mutquad: 20
+			mrls: 20
+			wolf: 20
+			fortress: 1
+			cyborg: 20
+			cabsentry: 20
+			reapercab2: 20
+			PDrone: 20
+			glad: 20
+			jenn: 20
+			centurion: 20
+			grinder: 20
+			paladin: 20
+			blaster: 20
+			wasp: 20
+			basilisk: 20
+			shark: 3
+			legio: 15
+			float: 4
+			bug: 5
+			scrscorpion: 2
+			scrmbt: 3
+			scrrecharger: 1
+			scrglyder1: 15
+			scrglyder2: 15
+			tripod: 2
+			stormrider: 20
+			scrbattleship: 5
+			scrdestroyer: 5
 		UnitsToBuild:
 			harv: 20%
 			scrharv: 20%
