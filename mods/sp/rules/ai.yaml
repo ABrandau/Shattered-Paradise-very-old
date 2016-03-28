@@ -144,13 +144,15 @@
 			jumpjet: 5
 			grenadier: 5
 			eagleguard: 5
-			mmch: 5
-			smech: 5
+			mmch: 8
+			smech: 6
 			hvr: 5
-			sonic: 5
-			jugger: 3
+			sonic: 3
+			jugger: 2
 			hmec: 1
 			guardian: 1
+			orca: 3
+			orcab: 2
 ###############NOD#################
 			altnode1: 8
 			crusader: 5
@@ -213,13 +215,15 @@
 			jumpjet: 25%
 			grenadier: 18%
 			eagleguard: 18%
-			mmch: 25%
+			mmch: 35%
 			smech: 35%
-			hvr: 55%
+			hvr: 40%
 			sonic: 15%
 			jugger: 10%
 			hmec: 50%
 			guardian: 10%
+			orca: 10%
+			orcab: 10%
 ###############NOD#################
 			altnode1: 50%
 			crusader: 25%
