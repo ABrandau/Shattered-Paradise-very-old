@@ -2,18 +2,19 @@
 	HackyAI@Tay:
 		Name: Tay
 		MinimumExcessPower: 60
-		ProtectUnitScanRadius: 15
-		RushAttackScanRadius: 20
+		ProtectUnitScanRadius: 20
+		RushAttackScanRadius: 30
 		RushInterval: 1125
 		StructureProductionInactiveDelay: 25
 		StructureProductionActiveDelay: 0
 		StructureProductionRandomBonusDelay: 25
 		AssignRolesInterval: 10
 		AttackForceInterval: 20
-		IdleBaseUnitsMaximum: 30
-		RallyPointScanRadius: 20
-		MinBaseRadius: 2
-		MaxBaseRadius: 30
+		IdleBaseUnitsMaximum: 25
+		RallyPointScanRadius: 25
+		MinBaseRadius: 3
+		MaxBaseRadius: 35
+		MaxResourceCellsToCheck: 6
 		ShouldRepairBuildings: True
 		CheckForNewBasesDelay: 1500
 		NewProductionCashThreshold: 10000
