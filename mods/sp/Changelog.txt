@@ -15,6 +15,7 @@ Decreased StructureProductionInactiveDelay: 125 < 25
 Increased squad size.
 Fixed production common names.
 Too many build queue tweaks to list.
+Added several new music tracks.
 
 
 [2016 - 03 - 28]
