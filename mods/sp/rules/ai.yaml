@@ -16,7 +16,7 @@
 		MaxBaseRadius: 30
 		ShouldRepairBuildings: True
 		CheckForNewBasesDelay: 1500
-		NewProductionCashThreshold: 9000
+		NewProductionCashThreshold: 10000
 		BuildingCommonNames:
 			ConstructionYard: gacnst, drached
 			Refinery: proc, scrproc
@@ -34,17 +34,17 @@
 ###############GDI#################
 			gapowr: 8
 			gapile: 2
-			gaweap: 2
+			gaweap: 3
 			garadr: 1
-			gahpad: 1
+			gahpad: 2
 			gatech: 1
 			gafire: 1
 ###############NOD#################
 			napowr: 8
-			nahand: 2
+			nahand: 3
 			naweap: 2
 			naradr: 1
-			nahpad: 1
+			nahpad: 2
 			natech: 1
 			nastlh: 1
 			naapwr: 3
@@ -53,20 +53,20 @@
 			nasam: 4
 ###############MUT#################
 			mupowr: 8
-			murax: 2
+			murax: 3
 			muweap: 2
 			muradr: 1
-			mutair: 1
+			mutair: 2
 			muhall: 1
 			mubunkr: 12
 			mutventi: 2
 			muflak: 5
 ###############CAB#################
 			cabpowr: 8
-			cabclaw: 2
+			cabclaw: 3
 			cabweap: 2
 			cabradr: 1
-			cabair: 1
+			cabair: 2
 			cabtech: 1
 			cabcannon: 6
 			cabblast: 6
@@ -74,8 +74,8 @@
 ###############SCRIN#################
 			scrproc: 3
 			scrpowr: 8
-			scrrax: 1
-			scrweap: 1
+			scrrax: 2
+			scrweap: 2
 			scrradr: 1
 			scrair: 3
 			scrtech: 1
@@ -83,8 +83,8 @@
 			scrdrone: 6
 			scrtractor: 6
 		BuildingFractions:
-			proc: 50%
-			gasilo: 10%
+			proc: 85%
+			gasilo: 50%
 ###############GDI#################
 			gapowr: 35%
 			gapile: 5%
@@ -126,7 +126,7 @@
 			cabblast: 10%
 			cabrail: 10%
 ###############SCRIN#################
-			scrproc: 50%
+			scrproc: 85%
 			scrpowr: 35%
 			scrrax: 5%
 			scrweap: 5%
@@ -175,6 +175,8 @@
 			mutquad: 3
 			mrls: 5
 			wolf: 3
+			mutbird: 3
+			mutheli: 3
 ###############CAB#################
 			cyborg: 10
 			cabsentry: 5
@@ -242,6 +244,8 @@
 			mutquad: 20%
 			mrls: 20%
 			wolf: 8%
+			mutbird: 3%
+			mutheli: 3%
 ###############CAB#################
 			cyborg: 50%
 			cabsentry: 25%
@@ -319,7 +323,7 @@
 			nasam: 4
 ###############MUT#################
 			mupowr: 8
-			murax: 1
+			murax: 3
 			muweap: 1
 			muradr: 1
 			mutair: 1
