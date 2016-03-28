@@ -32,7 +32,7 @@
 			proc: 3
 			gasilo: 1
 ###############GDI#################
-			gapowr: 8
+			gapowr: 10
 			gapile: 2
 			gaweap: 3
 			garadr: 1
@@ -40,7 +40,7 @@
 			gatech: 1
 			gafire: 1
 ###############NOD#################
-			napowr: 8
+			napowr: 7
 			nahand: 3
 			naweap: 2
 			naradr: 1
@@ -52,7 +52,7 @@
 			nalasr: 8
 			nasam: 4
 ###############MUT#################
-			mupowr: 8
+			mupowr: 10
 			murax: 3
 			muweap: 2
 			muradr: 1
@@ -62,7 +62,7 @@
 			mutventi: 2
 			muflak: 5
 ###############CAB#################
-			cabpowr: 8
+			cabpowr: 10
 			cabclaw: 3
 			cabweap: 2
 			cabradr: 1
@@ -73,7 +73,7 @@
 			cabrail: 5
 ###############SCRIN#################
 			scrproc: 3
-			scrpowr: 8
+			scrpowr: 10
 			scrrax: 2
 			scrweap: 2
 			scrradr: 1
