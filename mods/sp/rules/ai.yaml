@@ -168,12 +168,12 @@
 			wolf: 5
 			cyborg: 10
 			cabsentry: 5
-			reapercab2: 5
+			reapercab: 5
 			pdrone: 5
 			glad: 5
 			cyc2: 1
-			jenn: 4
-			centurion: 5
+			jenn: 5
+			centurion: 3
 			grinder: 1
 			paladin: 2
 			blaster: 5
@@ -227,11 +227,11 @@
 			wolf: 8%
 			cyborg: 50%
 			cabsentry: 25%
-			reapercab2: 20%
+			reapercab: 20%
 			pdrone: 50%
 			glad: 25%
 			cyc2: 10%
-			jenn: 35%
+			jenn: 40%
 			centurion: 20%
 			grinder: 20%
 			paladin: 10%
