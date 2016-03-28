@@ -972,7 +972,7 @@
 		StartsRevealed: true
 	SeedsResource:
 		ResourceType: Tiberium
-		Interval: 30
+		Interval: 55
 	WithIdleAnimation:
 
 ^Tree:

@@ -36,7 +36,7 @@ E1:
 		FactionImages:
 			gdi: e1.gdi
 			nod: e1.nod
-			
+
 ENGINEER:
 	Inherits: ^Soldier
 	Valued:
@@ -67,10 +67,10 @@ ENGINEER:
 		FactionImages:
 			gdi: engineer.gdi
 			nod: engineer.nod
-			
+
 ######################################################
 # Vehicles
-######################################################		
+######################################################
 MCV:
 	Inherits: ^VoxelVehicle
 	Buildable:
@@ -97,7 +97,7 @@ MCV:
 		TargetTypes: Ground, MindControlInmune
 	MustBeDestroyed:
 		RequiredForShortGame: true
-	-Capturable:		
+	-Capturable:
 	BaseBuilding:
 	Transforms:
 		IntoActor: gacnst
@@ -114,7 +114,7 @@ MCV:
 			gdi: mcv.gdi
 			nod: mcv.nod
 			mut: mcv.mut
-			cab: mcv.cab			
+			cab: mcv.cab
 
 HARV:
 	Inherits: ^VoxelTank
@@ -132,7 +132,7 @@ HARV:
 		Priority: 7
 		Bounds: 36,36
 	Harvester:
-		Capacity: 28
+		Capacity: 48
 		DeliveryBuildings: proc
 		Resources: Tiberium, BlueTiberium
 		UnloadTicksPerBale: 4
@@ -155,12 +155,12 @@ HARV:
 	Health:
 		HP: 1000
 	Targetable:
-		TargetTypes: Ground, Vehicle, Repair, MindControlInmune		
+		TargetTypes: Ground, Vehicle, Repair, MindControlInmune
 	SelfHealing:
 		Ticks: 10
 		HealIfBelow: 50%
 		DamageCooldown: 200
-	-Capturable:		
+	-Capturable:
 	Armor:
 		Type: Heavy
 	-GainsExperience:
@@ -179,7 +179,7 @@ HARV:
 			gdi: harv.gdi
 			nod: harv.nod
 			mut: harv.mut
-			cab: harv.cab			
+			cab: harv.cab
 
 LPST:
 	Inherits: ^VoxelVehicle
@@ -229,10 +229,10 @@ LPST:
 		Range: 18c0
 	RenderDetectionCircle:
 		TrailCount: 3
-		
+
 ######################################################
 # Aircraft
-######################################################		
+######################################################
 HUNTER:
 	Inherits@1: ^GainsExperience
 	Inherits@2: ^ExistsInWorld
@@ -274,11 +274,11 @@ HUNTER:
 	SelectionDecorations:
 		Palette: pips
 	ActorLostNotification:
-		
+
 
 ######################################################
 # Structures
-######################################################		
+######################################################
 GACNST:
 	Inherits: ^Building
 	Building:
@@ -305,7 +305,7 @@ GACNST:
 	CustomSellValue:
 		Value: 2500
 	Targetable:
-		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate, MindControlInmune		
+		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate, MindControlInmune
 	BaseBuilding:
 	Transforms:
 		IntoActor: mcv
@@ -332,7 +332,7 @@ GACNST:
 		Prerequisite: sharedwall
 	ProvidesPrerequisite@humanproc:
 		Factions: gdi, nod, cab, mut
-		Prerequisite: humanproc	
+		Prerequisite: humanproc
 	ProvidesPrerequisite@gdi:
 		Factions: gdi
 		Prerequisite: structures.gdi
@@ -344,7 +344,7 @@ GACNST:
 		Prerequisite: structures.mut
 	ProvidesPrerequisite@cab:
 		Factions: cab
-		Prerequisite: structures.cab		
+		Prerequisite: structures.cab
 	SelectionDecorations:
 		VisualBounds: 144, 80, 0, -12
 
@@ -433,7 +433,7 @@ GASILO:
 			gdi: gasilo.gdi
 			nod: gasilo.nod
 			mut: gasilo.mut
-			cab: gasilo.cab			
+			cab: gasilo.cab
 	WithSpriteBody:
 	WithSiloAnimation:
 	WithIdleOverlay@UNDERLAY:
@@ -459,7 +459,7 @@ BARRACKS:
 	Tooltip:
 		Name: Infantry Production
 		Description: Infantry Production
-		
+
 FACTORY:
 	AlwaysVisible:
 	Tooltip:
@@ -555,8 +555,8 @@ NAPULS:
 			gdi: napuls.gdi
 			nod: napuls.nod
 			mut: napuls.mut
-			cab: napuls.cab				
-			
+			cab: napuls.cab
+
 GATE_A:
 	Inherits: ^Gate_A
 	Buildable:
@@ -571,8 +571,8 @@ GATE_A:
 			gdi: gate_a.gdi
 			nod: gate_a.nod
 			# mut: gate_a.mut
-			# cab: gate_a.cab			
-			# scr: gate_a.scr				
+			# cab: gate_a.cab
+			# scr: gate_a.scr
 
 NAGATE_B:
 	Inherits: ^Gate_B
@@ -588,6 +588,5 @@ NAGATE_B:
 			gdi: gate_b.gdi
 			nod: gate_b.nod
 			# mut: gate_b.mut
-			# cab: gate_b.cab			
-			# scr: gate_b.scr						
-
+			# cab: gate_b.cab
+			# scr: gate_b.scr

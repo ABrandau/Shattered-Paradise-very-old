@@ -3,7 +3,7 @@ Infantry:
 		Select: 15-i000, 15-i004, 15-i012, 15-i048
 		Move: 15-i018, 15-i024, 15-i044
 		Attack: 15-i044, 15-i050, 15-i044, 15-i046
-		Action: 15-i044, 15-i050, 15-i044, 15-i046		
+		Action: 15-i044, 15-i050, 15-i044, 15-i046
 #		Feedback: 15-i058, 15-i064 # TODO
 		Die: dedman1, dedman3, dedman4, dedman5, dedman6
 		Burned: dedman2
@@ -24,7 +24,7 @@ Umagon:
 		Select: 10-i000, 10-i002, 10-i004, 10-i006
 		Move: 10-i016, 10-i020, 10-i022
 		Attack: 10-i024, 10-i026, 10-i028, 10-i030
-		Action: 10-i024, 10-i026, 10-i028, 10-i030		
+		Action: 10-i024, 10-i026, 10-i028, 10-i030
 		Die: dedgirl1, dedgirl2, dedgirl4
 		Burned: dedgirl3
 		Zapped: electro1
@@ -103,12 +103,12 @@ Cyborg:
 		Die: 22-n104, 22-n108
 		Burned: 22-n106
 		Zapped: electro1
-		
+
 CyborgReap:
 	Voices:
-		Select: 60-n100, 60-n102, 60-n104 
+		Select: 60-n100, 60-n102, 60-n104
 		Move: 60-n106, 60-n108, 60-n110
-		Action: 60-n106, 60-n108, 60-n110		
+		Action: 60-n106, 60-n108, 60-n110
 		Attack: 60-n112, 60-n114, 60-n116
 		Die: 69-n102,
 		Burned: 22-n106
@@ -116,13 +116,13 @@ CyborgReap:
 
 Limpet:
 	Voices:
-		Select: limpc3, limpc4, limpq3, limpq4 
+		Select: limpc3, limpc4, limpq3, limpq4
 		Move: limpc3, limpc4, limpq3, limpq4
 		Action: limpc3, limpc4, limpq3, limpq4
 		Attack: limpc3, limpc4, limpq3, limpq4
 		Die: 69-n102,
 		Burned: 22-n106
-		Zapped: electro1			
+		Zapped: electro1
 
 CyborgCommando:
 	Voices:
@@ -184,7 +184,7 @@ Vehicle:
 		Select: 25-i000, 25-i002, 25-i004, 25-i006
 		Move: 25-i012, 25-i014, 25-i016, 25-i018, 25-i022
 		Attack: 25-i014, 25-i022, 25-i024, 25-i026
-		Action: 25-i014, 25-i022, 25-i024, 25-i026		
+		Action: 25-i014, 25-i022, 25-i024, 25-i026
 		Unload: 25-i018
 
 Mech:
@@ -192,7 +192,7 @@ Mech:
 		Select: 15-i000, 15-i006, 15-i040, 15-i042
 		Move: 15-i024, 15-i044
 		Attack: 15-i006, 15-i046
-		Action: 15-i006, 15-i046		
+		Action: 15-i006, 15-i046
 
 Heli:
 	Voices:
@@ -228,7 +228,11 @@ Scrin:
 		Die: 32-i008
 
 ######################################################################
-# NOLT WAS HERE
+#GDI Custom
+######################################################################
+
+######################################################################
+#Nod Custom
 ######################################################################
 BeamCannonVO:
 	Voices:
@@ -236,3 +240,16 @@ BeamCannonVO:
 		Move: armh0004, armh0005, armh0006, armh0007
 		Attack: armh0000, armh0001, armh0002, armh0003
 		Action: armh0000, armh0001, armh0002, armh0003
+
+######################################################################
+#Mutant Custom
+######################################################################
+
+
+######################################################################
+#CABAL Custom
+######################################################################
+
+######################################################################
+#Scrin Custom
+######################################################################
