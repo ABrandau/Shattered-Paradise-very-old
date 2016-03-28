@@ -15,7 +15,7 @@ ALTNODE1:
 	Health:
 		HP: 100
 	Mobile:
-		Speed: 70	
+		Speed: 70
 	Armament@PRIMARY:
 		Weapon: MilitantFireball
 		LocalOffset: 0,0,200
@@ -43,7 +43,7 @@ CRUSADER:
 	Mobile:
 		Speed: 65
 	Armament@PRIMARY:
-		Weapon: CrusaderBazooka	
+		Weapon: CrusaderBazooka
 		LocalOffset: 0,0,600
 	AttackFrontal:
 		Voice: Attack
@@ -80,7 +80,7 @@ TEMPLAR:
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	RenderSprites:
-	
+
 MHIJACK:
 	Inherits: ^Soldier
 	Buildable:
@@ -94,20 +94,20 @@ MHIJACK:
 		Description: NOD Agent.\nCan steal enemy vehicles\nand infiltrate powerplants.\nCloaks when idle.\n  Unarmed
 	Voiced:
 		VoiceSet: Spy
-	-Crushable:		
+	-Crushable:
 	Health:
 		HP: 110
 	PoisonedByTiberium:
 		Weapon: TiberiumHeal
 	Targetable:
-		TargetTypes: Ground, Infantry, MindControlInmune		
+		TargetTypes: Ground, Infantry, MindControlInmune
 	Mobile:
 		Speed: 80
 	Infiltrates:
-		Types: SpyInfiltrate		
+		Types: SpyInfiltrate
 	Captures:
 		CaptureTypes: Vehicle
-	Captures:	
+	Captures:
 	Cloak@CLOAKGENERATOR:
 		UpgradeMinEnabledLevel: 0
 		InitialDelay: 50
@@ -118,8 +118,8 @@ MHIJACK:
 		Image: Chamspy
 	-AutoTarget:
 	WithInfantryBody:
-		AttackSequence: shoot	
-	
+		AttackSequence: shoot
+
 BHS:
 	Inherits: ^Soldier
 	Buildable:
@@ -131,7 +131,7 @@ BHS:
 		Cost: 1000
 	Tooltip:
 		Name: Hand of Kane
-		Description: NOD Commando, sniper unit.\nCloaked when not attacking.\nCan demolish structures using C4.\nInfantry killed by this unit explode.\nHeals on Tiberium.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: NOD Commando, sniper unit.\nCloaked when not attacking.\nCan demolish structures using C4.\nInfantry killed by this unit explode.\nHeals near Tiberium.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Targetable:
 		TargetTypes: Ground, Infantry, MindControlInmune
 	Health:
@@ -139,9 +139,9 @@ BHS:
 	Mobile:
 		Speed: 80
 	PoisonedByTiberium:
-		Weapon: TiberiumHeal		
+		Weapon: TiberiumHeal
 	Voiced:
-		VoiceSet: Oxanna	
+		VoiceSet: Oxanna
 	Armament@PRIMARY:
 		Weapon: BHRifle
 		UpgradeTypes: eliteweapon
@@ -164,22 +164,22 @@ BHS:
 		UncloakOn: Attack
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
-	RenderSprites:	
-	
+	RenderSprites:
+
 BLACKHANDDUMMY:
 	Inherits: ^BasicBuilding
 	Targetable:
 		TargetTypes:
 	-WithSpriteBody:
 	-WithBuildingExplosion:
-	-ShakeOnDeath:	
+	-ShakeOnDeath:
 	AutoSelectionSize:
 	Selectable:
 		Bounds: 1,1
 	SelfHealing:
 		Step: -5
 		HealIfBelow: 2
-	RenderSprites:	
+	RenderSprites:
 	Health:
 		HP: 5
 		NotifyAppliedDamage: False
@@ -213,7 +213,7 @@ BGGY:
 		Range: 7c0
 	Armament@PRIMARY:
 		Weapon: BikeMissile
-		LocalOffset: -128,-170,213, -128,170,213		
+		LocalOffset: -128,-170,213, -128,170,213
 	Armament:
 		Weapon: BuggyCannon
 		LocalOffset: 0,-43,384, 0,43,384
@@ -240,7 +240,7 @@ BIKE:
 	Mobile:
 		TurnSpeed: 10
 		Speed: 180
-		Crushes: crate	
+		Crushes: crate
 	Health:
 		HP: 100
 	Armor:
@@ -313,7 +313,7 @@ SAPC:
 		PipCount: 5
 		UnloadVoice: Unload
 		LoadingUpgrades: notmobile
-		
+
 REPAIR:
 	Inherits: ^VoxelTank
 	Buildable:
@@ -343,7 +343,7 @@ REPAIR:
 
 LIMPED:
 	Inherits: ^Vehicle
-	Inherits@2: ^ScrinRender	
+	Inherits@2: ^ScrinRender
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 13
@@ -366,10 +366,10 @@ LIMPED:
 		TransformSounds: place2.aud
 		NoTransformSounds:
 		Voice: Move
-	WithSpriteBody:		
+	WithSpriteBody:
 	RevealsShroud:
 		Range: 5c0
-	RenderSprites:	
+	RenderSprites:
 	BodyOrientation:
 		QuantizedFacings: 32
 	Hovers:
@@ -396,14 +396,14 @@ SUBTANK:
 		Type: Heavy
 	Armament:
 		Weapon: DevilsFlame
-		LocalOffset: 0,200,0		
+		LocalOffset: 0,200,0
 	Armament@secondary:
 		Weapon: DevilsFlame
 		LocalOffset: 0,-200,0
 	AttackFrontal:
 		Voice: Attack
 	AutoTarget:
-	
+
 SGEN:
 	Inherits: ^VoxelTank
 	Valued:
@@ -428,7 +428,7 @@ SGEN:
 		Facing: 96
 		TransformSounds: place2.aud
 		NoTransformSounds:
-		Voice: Move	
+		Voice: Move
 
 ARMH:
 	Inherits: ^VoxelTank
@@ -453,7 +453,7 @@ ARMH:
 		Range: 9c0
 	RenderVoxels:
 		LightAmbientColor: 0.6, 0.6, 0.6
-		Scale: 0.7	
+		Scale: 0.7
 	Armament:
 		Weapon: BCLazor
 		LocalOffset: 300,0,500
@@ -463,7 +463,7 @@ ARMH:
 	Voiced:
 		VoiceSet: BeamCannonVO
 		Volume: 1.7
-		
+
 STNK:
 	Inherits: ^VoxelTank
 	Valued:
@@ -496,7 +496,7 @@ STNK:
 		LocalOffset: 213,43,128, 213,-43,128
 	Armament@Secondary:
 		Weapon: StealthRocketAA
-		LocalOffset: 213,43,128, 213,-43,128		
+		LocalOffset: 213,43,128, 213,-43,128
 	AttackFrontal:
 		Voice: Attack
 	AutoTarget:
@@ -506,10 +506,10 @@ STNK:
 
 ##########################################################
 # Aircraft
-##########################################################	
+##########################################################
 APACHE:
 	Inherits: ^Helicopter
-	Inherits@3: ^BasicStealthDetection		
+	Inherits@3: ^BasicStealthDetection
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -550,7 +550,7 @@ APACHE:
 		ReloadCount: 4
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		ReloadTicks: 100	
+		ReloadTicks: 100
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
@@ -606,7 +606,7 @@ SCRIN:
 		Actor: SCRIN.Husk
 ##########################################################
 # Structures
-##########################################################	
+##########################################################
 NAPOWR:
 	Inherits: ^Building
 	Buildable:
@@ -622,7 +622,7 @@ NAPOWR:
 		Prerequisite: anypower
 	Building:
 		Footprint: xx xx
-		Dimensions: 2,2	
+		Dimensions: 2,2
 	Selectable:
 		Bounds: 88, 48, 2, -6
 	Health:
@@ -758,7 +758,7 @@ NAWEAP:
 	RepairsUnits:
 		FinishRepairingNotification: UnitRepaired
 	RevealsShroud:
-		Range: 6c0		
+		Range: 6c0
 	RallyPoint:
 		Offset: 4,1
 		Palette: mouse
@@ -1007,7 +1007,7 @@ NASTLH:
 		Range: 12c0
 		EnableSound: cloak5.aud
 		DisableSound: cloak5.aud
-		AffectsParent: false		
+		AffectsParent: false
 	Selectable:
 		Bounds: 106, 48, 8, -6
 	SelectionDecorations:
@@ -1087,10 +1087,10 @@ NAWALL:
 		CrushClasses: heavywall
 	LineBuild:
 		NodeTypes: wall, turret
-	
+
 NALASR:
 	Inherits: ^Defense
-	Inherits@1: ^TowerStealthDetection	
+	Inherits@1: ^TowerStealthDetection
 	Valued:
 		Cost: 100
 	Tooltip:
@@ -1126,7 +1126,7 @@ NALASR:
 
 NAOBEL:
 	Inherits: ^Defense
-	Inherits@1: ^TowerStealthDetection		
+	Inherits@1: ^TowerStealthDetection
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -1167,7 +1167,7 @@ NAOBEL:
 
 NASAM:
 	Inherits: ^Defense
-	Inherits@1: ^TowerStealthDetection	
+	Inherits@1: ^TowerStealthDetection
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -1247,11 +1247,11 @@ MASTL:
 	Health:
 		HP: 250
 	-AttackTurreted:
-	-AutoTarget:		
+	-AutoTarget:
 	-RenderRangeCircle:
 	WithRangeCircle:
 		Range: 6c0
-		Type: cloakgenerator	
+		Type: cloakgenerator
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -1270,7 +1270,7 @@ MASTL:
 		EnableSound: cloak5.aud
 		DisableSound: cloak5.aud
 		AffectsParent: true
-	
+
 DLIMPET:
 	Inherits: ^DeployedVehicle
 	Valued:
@@ -1280,7 +1280,7 @@ DLIMPET:
 	Health:
 		HP: 250
 	-AttackTurreted:
-	-AutoTarget:		
+	-AutoTarget:
 	-RenderRangeCircle:
 	Armor:
 		Type: Light
@@ -1301,12 +1301,12 @@ DLIMPET:
 		CloakTypes: cloakgenerator
 	WithRangeCircle:
 		Range: 5c0
-		Type: cloakgenerator			
+		Type: cloakgenerator
 	UpgradeActorsNear@toxin:
 		Upgrades: NodToxindebuff
 		ValidStances: Enemy
 		Range: 8c0
-	
+
 GAARTY:
 	Inherits@1: ^DeployedVehicle
 	Valued:

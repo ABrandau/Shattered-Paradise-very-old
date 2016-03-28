@@ -4,7 +4,7 @@
 		MinimumExcessPower: 60
 		ProtectUnitScanRadius: 15
 		RushAttackScanRadius: 20
-		RushInterval: 800
+		RushInterval: 1125
 		StructureProductionInactiveDelay: 125
 		StructureProductionActiveDelay: 25
 		StructureProductionRandomBonusDelay: 25
@@ -15,7 +15,7 @@
 		MinBaseRadius: 2
 		MaxBaseRadius: 30
 		ShouldRepairBuildings: True
-		CheckForNewBasesDelay: 1000
+		CheckForNewBasesDelay: 1500
 		NewProductionCashThreshold: 4000
 		BuildingCommonNames:
 			ConstructionYard: gacnst, drached
@@ -23,7 +23,7 @@
 			Power: gapowr, napowr, naapwr, cabpowr, mutpowr, scrpowr
 			Barracks: gapile, nahand, mutrax, cabrax, scrrax
 			VehiclesFactory: gaweap, naweap, mutweap, cabweap, scrweap
-			Production: gapile, nahand, mutrax, cabclaw, scrrax, gaweap, naweap, mutweap, cabweap, scrweap
+			Production: gapile, nahand, mutrax, cabclaw, scrrax, gaweap, naweap, mutweap, cabweap, scrweap, gahpad, nahpad, muair, cabair, scrair
 			Silo: gasilo
 		UnitQueues: Vehicle, Infantry, Air
 		UnitsCommonNames:
@@ -157,10 +157,12 @@
 			templar: 5
 			bhs: 1
 			bggy: 5
-			ttnk: 5
+			ttnk: 4
 			armh: 3
 			subtank: 5
-			stnk: 5
+			stnk: 4
+			apache: 3
+			scrin: 2
 ###############MUT#################
 			marauder: 10
 			e3: 10
@@ -171,7 +173,7 @@
 			muttank: 5
 			mutquad: 3
 			mrls: 5
-			wolf: 5
+			wolf: 3
 ###############CAB#################
 			cyborg: 10
 			cabsentry: 5
@@ -225,6 +227,8 @@
 			armh: 25%
 			subtank: 18%
 			stnk: 18%
+			apache: 3%
+			scrin: 3%
 ###############MUT#################
 			marauder: 50%
 			e3: 45%
@@ -264,8 +268,8 @@
 			stormrider: 75%
 			scrbattleship: 80%
 			scrdestroyer: 50%
-		SquadSize: 15
-		SquadSizeRandomBonus: 35
+		SquadSize: 20
+		SquadSizeRandomBonus: 40
 
 	HackyAI@TestAI:
 		Name: "Fun" AI
@@ -333,7 +337,7 @@
 ###############SCR#################
 			scrproc: 4
 			scrpowr: 8
-			scrrax:1
+			scrrax: 1
 			scrweap: 1
 			scrradr: 1
 			scrair: 1
