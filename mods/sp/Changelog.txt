@@ -7,7 +7,7 @@ Fixed some unit descriptions.
 Tay AI enhancements:
 Can now build Nod air.
 Increased rush interval to 45 seconds (1125 ticks).
-Increased internal to check for new bases to one minute (1500 ticks).
+Increased interval to check for new bases to one minute (1500 ticks).
 Increased squad size.
 Fixed production common names.
 A few build queue tweaks.
