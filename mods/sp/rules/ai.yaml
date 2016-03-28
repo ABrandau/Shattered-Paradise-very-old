@@ -4,10 +4,11 @@
 		MinimumExcessPower: 60
 		ProtectUnitScanRadius: 15
 		RushAttackScanRadius: 20
-		RushInterval: 650
+		RushInterval: 800
 		StructureProductionActiveDelay: 15
 		StructureProductionRandomBonusDelay: 15
 		AssignRolesInterval: 10
+		AttackForceInterval: 20
 		IdleBaseUnitsMaximum: 30
 		RallyPointScanRadius: 20
 		MinBaseRadius: 2
@@ -135,6 +136,7 @@
 		UnitLimits:
 			harv: 4
 			scrharv: 4
+			mcv: 1
 			gdie1: 10
 			jumpjet: 5
 			grenadier: 5
@@ -152,7 +154,7 @@
 			bhs: 1
 			bggy: 5
 			ttnk: 5
-			armh: 5
+			armh: 3
 			subtank: 5
 			stnk: 5
 			marauder: 10
@@ -188,65 +190,66 @@
 			scrglyder2: 15
 			tripod: 2
 			stormrider: 20
-			scrbattleship: 5
-			scrdestroyer: 5
+			scrbattleship: 1
+			scrdestroyer: 3
 		UnitsToBuild:
-			harv: 50%
-			scrharv: 50%
-			gdie1: 25%
-			jumpjet: 15%
-			grenadier: 8%
-			eagleguard: 8%
-			mmch: 15%
-			smech: 25%
-			hvr: 45%
-			sonic: 5%
-			jugger: 3%
-			hmec: 25%
-			guardian: 5%
-			altnode1: 80%
-			crusader: 8%
-			templar: 5%
-			bhs: 4%
+			harv: 75%
+			scrharv: 85%
+			mcv: 1%
+			gdie1: 50%
+			jumpjet: 25%
+			grenadier: 18%
+			eagleguard: 18%
+			mmch: 25%
+			smech: 35%
+			hvr: 55%
+			sonic: 15%
+			jugger: 10%
+			hmec: 50%
+			guardian: 10%
+			altnode1: 50%
+			crusader: 25%
+			templar: 18%
+			bhs: 8%
 			bggy: 75%
-			ttnk: 45%
-			armh: 10%
-			subtank: 8%
-			stnk: 8%
-			marauder: 35%
-			e3: 25%
-			mutfiend: 3%
-			hunter: 5%
+			ttnk: 65%
+			armh: 25%
+			subtank: 18%
+			stnk: 18%
+			marauder: 50%
+			e3: 45%
+			mutfiend: 15%
+			hunter: 15%
 			awarrior: 15%
-			mutapc: 20%
-			muttank: 15%
-			mutquad: 10%
-			mrls: 10%
-			wolf: 4%
-			cyborg: 16%
-			cabsentry: 8%
-			reapercab2: 4%
-			pdrone: 3%
-			glad: 4%
-			jenn: 25%
-			centurion: 30%
+			mutapc: 40%
+			muttank: 25%
+			mutquad: 20%
+			mrls: 20%
+			wolf: 8%
+			cyborg: 50%
+			cabsentry: 25%
+			reapercab2: 20%
+			pdrone: 15%
+			glad: 15%
+			jenn: 35%
+			centurion: 70%
 			grinder: 10%
-			paladin: 30%
-			blaster: 15%
-			wasp: 15%
-			basilisk: 3%
-			shark: 4%
-			legio: 8%
-			float: 4%
-			bug: 4%
-			scrscorpion: 4%
-			scrmbt: 8%
+			paladin: 40%
+			blaster: 25%
+			wasp: 25%
+			basilisk: 7%
+			shark: 8%
+			legio: 14%
+			float: 8%
+			bug: 8%
+			scrscorpion: 8%
+			scrmbt: 12%
 			scrrecharger: 1%
-			scrglyder1: 30%
-			scrglyder2: 30%
+			scrglyder1: 25%
+			scrglyder2: 25%
 			tripod: 15%
 			stormrider: 75%
-			scrbattleship: 75%
+			scrbattleship: 80%
 			scrdestroyer: 50%
 		SquadSize: 15
 		SquadSizeRandomBonus: 35
