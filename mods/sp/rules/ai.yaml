@@ -29,7 +29,7 @@
 			Mcv: mcv, drache
 		BuildingLimits:
 			proc: 2
-			gasilo: 3
+			gasilo: 2
 			gapowr: 8
 			gapile: 2
 			gaweap: 2
