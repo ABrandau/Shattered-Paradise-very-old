@@ -16,7 +16,7 @@
 		MaxBaseRadius: 30
 		ShouldRepairBuildings: True
 		CheckForNewBasesDelay: 1500
-		NewProductionCashThreshold: 4000
+		NewProductionCashThreshold: 9000
 		BuildingCommonNames:
 			ConstructionYard: gacnst, drached
 			Refinery: proc, scrproc
@@ -48,7 +48,7 @@
 			natech: 1
 			nastlh: 1
 			naapwr: 3
-			naobel: 2
+			naobel: 3
 			nalasr: 8
 			nasam: 4
 ###############MUT#################
@@ -60,7 +60,7 @@
 			muhall: 1
 			mubunkr: 12
 			mutventi: 2
-			muflak: 4
+			muflak: 5
 ###############CAB#################
 			cabpowr: 8
 			cabclaw: 2
@@ -95,7 +95,7 @@
 			gafire: 1%
 ###############NOD#################
 			napowr: 35%
-			nahand: 5%
+			nahand: 10%
 			naweap: 5%
 			naradr: 1%
 			nahpad: 1%
@@ -107,7 +107,7 @@
 			nalasr: 10%
 ###############MUT#################
 			mupowr: 35%
-			murax: 5%
+			murax: 10%
 			muweap: 5%
 			muradr: 1%
 			muair: 1%
@@ -117,7 +117,7 @@
 			muventi: 3%
 ###############CAB#################
 			cabpowr: 35%
-			cabclaw: 5%
+			cabclaw: 10%
 			cabweap: 5%
 			cabradr: 1%
 			cabtech: 1%
@@ -128,10 +128,10 @@
 ###############SCRIN#################
 			scrproc: 50%
 			scrpowr: 35%
-			scrrax: 4%
-			scrweap: 4%
+			scrrax: 5%
+			scrweap: 5%
 			scrradr: 2%
-			scrair: 5%
+			scrair: 10%
 			scrtech: 3%
 			scrneedler: 10%
 			scrdrone: 10%
