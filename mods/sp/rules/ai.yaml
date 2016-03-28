@@ -253,3 +253,211 @@
 			scrdestroyer: 50%
 		SquadSize: 15
 		SquadSizeRandomBonus: 35
+
+	HackyAI@TestAI:
+		Name: "Fun" AI
+		MinimumExcessPower: 60
+		ProtectUnitScanRadius: 70
+		RushAttackScanRadius: 70
+		StructureProductionActiveDelay: 15
+		StructureProductionRandomBonusDelay: 15
+		NewProductionCashThreshold: 9000	
+		BuildingCommonNames:
+			ConstructionYard: gacnst, drached
+			Refinery: proc, scrproc
+			Power: gapowr, napowr, naapwr, cabpowr, mutpowr, scrpowr
+			Barracks: gapile, nahand, mutrax, cabrax, scrrax
+			VehiclesFactory: gaweap, naweap, mutweap, cabweap, scrweap
+			Production: gapile, nahand, mutrax, cabclaw, scrrax, gaweap, naweap, mutweap, cabweap, scrweap
+			Silo: gasilo
+		UnitQueues: Vehicle, Infantry, Air	
+		UnitsCommonNames:
+			Mcv: mcv, drache
+		BuildingLimits:
+			proc: 4
+			gasilo: 3
+###############GDI#################
+			gapowr: 8
+			gapile: 1
+			gaweap: 1
+			garadr: 1
+			gahpad: 5
+			gatech: 1
+			GACTWR: 20
+			gavulc: 4
+			garock: 4
+			gacsam: 4			
+###############NOD#################
+			napowr: 8
+			nahand: 1
+			naweap: 1
+			naradr: 1
+			nahpad: 5
+			natech: 1
+			nastlh: 1
+			naobel: 2
+			nalasr: 8
+			nasam: 4			
+###############MUT#################
+			mupowr: 8
+			murax: 1
+			muweap: 1
+			muradr: 1
+			mutair: 1
+			muhall: 1
+			mubunkr: 12
+			muflak: 4			
+###############CAB#################
+			cabpowr: 8
+			cabclaw: 1
+			cabweap: 1
+			cabradr	: 1
+			cabair: 1
+			cabtech: 1
+			cabcannon: 7
+			cabblast: 7
+			cabrail: 4			
+###############SCR#################				
+			scrproc: 4
+			scrpowr: 8
+			scrrax:1
+			scrweap: 1
+			scrradr: 1
+			scrair: 1
+			scrtech: 1
+			scrneedler: 6
+			scrdrone: 6
+			scrtractor: 6			
+		BuildingFractions:
+			proc: 30%
+###############GDI#################
+			gapowr: 35%
+			gapile: 1%
+			gaweap: 1%	
+			garadr: 1%	
+			gahpad: 1%			
+			gatech: 1%	
+			GACTWR: 20%
+			gavulc: 10%
+			garock: 10%
+			gacsam: 6%			
+###############NOD#################
+			napowr: 35%
+			nahand: 1%	
+			naweap: 1%	
+			naradr: 1%	
+			nahpad: 1%
+			natech: 1%	
+			nasam: 6%
+			naobel: 3%			
+###############MUT#################
+			mupowr: 35%
+			murax: 1%
+			muweap: 1%		
+			muradr: 1%		
+			muair: 1%
+			muhall: 1%	
+			nastlh: 1%
+			nalasr: 10%		
+			mubunkr: 5%
+			muflak: 6%			
+###############CAB#################
+			cabpowr:35%
+			cabclaw: 1%
+			cabweap: 1%	
+			cabradr	: 1		
+			cabtech: 1%		
+			cabair: 1%
+			cabcannon: 10%
+			cabblast: 10%	
+			cabrail: 6%			
+###############SCR#################			
+			scrproc: 30%
+			scrpowr: 35%
+			scrrax: 1%
+			scrweap: 1%
+			scrradr: 1%
+			scrair: 1%
+			scrtech: 1%
+			scrneedler: 10%
+			scrdrone: 10%
+			scrtractor: 10%
+		UnitLimits:
+			harv: 6
+		UnitsToBuild:
+			harv: 20%
+			scrharv: 20%
+###############GDI#################
+			gdie1: 80%
+			JUMPJET: 15%			
+			# e2: 8%
+			Grenadier: 8%
+			eagleguard: 8%
+			medic: 2%
+			mmch: 15%
+			smech: 25%
+			hvr: 20%
+			sonic: 5%
+			# orca: 4%
+			# orcab: 2%
+			guardian: 1%
+###############NOD#################
+			altnode1: 80%
+			crusader: 8%	
+			templar: 5%
+			bhs: 4%		
+			bike: 60%
+			bggy: 75%
+			ttnk: 45%
+			armh: 10%
+			subtank: 8
+			# stealth: 25%
+			stnk: 8%
+			# harpy: 3%
+			# scrin: 3%
+###############MUT#################
+			marauder: 80%
+			e3: 8%
+			# e2: 8%
+			mutfiend: 3%
+			hunter: 5%
+			awarrior: 15%
+			mutapc: 20%
+			muttank: 15%
+			mutquad: 10%
+			mrls: 10%
+			wolf: 4%
+			fortress: 3%
+			# wetp: 2%
+			# mutheli: 2%
+###############CAB#################	
+			cyborg: 16%		
+			cabsentry: 8%
+			REAPERCAB2: 4%
+			PDrone: 3%
+			glad: 4%
+			jenn: 25%
+			centurion: 30%
+			grinder: 10%
+			paladin: 2%
+			blaster: 15%
+			wasp: 10%
+			firefly: 4%
+			basilisk: 3%
+###############SCR#################	
+			shark: 16%
+			legio: 8%
+			float: 8%
+			bug: 4%
+			scrscorpion: 4%
+			scrmbt: 4%
+			scrdronec: 4%
+			scrrecharger: 1%
+			scrglyder: 4%
+			tripod: 4%
+			stormrider: 4%
+			scrbattleship: 4%
+			scrdestroyer: 4%
+			# scrincouncil: 4%
+		SquadSize: 10
+		SquadSizeRandomBonus: 25
