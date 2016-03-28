@@ -8,6 +8,8 @@ Tay AI enhancements:
 Can now build Nod air.
 Increased rush interval to 45 seconds (1125 ticks).
 Increased interval to check for new bases to one minute (1500 ticks).
+Decreased StructureProductionActiveDelay: 25 < 0
+Decreased StructureProductionInactiveDelay: 125 < 25
 Increased squad size.
 Fixed production common names.
 A few build queue tweaks.

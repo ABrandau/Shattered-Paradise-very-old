@@ -5,8 +5,8 @@
 		ProtectUnitScanRadius: 15
 		RushAttackScanRadius: 20
 		RushInterval: 1125
-		StructureProductionInactiveDelay: 125
-		StructureProductionActiveDelay: 25
+		StructureProductionInactiveDelay: 25
+		StructureProductionActiveDelay: 0
 		StructureProductionRandomBonusDelay: 25
 		AssignRolesInterval: 10
 		AttackForceInterval: 20
