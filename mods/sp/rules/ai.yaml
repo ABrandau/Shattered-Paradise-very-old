@@ -171,6 +171,7 @@
 			reapercab2: 5
 			pdrone: 5
 			glad: 5
+			cyc2: 1
 			jenn: 4
 			centurion: 5
 			grinder: 1
@@ -229,6 +230,7 @@
 			reapercab2: 20%
 			pdrone: 50%
 			glad: 25%
+			cyc2: 10%
 			jenn: 35%
 			centurion: 20%
 			grinder: 20%
