@@ -83,7 +83,7 @@
 			scrdrone: 6
 			scrtractor: 6
 		BuildingFractions:
-			proc: 85%
+			proc: 99%
 			gasilo: 50%
 ###############GDI#################
 			gapowr: 35%
@@ -126,7 +126,7 @@
 			cabblast: 10%
 			cabrail: 10%
 ###############SCRIN#################
-			scrproc: 85%
+			scrproc: 99%
 			scrpowr: 35%
 			scrrax: 5%
 			scrweap: 5%
@@ -245,7 +245,7 @@
 			mrls: 20%
 			wolf: 8%
 			mutbird: 3%
-			mutheli: 3%
+			mutheli: 3%o
 ###############CAB#################
 			cyborg: 50%
 			cabsentry: 25%
