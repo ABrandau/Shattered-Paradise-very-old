@@ -29,7 +29,7 @@
 			Mcv: mcv, drache
 		BuildingLimits:
 			proc: 2
-			gasilo: 2
+			gasilo: 1
 			gapowr: 8
 			gapile: 2
 			gaweap: 2
@@ -261,7 +261,7 @@
 		RushAttackScanRadius: 70
 		StructureProductionActiveDelay: 15
 		StructureProductionRandomBonusDelay: 15
-		NewProductionCashThreshold: 9000	
+		NewProductionCashThreshold: 9000
 		BuildingCommonNames:
 			ConstructionYard: gacnst, drached
 			Refinery: proc, scrproc
@@ -270,7 +270,7 @@
 			VehiclesFactory: gaweap, naweap, mutweap, cabweap, scrweap
 			Production: gapile, nahand, mutrax, cabclaw, scrrax, gaweap, naweap, mutweap, cabweap, scrweap
 			Silo: gasilo
-		UnitQueues: Vehicle, Infantry, Air	
+		UnitQueues: Vehicle, Infantry, Air
 		UnitsCommonNames:
 			Mcv: mcv, drache
 		BuildingLimits:
@@ -286,7 +286,7 @@
 			GACTWR: 20
 			gavulc: 4
 			garock: 4
-			gacsam: 4			
+			gacsam: 4
 ###############NOD#################
 			napowr: 8
 			nahand: 1
@@ -297,7 +297,7 @@
 			nastlh: 1
 			naobel: 2
 			nalasr: 8
-			nasam: 4			
+			nasam: 4
 ###############MUT#################
 			mupowr: 8
 			murax: 1
@@ -306,7 +306,7 @@
 			mutair: 1
 			muhall: 1
 			mubunkr: 12
-			muflak: 4			
+			muflak: 4
 ###############CAB#################
 			cabpowr: 8
 			cabclaw: 1
@@ -316,8 +316,8 @@
 			cabtech: 1
 			cabcannon: 7
 			cabblast: 7
-			cabrail: 4			
-###############SCR#################				
+			cabrail: 4
+###############SCR#################
 			scrproc: 4
 			scrpowr: 8
 			scrrax:1
@@ -327,51 +327,51 @@
 			scrtech: 1
 			scrneedler: 6
 			scrdrone: 6
-			scrtractor: 6			
+			scrtractor: 6
 		BuildingFractions:
 			proc: 30%
 ###############GDI#################
 			gapowr: 35%
 			gapile: 1%
-			gaweap: 1%	
-			garadr: 1%	
-			gahpad: 1%			
-			gatech: 1%	
+			gaweap: 1%
+			garadr: 1%
+			gahpad: 1%
+			gatech: 1%
 			GACTWR: 20%
 			gavulc: 10%
 			garock: 10%
-			gacsam: 6%			
+			gacsam: 6%
 ###############NOD#################
 			napowr: 35%
-			nahand: 1%	
-			naweap: 1%	
-			naradr: 1%	
+			nahand: 1%
+			naweap: 1%
+			naradr: 1%
 			nahpad: 1%
-			natech: 1%	
+			natech: 1%
 			nasam: 6%
-			naobel: 3%			
+			naobel: 3%
 ###############MUT#################
 			mupowr: 35%
 			murax: 1%
-			muweap: 1%		
-			muradr: 1%		
+			muweap: 1%
+			muradr: 1%
 			muair: 1%
-			muhall: 1%	
+			muhall: 1%
 			nastlh: 1%
-			nalasr: 10%		
+			nalasr: 10%
 			mubunkr: 5%
-			muflak: 6%			
+			muflak: 6%
 ###############CAB#################
 			cabpowr:35%
 			cabclaw: 1%
-			cabweap: 1%	
-			cabradr	: 1		
-			cabtech: 1%		
+			cabweap: 1%
+			cabradr	: 1
+			cabtech: 1%
 			cabair: 1%
 			cabcannon: 10%
-			cabblast: 10%	
-			cabrail: 6%			
-###############SCR#################			
+			cabblast: 10%
+			cabrail: 6%
+###############SCR#################
 			scrproc: 30%
 			scrpowr: 35%
 			scrrax: 1%
@@ -389,7 +389,7 @@
 			scrharv: 20%
 ###############GDI#################
 			gdie1: 80%
-			JUMPJET: 15%			
+			JUMPJET: 15%
 			# e2: 8%
 			Grenadier: 8%
 			eagleguard: 8%
@@ -403,9 +403,9 @@
 			guardian: 1%
 ###############NOD#################
 			altnode1: 80%
-			crusader: 8%	
+			crusader: 8%
 			templar: 5%
-			bhs: 4%		
+			bhs: 4%
 			bike: 60%
 			bggy: 75%
 			ttnk: 45%
@@ -430,8 +430,8 @@
 			fortress: 3%
 			# wetp: 2%
 			# mutheli: 2%
-###############CAB#################	
-			cyborg: 16%		
+###############CAB#################
+			cyborg: 16%
 			cabsentry: 8%
 			REAPERCAB2: 4%
 			PDrone: 3%
@@ -444,7 +444,7 @@
 			wasp: 10%
 			firefly: 4%
 			basilisk: 3%
-###############SCR#################	
+###############SCR#################
 			shark: 16%
 			legio: 8%
 			float: 8%
