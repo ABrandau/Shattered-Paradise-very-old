@@ -329,7 +329,7 @@ SCRHARV:
 	Targetable:
 		TargetTypes: Ground, Vehicle, Repair, MindControlInmune
 	Harvester:
-		Capacity: 28
+		Capacity: 32
 		Resources: Tiberium, BlueTiberium
 		DeliveryBuildings: scrproc
 		UnloadTicksPerBale: 4

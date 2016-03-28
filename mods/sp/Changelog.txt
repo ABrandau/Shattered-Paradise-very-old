@@ -3,6 +3,8 @@ YEAR - MONTH - DAY
 [2016 - 03 - 28]
 Green tib value: 20 > 30 
 Blue tib value: 35 > 50
+Increase Harvester Capacity: 28 > 32
+Lots and lots of tweaking of Tay AI.
 
 [2016 - 03 - 27]
 Falcon Changes: damage per bomb 7 -> 5
