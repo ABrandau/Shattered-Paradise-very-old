@@ -137,8 +137,8 @@
 			scrdrone: 10%
 			scrtractor: 10%
 		UnitLimits:
-			harv: 6
-			scrharv: 6
+			harv: 4
+			scrharv: 4
 ###############GDI#################
 			gdie1: 8
 			jumpjet: 5
