@@ -35,6 +35,7 @@ Code / create Gas clouds.
 Enable Forgotten MRLS to spawn gas clouds.
 Enable Superweapons.
 Create new AI personalities.
+Give Guardian area heal/disable movement when it “deploys”
 
 [Knowledge]
 Figure out how volume control works.
