@@ -20,7 +20,7 @@ shark:
 	FreeActor@1:
 		Actor: sharkclone
 	FreeActor@2:
-		Actor: sharkclone		
+		Actor: sharkclone
 	Mobile:
 		Speed: 78
 		Voice: Move
@@ -29,7 +29,7 @@ shark:
 		Probability: 100
 		OwnerType: Killer
 		DeathType: CabalDeathInfantry
-		RequiresLobbyCreeps: true		
+		RequiresLobbyCreeps: true
 	Guard:
 		Voice: Move
 	Passenger:
@@ -43,7 +43,7 @@ shark:
 	AttackMove:
 		Voice: Move
 	AutoTarget:
-		ScanRadius: 5	
+		ScanRadius: 5
 		InitialStance: AttackAnything
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark
@@ -57,7 +57,7 @@ shark:
 	-TakeCover:
 
 LEGIO:
-	Inherits: ^ScrinSoldier	
+	Inherits: ^ScrinSoldier
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 25
@@ -67,23 +67,23 @@ LEGIO:
 	Valued:
 		Cost: 450
 	GivesExperience:
-		Experience: 150		
+		Experience: 150
 	Tooltip:
 		Name: Legionnaire
 		Description: Scrin Frontile trooper. Resistant\nto damage. Cannot be crushed.\nIts weapon damage spreads to nearby cells.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry
 	Health:
 		HP: 140
-	-Crushable:	
+	-Crushable:
 	FreeActor@1:
 		Actor: legioclone
 	FreeActor@2:
-		Actor: legioclone		
+		Actor: legioclone
 	Mobile:
-		Speed: 60	
+		Speed: 60
 	Armament:
 		Weapon: LegioNeedler
 		LocalOffset: 500,250,800
-		FireDelay: 5	
+		FireDelay: 5
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:
@@ -98,7 +98,7 @@ SHAPESHIFTER:
 	Selectable:
 		Class: Shapeshifter
 	GivesExperience:
-		Experience: 250		
+		Experience: 250
 	Tooltip:
 		Name: Shapeshifter
 		Description: Infiltrates and captures enemy structures.\n  Unarmed
@@ -130,9 +130,9 @@ SHAPESHIFTER:
 	-AutoTarget:
 	-GainsExperience:
 	RenderSprites:
-		
+
 BUG:
-	Inherits: ^ScrinSoldier		
+	Inherits: ^ScrinSoldier
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 27
@@ -140,7 +140,7 @@ BUG:
 	Selectable:
 		Class: bug
 	GivesExperience:
-		Experience: 300		
+		Experience: 300
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -151,7 +151,7 @@ BUG:
 	FreeActor@2:
 		Actor: bugclone
 	Selectable:
-		Bounds: 26,30,0,-10		
+		Bounds: 26,30,0,-10
 	Health:
 		HP: 220
 	Mobile:
@@ -161,7 +161,7 @@ BUG:
 		Probability: 100
 		OwnerType: Killer
 		DeathType: CabalDeathInfantry
-		RequiresLobbyCreeps: true		
+		RequiresLobbyCreeps: true
 	Armor:
 		Type: light
 	Armament:
@@ -172,7 +172,7 @@ BUG:
 		Voice: Attack
 	WithInfantryBody:
 		AttackSequence: throw
-	-TakeCover:	
+	-TakeCover:
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 
@@ -203,14 +203,14 @@ STALKER:
 			Water: 80
 		Crushes: crate
 	RevealsShroud:
-		Range: 6c0			
+		Range: 6c0
 	Armament@prim:
 		Weapon: StalkerSteal
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:
 		AttackSequence: throw
-	-TakeCover:	
+	-TakeCover:
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 
@@ -225,8 +225,8 @@ FLOAT:
 	Valued:
 		Cost: 1200
 	GivesExperience:
-		Experience: 400		
-	-Crushable:	
+		Experience: 400
+	-Crushable:
 	Tooltip:
 		Name: Floater
 		Description: Recon unit, suited for harassment.\nCan move through water and Cliffs.\n  Strong vs Buildings, Heavy Vehicles\n  Weak vs Infantry, Aircraft
@@ -247,18 +247,18 @@ FLOAT:
 		FireDelay: 10
 	Armament@sec:
 		Weapon: FloatTesla
-		LocalOffset: 0,250,500	
+		LocalOffset: 0,250,500
 		FireDelay: 10
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:
 		AttackSequence: throw
-	-TakeCover:	
+	-TakeCover:
 	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded			
+		Prerequisites: barracks.upgraded
 ##########################################################
 # Clones
-##########################################################	
+##########################################################
 SHARKCLONE:
 	Inherits: shark
 	RenderSprites:
@@ -266,23 +266,23 @@ SHARKCLONE:
 	-Buildable:
 	-FreeActor@1:
 	-FreeActor@2:
-	
+
 LEGIOCLONE:
 	Inherits: LEGIO
 	RenderSprites:
 		Image: legio
-	-Buildable:	
+	-Buildable:
 	-FreeActor@1:
 	-FreeActor@2:
-	
+
 FLOATCLONE:
 	Inherits: FLOAT
 	RenderSprites:
 		Image: float
-	-Buildable:	
+	-Buildable:
 	-FreeActor@1:
-	-FreeActor@2:	
-		
+	-FreeActor@2:
+
 SHAPESHIFTERCLONE:
 	Inherits: SHAPESHIFTER
 	RenderSprites:
@@ -290,7 +290,7 @@ SHAPESHIFTERCLONE:
 	-Buildable:
 	-FreeActor@1:
 	-FreeActor@2:
-	
+
 STALKERCLONE:
 	Inherits: STALKER
 	RenderSprites:
@@ -302,11 +302,11 @@ STALKERCLONE:
 BUGCLONE:
 	Inherits: BUG
 	RenderSprites:
-		Image: bug	
-	-Buildable:	
+		Image: bug
+	-Buildable:
 	-FreeActor@1:
-	-FreeActor@2:	
-		
+	-FreeActor@2:
+
 ################################################
 # Vehicles
 ################################################
@@ -325,9 +325,9 @@ SCRHARV:
 	Selectable:
 		Priority: 7
 		Bounds: 36,36
-	-Capturable:		
+	-Capturable:
 	Targetable:
-		TargetTypes: Ground, Vehicle, Repair, MindControlInmune		
+		TargetTypes: Ground, Vehicle, Repair, MindControlInmune
 	Harvester:
 		Capacity: 28
 		Resources: Tiberium, BlueTiberium
@@ -374,9 +374,9 @@ SCRHARV:
 	WithFacingSpriteBody:
 	BodyOrientation:
 		QuantizedFacings: 32
-	
+
 SCRSCORPION:
-	Inherits: ^ScrinTank		
+	Inherits: ^ScrinTank
 	Valued:
 		Cost: 550
 	Tooltip:
@@ -408,7 +408,7 @@ SCRSCORPION:
 		UpgradeMaxEnabledLevel: 0
 		UpgradeMaxAcceptedLevel: 1
 	FirepowerMultiplier@rer:
-		Modifier: 1,5		
+		Modifier: 1,5
 		UpgradeTypes: ScorpBuffer
 		UpgradeMinEnabledLevel: 1
 	QuantizeFacingsFromSequence:
@@ -416,9 +416,9 @@ SCRSCORPION:
 	WithInfantryBody:
 	Selectable:
 		Bounds: 20, 32, 0, -8
-	
+
 SCRMBT:
-	Inherits: ^ScrinTank	
+	Inherits: ^ScrinTank
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 32
@@ -457,15 +457,15 @@ SCRMBT:
 	AttackTurreted:
 	# WithMuzzleOverlay:
 	WithSpriteTurret:
-	AutoTarget:	
+	AutoTarget:
 	RenderSprites:
 	WithFacingSpriteBody:
 	BodyOrientation:
-		QuantizedFacings: 32	
-		
+		QuantizedFacings: 32
+
 SCRGLYDER2:
-	Inherits: ^ScrinTank	
-	Inherits@3: ^BasicStealthDetection	
+	Inherits: ^ScrinTank
+	Inherits@3: ^BasicStealthDetection
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 31
@@ -502,7 +502,7 @@ SCRGLYDER2:
 		LocalOffset: 768,0,90
 		# MuzzleSequence: muzzle
 	# WithMuzzleOverlay:
-	AutoTarget:	
+	AutoTarget:
 	AttackFrontal:
 	RenderSprites:
 	WithFacingSpriteBody:
@@ -510,7 +510,7 @@ SCRGLYDER2:
 		QuantizedFacings: 32
 
 SCRRECHARGER:
-	Inherits: ^ScrinTank		
+	Inherits: ^ScrinTank
 	Valued:
 		Cost: 1100
 	Tooltip:
@@ -532,7 +532,7 @@ SCRRECHARGER:
 		VoiceSet: Mech
 	WithRangeCircle:
 		Range: 6c0
-		Type: cloakgenerator		
+		Type: cloakgenerator
 	UpgradeActorsNear:
 		Upgrades: batteryboost
 		Range: 6c0
@@ -546,7 +546,7 @@ SCRRECHARGER:
 		MoveSequence: run
 
 TRIPOD:
-	Inherits: ^ScrinTank	
+	Inherits: ^ScrinTank
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -574,7 +574,7 @@ TRIPOD:
 		Weapon: TripodLaser
 		LocalOffset: 100,180,2550
 	Armament@2:
-		Weapon: TripodLaser	
+		Weapon: TripodLaser
 		LocalOffset: 100,-180,2550
 	WithInfantryBody:
 		AttackSequence: shoot
@@ -584,7 +584,7 @@ TRIPOD:
 # Unused
 ##########################################################
 SCRDRONEC:
-	Inherits: ^ScrinTank	
+	Inherits: ^ScrinTank
 	# Buildable:
 		# Queue: Vehicle
 		# BuildPaletteOrder: 34
@@ -628,18 +628,18 @@ SCRDRONEC:
 		LocalOffset: 768,0,400
 		# MuzzleSequence: muzzle
 	# WithMuzzleOverlay:
-	AutoTarget:	
+	AutoTarget:
 	AttackFrontal:
 	RenderSprites:
 	WithFacingSpriteBody:
 	BodyOrientation:
-		QuantizedFacings: 32		
+		QuantizedFacings: 32
 ##########################################################
 # Aircraft
-##########################################################	
+##########################################################
 SCRPOD:
-	Inherits: ^Plane	
-	Inherits@2: ^ScrinRender	
+	Inherits: ^Plane
+	Inherits@2: ^ScrinRender
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -673,7 +673,7 @@ SCRPOD:
 	RevealsShroud:
 		Range: 0c0
 		Type: CenterPosition
-	-AttackMove:	
+	-AttackMove:
 	-RenderVoxels:
 	-WithVoxelBody:
 	RenderSprites:
@@ -682,7 +682,7 @@ SCRPOD:
 	WithFacingSpriteBody:
 	WithShadow:
 	FlyAwayOnIdle:
-	RejectsOrders:		
+	RejectsOrders:
 
 STORMRIDER:
 	Inherits: ^Plane
@@ -715,8 +715,8 @@ STORMRIDER:
 	Armament:
 		Weapon: StormRiderBlast
 	Armament@aa:
-		Weapon: StormRiderBlastAA		
-	-ReturnOnIdle:	
+		Weapon: StormRiderBlastAA
+	-ReturnOnIdle:
 	RenderVoxels:
 		Scale: 0.7
 	# AttackPlane:
@@ -737,7 +737,7 @@ STORMRIDER:
 		Actor: STORMRIDER.Husk
 
 drache:
-	Inherits: ^Helicopter	
+	Inherits: ^Helicopter
 	Inherits@2: ^ScrinRender
 	Buildable:
 		Queue: Air
@@ -753,9 +753,9 @@ drache:
 	Health:
 		HP: 600
 	Voiced:
-		VoiceSet: Limpet		
+		VoiceSet: Limpet
 	Armor:
-		Type: Light	
+		Type: Light
 	Targetable:
 		TargetTypes: MindControlInmune, Aircraft
 	Aircraft:
@@ -789,11 +789,11 @@ drache:
 	-WithVoxelBody:
 	SpawnActorOnDeath:
 		Actor: DRACHE.Husk
-	
+
 SCRGLYDER1:
 	Inherits: ^Helicopter
-	Inherits@2: ^ScrinRender	
-	Inherits@3: ^SelfReloads	
+	Inherits@2: ^ScrinRender
+	Inherits@3: ^SelfReloads
 	Valued:
 		Cost: 750
 	Tooltip:
@@ -804,7 +804,7 @@ SCRGLYDER1:
 		BuildPaletteOrder: 20
 		Prerequisites: ~scrair
 	Voiced:
-		VoiceSet: Limpet		
+		VoiceSet: Limpet
 	Selectable:
 		Bounds: 40,30
 	Transforms:
@@ -816,7 +816,7 @@ SCRGLYDER1:
 		MoveIntoShroud: true
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
-		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green		
+		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green
 	Health:
 		HP: 170
 	Armor:
@@ -834,19 +834,19 @@ SCRGLYDER1:
 		PipTypeEmpty: AmmoEmpty
 	AutoTarget:
 	-RenderVoxels:
-	-WithVoxelBody:	
-	RenderSprites:	
+	-WithVoxelBody:
+	RenderSprites:
 	WithFacingSpriteBody:
-	WithShadow:	
+	WithShadow:
 	BodyOrientation:
 		QuantizedFacings: 32
 	SpawnActorOnDeath:
 		Actor: GLYDER1.Husk
-		
+
 SCRDESTROYER:
 	Inherits: ^Helicopter
-	Inherits@2: ^ScrinRender	
-	Inherits@3: ^SelfReloads	
+	Inherits@2: ^ScrinRender
+	Inherits@3: ^SelfReloads
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -857,7 +857,7 @@ SCRDESTROYER:
 		BuildPaletteOrder: 21
 		Prerequisites: ~scrair, scrradr
 	Voiced:
-		VoiceSet: Limpet		
+		VoiceSet: Limpet
 	Selectable:
 		Bounds: 100,75,0,-20
 	Aircraft:
@@ -884,10 +884,10 @@ SCRDESTROYER:
 		PipTypeEmpty: AmmoEmpty
 	AutoTarget:
 	-RenderVoxels:
-	-WithVoxelBody:	
-	RenderSprites:	
+	-WithVoxelBody:
+	RenderSprites:
 	WithFacingSpriteBody:
-	WithShadow:	
+	WithShadow:
 	BodyOrientation:
 		QuantizedFacings: 32
 	SpawnActorOnDeath:
@@ -905,13 +905,13 @@ SCRTRANS:
 		Queue: Air
 		Prerequisites: ~scrair
 	Voiced:
-		VoiceSet: Limpet		
+		VoiceSet: Limpet
 	Cargo:
 		Types: Infantry, Vehicle
 		MaxWeight: 15
 		PipCount: 15
 		UnloadVoice: Unload
-		LoadingUpgrades: notmobile		
+		LoadingUpgrades: notmobile
 	Selectable:
 		Bounds: 100,50
 	Aircraft:
@@ -931,20 +931,20 @@ SCRTRANS:
 		Range: 7c0
 		Type: CenterPosition
 	-RenderVoxels:
-	-WithVoxelBody:	
-	RenderSprites:	
+	-WithVoxelBody:
+	RenderSprites:
 	WithFacingSpriteBody:
-	WithShadow:	
+	WithShadow:
 	BodyOrientation:
 		QuantizedFacings: 32
 	SpawnActorOnDeath:
-		Actor: SCRTRANS.Husk			
+		Actor: SCRTRANS.Husk
 
 SCRBATTLESHIP:
 	Inherits: ^Helicopter
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^SelfReloads
-	Inherits@4: ^BasicStealthDetection	
+	Inherits@4: ^BasicStealthDetection
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -955,7 +955,7 @@ SCRBATTLESHIP:
 		BuildPaletteOrder: 21
 		Prerequisites: ~scrair, scrtech
 	Voiced:
-		VoiceSet: Limpet		
+		VoiceSet: Limpet
 	Selectable:
 		Bounds: 175,125
 	Aircraft:
@@ -976,7 +976,7 @@ SCRBATTLESHIP:
 		Weapon: BattleshipCannon
 		LocalOffset:0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
 	AttackTurreted:
-	Turreted:		
+	Turreted:
 	# AttackHeli:
 		# FacingTolerance: 20
 		# Voice: Attack
@@ -988,11 +988,11 @@ SCRBATTLESHIP:
 		PipTypeEmpty: AmmoEmpty
 	AutoTarget:
 	-RenderVoxels:
-	-WithVoxelBody:	
+	-WithVoxelBody:
 	RenderSprites:
 		Scale: 0.8
 	WithFacingSpriteBody:
-	WithShadow:	
+	WithShadow:
 	BodyOrientation:
 		QuantizedFacings: 32
 	SpawnActorOnDeath:
@@ -1014,11 +1014,11 @@ SCRINCOUNCIL:
 	Selectable:
 		Bounds: 100,90
 	Voiced:
-		VoiceSet: Limpet		
+		VoiceSet: Limpet
 	Health:
 		HP: 700
 	Armor:
-		Type: Light	
+		Type: Light
 	Aircraft:
 		TurnSpeed: 5
 		Speed: 186
@@ -1044,7 +1044,7 @@ SCRINCOUNCIL:
 		SelfReloadsTicks: 300
 		ResetOnFire: false
 		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty		
+		PipTypeEmpty: AmmoEmpty
 	AutoTarget:
 	Armament:
 		Weapon: CouncilSteal
@@ -1055,11 +1055,11 @@ SCRINCOUNCIL:
 	-RenderVoxels:
 	-WithVoxelBody:
 	SpawnActorOnDeath:
-		Actor: SCRCOUNCIL.Husk		
-	
+		Actor: SCRCOUNCIL.Husk
+
 ##########################################################
 # Structures
-##########################################################	
+##########################################################
 drached:
 	Inherits: ^Building
 	Inherits@2: ^ScrinRender
@@ -1148,7 +1148,7 @@ SCRPOWR:
 
 SCRRAX:
 	Inherits: ^Building
-	Inherits@2: ^ScrinRender	
+	Inherits@2: ^ScrinRender
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 30
@@ -1157,7 +1157,7 @@ SCRRAX:
 		Cost: 300
 	Tooltip:
 		Name: Landing Zone
-		Description: Safe haven for Infantry deployment.\nDeploys 3 soldiers per order.
+		Description: Infantry deployment.\nDeploys 3 soldiers per order.
 	ProvidesPrerequisite:
 		Prerequisite: scrrax
 	WithBuildingExplosion:
@@ -1200,21 +1200,21 @@ SCRRAX:
 		ZOffset: 256
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
-		
+
 scrproc:
 	Inherits: ^Building
-	Inherits@2: ^ScrinRender	
+	Inherits@2: ^ScrinRender
 	Valued:
 		Cost: 2200
 	Tooltip:
 		Name: Scrin Refinery
-		Description: Processes raw Tiberium\ninto useable resources.\nIncompatible with human harvesters.
+		Description: Processes Ichor.\nIncompatible with human harvesters.
 	Armor:
 		Type: Light
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 20
-		Prerequisites: scrpowr, ~structures.scr 
+		Prerequisites: scrpowr, ~structures.scr
 	Building:
 		Footprint: xxx= xx== xxx=
 		Dimensions: 4,3
@@ -1245,11 +1245,11 @@ scrproc:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 134, 122, 0, -18
-	RenderSprites:	
+	RenderSprites:
 
 SCRWEAP:
 	Inherits: ^Building
-	Inherits@2: ^ScrinRender	
+	Inherits@2: ^ScrinRender
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -1272,7 +1272,7 @@ SCRWEAP:
 	Health:
 		HP: 1300
 	Armor:
-		Type: Heavy			
+		Type: Heavy
 	RepairsUnits:
 		FinishRepairingNotification: UnitRepaired
 	RallyPoint:
@@ -1280,7 +1280,7 @@ SCRWEAP:
 		Palette: mouse
 		IsPlayerPalette: false
 	RevealsShroud:
-		Range: 6c0		
+		Range: 6c0
 	Exit@1:
 		SpawnOffset: -384,-384,0
 		ExitCell: 1,1
@@ -1290,7 +1290,7 @@ SCRWEAP:
 	PrimaryBuilding:
 	ProductionBar:
 	# WithRoof:
-		# Sequence: idle-zaz	
+		# Sequence: idle-zaz
 	WithIdleOverlay@ROOF:
 		Sequence: idle-roof
 	WithProductionOverlay@WHITELIGHTS:
@@ -1312,12 +1312,12 @@ SCRWEAP:
 
 SCRAIR:
 	Inherits: ^Building
-	Inherits@2: ^ScrinRender	
+	Inherits@2: ^ScrinRender
 	Valued:
 		Cost: 1500
 	Tooltip:
 		Name: Stargate
-		Description: Delivers Spacecraft from the fleet.
+		Description: Warps in fleet ships.
 	Buildable:
 		BuildPaletteOrder: 60
 		Queue: Building
@@ -1366,7 +1366,7 @@ SCRAIR:
 
 SCRRADR:
 	Inherits: ^Building
-	Inherits@2: ^ScrinRender	
+	Inherits@2: ^ScrinRender
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 90
@@ -1415,7 +1415,7 @@ SCRRADR:
 
 SCRTECH:
 	Inherits: ^Building
-	Inherits@2: ^ScrinRender	
+	Inherits@2: ^ScrinRender
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 100
@@ -1424,7 +1424,7 @@ SCRTECH:
 		Cost: 2000
 	Tooltip:
 		Name: Scrin Laboratory
-		Description: Provides an area for surface sampling\nAllows the Scrin to adapt it's most advanced units\nto the planet atmosphere.
+		Description: Provides an area for surface sampling\nAllows the Scrin to adapt their most advanced units\nto the host planet.
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	WithBuildingExplosion:
@@ -1445,14 +1445,14 @@ SCRTECH:
 		Amount: -150
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
-		VisualBounds: 110, 60, 3, -4	
+		VisualBounds: 110, 60, 3, -4
 
 ##############################################
 # Defences
 ##############################################
 SCRWALL:
 	Inherits: ^Wall
-	Inherits@2: ^ScrinRender	
+	Inherits@2: ^ScrinRender
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 1001
@@ -1478,10 +1478,10 @@ SCRWALL:
 		CrushClasses: heavywall
 	LineBuild:
 		NodeTypes: wall, turret
-		
+
 SCRGATE_A:
 	Inherits: ^Gate_A
-	Inherits@2: ^ScrinRender	
+	Inherits@2: ^ScrinRender
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 100
@@ -1492,11 +1492,11 @@ SCRGATE_A:
 	Tooltip:
 		Name: Energy Gate
 	Gate:
-		CloseDelay: 40		
+		CloseDelay: 40
 
 SCRGATE_B:
 	Inherits: ^Gate_B
-	Inherits@2: ^ScrinRender	
+	Inherits@2: ^ScrinRender
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 100
@@ -1517,7 +1517,7 @@ SCRNEEDLER:
 		Cost: 700
 	Tooltip:
 		Name: Ichor Waste Turret
-		Description: Basic defense, cloaks when idle.\nRequires power to operate.\n  Strong vs Aircraft\n  Weak vs Ground units
+		Description: Basic defense, cloaks when idle.\nRequires power to operate.\n  Strong vs Aircraft\n  Weak vs Ground units.
 	Buildable:
 		Queue: Defense
 		Prerequisites: scrrax, ~structures.scr
@@ -1603,11 +1603,11 @@ SCRTRACTOR:
 		Amount: -20
 	SelectionDecorations:
 		VisualBounds: 40, 36, -3, -8
-		
+
 SCRDRONE:
 	Inherits: ^Defense
 	Inherits@2: ^ScrinRender
-	Inherits@3: ^TowerStealthDetection	
+	Inherits@3: ^TowerStealthDetection
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -1652,7 +1652,7 @@ SCRSHIELD:
 		Cost: 1000
 	Tooltip:
 		Name: Stasis Field Generator
-		Description: Stasis Field\nBuffs and heals nearby units.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft
+		Description: Stasis Field\nBuffs and heals nearby units.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft.
 
 	Buildable:
 		Queue: Defense
@@ -1665,7 +1665,7 @@ SCRSHIELD:
 		Upgrades: StasisDisable, notmobile
 		OrderName: Stasis Field
 		Description: Stasis Field
-		LongDesc: Disables all units in the area but\nalso makes then invulnerable. 
+		LongDesc: Disables all units in the area but\nalso makes then invulnerable.
 		Duration: 200
 		Range: 5
 		ChargeTime: 200
@@ -1701,7 +1701,7 @@ SCRMINE:
 	Health:
 		HP: 50
 	-AttackTurreted:
-	-AutoTarget:		
+	-AutoTarget:
 	-RenderRangeCircle:
 	-Voiced:
 	Armor:
@@ -1720,6 +1720,6 @@ SCRMINE:
 	Mine:
 		CrushClasses: crate
 		DetonateClasses: crate
-		AvoidFriendly: true		
+		AvoidFriendly: true
 	Explodes:
-		Weapon: MineExplode				
+		Weapon: MineExplode
