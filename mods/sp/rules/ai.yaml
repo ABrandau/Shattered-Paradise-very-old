@@ -28,7 +28,7 @@
 		UnitsCommonNames:
 			Mcv: mcv, drache
 		BuildingLimits:
-			proc: 2
+			proc: 3
 			gasilo: 1
 ###############GDI#################
 			gapowr: 8
@@ -82,7 +82,7 @@
 			scrdrone: 6
 			scrtractor: 6
 		BuildingFractions:
-			proc: 60%
+			proc: 50%
 			gasilo: 10%
 ###############GDI#################
 			gapowr: 35%
@@ -125,7 +125,7 @@
 			cabblast: 10%
 			cabrail: 6%
 ###############SCRIN#################
-			scrproc: 60%
+			scrproc: 50%
 			scrpowr: 35%
 			scrrax: 4%
 			scrweap: 4%
@@ -136,8 +136,8 @@
 			scrdrone: 10%
 			scrtractor: 10%
 		UnitLimits:
-			harv: 4
-			scrharv: 4
+			harv: 6
+			scrharv: 6
 ###############GDI#################
 			gdie1: 10
 			jumpjet: 5
@@ -201,7 +201,7 @@
 			scrdestroyer: 3
 		UnitsToBuild:
 			harv: 75%
-			scrharv: 85%
+			scrharv: 75%
 ###############GDI#################
 			gdie1: 50%
 			jumpjet: 25%
