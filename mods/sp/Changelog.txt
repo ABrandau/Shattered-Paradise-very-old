@@ -1,5 +1,9 @@
 YEAR - MONTH - DAY
 
+[2016 - 03 - 28]
+Green tib value: 20 > 30 
+Blue tib value: 35 > 50
+
 [2016 - 03 - 27]
 Falcon Changes: damage per bomb 7 -> 5
 Fixed error that made some units crash the game when sent to repair.
