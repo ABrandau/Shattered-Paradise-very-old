@@ -522,7 +522,7 @@ DronePlane:
 		Image: projwyverm	
 		Palette: playerscrin
 		Shadow: false
-		Angle: 1204
+		Angle: 50
 		ContrailLength: 30
 	Warhead@1Dam: SpreadDamage
 		Spread: 500
