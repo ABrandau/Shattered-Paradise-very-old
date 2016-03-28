@@ -68,9 +68,9 @@
 			cabradr: 1
 			cabair: 1
 			cabtech: 1
-			cabcannon: 7
-			cabblast: 7
-			cabrail: 4
+			cabcannon: 6
+			cabblast: 6
+			cabrail: 5
 ###############SCRIN#################
 			scrproc: 3
 			scrpowr: 8
@@ -110,11 +110,11 @@
 			murax: 5%
 			muweap: 5%
 			muradr: 1%
-			muair: 2%
+			muair: 1%
 			muhall: 1%
 			mubunkr: 5%
 			muflak: 6%
-			muventi: 4%
+			muventi: 3%
 ###############CAB#################
 			cabpowr: 35%
 			cabclaw: 5%
@@ -124,7 +124,7 @@
 			cabair: 4%
 			cabcannon: 10%
 			cabblast: 10%
-			cabrail: 6%
+			cabrail: 10%
 ###############SCRIN#################
 			scrproc: 50%
 			scrpowr: 35%
@@ -140,7 +140,7 @@
 			harv: 6
 			scrharv: 6
 ###############GDI#################
-			gdie1: 10
+			gdie1: 8
 			jumpjet: 5
 			grenadier: 5
 			eagleguard: 5
@@ -152,23 +152,24 @@
 			hmec: 1
 			guardian: 1
 ###############NOD#################
-			altnode1: 10
+			altnode1: 8
 			crusader: 5
 			templar: 5
 			bhs: 1
 			bggy: 5
-			ttnk: 4
+			ttnk: 5
 			armh: 3
 			subtank: 5
 			stnk: 4
 			apache: 3
 			scrin: 2
 ###############MUT#################
-			marauder: 10
-			e3: 10
-			mutfiend: 5
-			hunter: 5
+			marauder: 12
+			e3: 12
+			mutfiend: 6
+			ranger: 6
 			awarrior: 5
+			psyker: 1
 			mutapc: 2
 			muttank: 5
 			mutquad: 3
@@ -183,7 +184,7 @@
 			cyc2: 1
 			jenn: 5
 			centurion: 3
-			grinder: 1
+			grinder: 2
 			paladin: 2
 			blaster: 5
 			wasp: 10
@@ -233,8 +234,9 @@
 			marauder: 50%
 			e3: 45%
 			mutfiend: 15%
-			hunter: 15%
-			awarrior: 15%
+			ranger: 15%
+			awarrior: 5%
+			psyker: 3%
 			mutapc: 40%
 			muttank: 25%
 			mutquad: 20%

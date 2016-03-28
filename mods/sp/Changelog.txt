@@ -6,6 +6,7 @@ Increased harvester capacity 32 > 48
 Fixed some unit descriptions.
 Tay AI enhancements:
 Can now build Nod air.
+Can now build Mutant rangers and psykers.
 Increased rush interval to 45 seconds (1125 ticks).
 Increased interval to check for new bases to one minute (1500 ticks).
 Decreased StructureProductionActiveDelay: 25 < 0
