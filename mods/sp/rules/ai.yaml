@@ -115,8 +115,8 @@
 			muflak: 6%
 			muventi: 4%
 			cabpowr: 35%
-			cabclaw: 10%
-			cabweap: 10%
+			cabclaw: 15%
+			cabweap: 15%
 			cabradr: 1%
 			cabtech: 1%
 			cabair: 3%
@@ -234,7 +234,7 @@
 			grinder: 10%
 			paladin: 40%
 			blaster: 25%
-			wasp: 25%
+			wasp: 15%
 			basilisk: 7%
 			shark: 8%
 			legio: 14%
