@@ -1,6 +1,7 @@
 YEAR - MONTH - DAY
 
 [2016 - 03 - 28]
+Updated CABAL Powerplant, barracks and factory graphics.
 Returned blossom trees to default interval.
 Increased harvester capacity 32 > 48
 Fixed some unit descriptions.

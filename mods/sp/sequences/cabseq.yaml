@@ -814,47 +814,42 @@ cabweap:
 	Defaults:
 		Offset: -12, -42
 		UseTilesetCode: true
-	idle: ctbweap_1
-		ShadowStart: 3
+	idle:
+		Start: 87
+		ShadowStart: 76
 		ZOffset: -1026
-	damaged-idle: ctbweap_1
-		Start: 1
-		ShadowStart: 3
+	damaged-idle:
+		Start: 88
+		ShadowStart: 77
 		ZOffset: -1026
-	idle-roof: ctbweap_2
-		ShadowStart: 3
+	idle-roof:
+		Start: 89
 		ZOffset: 1024
-	damaged-idle-roof: ctbweap_2
-		Start: 1
-		ShadowStart: 3
+	damaged-idle-roof:
+		Start: 90
 		ZOffset: 1024
-	dead: ctbweap
+	dead:
 		Start: 2
 		ShadowStart: 5
 		Tick: 400
-	# production-lights: ctbweap_a
-		# Length: 16
-		# Tick: 100
-		# ZOffset: 2048
-	# damaged-production-lights: ctbweap_a
-		# Start: 16
-		# Length: 16
-		# Tick: 100
-		# ZOffset: 2048
-	build-door: ctbweap_b
-		Length: 11
+	build-door:
+		Start: 36
+		Length: 9
 		ZOffset: -2048
-	damaged-build-door: ctbweap_b
-		Length: 11
+	damaged-build-door:
+		Start: 36
+		Length: 9
 		ZOffset: -2048
-	make: ctbweapmk
+	make:
+		Start: 4
 		Length: 30
 		Tick: 80
-		ShadowStart: 29
-	bib: ctbweap_bb
+		ShadowStart: 46
+	bib:
+		Start: 2
 		ZOffset: -2048
-	damaged-bib: ctbweap_bb
-		Start: 1
+	damaged-bib:
+		Start: 3
 		ZOffset: -2048
 	emp-overlay: emp_fx01
 		Length: *
