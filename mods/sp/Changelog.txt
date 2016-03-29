@@ -4,11 +4,12 @@ YEAR - MONTH - DAY
 Tay AI improvements:
 	Scrin can now train stalkers.
 	GDI can train medics.
+	Mutants can will now build stable and train tiberium creatures.
 	Refactored a lot of the build percentages.
 Panzerkin AI:
 	Added Panzerkin 1.0. This is an armor focused AI. Works best for GDI.
 	Added Earhart 1.0. This is an aircraft focused AI. Works best for Scrin and possibly CABAL.
-	Added Waaagh! 1.0. This is an infantry focused AI. Works best for Mutants.
+	Added Waaagh! 1.0. This is a basic ground units focused AI with rush timings. Works best for Mutants.
 
 [2016 - 03 - 28]
 Updated CABAL Powerplant, barracks and factory graphics.

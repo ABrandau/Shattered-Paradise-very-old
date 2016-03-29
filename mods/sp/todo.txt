@@ -34,7 +34,6 @@ Enable purifier desolator logic.
 Code / create Gas clouds.
 Enable Forgotten MRLS to spawn gas clouds.
 Enable Superweapons.
-Create new AI personalities.
 Give Guardian area heal/disable movement when it “deploys”
 
 [Knowledge]
@@ -45,6 +44,9 @@ Figure out how missile behaviour works.
 Get more weapon sounds :v
 Create and add Guardian lines.
 Create and add Marauder and Skirmisher lines.
+Create and add Basilisk lines.
+Create and add Hijacker lines.
+Create and add Eagle Guardian lines.
 Implement more audio.
 CABAL:
 	Fix vehicle and aircraft quotes.

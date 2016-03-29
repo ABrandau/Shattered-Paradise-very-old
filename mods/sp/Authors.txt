@@ -1,19 +1,34 @@
-First, Thanks to these people
+#Special Thanks
 
-WestWood Studios: I don't think I need to say why.		
-Openra dev team	: for their effort in creating openra (no ORA, no SP).
-Scipción	: Got me Into 3d modelling.
-Penev		: Saved my ass from every bug that could threaten to terminate the mod.
-Graion & Astor	: For their help when I was starting using this engine.
+A warm thank you to the following folks.
+
+WestWood Studios Studios
+	
+OpenRA dev team for their effort in creating openra (no ORA, no SP).
+
+Scipción	: Got Nolt into 3D modelling.
+Penev		: Saved the mod from countless bugs.
+Graion & Astor	: For their help when Nolt began to use this engine.
 FiveAces	: Streaming and testing.
 Xanax		: Gave some support when I was starting.
-SchismNavigator	: For helping setting up the discord server and other general contributions.
-4XS		: Concept Support.
-BuhDan		: Sound Support.
 
-And now about the assets, all the graphics fall into 3 categories, made by WestWood, by me or 
-by any of the following authors, if an asset doesn't have credit, then either WW or I made it, 
-let me know if I made any mistakes.
+#Shattered Paradise Team
+
+Nolt: Founder, design, scripting, models.
+SchismNavigator	: Lore, design and AI.
+4XS: Concept art.
+BuhDan: Sound design.
+Alex06: Graphics and maps.
+
+
+#Assets
+
+All graphical assets fall into three categories:
+1) Westwood made
+2) Nolt made
+3) C&C Community made
+
+If an asset doesn't have credit, then either WW or Nolt made it, let us know if we made any mistakes.
 
 The_Dementor	: Skirmisher, EMP pulse Icons, Harvester, and MCV Cameos (mut and cab), Wrench and Tiberium Icons.
 Gangster	: His template.
@@ -32,6 +47,13 @@ GameMaster0000	: Tiberian Fiend Icon.
 CyborgCommandoKerem: Black Hand Sniper shp.				
 DonutArnold	: Basilisk torpedo explosion effect, scrin structure and aircraft crash explosion effects.
 
-Voice Cast
+#Voice Cast
 
 TBA
+
+#Additional Music
+
+Frank Klepacki
+Static-X
+KD Labs
+Nicolas Signat

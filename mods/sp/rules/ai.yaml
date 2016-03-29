@@ -59,6 +59,7 @@
 			muradr: 1
 			mutair: 2
 			muhall: 1
+			mustable: 1
 			mubunkr: 12
 			mutventi: 2
 			muflak: 5
@@ -113,6 +114,7 @@
 			muradr: 1%
 			muair: 1%
 			muhall: 1%
+			mustable: 1%
 			mubunkr: 7%
 			muflak: 7%
 			muventi: 0.5%
@@ -261,7 +263,7 @@
 			pdrone: 6%
 			glad: 2%
 			cyc2: 1%
-			jenn: 20%
+			jenn: 2%
 			centurion: 2%
 			grinder: 2%
 			paladin: 1%
@@ -348,6 +350,7 @@
 			muradr: 1
 			mutair: 0
 			muhall: 1
+			mustable: 1
 			mubunkr: 12
 			mutventi: 2
 			muflak: 5
@@ -402,6 +405,7 @@
 			muradr: 1%
 			muair: 1%
 			muhall: 1%
+			mustable: 1%
 			mubunkr: 7%
 			muflak: 7%
 			muventi: 0.5%
@@ -559,6 +563,7 @@
 			muradr: 1
 			mutair: 5
 			muhall: 1
+			mustable: 1
 			mubunkr: 12
 			mutventi: 2
 			muflak: 5
@@ -613,6 +618,7 @@
 			muradr: 1%
 			muair: 1%
 			muhall: 1%
+			mustable: 1%
 			mubunkr: 7%
 			muflak: 7%
 			muventi: 0.5%
@@ -682,12 +688,12 @@
 		SquadSize: 7
 		SquadSizeRandomBonus: 15
 
-	HackyAI@Waaagh!:
-		Name: Waaagh!
+	HackyAI@Waaagh:
+		Name: Waaagh
 		MinimumExcessPower: 60
 		ProtectUnitScanRadius: 20
-		RushAttackScanRadius: 30
-		RushInterval: 1125
+		RushAttackScanRadius: 50
+		RushInterval: 500
 		StructureProductionInactiveDelay: 25
 		StructureProductionActiveDelay: 0
 		StructureProductionRandomBonusDelay: 25
@@ -699,7 +705,7 @@
 		MaxBaseRadius: 35
 		MaxResourceCellsToCheck: 6
 		ShouldRepairBuildings: True
-		CheckForNewBasesDelay: 1500
+		CheckForNewBasesDelay: 1000
 		NewProductionCashThreshold: 10000
 		BuildingCommonNames:
 			ConstructionYard: gacnst, drached
@@ -717,95 +723,84 @@
 			gasilo: 1
 ###############GDI#################
 			gapowr: 10
-			gapile: 5
+			gapile: 3
 			gaweap: 1
 			garadr: 1
 			gahpad: 0
-			gatech: 1
-			gafire: 1
+			gatech: 0
+			gafire: 0
 ###############NOD#################
 			napowr: 7
-			nahand: 5
+			nahand: 3
 			naweap: 1
 			naradr: 1
 			nahpad: 0
-			natech: 1
-			nastlh: 1
+			natech: 0
+			nastlh: 0
 			naapwr: 3
-			naobel: 3
+			naobel: 0
 			nalasr: 8
 			nasam: 4
 ###############MUT#################
 			mupowr: 10
-			murax: 5
+			murax: 3
 			muweap: 1
 			muradr: 1
 			mutair: 0
-			muhall: 1
+			muhall: 0
+			mustable: 1
 			mubunkr: 12
-			mutventi: 2
+			mutventi: 0
 			muflak: 5
 ###############CAB#################
 			cabpowr: 10
-			cabclaw: 5
+			cabclaw: 3
 			cabweap: 1
 			cabradr: 1
 			cabair: 0
-			cabtech: 1
+			cabtech: 0
 			cabcannon: 6
 			cabblast: 6
 			cabrail: 5
 ###############SCRIN#################
 			scrproc: 3
 			scrpowr: 10
-			scrrax: 5
+			scrrax: 3
 			scrweap: 1
 			scrradr: 1
 			scrair: 0
-			scrtech: 1
+			scrtech: 0
 			scrneedler: 6
 			scrdrone: 6
 			scrtractor: 6
 		BuildingFractions:
 			proc: 99%
-			gasilo: 50%
-##############GDI#################
+			gasilo: 30%
+###############GDI#################
 			gapowr: 15%
 			gapile: 4%
 			gaweap: 6%
 			garadr: 1%
-			gahpad: 4%
-			gatech: 1%
-			gafire: 0.5%
 ###############NOD#################
 			napowr: 1%
 			nahand: 5%
 			naweap: 5%
 			naradr: 1%
-			nahpad: 3%
-			natech: 1%
 			nasam: 7%
-			naobel: 7%
-			nastlh: 1%
-			naapwr: 30%
 			nalasr: 7%
 ###############MUT#################
 			mupowr: 15%
 			murax: 6%
 			muweap: 4%
 			muradr: 1%
-			muair: 1%
-			muhall: 1%
+			mustable: 1%
 			mubunkr: 7%
 			muflak: 7%
-			muventi: 0.5%
 ###############CAB#################
 			cabpowr: 15%
 			cabclaw: 5%
 			cabweap: 4%
 			cabradr: 1%
-			cabtech: 1%
-			cabair: 4%
 			cabcannon: 7%
 			cabblast: 7%
 			cabrail: 7%
@@ -815,8 +810,6 @@
 			scrrax: 4%
 			scrweap: 4%
 			scrradr: 1%
-			scrair: 10%
-			scrtech: 1%
 			scrneedler: 7%
 			scrdrone: 7%
 			scrtractor: 7%
@@ -824,72 +817,82 @@
 			harv: 4
 			scrharv: 4
 ###############GDI#################
-			gdie1: 20
-			jumpjet: 15
-			grenadier: 15
-			medic: 2
-			eagleguard: 15
+			gdie1: 10
+			jumpjet: 10
+			grenadier: 5
+			medic: 1
+			mmch: 5
+			smech: 4
 ###############NOD#################
-			altnode1: 20
-			crusader: 15
-			templar: 15
-			bhs: 1
+			altnode1: 10
+			crusader: 10
+			bggy: 7
+			ttnk: 7
 ###############MUT#################
-			marauder: 25
-			e3: 20
-			mutfiend: 15
-			ranger: 15
-			awarrior: 15
-			psyker: 1
+			marauder: 14
+			e3: 14
+			mutfiend: 5
+			ranger: 5
+			mutapc: 2
+			muttank: 5
+			mutquad: 4
+			wolf: 3
 ###############CAB#################
-			cyborg: 20
-			cabsentry: 20
-			reapercab: 10
-			pdrone: 10
-			glad: 10
-			cyc2: 1
+			cyborg: 10
+			cabsentry: 7
+			reapercab: 4
+			pdrone: 3
+			jenn: 10
+			centurion: 2
+			grinder: 2
 ###############SCRIN#################
 			shark: 10
-			legio: 20
+			legio: 10
 			float: 10
 			bug: 10
 			stalker: 10
+			scrscorpion: 10
+			scrmbt: 10
 		UnitsToBuild:
 			harv: 50%
 			scrharv: 50%
 ###############GDI#################
-			gdie1: 50%
-			jumpjet: 25%
-			grenadier: 18%
-			medic: 2%
-			eagleguard: 18%
+			gdie1: 7%
+			jumpjet: 5%
+			grenadier: 4%
+			medic: 1%
+			mmch: 7%
+			smech: 7%
+			hvr: 5%
 ###############NOD#################
-			altnode1: 50%
-			crusader: 25%
-			templar: 18%
-			bhs: 8%
+			altnode1: 7%
+			crusader: 7%
+			bggy: 7%
+			ttnk: 5%
 ###############MUT#################
-			marauder: 50%
-			e3: 45%
-			mutfiend: 15%
-			ranger: 15%
-			awarrior: 5%
-			psyker: 3%
+			marauder: 14%
+			e3: 14%
+			mutfiend: 5%
+			ranger: 5%
+			mutapc: 7%
+			muttank: 5%
+			mutquad: 4%
+			wolf: 3%
 ###############CAB#################
-			cyborg: 50%
-			cabsentry: 25%
-			reapercab: 20%
-			pdrone: 50%
-			glad: 25%
-			cyc2: 10%
+			cyborg: 7%
+			cabsentry: 4%
+			reapercab: 3%
+			pdrone: 6%
+			jenn: 2%
 ###############SCRIN#################
-			shark: 8%
-			legio: 14%
-			float: 8%
-			bug: 5%
+			shark: 1%
+			legio: 10%
+			float: 5%
 			stalker: 5%
-		SquadSize: 20
-		SquadSizeRandomBonus: 40
+			scrscorpion: 5%
+			scrmbt: 6%
+		SquadSize: 10
+		SquadSizeRandomBonus: 20
 
 ###############OTHER AI#################
 
