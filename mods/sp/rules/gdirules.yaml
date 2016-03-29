@@ -928,7 +928,7 @@ GAHPAD:
 	Buildable:
 		BuildPaletteOrder: 60
 		Queue: Building
-		Prerequisites: proc, ~structures.gdi
+		Prerequisites: proc, garadr, ~structures.gdi
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1030,7 +1030,7 @@ GARADR:
 		BuildPaletteOrder: 90
 		Prerequisites: proc, ~structures.gdi
 	Valued:
-		Cost: 1500
+		Cost: 1000
 	Tooltip:
 		Name: GDI Radar
 		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.

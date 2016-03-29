@@ -889,7 +889,7 @@ MUAIR:
 	Buildable:
 		BuildPaletteOrder: 60
 		Queue: Building
-		Prerequisites: proc, ~structures.mut
+		Prerequisites: proc, muradr, ~structures.mut
 	Building:
 		Footprint: xxxx xxxx
 		Dimensions: 2,4
@@ -933,7 +933,7 @@ MURADR:
 		BuildPaletteOrder: 90
 		Prerequisites: proc, ~structures.mut
 	Valued:
-		Cost: 1500
+		Cost: 1000
 	Tooltip:
 		Name: Dome Radar
 		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.

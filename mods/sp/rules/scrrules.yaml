@@ -178,10 +178,10 @@ BUG:
 
 STALKER:
 	Inherits: ^ScrinSoldier
-	Buildable:
-		Queue: Infantry
-		BuildPaletteOrder: 28
-		Prerequisites: ~scrrax, scrtech
+	# Buildable:
+		# Queue: Infantry
+		# BuildPaletteOrder: 28
+		# Prerequisites: ~scrrax, scrtech
 	Selectable:
 		Class: Stalker
 	Valued:
@@ -1372,7 +1372,7 @@ SCRRADR:
 		BuildPaletteOrder: 90
 		Prerequisites: scrproc, ~structures.scr
 	Valued:
-		Cost: 1500
+		Cost: 1000
 	Tooltip:
 		Name: Scrin Radar
 		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.

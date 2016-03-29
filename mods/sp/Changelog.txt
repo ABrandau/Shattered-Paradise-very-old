@@ -1,6 +1,10 @@
 YEAR - MONTH - DAY
 
 [2016 - 03 - 29]
+Cleaned CABAL warfactory build animation.
+Stalker disabled
+Radar changes: Cost: 1500 -> 1000 , to all factions.
+GDI, NOD, and MUT equivalent to Helipad now requires a radar to be built.
 Tay AI improvements:
 	Scrin can now train stalkers.
 	GDI can train medics.
