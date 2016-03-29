@@ -85,70 +85,70 @@
 			scrtractor: 6
 		BuildingFractions:
 			proc: 99%
-			gasilo: 50%
+			gasilo: 30%
 ###############GDI#################
-			gapowr: 35%
-			gapile: 5%
-			gaweap: 5%
+			gapowr: 15%
+			gapile: 4%
+			gaweap: 6%
 			garadr: 1%
-			gahpad: 5%
+			gahpad: 4%
 			gatech: 1%
-			gafire: 1%
+			gafire: 0.5%
 ###############NOD#################
-			napowr: 35%
-			nahand: 10%
+			napowr: 1%
+			nahand: 5%
 			naweap: 5%
 			naradr: 1%
-			nahpad: 5%
+			nahpad: 3%
 			natech: 1%
-			nasam: 6%
-			naobel: 3%
+			nasam: 7%
+			naobel: 7%
 			nastlh: 1%
-			naapwr: 1%
-			nalasr: 10%
+			naapwr: 30%
+			nalasr: 7%
 ###############MUT#################
-			mupowr: 35%
-			murax: 10%
-			muweap: 5%
+			mupowr: 15%
+			murax: 6%
+			muweap: 4%
 			muradr: 1%
 			muair: 1%
 			muhall: 1%
-			mubunkr: 5%
-			muflak: 6%
-			muventi: 3%
+			mubunkr: 7%
+			muflak: 7%
+			muventi: 0.5%
 ###############CAB#################
-			cabpowr: 35%
-			cabclaw: 10%
-			cabweap: 5%
+			cabpowr: 15%
+			cabclaw: 5%
+			cabweap: 4%
 			cabradr: 1%
 			cabtech: 1%
 			cabair: 4%
-			cabcannon: 10%
-			cabblast: 10%
-			cabrail: 10%
+			cabcannon: 7%
+			cabblast: 7%
+			cabrail: 7%
 ###############SCRIN#################
 			scrproc: 99%
-			scrpowr: 35%
-			scrrax: 5%
-			scrweap: 5%
-			scrradr: 2%
+			scrpowr: 15%
+			scrrax: 4%
+			scrweap: 4%
+			scrradr: 1%
 			scrair: 10%
-			scrtech: 3%
-			scrneedler: 10%
-			scrdrone: 10%
-			scrtractor: 10%
+			scrtech: 1%
+			scrneedler: 7%
+			scrdrone: 7%
+			scrtractor: 7%
 		UnitLimits:
 			harv: 4
 			scrharv: 4
 ###############GDI#################
-			gdie1: 8
+			gdie1: 5
 			jumpjet: 5
 			grenadier: 5
 			medic: 1
-			eagleguard: 5
-			mmch: 8
-			smech: 6
-			hvr: 5
+			eagleguard: 4
+			mmch: 5
+			smech: 4
+			hvr: 4
 			sonic: 3
 			jugger: 2
 			hmec: 1
@@ -156,9 +156,9 @@
 			orca: 3
 			orcab: 2
 ###############NOD#################
-			altnode1: 8
+			altnode1: 5
 			crusader: 5
-			templar: 5
+			templar: 4
 			bhs: 1
 			bggy: 5
 			ttnk: 5
@@ -168,123 +168,123 @@
 			apache: 3
 			scrin: 2
 ###############MUT#################
-			marauder: 12
-			e3: 12
-			mutfiend: 6
-			ranger: 6
+			marauder: 14
+			e3: 14
+			mutfiend: 5
+			ranger: 5
 			awarrior: 5
 			psyker: 1
 			mutapc: 2
 			muttank: 5
-			mutquad: 3
+			mutquad: 4
 			mrls: 5
 			wolf: 3
 			mutbird: 3
 			mutheli: 3
 ###############CAB#################
-			cyborg: 10
-			cabsentry: 5
-			reapercab: 5
-			pdrone: 5
-			glad: 5
+			cyborg: 7
+			cabsentry: 4
+			reapercab: 3
+			pdrone: 3
+			glad: 3
 			cyc2: 1
 			jenn: 5
-			centurion: 3
+			centurion: 2
 			grinder: 2
 			paladin: 2
 			blaster: 5
-			wasp: 10
-			basilisk: 5
+			wasp: 5
+			basilisk: 3
 ###############SCRIN#################
 			shark: 3
-			legio: 10
+			legio: 7
 			float: 4
 			bug: 4
 			stalker: 2
 			scrscorpion: 2
 			scrmbt: 3
 			scrrecharger: 1
-			scrglyder1: 15
-			scrglyder2: 15
+			scrglyder1: 6
+			scrglyder2: 6
 			tripod: 2
-			stormrider: 20
+			stormrider: 14
 			scrbattleship: 1
 			scrdestroyer: 3
 		UnitsToBuild:
 			harv: 50%
 			scrharv: 50%
 ###############GDI#################
-			gdie1: 50%
-			jumpjet: 25%
-			grenadier: 18%
+			gdie1: 7%
+			jumpjet: 5%
+			grenadier: 4%
 			medic: 1%
-			eagleguard: 18%
-			mmch: 35%
-			smech: 35%
-			hvr: 40%
-			sonic: 15%
-			jugger: 10%
-			hmec: 50%
-			guardian: 10%
-			orca: 10%
-			orcab: 10%
+			eagleguard: 4%
+			mmch: 7%
+			smech: 7%
+			hvr: 5%
+			sonic: 3%
+			jugger: 2%
+			hmec: 2%
+			guardian: 1%
+			orca: 5%
+			orcab: 5%
 ###############NOD#################
-			altnode1: 50%
-			crusader: 25%
-			templar: 18%
-			bhs: 8%
-			bggy: 75%
-			ttnk: 65%
-			armh: 25%
-			subtank: 18%
-			stnk: 18%
-			apache: 3%
-			scrin: 3%
+			altnode1: 7%
+			crusader: 7%
+			templar: 5%
+			bhs: 4%
+			bggy: 7%
+			ttnk: 5%
+			armh: 2%
+			subtank: 2%
+			stnk: 2%
+			apache: 1%
+			scrin: 1%
 ###############MUT#################
-			marauder: 50%
-			e3: 45%
-			mutfiend: 15%
-			ranger: 15%
+			marauder: 14%
+			e3: 14%
+			mutfiend: 5%
+			ranger: 5%
 			awarrior: 5%
 			psyker: 3%
-			mutapc: 40%
-			muttank: 25%
-			mutquad: 20%
-			mrls: 20%
-			wolf: 8%
-			mutbird: 3%
-			mutheli: 3%
+			mutapc: 7%
+			muttank: 5%
+			mutquad: 4%
+			mrls: 5%
+			wolf: 3%
+			mutbird: 1%
+			mutheli: 1%
 ###############CAB#################
-			cyborg: 50%
-			cabsentry: 25%
-			reapercab: 20%
-			pdrone: 50%
-			glad: 25%
-			cyc2: 10%
-			jenn: 40%
-			centurion: 20%
-			grinder: 20%
-			paladin: 10%
-			blaster: 30%
-			wasp: 15%
-			basilisk: 7%
+			cyborg: 7%
+			cabsentry: 4%
+			reapercab: 3%
+			pdrone: 6%
+			glad: 2%
+			cyc2: 1%
+			jenn: 20%
+			centurion: 2%
+			grinder: 2%
+			paladin: 1%
+			blaster: 3%
+			wasp: 5%
+			basilisk: 1%
 ###############SCRIN#################
-			shark: 8%
-			legio: 14%
-			float: 8%
+			shark: 1%
+			legio: 10%
+			float: 5%
 			bug: 5%
 			stalker: 5%
-			scrscorpion: 8%
-			scrmbt: 12%
+			scrscorpion: 5%
+			scrmbt: 6%
 			scrrecharger: 1%
-			scrglyder1: 25%
-			scrglyder2: 25%
-			tripod: 15%
-			stormrider: 75%
-			scrbattleship: 80%
-			scrdestroyer: 50%
-		SquadSize: 20
-		SquadSizeRandomBonus: 40
+			scrglyder1: 5%
+			scrglyder2: 5%
+			tripod: 1%
+			stormrider: 10%
+			scrbattleship: 3%
+			scrdestroyer: 5%
+		SquadSize: 14
+		SquadSizeRandomBonus: 25
 
 ###############SPECIALIST AI###############
 
@@ -375,57 +375,57 @@
 		BuildingFractions:
 			proc: 99%
 			gasilo: 50%
-###############GDI#################
-			gapowr: 35%
-			gapile: 5%
-			gaweap: 5%
+##############GDI#################
+			gapowr: 15%
+			gapile: 4%
+			gaweap: 6%
 			garadr: 1%
-			gahpad: 5%
+			gahpad: 4%
 			gatech: 1%
-			gafire: 1%
+			gafire: 0.5%
 ###############NOD#################
-			napowr: 35%
-			nahand: 10%
+			napowr: 1%
+			nahand: 5%
 			naweap: 5%
 			naradr: 1%
-			nahpad: 5%
+			nahpad: 3%
 			natech: 1%
-			nasam: 6%
-			naobel: 3%
+			nasam: 7%
+			naobel: 7%
 			nastlh: 1%
-			naapwr: 1%
-			nalasr: 10%
+			naapwr: 30%
+			nalasr: 7%
 ###############MUT#################
-			mupowr: 35%
-			murax: 10%
-			muweap: 5%
+			mupowr: 15%
+			murax: 6%
+			muweap: 4%
 			muradr: 1%
 			muair: 1%
 			muhall: 1%
-			mubunkr: 5%
-			muflak: 6%
-			muventi: 3%
+			mubunkr: 7%
+			muflak: 7%
+			muventi: 0.5%
 ###############CAB#################
-			cabpowr: 35%
-			cabclaw: 10%
-			cabweap: 5%
+			cabpowr: 15%
+			cabclaw: 5%
+			cabweap: 4%
 			cabradr: 1%
 			cabtech: 1%
 			cabair: 4%
-			cabcannon: 10%
-			cabblast: 10%
-			cabrail: 10%
+			cabcannon: 7%
+			cabblast: 7%
+			cabrail: 7%
 ###############SCRIN#################
 			scrproc: 99%
-			scrpowr: 35%
-			scrrax: 5%
-			scrweap: 5%
-			scrradr: 2%
+			scrpowr: 15%
+			scrrax: 4%
+			scrweap: 4%
+			scrradr: 1%
 			scrair: 10%
-			scrtech: 3%
-			scrneedler: 10%
-			scrdrone: 10%
-			scrtractor: 10%
+			scrtech: 1%
+			scrneedler: 7%
+			scrdrone: 7%
+			scrtractor: 7%
 		UnitLimits:
 			harv: 4
 			scrharv: 4
@@ -465,37 +465,37 @@
 			harv: 50%
 			scrharv: 50%
 ###############GDI#################
-			mmch: 35%
-			smech: 35%
-			hvr: 40%
-			sonic: 15%
-			jugger: 10%
-			hmec: 50%
+			mmch: 10%
+			smech: 10%
+			hvr: 5%
+			sonic: 2%
+			jugger: 1%
+			hmec: 4%
 ###############NOD#################
-			bggy: 75%
-			ttnk: 65%
-			armh: 25%
-			subtank: 18%
-			stnk: 18%
+			bggy: 10%
+			ttnk: 10%
+			armh: 3%
+			subtank: 1%
+			stnk: 1%
 ###############MUT#################
-			mutapc: 40%
-			muttank: 25%
-			mutquad: 20%
-			mrls: 20%
-			wolf: 8%
+			mutapc: 1%
+			muttank: 1%
+			mutquad: 1%
+			mrls: 1%
+			wolf: 1%
 ###############CAB#################
-			jenn: 40%
-			centurion: 20%
-			grinder: 20%
-			paladin: 10%
-			blaster: 30%
+			jenn: 20%
+			centurion: 2%
+			grinder: 2%
+			paladin: 1%
+			blaster: 2%
 ###############SCRIN#################
-			scrscorpion: 8%
-			scrmbt: 12%
+			scrscorpion: 10%
+			scrmbt: 2%
 			scrrecharger: 1%
-			scrglyder1: 25%
-			scrglyder2: 25%
-			tripod: 15%
+			scrglyder1: 4%
+			scrglyder2: 4%
+			tripod: 1%
 		SquadSize: 10
 		SquadSizeRandomBonus: 20
 
@@ -586,57 +586,57 @@
 		BuildingFractions:
 			proc: 99%
 			gasilo: 50%
-###############GDI#################
-			gapowr: 35%
-			gapile: 5%
-			gaweap: 5%
+##############GDI#################
+			gapowr: 15%
+			gapile: 1%
+			gaweap: 1%
 			garadr: 1%
-			gahpad: 10%
+			gahpad: 4%
 			gatech: 1%
-			gafire: 1%
+			gafire: 0.5%
 ###############NOD#################
-			napowr: 35%
-			nahand: 10%
-			naweap: 5%
+			napowr: 1%
+			nahand: 1%
+			naweap: 1%
 			naradr: 1%
-			nahpad: 10%
+			nahpad: 3%
 			natech: 1%
-			nasam: 6%
-			naobel: 3%
+			nasam: 7%
+			naobel: 7%
 			nastlh: 1%
-			naapwr: 1%
-			nalasr: 10%
+			naapwr: 30%
+			nalasr: 7%
 ###############MUT#################
-			mupowr: 35%
-			murax: 10%
-			muweap: 5%
+			mupowr: 15%
+			murax: 1%
+			muweap: 1%
 			muradr: 1%
-			muair: 10%
+			muair: 1%
 			muhall: 1%
-			mubunkr: 5%
-			muflak: 6%
-			muventi: 3%
+			mubunkr: 7%
+			muflak: 7%
+			muventi: 0.5%
 ###############CAB#################
-			cabpowr: 35%
-			cabclaw: 10%
-			cabweap: 5%
+			cabpowr: 15%
+			cabclaw: 1%
+			cabweap: 1%
 			cabradr: 1%
 			cabtech: 1%
-			cabair: 10%
-			cabcannon: 10%
-			cabblast: 10%
-			cabrail: 10%
+			cabair: 4%
+			cabcannon: 7%
+			cabblast: 7%
+			cabrail: 7%
 ###############SCRIN#################
 			scrproc: 99%
-			scrpowr: 35%
-			scrrax: 5%
-			scrweap: 5%
-			scrradr: 2%
+			scrpowr: 15%
+			scrrax: 1%
+			scrweap: 1%
+			scrradr: 1%
 			scrair: 10%
-			scrtech: 3%
-			scrneedler: 10%
-			scrdrone: 10%
-			scrtractor: 10%
+			scrtech: 1%
+			scrneedler: 7%
+			scrdrone: 7%
+			scrtractor: 7%
 		UnitLimits:
 			harv: 4
 			scrharv: 4
@@ -769,57 +769,57 @@
 		BuildingFractions:
 			proc: 99%
 			gasilo: 50%
-###############GDI#################
-			gapowr: 35%
-			gapile: 5%
-			gaweap: 5%
+##############GDI#################
+			gapowr: 15%
+			gapile: 4%
+			gaweap: 6%
 			garadr: 1%
-			gahpad: 5%
+			gahpad: 4%
 			gatech: 1%
-			gafire: 1%
+			gafire: 0.5%
 ###############NOD#################
-			napowr: 35%
-			nahand: 10%
+			napowr: 1%
+			nahand: 5%
 			naweap: 5%
 			naradr: 1%
-			nahpad: 1%
+			nahpad: 3%
 			natech: 1%
-			nasam: 6%
-			naobel: 3%
+			nasam: 7%
+			naobel: 7%
 			nastlh: 1%
-			naapwr: 1%
-			nalasr: 10%
+			naapwr: 30%
+			nalasr: 7%
 ###############MUT#################
-			mupowr: 35%
-			murax: 10%
-			muweap: 5%
+			mupowr: 15%
+			murax: 6%
+			muweap: 4%
 			muradr: 1%
 			muair: 1%
 			muhall: 1%
-			mubunkr: 5%
-			muflak: 6%
-			muventi: 3%
+			mubunkr: 7%
+			muflak: 7%
+			muventi: 0.5%
 ###############CAB#################
-			cabpowr: 35%
-			cabclaw: 10%
-			cabweap: 5%
+			cabpowr: 15%
+			cabclaw: 5%
+			cabweap: 4%
 			cabradr: 1%
 			cabtech: 1%
 			cabair: 4%
-			cabcannon: 10%
-			cabblast: 10%
-			cabrail: 10%
+			cabcannon: 7%
+			cabblast: 7%
+			cabrail: 7%
 ###############SCRIN#################
 			scrproc: 99%
-			scrpowr: 35%
-			scrrax: 5%
-			scrweap: 5%
-			scrradr: 2%
+			scrpowr: 15%
+			scrrax: 4%
+			scrweap: 4%
+			scrradr: 1%
 			scrair: 10%
-			scrtech: 3%
-			scrneedler: 10%
-			scrdrone: 10%
-			scrtractor: 10%
+			scrtech: 1%
+			scrneedler: 7%
+			scrdrone: 7%
+			scrtractor: 7%
 		UnitLimits:
 			harv: 4
 			scrharv: 4
