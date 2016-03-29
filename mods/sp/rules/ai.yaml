@@ -1,7 +1,7 @@
   Player:
 	HackyAI@Tay:
 		Name: Tay
-		MinimumExcessPower: 20
+		MinimumExcessPower: 40
 		ProtectUnitScanRadius: 35
 		RushAttackScanRadius: 30
 		RushInterval: 1125
@@ -294,7 +294,7 @@
 
 	HackyAI@Panzerkin:
 		Name: Panzerkin
-		MinimumExcessPower: 20
+		MinimumExcessPower: 40
 		ProtectUnitScanRadius: 35
 		RushAttackScanRadius: 30
 		RushInterval: 1125
@@ -509,7 +509,7 @@
 
 	HackyAI@Earhart:
 		Name: Earhart
-		MinimumExcessPower: 20
+		MinimumExcessPower: 40
 		ProtectUnitScanRadius: 35
 		RushAttackScanRadius: 30
 		RushInterval: 1125
@@ -696,7 +696,7 @@
 
 	HackyAI@Waaagh:
 		Name: Waaagh
-		MinimumExcessPower: 20
+		MinimumExcessPower: 40
 		ProtectUnitScanRadius: 35
 		RushAttackScanRadius: 50
 		RushInterval: 500
