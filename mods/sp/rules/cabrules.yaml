@@ -1002,6 +1002,7 @@ CABCLAW:
 
 CABWEAP:
 	Inherits: ^Building
+	Inherits@1: ^CabRender
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -1111,7 +1112,7 @@ CABRADR:
 		BuildPaletteOrder: 90
 		Prerequisites: proc, ~structures.cab
 	Valued:
-		Cost: 1500
+		Cost: 1000
 	Tooltip:
 		Name: C.A.B.A.L. Radar
 		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.

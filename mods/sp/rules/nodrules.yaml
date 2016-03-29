@@ -803,7 +803,7 @@ NAHPAD:
 	Buildable:
 		BuildPaletteOrder: 60
 		Queue: Building
-		Prerequisites: proc, ~structures.nod
+		Prerequisites: proc, naradr, ~structures.nod
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -854,7 +854,7 @@ NARADR:
 		BuildPaletteOrder: 90
 		Prerequisites: proc, ~structures.nod
 	Valued:
-		Cost: 1500
+		Cost: 1000
 	Tooltip:
 		Name: Nod Radar
 		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
