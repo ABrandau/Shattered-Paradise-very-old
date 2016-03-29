@@ -499,186 +499,188 @@
 		SquadSize: 10
 		SquadSizeRandomBonus: 20
 
-HackyAI@Earhart:
-  Name: Earhart
-  MinimumExcessPower: 60
-  ProtectUnitScanRadius: 20
-  RushAttackScanRadius: 30
-  RushInterval: 1125
-  StructureProductionInactiveDelay: 25
-  StructureProductionActiveDelay: 0
-  StructureProductionRandomBonusDelay: 25
-  AssignRolesInterval: 10
-  AttackForceInterval: 20
-  IdleBaseUnitsMaximum: 25
-  RallyPointScanRadius: 25
-  MinBaseRadius: 3
-  MaxBaseRadius: 35
-  MaxResourceCellsToCheck: 6
-  ShouldRepairBuildings: True
-  CheckForNewBasesDelay: 1500
-  NewProductionCashThreshold: 10000
-  BuildingCommonNames:
-    ConstructionYard: gacnst, drached
-    Refinery: proc, scrproc
-    Power: gapowr, napowr, naapwr, cabpowr, mutpowr, scrpowr
-    Barracks: gapile, nahand, mutrax, cabrax, scrrax
-    VehiclesFactory: gaweap, naweap, mutweap, cabweap, scrweap
-    Production: gapile, nahand, mutrax, cabclaw, scrrax, gaweap, naweap, mutweap, cabweap, scrweap, gahpad, nahpad, muair, cabair, scrair
-    Silo: gasilo
-  UnitQueues: Vehicle, Infantry, Air
-  UnitsCommonNames:
-    Mcv: mcv, drache
-  BuildingLimits:
-    proc: 3
-    gasilo: 1
+	HackyAI@Earhart:
+		Name: Earhart
+		MinimumExcessPower: 60
+		ProtectUnitScanRadius: 20
+		RushAttackScanRadius: 30
+		RushInterval: 1125
+		StructureProductionInactiveDelay: 25
+		StructureProductionActiveDelay: 0
+		StructureProductionRandomBonusDelay: 25
+		AssignRolesInterval: 10
+		AttackForceInterval: 20
+		IdleBaseUnitsMaximum: 25
+		RallyPointScanRadius: 25
+		MinBaseRadius: 3
+		MaxBaseRadius: 35
+		MaxResourceCellsToCheck: 6
+		ShouldRepairBuildings: True
+		CheckForNewBasesDelay: 1500
+		NewProductionCashThreshold: 10000
+		BuildingCommonNames:
+			ConstructionYard: gacnst, drached
+			Refinery: proc, scrproc
+			Power: gapowr, napowr, naapwr, cabpowr, mutpowr, scrpowr
+			Barracks: gapile, nahand, mutrax, cabrax, scrrax
+			VehiclesFactory: gaweap, naweap, mutweap, cabweap, scrweap
+			Production: gapile, nahand, mutrax, cabclaw, scrrax, gaweap, naweap, mutweap, cabweap, scrweap, gahpad, nahpad, muair, cabair, scrair
+			Silo: gasilo
+		UnitQueues: Vehicle, Infantry, Air
+		UnitsCommonNames:
+			Mcv: mcv, drache
+		BuildingLimits:
+			proc: 3
+			gasilo: 1
 ###############GDI#################
-    gapowr: 10
-    gapile: 1
-    gaweap: 0
-    garadr: 1
-    gahpad: 10
-    gatech: 1
-    gafire: 1
+			gapowr: 10
+			gapile: 1
+			gaweap: 0
+			garadr: 1
+			gahpad: 10
+			gatech: 1
+			gafire: 1
 ###############NOD#################
-    napowr: 7
-    nahand: 1
-    naweap: 0
-    naradr: 1
-    nahpad: 10
-    natech: 1
-    nastlh: 1
-    naapwr: 3
-    naobel: 3
-    nalasr: 8
-    nasam: 4
+			napowr: 7
+			nahand: 1
+			naweap: 0
+			naradr: 1
+			nahpad: 10
+			natech: 1
+			nastlh: 1
+			naapwr: 3
+			naobel: 3
+			nalasr: 8
+			nasam: 4
 ###############MUT#################
-    mupowr: 10
-    murax: 1
-    muweap: 0
-    muradr: 1
-    mutair: 5
-    muhall: 1
-    mubunkr: 12
-    mutventi: 2
-    muflak: 5
+			mupowr: 10
+			murax: 1
+			muweap: 0
+			muradr: 1
+			mutair: 5
+			muhall: 1
+			mubunkr: 12
+			mutventi: 2
+			muflak: 5
 ###############CAB#################
-    cabpowr: 10
-    cabclaw: 1
-    cabweap: 0
-    cabradr: 1
-    cabair: 2
-    cabtech: 5
-    cabcannon: 6
-    cabblast: 6
-    cabrail: 5
+			cabpowr: 10
+			cabclaw: 1
+			cabweap: 0
+			cabradr: 1
+			cabair: 5
+			cabtech: 1
+			cabcannon: 6
+			cabblast: 6
+			cabrail: 5
 ###############SCRIN#################
-    scrproc: 3
-    scrpowr: 10
-    scrrax: 1
-    scrweap: 0
-    scrradr: 1
-    scrair: 5
-    scrtech: 1
-    scrneedler: 6
-    scrdrone: 6
-    scrtractor: 6
-  BuildingFractions:
-    proc: 99%
-    gasilo: 50%
+			scrproc: 3
+			scrpowr: 10
+			scrrax: 1
+			scrweap: 0
+			scrradr: 1
+			scrair: 5
+			scrtech: 1
+			scrneedler: 6
+			scrdrone: 6
+			scrtractor: 6
+		BuildingFractions:
+			proc: 99%
+			gasilo: 50%
 ###############GDI#################
-    gapowr: 35%
-    gapile: 5%
-    gaweap: 5%
-    garadr: 1%
-    gahpad: 5%
-    gatech: 1%
-    gafire: 1%
+			gapowr: 35%
+			gapile: 5%
+			gaweap: 5%
+			garadr: 1%
+			gahpad: 5%
+			gatech: 1%
+			gafire: 1%
 ###############NOD#################
-    napowr: 35%
-    nahand: 10%
-    naweap: 5%
-    naradr: 1%
-    nahpad: 1%
-    natech: 1%
-    nasam: 6%
-    naobel: 3%
-    nastlh: 1%
-    naapwr: 1%
-    nalasr: 10%
+			napowr: 35%
+			nahand: 10%
+			naweap: 5%
+			naradr: 1%
+			nahpad: 1%
+			natech: 1%
+			nasam: 6%
+			naobel: 3%
+			nastlh: 1%
+			naapwr: 1%
+			nalasr: 10%
 ###############MUT#################
-    mupowr: 35%
-    murax: 10%
-    muweap: 5%
-    muradr: 1%
-    muair: 1%
-    muhall: 1%
-    mubunkr: 5%
-    muflak: 6%
-    muventi: 3%
+			mupowr: 35%
+			murax: 10%
+			muweap: 5%
+			muradr: 1%
+			muair: 1%
+			muhall: 1%
+			mubunkr: 5%
+			muflak: 6%
+			muventi: 3%
 ###############CAB#################
-    cabpowr: 35%
-    cabclaw: 10%
-    cabweap: 5%
-    cabradr: 1%
-    cabtech: 1%
-    cabair: 4%
-    cabcannon: 10%
-    cabblast: 10%
-    cabrail: 10%
+			cabpowr: 35%
+			cabclaw: 10%
+			cabweap: 5%
+			cabradr: 1%
+			cabtech: 1%
+			cabair: 4%
+			cabcannon: 10%
+			cabblast: 10%
+			cabrail: 10%
 ###############SCRIN#################
-    scrproc: 99%
-    scrpowr: 35%
-    scrrax: 5%
-    scrweap: 5%
-    scrradr: 2%
-    scrair: 10%
-    scrtech: 3%
-    scrneedler: 10%
-    scrdrone: 10%
-    scrtractor: 10%
-  UnitLimits:
-    harv: 4
-    scrharv: 4
+			scrproc: 99%
+			scrpowr: 35%
+			scrrax: 5%
+			scrweap: 5%
+			scrradr: 2%
+			scrair: 10%
+			scrtech: 3%
+			scrneedler: 10%
+			scrdrone: 10%
+			scrtractor: 10%
+		UnitLimits:
+			harv: 4
+			scrharv: 4
 ###############GDI#################
-    guardian: 1
-    orca: 15
-    orcab: 15
+			guardian: 1
+			orca: 10
+			orcab: 10
 ###############NOD#################
-    apache: 15
-    scrin: 15
+			apache: 10
+			scrin: 10
 ###############MUT#################
-    mutbird: 15
-    mutheli: 15
+			mutbird: 15
+			mutheli: 15
 ###############CAB#################
-    wasp: 20
-    basilisk: 10
+			wasp: 20
+			basilisk: 10
 ###############SCRIN#################
-    stormrider: 20
-    scrbattleship: 5
-    scrdestroyer: 10
-  UnitsToBuild:
-    harv: 50%
-    scrharv: 50%
+			stormrider: 20
+			scrglyder1: 20
+			scrbattleship: 10
+			scrdestroyer: 10
+		UnitsToBuild:
+			harv: 50%
+			scrharv: 50%
 ###############GDI#################
-    guardian: 10%
-    orca: 10%
-    orcab: 10%
+			guardian: 10%
+			orca: 10%
+			orcab: 10%
 ###############NOD#################
-    apache: 3%
-    scrin: 3%
+			apache: 3%
+			scrin: 3%
 ###############MUT#################
-    mutbird: 3%
-    mutheli: 3%
+			mutbird: 3%
+			mutheli: 3%
 ###############CAB#################
-    wasp: 15%
-    basilisk: 7%
+			wasp: 15%
+			basilisk: 7%
 ###############SCRIN#################
-    stormrider: 75%
-    scrbattleship: 80%
-    scrdestroyer: 50%
-  SquadSize: 7
-  SquadSizeRandomBonus: 15
+			stormrider: 75%
+			scrglyder1: 60%
+			scrbattleship: 80%
+			scrdestroyer: 50%
+		SquadSize: 7
+		SquadSizeRandomBonus: 15
 
 	HackyAI@Waaagh!:
 		Name: Waaagh!
