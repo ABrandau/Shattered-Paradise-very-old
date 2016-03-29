@@ -14,6 +14,7 @@ Panzerkin AI:
 	Added Panzerkin 1.0. This is an armor focused AI. Works best for GDI.
 	Added Earhart 1.0. This is an aircraft focused AI. Works best for Scrin and possibly CABAL.
 	Added Waaagh! 1.0. This is a basic ground units focused AI with rush timings. Works best for Mutants.
+Added two more music tracks.
 
 [2016 - 03 - 28]
 Updated CABAL Powerplant, barracks and factory graphics.
