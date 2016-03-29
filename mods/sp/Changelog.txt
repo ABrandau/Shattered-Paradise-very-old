@@ -1,5 +1,15 @@
 YEAR - MONTH - DAY
 
+[2016 - 03 - 29]
+Tay AI improvements:
+	Scrin can now train stalkers.
+	GDI can train medics.
+	A few minor tweaks.
+Panzerkin AI:
+	Added Panzerkin 1.0. This is an armor focused AI. Works best for GDI.
+	Added Earhart 1.0. This is an aircraft focused AI. Works best for Scrin and possibly CABAL.
+	Added Waaagh! 1.0. This is an infantry focused AI. Works best for Mutants.
+
 [2016 - 03 - 28]
 Updated CABAL Powerplant, barracks and factory graphics.
 Returned blossom trees to default interval.
