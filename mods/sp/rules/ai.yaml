@@ -786,28 +786,28 @@
 			gasilo: 30%
 ###############GDI#################
 			gapowr: 15%
-			gapile: 4%
-			gaweap: 6%
+			gapile: 15%
+			gaweap: 10%
 			garadr: 1%
 ###############NOD#################
 			napowr: 1%
-			nahand: 5%
-			naweap: 5%
+			nahand: 15%
+			naweap: 10%
 			naradr: 1%
 			nasam: 7%
 			nalasr: 7%
 ###############MUT#################
 			mupowr: 15%
-			murax: 6%
-			muweap: 4%
+			murax: 15%
+			muweap: 10%
 			muradr: 1%
 			mustable: 1%
 			mubunkr: 7%
 			muflak: 7%
 ###############CAB#################
 			cabpowr: 15%
-			cabclaw: 5%
-			cabweap: 4%
+			cabclaw: 15%
+			cabweap: 10%
 			cabradr: 1%
 			cabcannon: 7%
 			cabblast: 7%
@@ -815,8 +815,8 @@
 ###############SCRIN#################
 			scrproc: 99%
 			scrpowr: 15%
-			scrrax: 4%
-			scrweap: 4%
+			scrrax: 15%
+			scrweap: 5%
 			scrradr: 1%
 			scrneedler: 7%
 			scrdrone: 7%
