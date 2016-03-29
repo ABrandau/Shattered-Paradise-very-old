@@ -12,7 +12,9 @@ Tay AI improvements:
 	Refactored a lot of the build percentages.
 Panzerkin AI:
 	Added Panzerkin 1.0. This is an armor focused AI. Works best for GDI.
+Earhart AI:
 	Added Earhart 1.0. This is an aircraft focused AI. Works best for Scrin and possibly CABAL.
+Waaagh! AI: 
 	Added Waaagh! 1.0. This is a basic ground units focused AI with rush timings. Works best for Mutants.
 Added two more music tracks.
 
