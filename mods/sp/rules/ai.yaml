@@ -288,7 +288,7 @@
 
 ###############SPECIALIST AI###############
 
-	HackyAI@Tay:
+	HackyAI@Panzerkin:
 		Name: Panzerkin
 		MinimumExcessPower: 60
 		ProtectUnitScanRadius: 20
@@ -499,7 +499,7 @@
 		SquadSize: 10
 		SquadSizeRandomBonus: 20
 
-HackyAI@Tay:
+HackyAI@Earhart:
   Name: Earhart
   MinimumExcessPower: 60
   ProtectUnitScanRadius: 20
@@ -680,7 +680,7 @@ HackyAI@Tay:
   SquadSize: 7
   SquadSizeRandomBonus: 15
 
-	HackyAI@Tay:
+	HackyAI@Waaagh!:
 		Name: Waaagh!
 		MinimumExcessPower: 60
 		ProtectUnitScanRadius: 20
