@@ -10,8 +10,8 @@
 		StructureProductionRandomBonusDelay: 25
 		MinimumDefenseRadius: 5
 		MaximumDefenseRadius: 35
-		AssignRolesInterval: 10
-		AttackForceInterval: 20
+		AssignRolesInterval: 20
+		AttackForceInterval: 25
 		IdleBaseUnitsMaximum: 15
 		RallyPointScanRadius: 25
 		MinBaseRadius: 5
@@ -303,8 +303,8 @@
 		StructureProductionRandomBonusDelay: 25
 		MinimumDefenseRadius: 5
 		MaximumDefenseRadius: 35
-		AssignRolesInterval: 10
-		AttackForceInterval: 20
+		AssignRolesInterval: 20
+		AttackForceInterval: 25
 		IdleBaseUnitsMaximum: 15
 		RallyPointScanRadius: 25
 		MinBaseRadius: 5
@@ -518,11 +518,11 @@
 		StructureProductionRandomBonusDelay: 25
 		MinimumDefenseRadius: 5
 		MaximumDefenseRadius: 35
-		AssignRolesInterval: 10
-		AttackForceInterval: 20
+		AssignRolesInterval: 20
+		AttackForceInterval: 25
 		IdleBaseUnitsMaximum: 15
 		RallyPointScanRadius: 25
-		MinBaseRadius: 3
+		MinBaseRadius: 5
 		MaxBaseRadius: 35
 		MaxResourceCellsToCheck: 6
 		ShouldRepairBuildings: True
@@ -705,8 +705,8 @@
 		StructureProductionRandomBonusDelay: 25
 		MinimumDefenseRadius: 5
 		MaximumDefenseRadius: 35
-		AssignRolesInterval: 10
-		AttackForceInterval: 20
+		AssignRolesInterval: 20
+		AttackForceInterval: 25
 		IdleBaseUnitsMaximum: 15
 		RallyPointScanRadius: 25
 		MinBaseRadius: 5
