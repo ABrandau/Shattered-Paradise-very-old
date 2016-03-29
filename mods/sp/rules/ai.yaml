@@ -287,7 +287,7 @@
 			stormrider: 10%
 			scrbattleship: 3%
 			scrdestroyer: 5%
-		SquadSize: 12
+		SquadSize: 10
 		SquadSizeRandomBonus: 25
 
 ###############SPECIALIST AI###############
@@ -691,7 +691,7 @@
 			scrglyder1: 60%
 			scrbattleship: 80%
 			scrdestroyer: 50%
-		SquadSize: 7
+		SquadSize: 5
 		SquadSizeRandomBonus: 15
 
 	HackyAI@Waaagh:
@@ -825,9 +825,9 @@
 			harv: 4
 			scrharv: 4
 ###############GDI#################
-			gdie1: 10
-			jumpjet: 10
-			grenadier: 5
+			gdie1: 12
+			jumpjet: 12
+			grenadier: 10
 			medic: 1
 			mmch: 5
 			smech: 4
@@ -837,9 +837,9 @@
 			bggy: 7
 			ttnk: 7
 ###############MUT#################
-			marauder: 14
-			e3: 14
-			mutfiend: 5
+			marauder: 15
+			e3: 15
+			mutfiend: 7
 			ranger: 5
 			mutapc: 2
 			muttank: 5
@@ -847,15 +847,15 @@
 			wolf: 3
 ###############CAB#################
 			cyborg: 10
-			cabsentry: 7
-			reapercab: 4
-			pdrone: 3
+			cabsentry: 10
+			reapercab: 5
+			pdrone: 4
 			jenn: 10
 			centurion: 2
 			grinder: 2
 ###############SCRIN#################
-			shark: 10
-			legio: 10
+			shark: 12
+			legio: 12
 			float: 10
 			bug: 10
 			stalker: 10
@@ -899,8 +899,8 @@
 			stalker: 5%
 			scrscorpion: 5%
 			scrmbt: 6%
-		SquadSize: 10
-		SquadSizeRandomBonus: 20
+		SquadSize: 8
+		SquadSizeRandomBonus: 30
 
 ###############OTHER AI#################
 
