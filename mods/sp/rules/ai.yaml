@@ -99,7 +99,7 @@
 			nahand: 10%
 			naweap: 5%
 			naradr: 1%
-			nahpad: 1%
+			nahpad: 5%
 			natech: 1%
 			nasam: 6%
 			naobel: 3%
@@ -388,7 +388,7 @@
 			nahand: 10%
 			naweap: 5%
 			naradr: 1%
-			nahpad: 1%
+			nahpad: 5%
 			natech: 1%
 			nasam: 6%
 			naobel: 3%
@@ -535,7 +535,7 @@
 ###############GDI#################
 			gapowr: 10
 			gapile: 1
-			gaweap: 0
+			gaweap: 1
 			garadr: 1
 			gahpad: 10
 			gatech: 1
@@ -543,7 +543,7 @@
 ###############NOD#################
 			napowr: 7
 			nahand: 1
-			naweap: 0
+			naweap: 1
 			naradr: 1
 			nahpad: 10
 			natech: 1
@@ -555,7 +555,7 @@
 ###############MUT#################
 			mupowr: 10
 			murax: 1
-			muweap: 0
+			muweap: 1
 			muradr: 1
 			mutair: 5
 			muhall: 1
@@ -565,7 +565,7 @@
 ###############CAB#################
 			cabpowr: 10
 			cabclaw: 1
-			cabweap: 0
+			cabweap: 1
 			cabradr: 1
 			cabair: 5
 			cabtech: 1
@@ -576,7 +576,7 @@
 			scrproc: 3
 			scrpowr: 10
 			scrrax: 1
-			scrweap: 0
+			scrweap: 1
 			scrradr: 1
 			scrair: 5
 			scrtech: 1
@@ -591,7 +591,7 @@
 			gapile: 5%
 			gaweap: 5%
 			garadr: 1%
-			gahpad: 5%
+			gahpad: 10%
 			gatech: 1%
 			gafire: 1%
 ###############NOD#################
@@ -599,7 +599,7 @@
 			nahand: 10%
 			naweap: 5%
 			naradr: 1%
-			nahpad: 1%
+			nahpad: 10%
 			natech: 1%
 			nasam: 6%
 			naobel: 3%
@@ -611,7 +611,7 @@
 			murax: 10%
 			muweap: 5%
 			muradr: 1%
-			muair: 1%
+			muair: 10%
 			muhall: 1%
 			mubunkr: 5%
 			muflak: 6%
@@ -622,7 +622,7 @@
 			cabweap: 5%
 			cabradr: 1%
 			cabtech: 1%
-			cabair: 4%
+			cabair: 10%
 			cabcannon: 10%
 			cabblast: 10%
 			cabrail: 10%
@@ -718,7 +718,7 @@
 ###############GDI#################
 			gapowr: 10
 			gapile: 5
-			gaweap: 0
+			gaweap: 1
 			garadr: 1
 			gahpad: 0
 			gatech: 1
@@ -726,7 +726,7 @@
 ###############NOD#################
 			napowr: 7
 			nahand: 5
-			naweap: 0
+			naweap: 1
 			naradr: 1
 			nahpad: 0
 			natech: 1
@@ -738,7 +738,7 @@
 ###############MUT#################
 			mupowr: 10
 			murax: 5
-			muweap: 0
+			muweap: 1
 			muradr: 1
 			mutair: 0
 			muhall: 1
@@ -748,7 +748,7 @@
 ###############CAB#################
 			cabpowr: 10
 			cabclaw: 5
-			cabweap: 0
+			cabweap: 1
 			cabradr: 1
 			cabair: 0
 			cabtech: 1
@@ -759,7 +759,7 @@
 			scrproc: 3
 			scrpowr: 10
 			scrrax: 5
-			scrweap: 0
+			scrweap: 1
 			scrradr: 1
 			scrair: 0
 			scrtech: 1
