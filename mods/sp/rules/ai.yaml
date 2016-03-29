@@ -8,6 +8,8 @@
 		StructureProductionInactiveDelay: 25
 		StructureProductionActiveDelay: 0
 		StructureProductionRandomBonusDelay: 25
+		MinimumDefenseRadius: 5
+		MaximumDefenseRadius: 35
 		AssignRolesInterval: 10
 		AttackForceInterval: 20
 		IdleBaseUnitsMaximum: 15
@@ -299,6 +301,8 @@
 		StructureProductionInactiveDelay: 25
 		StructureProductionActiveDelay: 0
 		StructureProductionRandomBonusDelay: 25
+		MinimumDefenseRadius: 5
+		MaximumDefenseRadius: 35
 		AssignRolesInterval: 10
 		AttackForceInterval: 20
 		IdleBaseUnitsMaximum: 15
@@ -512,6 +516,8 @@
 		StructureProductionInactiveDelay: 25
 		StructureProductionActiveDelay: 0
 		StructureProductionRandomBonusDelay: 25
+		MinimumDefenseRadius: 5
+		MaximumDefenseRadius: 35
 		AssignRolesInterval: 10
 		AttackForceInterval: 20
 		IdleBaseUnitsMaximum: 15
@@ -697,6 +703,8 @@
 		StructureProductionInactiveDelay: 25
 		StructureProductionActiveDelay: 0
 		StructureProductionRandomBonusDelay: 25
+		MinimumDefenseRadius: 5
+		MaximumDefenseRadius: 35
 		AssignRolesInterval: 10
 		AttackForceInterval: 20
 		IdleBaseUnitsMaximum: 15
