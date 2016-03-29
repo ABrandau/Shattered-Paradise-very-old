@@ -1,8 +1,8 @@
   Player:
 	HackyAI@Tay:
 		Name: Tay
-		MinimumExcessPower: 60
-		ProtectUnitScanRadius: 20
+		MinimumExcessPower: 20
+		ProtectUnitScanRadius: 35
 		RushAttackScanRadius: 30
 		RushInterval: 1125
 		StructureProductionInactiveDelay: 25
@@ -10,9 +10,9 @@
 		StructureProductionRandomBonusDelay: 25
 		AssignRolesInterval: 10
 		AttackForceInterval: 20
-		IdleBaseUnitsMaximum: 25
+		IdleBaseUnitsMaximum: 15
 		RallyPointScanRadius: 25
-		MinBaseRadius: 3
+		MinBaseRadius: 5
 		MaxBaseRadius: 35
 		MaxResourceCellsToCheck: 6
 		ShouldRepairBuildings: True
@@ -285,15 +285,15 @@
 			stormrider: 10%
 			scrbattleship: 3%
 			scrdestroyer: 5%
-		SquadSize: 14
+		SquadSize: 12
 		SquadSizeRandomBonus: 25
 
 ###############SPECIALIST AI###############
 
 	HackyAI@Panzerkin:
 		Name: Panzerkin
-		MinimumExcessPower: 60
-		ProtectUnitScanRadius: 20
+		MinimumExcessPower: 20
+		ProtectUnitScanRadius: 35
 		RushAttackScanRadius: 30
 		RushInterval: 1125
 		StructureProductionInactiveDelay: 25
@@ -301,9 +301,9 @@
 		StructureProductionRandomBonusDelay: 25
 		AssignRolesInterval: 10
 		AttackForceInterval: 20
-		IdleBaseUnitsMaximum: 25
+		IdleBaseUnitsMaximum: 15
 		RallyPointScanRadius: 25
-		MinBaseRadius: 3
+		MinBaseRadius: 5
 		MaxBaseRadius: 35
 		MaxResourceCellsToCheck: 6
 		ShouldRepairBuildings: True
@@ -505,8 +505,8 @@
 
 	HackyAI@Earhart:
 		Name: Earhart
-		MinimumExcessPower: 60
-		ProtectUnitScanRadius: 20
+		MinimumExcessPower: 20
+		ProtectUnitScanRadius: 35
 		RushAttackScanRadius: 30
 		RushInterval: 1125
 		StructureProductionInactiveDelay: 25
@@ -514,7 +514,7 @@
 		StructureProductionRandomBonusDelay: 25
 		AssignRolesInterval: 10
 		AttackForceInterval: 20
-		IdleBaseUnitsMaximum: 25
+		IdleBaseUnitsMaximum: 15
 		RallyPointScanRadius: 25
 		MinBaseRadius: 3
 		MaxBaseRadius: 35
@@ -690,8 +690,8 @@
 
 	HackyAI@Waaagh:
 		Name: Waaagh
-		MinimumExcessPower: 60
-		ProtectUnitScanRadius: 20
+		MinimumExcessPower: 20
+		ProtectUnitScanRadius: 35
 		RushAttackScanRadius: 50
 		RushInterval: 500
 		StructureProductionInactiveDelay: 25
@@ -699,9 +699,9 @@
 		StructureProductionRandomBonusDelay: 25
 		AssignRolesInterval: 10
 		AttackForceInterval: 20
-		IdleBaseUnitsMaximum: 25
+		IdleBaseUnitsMaximum: 15
 		RallyPointScanRadius: 25
-		MinBaseRadius: 3
+		MinBaseRadius: 5
 		MaxBaseRadius: 35
 		MaxResourceCellsToCheck: 6
 		ShouldRepairBuildings: True
