@@ -104,7 +104,6 @@ Player:
 #PRODUCTION#
             proc: 99%
             scrproc: 99%
-            gasilo: 1%
 #GDI CORE#
             gapowr: 20%
             gapile: 5%
