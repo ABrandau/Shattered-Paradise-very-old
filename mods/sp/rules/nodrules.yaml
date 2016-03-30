@@ -462,7 +462,7 @@ ARMH:
 	AutoTarget:
 	Voiced:
 		VoiceSet: BeamCannonVO
-		Volume: 1.7
+		Volume: 2
 
 STNK:
 	Inherits: ^VoxelTank
@@ -503,6 +503,9 @@ STNK:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
 	-MustBeDestroyed:
+	Voiced:
+		VoiceSet: StealthTankVO
+		Volume: 2
 
 ##########################################################
 # Aircraft
