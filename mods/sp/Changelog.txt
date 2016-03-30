@@ -1,6 +1,8 @@
 YEAR - MONTH - DAY
 
 [2016 - 03 - 29]
+reworked seeder bird
+Forgotten defences now require refineries in order to build them.
 Cleaned CABAL warfactory build animation.
 Stalker disabled
 Radar changes: Cost: 1500 -> 1000 , to all factions.
