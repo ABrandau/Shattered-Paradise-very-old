@@ -15,7 +15,7 @@ MarauderShotgun:
 			Light: 40
 			Heavy: 20
 			Concrete: 10
-		DamageTypes: Prone70Percent, TriggerProne, TiberiumDeath 
+		DamageTypes: Prone70Percent, TriggerProne, TiberiumDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
 		InvalidImpactTypes: Water

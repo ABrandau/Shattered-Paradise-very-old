@@ -627,7 +627,6 @@
 
 ^CabalDroneInfantry:
 	Inherits@1: ^Infantry
-	Inherits@2: ^AircraftSelfHeal
 	-WithDeathAnimation@normal:
 	-WithDeathAnimation@explosion:
 	-WithDeathAnimation@energy:
