@@ -505,7 +505,7 @@ STNK:
 	-MustBeDestroyed:
 	Voiced:
 		VoiceSet: StealthTankVO
-		Volume: 2
+		Volume: 2.5
 
 ##########################################################
 # Aircraft
