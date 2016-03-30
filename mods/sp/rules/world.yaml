@@ -41,7 +41,7 @@
 		Palette: greentiberium
 		Variants: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
 		MaxDensity: 12
-		ValuePerUnit: 30
+		ValuePerUnit: 25
 		Name: Tiberium
 		PipColor: Green
 		AllowedTerrainTypes: Clear, Rough, DirtRoad
@@ -52,7 +52,7 @@
 		Palette: bluetiberium
 		Variants: tib01, tib02, tib03, tib04, tib05, tib06, tib07, tib08, tib09, tib10, tib11, tib12, tib13, tib14, tib15, tib16, tib17, tib18, tib19, tib20
 		MaxDensity: 12
-		ValuePerUnit: 50
+		ValuePerUnit: 45
 		Name: BlueTiberium
 		PipColor: Blue
 		AllowedTerrainTypes: Clear, Rough, DirtRoad

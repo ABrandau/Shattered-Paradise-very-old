@@ -1,5 +1,33 @@
 YEAR - MONTH - DAY
 
+[2016 - 03 - 30]
+Eco changes:
+	Harvester:
+		Reduced capacity 48 < 40
+	Scrin Harvester:
+		Reduced capacity 48 < 40
+	Green Tiberium:
+		Reduced value 30 < 25
+	Blue Tiberium:
+		Reduced value 50 < 45
+AI changes:
+	Tay AI:
+		Massive refactoring of code.
+	Panzerkin AI:
+		Massive refactoring of code.
+	Zerg AI:
+		Massive refactoring of code.
+		Renamed from “Waaagh!”
+	F-18kin AI:
+		Massive refactoring of code.
+		Renamed from “Earhart”
+	Lex AI:
+		Added new tech focused AI. First version.
+Audio:
+	Stealth Tank:
+		New lines thanks to DrWhitePsyker.
+
+
 [2016 - 03 - 29]
 reworked seeder bird
 Forgotten defences now require refineries in order to build them.
@@ -16,7 +44,7 @@ Panzerkin AI:
 	Added Panzerkin 1.0. This is an armor focused AI. Works best for GDI.
 Earhart AI:
 	Added Earhart 1.0. This is an aircraft focused AI. Works best for Scrin and possibly CABAL.
-Waaagh! AI: 
+Waaagh! AI:
 	Added Waaagh! 1.0. This is a basic ground units focused AI with rush timings. Works best for Mutants.
 Added two more music tracks.
 
@@ -40,7 +68,7 @@ Added several new music tracks.
 
 
 [2016 - 03 - 28]
-Green tib value: 20 > 30 
+Green tib value: 20 > 30
 Blue tib value: 35 > 50
 Increase Harvester Capacity: 28 > 32
 Lots and lots of tweaking of Tay AI.
@@ -51,7 +79,7 @@ Fixed error that made some units crash the game when sent to repair.
 Flak Cannon changes: Reload delay: 50 -> 75
 Quad Cannon AA Changes: damage 40 -> 20, minimun range: 1-> 3
 Gargoyl AA changes: damage: 15 -> 10, Burst: 1 -> 3, Increased Innacuracy, reload delay: 100 -> 200
-Fixed some typing errors. 
+Fixed some typing errors.
 Added Tay AI. A brand new AI that has teeth!
 Increased blossom tree production.
 
@@ -59,7 +87,7 @@ Increased blossom tree production.
 Hand of Kane can no longer be mind controlled.
 Destroyer changes: bullet speed: 220 -> 240
 Ichor Waste Turret Changes cost: 500 -> 700, hp: 350 -> 400, range 4 -> 7, power: 20 -> 40
-Drone hive changes cost: 1100 -> 900 , hp 500 -> 600, 
+Drone hive changes cost: 1100 -> 900 , hp 500 -> 600,
 
 [2016 - 03 - 25]
 >>>>>>> origin/Bleed
@@ -152,7 +180,7 @@ Black hand sniper turned into a commando, now named the hand of kane, has c4.
 Hand of kane turned into a vehicle hijacker.
 Militant converted into Flame Warrior, a full time flamethrower soldier.
 Buggy cost increased to 550 from 350, now also fires rockets.
-Attack Cycle converted to Demo Cycle (a suicide unit). 
+Attack Cycle converted to Demo Cycle (a suicide unit).
 Changed Devil's tongue armor to heavy from light.
 Added Innacuracy to beam cannon (half of a cell)
 Beam Cannon hp reduced to 160 from 170.
@@ -378,7 +406,7 @@ Did a lot of stuff between 21 and 25, I messed the mod so much I couldn't keep t
 Added the Ichor Battery
 Added the Stalker.
 Changed Glyder weapon to missile.
-Reduced Stormrider hp to 90 from 120	
+Reduced Stormrider hp to 90 from 120
 Increased Battleship damage to targets with to armor to 250% from 150%
 Increased Battleship Health to 1400 from 1000
 Reduced Harpy Innacuracy to 1 cell, from 2 cells.
@@ -406,7 +434,7 @@ Increased Stargate Cost to 1500 from 500
 Reduced Scrin factory cost to 1500 from 2000
 Enabled Scrin Host Station as constructable Aircraft.
 Changed Needler Tower requirements to Landing Zone instead of Scrin radar.
-The Following units can now detected stealthed units in a 4 cell radius: 
+The Following units can now detected stealthed units in a 4 cell radius:
 Hover MRLS, Orca Fighter, Quad Cannon, Gargoil, Wasp, Seeker, Attack Cycle, Harpy, Glyder, Battlecruiser
 Reduced damage received by all buildings by 20% (Buildings take 20% less damage)
 Increased Skirmisher ReloadDelay to 75 from 65
