@@ -1095,7 +1095,7 @@ MUFLAK:
 		Description: Anti-Air base defense.\nDoesn't require power to operate.\n  Strong vs Aircraft\n  Weak vs Ground units
 	Buildable:
 		Queue: Defense
-		Prerequisites: proc, murax ~structures.mut
+		Prerequisites: proc, murax, ~structures.mut
 		BuildPaletteOrder: 60
 	Building:
 	Selectable:
