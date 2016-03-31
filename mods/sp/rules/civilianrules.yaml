@@ -2099,7 +2099,7 @@ EGGS:
 		Palette: playermut
 	SpawnActorOnDeath:
 		Actor: Crab
-		Probability: 100
+		Probability: 60
 		OwnerType: InternalName
 		InternalOwner: Creeps
 		RequiresLobbyCreeps: true
