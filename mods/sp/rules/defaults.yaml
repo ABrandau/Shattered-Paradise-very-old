@@ -112,7 +112,7 @@
 		UpgradeMinEnabledLevel: 1
 	ReloadDelayMultiplier:
 		UpgradeTypes: ROTreduction
-		Modifier: 3
+		Modifier: 300
 		BaseLevel: 1
 		UpgradeMinEnabledLevel: 1
 
