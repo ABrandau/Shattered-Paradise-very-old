@@ -213,8 +213,10 @@ Player:
             mutquad: 6
             mrls: 6
             wolf: 6
+            fortress: 3
             mutbird: 3
-            mutheli: 3
+            mutheli: 5
+            wetp: 3
 #CAB#
             cyborg: 7
             cabsentry: 7
@@ -287,8 +289,10 @@ Player:
             mutquad: 7.5%
             mrls: 7.5%
             wolf: 7.5%
+            fortress: 10%
             mutbird: 1%
             mutheli: 1%
+            wetp: 1%
 #CAB#
             cyborg: 2%
             cabsentry: 1%
@@ -529,6 +533,7 @@ Player:
             mutquad: 16
             mrls: 16
             wolf: 16
+            fortress: 3
             mutbird: 0
             mutheli: 0
 #CAB#
@@ -598,6 +603,7 @@ Player:
             mutquad: 27.5%
             mrls: 27.5%
             wolf: 7.5%
+            fortress: 35%
 #CAB#
             cyborg: 2%
             cabsentry: 1%
@@ -828,6 +834,7 @@ Player:
             mutquad: 6
             mrls: 6
             wolf: 6
+            fortress: 3
 #CAB#
             cyborg: 20
             cabsentry: 20
@@ -870,17 +877,18 @@ Player:
             bggy: 1.5%
             ttnk: 1%
 #MUT#
-            marauder: 1%
-            e3: 1%
-            mutfiend: 1%
-            ranger: 1.5%
+            marauder: 5%
+            e3: 5%
+            mutfiend: 5%
+            ranger: 3.5%
             awarrior: 2%
             psyker: 0.1%
-            mutapc: 1.5%
-            muttank: 1.5%
-            mutquad: 1.5%
+            mutapc: 5.5%
+            muttank: 5.5%
+            mutquad: 5.5%
             mrls: 1.5%
             wolf: 1.5%
+            fortress: 1.5%
 #CAB#
             cyborg: 2%
             cabsentry: 1%
@@ -1113,8 +1121,10 @@ Player:
             mutquad: 16
             mrls: 16
             wolf: 16
+            fortress: 5
             mutbird: 0
             mutheli: 5
+            wetp: 5
 #CAB#
             cyborg: 0
             cabsentry: 0
@@ -1176,7 +1186,9 @@ Player:
             mutquad: 37.5%
             mrls: 7.5%
             wolf: 37.5%
+            fortress: 40%
             mutheli: 1%
+            wetp: 1%
 #CAB#
             reapercab: 0.5%
             pdrone: 1%
@@ -1453,6 +1465,7 @@ Player:
             psyker: 5%
             mutbird: 10%
             mutheli: 10%
+            wetp: 10%
 #CAB#
             cyborg: 2%
             cabsentry: 1%
