@@ -63,6 +63,7 @@ Player:
             nalasr: 7
             nasam:  5
 #NOD TECH#
+            naradr: 1
             natech: 1
             nastlh: 1
 #MUT CORE#
@@ -88,6 +89,7 @@ Player:
             cabblast: 5
             cabrail: 5
 #CAB TECH#
+            cabradr: 1
             cabtech: 1
 #SCRIN CORE#
             scrpowr: 8
@@ -99,6 +101,7 @@ Player:
             scrdrone: 5
             scrtractor: 5
 #SCRIN TECH#
+            scrradr: 1
             scrtech: 1
 
         BuildingFractions:
@@ -126,6 +129,7 @@ Player:
             nalasr: 5.5%
             nasam: 4.5%
 #NOD TECH#
+            naradr: 1%
             natech: 1%
             nastlh: 3%
 #MUT CORE#
@@ -151,6 +155,7 @@ Player:
             cabblast: 3.5%
             cabrail: 3%
 #CAB TECH#
+            cabradr: 1%
             cabtech: 1%
 #SCRIN CORE#
             scrpowr: 20%
@@ -162,6 +167,7 @@ Player:
             scrdrone: 3.3%
             scrtractor: 3.3%
 #SCRIN TECH#
+            scrradr: 1%
             scrtech: 1%
 
         UnitLimits:
@@ -378,6 +384,7 @@ Player:
             nalasr: 5
             nasam:  2
 #NOD TECH#
+            naradr: 1
             natech: 1
             nastlh: 1
 #MUT CORE#
@@ -403,6 +410,7 @@ Player:
             cabblast: 5
             cabrail: 2
 #CAB TECH#
+            cabradr: 1
             cabtech: 1
 #SCRIN CORE#
             scrpowr: 8
@@ -414,6 +422,7 @@ Player:
             scrdrone: 5
             scrtractor: 2
 #SCRIN TECH#
+            scrradr: 1
             scrtech: 1
 
         BuildingFractions:
@@ -439,6 +448,7 @@ Player:
             nalasr: 5.5%
             nasam: 4.5%
 #NOD TECH#
+            naradr: 1%
             natech: 1%
             nastlh: 3%
             mustable: 1%
@@ -462,6 +472,7 @@ Player:
             cabblast: 3.5%
             cabrail: 3%
 #CAB TECH#
+            cabradr: 1%
             cabtech: 1%
 #SCRIN CORE#
             scrpowr: 20%
@@ -472,6 +483,7 @@ Player:
             scrdrone: 3.3%
             scrtractor: 3.3%
 #SCRIN TECH#
+            scrradr: 1%
             scrtech: 1%
 
         UnitLimits:
@@ -674,6 +686,7 @@ Player:
             nalasr: 1
             nasam:  1
 #NOD TECH#
+            naradr: 1
             natech: 0
             nastlh: 0
 #MUT CORE#
@@ -699,6 +712,7 @@ Player:
             cabblast: 1
             cabrail: 1
 #CAB TECH#
+            cabradr: 1
             cabtech: 0
 #SCRIN CORE#
             scrpowr: 5
@@ -710,6 +724,7 @@ Player:
             scrdrone: 1
             scrtractor: 1
 #SCRIN TECH#
+            scrradr: 1
             scrtech: 0
 
         BuildingFractions:
@@ -736,6 +751,7 @@ Player:
             nalasr: 0.1%
             nasam: 0.1%
 #NOD TECH#
+            naradr: 1%
             natech: 0%
             nastlh: 0%
 #MUT CORE#
@@ -759,6 +775,7 @@ Player:
             cabblast: 0.1%
             cabrail: 0.1%
 #CAB TECH#
+            cabradr: 1%
             cabtech: 0%
 #SCRIN CORE#
             scrpowr: 20%
@@ -769,6 +786,7 @@ Player:
             scrdrone: 0.1%
             scrtractor: 0.1%
 #SCRIN TECH#
+            scrradr: 1%
             scrtech: 0%
 
         UnitLimits:
@@ -945,6 +963,7 @@ Player:
             nalasr: 0
             nasam:  5
 #NOD TECH#
+            naradr: 1
             natech: 1
             nastlh: 2
 #MUT CORE#
@@ -970,6 +989,7 @@ Player:
             cabblast: 3
             cabrail: 3
 #CAB TECH#
+            cabradr: 1
             cabtech: 1
 #SCRIN CORE#
             scrpowr: 7
@@ -981,6 +1001,7 @@ Player:
             scrdrone: 3
             scrtractor: 1
 #SCRIN TECH#
+            scrradr: 1
             scrtech: 1
 
         BuildingFractions:
@@ -1008,6 +1029,7 @@ Player:
             nalasr: 1%
             nasam: 1%
 #NOD TECH#
+            naradr: 5%
             natech: 15%
             nastlh: 5%
 #MUT CORE#
@@ -1033,6 +1055,7 @@ Player:
             cabblast: 3.5%
             cabrail: 3%
 #CAB TECH#
+            cabradr: 5%
             cabtech: 15%
 #SCRIN CORE#
             scrpowr: 20%
@@ -1044,6 +1067,7 @@ Player:
             scrdrone: 3.3%
             scrtractor: 3.3%
 #SCRIN TECH#
+            scrradr: 5%
             scrtech: 15%
 
         UnitLimits:
@@ -1055,7 +1079,7 @@ Player:
             jumpjet: 3
             grenadier: 2
             medic: 1
-            eagleguard: 8
+            eagleguard: 10
             mmch: 0
             smech: 0
             hvr: 8
@@ -1068,7 +1092,7 @@ Player:
 #NOD
             altnode1: 0
             crusader: 2
-            templar: 8
+            templar: 10
             bhs: 1
             bggy: 0
             ttnk: 0
@@ -1108,8 +1132,8 @@ Player:
 #SCRIN#
             shark: 0
             legio: 0
-            bug: 5
-            float: 5
+            bug: 8
+            float: 7
             scrscorpion: 0
             scrmbt: 0
             scrrecharger: 1
@@ -1237,6 +1261,7 @@ Player:
             nalasr: 5
             nasam:  5
 #NOD TECH#
+            naradr: 1
             natech: 1
             nastlh: 1
 #MUT CORE#
@@ -1262,6 +1287,7 @@ Player:
             cabblast: 3
             cabrail: 3
 #CAB TECH#
+            cabradr: 1
             cabtech: 1
 #SCRIN CORE#
             scrpowr: 6
@@ -1273,6 +1299,7 @@ Player:
             scrdrone: 3
             scrtractor: 3
 #SCRIN TECH#
+            scrradr: 1
             scrtech: 1
 
         BuildingFractions:
@@ -1298,6 +1325,7 @@ Player:
             nalasr: 5.5%
             nasam: 4.5%
 #NOD TECH#
+            naradr: 1%
             natech: 1%
             nastlh: 3%
 #MUT CORE#
@@ -1321,6 +1349,7 @@ Player:
             cabblast: 3.5%
             cabrail: 3%
 #CAB TECH#
+            cabradr: 1%
             cabtech: 1%
 #SCRIN CORE#
             scrpowr: 20%
@@ -1331,6 +1360,7 @@ Player:
             scrdrone: 3.3%
             scrtractor: 3.3%
 #SCRIN TECH#
+            scrradr: 1%
             scrtech: 1%
 
         UnitLimits:
