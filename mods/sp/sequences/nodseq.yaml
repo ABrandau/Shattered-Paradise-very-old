@@ -97,7 +97,7 @@ crusader:
 		Start: 266
 		Length: 8
 		Facings: 8
-		ShadowStart: 488
+		ShadowStart: 604
 	prone-stand:
 		Start: 330
 		Facings: 8
@@ -129,10 +129,10 @@ crusader:
 		Facings: 8
 		ShadowStart: 540
 	prone-shoot:
-		Start: 212
+		Start: 202
 		Length: 5
 		Facings: 8
-		ShadowStart: 504
+		ShadowStart: 540
 	standup-0:
 		Start: 142
 		Facings: 8

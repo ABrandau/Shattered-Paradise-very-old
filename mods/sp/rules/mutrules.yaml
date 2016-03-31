@@ -583,8 +583,8 @@ MUTBIRD:
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Minelayer Bird
-		Description: Scout Bird, places mines.\n  Unnarmed.
+		Name: Seeder Bird
+		Description: Scout Bird, places crab eggs. Tiberian\n Crabs are hostile tiberian lifeforms\n  Unnarmed.
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 20
@@ -604,23 +604,20 @@ MUTBIRD:
 	Armor:
 		Type: Wood
 	Minelayer:
-		Mine: mumine
+		Mine: eggs
 	AmmoPool:
-		Ammo: 10
-		PipCount: 10
+		Ammo: 3
+		PipCount: 3
 		PipType: Ammo
 		SelfReloadTicks: 600
-		SelfReloads: true
+		SelfReloads: false
 		PipTypeEmpty: AmmoEmpty
 	-RenderVoxels:
 	-WithVoxelBody:
 	WithShadow:
 	RenderSprites:
-	# WithFacingSpriteBody:
 	WithInfantryBody:
 		IdleSequences: run
-	# WithMoveAnimation:
-		# MoveSequence: run
 	BodyOrientation:
 		QuantizedFacings: 8
 
@@ -1098,7 +1095,7 @@ MUFLAK:
 		Description: Anti-Air base defense.\nDoesn't require power to operate.\n  Strong vs Aircraft\n  Weak vs Ground units
 	Buildable:
 		Queue: Defense
-		Prerequisites: murax, ~structures.mut
+		Prerequisites: proc, murax, ~structures.mut
 		BuildPaletteOrder: 60
 	Building:
 	Selectable:
@@ -1142,7 +1139,7 @@ MUBUNKR:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: murax, ~structures.mut
+		Prerequisites: murax, proc, ~structures.mut
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2

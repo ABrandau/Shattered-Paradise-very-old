@@ -2099,21 +2099,26 @@ EGGS:
 		Palette: playermut
 	SpawnActorOnDeath:
 		Actor: Crab
-		Probability: 100
-		OnwerType: InternalName
+		Probability: 60
+		OwnerType: InternalName
 		InternalOwner: Creeps
+		RequiresLobbyCreeps: true
+		# DeathType: BulletDeath, SmallExplosionDeath, TiberiumDeath
 	SpawnActorOnDeath@dos:
 		Actor: Crab
 		Probability: 20
-		OnwerType: InternalName
+		OwnerType: InternalName
 		InternalOwner: Creeps
+		RequiresLobbyCreeps: true
+		# DeathType: BulletDeath, SmallExplosionDeath, TiberiumDeath
 	SpawnActorOnDeath@tres:
 		Actor: Crab
 		Probability: 20
 		OnwerType: InternalName
 		InternalOwner: Creeps
-	SpawnActorOnDeath@cuatro:
-		Actor: Crab
-		Probability: 20
-		OnwerType: InternalName
-		InternalOwner: Creeps			
+		RequiresLobbyCreeps: true
+		# DeathType: BulletDeath, SmallExplosionDeath, TiberiumDeath
+	SelfHealing@bird:
+		Step: -10
+		Ticks: 50
+		HealIfBelow: 1.1
