@@ -500,7 +500,7 @@ HVRTRUK3:
 		Cost: 1500
 	Tooltip:
 		Name: Demo Truck
-		Description: Hover demolitions truck.\nDetonates it's warhead when destroyed.\nCan move on water.\n  Unarmed
+		Description: Hovering demolitions truck.\nDetonates its warhead when destroyed.\nCan move across water.\n  Unarmed
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 29
