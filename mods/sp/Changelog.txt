@@ -1,7 +1,7 @@
-﻿YEAR - MONTH - DAY
+YEAR - MONTH - DAY
 
 [2016 - 03 - 30]
-Balance Chages:
+Balance Changes:
 	Crab Egg Spawn chance reduced.
 Eco changes:
 	Harvester:
