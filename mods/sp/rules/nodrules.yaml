@@ -131,7 +131,7 @@ BHS:
 		Cost: 1000
 	Tooltip:
 		Name: Hand of Kane
-		Description: NOD Commando, sniper unit.\nCloaked when not attacking.\nCan demolish structures using C4.\nInfantry killed by this unit explode.\nHeals near Tiberium.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: Nod Commando, sniper unit.\nCloaked when not attacking.\nCan demolish structures using C4.\nInfantry killed by this unit explode.\nHeals near Tiberium.\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
 	Targetable:
 		TargetTypes: Ground, Infantry, MindControlInmune
 	Health:
