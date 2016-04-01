@@ -1,4 +1,4 @@
-[Graphical Issues]
+﻿[Graphical Issues]
 Scrin:
 	Add more scrin explosions.
 	Add more scrin muzzle effects.
@@ -29,12 +29,16 @@ Buff the Wasp AA power or rework the bassilisk.
 Make the reaper T3 or rework it.
 
 [Mechanics]
-[TODO / requires code]
-Enable purifier desolator logic.
-Code / create Gas clouds.
-Enable Forgotten MRLS to spawn gas clouds.
-Enable Superweapons.
 Give Guardian area heal/disable movement when it “deploys”
+Rework the devourer weapon.
+
+[TODO / requires code]
+Enable Superweapons.
+Enable purifier desolator logic.
+Gas Clouds.
+Enable Forgotten MRLS to spawn gas clouds.
+Make ignores orders upgradable.
+Make chronoshiftable upgradable.
 
 [Knowledge]
 Figure out how volume control works.

@@ -1,4 +1,19 @@
-YEAR - MONTH - DAY
+﻿YEAR - MONTH - DAY
+
+[2016 - 03 - 30]
+Theoryically fixed a bug that made AA aircraft miss their targets.
+Balance Changes:
+	Gargoil: Reloaddelay: 200 -> 100
+	Basilisk torpedo damage reworked
+	Cyborg Commando: health: 500 -> 300
+	Reclaimer: Health: 130 -> 110
+	Grenadier: Won't explode when killed.	
+	Guardian platform: Railgun damage: 35 -> 45
+	Orca Fighter: AA damage: 20 -> 25
+	Amphibious APC: Turn Speed: 5 -> 8
+	Hvr MRLS: Turn Speed 5 -> 9
+	Basilisks can only attack ground units.
+	Basilisk torpedo speed and spread reduced.
 
 [2016 - 03 - 30]
 Balance Changes:

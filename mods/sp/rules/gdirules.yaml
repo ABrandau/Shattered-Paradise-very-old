@@ -73,10 +73,6 @@ GRENADIER:
 		HP: 90
 	Mobile:
 		Speed: 50
-	Explodes:
-		Weapon: UnitExplode
-		LoadedChance: 30
-		Chance: 30
 	Armament:
 		Weapon: Grenade
 		LocalOffset: 0,0,555
@@ -241,7 +237,7 @@ APC:
 		BuildPaletteOrder: 4
 		Prerequisites: ~gaweap, garadr
 	Mobile:
-		TurnSpeed: 5
+		TurnSpeed: 8
 		Speed: 113
 		TerrainSpeeds:
 			Water: 80
@@ -280,6 +276,7 @@ HVR:
 		Prerequisites: ~gaweap, garadr
 	Mobile:
 		Speed: 99
+		TurnSpeed: 9
 		TerrainSpeeds:
 			Clear: 100
 			Road: 100
@@ -298,7 +295,7 @@ HVR:
 		Weapon: HoverMissile
 		LocalOffset: 0,171,384, 0,-171,384
 	Turreted:
-		TurnSpeed: 7
+		TurnSpeed: 8
 		Offset: -128,0,85
 	AttackTurreted:
 		Voice: Attack

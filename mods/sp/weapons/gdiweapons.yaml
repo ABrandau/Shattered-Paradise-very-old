@@ -369,7 +369,7 @@ FighterHellfire:
 	Burst: 2
 	ValidTargets: Ground
 	Projectile: Missile
-		Speed: 600
+		Speed: 800
 		MaximumLaunchSpeed: 512
 		Arm: 2
 		Blockable: false
@@ -409,19 +409,17 @@ AAFighterHellfire:
 	Burst: 2
 	ValidTargets: Air
 	Projectile: Missile
-		Speed: 900
-		MaximumLaunchSpeed: 512
-		Arm: 2
+		Speed: 250
 		Blockable: false
 		Shadow: true
 		Image: DRAGON
 		TrailImage: small_smoke_trail
-		HorizontalRateOfTurn: 8
+		HorizontalRateOfTurn: 20
 		RangeLimit: 35
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 85
-		Damage: 20
+		Spread: 110
+		Damage: 25
 		ValidTargets: Air
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
@@ -486,7 +484,7 @@ GuardianRail:
 		Color: 0080FFC8		
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 35
+		Damage: 45
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath		
 		Versus:
 			None: 150

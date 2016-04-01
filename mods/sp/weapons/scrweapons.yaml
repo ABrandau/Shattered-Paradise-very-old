@@ -267,7 +267,7 @@ StormRiderBlast:
 	Range: 6c512
 	ValidTargets: Ground
 	Projectile: Bullet # TODO: Add bounce effect
-		Speed: 800
+		Speed: 600
 		Blockable: false
 		Shadow: true
 		Angle: 45

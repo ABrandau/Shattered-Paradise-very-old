@@ -149,7 +149,7 @@ PDRONE:
 		TerrainTypes:
 			Water: 70
 	Health:
-		HP: 130
+		HP: 110
 	Passenger:
 	WithInfantryBody:
 		AttackSequence: shoot
@@ -285,7 +285,7 @@ CYC2:
 		UncloakSound: cloak5.aud
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage		
 	Health:
-		HP: 500
+		HP: 300
 	Passenger:
 	Targetable:
 		TargetTypes: Ground, Infantry, MindControlInmune
