@@ -140,7 +140,7 @@ HARV:
 		SearchFromProcRadius: 36
 		SearchFromOrderRadius: 18
 		HarvestVoice: Attack
-		DeliverVoice: Move
+		DeliverVoice: Action
 	Mobile:
 		Speed: 71
 		Crushes: wall, crate, infantry
