@@ -180,6 +180,9 @@ HARV:
 			nod: harv.nod
 			mut: harv.mut
 			cab: harv.cab
+	Voiced:
+		VoiceSet: HumanHarvesterVO
+		Volume: 4
 
 LPST:
 	Inherits: ^VoxelVehicle

@@ -12,6 +12,8 @@ Eco Balance Changes:
 		ValuePerUnit: 45 < 42
 	Harvesters:
 		Reduced Capacity: 40 < 36
+VO Added:
+	Harvester thanks to HiJanxy.
 Some unit/building description fixes.
 [2016 - 03 - 30]
 Theoretically fixed a bug that made AA aircraft miss their targets.
