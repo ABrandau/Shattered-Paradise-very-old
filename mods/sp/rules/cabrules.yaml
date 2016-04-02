@@ -606,7 +606,7 @@ ECM:
 		Ammo: 5
 		PipCount: 5
 		PipType: Ammo
-		SelfReloadTicks: 150
+		SelfReloadTicks: 300
 		SelfReloads: true
 		PipTypeEmpty: AmmoEmpty
 	WithVoxelBody:
