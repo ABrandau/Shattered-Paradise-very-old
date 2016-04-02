@@ -369,7 +369,7 @@ DevourerShell:
 		RangeLimit: 35
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 10
+		Damage: 40
 		ValidTargets: Ground, Vehicle, Infantry, water
 		Versus:
 			None: 200
@@ -391,7 +391,7 @@ DevourerShell:
 		SmudgeType: SmallCrater	
 	Warhead@nomnomnom: GrantUpgrade
 		Range: 3c0
-		Duration: 125
+		Duration: 250
 		Upgrades: nomnomnom
 		ValidTargets: Ground
 		ValidStances: Enemy

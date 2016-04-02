@@ -229,14 +229,14 @@
 		Modifier: 110
 		UpgradeTypes: nomnomnom
 	SelfHealing@nomnomnom:
-		Step: -30
-		Ticks: 75
+		Step: -10
+		Ticks: 100
 		HealIfBelow: 110
 		UpgradeTypes: nomnomnom
 		UpgradeMinEnabledLevel: 1
 	SelfHealing@nomnomnom1:
-		Step: 30
-		Ticks: 75
+		Step: 10
+		Ticks: 100
 		HealIfBelow: 20
 		UpgradeTypes: nomnomnom
 		UpgradeMinEnabledLevel: 1

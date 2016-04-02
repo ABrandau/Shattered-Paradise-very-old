@@ -1,5 +1,10 @@
-YEAR - MONTH - DAY
+﻿YEAR - MONTH - DAY
 
+[2016 - 04 - 01]
+Unit Balance Changes
+	Devourer: Damage: 10 -> 40
+	Devourer debuff: damage: 30 -> 10, time between damage: 3 seconds -> 4 seconds.
+	Devourer debuff duration: 5 seconds -> 10 seconds.
 [2016 - 04 - 01]
 Unit Balance Changes
 	Reduced Scrin Tractor Beam speed: 1200 < 600

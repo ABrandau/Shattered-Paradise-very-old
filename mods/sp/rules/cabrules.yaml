@@ -669,7 +669,7 @@ BLASTER:
 		Cost: 900
 	Tooltip:
 		Name: Devourer
-		Description: Hover Artillery, deals damage over time.\nIt's weapon bypasses armor.\nCan move on water.\n Special Ability: Vehicles killed by this unit will spawn Drones.
+		Description: Hover Artillery.\nHis weapon slowly dissasembles enemies.\nThat effect bypasses armor.\nCan move on water.\n Special Ability: Vehicles killed by this unit will spawn Drones.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 23
