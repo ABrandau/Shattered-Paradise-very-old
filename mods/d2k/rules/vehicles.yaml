@@ -43,8 +43,8 @@ mcv:
 		VisualBounds: 42,42
 	SelfHealing:
 		Step: 5
-		Ticks: 3
-		HealIfBelow: 50%
+		Delay: 3
+		HealIfBelow: 50
 
 harvester:
 	Inherits: ^Vehicle
@@ -68,7 +68,7 @@ harvester:
 		Capacity: 28
 		HarvestFacings: 8
 		Resources: Spice
-		UnloadTicksPerBale: 5
+		BaleUnloadDelay: 5
 		SearchFromProcRadius: 30
 		SearchFromOrderRadius: 15
 	Health:
@@ -94,8 +94,8 @@ harvester:
 		VisualBounds: 42,42
 	SelfHealing:
 		Step: 5
-		Ticks: 3
-		HealIfBelow: 50%
+		Delay: 3
+		HealIfBelow: 50
 
 trike:
 	Inherits: ^Vehicle
@@ -335,8 +335,8 @@ devastator:
 		VisualBounds: 44,38,0,0
 	SelfHealing:
 		Step: 5
-		Ticks: 3
-		HealIfBelow: 50%
+		Delay: 3
+		HealIfBelow: 50
 
 raider:
 	Inherits: ^Vehicle

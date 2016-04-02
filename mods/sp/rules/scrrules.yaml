@@ -356,7 +356,7 @@ SCRHARV:
 		HP: 1000
 	SelfHealing:
 		Ticks: 10
-		HealIfBelow: 50%
+		HealIfBelow: 50
 		DamageCooldown: 200
 	Armor:
 		Type: Heavy
@@ -874,7 +874,7 @@ SCRDESTROYER:
 	SelfHealing:
 		Step: 4
 		Ticks: 75
-		HealIfBelow: 1
+		HealIfBelow: 100
 	Armament:
 		Weapon: DestroyerCannon
 		LocalOffset: 300,0,0
@@ -976,7 +976,7 @@ SCRBATTLESHIP:
 	SelfHealing:
 		Step: 4
 		Ticks: 75
-		HealIfBelow: 1
+		HealIfBelow: 100
 	RevealsShroud:
 		Range: 14c0
 		Type: CenterPosition

@@ -191,8 +191,8 @@ V2RL:
 		Actor: 4TNK.Husk
 	SelfHealing:
 		Step: 1
-		Ticks: 3
-		HealIfBelow: 50%
+		Delay: 3
+		HealIfBelow: 50
 		DamageCooldown: 150
 	SelectionDecorations:
 		VisualBounds: 44,38,0,-4
@@ -253,7 +253,7 @@ HARV:
 	Harvester:
 		Capacity: 20
 		Resources: Ore,Gems
-		UnloadTicksPerBale: 1
+		BaleUnloadDelay: 1
 		SearchFromProcRadius: 30
 		SearchFromOrderRadius: 15
 	Health:

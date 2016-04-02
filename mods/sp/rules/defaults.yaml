@@ -35,7 +35,7 @@
 	SelfHealing@ELITE:
 		Step: 3
 		Ticks: 100
-		HealIfBelow: 1
+		HealIfBelow: 100
 		DamageCooldown: 125
 		UpgradeTypes: selfheal
 		UpgradeMinEnabledLevel: 1
@@ -220,7 +220,7 @@
 	SelfHealing@batteryboost
 		Step: 3
 		Ticks: 100
-		HealIfBelow: 1
+		HealIfBelow: 100
 		UpgradeTypes: batteryboost
 		UpgradeMinEnabledLevel: 1
 
@@ -231,13 +231,13 @@
 	SelfHealing@nomnomnom:
 		Step: -30
 		Ticks: 75
-		HealIfBelow: 1.1
+		HealIfBelow: 110
 		UpgradeTypes: nomnomnom
 		UpgradeMinEnabledLevel: 1
 	SelfHealing@nomnomnom1:
 		Step: 30
 		Ticks: 75
-		HealIfBelow: 0.2
+		HealIfBelow: 20
 		UpgradeTypes: nomnomnom
 		UpgradeMinEnabledLevel: 1
 
@@ -1270,7 +1270,7 @@
 	SelfHealing@NodVehicleRepair:
 		Step: 30
 		Ticks: 20
-		HealIfBelow: 1
+		HealIfBelow: 100
 		UpgradeTypes: NodVehicleRepair
 		UpgradeMinEnabledLevel: 1
 
@@ -1284,4 +1284,4 @@
 	SelfHealing@Cabal:
 		Step: 4
 		Ticks: 75
-		HealIfBelow: 75%
+		HealIfBelow: 75

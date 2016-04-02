@@ -313,7 +313,7 @@ CABALMONEYDUMMY:
 		Bounds: 1,1
 	SelfHealing:
 		Step: -5
-		HealIfBelow: 2
+		HealIfBelow: 110
 	RenderSprites:
 		Image: blackhanddummy
 	Health:
@@ -336,7 +336,7 @@ CABALMONEYDUMMY1:
 		Bounds: 1,1
 	SelfHealing:
 		Step: -5
-		HealIfBelow: 2
+		HealIfBelow: 110
 	RenderSprites:
 		Image: blackhanddummy
 	Health:
@@ -885,7 +885,7 @@ BASILISK:
 	SelfHealing:
 		Step: 4
 		Ticks: 75
-		HealIfBelow: 1
+		HealIfBelow: 110
 	Armament:
 		Weapon: BasiliskProton
 		LocalOffset: 128,-300,0, 128,300,0
@@ -948,7 +948,7 @@ CABPOWR:
 	SelfHealing@reactorcritical:
 		Step: -5
 		Ticks: 25
-		HealIfBelow: 0.20
+		HealIfBelow: 20
 	DisabledOverlay:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
@@ -1399,7 +1399,7 @@ CABCENT:
 	SelfHealing@Cabal:
 		Step: 4
 		Ticks: 75
-		HealIfBelow: 1
+		HealIfBelow: 110
 	RenderSprites:
 		Scale: 0.8
 		Image: centurion

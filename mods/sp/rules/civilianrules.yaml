@@ -521,7 +521,7 @@ CIV3:
 	AutoTarget:
 	SelfHealing:
 		Ticks: 10
-		HealIfBelow: 50%
+		HealIfBelow: 50
 		DamageCooldown: 200
 	WithVoxelTurret:
 	WithVoxelBarrel:
@@ -2121,4 +2121,4 @@ EGGS:
 	SelfHealing@bird:
 		Step: -10
 		Ticks: 50
-		HealIfBelow: 1.1
+		HealIfBelow: 110

@@ -3,6 +3,6 @@ World:
 	-SpawnMPUnits:
 	-MPStartLocations:
 	MusicPlaylist:
-		BackgroundMusic: serenade
+		BackgroundMusic: intro
 	LuaScript:
 		Scripts: map.lua

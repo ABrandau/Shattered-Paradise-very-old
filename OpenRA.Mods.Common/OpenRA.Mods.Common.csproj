@@ -400,6 +400,8 @@
     <Compile Include="Traits\Power\RequiresPower.cs" />
     <Compile Include="Traits\Power\ScalePowerWithHealth.cs" />
     <Compile Include="Traits\Production.cs" />
+    <Compile Include="Traits\ProductionFromMapEdge.cs" />
+    <Compile Include="Traits\ProductionParadrop.cs" />
     <Compile Include="Traits\ProductionQueueFromSelection.cs" />
     <Compile Include="Traits\ProvidesRadar.cs" />
     <Compile Include="Traits\ProximityCaptor.cs" />
@@ -735,6 +737,8 @@
     <Compile Include="Traits\World\MapBuildRadius.cs" />
     <Compile Include="Traits\World\MapOptions.cs" />
     <Compile Include="Traits\World\MissionData.cs" />
+    <Compile Include="UtilityCommands\ExtractMapRules.cs" />
+    <Compile Include="Traits\ScriptTags.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

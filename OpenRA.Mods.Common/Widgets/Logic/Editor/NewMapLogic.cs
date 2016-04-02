@@ -58,11 +58,11 @@ namespace OpenRA.Mods.Common.Widgets.Logic
 				var tileset = modData.DefaultTileSets[tilesetDropDown.Text];
 				var map = new Map(Game.ModData, tileset, width + 2, height + maxTerrainHeight + 2);
 
-				var tl = new PPos(1, 1);
+				var tl = new PPos(1, 1 + maxTerrainHeight);
 				var br = new PPos(width, height + maxTerrainHeight);
 				map.SetBounds(tl, br);
 
-				map.PlayerDefinitions = new MapPlayers(map.Rules, map.SpawnPoints.Value.Length).ToMiniYaml();
+				map.PlayerDefinitions = new MapPlayers(map.Rules, 0).ToMiniYaml();
 				map.FixOpenAreas();
 
 				Action<string> afterSave = uid =>

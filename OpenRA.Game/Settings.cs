@@ -23,6 +23,17 @@ namespace OpenRA
 	public enum MouseScrollType { Disabled, Standard, Inverted, Joystick }
 	public enum StatusBarsType { Standard, DamageShow, AlwaysShow }
 
+	[Flags]
+	public enum MPGameFilters
+	{
+		None = 0,
+		Waiting = 1,
+		Empty = 2,
+		Protected = 4,
+		Started = 8,
+		Incompatible = 16
+	}
+
 	public class ServerSettings
 	{
 		[Desc("Sets the server name.")]
@@ -64,12 +75,6 @@ namespace OpenRA
 
 		[Desc("Value in milliseconds when to terminate the game. Needs to be at least 10000 (10 s) to enable the timer.")]
 		public int TimeOut = 0;
-
-		[Desc("Run in headless mode with an empty renderer and without sound output.")]
-		public bool Dedicated = false;
-
-		[Desc("Automatically restart when a game ends. Disable this when something else already takes care about it.")]
-		public bool DedicatedLoop = true;
 
 		[Desc("Disallow games where only one player plays with bots.")]
 		public bool DisableSinglePlayer = false;
@@ -182,6 +187,8 @@ namespace OpenRA
 
 		public bool FetchNews = true;
 		public string NewsUrl = "http://master.openra.net/gamenews";
+
+		public MPGameFilters MPGameFilters = MPGameFilters.Waiting | MPGameFilters.Empty | MPGameFilters.Protected | MPGameFilters.Started;
 	}
 
 	public class KeySettings
@@ -268,6 +275,11 @@ namespace OpenRA
 		public Hotkey SupportPower04Key = new Hotkey(Keycode.UNKNOWN, Modifiers.None);
 		public Hotkey SupportPower05Key = new Hotkey(Keycode.UNKNOWN, Modifiers.None);
 		public Hotkey SupportPower06Key = new Hotkey(Keycode.UNKNOWN, Modifiers.None);
+
+		public Hotkey ReplaySpeedSlowKey = new Hotkey(Keycode.F5, Modifiers.None);
+		public Hotkey ReplaySpeedRegularKey = new Hotkey(Keycode.F6, Modifiers.None);
+		public Hotkey ReplaySpeedFastKey = new Hotkey(Keycode.F7, Modifiers.None);
+		public Hotkey ReplaySpeedMaxKey = new Hotkey(Keycode.F8, Modifiers.None);
 
 		static readonly Func<KeySettings, Hotkey>[] ProductionKeys = GetKeys(24, "Production");
 		static readonly Func<KeySettings, Hotkey>[] SupportPowerKeys = GetKeys(6, "SupportPower");

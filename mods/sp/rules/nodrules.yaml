@@ -178,7 +178,7 @@ BLACKHANDDUMMY:
 		Bounds: 1,1
 	SelfHealing:
 		Step: -5
-		HealIfBelow: 2
+		HealIfBelow: 110
 	RenderSprites:
 	Health:
 		HP: 5
@@ -262,7 +262,7 @@ TTNK:
 	SelfHealing@lel:
 		Step: 2
 		Ticks: 100
-		HealIfBelow: 0.75
+		HealIfBelow: 50
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 11

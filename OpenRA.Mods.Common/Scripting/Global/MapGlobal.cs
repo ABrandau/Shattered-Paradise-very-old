@@ -9,6 +9,7 @@
  */
 #endregion
 
+using System.Collections.Generic;
 using System.Linq;
 using Eluant;
 using OpenRA.Mods.Common.Traits;
@@ -19,7 +20,7 @@ namespace OpenRA.Mods.Common.Scripting
 	[ScriptGlobal("Map")]
 	public class MapGlobal : ScriptGlobal
 	{
-		SpawnMapActors sma;
+		readonly SpawnMapActors sma;
 		public MapGlobal(ScriptContext context)
 			: base(context)
 		{
@@ -78,6 +79,19 @@ namespace OpenRA.Mods.Common.Scripting
 			return Context.World.Map.ChooseRandomEdgeCell(Context.World.SharedRandom);
 		}
 
+		[Desc("Returns the closest cell on the visible border of the map from the given cell.")]
+		public CPos ClosestEdgeCell(CPos givenCell)
+		{
+			return Context.World.Map.ChooseClosestEdgeCell(givenCell);
+		}
+
+		[Desc("Returns the first cell on the visible border of the map from the given cell,",
+			"matching the filter function called as function(CPos cell).")]
+		public CPos ClosestMatchingEdgeCell(CPos givenCell, LuaFunction filter)
+		{
+			return FilteredObjects(Context.World.Map.AllEdgeCells.OrderBy(c => (givenCell - c).Length), filter).FirstOrDefault();
+		}
+
 		[Desc("Returns the center of a cell in world coordinates.")]
 		public WPos CenterOfCell(CPos cell)
 		{
@@ -112,6 +126,12 @@ namespace OpenRA.Mods.Common.Scripting
 		public bool IsNamedActor(Actor actor)
 		{
 			return actor.ActorID <= sma.LastMapActorID && actor.ActorID > sma.LastMapActorID - sma.Actors.Count;
+		}
+
+		[Desc("Returns a table of all actors tagged with the given string.")]
+		public Actor[] ActorsWithTag(string tag)
+		{
+			return Context.World.ActorsHavingTrait<ScriptTags>(t => t.HasTag(tag)).ToArray();
 		}
 	}
 }

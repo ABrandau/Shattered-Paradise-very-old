@@ -158,7 +158,7 @@ HARV:
 		TargetTypes: Ground, Vehicle, Repair, MindControlInmune
 	SelfHealing:
 		Ticks: 10
-		HealIfBelow: 50%
+		HealIfBelow: 50
 		DamageCooldown: 200
 	-Capturable:
 	Armor:

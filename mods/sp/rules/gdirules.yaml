@@ -396,7 +396,7 @@ HMEC:
 		HP: 800
 	SelfHealing:
 		Ticks: 10
-		HealIfBelow: 1.1
+		HealIfBelow: 110
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -575,7 +575,7 @@ GUARDIAN:
 	SelfHealing:
 		Step: 10
 		Ticks: 300
-		HealIfBelow: 1
+		HealIfBelow: 110
 	SpeedMultiplier:
 		UpgradeTypes: undeployed
 		Modifier: 40
