@@ -1284,4 +1284,4 @@
 	SelfHealing@Cabal:
 		Step: 4
 		Ticks: 75
-		HealIfBelow: 1
+		HealIfBelow: 75%

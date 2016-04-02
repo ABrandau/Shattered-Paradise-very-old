@@ -316,7 +316,7 @@ SCRHARV:
 		Cost: 1600
 	Tooltip:
 		Name: Harvester
-		Description: Collects Tiberium for processing.\nIncompatible with human refineries.\n  Unarmed
+		Description: Collects Ichor for processing.\nIncompatible with human refineries.\n  Unarmed.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 1
@@ -329,7 +329,7 @@ SCRHARV:
 	Targetable:
 		TargetTypes: Ground, Vehicle, Repair, MindControlInmune
 	Harvester:
-		Capacity: 40
+		Capacity: 36
 		Resources: Tiberium, BlueTiberium
 		DeliveryBuildings: scrproc
 		UnloadTicksPerBale: 4
@@ -871,6 +871,10 @@ SCRDESTROYER:
 		HP: 450
 	Armor:
 		Type: Light
+	SelfHealing:
+		Step: 4
+		Ticks: 75
+		HealIfBelow: 1
 	Armament:
 		Weapon: DestroyerCannon
 		LocalOffset: 300,0,0
@@ -969,6 +973,10 @@ SCRBATTLESHIP:
 		HP: 800
 	Armor:
 		Type: Heavy
+	SelfHealing:
+		Step: 4
+		Ticks: 75
+		HealIfBelow: 1
 	RevealsShroud:
 		Range: 14c0
 		Type: CenterPosition
@@ -1208,7 +1216,7 @@ scrproc:
 		Cost: 2200
 	Tooltip:
 		Name: Scrin Refinery
-		Description: Processes Ichor.\nIncompatible with human harvesters.
+		Description: Processes raw Ichor\ninto usable resources.\nIncompatible with human harvesters.
 	Armor:
 		Type: Light
 	Buildable:

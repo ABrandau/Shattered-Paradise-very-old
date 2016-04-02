@@ -1,9 +1,22 @@
-﻿YEAR - MONTH - DAY
+YEAR - MONTH - DAY
 
+[2016 - 04 - 01]
+Unit Balance Changes
+	Reduced Scrin Tractor Beam speed: 1200 < 600
+	Reduced AircraftSelfHeal: Heal if below 50%. Scrin Battleship, Destroyer and CABAL Basilisk can still completely self-heal.
+Eco Balance Changes:
+	Further nerfs as we continue to balance.
+	Green Tib:
+		ValuePerUnit: 25 < 22
+	Blue Tib:
+		ValuePerUnit: 45 < 42
+	Harvesters:
+		Reduced Capacity: 40 < 36
+Some unit/building description fixes.
 [2016 - 03 - 30]
-Theoryically fixed a bug that made AA aircraft miss their targets.
+Theoretically fixed a bug that made AA aircraft miss their targets.
 Balance Changes:
-	Gargoil: Reloaddelay: 200 -> 100
+	Gargoyle: Reloaddelay: 200 -> 100
 	Basilisk torpedo damage reworked
 	Cyborg Commando: health: 500 -> 300
 	Reclaimer: Health: 130 -> 110

@@ -26,12 +26,12 @@ CABSENTRY:
 	Mobile:
 		Speed: 65
 		UpgradeTypes: notmobile
-		UpgradeMaxEnabledLevel: 0			
+		UpgradeMaxEnabledLevel: 0
 	Health:
 		HP: 125
 	Passenger:
 	Armament@primary:
-		Weapon: SentryGun	
+		Weapon: SentryGun
 	AttackFrontal:
 		Voice: Attack
 	SelectionDecorations:
@@ -44,9 +44,9 @@ CABSENTRY:
 		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
 		DeploySound: place2.aud
 		UndeploySound: clicky1.aud
-	Hovers:	
+	Hovers:
 		UpgradeTypes: undeployed
-		UpgradeMinEnabledLevel: 1		
+		UpgradeMinEnabledLevel: 1
 	WithInfantryBody:
 		UpgradeTypes: undeployed
 		UpgradeMinEnabledLevel: 1
@@ -60,7 +60,7 @@ CABSENTRY:
 		Palette: cloakcab
 		IsPlayerPalette: true
 		UpgradeTypes: deployed
-		UpgradeMinEnabledLevel: 1		
+		UpgradeMinEnabledLevel: 1
 
 CYBORG:
 	Inherits: ^Cyborg
@@ -79,7 +79,7 @@ CYBORG:
 		Bounds: 22,32,-1,-9
 	SupplyTruck
 		Payload: 175
-		Voice: Move		
+		Voice: Move
 	Voiced:
 		VoiceSet: Cyborg
 	Mobile:
@@ -93,7 +93,7 @@ CYBORG:
 		Voice: Attack
 	SelectionDecorations:
 		VisualBounds: 16,31,0,-10
-		
+
 SWARMLING:
 	Inherits: ^CabalDroneInfantry
 	Valued:
@@ -107,7 +107,7 @@ SWARMLING:
 		Prerequisites: ~cabclaw
 	SupplyTruck
 		Payload: 275
-		Voice: Move		
+		Voice: Move
 	Voiced:
 		VoiceSet: Engineer
 	Mobile:
@@ -120,7 +120,7 @@ SWARMLING:
 	RepairsBridges:
 	Captures:
 		CaptureTypes: building
-	-AutoTarget:	
+	-AutoTarget:
 
 PDRONE:
 	Inherits: ^CabalDroneInfantry
@@ -130,7 +130,7 @@ PDRONE:
 		Cost: 150
 	SupplyTruck
 		Payload: 75
-		Voice: Move		
+		Voice: Move
 	Tooltip:
 		Name: Reclaimer
 		Description: Utility drone, soldiers killed by this unit will be turned into workers.\nCan only target infantry.\n  Strong vs Infantry\n  Weak vs Everything else.
@@ -142,7 +142,7 @@ PDRONE:
 		Bounds: 22,32,0,0
 	Voiced:
 		VoiceSet: CyborgCommando
-	Hovers:	
+	Hovers:
 	Mobile:
 		Speed: 75
 		-UpgradeTypes: WebDisable
@@ -177,12 +177,12 @@ REAPERCAB:
 		BuildPaletteOrder: 15
 		Prerequisites: ~cabclaw, cabradr
 	RepairableNear:
-		Buildings: gaweap, naweap, muweap, cabweap, scrweap		
+		Buildings: gaweap, naweap, muweap, cabweap, scrweap
 	Selectable:
 		Bounds: 40,40,0,-10
 	SupplyTruck
 		Payload: 300
-		Voice: Move		
+		Voice: Move
 	Voiced:
 		VoiceSet: Cyborg
 	Mobile:
@@ -191,29 +191,29 @@ REAPERCAB:
 		-UpgradeTypes: WebDisable
 	Explodes:
 		Weapon: UnitExplodeSmall
-		EmptyWeapon: UnitExplodeSmall		
+		EmptyWeapon: UnitExplodeSmall
 	Health:
 		HP: 400
 	Voiced:
-		VoiceSet: CyborgReap		
+		VoiceSet: CyborgReap
 	Passenger:
 	Armor:
 		Type: Wood
 	Armament@primary:
 		Weapon: ReaperMortar
 		LocalOffset: 0,0,500
-	Armament@secondary:	
+	Armament@secondary:
 		Weapon: ReaperRail
-		LocalOffset: 0,0,2000		
+		LocalOffset: 0,0,2000
 	AttackFrontal:
 		Voice: Attack
 	-UpgradeOverlay@WebDisable:
 	-DisableOnUpgrade@WebDisable:
-	-TimedUpgradeBar@WebDisable:			
-		
+	-TimedUpgradeBar@WebDisable:
+
 GLAD:
 	Inherits: ^Cyborg
-	Inherits@2: ^CyborgSelfHeal	
+	Inherits@2: ^CyborgSelfHeal
 	Inherits@3: ^BasicStealthDetection
 	Armor:
 		Type: Heavy
@@ -245,16 +245,16 @@ GLAD:
 		LocalOffset: 170,85,683
 	Armament@secondary:
 		Weapon: GLAD120mm
-		LocalOffset: 170,85,683		
+		LocalOffset: 170,85,683
 	Armament@secondary:
 		Weapon: CyborgVulcan
-		LocalOffset: 170,85,683			
+		LocalOffset: 170,85,683
 	AttackFrontal:
 		Voice: Attack
 
 CYC2:
 	Inherits: ^Cyborg
-	Inherits@2: ^CyborgSelfHeal	
+	Inherits@2: ^CyborgSelfHeal
 	Armor:
 		Type: Heavy
 	Valued:
@@ -268,7 +268,7 @@ CYC2:
 		Prerequisites: ~cabclaw, cabtech
 		BuildLimit: 1
 	RepairableNear:
-		Buildings: gaweap, naweap, muweap, cabweap, scrweap		
+		Buildings: gaweap, naweap, muweap, cabweap, scrweap
 	SupplyTruck
 		Payload: 600
 		Voice: Move
@@ -283,7 +283,7 @@ CYC2:
 		IsPlayerPalette: true
 		CloakSound: cloak5.aud
 		UncloakSound: cloak5.aud
-		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage		
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
 	Health:
 		HP: 300
 	Passenger:
@@ -296,7 +296,7 @@ CYC2:
 		Voice: Attack
 	SelectionDecorations:
 		VisualBounds: 16,32,-1,-12
- 
+
 ################################################
 # Non Combat Cyborgs
 ################################################
@@ -307,7 +307,7 @@ CABALMONEYDUMMY:
 	-WithSpriteBody:
 	-WithBuildingExplosion:
 	-ShakeOnDeath:
-	-SoundOnDamageTransition:	
+	-SoundOnDamageTransition:
 	AutoSelectionSize:
 	Selectable:
 		Bounds: 1,1
@@ -322,7 +322,7 @@ CABALMONEYDUMMY:
 	CashTrickler:
 		Amount: 10
 		Period: 999
-		
+
 CABALMONEYDUMMY1:
 	Inherits: ^BasicBuilding
 	Targetable:
@@ -330,7 +330,7 @@ CABALMONEYDUMMY1:
 	-WithSpriteBody:
 	-WithBuildingExplosion:
 	-ShakeOnDeath:
-	-SoundOnDamageTransition:	
+	-SoundOnDamageTransition:
 	AutoSelectionSize:
 	Selectable:
 		Bounds: 1,1
@@ -344,7 +344,7 @@ CABALMONEYDUMMY1:
 		NotifyAppliedDamage: False
 	CashTrickler:
 		Amount: 250
-		Period: 999		
+		Period: 999
 
 WORKER:
 	Inherits: ^Soldier
@@ -375,7 +375,7 @@ WORKER:
 		AttackSequence: shoot
 	RenderSprites:
 	-SpawnActorOnDeath@conversion:
-	-SpawnActorOnDeath@cabmoney:	
+	-SpawnActorOnDeath@cabmoney:
 
 PALADIN2:
 	Inherits: ^CabalDroneInfantry
@@ -399,7 +399,7 @@ PALADIN2:
 		Range: 8c0
 	SupplyTruck
 		Payload: 80
-		Voice: Move		
+		Voice: Move
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithInfantryBody:
@@ -421,8 +421,8 @@ PALADIN2:
 	AutoTarget:
 	Selectable:
 		Bounds: 30, 42, 0, -8
-	-SpawnActorOnDeath@cabmoney:	
-		
+	-SpawnActorOnDeath@cabmoney:
+
 
 cybdog:
 	Inherits: ^Cyborg
@@ -443,7 +443,7 @@ cybdog:
 		VoiceSet: Cyborg
 	SupplyTruck
 		Payload: 150
-		Voice: Move				
+		Voice: Move
 	Mobile:
 		Speed: 65
 	Health:
@@ -456,7 +456,7 @@ cybdog:
 	AttackFrontal:
 		Voice: Attack
 	SelectionDecorations:
-		VisualBounds: 16,31,0,-10		
+		VisualBounds: 16,31,0,-10
 ################################################
 # Vehicles
 ################################################
@@ -488,7 +488,7 @@ JENN:
 		Weapon: SeekerBazooka
 		Recoil: 127
 		RecoilRecovery: 26
-		LocalOffset: 300,200,500, 300,-250,500		
+		LocalOffset: 300,200,500, 300,-250,500
 	# RenderVoxels:
 	# WithVoxelBarrel:
 		# LocalOffset: -128, 85, 256
@@ -529,7 +529,7 @@ CENTURION:
 		Facing: 159
 		TransformSounds: place2.aud
 		NoTransformSounds:
-		Voice: Move		
+		Voice: Move
 	RenderSprites:
 		Scale: 0.8
 	Armament:
@@ -557,14 +557,14 @@ GRINDER:
 		Prerequisites: ~cabweap, cabradr
 	Mobile:
 		TurnSpeed: 6
-		Speed: 90		
+		Speed: 90
 	Health:
 		HP: 350
 	Armor:
 		Type: Light
 	AttackFrontal:
 	AutoTarget:
-		ScanRadius: 5	
+		ScanRadius: 5
 	Armament:
 		Weapon: TermitaGrinder
 	RenderVoxels:
@@ -576,15 +576,15 @@ GRINDER:
 		TerrainTypes: Water
 		StationaryInterval: 18
 		MovingInterval: 6
-		
+
 ECM:
 	Inherits: ^VoxelVehicle
-	Inherits@1: ^Ra2vxl	
+	Inherits@1: ^Ra2vxl
 	Valued:
 		Cost: 1500
 	Tooltip:
 		Name: Artisan
-		Description: Support vehicle that deploys turrets.\nReloads its ammo over time.\n  Unarmed. 
+		Description: Support vehicle that deploys turrets.\nReloads its ammo over time.\n  Unarmed.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 21
@@ -608,19 +608,19 @@ ECM:
 		PipType: Ammo
 		SelfReloadTicks: 150
 		SelfReloads: true
-		PipTypeEmpty: AmmoEmpty		
+		PipTypeEmpty: AmmoEmpty
 	WithVoxelBody:
 	RenderVoxels:
 		LightAmbientColor: 0.4,0.4,0.4
-		LightDiffuseColor: 0.5,0.5,0.5	
+		LightDiffuseColor: 0.5,0.5,0.5
 		Scale: 4
 	LeavesTrails:
 		Image: wake
 		Palette: effect
 		TerrainTypes: Water
 		StationaryInterval: 18
-		MovingInterval: 6			
-				
+		MovingInterval: 6
+
 CABAPC:
 	Inherits: ^VoxelVehicle
 	Inherits@1: ^Ra2vxl
@@ -685,9 +685,9 @@ BLASTER:
 		Type: Wood
 	Turreted:
 		TurnSpeed: 10
-	Hovers:	
+	Hovers:
 	RenderVoxels:
-		Scale: 5	
+		Scale: 5
 	AutoTarget:
 	Armament:
 		Weapon: DevourerShell
@@ -736,18 +736,18 @@ PALADIN:
 	Armament@secondary:
 		Weapon: PalaLazor
 		Recoil: 127
-		RecoilRecovery: 26		
-		LocalOffset:  475,-300,950	
+		RecoilRecovery: 26
+		LocalOffset:  475,-300,950
 	# RenderVoxels:
 	# WithVoxelBarrel:
 		# LocalOffset: -128, 85, 256
 	AutoTarget:
 	Selectable:
 		Bounds: 30, 42, 0, -8
-		
+
 ##########################################################
 # Aircraft
-##########################################################			
+##########################################################
 WASP:
 	Inherits: ^Helicopter
 	Inherits@3: ^SelfReloads
@@ -792,25 +792,25 @@ WASP:
 		SelfReloads: true
 		SelfReloadTicks: 250
 		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty		
+		PipTypeEmpty: AmmoEmpty
 		Name: Rocket
 	AutoTarget:
 	-RenderVoxels:
-	-WithVoxelBody:	
+	-WithVoxelBody:
 	WithShadow:
-	RenderSprites:	
+	RenderSprites:
 		Scale: 0.4
 	WithFacingSpriteBody:
 	BodyOrientation:
 		QuantizedFacings: 32
 	SpawnActorOnDeath:
-		Actor: WASP.Husk	
+		Actor: WASP.Husk
 
 FIREFLY:
 	Inherits: ^Helicopter
-	Inherits@3: ^SelfReloads	
-	Inherits@4: ^BasicStealthDetection	
-	Inherits@5: ^CabRender	
+	Inherits@3: ^SelfReloads
+	Inherits@4: ^BasicStealthDetection
+	Inherits@5: ^CabRender
 	Valued:
 		Cost: 700
 	Tooltip:
@@ -848,19 +848,19 @@ FIREFLY:
 		PipTypeEmpty: AmmoEmpty
 	AutoTarget:
 	-RenderVoxels:
-	-WithVoxelBody:	
+	-WithVoxelBody:
 	WithShadow:
-	RenderSprites:	
+	RenderSprites:
 	WithFacingSpriteBody:
 	BodyOrientation:
 		QuantizedFacings: 32
 	SpawnActorOnDeath:
-		Actor: FIREFLY.Husk			
-		
+		Actor: FIREFLY.Husk
+
 BASILISK:
 	Inherits: ^Helicopter
-	Inherits@1: ^Ra2vxl		
-	Inherits@3: ^SelfReloads	
+	Inherits@1: ^Ra2vxl
+	Inherits@3: ^SelfReloads
 	Valued:
 		Cost: 1700
 	Tooltip:
@@ -882,12 +882,16 @@ BASILISK:
 		HP: 300
 	Armor:
 		Type: Light
+	SelfHealing:
+		Step: 4
+		Ticks: 75
+		HealIfBelow: 1
 	Armament:
 		Weapon: BasiliskProton
-		LocalOffset: 128,-300,0, 128,300,0		
+		LocalOffset: 128,-300,0, 128,300,0
 	Armament@Secondary:
 		Weapon: BasiliskBomb
-		LocalOffset: 128,0,0				
+		LocalOffset: 128,0,0
 	AttackHeli:
 		FacingTolerance: 20
 		Voice: Attack
@@ -901,10 +905,10 @@ BASILISK:
 	RenderVoxels:
 		Scale: 1
 	SpawnActorOnDeath:
-		Actor: BASILISK.Husk		
+		Actor: BASILISK.Husk
 ##########################################################
 # Structures
-##########################################################	
+##########################################################
 CABPOWR:
 	Inherits: ^Building
 	Inherits@1: ^CabRender
@@ -952,7 +956,7 @@ CABPOWR:
 
 CABCLAW:
 	Inherits: ^Building
-	Inherits@1: ^CabRender	
+	Inherits@1: ^CabRender
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 30
@@ -1059,7 +1063,7 @@ CABWEAP:
 
 CABAIR:
 	Inherits: ^Building
-	Inherits@1: ^CabRender	
+	Inherits@1: ^CabRender
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -1106,7 +1110,7 @@ CABAIR:
 
 CABRADR:
 	Inherits: ^Building
-	Inherits@1: ^CabRender	
+	Inherits@1: ^CabRender
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 90
@@ -1152,7 +1156,7 @@ CABRADR:
 
 CABGRINDER:
 	Inherits: ^Building
-	Inherits@1: ^CabRender	
+	Inherits@1: ^CabRender
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 71
@@ -1164,7 +1168,7 @@ CABGRINDER:
 		Description: Storage site for cyborg canditates.\nIt allows you to refund CABAL\ninfantry for half its cost.
 	ProvidesPrerequisite:
 		Prerequisite: tech
-	AcceptsSupplies:	
+	AcceptsSupplies:
 	Building:
 		Footprint: xx xx xx
 		Dimensions: 2,3
@@ -1180,11 +1184,11 @@ CABGRINDER:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
-		VisualBounds: 110, 60, 3, -4		
-		
+		VisualBounds: 110, 60, 3, -4
+
 CABTECH:
 	Inherits: ^Building
-	Inherits@1: ^CabRender	
+	Inherits@1: ^CabRender
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 100
@@ -1232,14 +1236,14 @@ CABSENTRYTURRET:
 	DisabledOverlay:
 	Health:
 		HP: 75
-	-Sellable:	
+	-Sellable:
 	Armor:
 		Type: Wood
 	BodyOrientation:
 		QuantizedFacings: 32
 	# RenderRangeCircle:
 		# RangeCircleType: aa
-	-CanPowerDown:	
+	-CanPowerDown:
 	Turreted:
 		TurnSpeed: 10
 		InitialFacing: 50
@@ -1249,14 +1253,14 @@ CABSENTRYTURRET:
 	Armament@1:
 		Weapon: CyborgVulcan
 	Armament@2:
-		Weapon: SentryTurretGun		
+		Weapon: SentryTurretGun
 	SelectionDecorations:
 		VisualBounds: 40, 36, -3, -8
 
 CABCANNON:
 	Inherits: ^Defense
 	Inherits@1: ^CabRender
-	Inherits@3: ^TowerStealthDetection	
+	Inherits@3: ^TowerStealthDetection
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1295,9 +1299,9 @@ CABCANNON:
 
 CABBLAST:
 	Inherits: ^Defense
-	Inherits@1: ^CabRender		
+	Inherits@1: ^CabRender
 	Inherits@2: ^CyborgSelfHeal
-	Inherits@3: ^TowerStealthDetection	
+	Inherits@3: ^TowerStealthDetection
 	Valued:
 		Cost: 1400
 	Tooltip:
@@ -1332,13 +1336,13 @@ CABBLAST:
 	Power:
 		Amount: -100
 	SelectionDecorations:
-		VisualBounds: 40, 36, -3, -8	
+		VisualBounds: 40, 36, -3, -8
 
 CABRAIL:
 	Inherits: ^Defense
-	Inherits@1: ^CabRender	
+	Inherits@1: ^CabRender
 	Inherits@2: ^CyborgSelfHeal
-	Inherits@3: ^TowerStealthDetection	
+	Inherits@3: ^TowerStealthDetection
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -1369,15 +1373,15 @@ CABRAIL:
 		Recoils: no
 	Armament:
 		Weapon: AARail
-		LocalOffset: 512,0,512	
+		LocalOffset: 512,0,512
 	Power:
 		Amount: -70
 	SelectionDecorations:
-		VisualBounds: 40, 36, -3, -8		
-		
+		VisualBounds: 40, 36, -3, -8
+
 CABCENT:
 	Inherits: ^DeployedVehicle
-	Inherits@2: ^CyborgSelfHeal		
+	Inherits@2: ^CyborgSelfHeal
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -1395,7 +1399,7 @@ CABCENT:
 	SelfHealing@Cabal:
 		Step: 4
 		Ticks: 75
-		HealIfBelow: 1		
+		HealIfBelow: 1
 	RenderSprites:
 		Scale: 0.8
 		Image: centurion

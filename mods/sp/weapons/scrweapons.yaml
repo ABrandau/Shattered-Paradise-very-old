@@ -52,8 +52,8 @@ LegioNeedler:
 		# ImpactSound: expnew12.aud
 		# ValidImpactTypes: Air, AirHit
 	Warhead@5Smu: LeaveSmudge
-		SmudgeType: SmallCrater		
-		
+		SmudgeType: SmallCrater
+
 FloatTesla:
 	ReloadDelay: 80
 	Range: 4c0
@@ -111,9 +111,9 @@ BugRail:
 			Wood: 75
 			Light: 45
 			Heavy: 15
-			Concrete: 5	
-		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath		
-		
+			Concrete: 5
+		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+
 #################################################
 # Vehicles
 #################################################
@@ -176,7 +176,7 @@ ScrMbtCannon:
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
-		
+
 DronecPlane:
 	ReloadDelay: 100
 	Range: 11c0
@@ -213,7 +213,7 @@ DronecPlane:
 		ImpactSound: ssplash3.aud
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
-		SmudgeType: MediumCrater		
+		SmudgeType: MediumCrater
 
 Glyder2Cannon:
 	ReloadDelay: 100
@@ -245,7 +245,7 @@ Glyder2Cannon:
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallCrater
-		
+
 TripodLaser:
 	ReloadDelay: 80
 	Range: 6c0
@@ -257,8 +257,8 @@ TripodLaser:
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 40
-		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath			
-		
+		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+
 #################################################
 # Aircraft
 #################################################
@@ -271,7 +271,7 @@ StormRiderBlast:
 		Blockable: false
 		Shadow: true
 		Angle: 45
-		Palette: pips	
+		Palette: pips
 		Trail: blueballminitrail
 		ContrailLength: 5
 		Inaccuracy: 384
@@ -291,7 +291,7 @@ StormRiderBlast:
 		ExplosionPalette: apolbluealpha
 		ImpactSound: expnew13.aud
 		InvalidImpactTypes: Water
-		
+
 StormRiderBlastAA:
 	ReloadDelay: 75
 	Range: 6c512
@@ -301,7 +301,7 @@ StormRiderBlastAA:
 		Blockable: false
 		Shadow: true
 		Angle: 45
-		Palette: pips	
+		Palette: pips
 		Trail: blueballminitrail
 		ContrailLength: 5
 		Inaccuracy: 384
@@ -316,8 +316,8 @@ StormRiderBlastAA:
 		Explosions: scrinexplo1
 		ExplosionPalette: apolbluealpha
 		ImpactSound: expnew13.aud
-		InvalidImpactTypes: Water		
-		
+		InvalidImpactTypes: Water
+
 Glyder1Cannon:
 	ReloadDelay: 100
 	Range: 6c0
@@ -352,8 +352,8 @@ Glyder1Cannon:
 		ImpactSound: ssplash3.aud
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
-		SmudgeType: SmallCrater		
-		
+		SmudgeType: SmallCrater
+
 BattleshipCannon:
 	ReloadDelay: 45
 	Range: 5c768
@@ -364,7 +364,7 @@ BattleshipCannon:
 	Projectile: Bullet
 		Speed: 500
 		Image: purpbullet
-		Trail: purpbullet	
+		Trail: purpbullet
 		Inaccuracy: 1c512
 		ContrailLength: 5
 		Shadow: true
@@ -392,8 +392,8 @@ BattleshipCannon:
 		ImpactSound: ssplash3.aud
 		ValidImpactTypes: Water
 	# Warhead@4Smu: LeaveSmudge
-		# SmudgeType: MediumCrater		
-		
+		# SmudgeType: MediumCrater
+
 DestroyerCannon:
 	ReloadDelay: 200
 	Range: 16c0
@@ -405,7 +405,7 @@ DestroyerCannon:
 	Projectile: Bullet
 		Speed: 240
 		Image: destroshell
-		Trail: blueballminitrail		
+		Trail: blueballminitrail
 		Palette: pips
 		Shadow: false
 		Angle: 62
@@ -450,13 +450,13 @@ CouncilSteal:
 		Versus:
 			Concrete: 30
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
-	Warhead@4OwnerChange: ChangeOwner	
+	Warhead@4OwnerChange: ChangeOwner
 		Range: 1c512
 		Duration: 75
 		InvalidTargets: C4, MindControlInmune
 #################################################
 # Defences
-#################################################		
+#################################################
 NeedlerAcid:
 	ReloadDelay: 100
 	Range: 7c0
@@ -489,17 +489,17 @@ TractorBeam:
 	BurstDelay: 5
 	ValidTargets: Air
 	Projectile: Missile
-		Speed: 1200
+		Speed: 600
 		Image: blueball
 		Trail: blueballminitrail
-		HorizontalRateOfTurn: 25		
+		HorizontalRateOfTurn: 25
 		Shadow: true
 		Angle: 62
 		Palette: pips
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 6
-		ValidTargets: Air		
+		ValidTargets: Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@emp: GrantUpgrade
 		Range: 1c0
@@ -508,7 +508,7 @@ TractorBeam:
 		ValidTargets: Air
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
-		
+
 DronePlane:
 	ReloadDelay: 1
 	Range: 11c0
@@ -519,7 +519,7 @@ DronePlane:
 	ValidTargets: Ground, Air
 	Projectile: Missile
 		Speed: 130
-		Image: projwyverm	
+		Image: projwyverm
 		Palette: playerscrin
 		Shadow: false
 		Angle: 50
@@ -545,4 +545,4 @@ DronePlane:
 		ImpactSound: ssplash3.aud
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
-		SmudgeType: MediumCrater			
+		SmudgeType: MediumCrater

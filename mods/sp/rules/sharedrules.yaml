@@ -132,7 +132,7 @@ HARV:
 		Priority: 7
 		Bounds: 36,36
 	Harvester:
-		Capacity: 48
+		Capacity: 40
 		DeliveryBuildings: proc
 		Resources: Tiberium, BlueTiberium
 		UnloadTicksPerBale: 4
@@ -354,7 +354,7 @@ PROC:
 		Cost: 2000
 	Tooltip:
 		Name: Tiberium Refinery
-		Description: Processes raw Tiberium\ninto useable resources.\nIncompatible with scrin harvesters.
+		Description: Processes raw Tiberium\ninto usable resources.\nIncompatible with scrin harvesters.
 	Armor:
 		Type: Light
 	Buildable:
