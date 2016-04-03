@@ -448,7 +448,7 @@ BERSERKER:
 		Chance: 40
 	SelfHealing:
 		Step: 10
-		Ticks: 200
+		Delay: 200
 	Mobile:
 		Speed: 90
 		Crushes: nada
@@ -520,7 +520,7 @@ CIV3:
 		Voice: Attack
 	AutoTarget:
 	SelfHealing:
-		Ticks: 10
+		Delay: 10
 		HealIfBelow: 50
 		DamageCooldown: 200
 	WithVoxelTurret:
@@ -2120,5 +2120,5 @@ EGGS:
 		# DeathType: BulletDeath, SmallExplosionDeath, TiberiumDeath
 	SelfHealing@bird:
 		Step: -10
-		Ticks: 50
+		Delay: 50
 		HealIfBelow: 110

@@ -355,7 +355,7 @@ SCRHARV:
 	Health:
 		HP: 1000
 	SelfHealing:
-		Ticks: 10
+		Delay: 10
 		HealIfBelow: 50
 		DamageCooldown: 200
 	Armor:
@@ -873,7 +873,7 @@ SCRDESTROYER:
 		Type: Light
 	SelfHealing:
 		Step: 4
-		Ticks: 75
+		Delay: 75
 		HealIfBelow: 100
 	Armament:
 		Weapon: DestroyerCannon
@@ -975,7 +975,7 @@ SCRBATTLESHIP:
 		Type: Heavy
 	SelfHealing:
 		Step: 4
-		Ticks: 75
+		Delay: 75
 		HealIfBelow: 100
 	RevealsShroud:
 		Range: 14c0

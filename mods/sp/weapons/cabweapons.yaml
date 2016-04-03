@@ -390,8 +390,8 @@ DevourerShell:
 	Warhead@5: LeaveSmudge
 		SmudgeType: SmallCrater	
 	Warhead@nomnomnom: GrantUpgrade
-		Range: 3c0
-		Duration: 250
+		Range: 1c512
+		Duration: 400
 		Upgrades: nomnomnom
 		ValidTargets: Ground
 		ValidStances: Enemy

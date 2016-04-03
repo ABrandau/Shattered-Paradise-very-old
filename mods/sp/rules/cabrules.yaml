@@ -884,7 +884,7 @@ BASILISK:
 		Type: Light
 	SelfHealing:
 		Step: 4
-		Ticks: 75
+		Delay: 75
 		HealIfBelow: 110
 	Armament:
 		Weapon: BasiliskProton
@@ -947,7 +947,7 @@ CABPOWR:
 	# ScalePowerWithHealth:
 	SelfHealing@reactorcritical:
 		Step: -5
-		Ticks: 25
+		Delay: 25
 		HealIfBelow: 20
 	DisabledOverlay:
 	ProvidesPrerequisite@buildingname:
@@ -1398,7 +1398,7 @@ CABCENT:
 		Offset: 170,0,213
 	SelfHealing@Cabal:
 		Step: 4
-		Ticks: 75
+		Delay: 75
 		HealIfBelow: 110
 	RenderSprites:
 		Scale: 0.8
