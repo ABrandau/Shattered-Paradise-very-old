@@ -85,7 +85,7 @@ TiberiumExplosion:
 	Warhead@3Eff: CreateEffect
 		Explosions: tibexp
 		ImpactSound: expnew09.aud
-		
+
 ZombieExplosion:
 	Warhead@1Dam: SpreadDamage
 		Spread: 9
@@ -101,15 +101,15 @@ ZombieExplosion:
 		Size: 1,1
 	Warhead@3Eff: CreateEffect
 		Explosions: tibexp
-		ImpactSound: expnew09.aud		
-		
+		ImpactSound: expnew09.aud
+
 SmallDebris:
 	ReloadDelay: 60
 	Range: 4c0
 	Report:
 	Projectile: Bullet
 		Speed: 50, 125
-		Angle: 91, 264
+		Angle: 91, 255
 		Image: dbrissm
 		Sequences: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 		Shadow: true
@@ -120,7 +120,7 @@ LargeDebris:
 	Report:
 	Projectile: Bullet
 		Speed: 50, 125
-		Angle: 91, 264
+		Angle: 91, 255
 		Image: dbrislg
 		Sequences: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 		Shadow: true
