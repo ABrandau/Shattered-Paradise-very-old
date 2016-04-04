@@ -864,7 +864,7 @@
 	WithVoxelBody:
 	# AmmoPool:
 		# SelfReloads: true
-		# SelfReloadTicks: 3000
+		# SelfReloadDelay: 3000
 
 ^Helicopter:
 	Inherits: ^Aircraft
