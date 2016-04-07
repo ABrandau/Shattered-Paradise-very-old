@@ -361,7 +361,7 @@ DEATHCLAW:
 	Health:
 		HP: 800
 	Armor:
-		Type: Heavy
+		Type: Light
 	WithInfantryBody:
 		IdleSequences: idle2, idle3
 	Mobile:

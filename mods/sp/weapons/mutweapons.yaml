@@ -375,14 +375,14 @@ BerserkerBlow:
 		SmudgeType: SmallCrater
 
 WolfBlow:
-	ReloadDelay: 80
+	ReloadDelay: 60
 	Range: 1c0
 	Report: fiend2.aud
 	Projectile: Bullet
 		Speed: 5c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 70
+		Damage: 60
 		Versus:
 			None: 100
 			Wood: 80
@@ -390,14 +390,14 @@ WolfBlow:
 			Heavy: 45
 			Concrete: 5
 		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath, TiberiumDeath
-	Warhead@emp: GrantUpgrade
-		Range: 300
-		Duration: 20
-		Upgrades: empdisable, notmobile
-	Warhead@emp: GrantUpgrade
-		Range: 300
-		Duration: 20
-		Upgrades: WebDisable			
+	# Warhead@emp: GrantUpgrade
+		# Range: 300
+		# Duration: 20
+		# Upgrades: empdisable, notmobile
+	# Warhead@emp: GrantUpgrade
+		# Range: 300
+		# Duration: 20
+		# Upgrades: WebDisable			
 
 ###############################################################		
 # Vehicle
