@@ -376,13 +376,13 @@ BerserkerBlow:
 
 WolfBlow:
 	ReloadDelay: 80
-	Range: 1c512
+	Range: 1c0
 	Report: fiend2.aud
 	Projectile: Bullet
 		Speed: 5c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 40
+		Damage: 70
 		Versus:
 			None: 100
 			Wood: 80

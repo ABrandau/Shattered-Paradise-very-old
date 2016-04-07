@@ -428,8 +428,8 @@ psyker:
 		ShadowStart: 190
 	die6: electro
 		Length: *
-	icon: psykericon	
-	
+	icon: psykericon
+
 wolf:
 	Defaults:
 		Tick: 80
@@ -490,7 +490,67 @@ wolf:
 		Start: 381
 		Length: 9
 		ShadowStart: 771
-	icon: wolficon		
+	icon: wolficon
+
+deathclaw:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 280
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		ShadowStart: 288
+	shoot:
+		Start: 127
+		Length: 12
+		Facings: 8
+		Tick: 45
+		ShadowStart: 407
+	idle1:
+		Start: 72
+		Length: 22
+		ShadowStart: 352
+	idle2:
+		Start: 94
+		Length: 33
+		ShadowStart: 374
+	idle3:
+		Start: 249
+		Length: 20
+		ShadowStart: 529
+		Tick: 120
+	die1:
+		Start: 237
+		Length: 6
+		ShadowStart: 517
+	die2:
+		Start: 243
+		Length: 5
+		ShadowStart: 523
+	die3:
+		Start: 243
+		Length: 5
+		ShadowStart: 523
+	die4:
+		Start: 243
+		Length: 5
+		ShadowStart: 523
+	die-crushed:
+		Start: 243
+		Length: 5
+		ShadowStart: 523
+	die5:
+		Start: 243
+		Length: 5
+		ShadowStart: 523
+	die6:
+		Start: 243
+		Length: 5
+		ShadowStart: 523
+	icon: deathclawicon
 ##########################################################
 # Vehicles
 ##########################################################		

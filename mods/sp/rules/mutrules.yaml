@@ -335,6 +335,43 @@ WOLF:
 		Voice: Attack
 	WithInfantryBody:
 		AttackSequence: shoot
+
+DEATHCLAW:
+	Inherits: ^Mutant
+	Inherits@1: ^MutRender
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 27
+		Prerequisites: ~muweap, mustable, muhall
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Tiberium Chupacabra
+		Description: Tiberian Beast, melee,\ntanky and deadly.\n  Strong vs Ground units\n  Weak vs Things that are far away.
+	Voiced:
+		VoiceSet: Fiend
+	SpawnActorOnDeath@conversion:
+		Actor: cybdog
+		Probability: 100
+		OwnerType: Killer
+		DeathType: CabalDeathInfantry
+		RequiresLobbyCreeps: true
+	AutoTarget:
+		ScanRadius: 5
+	Health:
+		HP: 800
+	Armor:
+		Type: Heavy
+	WithInfantryBody:
+		IdleSequences: idle2, idle3
+	Mobile:
+		Speed: 85
+		SharesCell: false
+	Armament@PRIMARY:
+		Weapon: WolfBlow
+		LocalOffset: 128,0,640
+	AttackFrontal:
+		Voice: Attack
 ################################################
 # Vehicles
 ################################################
