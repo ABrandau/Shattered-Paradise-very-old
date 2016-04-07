@@ -618,7 +618,7 @@ GUARDIAN:
 		PipCount: 0
 		PipType: Ammo
 		SelfReloads: true
-		SelfReloadTicks: 20
+		SelfReloadDelay: 20
 		PipTypeEmpty: AmmoEmpty
 	AutoTarget:
 	-RenderVoxels:

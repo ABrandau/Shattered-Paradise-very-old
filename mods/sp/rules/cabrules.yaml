@@ -606,7 +606,7 @@ ECM:
 		Ammo: 5
 		PipCount: 5
 		PipType: Ammo
-		SelfReloadTicks: 300
+		SelfReloadDelay: 250
 		SelfReloads: true
 		PipTypeEmpty: AmmoEmpty
 	WithVoxelBody:
@@ -790,7 +790,7 @@ WASP:
 		Ammo: 2
 		PipCount: 2
 		SelfReloads: true
-		SelfReloadTicks: 250
+		SelfReloadDelay: 250
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
 		Name: Rocket

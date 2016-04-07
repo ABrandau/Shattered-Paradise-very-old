@@ -646,7 +646,7 @@ MUTBIRD:
 		Ammo: 3
 		PipCount: 3
 		PipType: Ammo
-		SelfReloadTicks: 600
+		SelfReloadDelay: 600
 		SelfReloads: false
 		PipTypeEmpty: AmmoEmpty
 	-RenderVoxels:
