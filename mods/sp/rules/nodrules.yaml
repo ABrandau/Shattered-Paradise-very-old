@@ -467,6 +467,7 @@ ARMH:
 		Voice: Build
 	AnnounceOnKill:
 		Voice: Kill
+		Interval: 5
 
 STNK:
 	Inherits: ^VoxelTank
