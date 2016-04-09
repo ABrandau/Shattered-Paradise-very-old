@@ -312,8 +312,8 @@ CABALMONEYDUMMY:
 	Selectable:
 		Bounds: 1,1
 	SelfHealing:
-		Step: -5
-		HealIfBelow: 110
+		Step: -10
+		HealIfBelow: 200
 	RenderSprites:
 		Image: blackhanddummy
 	Health:
