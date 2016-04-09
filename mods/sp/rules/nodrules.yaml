@@ -36,14 +36,17 @@ CRUSADER:
 	Valued:
 		Cost: 210
 	Tooltip:
-		Name: Crusader Torpedo Infantry
-		Description: Anti Armour Infantry, equiped with a Rocket launcher\nbackpack, fires many rockets per turn but has a big\nreload time.\nCannot target infantry.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry.
+		Name: Crusader
+		Description: Anti Armour Infantry, equiped with a Rocket launcher\nbackpack, fires many rockets per turn but has a big\nreload time.\nCannot lock on infantry.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry.
 	Health:
 		HP: 110
 	Mobile:
 		Speed: 65
 	Armament@PRIMARY:
 		Weapon: CrusaderBazooka
+		LocalOffset: 0,0,600
+	Armament@Secondary:
+		Weapon: CrusaderBazookaInf
 		LocalOffset: 0,0,600
 	AttackFrontal:
 		Voice: Attack
@@ -467,7 +470,7 @@ ARMH:
 		Voice: Build
 	AnnounceOnKill:
 		Voice: Kill
-		Interval: 5
+		Interval: 100
 
 STNK:
 	Inherits: ^VoxelTank
@@ -510,7 +513,7 @@ STNK:
 	-MustBeDestroyed:
 	Voiced:
 		VoiceSet: StealthTankVO
-		Volume: 5
+		Volume: 7
 
 ##########################################################
 # Aircraft
