@@ -2,6 +2,14 @@
 
 
 [2016 - 04 - 08]
+Fixed Scrin tractor beam aiming issues.
+Artisans can now store up to 8 turrets and start empty when built.
+Corrected cyborg drone voices.
+Stasis chamber changes: cost 600 -> 350, hp 500 -> 250
+Reclaimer now requires stasis chamber
+Floater changes: cost 400 -> 500
+Battleship changes: damage 60 -> 40 hp: 800 -> 900
+Aircraft will no longer self repair in the middle of combat.
 Crusaders can now attack infantry, but with a giant innacuracy debuff.
 Reduced fall explosion damage from small aircraft by half.
 

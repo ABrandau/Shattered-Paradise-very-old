@@ -12,6 +12,7 @@ shark:
 	Tooltip:
 		Name: Razorshark
 		Description: Anti-infantry creature, fast and weak, kills infantry instantly.\n  Strong vs Infantry\n  Weak vs Everything else
+	Selectable:
 		Class: Shark
 	GivesExperience:
 		Experience: 110
@@ -223,9 +224,9 @@ FLOAT:
 	Selectable:
 		Class: FLoat
 	Valued:
-		Cost: 1200
+		Cost: 1500
 	GivesExperience:
-		Experience: 400
+		Experience: 500
 	-Crushable:
 	Tooltip:
 		Name: Floater
@@ -903,7 +904,7 @@ SCRTRANS:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Transport
+		Name: Scrin Transport
 		Description: Scrin equivalent to an APC.\nTransports infantry around the field.\n  Unarmed
 	Buildable:
 		Queue: Air
@@ -970,7 +971,7 @@ SCRBATTLESHIP:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 800
+		HP: 900
 	Armor:
 		Type: Heavy
 	SelfHealing:
@@ -1120,7 +1121,7 @@ SCRPOWR:
 		BuildPaletteOrder: 0
 		Prerequisites: ~structures.scr
 	Valued:
-		Cost: 550
+		Cost: 650
 	Tooltip:
 		Name: Scrin Leech
 		Description: Provides power for other structures.

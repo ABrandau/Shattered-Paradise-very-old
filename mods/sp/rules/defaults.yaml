@@ -646,6 +646,8 @@
 	-WithDeathAnimation@energy:
 	-SpawnActorOnDeath@conversion:
 	-PoisonedByTiberium:
+	Voiced:
+		VoiceSet: Limpet
 	-Crushable:
 
 ^CivilianInfantry:
@@ -1297,5 +1299,6 @@
 ^AircraftSelfHeal:
 	SelfHealing@Cabal:
 		Step: 4
-		Delay: 75
+		Delay: 100
 		HealIfBelow: 75
+		DamageCooldown: 100
