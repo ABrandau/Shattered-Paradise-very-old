@@ -466,11 +466,6 @@ ARMH:
 	Voiced:
 		VoiceSet: BeamCannonVO
 		Volume: 3
-	AnnounceOnBuild:
-		Voice: Build
-	AnnounceOnKill:
-		Voice: Kill
-		Interval: 100
 
 STNK:
 	Inherits: ^VoxelTank
