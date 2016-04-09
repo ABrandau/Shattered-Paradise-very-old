@@ -2,6 +2,7 @@
 
 
 [2016 - 04 - 08]
+Crusaders can now attack infantry, but with a giant innacuracy debuff.
 Reduced fall explosion damage from small aircraft by half.
 
 [2016 - 04 - 08]
