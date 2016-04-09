@@ -408,7 +408,7 @@ CRAB:
 	Targetable:
 		TargetTypes: Infantry, Ground
 	Armament:
-		Weapon: WarriorAcid
+		Weapon: WolfAcid
 	WithInfantryBody:
 		AttackSequence: shoot
 		IdleSequences: Idle1, Idle2
@@ -459,7 +459,7 @@ BERSERKER:
 	Armament:
 		Weapon: BerserkerBlow
 	AutoTarget:
-		ScanRadius: 5
+		ScanRadius: 8
 	WithInfantryBody:
 		AttackSequence: shoot
 		IdleSequences: Idle1, Idle2, Idle3

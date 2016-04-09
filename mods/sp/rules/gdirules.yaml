@@ -395,7 +395,7 @@ HMEC:
 	Health:
 		HP: 800
 	SelfHealing:
-		Ticks: 10
+		Delay: 10
 		HealIfBelow: 110
 	Armor:
 		Type: Heavy
@@ -574,7 +574,7 @@ GUARDIAN:
 		Type: CenterPosition
 	SelfHealing:
 		Step: 10
-		Ticks: 300
+		Delay: 300
 		HealIfBelow: 110
 	SpeedMultiplier:
 		UpgradeTypes: undeployed

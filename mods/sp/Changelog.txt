@@ -1,5 +1,13 @@
 ﻿YEAR - MONTH - DAY
 
+[2016 - 04 - 08]
+Fixed some sequences
+Nerfed economy: Harvester capacity: 40 -> 30
+Reworked mutant Bull and forgotten knight
+Added Deathclaw / Chupacabra
+Removed Battlefortress.
+Reduced IFV cargo capacity to 2 from 4.
+
 [2016 - 04 - 01]
 Unit Balance Changes
 	Devourer: Damage: 10 -> 40

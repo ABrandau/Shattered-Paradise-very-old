@@ -43,7 +43,7 @@ shark:
 	AttackMove:
 		Voice: Move
 	AutoTarget:
-		ScanRadius: 5
+		ScanRadius: 8
 		InitialStance: AttackAnything
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark
@@ -329,7 +329,7 @@ SCRHARV:
 	Targetable:
 		TargetTypes: Ground, Vehicle, Repair, MindControlInmune
 	Harvester:
-		Capacity: 36
+		Capacity: 30
 		Resources: Tiberium, BlueTiberium
 		DeliveryBuildings: scrproc
 		UnloadTicksPerBale: 4

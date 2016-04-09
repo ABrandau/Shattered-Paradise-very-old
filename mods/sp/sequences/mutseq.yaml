@@ -292,7 +292,7 @@ awarrior:
 		ShadowStart: 474
 	idle2:
 		Start: 135
-		Length: 20
+		Length: 19
 		ShadowStart: 529
 	die1:
 		Start: 219
@@ -515,7 +515,7 @@ deathclaw:
 		ShadowStart: 352
 	idle2:
 		Start: 94
-		Length: 33
+		Length: 32
 		ShadowStart: 374
 	idle3:
 		Start: 249

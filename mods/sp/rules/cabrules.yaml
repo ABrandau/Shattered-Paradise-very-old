@@ -154,7 +154,7 @@ PDRONE:
 	WithInfantryBody:
 		AttackSequence: shoot
 	AutoTarget:
-		ScanRadius: 5
+		ScanRadius: 8
 	Armament:
 		Weapon: ProcessingHuman
 	AttackFrontal:
@@ -564,7 +564,7 @@ GRINDER:
 		Type: Light
 	AttackFrontal:
 	AutoTarget:
-		ScanRadius: 5
+		ScanRadius: 8
 	Armament:
 		Weapon: TermitaGrinder
 	RenderVoxels:

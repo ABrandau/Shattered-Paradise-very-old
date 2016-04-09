@@ -515,6 +515,20 @@
 		InternalOwner: Creeps
 		DeathType: TiberiumDeath
 		RequiresLobbyCreeps: true
+	SpawnActorOnDeath@tiberium3:
+		Actor: zombie
+		Probability: 40
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		DeathType: TiberiumDeathStrong
+		RequiresLobbyCreeps: true
+	SpawnActorOnDeath@tiberium4:
+		Actor: VISC_LRG
+		Probability: 40
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		DeathType: TiberiumDeathStrong
+		RequiresLobbyCreeps: true
 	SpawnActorOnDeath@conversion:
 		Actor: worker
 		Probability: 80
@@ -705,14 +719,14 @@
 		Probability: 10
 		OwnerType: InternalName
 		InternalOwner: Creeps
-		DeathType: TiberiumDeath
+		DeathType: TiberiumDeath, TiberiumDeathStrong
 		RequiresLobbyCreeps: true
 	SpawnActorOnDeath@berserk:
 		Actor: berserker
 		Probability: 1
 		OwnerType: InternalName
 		InternalOwner: Creeps
-		DeathType: TiberiumDeath
+		DeathType: TiberiumDeath, TiberiumDeathStrong
 		RequiresLobbyCreeps: true
 	SpawnActorOnDeath@scrmine:
 		Actor: scrmine

@@ -129,7 +129,7 @@ grenadier:
 		ShadowStart: 732
 	prone-shoot:
 		Start: 358
-		Length: 6
+		Length: 7
 		Facings: 8
 		ShadowStart: 788
 	standup-0:
@@ -324,7 +324,7 @@ eagleguard:
 		ShadowStart: 743
 	die3: # TODO: copy-paste of die2
 		Start: 311
-		Length: 15
+		Length: 11
 		ShadowStart: 743
 	die4: s_bang34
 		Length: *		
