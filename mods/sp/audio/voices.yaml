@@ -251,9 +251,9 @@ BeamCannonVO:
 		Move: armh0008, armh0009, armh0010, armh0011, armh0012, armh0013, armh0014
 		Attack: armh0015, armh0016, armh0017, armh0018, armh0019, armh0020, armh0021
 		Action: armh0031, armh0032
+		Die: armh0033, armh0034
 		Kill: armh0022, armh0023, armh0024, armh0025, armh0026, armh0027, armh0028
 		Build: armh0029, armh0030
-		Die: armh0033, armh0034
 
 StealthTankVO:
 	Voices:
@@ -261,7 +261,7 @@ StealthTankVO:
 		Move: stnk0006, stnk0007, stnk0008, stnk0009, stnk0010
 		Attack: stnk0011, stnk0012, stnk0013, stnk0014, stnk0015
 		Action: stnk0011, stnk0012, stnk0013, stnk0014, stnk0015
-		Die: stnk0016, stnk0017, stnk00118
+		Die: stnk0016, stnk0017, stnk0018
 ######################################################################
 #Mutant Custom
 ######################################################################
