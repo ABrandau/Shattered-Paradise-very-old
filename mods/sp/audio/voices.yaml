@@ -247,13 +247,13 @@ HumanHarvesterVO:
 ######################################################################
 BeamCannonVO:
 	Voices:
-		Select: armh0008, armh0009, armh0010, armh0011
-		Move: armh0004, armh0005, armh0006, armh0007
-		Attack: armh0000, armh0001, armh0002, armh0003
-		Action: armh0000, armh0001, armh0002, armh0003
-		Kill:
-		Build:
-		Die:
+		Select: armh0001, armh0002, armh0003, armh0004, armh0005, armh0006, armh0007
+		Move: armh0008, armh0009, armh0010, armh0011, armh0012, armh0013, armh0014
+		Attack: armh0015, armh0016, armh0017, armh0018, armh0019, armh0020, armh0021
+		Action: armh0031, armh0032
+		Kill: armh0022, armh0023, armh0024, armh0025, armh0026, armh0027, armh0028
+		Build: armh0029, armh0030
+		Die: armh0033, armh0034
 
 StealthTankVO:
 	Voices:
