@@ -461,11 +461,16 @@ ARMH:
 		Weapon: BCLazor
 		LocalOffset: 300,0,500
 	AttackFrontal:
-		Voice: Attack
+		Voice: Attackst re
 	AutoTarget:
 	Voiced:
 		VoiceSet: BeamCannonVO
 		Volume: 3
+	AnnounceOnBuildAS:
+		Voice: Build
+	AnnounceOnKillAS:
+		Voice: Kill
+		Interval: 1000
 
 STNK:
 	Inherits: ^VoxelTank
