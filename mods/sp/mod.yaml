@@ -161,7 +161,7 @@ Assemblies:
 	cnc|OpenRA.Mods.Cnc.dll
 	ts|OpenRA.Mods.TS.dll
 	d2k|OpenRA.Mods.D2k.dll
-	sp|OpenRA.Mods.AS.dll
+	as|OpenRA.Mods.AS.dll
 
 ChromeLayout:
 	ra|chrome/ingame.yaml
