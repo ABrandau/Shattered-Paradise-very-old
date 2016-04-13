@@ -104,8 +104,8 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>mkdir "$(SolutionDir)mods/as/"
-copy "$(TargetPath)" "$(SolutionDir)mods/as/"
+    <PostBuildEvent>mkdir "$(SolutionDir)mods/sp/"
+copy "$(TargetPath)" "$(SolutionDir)mods/sp/"
 cd "$(SolutionDir)"</PostBuildEvent>
   </PropertyGroup>
 </Project>
