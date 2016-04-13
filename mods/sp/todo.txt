@@ -39,7 +39,6 @@ Gas Clouds.
 Enable Forgotten MRLS to spawn gas clouds.
 Make ignores orders upgradable.
 Make chronoshiftable upgradable.
-Wait for Announce trait to be expanded upon.
 
 [Knowledge]
 Figure out how volume control works.

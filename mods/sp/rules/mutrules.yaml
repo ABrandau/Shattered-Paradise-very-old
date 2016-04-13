@@ -341,7 +341,7 @@ DEATHCLAW:
 		Cost: 1100
 	Tooltip:
 		Name: Ravager
-		Description: Tiberian melee Beast, tanky and deadly.\n  Strong vs Ground units\n  Weak vs Things that are far away.
+		Description: Keeper's ex-girlfriend.\n  Strong vs Ground Units\n  Weak vs Ranged Attacks.
 	Voiced:
 		VoiceSet: Fiend
 	SpawnActorOnDeath@conversion:

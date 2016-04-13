@@ -1,5 +1,9 @@
 YEAR - MONTH - DAY
-
+[2016 - 04 - 13]
+New Code:
+	New mod code thanks to Graion.
+AI Updates:
+	Improved AI’s use of air and Mutants can now build Ravagers.
 
 [2016 - 04 - 09]
 Bug Fixes:

@@ -468,9 +468,11 @@ ARMH:
 		Volume: 3
 	AnnounceOnBuildAS:
 		Voice: Build
+		OnlyToOwner: True
 	AnnounceOnKillAS:
 		Voice: Kill
 		Interval: 1000
+		OnlyToOwner: True
 
 STNK:
 	Inherits: ^VoxelTank
