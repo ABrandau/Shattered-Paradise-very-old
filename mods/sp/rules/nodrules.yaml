@@ -461,7 +461,7 @@ ARMH:
 		Weapon: BCLazor
 		LocalOffset: 300,0,500
 	AttackFrontal:
-		Voice: Attackst re
+		Voice: Attack
 	AutoTarget:
 	Voiced:
 		VoiceSet: BeamCannonVO
