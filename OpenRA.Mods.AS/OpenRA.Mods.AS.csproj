@@ -25,7 +25,7 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <DebugType>full</DebugType>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -104,8 +104,8 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>mkdir "$(SolutionDir)mods/sp/"
-copy "$(TargetPath)" "$(SolutionDir)mods/sp/"
+    <PostBuildEvent>mkdir "$(SolutionDir)mods/as/"
+copy "$(TargetPath)" "$(SolutionDir)mods/as/"
 cd "$(SolutionDir)"</PostBuildEvent>
   </PropertyGroup>
 </Project>
