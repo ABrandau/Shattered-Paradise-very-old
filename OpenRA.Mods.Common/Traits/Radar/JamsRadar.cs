@@ -9,23 +9,16 @@
  */
 #endregion
 
-using System.Runtime.InteropServices;
+using OpenRA.Traits;
 
-namespace OpenRA.Graphics
+namespace OpenRA.Mods.Common.Traits.Radar
 {
-	[StructLayout(LayoutKind.Sequential)]
-	public struct Vertex
+	[Desc("When an actor with this trait is in range of an actor with ProvidesRadar, it will temporarily disable the radar minimap for the enemy player.")]
+	public class JamsRadarInfo : TraitInfo<JamsRadar>
 	{
-		public readonly float X, Y, Z, U, V, P, C;
-
-		public Vertex(float3 xyz, float u, float v, float p, float c)
-			: this(xyz.X, xyz.Y, xyz.Z, u, v, p, c) { }
-
-		public Vertex(float x, float y, float z, float u, float v, float p, float c)
-		{
-			X = x; Y = y; Z = z;
-			U = u; V = v;
-			P = p; C = c;
-		}
+		[Desc("Range for jamming.")]
+		public readonly WDist Range = WDist.Zero;
 	}
+
+	public class JamsRadar { }
 }
