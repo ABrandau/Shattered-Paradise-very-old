@@ -410,6 +410,7 @@ drache.falling:
 scrharv:
 	idle:
 		Facings: -32
+		ShadowStart: 33
 	dock:
 		Start: 12
 	dock-loop:
@@ -445,6 +446,7 @@ scrscorpion:
 scrmbt:
 	idle:
 		Facings: 32
+		ShadowStart: 64
 	turret:
 		Start: 32
 		Facings: 32
@@ -481,6 +483,7 @@ scrdronec:
 scrglyder2:
 	idle: scrglyder
 		Start: 32
+		ShadowStart: 96
 		Facings: -32
 	emp-overlay: emp_fx01
 		Length: *

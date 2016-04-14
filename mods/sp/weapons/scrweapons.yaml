@@ -130,7 +130,7 @@ ScorpAcid:
 	BurstDelay: 4
 	Warhead@1Dam: SpreadDamage
 		Spread: 80
-		Damage: 8
+		Damage: 13
 		Versus:
 			None: 200
 			Wood: 100
@@ -193,7 +193,7 @@ DronecPlane:
 		Shadow: false
 		Angle: 220
 	Warhead@1Dam: SpreadDamage
-		Spread: 1c0
+		Spread: 250
 		Damage: 50
 		ValidTargets: Ground, Air
 		Versus:
@@ -363,8 +363,8 @@ BattleshipCannon:
 	ValidTargets: Ground, Air, water
 	Projectile: Bullet
 		Speed: 500
-		Image: purpbullet
-		Trail: purpbullet
+		Image: purpBullet
+		Trail: purpBullet
 		Inaccuracy: 1c512
 		ContrailLength: 5
 		Shadow: true

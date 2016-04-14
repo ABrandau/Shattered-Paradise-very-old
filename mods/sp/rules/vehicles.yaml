@@ -952,7 +952,6 @@ SCRHARV:
 		HarvestVoice: Attack
 		DeliverVoice: Move
 	Hovers:
-		OffsetModifier: -20
 	Mobile:
 		Speed: 74
 		Crushes: wall, crate
@@ -983,7 +982,6 @@ SCRHARV:
 		VisualBounds: 36,36
 	RenderSprites:
 	WithDockingAnimation:
-	WithShadow:
 	WithFacingSpriteBody:
 	BodyOrientation:
 		QuantizedFacings: 32
@@ -1014,7 +1012,7 @@ SCRSCORPION:
 	AutoTarget:
 	Armament@PRIMARY:
 		Weapon: ScorpAcid
-		LocalOffset: 100,80,200
+		LocalOffset: 100,0,200
 	FirepowerMultiplier@rar:
 		Modifier: 1
 		UpgradeTypes: ScorpBuffer
@@ -1028,7 +1026,7 @@ SCRSCORPION:
 		Sequence: stand
 	WithInfantryBody:
 	Selectable:
-		Bounds: 20, 32, 0, -8
+		Bounds: 50, 32, 0, -8
 
 SCRMBT:
 	Inherits: ^ScrinTank
@@ -1058,7 +1056,6 @@ SCRMBT:
 			BlueTiberium: 80
 			Veins: 80
 	Hovers:
-	WithShadow:
 	Turreted:
 		TurnSpeed: 7
 	Armament:
@@ -1107,7 +1104,6 @@ SCRGLYDER2:
 	Transforms:
 		IntoActor: scrglyder1
 	Hovers:
-	WithShadow:
 	Armament:
 		Weapon: Glyder2Cannon
 		Recoil: 85

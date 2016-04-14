@@ -752,7 +752,7 @@ SCRGLYDER1:
 		Type: Light
 	Armament:
 		Weapon: Glyder1Cannon
-		LocalOffset: -200,0,-100
+		LocalOffset: 0,0,-100
 	AttackHeli:
 		FacingTolerance: 20
 		Voice: Attack

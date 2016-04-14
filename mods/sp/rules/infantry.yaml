@@ -584,7 +584,7 @@ AWARRIOR:
 	Health:
 		HP: 150
 	Mobile:
-		Speed: 75
+		Speed: 68
 	-SpawnActorOnDeath@conversion:
 	Armament@PRIMARY:
 		Weapon: KnightGun

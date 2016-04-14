@@ -1710,7 +1710,7 @@ scrproc:
 		Range: 6c0
 	Refinery:
 		DockAngle: 160
-		DockOffset: 2,1
+		DockOffset: 3,1
 	StoresResources:
 		PipColor: Green
 		PipCount: 15
@@ -1763,7 +1763,7 @@ SCRWEAP:
 	RevealsShroud:
 		Range: 6c0
 	Exit@1:
-		SpawnOffset: -384,-384,0
+		SpawnOffset: 0,0,0 #-384,-384,0
 		ExitCell: 1,1
 		ExitDelay: 5
 	Production:
