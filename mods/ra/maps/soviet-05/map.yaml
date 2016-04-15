@@ -1,4 +1,4 @@
-MapFormat: 10
+MapFormat: 11
 
 RequiresMod: ra
 
@@ -14,7 +14,7 @@ Bounds: 20,42,90,50
 
 Visibility: MissionSelector
 
-Type: Campaign
+Categories: Campaign
 
 LockPreview: True
 
@@ -580,9 +580,6 @@ Actors:
 		Owner: Neutral
 	ReinfRoadPoint: waypoint
 		Location: 52,42
-		Owner: Neutral
-	NWIdlePoint: waypoint
-		Location: 38,42
 		Owner: Neutral
 	EIslandPoint: waypoint
 		Location: 51,58

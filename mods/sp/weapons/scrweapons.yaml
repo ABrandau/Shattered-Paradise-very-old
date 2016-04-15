@@ -226,7 +226,7 @@ Glyder2Cannon:
 		Image: torpedo
 		Inaccuracy: 1c0
 		Shadow: true
-		Palette: pips
+		Palette: apblue
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c512
 		Damage: 20
@@ -329,7 +329,7 @@ Glyder1Cannon:
 		Image: torpedo
 		Inaccuracy: 1c0
 		Shadow: true
-		Palette: pips
+		Palette: apblue
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c512
 		Damage: 18
@@ -372,7 +372,7 @@ BattleshipCannon:
 		Angle: 15
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 60
+		Damage: 40
 		ValidTargets: Ground, Air, water
 		Versus:
 			None: 150
@@ -488,13 +488,11 @@ TractorBeam:
 	Burst: 1
 	BurstDelay: 5
 	ValidTargets: Air
-	Projectile: Missile
-		Speed: 600
+	Projectile: Bullet
+		Speed: 100c0
 		Image: blueball
 		Trail: blueballminitrail
-		HorizontalRateOfTurn: 25
 		Shadow: true
-		Angle: 62
 		Palette: pips
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
@@ -506,8 +504,6 @@ TractorBeam:
 		Duration: 30
 		Upgrades: tractorstop
 		ValidTargets: Air
-	Warhead@4Smu: LeaveSmudge
-		SmudgeType: MediumCrater
 
 DronePlane:
 	ReloadDelay: 1

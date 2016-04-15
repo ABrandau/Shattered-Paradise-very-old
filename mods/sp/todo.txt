@@ -1,4 +1,4 @@
-﻿[Graphical Issues]
+[Graphical Issues]
 Scrin:
 	Add more scrin explosions.
 	Add more scrin muzzle effects.

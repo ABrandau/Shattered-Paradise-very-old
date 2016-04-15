@@ -132,7 +132,7 @@ HARV:
 		Priority: 7
 		Bounds: 36,36
 	Harvester:
-		Capacity: 40
+		Capacity: 30
 		DeliveryBuildings: proc
 		Resources: Tiberium, BlueTiberium
 		UnloadTicksPerBale: 4
@@ -157,8 +157,8 @@ HARV:
 	Targetable:
 		TargetTypes: Ground, Vehicle, Repair, MindControlInmune
 	SelfHealing:
-		Ticks: 10
-		HealIfBelow: 50%
+		Delay: 10
+		HealIfBelow: 50
 		DamageCooldown: 200
 	-Capturable:
 	Armor:

@@ -159,8 +159,8 @@ PBOX:
 		Actor: 5TNK.Husk
 	SelfHealing:
 		Step: 1
-		Ticks: 1
-		HealIfBelow: 100%
+		Delay: 1
+		HealIfBelow: 100
 		DamageCooldown: 150
 	Selectable:
 		Bounds: 44,38,0,-4

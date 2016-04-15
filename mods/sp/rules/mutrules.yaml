@@ -18,7 +18,7 @@ MARAUDER:
 	Health:
 		HP: 110
 	AutoTarget:
-		ScanRadius: 5
+		ScanRadius: 8
 	Mobile:
 		Speed: 55
 	Armament@PRIMARY:
@@ -118,7 +118,7 @@ E2:
 	Captures:
 		CaptureTypes: building
 	AutoTarget:
-		ScanRadius: 5
+		ScanRadius: 8
 	-GainsExperience:
 	RenderSprites:
 	WithInfantryBody:
@@ -246,11 +246,11 @@ AWARRIOR:
 		Speed: 75
 	-SpawnActorOnDeath@conversion:
 	Armament@PRIMARY:
-		Weapon: WarriorAcid
+		Weapon: KnightGun
 		Name: OnFoot
 		LocalOffset: 128,0,400
 	Armament@GARRISON:
-		Weapon: GWarriorAcid
+		Weapon: KnightGun
 		LocalOffset: 128,0,400
 	AttackFrontal:
 		Voice: Attack
@@ -295,12 +295,12 @@ WOLF:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 27
-		Prerequisites: ~muweap, mustable
+		Prerequisites: ~muweap, mustable, muradr
 	Valued:
-		Cost: 600
+		Cost: 800
 	Tooltip:
 		Name: Tiberian Bull
-		Description: Tiberian Beast, it emits tiberium radiation\naffecting nearby units.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
+		Description: Tiberian Beast, expels tiberium toxins\naffecting nearby units.\nIncreases the strength of nearby infantry.\n  Strong vs none\n  Weak vs Infantry, Aircraft
 	Voiced:
 		VoiceSet: Fiend
 	SpawnActorOnDeath@conversion:
@@ -309,18 +309,12 @@ WOLF:
 		OwnerType: Killer
 		DeathType: CabalDeathInfantry
 		RequiresLobbyCreeps: true
-	WithRangeCircle:
-		Range: 6c0
-		Type: cloakgenerator
 	UpgradeActorsNear@lobo:
 		Upgrades: ForgInfantryBuff
-		Range: 6c0
-	UpgradeActorsNear@qlo:
-		Upgrades: ForgInfantrydeBuff
-		Range: 6c0
-		ValidStances: Enemy
+		Range: 4c0
+	-Crushable:
 	AutoTarget:
-		ScanRadius: 5
+		ScanRadius: 8
 	Health:
 		HP: 300
 	Armor:
@@ -329,12 +323,50 @@ WOLF:
 		Speed: 70
 		SharesCell: false
 	Armament@PRIMARY:
-		Weapon: WolfBlow
+		Weapon: BullAcid
 		LocalOffset: 128,0,640
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:
 		AttackSequence: shoot
+
+DEATHCLAW:
+	Inherits: ^Mutant
+	Inherits@1: ^MutRender
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 31
+		Prerequisites: ~muweap, mustable, muhall
+	Valued:
+		Cost: 1100
+	Tooltip:
+		Name: Ravager
+		Description: Keeper's ex-girlfriend.\n  Strong vs Ground Units\n  Weak vs Ranged Attacks.
+	Voiced:
+		VoiceSet: Fiend
+	SpawnActorOnDeath@conversion:
+		Actor: cybdog
+		Probability: 100
+		OwnerType: Killer
+		DeathType: CabalDeathInfantry
+		RequiresLobbyCreeps: true
+	AutoTarget:
+		ScanRadius: 8
+	Health:
+		HP: 600
+	Armor:
+		Type: Light
+	WithInfantryBody:
+		IdleSequences: idle2, idle3
+	-Crushable:
+	Mobile:
+		Speed: 85
+		SharesCell: false
+	Armament@PRIMARY:
+		Weapon: DeathclawBlow
+		LocalOffset: 128,0,640
+	AttackFrontal:
+		Voice: Attack
 ################################################
 # Vehicles
 ################################################
@@ -365,8 +397,8 @@ MUTAPC:
 		LocalOffset: -50,0,410
 	Cargo:
 		Types: Infantry
-		MaxWeight: 3
-		PipCount: 3
+		MaxWeight: 2
+		PipCount: 2
 		UnloadVoice: Unload
 		LoadingUpgrades: notmobile
 	AttackTurreted:
@@ -432,7 +464,7 @@ MUTQUAD:
 		TargetTypes: Ground, Vehicle, Repair, Disruptor
 	Mobile:
 		TurnSpeed: 7
-		Speed: 90
+		Speed: 75
 		Crushes: wall, crate, infantry
 	Health:
 		HP: 300
@@ -467,8 +499,8 @@ MLRS:
 		Description: Light artillery outfitted with \nTiberium fueled rockets, deals damage\non a wide area.\n  Strong vs Infantry, Buildings\n  Weak vs Armored Targets.
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 28
-		Prerequisites: ~muweap, muradr
+		BuildPaletteOrder: 31
+		Prerequisites: ~muweap, muhall
 	Targetable:
 		TargetTypes: Ground, Vehicle, Repair, Disruptor
 	Mobile:
@@ -537,10 +569,10 @@ FORTRESS:
 	Tooltip:
 		Name: Battle Fortress
 		Description: Armored battle wagon.\nWorks as an APC.\nInfantry can fire from inside.\nCan move over water.\n  Weak vs anti armor weapons
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 30
-		Prerequisites: ~muweap, muhall
+	# Buildable:
+		# Queue: Vehicle
+		# BuildPaletteOrder: 30
+		# Prerequisites: ~muweap, muhall
 	Selectable:
 		Bounds: 80,60
 	Mobile:
@@ -609,7 +641,7 @@ MUTBIRD:
 		Ammo: 3
 		PipCount: 3
 		PipType: Ammo
-		SelfReloadTicks: 600
+		SelfReloadDelay: 600
 		SelfReloads: false
 		PipTypeEmpty: AmmoEmpty
 	-RenderVoxels:
@@ -717,7 +749,7 @@ WETP:
 		PipTypeEmpty: AmmoEmpty
 		RearmBuildings: muair, gahpad, nahpad
 	AutoTarget:
-		ScanRadius: 5
+		ScanRadius: 8
 	RenderSprites:
 	Hovers@CRUISING:
 		UpgradeTypes: cruising

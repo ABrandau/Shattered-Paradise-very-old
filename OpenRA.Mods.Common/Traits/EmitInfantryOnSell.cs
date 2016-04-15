@@ -19,8 +19,8 @@ namespace OpenRA.Mods.Common.Traits
 	[Desc("Spawn new actors when sold.")]
 	public class EmitInfantryOnSellInfo : ITraitInfo
 	{
-		public readonly float ValuePercent = 40;
-		public readonly float MinHpPercent = 30;
+		public readonly int ValuePercent = 40;
+		public readonly int MinHpPercent = 30;
 
 		[ActorReference]
 		[Desc("Be sure to use lowercase. Default value is \"e1\".")]
@@ -57,10 +57,14 @@ namespace OpenRA.Mods.Common.Traits
 			var cost = csv != null ? csv.Value : (valued != null ? valued.Cost : 0);
 
 			var health = self.TraitOrDefault<Health>();
-			var dudesValue = info.ValuePercent * cost;
+			var dudesValue = info.ValuePercent * cost / 100;
 			if (health != null)
-				dudesValue = dudesValue * health.HP / health.MaxHP;
-			dudesValue /= 100;
+			{
+				if (100 * health.HP >= info.MinHpPercent * health.MaxHP)
+					dudesValue = health.HP * dudesValue / health.MaxHP;
+				else
+					dudesValue = 0;
+			}
 
 			var eligibleLocations = FootprintUtils.Tiles(self).ToList();
 			var actorTypes = info.ActorTypes.Select(a => new { Name = a, Cost = self.World.Map.Rules.Actors[a].TraitInfo<ValuedInfo>().Cost }).ToList();

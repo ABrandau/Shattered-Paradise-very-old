@@ -1,4 +1,4 @@
-MapFormat: 10
+MapFormat: 11
 
 RequiresMod: cnc
 
@@ -14,7 +14,7 @@ Bounds: 8,21,49,39
 
 Visibility: MissionSelector
 
-Type: Campaign
+Categories: Campaign
 
 LockPreview: True
 
@@ -754,6 +754,6 @@ Actors:
 		Location: 44,40
 		Owner: Neutral
 
-Rules: rules.yaml
+Rules: cnc|rules/campaign-maprules.yaml, cnc|rules/campaign-tooltips.yaml, cnc|rules/campaign-palettes.yaml, rules.yaml
 
 Weapons: weapons.yaml

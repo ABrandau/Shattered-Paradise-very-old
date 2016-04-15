@@ -429,9 +429,10 @@ namespace OpenRA.Mods.Common.AI
 
 		public bool HasAdequateProc()
 		{
-			// Require at least one refinery, unless we have no power (can't build it).
+			// Require at least one refinery, unless we can't build it.
 			return CountBuildingByCommonName(Info.BuildingCommonNames.Refinery, Player) > 0 ||
-				CountBuildingByCommonName(Info.BuildingCommonNames.Power, Player) == 0;
+				CountBuildingByCommonName(Info.BuildingCommonNames.Power, Player) == 0 ||
+				CountBuildingByCommonName(Info.BuildingCommonNames.ConstructionYard, Player) == 0;
 		}
 
 		public bool HasMinimumProc()
@@ -526,7 +527,7 @@ namespace OpenRA.Mods.Common.AI
 					return findPos(baseCenter, baseCenter, Info.MinBaseRadius, Info.MaxBaseRadius);
 
 				case BuildingType.Building:
-					return findPos(baseCenter, baseCenter, Info.MinBaseRadius, distanceToBaseIsImportant ? Info.MaxBaseRadius : Map.MaxTilesInCircleRange);
+					return findPos(baseCenter, baseCenter, Info.MinBaseRadius, distanceToBaseIsImportant ? Info.MaxBaseRadius : Map.Grid.MaximumTileSearchRange);
 			}
 
 			// Can't find a build location

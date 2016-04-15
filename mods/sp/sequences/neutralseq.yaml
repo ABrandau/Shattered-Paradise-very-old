@@ -93,7 +93,7 @@ berserker:
 		ZOffset: -511
 	shoot:
 		Start: 137
-		Length: 19
+		Length: 20
 		Facings: -8
 		ShadowStart: 462
 	die5: flameguy # TODO: walking animation unused

@@ -110,7 +110,7 @@ MEDIC:
 	WithInfantryBody:
 		AttackSequence: heal
 	SelfHealing:
-		Ticks: 60
+		Delay: 60
 	Passenger:
 		PipType: Red
 
@@ -395,8 +395,8 @@ HMEC:
 	Health:
 		HP: 800
 	SelfHealing:
-		Ticks: 10
-		HealIfBelow: 1.1
+		Delay: 10
+		HealIfBelow: 110
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -574,8 +574,8 @@ GUARDIAN:
 		Type: CenterPosition
 	SelfHealing:
 		Step: 10
-		Ticks: 300
-		HealIfBelow: 1
+		Delay: 300
+		HealIfBelow: 110
 	SpeedMultiplier:
 		UpgradeTypes: undeployed
 		Modifier: 40
@@ -618,7 +618,7 @@ GUARDIAN:
 		PipCount: 0
 		PipType: Ammo
 		SelfReloads: true
-		SelfReloadTicks: 20
+		SelfReloadDelay: 20
 		PipTypeEmpty: AmmoEmpty
 	AutoTarget:
 	-RenderVoxels:

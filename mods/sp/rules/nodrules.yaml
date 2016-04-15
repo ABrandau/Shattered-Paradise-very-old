@@ -36,14 +36,17 @@ CRUSADER:
 	Valued:
 		Cost: 210
 	Tooltip:
-		Name: Crusader Torpedo Infantry
-		Description: Anti Armour Infantry, equiped with a Rocket launcher\nbackpack, fires many rockets per turn but has a big\nreload time.\nCannot target infantry.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry.
+		Name: Crusader
+		Description: Anti Armour Infantry, equiped with a Rocket launcher\nbackpack, fires many rockets per turn but has a big\nreload time.\nCannot lock on infantry.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry.
 	Health:
 		HP: 110
 	Mobile:
 		Speed: 65
 	Armament@PRIMARY:
 		Weapon: CrusaderBazooka
+		LocalOffset: 0,0,600
+	Armament@Secondary:
+		Weapon: CrusaderBazookaInf
 		LocalOffset: 0,0,600
 	AttackFrontal:
 		Voice: Attack
@@ -177,8 +180,8 @@ BLACKHANDDUMMY:
 	Selectable:
 		Bounds: 1,1
 	SelfHealing:
-		Step: -5
-		HealIfBelow: 2
+		Step: -10
+		HealIfBelow: 200
 	RenderSprites:
 	Health:
 		HP: 5
@@ -261,8 +264,8 @@ TTNK:
 		Description: Main Battle Tank.\nCan deploy to gain extra protection.\nTick tanks self repair when not deployed.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	SelfHealing@lel:
 		Step: 2
-		Ticks: 100
-		HealIfBelow: 0.75
+		Delay: 100
+		HealIfBelow: 50
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 11
@@ -463,6 +466,13 @@ ARMH:
 	Voiced:
 		VoiceSet: BeamCannonVO
 		Volume: 3
+	AnnounceOnBuildAS:
+		Voice: Build
+		OnlyToOwner: True
+	AnnounceOnKillAS:
+		Voice: Kill
+		Interval: 1000
+		OnlyToOwner: True
 
 STNK:
 	Inherits: ^VoxelTank
@@ -505,7 +515,7 @@ STNK:
 	-MustBeDestroyed:
 	Voiced:
 		VoiceSet: StealthTankVO
-		Volume: 5
+		Volume: 7
 
 ##########################################################
 # Aircraft

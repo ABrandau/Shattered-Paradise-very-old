@@ -1,4 +1,4 @@
-MapFormat: 10
+MapFormat: 11
 
 RequiresMod: cnc
 
@@ -14,7 +14,7 @@ Bounds: 15,16,44,42
 
 Visibility: MissionSelector
 
-Type: Campaign
+Categories: Campaign
 
 LockPreview: True
 
@@ -463,4 +463,4 @@ Actors:
 		Location: 20,21
 		Owner: GDI
 
-Rules: rules.yaml
+Rules: cnc|rules/campaign-maprules.yaml, cnc|rules/campaign-tooltips.yaml, cnc|rules/campaign-palettes.yaml, rules.yaml

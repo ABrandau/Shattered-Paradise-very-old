@@ -422,7 +422,7 @@ namespace OpenRA.Mods.Common.Traits
 		{
 			var cell = self.World.Map.CellContaining(pos);
 			SetLocation(cell, FromSubCell, cell, FromSubCell);
-			SetVisualPosition(self, self.World.Map.CenterOfSubCell(cell, FromSubCell) + new WVec(0, 0, pos.Z));
+			SetVisualPosition(self, self.World.Map.CenterOfSubCell(cell, FromSubCell) + new WVec(0, 0, self.World.Map.DistanceAboveTerrain(pos).Length));
 			FinishedMoving(self);
 		}
 
@@ -720,7 +720,10 @@ namespace OpenRA.Mods.Common.Traits
 		{
 			readonly Mobile mobile;
 			readonly bool rejectMove;
-			public bool OverrideSelection { get { return false; } }
+			public bool TargetOverridesSelection(TargetModifiers modifiers)
+			{
+				return modifiers.HasModifier(TargetModifiers.ForceMove);
+			}
 
 			public MoveOrderTargeter(Actor self, Mobile unit)
 			{

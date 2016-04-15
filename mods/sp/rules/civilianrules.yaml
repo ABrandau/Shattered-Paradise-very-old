@@ -408,7 +408,7 @@ CRAB:
 	Targetable:
 		TargetTypes: Infantry, Ground
 	Armament:
-		Weapon: WarriorAcid
+		Weapon: WolfAcid
 	WithInfantryBody:
 		AttackSequence: shoot
 		IdleSequences: Idle1, Idle2
@@ -448,7 +448,7 @@ BERSERKER:
 		Chance: 40
 	SelfHealing:
 		Step: 10
-		Ticks: 200
+		Delay: 200
 	Mobile:
 		Speed: 90
 		Crushes: nada
@@ -459,7 +459,7 @@ BERSERKER:
 	Armament:
 		Weapon: BerserkerBlow
 	AutoTarget:
-		ScanRadius: 5
+		ScanRadius: 8
 	WithInfantryBody:
 		AttackSequence: shoot
 		IdleSequences: Idle1, Idle2, Idle3
@@ -520,8 +520,8 @@ CIV3:
 		Voice: Attack
 	AutoTarget:
 	SelfHealing:
-		Ticks: 10
-		HealIfBelow: 50%
+		Delay: 10
+		HealIfBelow: 50
 		DamageCooldown: 200
 	WithVoxelTurret:
 	WithVoxelBarrel:
@@ -2120,5 +2120,5 @@ EGGS:
 		# DeathType: BulletDeath, SmallExplosionDeath, TiberiumDeath
 	SelfHealing@bird:
 		Step: -10
-		Ticks: 50
-		HealIfBelow: 1.1
+		Delay: 50
+		HealIfBelow: 110

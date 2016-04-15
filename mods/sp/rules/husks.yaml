@@ -24,6 +24,8 @@ ORCA.Husk:
 		Image: orca
 	RenderVoxels:
 		Image: orca
+	FallsToEarth:
+		Explosion: SmallPlaneExplode
 
 ORCAB.Husk:
 	Inherits: ^AircraftHusk
@@ -116,6 +118,8 @@ APACHE.Husk:
 		Image: apache
 	RenderVoxels:
 		Image: apache
+	FallsToEarth:
+		Explosion: SmallPlaneExplode
 
 ############################################################
 #		MUT
@@ -134,7 +138,9 @@ MUTHELI.Husk:
 		Image: mutheli
 	RenderVoxels:
 		Image: mutheli
-		Scale: 1		
+		Scale: 1
+	FallsToEarth:
+		Explosion: SmallPlaneExplode
 		
 WETP.Husk:
 	Inherits: ^AircraftHusk
@@ -148,10 +154,10 @@ WETP.Husk:
 		Image: wetp
 	FallsToEarth:
 		Moves: true
-		Spins: false		
+		Spins: false
 	RenderVoxels:
 		Image: wetp
-		Scale: 0.7		
+		Scale: 0.7
 ############################################################
 #		CABAL
 ############################################################
@@ -173,6 +179,8 @@ WASP.Husk:
 		Scale: 0.4		
 	-RenderVoxels:
 	-WithVoxelBody:
+	FallsToEarth:
+		Explosion: SmallPlaneExplode
 	
 FIREFLY.Husk:		
 	Inherits: ^AircraftHusk
@@ -191,6 +199,8 @@ FIREFLY.Husk:
 		Image: firefly
 	-RenderVoxels:
 	-WithVoxelBody:
+	FallsToEarth:
+		Explosion: SmallPlaneExplode
 	
 BASILISK.Husk:
 	Inherits: ^AircraftHusk
@@ -225,6 +235,8 @@ STORMRIDER.Husk:
 	FallsToEarth:
 		Moves: true
 		Spins: false
+	FallsToEarth:
+		Explosion: SmallPlaneExplode
 		
 GLYDER1.Husk:		
 	Inherits: ^AircraftHusk
@@ -247,6 +259,8 @@ GLYDER1.Husk:
 		Image: scrglyder1
 	-RenderVoxels:
 	-WithVoxelBody:
+	FallsToEarth:
+		Explosion: SmallPlaneExplode
 		
 DRACHE.Husk:		
 	Inherits: ^AircraftHusk

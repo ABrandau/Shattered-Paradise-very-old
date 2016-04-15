@@ -40,6 +40,9 @@ namespace OpenRA
 
 		SheetBuilder fontSheetBuilder;
 
+		float depthScale;
+		float depthOffset;
+
 		Size? lastResolution;
 		int2? lastScroll;
 		float? lastZoom;
@@ -50,16 +53,12 @@ namespace OpenRA
 		{
 			var resolution = GetResolution(graphicSettings);
 
-			var rendererName = serverSettings.Dedicated ? "Null" : graphicSettings.Renderer;
+			var rendererName = graphicSettings.Renderer;
 			var rendererPath = Platform.ResolvePath(Path.Combine(".", "OpenRA.Platforms." + rendererName + ".dll"));
 
 			Device = CreateDevice(Assembly.LoadFile(rendererPath), resolution.Width, resolution.Height, graphicSettings.Mode);
-
-			if (!serverSettings.Dedicated)
-			{
-				TempBufferSize = graphicSettings.BatchSize;
-				SheetSize = graphicSettings.SheetSize;
-			}
+			TempBufferSize = graphicSettings.BatchSize;
+			SheetSize = graphicSettings.SheetSize;
 
 			WorldSpriteRenderer = new SpriteRenderer(this, Device.CreateShader("shp"));
 			WorldRgbaSpriteRenderer = new SpriteRenderer(this, Device.CreateShader("rgba"));
@@ -106,6 +105,20 @@ namespace OpenRA
 			}
 		}
 
+		public void InitializeDepthBuffer(MapGrid mapGrid)
+		{
+			// The depth buffer needs to be initialized with enough range to cover:
+			//  - the height of the screen
+			//  - the z-offset of tiles from MaxTerrainHeight below the bottom of the screen (pushed into view)
+			//  - additional z-offset from actors on top of MaxTerrainHeight terrain
+			//  - a small margin so that tiles rendered partially above the top edge of the screen aren't pushed behind the clip plane
+			// We need an offset of mapGrid.MaximumTerrainHeight * mapGrid.TileSize.Height / 2 to cover the terrain height
+			// and choose to use mapGrid.MaximumTerrainHeight * mapGrid.TileSize.Height / 4 for each of the actor and top-edge cases
+			this.depthScale = mapGrid == null || !mapGrid.EnableDepthBuffer ? 0 :
+				(float)Resolution.Height / (Resolution.Height + mapGrid.TileSize.Height * mapGrid.MaximumTerrainHeight);
+			this.depthOffset = this.depthScale / 2;
+		}
+
 		public void BeginFrame(int2 scroll, float zoom)
 		{
 			Device.Clear();
@@ -119,8 +132,8 @@ namespace OpenRA
 			if (resolutionChanged)
 			{
 				lastResolution = Resolution;
-				RgbaSpriteRenderer.SetViewportParams(Resolution, 1f, int2.Zero);
-				SpriteRenderer.SetViewportParams(Resolution, 1f, int2.Zero);
+				RgbaSpriteRenderer.SetViewportParams(Resolution, 0f, 0f, 1f, int2.Zero);
+				SpriteRenderer.SetViewportParams(Resolution, 0f, 0f, 1f, int2.Zero);
 				RgbaColorRenderer.SetViewportParams(Resolution, 1f, int2.Zero);
 			}
 
@@ -129,8 +142,8 @@ namespace OpenRA
 			{
 				lastScroll = scroll;
 				lastZoom = zoom;
-				WorldRgbaSpriteRenderer.SetViewportParams(Resolution, zoom, scroll);
-				WorldSpriteRenderer.SetViewportParams(Resolution, zoom, scroll);
+				WorldRgbaSpriteRenderer.SetViewportParams(Resolution, depthScale, depthOffset, zoom, scroll);
+				WorldSpriteRenderer.SetViewportParams(Resolution, depthScale, depthOffset, zoom, scroll);
 				WorldVoxelRenderer.SetViewportParams(Resolution, zoom, scroll);
 				WorldRgbaColorRenderer.SetViewportParams(Resolution, zoom, scroll);
 			}

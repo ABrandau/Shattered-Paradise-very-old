@@ -34,7 +34,7 @@
 		Modifier: 90, 75
 	SelfHealing@ELITE:
 		Step: 2
-		Ticks: 100
+		Delay: 100
 		HealIfBelow: 1
 		DamageCooldown: 125
 		UpgradeTypes: selfheal
@@ -317,7 +317,7 @@
 		DeathTypes: EnergyDeath
 	SelfHealing@HOSPITAL:
 		Step: 5
-		Ticks: 100
+		Delay: 100
 		HealIfBelow: 1
 		DamageCooldown: 125
 		UpgradeTypes: hospitalheal
@@ -418,7 +418,7 @@
 	ActorLostNotification:
 	Capturable:
 		Type: Vehicle
-		CaptureThreshold: 1
+		CaptureThreshold: 100
 		CancelActivity: True
 	Guard:
 		Voice: Move

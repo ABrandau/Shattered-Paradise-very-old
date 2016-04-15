@@ -41,7 +41,7 @@ CABSENTRY:
 		UndeployedUpgrades: undeployed
 		DeployAnimation: make
 		Facing: 160
-		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
+		AllowedTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green
 		DeploySound: place2.aud
 		UndeploySound: clicky1.aud
 	Hovers:
@@ -137,11 +137,9 @@ PDRONE:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 14
-		Prerequisites: ~cabclaw
+		Prerequisites: ~cabclaw, cabgrinder
 	Selectable:
 		Bounds: 22,32,0,0
-	Voiced:
-		VoiceSet: CyborgCommando
 	Hovers:
 	Mobile:
 		Speed: 75
@@ -154,7 +152,7 @@ PDRONE:
 	WithInfantryBody:
 		AttackSequence: shoot
 	AutoTarget:
-		ScanRadius: 5
+		ScanRadius: 8
 	Armament:
 		Weapon: ProcessingHuman
 	AttackFrontal:
@@ -183,8 +181,6 @@ REAPERCAB:
 	SupplyTruck
 		Payload: 300
 		Voice: Move
-	Voiced:
-		VoiceSet: Cyborg
 	Mobile:
 		Speed: 80
 		SharesCell: False
@@ -312,8 +308,8 @@ CABALMONEYDUMMY:
 	Selectable:
 		Bounds: 1,1
 	SelfHealing:
-		Step: -5
-		HealIfBelow: 2
+		Step: -10
+		HealIfBelow: 200
 	RenderSprites:
 		Image: blackhanddummy
 	Health:
@@ -336,7 +332,7 @@ CABALMONEYDUMMY1:
 		Bounds: 1,1
 	SelfHealing:
 		Step: -5
-		HealIfBelow: 2
+		HealIfBelow: 110
 	RenderSprites:
 		Image: blackhanddummy
 	Health:
@@ -423,7 +419,6 @@ PALADIN2:
 		Bounds: 30, 42, 0, -8
 	-SpawnActorOnDeath@cabmoney:
 
-
 cybdog:
 	Inherits: ^Cyborg
 	Armor:
@@ -476,6 +471,8 @@ JENN:
 		TurnSpeed: 8
 		Speed: 95
 		Crushes: crate
+	Voiced:
+		VoiceSet: Limped
 	Health:
 		HP: 200
 	Armor:
@@ -513,6 +510,8 @@ CENTURION:
 		Crushes: wall, crate, infantry
 	Health:
 		HP: 600
+	Voiced:
+		VoiceSet: Cyborg
 	Armor:
 		Type: Heavy
 	BodyOrientation:
@@ -562,9 +561,11 @@ GRINDER:
 		HP: 350
 	Armor:
 		Type: Light
+	Voiced:
+		VoiceSet: Cyborg
 	AttackFrontal:
 	AutoTarget:
-		ScanRadius: 5
+		ScanRadius: 8
 	Armament:
 		Weapon: TermitaGrinder
 	RenderVoxels:
@@ -584,7 +585,7 @@ ECM:
 		Cost: 1500
 	Tooltip:
 		Name: Artisan
-		Description: Support vehicle that deploys turrets.\nReloads its ammo over time.\n  Unarmed.
+		Description: Support vehicle that deploys turrets.\nBuilds new turrets over time.\n  Unarmed.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 21
@@ -592,8 +593,8 @@ ECM:
 	Mobile:
 		TurnSpeed: 6
 		Speed: 75
-		TerrainSpeeds:
-			Water: 80
+	Voiced:
+		VoiceSet: Limped
 	Health:
 		HP: 250
 	Armor:
@@ -603,10 +604,11 @@ ECM:
 	Minelayer:
 		Mine: cabsentryturret
 	AmmoPool:
-		Ammo: 5
-		PipCount: 5
+		InitialAmmo: 0
+		Ammo: 8
+		PipCount: 8
 		PipType: Ammo
-		SelfReloadTicks: 150
+		SelfReloadDelay: 350
 		SelfReloads: true
 		PipTypeEmpty: AmmoEmpty
 	WithVoxelBody:
@@ -637,7 +639,9 @@ CABAPC:
 		TurnSpeed: 8
 		Speed: 110
 		TerrainSpeeds:
-			Water: 80
+			Water: 110
+	Voiced:
+		VoiceSet: Limped
 	Health:
 		HP: 200
 	Hovers:
@@ -669,7 +673,7 @@ BLASTER:
 		Cost: 900
 	Tooltip:
 		Name: Devourer
-		Description: Hover Artillery, deals damage over time.\nIt's weapon bypasses armor.\nCan move on water.\n Special Ability: Vehicles killed by this unit will spawn Drones.
+		Description: Hover Artillery.\nHis weapon slowly dissasembles enemies.\nThat effect bypasses armor.\nCan move on water.\n Special Ability: Vehicles killed by this unit will spawn Drones.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 23
@@ -678,7 +682,9 @@ BLASTER:
 		TurnSpeed: 6
 		Speed: 113
 		TerrainSpeeds:
-			Water: 80
+			Water: 113
+	Voiced:
+		VoiceSet: Limped
 	Health:
 		HP: 200
 	Armor:
@@ -719,6 +725,8 @@ PALADIN:
 		Crushes: wall, crate, infantry
 	Health:
 		HP: 700
+	Voiced:
+		VoiceSet: Cyborg
 	Armor:
 		Type: Heavy
 	BodyOrientation:
@@ -761,7 +769,7 @@ WASP:
 		BuildPaletteOrder: 20
 		Prerequisites: ~cabair
 	Selectable:
-		Bounds: 30,24
+		Bounds: 40,30
 	Aircraft:
 		TurnSpeed: 6
 		Speed: 110
@@ -773,6 +781,8 @@ WASP:
 		HP: 130
 	Armor:
 		Type: Wood
+	Voiced:
+		VoiceSet: Limped
 	Armament@Primary:
 		Weapon: WaspLasor
 		LocalOffset: 200,0,-100
@@ -790,7 +800,7 @@ WASP:
 		Ammo: 2
 		PipCount: 2
 		SelfReloads: true
-		SelfReloadTicks: 250
+		SelfReloadDelay: 250
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
 		Name: Rocket
@@ -821,7 +831,9 @@ FIREFLY:
 		BuildPaletteOrder: 20
 		Prerequisites: ~cabair, cabradr
 	Selectable:
-		Bounds: 30,24
+		Bounds: 40,30
+	Voiced:
+		VoiceSet: Limped
 	Aircraft:
 		TurnSpeed: 6
 		Speed: 120
@@ -871,7 +883,9 @@ BASILISK:
 		BuildPaletteOrder: 20
 		Prerequisites: ~cabair, cabtech
 	Selectable:
-		Bounds: 30,24
+		Bounds: 60,48
+	Voiced:
+		VoiceSet: Limped
 	Aircraft:
 		TurnSpeed: 6
 		Speed: 95
@@ -884,8 +898,8 @@ BASILISK:
 		Type: Light
 	SelfHealing:
 		Step: 4
-		Ticks: 75
-		HealIfBelow: 1
+		Delay: 75
+		HealIfBelow: 110
 	Armament:
 		Weapon: BasiliskProton
 		LocalOffset: 128,-300,0, 128,300,0
@@ -947,8 +961,8 @@ CABPOWR:
 	# ScalePowerWithHealth:
 	SelfHealing@reactorcritical:
 		Step: -5
-		Ticks: 25
-		HealIfBelow: 0.20
+		Delay: 25
+		HealIfBelow: 20
 	DisabledOverlay:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
@@ -1162,7 +1176,7 @@ CABGRINDER:
 		BuildPaletteOrder: 71
 		Prerequisites: cabclaw, ~structures.cab
 	Valued:
-		Cost: 600
+		Cost: 350
 	Tooltip:
 		Name: Stasis Chamber
 		Description: Storage site for cyborg canditates.\nIt allows you to refund CABAL\ninfantry for half its cost.
@@ -1175,7 +1189,7 @@ CABGRINDER:
 	Selectable:
 		Bounds: 110, 60, 3, -4
 	Health:
-		HP: 500
+		HP: 250
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -1398,8 +1412,8 @@ CABCENT:
 		Offset: 170,0,213
 	SelfHealing@Cabal:
 		Step: 4
-		Ticks: 75
-		HealIfBelow: 1
+		Delay: 75
+		HealIfBelow: 110
 	RenderSprites:
 		Scale: 0.8
 		Image: centurion

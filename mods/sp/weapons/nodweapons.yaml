@@ -64,6 +64,44 @@ CrusaderBazooka:
 		ImpactSound: ssplash3.aud
 		ValidImpactTypes: Water
 
+CrusaderBazookaInf:
+	ReloadDelay: 150
+	Range: 8c0
+	MinRange: 1c0
+	Report: rketinf1.aud
+	Burst: 6
+	ValidTargets: Infantry
+	Projectile: Missile
+		Speed: 233
+		Blockable: false
+		Shadow: true
+		Inaccuracy: 2c0
+		Image: DRAGON
+		Angle: 90
+		Trail: small_smoke_trail
+		RateOfTurn: 8
+		RangeLimit: 50
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 7
+		ValidTargets: Infantry
+		Versus:
+			None: 25
+			Wood: 65
+			Light: 100
+			Heavy: 150
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: small_clsn
+		ImpactSound: expnew12.aud
+		InvalidImpactTypes: Water, Air, AirHit
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+
 TemplarLasor:
 	ReloadDelay: 40
 	Range: 4c512

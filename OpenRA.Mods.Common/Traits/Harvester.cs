@@ -33,10 +33,10 @@ namespace OpenRA.Mods.Common.Traits
 		[Desc("How much resources it can carry.")]
 		public readonly int Capacity = 28;
 
-		public readonly int LoadTicksPerBale = 4;
+		public readonly int BaleLoadDelay = 4;
 
 		[Desc("How fast it can dump it's carryage.")]
-		public readonly int UnloadTicksPerBale = 4;
+		public readonly int BaleUnloadDelay = 4;
 
 		[Desc("How many squares to show the fill level.")]
 		public readonly int PipCount = 7;
@@ -290,7 +290,7 @@ namespace OpenRA.Mods.Common.Traits
 				if (--contents[type] == 0)
 					contents.Remove(type);
 
-				currentUnloadTicks = Info.UnloadTicksPerBale;
+				currentUnloadTicks = Info.BaleUnloadDelay;
 			}
 
 			return contents.Count == 0;
@@ -302,7 +302,7 @@ namespace OpenRA.Mods.Common.Traits
 			{
 				yield return new EnterAlliedActorTargeter<IAcceptResourcesInfo>("Deliver", 5,
 					proc => IsAcceptableProcType(proc),
-					proc => !IsEmpty && proc.Trait<IAcceptResources>().AllowDocking);
+					proc => proc.Trait<IAcceptResources>().AllowDocking);
 				yield return new HarvestOrderTargeter();
 			}
 		}
@@ -386,9 +386,6 @@ namespace OpenRA.Mods.Common.Traits
 				if (order.TargetActor != OwnerLinkedProc)
 					LinkProc(self, OwnerLinkedProc = order.TargetActor);
 
-				if (IsEmpty)
-					return;
-
 				idleSmart = true;
 
 				self.SetTargetLine(Target.FromOrder(self.World, order), Color.Green);
@@ -455,7 +452,7 @@ namespace OpenRA.Mods.Common.Traits
 			public string OrderID { get { return "Harvest"; } }
 			public int OrderPriority { get { return 10; } }
 			public bool IsQueued { get; protected set; }
-			public bool OverrideSelection { get { return true; } }
+			public bool TargetOverridesSelection(TargetModifiers modifiers) { return true; }
 
 			public bool CanTarget(Actor self, Target target, List<Actor> othersAtTarget, ref TargetModifiers modifiers, ref string cursor)
 			{

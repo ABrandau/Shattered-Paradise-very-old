@@ -76,7 +76,7 @@ FORTCRATE:
 
 Player:
 	ClassicProductionQueue@Infantry:
-		BuildSpeed: 1
+		BuildSpeed: 100
 	-EnemyWatcher:
 	Shroud:
 		FogLocked: True
@@ -306,8 +306,8 @@ V2RL:
 		EmptyWeapon: napalm
 	SelfHealing:
 		Step: 2
-		Ticks: 1
-		HealIfBelow: 40%
+		Delay: 1
+		HealIfBelow: 40
 
 BADR.Bomber:
 	Health:

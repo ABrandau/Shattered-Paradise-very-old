@@ -21,15 +21,17 @@ namespace OpenRA.Mods.Common.Activities
 		readonly IPositionable pos;
 		readonly ParachutableInfo para;
 		readonly WVec fallVector;
+		readonly Actor ignore;
 
 		WPos dropPosition;
 		WPos currentPosition;
 		bool triggered = false;
 
-		public Parachute(Actor self, WPos dropPosition)
+		public Parachute(Actor self, WPos dropPosition, Actor ignoreActor = null)
 		{
 			um = self.TraitOrDefault<UpgradeManager>();
 			pos = self.TraitOrDefault<IPositionable>();
+			ignore = ignoreActor;
 
 			// Parachutable trait is a prerequisite for running this activity
 			para = self.Info.TraitInfo<ParachutableInfo>();
@@ -54,14 +56,15 @@ namespace OpenRA.Mods.Common.Activities
 
 		Activity LastTick(Actor self)
 		{
-			pos.SetPosition(self, currentPosition - new WVec(0, 0, currentPosition.Z));
+			var dat = self.World.Map.DistanceAboveTerrain(currentPosition);
+			pos.SetPosition(self, currentPosition - new WVec(WDist.Zero, WDist.Zero, dat));
 
 			if (um != null)
 				foreach (var u in para.ParachuteUpgrade)
 					um.RevokeUpgrade(self, u, this);
 
 			foreach (var npl in self.TraitsImplementing<INotifyParachuteLanded>())
-				npl.OnLanded();
+				npl.OnLanded(ignore);
 
 			return NextActivity;
 		}
@@ -75,7 +78,7 @@ namespace OpenRA.Mods.Common.Activities
 			currentPosition -= fallVector;
 
 			// If the unit has landed, this will be the last tick
-			if (currentPosition.Z <= 0)
+			if (self.World.Map.DistanceAboveTerrain(currentPosition).Length <= 0)
 				return LastTick(self);
 
 			pos.SetVisualPosition(self, currentPosition);

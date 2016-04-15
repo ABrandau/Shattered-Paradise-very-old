@@ -1,5 +1,41 @@
 YEAR - MONTH - DAY
+[2016 - 04 - 13]
+New Code:
+	New mod code thanks to Graion.
+AI Updates:
+	Improved AI’s use of air and Mutants can now build Ravagers.
 
+[2016 - 04 - 09]
+Bug Fixes:
+	Fixed Scrin tractor beam aiming issues.
+	Fixed some sequences.
+	Corrected cyborg drone voices.
+	Aircraft will no longer self repair in the middle of combat.
+
+Balance Changes:
+	Artisans can now store up to 8 turrets and start empty when built.
+	Stasis chamber changes: cost 600 -> 350, hp 500 -> 250.
+	Reclaimer now requires stasis chamber.
+	Floater changes: cost 400 -> 500.
+	Battleship changes: damage 60 -> 40 hp: 800 -> 900.
+	Crusaders can now attack infantry, but with a giant inaccuracy debuff.
+	Reduced fall explosion damage from small aircraft by half.
+	Reworked mutant Bull and forgotten knight.
+	Reduced IFV cargo capacity to 2 from 4.
+
+Economy Changes:
+	Harvester capacity: 40 -> 30.
+
+Content Changes:
+	Added Ravager.
+	Removed Battlefortress
+	Added updated audio lines for Nod Beam Cannon.
+
+[2016 - 04 - 01]
+Unit Balance Changes
+	Devourer: Damage: 10 -> 40
+	Devourer debuff: damage: 30 -> 10, time between damage: 3 seconds -> 4 seconds.
+	Devourer debuff duration: 5 seconds -> 10 seconds.
 [2016 - 04 - 01]
 Unit Balance Changes
 	Reduced Scrin Tractor Beam speed: 1200 < 600

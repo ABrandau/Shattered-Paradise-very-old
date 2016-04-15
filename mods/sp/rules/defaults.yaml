@@ -34,8 +34,8 @@
 		Modifier: 90, 80, 70, 60
 	SelfHealing@ELITE:
 		Step: 3
-		Ticks: 100
-		HealIfBelow: 1
+		Delay: 100
+		HealIfBelow: 100
 		DamageCooldown: 125
 		UpgradeTypes: selfheal
 		UpgradeMinEnabledLevel: 1
@@ -147,7 +147,7 @@
 		UpgradeTypes: ForgInfantryBuff
 	SelfHealing@ForgBullBuff:
 		Step: 3
-		Ticks: 50
+		Delay: 50
 		UpgradeTypes: ForgInfantryBuff
 		UpgradeMinEnabledLevel: 1
 	WithDecoration@tibicon:
@@ -219,8 +219,8 @@
 		UpgradeMinEnabledLevel: 1
 	SelfHealing@batteryboost
 		Step: 3
-		Ticks: 100
-		HealIfBelow: 1
+		Delay: 100
+		HealIfBelow: 100
 		UpgradeTypes: batteryboost
 		UpgradeMinEnabledLevel: 1
 
@@ -229,15 +229,15 @@
 		Modifier: 110
 		UpgradeTypes: nomnomnom
 	SelfHealing@nomnomnom:
-		Step: -30
-		Ticks: 75
-		HealIfBelow: 1.1
+		Step: -10
+		Delay: 75
+		HealIfBelow: 110
 		UpgradeTypes: nomnomnom
 		UpgradeMinEnabledLevel: 1
 	SelfHealing@nomnomnom1:
-		Step: 30
-		Ticks: 75
-		HealIfBelow: 0.2
+		Step: 10
+		Delay: 75
+		HealIfBelow: 20
 		UpgradeTypes: nomnomnom
 		UpgradeMinEnabledLevel: 1
 
@@ -515,6 +515,20 @@
 		InternalOwner: Creeps
 		DeathType: TiberiumDeath
 		RequiresLobbyCreeps: true
+	SpawnActorOnDeath@tiberium3:
+		Actor: zombie
+		Probability: 40
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		DeathType: TiberiumDeathStrong
+		RequiresLobbyCreeps: true
+	SpawnActorOnDeath@tiberium4:
+		Actor: VISC_LRG
+		Probability: 40
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		DeathType: TiberiumDeathStrong
+		RequiresLobbyCreeps: true
 	SpawnActorOnDeath@conversion:
 		Actor: worker
 		Probability: 80
@@ -632,6 +646,8 @@
 	-WithDeathAnimation@energy:
 	-SpawnActorOnDeath@conversion:
 	-PoisonedByTiberium:
+	Voiced:
+		VoiceSet: Limpet
 	-Crushable:
 
 ^CivilianInfantry:
@@ -705,14 +721,14 @@
 		Probability: 10
 		OwnerType: InternalName
 		InternalOwner: Creeps
-		DeathType: TiberiumDeath
+		DeathType: TiberiumDeath, TiberiumDeathStrong
 		RequiresLobbyCreeps: true
 	SpawnActorOnDeath@berserk:
 		Actor: berserker
 		Probability: 1
 		OwnerType: InternalName
 		InternalOwner: Creeps
-		DeathType: TiberiumDeath
+		DeathType: TiberiumDeath, TiberiumDeathStrong
 		RequiresLobbyCreeps: true
 	SpawnActorOnDeath@scrmine:
 		Actor: scrmine
@@ -864,7 +880,7 @@
 	WithVoxelBody:
 	# AmmoPool:
 		# SelfReloads: true
-		# SelfReloadTicks: 3000
+		# SelfReloadDelay: 3000
 
 ^Helicopter:
 	Inherits: ^Aircraft
@@ -1269,19 +1285,20 @@
 ^NodVehicleRepair:
 	SelfHealing@NodVehicleRepair:
 		Step: 30
-		Ticks: 20
-		HealIfBelow: 1
+		Delay: 20
+		HealIfBelow: 100
 		UpgradeTypes: NodVehicleRepair
 		UpgradeMinEnabledLevel: 1
 
 ^CyborgSelfHeal:
 	SelfHealing@Scrin:
 		Step: 3
-		Ticks: 75
+		Delay: 75
 		DamageCooldown: 70
 
 ^AircraftSelfHeal:
 	SelfHealing@Cabal:
 		Step: 4
-		Ticks: 75
-		HealIfBelow: 75%
+		Delay: 100
+		HealIfBelow: 75
+		DamageCooldown: 100
