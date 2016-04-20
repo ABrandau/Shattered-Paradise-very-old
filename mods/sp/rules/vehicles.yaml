@@ -717,10 +717,10 @@ MUTAPC:
 	AttackTurreted:
 		Voice: Attack
 	RenderVoxels:
-		Scale: 0.7
+		Scale: 1 #0.7
 	Turreted:
 		TurnSpeed: 10
-		# Offset: -170,0,0
+		Offset: -0,0,500
 	AutoTarget:
 	WithVoxelTurret:
 
@@ -754,7 +754,7 @@ MUTTANK:
 	AttackTurreted:
 		Voice: Attack
 	RenderVoxels:
-		Scale: 0.75
+		Scale: 1 #Scale: 0.75
 	Turreted:
 		TurnSpeed: 10
 		# Offset: -170,0,0
@@ -827,7 +827,7 @@ MLRS:
 	RenderVoxels:
 		LightAmbientColor: 0.5,0.5,0.5
 		LightDiffuseColor: 0.7,0.7,0.7
-		Scale: 0.95
+		Scale: 1 # 0.95
 	Armament:
 		Weapon: tiberianrocket
 		LocalOffset: -50,0,410
