@@ -103,11 +103,6 @@ Rules:
 	sp|rules/aircraft.yaml
 	sp|rules/structures.yaml
 	sp|rules/support.yaml
-	# sp|rules/gdirules.yaml
-	# sp|rules/nodrules.yaml
-	# sp|rules/mutrules.yaml
-	# sp|rules/cabrules.yaml
-	# sp|rules/scrrules.yaml
 	sp|rules/civilianrules.yaml
 	sp|rules/sharedrules.yaml
 	sp|rules/husks.yaml
