@@ -1526,7 +1526,7 @@ SCRNEEDLER:
 		Cost: 700
 	Tooltip:
 		Name: Ichor Waste Turret
-		Description: Basic defense, cloaks when idle.\nRequires power to operate.\n  Strong vs Aircraft\n  Weak vs Ground units.
+		Description: Basic defense, cloaks when idle.\nRequires power to operate.\n  Strong vs Ground\n  Weak vs Air.
 	Buildable:
 		Queue: Defense
 		Prerequisites: scrrax, ~structures.scr
@@ -1621,7 +1621,7 @@ SCRDRONE:
 		Cost: 900
 	Tooltip:
 		Name: Drone Hive
-		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft
+		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs All
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
