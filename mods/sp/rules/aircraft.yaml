@@ -483,11 +483,11 @@ MUTHELI:
 	Health:
 		HP: 225
 	RenderVoxels:
-		Scale: 1
+		Scale: 9
 	Armor:
 		Type: Light
 	WithSpriteRotorOverlay
-		Offset: -50,0,480
+		Offset: 200,0,480
 	Armament@primary:
 		Weapon: GargoylVulcan
 	Armament@secondary:
@@ -541,7 +541,7 @@ WETP:
 	Armament@1:
 		Weapon: FalconPunch
 	RenderVoxels:
-		Scale: 0.7
+		Scale: 1# 0.7
 	AttackPlane:
 		Voice: Attack
 		FacingTolerance: 20
@@ -1001,6 +1001,7 @@ SCRINCOUNCIL:
 WASP:
 	Inherits: ^Helicopter
 	Inherits@3: ^SelfReloads
+	Inherits@5: ^CabRender
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -1024,7 +1025,7 @@ WASP:
 	Armor:
 		Type: Wood
 	Voiced:
-		VoiceSet: Limped
+		VoiceSet: Limpet
 	Armament@Primary:
 		Weapon: WaspLasor
 		LocalOffset: 200,0,-100
@@ -1051,7 +1052,7 @@ WASP:
 	-WithVoxelBody:
 	WithShadow:
 	RenderSprites:
-		Scale: 0.4
+		# Scale: 0.4
 	WithFacingSpriteBody:
 	BodyOrientation:
 		QuantizedFacings: 32
@@ -1075,7 +1076,7 @@ FIREFLY:
 	Selectable:
 		Bounds: 40,30
 	Voiced:
-		VoiceSet: Limped
+		VoiceSet: Limpet
 	Aircraft:
 		TurnSpeed: 6
 		Speed: 120
@@ -1127,7 +1128,7 @@ BASILISK:
 	Selectable:
 		Bounds: 60,48
 	Voiced:
-		VoiceSet: Limped
+		VoiceSet: Limpet
 	Aircraft:
 		TurnSpeed: 6
 		Speed: 95

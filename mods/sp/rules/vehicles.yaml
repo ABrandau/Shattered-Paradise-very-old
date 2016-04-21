@@ -720,7 +720,7 @@ MUTAPC:
 		Scale: 1 #0.7
 	Turreted:
 		TurnSpeed: 10
-		Offset: -0,0,500
+		Offset: 150,0,0
 	AutoTarget:
 	WithVoxelTurret:
 
@@ -784,7 +784,7 @@ MUTQUAD:
 	Armor:
 		Type: Light
 	RenderVoxels:
-		Scale: 0.75
+		Scale: 1 #0.75
 	# WithMuzzleOverlay:
 	Armament@primary:
 		Weapon: QuadFire
@@ -799,7 +799,7 @@ MUTQUAD:
 		Voice: Attack
 	Turreted:
 		TurnSpeed: 7
-		Offset: -100,0,0
+		Offset: -300,0,0
 	AutoTarget:
 	WithVoxelTurret:
 
@@ -835,7 +835,7 @@ MLRS:
 		Voice: Attack
 	Turreted:
 		TurnSpeed: 5
-		Offset: -300,0,0
+		Offset: -200,0,0
 	AutoTarget:
 	WithVoxelTurret:
 
@@ -898,7 +898,7 @@ FORTRESS:
 	Armor:
 		Type: Heavy
 	RenderVoxels:
-		Scale: 0.85
+		Scale: 1# 0.85
 	Cargo:
 		Types: Infantry
 		MaxWeight: 8
