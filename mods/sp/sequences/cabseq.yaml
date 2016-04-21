@@ -598,22 +598,22 @@ grinder:
 	
 paladin:
 	stand:
-		Facings: 8
-		ShadowStart: 136
+		Facings: -8
+		ShadowStart: 137
 	idle:
-		Facings: 8
-		ShadowStart: 136		
+		Facings: -8
+		ShadowStart: 145		
 	run:
-		Tick: 100
+		Tick: 125
 		Start: 8
-		Length: 7
-		Facings: 8
-		ShadowStart: 144
+		Length: 8
+		Facings: -8
+		ShadowStart: 145
 	shoot:
-		Start: 64
-		Length: 9
-		Facings: 8
-		ShadowStart: 200
+		Start: 73
+		Length: 8
+		Facings: -8
+		ShadowStart: 210
 	emp-overlay: emp_fx01
 		Length: *
 		ZOffset: 512

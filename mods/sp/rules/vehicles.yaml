@@ -428,7 +428,7 @@ REPAIR:
 	AttackFrontal:
 		Voice: Attack
 
-LIMPED:
+Limped:
 	Inherits: ^Vehicle
 	Inherits@2: ^ScrinRender
 	Buildable:
@@ -1251,7 +1251,6 @@ SCRDRONEC:
 ################################################
 # CABAL
 ################################################
-
 JENN:
 	Inherits: ^Tank
 	Inherits@3: ^BasicStealthDetection
@@ -1269,7 +1268,7 @@ JENN:
 		Speed: 95
 		Crushes: crate
 	Voiced:
-		VoiceSet: Limped
+		VoiceSet: Limpet
 	Health:
 		HP: 200
 	Armor:
@@ -1391,7 +1390,7 @@ ECM:
 		TurnSpeed: 6
 		Speed: 75
 	Voiced:
-		VoiceSet: Limped
+		VoiceSet: Limpet
 	Health:
 		HP: 250
 	Armor:
@@ -1438,7 +1437,7 @@ CABAPC:
 		TerrainSpeeds:
 			Water: 110
 	Voiced:
-		VoiceSet: Limped
+		VoiceSet: Limpet
 	Health:
 		HP: 200
 	Hovers:
@@ -1481,7 +1480,7 @@ BLASTER:
 		TerrainSpeeds:
 			Water: 113
 	Voiced:
-		VoiceSet: Limped
+		VoiceSet: Limpet
 	Health:
 		HP: 200
 	Armor:
@@ -1507,6 +1506,7 @@ BLASTER:
 PALADIN:
 	Inherits: ^Tank
 	Inherits@2: ^CyborgSelfHeal
+	Inherits@5: ^CabRender
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -1531,21 +1531,19 @@ PALADIN:
 	WithInfantryBody:
 		AttackSequence: shoot
 	AttackFrontal:
+		Voice: Attack
 	RenderSprites:
-		Scale: 0.7
+		# Scale: 0.7
 	Armament@primary:
 		Weapon: PalaLazor
 		Recoil: 127
 		RecoilRecovery: 26
-		LocalOffset: 475,300,950
+		LocalOffset: 475,300,1050
 	Armament@secondary:
 		Weapon: PalaLazor
 		Recoil: 127
 		RecoilRecovery: 26
-		LocalOffset:  475,-300,950
-	# RenderVoxels:
-	# WithVoxelBarrel:
-		# LocalOffset: -128, 85, 256
+		LocalOffset:  475,-300,1050
 	AutoTarget:
 	Selectable:
 		Bounds: 30, 42, 0, -8
