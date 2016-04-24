@@ -52,6 +52,7 @@ DonutArnold	: Basilisk torpedo explosion effect, scrin structure and aircraft cr
 SchismNavigator - Beam Cannon
 DrWhitePsyker - Stealth Tank
 HiJinxy - Harvester
+SkyHunter713 - Guardian Platform
 
 #Additional Music
 

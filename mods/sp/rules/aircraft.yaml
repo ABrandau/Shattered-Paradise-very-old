@@ -179,8 +179,8 @@ GUARDIAN:
 		UndeployedUpgrades: undeployed
 		Facing: 160
 		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
-		DeploySound: place2.aud
-		UndeploySound: clicky1.aud
+		DeploySound: guardian0029.aud
+		UndeploySound: guardian0030.aud
 	WithDecoration@weaponswitch:
 		Image: wrenchicon
 		Sequence: idle
@@ -188,7 +188,7 @@ GUARDIAN:
 		Palette: player
 		ShowToEnemies: true
 		UpgradeTypes: weaponswitch
-		UpgradeMinEnabledLevel: 1			
+		UpgradeMinEnabledLevel: 1
 	AmmoPool:
 		Ammo: 10
 		PipCount: 0

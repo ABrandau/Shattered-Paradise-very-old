@@ -241,7 +241,15 @@ HumanHarvesterVO:
 ######################################################################
 #GDI Custom
 ######################################################################
-
+GuardianVO:
+	Voices:
+		Select: guardian0001, guardian0002, guardian0003, guardian0004, guardian0005, guardian0006, guardian0007
+		Move: guardian0008, guardian0009, guardian0010, guardian0011, guardian0012, guardian0013, guardian0014
+		Attack: guardian0015, guardian0016, guardian0017, guardian0017, guardian0018, guardian0019, guardian0020, guardian0021
+		Action: guardian0034
+		Die: guardian0035, guardian0036, guardian0037
+		Kill: guardian0022, guardian0023, guardian0024, guardian0025
+		Build: guardian0031, guardian0032, guardian0033
 ######################################################################
 #Nod Custom
 ######################################################################

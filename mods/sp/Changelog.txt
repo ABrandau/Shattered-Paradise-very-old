@@ -1,4 +1,4 @@
-﻿YEAR - MONTH - DAY
+YEAR - MONTH - DAY
 
 [2016 - 04 - 23]
 Balance Changes:
@@ -9,6 +9,11 @@ Graphical Changes:
 	Fixed Scrin refinery docking offset.
 	Re rendered Guardian Platform, Paladin, Forgotten Knight.
 	Cleaned some sprites, Scrin harvester, landerd glider and tank have now shadows.
+Audio:
+	Guardian Platform:
+		New voice lines courtesy of SkyHunter713
+	Music:
+		New audio tracks from 8BitArmies by Frank Klepacki.
 Performance:
 	Reordered unit code to make the map editor easier to handle.
 	Fixed a bug that made the game crash when selecting some units.
