@@ -179,8 +179,8 @@ GUARDIAN:
 		UndeployedUpgrades: undeployed
 		Facing: 160
 		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
-		DeploySound: guardian0029.aud
-		UndeploySound: guardian0030.aud
+		DeploySound: place2.aud
+		UndeploySound: clicky1.aud
 	WithDecoration@weaponswitch:
 		Image: wrenchicon
 		Sequence: idle
@@ -207,6 +207,16 @@ GUARDIAN:
 		QuantizedFacings: 32
 	SpawnActorOnDeath:
 		Actor: GUARDIAN.Husk
+	Voiced:
+		VoiceSet: GuardianVO
+		Volume: 3
+	AnnounceOnBuildAS:
+		Voice: Build
+		OnlyToOwner: True
+	AnnounceOnKillAS:
+		Voice: Kill
+		Interval: 1000
+		OnlyToOwner: True
 
 #######################################################
 #Campaign Aircraft
