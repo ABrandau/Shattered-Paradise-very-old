@@ -1,0 +1,1397 @@
+#######################################################
+#Infantry
+#######################################################
+GDIE1:
+	Inherits: ^Soldier
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 1
+		Prerequisites: ~gapile
+	Valued:
+		Cost: 130
+	Tooltip:
+		Name: Marine
+		Description: General-Purpose Infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Health:
+		HP: 120
+	Mobile:
+		Speed: 60
+	Armament@PRIMARY:
+		Weapon: MarineRifle
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: shoot
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+	RenderSprites:
+
+JUMPJET:
+	Inherits: ^Soldier
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Jumpjet Infantry
+		Description: Airborne Soldier, equipped with an AP rifle.\n Can target helicopters and battleships.\n  Strong vs Heavy Vehicles, Helicopters.\n  Weak vs Infantry, Light Vehicles, Structures.
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 2
+		Prerequisites: ~gapile
+	Voiced:
+		VoiceSet: JumpJet
+	Mobile:
+		Speed: 50
+	Health:
+		HP: 160
+	Armor:
+		Type: none
+	Passenger:
+		PipType: Green
+	Armament:
+		Weapon: JJCannon
+	-Crushable:
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: shoot
+	-TakeCover:
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+GRENADIER:
+	Inherits: ^Soldier
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 3
+		Prerequisites: ~gapile, garadr
+	Valued:
+		Cost: 210
+	Tooltip:
+		Name: Grenadier
+		Description: Support Infantry armed with grenade launchers.\n  Strong vs Buildings, Infantry, Light Vehicles.\n  Weak vs Vehicles, Aircraft
+	Health:
+		HP: 90
+	Mobile:
+		Speed: 50
+	Armament:
+		Weapon: Grenade
+		LocalOffset: 0,0,555
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: shoot
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+MEDIC:
+	Inherits: ^Soldier
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Medic
+		Description: Heals nearby infantry.\n  Unarmed
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 4
+		Prerequisites: ~gapile, garadr
+	Voiced:
+		VoiceSet: Medic
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 70
+	Crushable:
+		CrushSound: squishy2.aud
+	Armament:
+		TargetStances: Ally
+		Weapon: Heal
+		ForceTargetStances: None
+	AttackFrontal:
+	WithInfantryBody:
+		AttackSequence: heal
+	SelfHealing:
+		Delay: 60
+	Passenger:
+		PipType: Red
+
+EAGLEGUARD:
+	Inherits: ^Soldier
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Eagle Guard
+		Description: Elite Infantry, armed with power\narmor and a an EMP ray. Its\nattacks disable vehicles briefly.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft.
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 5
+		Prerequisites: ~gapile, gatech
+	Voiced:
+		VoiceSet: Ghost
+	Mobile:
+		Speed: 46
+	Health:
+		HP: 250
+	-PoisonedByTiberium:
+	Armor:
+		Type: Light
+	Passenger:
+	Armament:
+		Weapon: TrooperRail
+		LocalOffset: 400,100,450
+	Crushable:
+		CrushSound: squishy2.aud
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: shoot
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+#######################################################
+#NOD
+#######################################################
+ALTNODE1:
+	Inherits: ^Soldier
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 6
+		Prerequisites: ~nahand
+	Valued:
+		Cost: 190
+	Tooltip:
+		Name: Flame Warrior
+		Description: Light infantry variant.\nCarries a Flamethrower.\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft
+	Health:
+		HP: 100
+	Mobile:
+		Speed: 70
+	Armament@PRIMARY:
+		Weapon: MilitantFireball
+		LocalOffset: 0,0,200
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: shoot
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+	RenderSprites:
+
+CRUSADER:
+	Inherits: ^Soldier
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 7
+		Prerequisites: ~nahand
+	Valued:
+		Cost: 210
+	Tooltip:
+		Name: Crusader
+		Description: Anti Armour Infantry, equiped with a Rocket launcher\nbackpack, fires many rockets per turn but has a big\nreload time.\nCannot lock on infantry.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry.
+	Health:
+		HP: 110
+	Mobile:
+		Speed: 65
+	Armament@PRIMARY:
+		Weapon: CrusaderBazooka
+		LocalOffset: 0,0,600
+	Armament@Secondary:
+		Weapon: CrusaderBazookaInf
+		LocalOffset: 0,0,600
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: shoot
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+	RenderSprites:
+
+TEMPLAR:
+	Inherits: ^Soldier
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 8
+		Prerequisites: ~nahand, naradr
+	Valued:
+		Cost: 300
+	Tooltip:
+		Name: Templar
+		Description: Heavy weapons Infantry.\nHeals on Tiberium.\nDeals full damage to all units.\n  Weak vs Anti infantry weapons, Aircraft.
+	Health:
+		HP: 200
+	Mobile:
+		Speed: 55
+	Armament@PRIMARY:
+		Weapon: TemplarLasor
+		LocalOffset: 200,-50,320
+	PoisonedByTiberium:
+		Weapon: TiberiumHeal
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: shoot
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+	RenderSprites:
+
+MHIJACK:
+	Inherits: ^Soldier
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 9
+		Prerequisites: ~nahand, naradr
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Hijacker
+		Description: NOD Agent.\nCan steal enemy vehicles\nand infiltrate powerplants.\nCloaks when idle.\n  Unarmed
+	Voiced:
+		VoiceSet: Spy
+	-Crushable:
+	Health:
+		HP: 110
+	PoisonedByTiberium:
+		Weapon: TiberiumHeal
+	Targetable:
+		TargetTypes: Ground, Infantry, MindControlInmune
+	Mobile:
+		Speed: 80
+	Infiltrates:
+		Types: SpyInfiltrate
+	Captures:
+		CaptureTypes: Vehicle
+	Captures:
+	Cloak@CLOAKGENERATOR:
+		UpgradeMinEnabledLevel: 0
+		InitialDelay: 50
+		CloakDelay: 50
+		IsPlayerPalette: true
+		UncloakOn: Attack
+	RenderSprites:
+		Image: Chamspy
+	-AutoTarget:
+	WithInfantryBody:
+		AttackSequence: shoot
+
+BHS:
+	Inherits: ^Soldier
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 10
+		Prerequisites: ~nahand, natech
+		BuildLimit: 1
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Hand of Kane
+		Description: Nod Commando, sniper unit.\nCloaked when not attacking.\nCan demolish structures using C4.\nInfantry killed by this unit explode.\nHeals near Tiberium.\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
+	Targetable:
+		TargetTypes: Ground, Infantry, MindControlInmune
+	Health:
+		HP: 190
+	Mobile:
+		Speed: 80
+	PoisonedByTiberium:
+		Weapon: TiberiumHeal
+	Voiced:
+		VoiceSet: Oxanna
+	Armament@PRIMARY:
+		Weapon: BHRifle
+		UpgradeTypes: eliteweapon
+	RevealsShroud:
+		Range: 12c0
+	AttackFrontal:
+		Voice: Attack
+	C4Demolition:
+		C4Delay: 45
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: shoot
+	Cloak@CLOAKGENERATOR:
+		UpgradeMinEnabledLevel: 0
+		InitialDelay: 50
+		CloakDelay: 50
+		# CloakSound: cloak5.aud
+		# UncloakSound: cloak5.aud
+		IsPlayerPalette: true
+		UncloakOn: Attack
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+	RenderSprites:
+
+BLACKHANDDUMMY:
+	Inherits: ^BasicBuilding
+	Targetable:
+		TargetTypes:
+	-WithSpriteBody:
+	-WithBuildingExplosion:
+	-ShakeOnDeath:
+	AutoSelectionSize:
+	Selectable:
+		Bounds: 1,1
+	SelfHealing:
+		Step: -10
+		HealIfBelow: 200
+	RenderSprites:
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+		
+############################################
+# Mutant
+############################################
+
+MARAUDER:
+	Inherits: ^Mutant
+	Inherits@1: ^MutRender
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 18
+		Prerequisites: ~murax
+	Valued:
+		Cost: 110
+	Tooltip:
+		Name: Marauder
+		Description: Mutant Militia, equipped with shotguns.\nThey can generate tiberium fortifications for themselves.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft, Base Defences.
+	Voiced:
+		VoiceSet: Rocket
+	Health:
+		HP: 110
+	AutoTarget:
+		ScanRadius: 8
+	Mobile:
+		Speed: 55
+	Armament@PRIMARY:
+		Weapon: MarauderShotgun
+		Name: OnFoot
+	Armament@PRIMARY2:
+		Weapon: MarauderShotgun
+		Name: OnFoot
+	Armament@PRIMARY3:
+		Weapon: MarauderShotgun
+		Name: OnFoot
+	Armament@PRIMARY4:
+		Weapon: MarauderShotgun
+		Name: OnFoot
+	Armament@GARRISON1:
+		Weapon: GMarauderShotgun
+	Armament@GARRISON2:
+		Weapon: GMarauderShotgun
+	Armament@GARRISON3:
+		Weapon: GMarauderShotgun
+	Armament@GARRISON4:
+		Weapon: GMarauderShotgun
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+	SpawnActorOnDeath@tiberium:
+		Probability: 7
+		DeathType:
+	SpawnActorOnDeath@tiberium2:
+		Probability: 7
+		DeathType:
+E3:
+	Inherits: ^Mutant
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 19
+		Prerequisites: ~murax
+	Valued:
+		Cost: 170
+	Tooltip:
+		Name: Skirmisher
+		Description: Anti-tank Militia.\n  Strong vs Vehicles, Aircraft, Buildings\n  Weak vs Infantry
+	Voiced:
+		VoiceSet: Rocket
+	Health:
+		HP: 95
+	Mobile:
+		Speed: 50
+	Armament@PRIMARY:
+		Weapon: SkirmisherRocket
+		LocalOffset: 128,0,640
+		Name: OnFoot
+		# TargetStances: Ally, Enemy, Neutral
+	# RejectsOrders:
+	# AutoTarget:
+		# InitialStanceAI: HoldFire
+		# InitialStance: HoldFire
+	Armament@GARRISON:
+		Weapon: GSkirmisherRocket
+		LocalOffset: 128,0,640
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+	SpawnActorOnDeath@tiberium:
+		Probability: 7
+		DeathType:
+	SpawnActorOnDeath@tiberium2:
+		Probability: 7
+		DeathType:
+
+E2:
+	Inherits: ^Mutant
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Mechanic
+		Description: Infiltrates and captures enemy structures.\n  Unarmed
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 20
+		Prerequisites: ~murax
+	Voiced:
+		VoiceSet: Engineer
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 80
+	Passenger:
+		PipType: Yellow
+	EngineerRepair:
+	RepairsBridges:
+	AttackFrontal:
+	Armament:
+		Weapon: MechanicRepair
+		TargetStances: Ally
+		ForceTargetStances: None
+	Captures:
+		CaptureTypes: building
+	AutoTarget:
+		ScanRadius: 8
+	-GainsExperience:
+	RenderSprites:
+	WithInfantryBody:
+		AttackSequence: throw
+	SpawnActorOnDeath@tiberium:
+		Probability: 6
+		DeathType:
+	SpawnActorOnDeath@tiberium2:
+		Probability: 6
+		DeathType:
+
+RANGER:
+	Inherits: ^Mutant
+	Inherits@3: ^BasicStealthDetection
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 21
+		Prerequisites: ~murax, muradr
+	Valued:
+		Cost: 350
+	Tooltip:
+		Name: Ranger
+		Description: Scout Soldier.\ncloaks on tiberium.\n  Detects cloaked units.\n  Strong vs Infantry.\n  Weak vs Vehicles.
+	Voiced:
+		VoiceSet: Umagon
+	Health:
+		HP: 110
+	Mobile:
+		Speed: 75
+	PoisonedByTiberium@buff:
+		Weapon: FiendBuffer
+	RevealsShroud:
+		Range: 11c0
+	Cloak@CLOAKGENERATOR:
+		UpgradeTypes: FiendCloak, cloakgenerator
+		UpgradeMinEnabledLevel: 1
+		InitialDelay: 15
+		CloakDelay: 15
+		IsPlayerPalette: true
+		CloakSound:
+		UncloakSound:
+		UncloakOn: Attack, Move
+	Armament@PRIMARY:
+		Weapon: RangerRifle
+		LocalOffset: 128,0,640
+		Name: OnFoot
+	Armament@GARRISON:
+		Weapon: GRangerRifle
+		LocalOffset: 128,0,640
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+	RenderSprites:
+		Image: UMAGON
+
+MUTFIEND:
+	Inherits: ^Mutant
+	Tooltip:
+		Name: Tiberian Fiend
+		Description: Tiberian Beast, fires tiberium shards at enemies.\nCannot be crushed.\n  Strong vs Infantry, Vehicles.\n  Weak vs Aircraft, Armor Piercing Weapons.
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 22
+		Prerequisites: ~murax, mustable
+	SpawnActorOnDeath@conversion:
+		Actor: cybdog
+		Probability: 100
+		OwnerType: Killer
+		DeathType: CabalDeathInfantry
+		RequiresLobbyCreeps: true
+	Valued:
+		Cost: 400
+	Health:
+		HP: 280
+		Shape: Circle
+			Radius: 213
+	-Crushable:
+	Armor:
+		Type: Light
+	Mobile:
+		Speed: 80
+	Voiced:
+		VoiceSet: Fiend
+	Targetable:
+		TargetTypes: Infantry, Ground
+	RenderSprites:
+		Image: doggie
+	Armament@Primary:
+		Weapon: FiendShard2
+		Name: OnFoot
+	Armament@Garrison:
+		Weapon: GFiendShard2
+	PoisonedByTiberium@buff:
+		Weapon: FiendBuffer
+	Cloak@CLOAKGENERATOR:
+		UpgradeTypes: FiendCloak, cloakgenerator
+		UpgradeMinEnabledLevel: 1
+		InitialDelay: 15
+		CloakDelay: 15
+		CloakSound:
+		UncloakSound:
+		IsPlayerPalette: true
+		UncloakOn: Attack, Move
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+
+AWARRIOR:
+	Inherits: ^Mutant
+	Inherits@1: ^MutRender
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 23
+		Prerequisites: ~murax, muhall
+	Valued:
+		Cost: 350
+	Tooltip:
+		Name: Forgotten Knight
+		Description: Suicide Infantry\nTurns into berserkers when killed.\n  Strong vs Infantry, Vehicles, Buildings.\n  Weak vs Aircraft, Anti Infantry Weapons.
+	Voiced:
+		VoiceSet: Rocket
+	Health:
+		HP: 150
+	Mobile:
+		Speed: 68
+	-SpawnActorOnDeath@conversion:
+	Armament@PRIMARY:
+		Weapon: KnightGun
+		Name: OnFoot
+		LocalOffset: 128,0,400
+	Armament@GARRISON:
+		Weapon: KnightGun
+		LocalOffset: 128,0,400
+	AttackFrontal:
+		Voice: Attack
+	SpawnActorOnDeath:
+		Actor: berserker
+		probability: 100
+
+PSYKER:
+	Inherits: ^Mutant
+	Inherits@1: ^MutRender
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 24
+		Prerequisites: ~murax, muhall
+		BuildLimit: 1
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: Mind Walker
+		Description: Forgotten Commando. Pure strain\nforgotten that can call down lightning.\nAttacks from afar.\n  Strong vs Vehicles, Aircraft, Buildings\n  Weak vs Infantry
+	Voiced:
+		VoiceSet: Umagon
+	Health:
+		HP: 100
+	Mobile:
+		Speed: 75
+	Targetable:
+		TargetTypes: Ground, Infantry, MindControlInmune
+	Armament@PRIMARY:
+		Weapon: PsykerRay
+		Name: OnFoot
+		LocalOffset: 128,0,640
+	Armament@GARRISON:
+		Weapon: GPsykerRay
+		LocalOffset: 128,0,640
+	AttackFrontal:
+		Voice: Attack
+		Armament: OnFoot
+		
+############################################
+# Scrin
+############################################
+shark:
+	Inherits: ^ScrinSoldier
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 24
+		Prerequisites: ~scrrax
+	Valued:
+		Cost: 330
+	Tooltip:
+		Name: Razorshark
+		Description: Anti-infantry creature, fast and weak, kills infantry instantly.\n  Strong vs Infantry\n  Weak vs Everything else
+	Selectable:
+		Class: Shark
+	GivesExperience:
+		Experience: 110
+	Health:
+		HP: 30
+	FreeActor@1:
+		Actor: sharkclone
+	FreeActor@2:
+		Actor: sharkclone
+	Mobile:
+		Speed: 78
+		Voice: Move
+	SpawnActorOnDeath@conversion:
+		Actor: cybdog
+		Probability: 100
+		OwnerType: Killer
+		DeathType: CabalDeathInfantry
+		RequiresLobbyCreeps: true
+	Guard:
+		Voice: Move
+	Passenger:
+		Voice: Move
+	RevealsShroud:
+		Range: 5c0
+	Armament:
+		Weapon: SharkJump
+	AttackLeap:
+		Voice: Attack
+	AttackMove:
+		Voice: Move
+	AutoTarget:
+		ScanRadius: 8
+		InitialStance: AttackAnything
+	Targetable:
+		TargetTypes: Ground, Infantry, Razorshark
+	WithInfantryBody:
+		AttackSequence: shoot
+		StandSequences: stand
+		IdleSequences: idle1, idle2, idle3, idle4
+	IgnoresDisguise:
+	DetectCloaked:
+		CloakTypes: Cloak, Hijacker
+	-TakeCover:
+
+LEGIO:
+	Inherits: ^ScrinSoldier
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 25
+		Prerequisites: ~scrrax
+	Selectable:
+		Class: Legio
+	Valued:
+		Cost: 450
+	GivesExperience:
+		Experience: 150
+	Tooltip:
+		Name: Legionnaire
+		Description: Scrin Frontile trooper. Resistant\nto damage. Cannot be crushed.\nIts weapon damage spreads to nearby cells.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry
+	Health:
+		HP: 140
+	-Crushable:
+	FreeActor@1:
+		Actor: legioclone
+	FreeActor@2:
+		Actor: legioclone
+	Mobile:
+		Speed: 60
+	Armament:
+		Weapon: LegioNeedler
+		LocalOffset: 500,250,800
+		FireDelay: 5
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: throw
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+SHAPESHIFTER:
+	Inherits: ^Soldier
+	Valued:
+		Cost: 750
+	Selectable:
+		Class: Shapeshifter
+	GivesExperience:
+		Experience: 250
+	Tooltip:
+		Name: Shapeshifter
+		Description: Infiltrates and captures enemy structures.\n  Unarmed
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 26
+		Prerequisites: ~scrrax
+	Voiced:
+		VoiceSet: Hijacker
+	WithDisguisingInfantryBody:
+	Disguise:
+	FreeActor@1:
+		Actor: shapeshifterclone
+	FreeActor@2:
+		Actor: shapeshifterclone
+	-PoisonedByTiberium:
+	Mobile:
+		Speed: 65
+	Health:
+		HP: 80
+	Passenger:
+		PipType: Yellow
+	EngineerRepair:
+	RepairsBridges:
+	WithInfantryBody:
+		IdleSequences: idle1, idle2, idle3, idle4
+	Captures:
+		CaptureTypes: building
+	-AutoTarget:
+	-GainsExperience:
+	RenderSprites:
+
+BUG:
+	Inherits: ^ScrinSoldier
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 27
+		Prerequisites: ~scrrax, scrradr
+	Selectable:
+		Class: bug
+	GivesExperience:
+		Experience: 300
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Purifier
+		Description: Heavy duty alien.\nCan take lots of punishment.\nInstakills infantry.\n  Strong vs infantry\n  Weak vs Vehicles, Aircraft.
+	FreeActor@1:
+		Actor: bugclone
+	FreeActor@2:
+		Actor: bugclone
+	Selectable:
+		Bounds: 26,30,0,-10
+	Health:
+		HP: 220
+	Mobile:
+		Speed: 60
+	SpawnActorOnDeath@conversion:
+		Actor: cybdog
+		Probability: 100
+		OwnerType: Killer
+		DeathType: CabalDeathInfantry
+		RequiresLobbyCreeps: true
+	Armor:
+		Type: light
+	Armament:
+		Weapon: BugRail
+		LocalOffset: 150,0,400
+		FireDelay: 5
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: throw
+	-TakeCover:
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+STALKER:
+	Inherits: ^ScrinSoldier
+	# Buildable:
+		# Queue: Infantry
+		# BuildPaletteOrder: 28
+		# Prerequisites: ~scrrax, scrtech
+	Selectable:
+		Class: Stalker
+	Valued:
+		Cost: 1000
+	GivesExperience:
+		Experience: 333
+	FreeActor@1:
+		Actor: stalkerclone
+	FreeActor@2:
+		Actor: stalkerclone
+	Tooltip:
+		Name: Stalker
+		Description: Disruption infantry\nConfuses enemies for shorter periods of time.\nchanging their alegiance.\nCan move through water.\n  Unarmed.
+	Health:
+		HP: 130
+	Mobile:
+		Speed: 80
+		TerrainSpeeds:
+			Water: 80
+		Crushes: crate
+	RevealsShroud:
+		Range: 6c0
+	Armament@prim:
+		Weapon: StalkerSteal
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: throw
+	-TakeCover:
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+FLOAT:
+	Inherits: ^ScrinSoldier
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 29
+		Prerequisites: ~scrrax, scrtech
+	Selectable:
+		Class: FLoat
+	Valued:
+		Cost: 1500
+	GivesExperience:
+		Experience: 500
+	-Crushable:
+	Tooltip:
+		Name: Floater
+		Description: Recon unit, suited for harassment.\nCan move through water and Cliffs.\n  Strong vs Buildings, Heavy Vehicles\n  Weak vs Infantry, Aircraft
+	Health:
+		HP: 180
+	FreeActor@1:
+		Actor: floatclone
+	FreeActor@2:
+		Actor: floatclone
+	Mobile:
+		Speed: 100
+		TerrainSpeeds:
+			Cliff: 80
+			Water: 80
+	Armament@prim:
+		Weapon: FloatTesla
+		LocalOffset: 0,-250,500
+		FireDelay: 10
+	Armament@sec:
+		Weapon: FloatTesla
+		LocalOffset: 0,250,500
+		FireDelay: 10
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: throw
+	-TakeCover:
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+##########################################################
+# Clones
+##########################################################
+SHARKCLONE:
+	Inherits: shark
+	RenderSprites:
+		Image: Shark
+	-Buildable:
+	-FreeActor@1:
+	-FreeActor@2:
+
+LEGIOCLONE:
+	Inherits: LEGIO
+	RenderSprites:
+		Image: legio
+	-Buildable:
+	-FreeActor@1:
+	-FreeActor@2:
+
+FLOATCLONE:
+	Inherits: FLOAT
+	RenderSprites:
+		Image: float
+	-Buildable:
+	-FreeActor@1:
+	-FreeActor@2:
+
+SHAPESHIFTERCLONE:
+	Inherits: SHAPESHIFTER
+	RenderSprites:
+		Image: shapeshifter
+	-Buildable:
+	-FreeActor@1:
+	-FreeActor@2:
+
+STALKERCLONE:
+	Inherits: STALKER
+	RenderSprites:
+		Image: stalker
+	-Buildable:
+	-FreeActor@1:
+	-FreeActor@2:
+
+BUGCLONE:
+	Inherits: BUG
+	RenderSprites:
+		Image: bug
+	-Buildable:
+	-FreeActor@1:
+	-FreeActor@2:
+
+############################################
+# CABAL
+############################################
+CABSENTRY:
+	Inherits: ^CabalDroneInfantry
+	Inherits@1: ^CabRender
+	Armor:
+		Type: None
+	Valued:
+		Cost: 200
+	Tooltip:
+		Name: Sentry
+		Description: Hover Drone armed with armor piercing weaponry.\nCan hide itself but cannot attack aircraft.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 12
+		Prerequisites: ~cabclaw
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	SupplyTruck
+		Payload: 100
+		Voice: Move
+	Voiced:
+		VoiceSet: Cyborg
+	Mobile:
+		Speed: 65
+		UpgradeTypes: notmobile
+		UpgradeMaxEnabledLevel: 0
+	Health:
+		HP: 125
+	Passenger:
+	Armament@primary:
+		Weapon: SentryGun
+	AttackFrontal:
+		Voice: Attack
+	SelectionDecorations:
+		VisualBounds: 22,32,-1,-9
+	DeployToUpgrade:
+		DeployedUpgrades: deployed, notmobile
+		UndeployedUpgrades: undeployed
+		DeployAnimation: make
+		Facing: 160
+		AllowedTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green
+		DeploySound: place2.aud
+		UndeploySound: clicky1.aud
+	Hovers:
+		UpgradeTypes: undeployed
+		UpgradeMinEnabledLevel: 1
+	WithInfantryBody:
+		UpgradeTypes: undeployed
+		UpgradeMinEnabledLevel: 1
+	WithSpriteBody@deployed:
+		UpgradeTypes: undeployed
+		UpgradeMaxEnabledLevel: 0
+	RangeMultiplier:
+		UpgradeTypes: deployed
+		Modifier: 1
+	Cloak@asd:
+		Palette: cloakcab
+		IsPlayerPalette: true
+		UpgradeTypes: deployed
+		UpgradeMinEnabledLevel: 1
+
+CYBORG:
+	Inherits: ^Cyborg
+	Armor:
+		Type: Light
+	Valued:
+		Cost: 350
+	Tooltip:
+		Name: Cyborg Infantry
+		Description: Heavy armored unit.\n  Strong vs Infantry, Light armor\n  Weak vs Anti Armor weapons, Aircraft
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 11
+		Prerequisites: ~cabclaw
+	Selectable:
+		Bounds: 22,32,-1,-9
+	SupplyTruck
+		Payload: 175
+		Voice: Move
+	Voiced:
+		VoiceSet: Cyborg
+	Mobile:
+		Speed: 45
+	Health:
+		HP: 200
+	Passenger:
+	Armament:
+		Weapon: CyborgVulcan
+	AttackFrontal:
+		Voice: Attack
+	SelectionDecorations:
+		VisualBounds: 16,31,0,-10
+
+SWARMLING:
+	Inherits: ^CabalDroneInfantry
+	Valued:
+		Cost: 550
+	Tooltip:
+		Name: Swarmling
+		Description: Infiltrates and captures enemy structures.\n  Unarmed
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 13
+		Prerequisites: ~cabclaw
+	SupplyTruck
+		Payload: 275
+		Voice: Move
+	Voiced:
+		VoiceSet: Engineer
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 80
+	Passenger:
+		PipType: Yellow
+	EngineerRepair:
+	RepairsBridges:
+	Captures:
+		CaptureTypes: building
+	-AutoTarget:
+
+PDRONE:
+	Inherits: ^CabalDroneInfantry
+	Armor:
+		Type: none
+	Valued:
+		Cost: 150
+	SupplyTruck
+		Payload: 75
+		Voice: Move
+	Tooltip:
+		Name: Reclaimer
+		Description: Utility drone, soldiers killed by this unit will be turned into workers.\nCan only target infantry.\n  Strong vs Infantry\n  Weak vs Everything else.
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 14
+		Prerequisites: ~cabclaw, cabgrinder
+	Selectable:
+		Bounds: 22,32,0,0
+	Hovers:
+	Mobile:
+		Speed: 75
+		-UpgradeTypes: WebDisable
+		TerrainTypes:
+			Water: 70
+	Health:
+		HP: 110
+	Passenger:
+	WithInfantryBody:
+		AttackSequence: shoot
+	AutoTarget:
+		ScanRadius: 8
+	Armament:
+		Weapon: ProcessingHuman
+	AttackFrontal:
+		Voice: Attack
+	-UpgradeOverlay@WebDisable:
+	-DisableOnUpgrade@WebDisable:
+	-TimedUpgradeBar@WebDisable:
+
+REAPERCAB:
+	Inherits: ^CabalDroneInfantry
+	Inherits@2: ^CyborgSelfHeal
+	Valued:
+		Cost: 600
+	Tooltip:
+		Name: Cyborg Reaper
+		Description: Cyborg, has mortar shells that can stop infantry.\nAnd a railgun turret to deal with aircraft.\n  Strong vs Aircraft\n  Weak vs Vehicles, Buildings.
+	Buildable:
+		Queue: Infantry
+		SharesCell: false
+		BuildPaletteOrder: 15
+		Prerequisites: ~cabclaw, cabradr
+	RepairableNear:
+		Buildings: gaweap, naweap, muweap, cabweap, scrweap
+	Selectable:
+		Bounds: 40,40,0,-10
+	SupplyTruck
+		Payload: 300
+		Voice: Move
+	Mobile:
+		Speed: 80
+		SharesCell: False
+		-UpgradeTypes: WebDisable
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	Health:
+		HP: 400
+	Voiced:
+		VoiceSet: CyborgReap
+	Passenger:
+	Armor:
+		Type: Wood
+	Armament@primary:
+		Weapon: ReaperMortar
+		LocalOffset: 0,0,500
+	Armament@secondary:
+		Weapon: ReaperRail
+		LocalOffset: 0,0,2000
+	AttackFrontal:
+		Voice: Attack
+	-UpgradeOverlay@WebDisable:
+	-DisableOnUpgrade@WebDisable:
+	-TimedUpgradeBar@WebDisable:
+
+GLAD:
+	Inherits: ^Cyborg
+	Inherits@2: ^CyborgSelfHeal
+	Inherits@3: ^BasicStealthDetection
+	Armor:
+		Type: Heavy
+	Valued:
+		Cost: 750
+	SupplyTruck
+		Payload: 375
+		Voice: Move
+	RepairableNear:
+		Buildings: gaweap, naweap, muweap, cabweap, scrweap
+	Tooltip:
+		Name: Gladiator
+		Description: Advanced cyborg construct, extremely resilient\nand capable of piercing enemy armor.\n  Detects cloaked units.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft.
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 16
+		Prerequisites: ~cabclaw, cabtech
+	Selectable:
+		Bounds: 35,30,0,-10
+	Voiced:
+		VoiceSet: CyborgCommando
+	Mobile:
+		Speed: 56
+	Health:
+		HP: 550
+	Passenger:
+	Armament@primary:
+		Weapon: GLAD120mm
+		LocalOffset: 170,85,683
+	Armament@secondary:
+		Weapon: GLAD120mm
+		LocalOffset: 170,85,683
+	Armament@secondary:
+		Weapon: CyborgVulcan
+		LocalOffset: 170,85,683
+	AttackFrontal:
+		Voice: Attack
+
+CYC2:
+	Inherits: ^Cyborg
+	Inherits@2: ^CyborgSelfHeal
+	Armor:
+		Type: Heavy
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Cyborg Commando
+		Description: Elite cybernetic infantry unit.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft\nMaximum 1 can be trained.
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 17
+		Prerequisites: ~cabclaw, cabtech
+		BuildLimit: 1
+	RepairableNear:
+		Buildings: gaweap, naweap, muweap, cabweap, scrweap
+	SupplyTruck
+		Payload: 600
+		Voice: Move
+	Voiced:
+		VoiceSet: CyborgCommando
+	Mobile:
+		Speed: 56
+	Cloak@CLOAKGENERATOR:
+		UpgradeTypes:
+		InitialDelay: 0
+		CloakDelay: 90
+		IsPlayerPalette: true
+		CloakSound: cloak5.aud
+		UncloakSound: cloak5.aud
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+	Health:
+		HP: 300
+	Passenger:
+	Targetable:
+		TargetTypes: Ground, Infantry, MindControlInmune
+	Armament:
+		Weapon: CyCannon
+		LocalOffset: 170,85,683
+	AttackFrontal:
+		Voice: Attack
+	SelectionDecorations:
+		VisualBounds: 16,32,-1,-12
+
+################################################
+# Non Combat Cyborgs
+################################################
+CABALMONEYDUMMY:
+	Inherits: ^BasicBuilding
+	Targetable:
+		TargetTypes:
+	-WithSpriteBody:
+	-WithBuildingExplosion:
+	-ShakeOnDeath:
+	-SoundOnDamageTransition:
+	AutoSelectionSize:
+	Selectable:
+		Bounds: 1,1
+	SelfHealing:
+		Step: -10
+		HealIfBelow: 200
+	RenderSprites:
+		Image: blackhanddummy
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+	CashTrickler:
+		Amount: 10
+		Period: 999
+
+CABALMONEYDUMMY1:
+	Inherits: ^BasicBuilding
+	Targetable:
+		TargetTypes:
+	-WithSpriteBody:
+	-WithBuildingExplosion:
+	-ShakeOnDeath:
+	-SoundOnDamageTransition:
+	AutoSelectionSize:
+	Selectable:
+		Bounds: 1,1
+	SelfHealing:
+		Step: -5
+		HealIfBelow: 110
+	RenderSprites:
+		Image: blackhanddummy
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+	CashTrickler:
+		Amount: 250
+		Period: 999
+
+WORKER:
+	Inherits: ^Soldier
+	# Buildable:
+		# Queue: Infantry
+		# BuildPaletteOrder: 10
+		# Prerequisites: ~gapile
+	Valued:
+		Cost: 120
+	Tooltip:
+		Name: Worker Unit
+		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+	Health:
+		HP: 90
+	Mobile:
+		Speed: 56
+	SupplyTruck
+		Payload: 45
+		Voice: Move
+	Armament@PRIMARY:
+		Weapon: Minigun
+		UpgradeTypes: eliteweapon
+		UpgradeMaxEnabledLevel: 0
+		UpgradeMaxAcceptedLevel: 1
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: shoot
+	RenderSprites:
+	-SpawnActorOnDeath@conversion:
+	-SpawnActorOnDeath@cabmoney:
+
+PALADIN2:
+	Inherits: ^CabalDroneInfantry
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Sentinel
+		Description: General purpose mechanized walker.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+	# Buildable:
+		# Queue: Infantry
+		# BuildPaletteOrder: 30
+		# Prerequisites: ~cabrax
+	Mobile:
+		TurnSpeed: 5
+		Speed: 56
+	Health:
+		HP: 100
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 8c0
+	SupplyTruck
+		Payload: 80
+		Voice: Move
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithInfantryBody:
+	Turreted:
+		TurnSpeed: 5
+	AttackTurreted:
+		Voice: Attack
+	WithSpriteTurret:
+		Recoils: no
+	RenderSprites:
+		Scale: 1.5
+	Armament:
+		Weapon: SentryGun
+		Recoil: 127
+		RecoilRecovery: 26
+	# RenderVoxels:
+	# WithVoxelBarrel:
+		# LocalOffset: -128, 85, 256
+	AutoTarget:
+	Selectable:
+		Bounds: 30, 42, 0, -8
+	-SpawnActorOnDeath@cabmoney:
+
+cybdog:
+	Inherits: ^Cyborg
+	Armor:
+		Type: Light
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: Cyberdog
+		Description: Cybernetic infantry unit.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
+	# Buildable:
+		# Queue: Infantry
+		# BuildPaletteOrder: 40
+		# Prerequisites: ~cabclaw, cabradr
+	Selectable:
+		Bounds: 16,31,0,-10
+	Voiced:
+		VoiceSet: Cyborg
+	SupplyTruck
+		Payload: 150
+		Voice: Move
+	Mobile:
+		Speed: 65
+	Health:
+		HP: 300
+	Passenger:
+	RevealsShroud:
+		Range: 5c0
+	Armament:
+		Weapon: Vulcan3
+	AttackFrontal:
+		Voice: Attack
+	SelectionDecorations:
+		VisualBounds: 16,31,0,-10

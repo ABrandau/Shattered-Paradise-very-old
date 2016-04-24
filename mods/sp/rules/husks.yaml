@@ -184,6 +184,7 @@ WASP.Husk:
 	
 FIREFLY.Husk:		
 	Inherits: ^AircraftHusk
+	Inherits@5: ^CabRender
 	Tooltip:
 		Name: Firefly
 	Selectable:
