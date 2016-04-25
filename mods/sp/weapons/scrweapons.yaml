@@ -11,6 +11,7 @@ SharkJump:
 		DamageTypes: BulletDeath
 
 LegioNeedler:
+	Inherits: ^RocketWarhead
 	ReloadDelay: 100
 	Range: 5c0
 	MinRange: 0c512
@@ -32,12 +33,6 @@ LegioNeedler:
 		Spread: 350
 		Damage: 18
 		ValidTargets: Ground, Air
-		Versus:
-			None: 25
-			Wood: 75
-			Light: 85
-			Heavy: 110
-			Concrete: 70
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: scrinpulse3
@@ -97,6 +92,7 @@ StalkerSteal:
 		InvalidTargets: C4, MindControlInmune
 
 BugRail:
+	Inherits: ^FlameWarhead
 	ReloadDelay: 100
 	Range: 4c0
 	Report: lastur1.aud
@@ -106,18 +102,13 @@ BugRail:
 	Warhead@1Dam: SpreadDamage
 		Spread: 125
 		Damage: 25
-		Versus:
-			None: 600
-			Wood: 75
-			Light: 45
-			Heavy: 15
-			Concrete: 5
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 
 #################################################
 # Vehicles
 #################################################
 ScorpAcid:
+	Inherits: ^AcidWarhead
 	ReloadDelay: 100
 	Range: 4c0
 	Burst: 12
@@ -131,17 +122,12 @@ ScorpAcid:
 	Warhead@1Dam: SpreadDamage
 		Spread: 80
 		Damage: 13
-		Versus:
-			None: 200
-			Wood: 100
-			Light: 45
-			Heavy: 15
-			Concrete: 2
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, TiberiumDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 
 ScrMbtCannon:
+	Inherits: ^APWarhead
 	ReloadDelay: 90
 	Range: 6c0
 	Report: 120mmf.aud
@@ -157,13 +143,7 @@ ScrMbtCannon:
 		Palette: pips
 	Warhead@1Dam: SpreadDamage
 		Spread: 512
-		Damage: 80
-		Versus:
-			None: 10
-			Wood: 60
-			Light: 80
-			Heavy: 110
-			Concrete: 60
+		Damage: 90
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: scrinpulse2
@@ -177,45 +157,8 @@ ScrMbtCannon:
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
 
-DronecPlane:
-	ReloadDelay: 100
-	Range: 11c0
-	MinRange: 5c0
-	Report: 120mmf.aud
-	Burst: 1
-	ValidTargets: Ground, Air
-	BurstDelay: 5
-	Projectile: Missile
-		Speed: 130
-		Image: projwyverm
-		ContrailLength: 30
-		Palette: playerscrin
-		Shadow: false
-		Angle: 220
-	Warhead@1Dam: SpreadDamage
-		Spread: 250
-		Damage: 50
-		ValidTargets: Ground, Air
-		Versus:
-			None: 150
-			Wood: 90
-			Light: 70
-			Heavy: 50
-			Concrete: 100
-		DamageTypes: Prone50Percent, TriggerProne, ScrinDroneDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: destroexp
-		ImpactSound: expnew14.aud
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: destroexp
-		ExplosionPalette: player
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
-	Warhead@4Smu: LeaveSmudge
-		SmudgeType: MediumCrater
-
 Glyder2Cannon:
+	Inherits: ^FullDamage
 	ReloadDelay: 100
 	Range: 6c0
 	Burst: 4
@@ -228,10 +171,9 @@ Glyder2Cannon:
 		Shadow: true
 		Palette: apblue
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c512
+		Spread: 350
 		Damage: 20
 		ValidTargets: Air
-		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: scrinexplo1
@@ -247,6 +189,7 @@ Glyder2Cannon:
 		SmudgeType: SmallCrater
 
 TripodLaser:
+	Inherits: ^FullDamage
 	ReloadDelay: 80
 	Range: 6c0
 	Report: lastur1.aud
@@ -263,6 +206,7 @@ TripodLaser:
 # Aircraft
 #################################################
 StormRiderBlast:
+	Inherits: ^RifleWarhead
 	ReloadDelay: 75
 	Range: 6c512
 	ValidTargets: Ground
@@ -280,11 +224,6 @@ StormRiderBlast:
 		Spread: 171
 		Damage: 30
 		ValidTargets: Ground
-		Versus:
-			Wood: 60
-			Light: 40
-			Heavy: 25
-			Concrete: 10
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: scrinexplo1
@@ -293,6 +232,7 @@ StormRiderBlast:
 		InvalidImpactTypes: Water
 
 StormRiderBlastAA:
+	Inherits: ^FullDamage
 	ReloadDelay: 75
 	Range: 6c512
 	ValidTargets: Air
@@ -310,7 +250,6 @@ StormRiderBlastAA:
 		Spread: 171
 		Damage: 25
 		ValidTargets: Air
-		Versus:
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: scrinexplo1
@@ -319,6 +258,7 @@ StormRiderBlastAA:
 		InvalidImpactTypes: Water
 
 Glyder1Cannon:
+	Inherits: ^APWarhead
 	ReloadDelay: 100
 	Range: 6c0
 	Burst: 3
@@ -334,12 +274,6 @@ Glyder1Cannon:
 		Spread: 0c512
 		Damage: 18
 		ValidTargets: Ground
-		Versus:
-			None: 25
-			Wood: 65
-			Light: 75
-			Heavy: 100
-			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: scrinexplo1
@@ -355,6 +289,7 @@ Glyder1Cannon:
 		SmudgeType: SmallCrater
 
 BattleshipCannon:
+	Inherits: BombWarhead
 	ReloadDelay: 45
 	Range: 5c768
 	Report: 120mmf.aud
@@ -372,14 +307,8 @@ BattleshipCannon:
 		Angle: 15
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 40
+		Damage: 30
 		ValidTargets: Ground, Air, water
-		Versus:
-			None: 150
-			Wood: 80
-			Light: 65
-			Heavy: 50
-			Concrete: 20
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: scrinexplo1
@@ -395,7 +324,8 @@ BattleshipCannon:
 		# SmudgeType: MediumCrater
 
 DestroyerCannon:
-	ReloadDelay: 200
+	Inherits: ArtilleryWarhead
+	ReloadDelay: 150
 	Range: 16c0
 	MinRange: 5c0
 	Report: 120mmf.aud
@@ -412,12 +342,6 @@ DestroyerCannon:
 	Warhead@1Dam: SpreadDamage
 		Spread: 750
 		Damage: 80
-		Versus:
-			None: 150
-			Wood: 90
-			Light: 70
-			Heavy: 50
-			Concrete: 100
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: destroexp
@@ -458,6 +382,7 @@ CouncilSteal:
 # Defences
 #################################################
 NeedlerAcid:
+	Inherits: ^AcidWarhead
 	ReloadDelay: 100
 	Range: 7c0
 	Burst: 12
@@ -471,17 +396,12 @@ NeedlerAcid:
 	Warhead@1Dam: SpreadDamage
 		Spread: 80
 		Damage: 8
-		Versus:
-			None: 200
-			Wood: 100
-			Light: 45
-			Heavy: 15
-			Concrete: 2
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, TiberiumDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 
 TractorBeam:
+	Inherits: ^FullDamage
 	ReloadDelay: 25
 	Range: 6c0
 	Report: 120mmf.aud
@@ -506,6 +426,7 @@ TractorBeam:
 		ValidTargets: Air
 
 DronePlane:
+	Inherits: ^RocketWarhead
 	ReloadDelay: 1
 	Range: 11c0
 	MinRange: 2c0
@@ -524,12 +445,6 @@ DronePlane:
 		Spread: 500
 		Damage: 70
 		ValidTargets: Ground, Air
-		Versus:
-			None: 50
-			Wood: 70
-			Light: 90
-			Heavy: 120
-			Concrete: 100
 		DamageTypes: Prone50Percent, TriggerProne, ScrinDroneDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: destroexp

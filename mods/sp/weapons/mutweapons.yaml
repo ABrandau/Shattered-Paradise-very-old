@@ -1,4 +1,5 @@
 MarauderShotgun:
+	Inherits: ^RifleWarhead
 	ReloadDelay: 40
 	Range: 4c0
 	Report: gun18.aud
@@ -10,11 +11,6 @@ MarauderShotgun:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 8
-		Versus:
-			Wood: 60
-			Light: 40
-			Heavy: 20
-			Concrete: 10
 		DamageTypes: Prone70Percent, TriggerProne, TiberiumDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
@@ -24,6 +20,7 @@ MarauderShotgun:
 		ValidImpactTypes: Water
 
 SkirmisherRocket:
+	Inherits: ^RocketWarhead
 	ReloadDelay: 75
 	Range: 5c0
 	Report: rketinf1.aud
@@ -42,12 +39,6 @@ SkirmisherRocket:
 		Spread: 128
 		Damage: 25
 		ValidTargets: Ground, Air
-		Versus:
-			None: 25
-			Wood: 65
-			Light: 75
-			Heavy: 100
-			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
@@ -79,7 +70,8 @@ MechanicRepair:
 		ValidTargets: Repair		
 		
 FiendShard2:
-	ReloadDelay: 75
+	Inherits: ^APWarhead
+	ReloadDelay: 60
 	Burst: 2
 	Range: 4c0
 	Report: fiend2.aud
@@ -94,11 +86,6 @@ FiendShard2:
 	Warhead@1Dam: SpreadDamage
 		Damage: 8
 		ValidTargets: Ground
-		Versus:
-			none: 50
-			Light: 75
-			Heavy: 100
-			Concrete: 20
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
@@ -107,6 +94,7 @@ FiendShard2:
 		ValidImpactTypes: Water		
 		
 RangerRifle:
+	Inherits: ^RifleWarhead
 	ReloadDelay: 75
 	Range: 6c0
 	Report: gun18.aud
@@ -115,11 +103,6 @@ RangerRifle:
 	Warhead@1Dam: SpreadDamage
 		Spread: 22
 		Damage: 35
-		Versus:
-			Wood: 60
-			Light: 40
-			Heavy: 25
-			Concrete: 10
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, TiberiumDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
@@ -129,6 +112,7 @@ RangerRifle:
 		ValidImpactTypes: Water
 
 KnightGun:
+	Inherits: ^FullDamage
 	ReloadDelay: 60
 	Range: 6c0
 	Report: rketinf1.aud
@@ -141,8 +125,6 @@ KnightGun:
 		Spread: 350
 		Damage: 18
 		ValidTargets: Ground
-		Versus:
-			Concrete: 30
 		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeathStrong
 	Warhead@2Eff: CreateEffect
 		Explosions: tib_expsmall
@@ -151,6 +133,7 @@ KnightGun:
 		SmudgeType: SmallCrater
 
 PsykerRay:
+	Inherits: ^FullDamage
 	ReloadDelay: 150
 	Range: 12c0
 	Burst: 3
@@ -160,9 +143,6 @@ PsykerRay:
 	Warhead@1Dam: SpreadDamage
 		Spread: 298
 		Damage: 100
-		Versus:
-			Heavy: 75
-			Concrete: 35
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_explosion
@@ -178,9 +158,9 @@ PsykerRay:
 		
 ################################################
 # GARRISON
-################################################		
-		
+################################################
 GMarauderShotgun:
+	Inherits: ^RifleWarhead
 	ReloadDelay: 40
 	Range: 6c0
 	Report: gun18.aud
@@ -192,11 +172,6 @@ GMarauderShotgun:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 15
-		Versus:
-			Wood: 60
-			Light: 40
-			Heavy: 20
-			Concrete: 10
 		DamageTypes: Prone70Percent, TriggerProne, TiberiumDeath 
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
@@ -206,6 +181,7 @@ GMarauderShotgun:
 		ValidImpactTypes: Water
 
 GSkirmisherRocket:
+	Inherits: ^RocketWarhead
 	ReloadDelay: 65
 	Range: 6c0
 	MinRange: 0c512
@@ -225,12 +201,6 @@ GSkirmisherRocket:
 		Spread: 128
 		Damage: 25
 		ValidTargets: Ground
-		Versus:
-			None: 25
-			Wood: 65
-			Light: 75
-			Heavy: 100
-			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
@@ -249,6 +219,7 @@ GSkirmisherRocket:
 		SmudgeType: SmallCrater
 
 GFiendShard2:
+	Inherits: ^APWarhead
 	ReloadDelay: 50
 	Burst: 2
 	Range: 6c0
@@ -261,12 +232,7 @@ GFiendShard2:
 		Angle: 60
 		Palette: greentiberium
 	Warhead@1Dam: SpreadDamage
-		Damage: 25
-		Versus:
-			none: 50
-			Light: 60
-			Heavy: 60
-			Concrete: 20
+		Damage: 8
 		DamageTypes: Prone100Percent, TriggerProne, BulletDeath, TiberiumDeath
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
@@ -275,6 +241,7 @@ GFiendShard2:
 		ValidImpactTypes: Water		
 		
 GRangerRifle:
+	Inherits: ^RifleWarhead
 	ReloadDelay: 75
 	Range: 6c0
 	Report: gun18.aud
@@ -283,11 +250,6 @@ GRangerRifle:
 	Warhead@1Dam: SpreadDamage
 		Spread: 10
 		Damage: 10
-		Versus:
-			Wood: 60
-			Light: 40
-			Heavy: 25
-			Concrete: 10
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, TiberiumDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
@@ -297,6 +259,7 @@ GRangerRifle:
 		ValidImpactTypes: Water
 		
 GWarriorAcid:
+	Inherits: ^AcidWarhead
 	ReloadDelay: 75
 	Range: 3c0
 	Report: flamtnk1.aud
@@ -310,17 +273,12 @@ GWarriorAcid:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 3
-		Versus:
-			None: 200
-			Wood: 148
-			Light: 85
-			Heavy: 45
-			Concrete: 2
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, TiberiumDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 
 GPsykerRay:
+	Inherits: ^FullDamage
 	ReloadDelay: 150
 	Range: 12c0
 	Burst: 3
@@ -330,9 +288,6 @@ GPsykerRay:
 	Warhead@1Dam: SpreadDamage
 		Spread: 298
 		Damage: 100
-		Versus:
-			Heavy: 75
-			Concrete: 35
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_explosion
@@ -349,20 +304,12 @@ GPsykerRay:
 # Beast
 ###############################################################		
 BerserkerBlow:
+	Inherits: ^MeleeWarhead
 	ReloadDelay: 50
 	Range: 1c512
 	Report: fiend2.aud
 	Projectile: Bullet
 		Speed: 5c682
-	Warhead@1Dam: SpreadDamage
-		Spread: 42
-		Damage: 15
-		Versus:
-			None: 100
-			Wood: 80
-			Light: 65
-			Heavy: 45
-			Concrete: 5
 		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath, TiberiumDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
@@ -371,6 +318,7 @@ BerserkerBlow:
 		SmudgeType: SmallCrater
 
 WolfAcid:
+	Inherits: ^AcidWarhead
 	ReloadDelay: 75
 	Range: 4c0
 	Report: flamtnk1.aud
@@ -385,13 +333,7 @@ WolfAcid:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 14
-		ValidTargets: Ground
-		Versus:
-			None: 300
-			Wood: 148
-			Light: 80
-			Heavy: 60
-			Concrete: 2		
+		ValidTargets: Ground	
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
@@ -401,6 +343,7 @@ WolfAcid:
 		Upgrades: ForgInfantrydeBuff
 
 BullAcid:
+	Inherits: ^AcidWarhead
 	ReloadDelay: 75
 	Range: 4c0
 	Report: flamtnk1.aud
@@ -415,13 +358,7 @@ BullAcid:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 2
-		ValidTargets: Ground		
-		Versus:
-			None: 300
-			Wood: 148
-			Light: 80
-			Heavy: 60
-			Concrete: 2		
+		ValidTargets: Ground	
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
@@ -431,6 +368,7 @@ BullAcid:
 		Upgrades: ForgInfantrydeBuff
 		
 DeathclawBlow:
+	Inherits: ^MeleeWarhead
 	ReloadDelay: 60
 	Range: 1c0
 	Report: fiend2.aud
@@ -439,12 +377,6 @@ DeathclawBlow:
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 60
-		Versus:
-			None: 100
-			Wood: 80
-			Light: 65
-			Heavy: 45
-			Concrete: 5
 		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath, TiberiumDeath
 	# Warhead@emp: GrantUpgrade
 		# Range: 300
@@ -459,6 +391,7 @@ DeathclawBlow:
 # Vehicle
 ###############################################################				
 IFVulcan:
+	Inherits: ^RifleWarhead
 	ReloadDelay: 35
 	Burst: 1
 	Range: 4c0
@@ -468,12 +401,6 @@ IFVulcan:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 25
-		Versus:
-			None: 100
-			Wood: 60
-			Light: 40
-			Heavy: 25
-			Concrete: 10
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, TiberiumDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -484,6 +411,7 @@ IFVulcan:
 		ValidImpactTypes: Water	
 	
 LeonidCannon:
+	Inherits: ^APWarhead
 	ReloadDelay: 75
 	Range: 4c0
 	Report: 120mmf.aud
@@ -493,12 +421,6 @@ LeonidCannon:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 40
-		Versus:
-			None: 25
-			Wood: 65
-			Light: 75
-			Heavy: 100
-			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_clsn
@@ -513,6 +435,7 @@ LeonidCannon:
 		SmudgeType: MediumCrater			
 		
 QuadFire:
+	Inherits: ^RifleWarhead
 	ReloadDelay: 50
 	Burst: 2
 	Range: 6c0
@@ -531,11 +454,6 @@ QuadFire:
 		ValidTargets: Ground
 		InvalidTargets: Air
 		Damage: 35
-		Versus:
-			Wood: 70
-			Light: 50
-			Heavy: 30
-			Concrete: 5
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, TiberiumDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -567,6 +485,7 @@ QuadFireAA:
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, TiberiumDeath
 		
 TiberianRocket:
+	Inherits: ArtilleryWarhead
 	ReloadDelay: 250
 	Range: 12c0
 	Burst: 10
@@ -590,10 +509,6 @@ TiberianRocket:
 		Damage: 55
 		ValidTargets: Ground
 		Versus:
-			Wood: 75
-			Light: 60
-			Heavy: 25
-			Concrete: 50
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, TiberiumDeath
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
@@ -675,6 +590,7 @@ MiniNuke:
 # Aircraft
 #################################################################
 GargoylVulcan:
+	Inherits: ^RifleWarhead
 	ReloadDelay: 50
 	Range: 6c0
 	Burst: 1
@@ -688,10 +604,6 @@ GargoylVulcan:
 		Damage: 30
 		ValidTargets: Infantry
 		Versus:
-			Wood: 60
-			Light: 40
-			Heavy: 25
-			Concrete: 10
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, TiberiumDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -702,6 +614,7 @@ GargoylVulcan:
 		ValidImpactTypes: Water
 		
 GargoylRocket:
+	Inherits: ^RocketWarhead
 	ReloadDelay: 90
 	Range: 6c0
 	Report: orcamis1.aud
@@ -722,12 +635,6 @@ GargoylRocket:
 		Damage: 50
 		ValidTargets: Ground, Vehicle, Building
 		InvalidTargets: Infantry	
-		Versus:
-			None: 30
-			Wood: 65
-			Light: 150
-			Heavy: 100
-			Concrete: 30
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_bang
@@ -746,6 +653,7 @@ GargoylRocket:
 		SmudgeType: SmallCrater
 		
 GargoylRocketAA:
+	Inherits: ^FullDamage
 	ReloadDelay: 100
 	Range: 6c0
 	Burst: 3
@@ -765,12 +673,6 @@ GargoylRocketAA:
 		Spread: 110
 		Damage: 10
 		ValidTargets: Air
-		Versus:
-			None: 30
-			Wood: 80
-			Light: 150
-			Heavy: 100
-			Concrete: 30
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_bang
@@ -782,6 +684,7 @@ GargoylRocketAA:
 		ValidImpactTypes: Air, AirHit
 
 FalconPunch:
+	Inherits: BombWarhead
 	ValidTargets: Ground, Water
 	ReloadDelay: 1
 	Range: 4c0
@@ -795,12 +698,6 @@ FalconPunch:
 		Damage: 5
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water
-		Versus:
-			None: 200
-			Wood: 100
-			Light: 80
-			Heavy: 40
-			Concrete: 10
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallCrater
@@ -811,6 +708,7 @@ FalconPunch:
 # Structures
 #################################################################
 FlakFire:
+	Inherits: ^FullDamage
 	ReloadDelay: 75
 	Range: 6c0
 	Report: cygun1.aud

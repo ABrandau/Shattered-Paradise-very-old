@@ -1,4 +1,5 @@
 MarineRifle:
+	Inherits: ^RifleWarhead
 	ReloadDelay: 70
 	Range: 6c0
 	Report: infgun3.aud, gostgun1.aud, slvkgun1.aud
@@ -7,11 +8,6 @@ MarineRifle:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 20
-		Versus:
-			Wood: 60
-			Light: 40
-			Heavy: 25
-			Concrete: 10
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -22,6 +18,7 @@ MarineRifle:
 		ValidImpactTypes: Water
 
 JJCannon:
+	Inherits: ^APWarhead
 	ReloadDelay: 55
 	Range: 4c0
 	Report: 120mmf.aud
@@ -54,6 +51,7 @@ JJCannon:
 		SmudgeType: SmallCrater		
 		
 Grenade:
+	Inherits: ^GrenadeWarhead
 	ReloadDelay: 80
 	Range: 7c0
 	MinRange: 2c0
@@ -69,12 +67,6 @@ Grenade:
 		Spread: 128
 		Damage: 40
 		ValidTargets: Ground
-		Versus:
-			None: 60
-			Wood: 100
-			Light: 40
-			Heavy: 15
-			Concrete: 28
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_grey_explosion
@@ -104,6 +96,7 @@ Heal:
 		ValidTargets: Infantry
 		
 TrooperRail:
+	Inherits: ^FullDamage
 	ReloadDelay: 125
 	Range: 5c0
 	Report: biggun1.aud
@@ -127,6 +120,7 @@ TrooperRail:
 # Vehicles
 #############################################		
 WolverineVulcan:
+	Inherits: ^RifleWarhead
 	ReloadDelay: 40
 	Range: 6c0
 	Report: tsgun4.aud
@@ -135,11 +129,6 @@ WolverineVulcan:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 25
-		Versus:
-			Wood: 60
-			Light: 40
-			Heavy: 25
-			Concrete: 10
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -150,6 +139,7 @@ WolverineVulcan:
 		ValidImpactTypes: Water
 		
 Titan120mm:
+	Inherits: ^APWarhead
 	ReloadDelay: 80
 	Range: 5c0
 	Report: 120mmf.aud
@@ -158,12 +148,6 @@ Titan120mm:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 70
-		Versus:
-			None: 25
-			Wood: 65
-			Light: 75
-			Heavy: 100
-			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_clsn
@@ -178,6 +162,7 @@ Titan120mm:
 		SmudgeType: MediumCrater
 	
 HoverMissile:
+	Inherits: ^RocketWarhead
 	ReloadDelay: 85
 	Burst: 2
 	Range: 6c512
@@ -218,6 +203,7 @@ HoverMissile:
 		SmudgeType: SmallCrater
 
 JuggCannon:
+	Inherits: ArtilleryWarhead
 	ReloadDelay: 100
 	Range: 20c0
 	Burst: 3
@@ -234,12 +220,6 @@ JuggCannon:
 	Warhead@1Dam: SpreadDamage
 		Spread: 350
 		Damage: 40
-		Versus:
-			None: 80
-			Wood: 75
-			Light: 60
-			Heavy: 35
-			Concrete: 50
 		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
@@ -363,6 +343,7 @@ MammothTusk:
 # Aircraft
 #############################################				
 FighterHellfire:
+	Inherits: ^RocketWarhead
 	ReloadDelay: 50
 	Range: 6c0
 	Report: orcamis1.aud
@@ -383,12 +364,6 @@ FighterHellfire:
 		Spread: 85
 		Damage: 30
 		ValidTargets: Ground
-		Versus:
-			None: 20
-			Wood: 80
-			Light: 150
-			Heavy: 90
-			Concrete: 50
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
@@ -440,6 +415,7 @@ AAFighterHellfire:
 		SmudgeType: SmallCrater		
 
 OBBomb:
+	Inherits: BombWarhead
 	ReloadDelay: 60
 	Burst: 5
 	BurstDelay: 7
@@ -454,12 +430,6 @@ OBBomb:
 		Spread: 1000
 		Damage: 120
 		ValidTargets: Ground, Building, Infantry, Vehicle
-		Versus:
-			None: 200
-			Wood: 100
-			Light: 75
-			Heavy: 32
-			Concrete: 100
 		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_explosion
@@ -474,6 +444,7 @@ OBBomb:
 		SmudgeType: MediumCrater
 
 GuardianRail:
+	Inherits: ^FullDamage
 	ReloadDelay: 100
 	Range: 7c0
 	Report: biggun1.aud
@@ -544,6 +515,7 @@ GuardianRepair:
 # Defences
 #############################################		
 VulcanTower:
+	Inherits: ^RifleWarhead
 	ReloadDelay: 26
 	Range: 8c0
 	Report: chaingn1.aud
@@ -552,11 +524,6 @@ VulcanTower:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 15
-		Versus:
-			Wood: 60
-			Light: 40
-			Heavy: 25
-			Concrete: 10
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -590,9 +557,9 @@ GdiRedEye:
 	Warhead@2Eff: CreateEffect
 		Explosions: tiny_twlt
 		ImpactSound: expnew05.aud
-		
 
 RPGTower:
+	Inherits: ^APWarhead
 	ReloadDelay: 80
 	Range: 8c0
 	Report: glnch4.aud
@@ -606,12 +573,6 @@ RPGTower:
 	Warhead@1Dam: SpreadDamage
 		Spread: 1C0
 		Damage: 60
-		Versus:
-			None: 15
-			Wood: 50
-			Light: 90
-			Heavy: 100
-			Concrete: 70
 		DamageTypes: Prone70Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_clsn

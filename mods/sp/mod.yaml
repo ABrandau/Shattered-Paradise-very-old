@@ -109,6 +109,7 @@ Rules:
 	sp|rules/husks.yaml
 
 Weapons:
+	sp|weapons/weapondefaults.yaml
 	sp|weapons/neutralweapons.yaml
 	sp|weapons/explosions.yaml
 	sp|weapons/healweapons.yaml
@@ -124,6 +125,7 @@ Weapons:
 	sp|weapons/miscweapons.yaml
 
 Sequences:
+	sp|sequences/seqdefaults.yaml
 	sp|sequences/misc.yaml
 	sp|sequences/civseq.yaml
 	sp|sequences/sharedseq.yaml

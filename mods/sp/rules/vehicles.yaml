@@ -1229,12 +1229,11 @@ SCRDRONEC:
 		UncloakSound:
 		IsPlayerPalette: true
 		UncloakOn: Move, attack
-	WithShadow:
-	Armament:
-		Weapon: DronecPlane
-		Recoil: 85
-		RecoilRecovery: 25
-		LocalOffset: 768,0,400
+	# Armament:
+		# Weapon: DronecPlane
+		# Recoil: 85
+		# RecoilRecovery: 25
+		# LocalOffset: 768,0,400
 		# MuzzleSequence: muzzle
 	# WithMuzzleOverlay:
 	AutoTarget:

@@ -2,6 +2,7 @@
 # Infantry
 ########################################################################
 CyborgVulcan:
+	Inherits: ^RifleWarhead
 	ReloadDelay: 60
 	Burst: 3
 	Range: 5c0
@@ -11,11 +12,6 @@ CyborgVulcan:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 10
-		Versus:
-			Wood: 60
-			Light: 40
-			Heavy: 25
-			Concrete: 10
 		DamageTypes: Prone70Percent, TriggerProne, Cabal
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -26,6 +22,7 @@ CyborgVulcan:
 		ValidImpactTypes: Water		
 
 SentryGun:
+	Inherits: ^APWarhead
 	ReloadDelay: 45
 	Range: 4c0
 	Report: 120mmf.aud
@@ -37,12 +34,6 @@ SentryGun:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 18
-		Versus:
-			None: 25
-			Wood: 65
-			Light: 75
-			Heavy: 100
-			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn
@@ -57,11 +48,12 @@ SentryGun:
 		SmudgeType: SmallCrater
 	
 ReaperMortar:
+	Inherits: ^GrenadeWarhead
 	ReloadDelay: 75
 	Range: 9c0
 	Burst: 3
 	Report: 120mmf.aud
-	ValidTargets: Infantry
+	ValidTargets: Ground, Infantry, Vehicle
 	Projectile: Bullet
 		Speed: 150
 		Image: 120mm
@@ -72,13 +64,7 @@ ReaperMortar:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 10
-		ValidTargets: Infantry
-		Versus:
-			None: 100
-			Wood: 85
-			Light: 70
-			Heavy: 35
-			Concrete: 28
+		ValidTargets: Ground, Infantry, Vehicle
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
@@ -96,6 +82,7 @@ ReaperMortar:
 		Upgrades: WebDisable	
 	
 ReaperRail:
+	Inherits: ^FullDamage
 	ReloadDelay: 80
 	Range: 6c0
 	Report: biggun1.aud
@@ -106,13 +93,12 @@ ReaperRail:
 		Color: 0dc7b8#0080FFC8				
 	Warhead@1Dam: SpreadDamage
 		Spread: 125
-		Damage: 80
-		Versus:
-			Concrete: 5	
+		Damage: 40
 		ValidTargets: Air
 		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
 		
 ProcessingHuman:
+	Inherits: ^RifleWarhead
 	ReloadDelay: 50
 	Range: 1c512
 	Report: biggun1.aud
@@ -123,14 +109,10 @@ ProcessingHuman:
 		Spread: 42
 		Damage: 60
 		ValidTargets: Infantry
-		Versus:
-			Wood: 60
-			Light: 40
-			Heavy: 25
-			Concrete: 10
 		DamageTypes: Prone50Percent, TriggerProne, CabalDeath
 		
 GLAD120mm:
+	Inherits: ^APWarhead
 	ReloadDelay: 120
 	Range: 4c768
 	Report: 120mmf.aud
@@ -139,12 +121,6 @@ GLAD120mm:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 40
-		Versus:
-			None: 45
-			Wood: 65
-			Light: 70
-			Heavy: 90
-			Concrete: 55
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_clsn
@@ -194,6 +170,7 @@ CyCannon:
 # Non Combat Cyborgs
 ########################################################################				
 WorkerMinigun:
+	Inherits: ^RifleWarhead
 	ReloadDelay: 17
 	Range: 4c0
 	Report: infgun3.aud, gostgun1.aud, slvkgun1.aud
@@ -202,11 +179,6 @@ WorkerMinigun:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 5
-		Versus:
-			Wood: 60
-			Light: 40
-			Heavy: 25
-			Concrete: 10
 		DamageTypes: Prone70Percent, TriggerProne
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -217,6 +189,7 @@ WorkerMinigun:
 		ValidImpactTypes: Water
 
 Dogzooka:
+	Inherits: ^RocketWarhead
 	ReloadDelay: 50
 	Range: 6c0
 	MinRange: 0c512
@@ -236,12 +209,6 @@ Dogzooka:
 		Spread: 128
 		Damage: 20
 		ValidTargets: Ground, Air
-		Versus:
-			None: 25
-			Wood: 65
-			Light: 75
-			Heavy: 100
-			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
@@ -261,6 +228,7 @@ Dogzooka:
 # Vehicles
 ########################################################################		
 SeekerBazooka:
+	Inherits: ^RocketWarhead
 	ReloadDelay: 125
 	Range: 8c0
 	MinRange: 3c0
@@ -281,12 +249,6 @@ SeekerBazooka:
 		Spread: 128
 		Damage: 25
 		ValidTargets: Ground, Air
-		Versus:
-			None: 25
-			Wood: 75
-			Light: 100
-			Heavy: 150
-			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
@@ -304,6 +266,7 @@ SeekerBazooka:
 		SmudgeType: SmallCrater
 
 CenturionVulcan:
+	Inherits: ^RifleWarhead
 	ReloadDelay: 50
 	Burst: 2
 	Range: 6c0
@@ -314,11 +277,6 @@ CenturionVulcan:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 40
-		Versus:
-			Wood: 80
-			Light: 40
-			Heavy: 25
-			Concrete: 10
 		DamageTypes: Prone70Percent, TriggerProne
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -351,6 +309,7 @@ TermitaGrinder:
 		SmudgeType: SmallCrater
 
 DevourerShell:
+	Inherits: ArtilleryWarhead
 	ReloadDelay: 125
 	Burst: 2
 	Range: 15c0
@@ -371,12 +330,6 @@ DevourerShell:
 		Spread: 128
 		Damage: 40
 		ValidTargets: Ground, Vehicle, Infantry, water
-		Versus:
-			None: 200
-			Wood: 90
-			Light: 75
-			Heavy: 32
-			Concrete: 100
 		DamageTypes: Prone50Percent, TriggerProne, CabalDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
@@ -426,6 +379,7 @@ ecmwave:
 			Concrete: 0			
 
 PalaLazor:
+	Inherits: ^FullDamage
 	ReloadDelay: 90
 	Range: 6c0
 	Report: obelray1.aud
@@ -441,6 +395,7 @@ PalaLazor:
 # Aircraft
 ########################################################################
 WaspLasor:
+	Inherits: ^FullDamage
 	ReloadDelay: 50
 	Range: 6c0
 	Report: lastur1.aud
@@ -451,11 +406,10 @@ WaspLasor:
 	Warhead@1Dam: SpreadDamage
 		Spread: 125
 		Damage: 12
-		Versus:
-			Concrete: 5	
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath		
 		
 WaspBazooka:
+	Inherits: ^RocketWarhead
 	ReloadDelay: 80
 	Range: 6c0
 	MinRange: 0c512
@@ -476,12 +430,6 @@ WaspBazooka:
 		Spread: 128
 		Damage: 40
 		ValidTargets: Ground, Air
-		Versus:
-			None: 25
-			Wood: 65
-			Light: 75
-			Heavy: 100
-			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
@@ -499,6 +447,7 @@ WaspBazooka:
 		SmudgeType: SmallCrater		
 	
 BasiliskProton:
+	Inherits: ^RifleWarhead
 	ReloadDelay: 50
 	Range: 4c0
 	Report: scrin5b.aud
@@ -516,11 +465,6 @@ BasiliskProton:
 		Spread: 128
 		Damage: 25
 		ValidTargets: Ground
-		Versus:
-			Wood: 60
-			Light: 40
-			Heavy: 25
-			Concrete: 10
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_bang
@@ -608,6 +552,7 @@ SentryTurretGun:
 		SmudgeType: SmallCrater
 
 CTurretCannon:
+	Inherits: ^APWarhead
 	ReloadDelay: 20
 	Range: 6c768
 	Report: 120mmf.aud
@@ -622,12 +567,6 @@ CTurretCannon:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 25
-		Versus:
-			None: 25
-			Wood: 65
-			Light: 75
-			Heavy: 100
-			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn
