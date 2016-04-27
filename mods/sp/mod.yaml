@@ -80,7 +80,13 @@ Packages:
 	sp|bits/gdi/structures
 	sp|bits/nod/structures
 	sp|bits/mutant/structures
+	sp|bits/mutant/structures/Temperate
+	sp|bits/mutant/structures/Snow
 	sp|bits/cabal/structures
+	sp|bits/cabal/structures/Temperate
+	sp|bits/cabal/structures/Snow
+	sp|bits/scrin/structures/Temperate
+	sp|bits/scrin/structures/Snow
 	sp|bits/scrin/structures
 	sp|bits/scrin/air
 	sp|bits/neutral
@@ -288,7 +294,7 @@ SpriteSequenceFormat: TilesetSpecificSpriteSequence
 		SNOW: .sno
 	TilesetCodes:
 		TEMPERATE: t
-		SNOW: t
+		SNOW: a
 
 GameSpeeds:
 	slower:

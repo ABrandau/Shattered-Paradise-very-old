@@ -325,6 +325,7 @@ BLACKHANDDUMMY:
 	-WithBuildingExplosion:
 	-ShakeOnDeath:
 	AutoSelectionSize:
+	-UpdatesPlayerStatistics:
 	Selectable:
 		Bounds: 1,1
 	SelfHealing:
@@ -581,6 +582,7 @@ AWARRIOR:
 		Description: Suicide Infantry\nTurns into berserkers when killed.\n  Strong vs Infantry, Vehicles, Buildings.\n  Weak vs Aircraft, Anti Infantry Weapons.
 	Voiced:
 		VoiceSet: Rocket
+	-UpdatesPlayerStatistics:
 	Health:
 		HP: 150
 	Mobile:
@@ -1246,6 +1248,7 @@ CABALMONEYDUMMY:
 	-WithSpriteBody:
 	-WithBuildingExplosion:
 	-ShakeOnDeath:
+	-UpdatesPlayerStatistics:
 	-SoundOnDamageTransition:
 	AutoSelectionSize:
 	Selectable:
@@ -1271,6 +1274,7 @@ CABALMONEYDUMMY1:
 	-ShakeOnDeath:
 	-SoundOnDamageTransition:
 	AutoSelectionSize:
+	-UpdatesPlayerStatistics:
 	Selectable:
 		Bounds: 1,1
 	SelfHealing:

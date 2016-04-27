@@ -1148,7 +1148,7 @@ gafire:
 		Length: 6
 		Tick: 240		
 	make: gtfiremk
-		Length: 17
+		Length: 15
 		ShadowStart: 17
 	emp-overlay: emp_fx01
 		Length: *

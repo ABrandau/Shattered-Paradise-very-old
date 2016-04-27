@@ -2,6 +2,15 @@
 
 [2016 - 04 - 24]
 Balance Changes:
+	Scrin Council renamed to Architect, description updated.
+	Scrin Council changes: Speed 186 -> 60, cost 2000 -> 2500
+	The Scrin council no long mind controls units, now it works as a mobile vehicle factory.
+Graphic Changes:
+	Restored Snow variations of the original ts buildings.
+	Fixed Guardian Platform husk scale.
+
+[2016 - 04 - 24]
+Balance Changes:
 	Reworked all unit warheads, a big imbalance will come soon.
 	Merged the component tower with each of its extensions.	
 

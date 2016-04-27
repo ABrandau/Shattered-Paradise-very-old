@@ -201,7 +201,7 @@ GUARDIAN:
 	-WithVoxelBody:
 	WithShadow:
 	RenderSprites:
-		# Scale: 0.5
+		PlayerPalette: playertemperate
 	WithFacingSpriteBody:
 	BodyOrientation:
 		QuantizedFacings: 32
@@ -954,10 +954,10 @@ SCRINCOUNCIL:
 		Prerequisites: ~scrair, scrtech
 		BuildLimit: 1
 	Valued:
-		Cost: 2000
+		Cost: 2500
 	Tooltip:
-		Name: Scrin Council
-		Description: Alien supervisor team, can mind control enemies.\n  Strong vs Ground Units.\n  Weak vs Aircraft, Structures.
+		Name: The Architect
+		Description: Scrin mobile factory, constructs vehicles.\n  Unarmed.
 	Selectable:
 		Bounds: 100,90
 	Voiced:
@@ -968,11 +968,17 @@ SCRINCOUNCIL:
 		Type: Light
 	Aircraft:
 		TurnSpeed: 5
-		Speed: 186
+		Speed: 60
 		LandableTerrainTypes: Clear, rough, Road, DirtRoad
 		MoveIntoShroud: true
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
+	Exit@1:
+		SpawnOffset: 0,0,-50
+	Production:
+		Produces: Vehicle
+	ProductionQueue:
+		Type: Vehicle
 	RevealsShroud:
 		Range: 12c0
 		Type: CenterPosition
@@ -980,21 +986,20 @@ SCRINCOUNCIL:
 		RequiredForShortGame: true
 	Targetable:
 		TargetTypes: Air, MindControlInmune
-	Turreted:
-	AttackTurreted:
-	AmmoPool:
-	AmmoPool:
-		Ammo: 1
-		PipCount: 1
-		SelfReloads: true
-		ReloadCount: 1
-		SelfReloadsTicks: 300
-		ResetOnFire: false
-		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty
-	AutoTarget:
-	Armament:
-		Weapon: CouncilSteal
+	# Turreted:
+	# AttackTurreted:
+	# AmmoPool:
+		# Ammo: 1
+		# PipCount: 1
+		# SelfReloads: true
+		# ReloadCount: 1
+		# SelfReloadsTicks: 300
+		# ResetOnFire: false
+		# PipType: Ammo
+		# PipTypeEmpty: AmmoEmpty
+	# AutoTarget:
+		# Weapon: CouncilSteal
+	# Armament:
 	RenderSprites:
 	Hovers:
 	WithInfantryBody:
