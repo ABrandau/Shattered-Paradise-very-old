@@ -162,6 +162,7 @@ WETP.Husk:
 ############################################################
 WASP.Husk:		
 	Inherits: ^AircraftHusk
+	Inherits@5: ^CabRender
 	Tooltip:
 		Name: Wasp
 	Aircraft:
@@ -171,11 +172,11 @@ WASP.Husk:
 		Bounds: 1,1	
 	WithShadow:
 	WithFacingSpriteBody:
+	-Cloak@CLOAKGENERATOR:
 	BodyOrientation:
 		QuantizedFacings: 32	
 	RenderSprites:
-		Image: wasp
-		Scale: 0.4		
+		Image: wasp	
 	-RenderVoxels:
 	-WithVoxelBody:
 	FallsToEarth:
@@ -190,6 +191,7 @@ FIREFLY.Husk:
 		Bounds: 1,1
 	WithShadow:
 	WithFacingSpriteBody:
+	-Cloak@CLOAKGENERATOR:
 	BodyOrientation:
 		QuantizedFacings: 32			
 	Aircraft:

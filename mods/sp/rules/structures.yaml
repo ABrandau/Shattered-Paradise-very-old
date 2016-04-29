@@ -1179,7 +1179,7 @@ MURAX:
 MUWEAP:
 	Inherits: ^Building
 	Valued:
-		Cost: 2000
+		Cost: 1800
 	Tooltip:
 		Name: Mutant War Factory
 		Description: Produces and repairs vehicles.
@@ -1363,7 +1363,7 @@ MUSTABLE:
 		BuildPaletteOrder: 100
 		Prerequisites: murax, ~structures.mut
 	Valued:
-		Cost: 600
+		Cost: 500
 	Tooltip:
 		Name: Mutant Stable
 		Description: Allows beast herding.

@@ -999,7 +999,8 @@ muflak:
 		BlendMode: Additive		
 	muzzle: flakmuzzle
 		Length: *
-		# Ticks: 5		
+		UseTilesetCode: false
+		Ticks: 5
 	icon: muflakicon
 		Offset: 0, 0
 		UseTilesetCode: false	

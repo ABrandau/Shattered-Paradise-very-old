@@ -98,9 +98,9 @@ grenadier:
 		Facings: 8
 		ShadowStart: 596
 	prone-stand:
-		Start: 166
+		Start: 414
 		Facings: 8
-		Stride: 8
+		Stride: 1
 		ShadowStart: 596
 	die1:
 		Start: 255

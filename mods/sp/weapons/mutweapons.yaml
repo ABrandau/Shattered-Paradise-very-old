@@ -372,20 +372,14 @@ DeathclawBlow:
 	ReloadDelay: 60
 	Range: 1c0
 	Report: fiend2.aud
+	InvalidTargets: Building
 	Projectile: Bullet
 		Speed: 5c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 60
-		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath, TiberiumDeath
-	# Warhead@emp: GrantUpgrade
-		# Range: 300
-		# Duration: 20
-		# Upgrades: empdisable, notmobile
-	# Warhead@emp: GrantUpgrade
-		# Range: 300
-		# Duration: 20
-		# Upgrades: WebDisable			
+		InvalidTargets: Building
+		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath, TiberiumDeath			
 
 ###############################################################		
 # Vehicle
@@ -714,11 +708,9 @@ FlakFire:
 	Report: cygun1.aud
 	MinRange: 1c0
 	ValidTargets: Air
-	Projectile: Missile
-		Speed: 900
-		Angle: 30
+	Projectile: Bullet
+		Speed: 100c0
 		Image: 120mm
-		HorizontalRateOfTurn: 15		
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128

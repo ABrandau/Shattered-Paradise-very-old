@@ -621,6 +621,7 @@ AARail:
 	Range: 13c0
 	Report: biggun1.aud
 	ValidTargets: Air
+	MinRange: 3c0
 	Projectile: AreaBeam
 		Speed: 20c0
 		Duration: 3
@@ -632,7 +633,7 @@ AARail:
 	Warhead@1Dam: SpreadDamage
 		Range: 0, 32
 		Falloff: 100, 100
-		Damage: 50
+		Damage: 25
 		InfDeath: 6
 		ValidTargets: Air
 		AffectsParent: false

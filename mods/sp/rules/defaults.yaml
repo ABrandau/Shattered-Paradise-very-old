@@ -1051,6 +1051,8 @@
 	CanPowerDown:
 	AutoTarget:
 	RenderRangeCircle:
+	Targetable:
+		TargetTypes: Ground, C4, Defence
 	RenderDetectionCircle:
 	RevealsShroud:
 		Range: 10c0

@@ -1098,6 +1098,7 @@ PDRONE:
 		AttackSequence: shoot
 	AutoTarget:
 		ScanRadius: 8
+		InitialStance: AttackAnything
 	Armament:
 		Weapon: ProcessingHuman
 	AttackFrontal:

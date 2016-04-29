@@ -1433,7 +1433,10 @@ CABRAIL:
 		Recoils: no
 	Armament:
 		Weapon: AARail
-		LocalOffset: 512,0,512
+		LocalOffset: 550,400,700
+	Armament@2:
+		Weapon: AARail
+		LocalOffset: 550,-400,700
 	Power:
 		Amount: -70
 	SelectionDecorations:

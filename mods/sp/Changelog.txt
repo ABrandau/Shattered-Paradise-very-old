@@ -2,7 +2,15 @@
 
 [2016 - 04 - 29]
 Balance Changes:
-	Ravager Changes: Speed 85 -> 78	
+	Fixed some husk crashes.
+	Melee units now start with an agressive stance by default.
+	Railgun Turret: Minimun Range: 0 -> 3 cells range.
+	Guardian Platform: All weapons have 8 cells range.
+	Mutant Stable: Cost: 600 -> 500
+	Forgotten War Factory: Cost: 2000 -> 1800.
+	Ravager Changes: Speed 85 -> 78, Armor: Light -> Wood, cannot target structures, only base defences.
+	Green Tiberium unit cost: 22 -> 15
+	Blue tiberium unit cost: 42 -> 30
 
 [2016 - 04 - 24]
 Balance Changes:

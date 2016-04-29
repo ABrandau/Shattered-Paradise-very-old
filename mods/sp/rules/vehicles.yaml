@@ -656,7 +656,7 @@ DEATHCLAW:
 		Cost: 1100
 	Tooltip:
 		Name: Ravager
-		Description: Tiberium Beast.\n  Strong vs Ground Units\n  Weak vs Ranged Attacks.
+		Description: Tiberium Beast.\n  Strong vs Ground Units\n  Weak vs Aircraft.\n  Can only target base defences.
 	Voiced:
 		VoiceSet: Fiend
 	SpawnActorOnDeath@conversion:
@@ -667,10 +667,11 @@ DEATHCLAW:
 		RequiresLobbyCreeps: true
 	AutoTarget:
 		ScanRadius: 8
+		InitialStance: AttackAnything
 	Health:
 		HP: 600
 	Armor:
-		Type: Light
+		Type: Wood
 	WithInfantryBody:
 		IdleSequences: idle2, idle3
 	-Crushable:
@@ -1357,6 +1358,7 @@ GRINDER:
 	AttackFrontal:
 	AutoTarget:
 		ScanRadius: 8
+		InitialStance: AttackAnything
 	Armament:
 		Weapon: TermitaGrinder
 	RenderVoxels:

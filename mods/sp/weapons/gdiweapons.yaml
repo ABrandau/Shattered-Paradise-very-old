@@ -446,7 +446,7 @@ OBBomb:
 GuardianRail:
 	Inherits: ^FullDamage
 	ReloadDelay: 100
-	Range: 7c0
+	Range: 8c0
 	Report: biggun1.aud
 	Projectile: LaserZap
 		BeamWidth: 2
@@ -463,7 +463,7 @@ GuardianRail:
 
 GuardianTusk:
 	ReloadDelay: 150
-	Range: 9c0
+	Range: 8c0
 	Report: misl1.aud
 	ValidTargets: Air
 	Burst: 3
@@ -497,7 +497,7 @@ GuardianTusk:
 		
 GuardianRepair:
 	ReloadDelay: 300
-	Range: 5c0
+	Range: 8c0
 	Report: repair11.aud
 	ValidTargets: Repair
 	Projectile: Missile
