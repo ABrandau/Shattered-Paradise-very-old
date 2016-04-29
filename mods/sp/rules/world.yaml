@@ -112,6 +112,7 @@ World:
 	ResourceClaimLayer:
 	PathfinderDebugOverlay:
 	WarheadDebugOverlay:
+	MapCreeps:
 	SpawnMapActors:
 	MapBuildRadius:
 	MapOptions:
