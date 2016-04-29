@@ -3,11 +3,12 @@ SharkJump:
 	ReloadDelay: 75
 	Range: 1c0
 	Report: fiend2.aud
+	InvalidTargets: Razorshark
 	Warhead@1Dam: SpreadDamage
 		Spread: 50
 		Damage: 20
 		ValidTargets: Infantry
-		ValidStances: Enemy
+		InvalidTargets: Razorshark
 		DamageTypes: BulletDeath
 
 LegioNeedler:

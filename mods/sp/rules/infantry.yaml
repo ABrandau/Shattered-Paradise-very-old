@@ -131,6 +131,8 @@ EAGLEGUARD:
 		Speed: 46
 	Health:
 		HP: 250
+	Targetable:
+		TargetTypes: Ground, Infantry, Razorshark
 	-PoisonedByTiberium:
 	Armor:
 		Type: Light
@@ -219,6 +221,8 @@ TEMPLAR:
 		HP: 200
 	Mobile:
 		Speed: 55
+	Targetable:
+		TargetTypes: Ground, Infantry, Razorshark
 	Armament@PRIMARY:
 		Weapon: TemplarLasor
 		LocalOffset: 200,-50,320
@@ -283,6 +287,8 @@ BHS:
 	Tooltip:
 		Name: Hand of Kane
 		Description: Nod Commando, sniper unit.\nCloaked when not attacking.\nCan demolish structures using C4.\nInfantry killed by this unit explode.\nHeals near Tiberium.\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
+	Targetable:
+		TargetTypes: Ground, Infantry, Razorshark
 	Targetable:
 		TargetTypes: Ground, Infantry, MindControlInmune
 	Health:
@@ -542,6 +548,8 @@ MUTFIEND:
 		Type: Light
 	Mobile:
 		Speed: 80
+	Targetable:
+		TargetTypes: Ground, Infantry, Razorshark
 	Voiced:
 		VoiceSet: Fiend
 	Targetable:
@@ -587,6 +595,8 @@ AWARRIOR:
 		HP: 150
 	Mobile:
 		Speed: 68
+	Targetable:
+		TargetTypes: Ground, Infantry, Razorshark
 	-SpawnActorOnDeath@conversion:
 	Armament@PRIMARY:
 		Weapon: KnightGun
@@ -621,7 +631,7 @@ PSYKER:
 	Mobile:
 		Speed: 75
 	Targetable:
-		TargetTypes: Ground, Infantry, MindControlInmune
+		TargetTypes: Ground, Infantry, MindControlInmune, Razorshark
 	Armament@PRIMARY:
 		Weapon: PsykerRay
 		Name: OnFoot
@@ -646,16 +656,14 @@ shark:
 		Cost: 330
 	Tooltip:
 		Name: Razorshark
-		Description: Anti-infantry creature, fast and weak, kills infantry instantly.\n  Strong vs Infantry\n  Weak vs Everything else
+		Description: Anti-infantry creature, fast and deadly\nInstakills non-armored infantry.\n  Strong vs Light Infantry\n  Weak vs Everything else
 	Selectable:
 		Class: Shark
 	GivesExperience:
-		Experience: 110
+		Experience: 165
 	Health:
-		HP: 30
+		HP: 50
 	FreeActor@1:
-		Actor: sharkclone
-	FreeActor@2:
 		Actor: sharkclone
 	Mobile:
 		Speed: 78
@@ -786,6 +794,8 @@ BUG:
 		Actor: bugclone
 	FreeActor@2:
 		Actor: bugclone
+	Targetable:
+		TargetTypes: Ground, Infantry, Razorshark
 	Selectable:
 		Bounds: 26,30,0,-10
 	Health:
@@ -1025,6 +1035,8 @@ CYBORG:
 	SupplyTruck
 		Payload: 175
 		Voice: Move
+	Targetable:
+		TargetTypes: Ground, Infantry, Razorshark
 	Voiced:
 		VoiceSet: Cyborg
 	Mobile:
@@ -1127,6 +1139,8 @@ REAPERCAB:
 	SupplyTruck
 		Payload: 300
 		Voice: Move
+	Targetable:
+		TargetTypes: Ground, Infantry, Razorshark
 	Mobile:
 		Speed: 80
 		SharesCell: False
@@ -1177,6 +1191,8 @@ GLAD:
 		Bounds: 35,30,0,-10
 	Voiced:
 		VoiceSet: CyborgCommando
+	Targetable:
+		TargetTypes: Ground, Infantry, Razorshark
 	Mobile:
 		Speed: 56
 	Health:

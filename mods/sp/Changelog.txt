@@ -2,6 +2,8 @@
 
 [2016 - 04 - 29]
 Balance Changes:
+	Made heavy infantry immune to razorsharks.
+	Razorshark: HP 30 -> 50, only spawn 2 razorsharks per batch.
 	Fixed some husk crashes.
 	Melee units now start with an agressive stance by default.
 	Railgun Turret: Minimun Range: 0 -> 3 cells range.

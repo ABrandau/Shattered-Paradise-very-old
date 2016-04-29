@@ -32,7 +32,8 @@ If an asset doesn't have credit, then either WW or Nolt made it, let us know if 
 
 The_Dementor	: Skirmisher, EMP pulse Icons, Harvester, and MCV Cameos (mut and cab), Wrench and Tiberium Icons.
 Gangster	: His template.
-Zoidzilla	: His template.		
+Zoidzilla	: His template.	
+Scipción	: Shattered Paradise planet logo.
 Zero18		: Gargoil vxl,	Quad Cannon vxl, Basilisk vxl,	Leonid tank vxl.	
 CalChillin	: Ion Storm SHPS				
 ApolloTD	: Gradient Colored Palettes.				
