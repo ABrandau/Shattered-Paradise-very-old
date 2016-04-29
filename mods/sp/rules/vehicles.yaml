@@ -656,7 +656,7 @@ DEATHCLAW:
 		Cost: 1100
 	Tooltip:
 		Name: Ravager
-		Description: Keeper's ex-girlfriend.\n  Strong vs Ground Units\n  Weak vs Ranged Attacks.
+		Description: Tiberium Beast.\n  Strong vs Ground Units\n  Weak vs Ranged Attacks.
 	Voiced:
 		VoiceSet: Fiend
 	SpawnActorOnDeath@conversion:
@@ -675,7 +675,7 @@ DEATHCLAW:
 		IdleSequences: idle2, idle3
 	-Crushable:
 	Mobile:
-		Speed: 85
+		Speed: 78
 		SharesCell: false
 	Armament@PRIMARY:
 		Weapon: DeathclawBlow

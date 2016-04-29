@@ -1,5 +1,9 @@
 ﻿YEAR - MONTH - DAY
 
+[2016 - 04 - 29]
+Balance Changes:
+	Ravager Changes: Speed 85 -> 78	
+
 [2016 - 04 - 24]
 Balance Changes:
 	Scrin Council renamed to Architect, description updated.
