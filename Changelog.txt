@@ -2,6 +2,7 @@
 
 [2016 - 04 - 29]
 Balance Changes:
+	Reworked purifier and floaters.
 	Harvesters now take twice the time needed to harvest and unload.
 [2016 - 04 - 29]
 Balance Changes:

@@ -50,24 +50,6 @@ LegioNeedler:
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater
 
-FloatTesla:
-	ReloadDelay: 80
-	Range: 4c0
-	Report: TESLA1.AUD
-	Charges: yes
-	Projectile: TeslaZap
-		palette: pips
-	Warhead@1Dam: SpreadDamage
-		Spread: 42
-		Damage: 6
-		Versus:
-			None: 30
-			Wood: 100
-			Light: 150
-			Heavy: 200
-			Concrete: 1
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath
-
 StalkerSteal:
 	ReloadDelay: 100
 	Range: 6c0
@@ -93,7 +75,7 @@ StalkerSteal:
 		InvalidTargets: C4, MindControlInmune
 
 BugRail:
-	Inherits: ^FlameWarhead
+	Inherits: ^FullDamage
 	ReloadDelay: 100
 	Range: 4c0
 	Report: lastur1.aud
@@ -102,8 +84,22 @@ BugRail:
 		BeamDuration: 5
 	Warhead@1Dam: SpreadDamage
 		Spread: 125
-		Damage: 25
+		Damage: 7
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+		
+FloatTesla:
+	Inherits: ^RifleWarhead
+	ReloadDelay: 80
+	Range: 4c0
+	Report: TESLA1.AUD
+	Charges: yes
+	Projectile: TeslaZap
+		palette: pips
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 35
+		Versus:
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 
 #################################################
 # Vehicles

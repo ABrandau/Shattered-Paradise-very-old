@@ -789,7 +789,7 @@ BUG:
 		Cost: 900
 	Tooltip:
 		Name: Purifier
-		Description: Heavy duty alien.\nCan take lots of punishment.\nInstakills infantry.\n  Strong vs infantry\n  Weak vs Vehicles, Aircraft.
+		Description: Heavy duty alien.\nCan take lots of punishment.\n  Strong vs Ground units.\n  Weak vs Aircraft.
 	FreeActor@1:
 		Actor: bugclone
 	FreeActor@2:
@@ -869,13 +869,13 @@ FLOAT:
 	Selectable:
 		Class: FLoat
 	Valued:
-		Cost: 1500
+		Cost: 1650
 	GivesExperience:
-		Experience: 500
+		Experience: 550
 	-Crushable:
 	Tooltip:
 		Name: Floater
-		Description: Recon unit, suited for harassment.\nCan move through water and Cliffs.\n  Strong vs Buildings, Heavy Vehicles\n  Weak vs Infantry, Aircraft
+		Description: Recon unit, suited for harassment.\nCan move through water and Cliffs.\n  Strong vs Infantry, Buildings\n  Weak vs Tanks, Aircraft
 	Health:
 		HP: 180
 	FreeActor@1:
