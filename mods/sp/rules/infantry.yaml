@@ -911,7 +911,6 @@ SHARKCLONE:
 		Image: Shark
 	-Buildable:
 	-FreeActor@1:
-	-FreeActor@2:
 
 LEGIOCLONE:
 	Inherits: LEGIO
