@@ -135,8 +135,8 @@ HARV:
 		Capacity: 30
 		DeliveryBuildings: proc
 		Resources: Tiberium, BlueTiberium
-		UnloadTicksPerBale: 4
-		LoadTicksPerBale: 10
+		UnloadTicksPerBale: 8
+		LoadTicksPerBale: 20
 		SearchFromProcRadius: 36
 		SearchFromOrderRadius: 18
 		HarvestVoice: Attack

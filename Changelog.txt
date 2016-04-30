@@ -2,6 +2,9 @@
 
 [2016 - 04 - 29]
 Balance Changes:
+	Harvesters now take twice the time needed to harvest and unload.
+[2016 - 04 - 29]
+Balance Changes:
 	Made heavy infantry immune to razorsharks.
 	Razorshark: HP 30 -> 50, only spawn 2 razorsharks per batch.
 	Fixed some husk crashes.

@@ -946,8 +946,8 @@ SCRHARV:
 		Capacity: 30
 		Resources: Tiberium, BlueTiberium
 		DeliveryBuildings: scrproc
-		UnloadTicksPerBale: 4
-		LoadTicksPerBale: 10
+		UnloadTicksPerBale: 8
+		LoadTicksPerBale: 20
 		SearchFromProcRadius: 36
 		SearchFromOrderRadius: 18
 		HarvestVoice: Attack
