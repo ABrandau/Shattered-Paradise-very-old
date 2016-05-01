@@ -653,7 +653,7 @@ shark:
 		BuildPaletteOrder: 24
 		Prerequisites: ~scrrax
 	Valued:
-		Cost: 330
+		Cost: 200
 	Tooltip:
 		Name: Razorshark
 		Description: Anti-infantry creature, fast and deadly\nInstakills non-armored infantry.\n  Strong vs Light Infantry\n  Weak vs Everything else
@@ -662,9 +662,7 @@ shark:
 	GivesExperience:
 		Experience: 165
 	Health:
-		HP: 50
-	FreeActor@1:
-		Actor: sharkclone
+		HP: 75
 	Mobile:
 		Speed: 78
 		Voice: Move
@@ -786,13 +784,11 @@ BUG:
 	GivesExperience:
 		Experience: 300
 	Valued:
-		Cost: 900
+		Cost: 600
 	Tooltip:
 		Name: Purifier
 		Description: Heavy duty alien.\nCan take lots of punishment.\n  Strong vs Ground units.\n  Weak vs Aircraft.
 	FreeActor@1:
-		Actor: bugclone
-	FreeActor@2:
 		Actor: bugclone
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark
@@ -910,7 +906,6 @@ SHARKCLONE:
 	RenderSprites:
 		Image: Shark
 	-Buildable:
-	-FreeActor@1:
 
 LEGIOCLONE:
 	Inherits: LEGIO
@@ -950,7 +945,6 @@ BUGCLONE:
 		Image: bug
 	-Buildable:
 	-FreeActor@1:
-	-FreeActor@2:
 
 ############################################
 # CABAL

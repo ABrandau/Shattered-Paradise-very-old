@@ -138,6 +138,7 @@ GACTWR:
 
 GAVULC:
 	Inherits: ^Defense
+	Inherits@1: ^TowerStealthDetection
 	-WithSpriteBody:
 	WithWallSpriteBody:
 		Type: wall
@@ -193,9 +194,10 @@ GAVULC:
 	RenderSprites:
 
 GAROCK:
+	Inherits: ^Defense
+	Inherits@1: ^TowerStealthDetection
 	Power:
 		Amount: -20
-	Inherits: ^Defense
 	-WithSpriteBody:
 	WithWallSpriteBody:
 		Type: wall
@@ -247,9 +249,10 @@ GAROCK:
 	RenderSprites:
 
 GACSAM:
+	Inherits: ^Defense
+	Inherits@1: ^TowerStealthDetection
 	Power:
 		Amount: -30
-	Inherits: ^Defense
 	-WithSpriteBody:
 	WithWallSpriteBody:
 		Type: wall
@@ -1164,7 +1167,7 @@ SCRDRONE:
 	Valued:
 		Cost: 900
 	Tooltip:
-		Name: Drone Hive
+		Name: Needler Hive
 		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs All
 	Buildable:
 		Queue: Defense

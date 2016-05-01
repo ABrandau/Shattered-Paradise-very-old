@@ -44,10 +44,9 @@ Player:
 			gaweap: 2
 			gahpad: 6
 #GDI DEFENSES#
-			gactwr: 0
-			gavulc: 0
-			garock: 0
-			gacsam: 0
+			gavulc: 5
+			garock: 5
+			gacsam: 5
 #GDI TECH#
 			garadr: 1
 			gatech: 1
@@ -114,6 +113,9 @@ Player:
 			gaweap: 5%
 			gahpad: 5%
 #GDI DEFENSES#
+			gavulc: 10%
+			garock: 5.5%
+			gacsam: 4.5%
 #GDI TECH#
 			garadr: 1%
 			gatech: 1%
@@ -370,10 +372,9 @@ Player:
 			gaweap: 3
 			gahpad: 0
 #GDI DEFENSES#
-			gactwr: 0
-			gavulc: 0
-			garock: 0
-			gacsam: 0
+			gavulc: 5
+			garock: 5
+			gacsam: 5
 #GDI TECH#
 			garadr: 1
 			gatech: 1
@@ -439,6 +440,9 @@ Player:
 			gapile: 5%
 			gaweap: 12.5%%
 #GDI DEFENSES#
+			gavulc: 10%
+			garock: 5.5%
+			gacsam: 4.5%
 #GDI TECH#
 			garadr: 1%
 			gatech: 1%
@@ -674,10 +678,9 @@ Player:
 			gaweap: 1
 			gahpad: 0
 #GDI DEFENSES#
-			gactwr: 0
-			gavulc: 0
-			garock: 0
-			gacsam: 0
+			gavulc: 5
+			garock: 5
+			gacsam: 5
 #GDI TECH#
 			garadr: 1
 			gatech: 0
@@ -743,6 +746,9 @@ Player:
 			gapile: 12.5%
 			gaweap: 5%
 #GDI DEFENSES#
+			gavulc: 10%
+			garock: 5.5%
+			gacsam: 4.5%
 #GDI TECH#
 			garadr: 1%
 			gatech: 0%
@@ -953,10 +959,9 @@ Player:
 			gaweap: 2
 			gahpad: 6
 #GDI DEFENSES#
-			gactwr: 0
-			gavulc: 0
-			garock: 0
-			gacsam: 0
+			gavulc: 5
+			garock: 5
+			gacsam: 5
 #GDI TECH#
 			garadr: 1
 			gatech: 1
@@ -1023,6 +1028,9 @@ Player:
 			gaweap: 5%
 			gahpad: 5%
 #GDI DEFENSES#
+			gavulc: 10%
+			garock: 5.5%
+			gacsam: 4.5%
 #GDI TECH#
 			garadr: 5%
 			gatech: 15%
@@ -1255,10 +1263,9 @@ Player:
 			gaweap: 0
 			gahpad: 9
 #GDI DEFENSES#
-			gactwr: 0
-			gavulc: 0
-			garock: 0
-			gacsam: 0
+			gavulc: 5
+			garock: 5
+			gacsam: 5
 #GDI TECH#
 			garadr: 1
 			gatech: 1
@@ -1324,6 +1331,9 @@ Player:
 			gapile: 5%
 			gahpad: 12.5%
 #GDI DEFENSES#
+			gavulc: 10%
+			garock: 5.5%
+			gacsam: 4.5%
 #GDI TECH#
 			garadr: 1%
 			gatech: 1%
