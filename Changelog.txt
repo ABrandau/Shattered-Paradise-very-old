@@ -1,0 +1,609 @@
+﻿YEAR - MONTH - DAY
+
+[2016 - 05 - 01]
+AI Changes:
+	GDI AI now builds turrets.
+Balance Changes:
+	Razorshark changes: hp: 50 -> 75, cost: -> 330 -> 200, only one is created per batch.
+	Purifiers now spawn in pairs.
+
+[2016 - 04 - 29]
+Balance Changes:
+	Reworked purifier and floaters.
+	Harvesters now take twice the time needed to harvest and unload.
+[2016 - 04 - 29]
+Balance Changes:
+	Made heavy infantry immune to razorsharks.
+	Razorshark: HP 30 -> 50, only spawn 2 razorsharks per batch.
+	Fixed some husk crashes.
+	Melee units now start with an agressive stance by default.
+	Railgun Turret: Minimun Range: 0 -> 3 cells range.
+	Guardian Platform: All weapons have 8 cells range.
+	Mutant Stable: Cost: 600 -> 500
+	Forgotten War Factory: Cost: 2000 -> 1800.
+	Ravager Changes: Speed 85 -> 78, Armor: Light -> Wood, cannot target structures, only base defences.
+	Green Tiberium unit cost: 22 -> 15
+	Blue tiberium unit cost: 42 -> 30
+
+[2016 - 04 - 24]
+Balance Changes:
+	Scrin Council renamed to Architect, description updated.
+	Scrin Council changes: Speed 186 -> 60, cost 2000 -> 2500
+	The Scrin council no long mind controls units, now it works as a mobile vehicle factory.
+Graphic Changes:
+	Restored Snow variations of the original ts buildings.
+	Fixed Guardian Platform husk scale.
+
+[2016 - 04 - 24]
+Balance Changes:
+	Reworked all unit warheads, a big imbalance will come soon.
+	Merged the component tower with each of its extensions.	
+
+[2016 - 04 - 23]
+Balance Changes:
+	Scrin vehicle explosion damage: 50 -> 40.
+	Ichor Walker Changes: damage 8 -> 13.
+	Forgotten Knight Changes: Speed 75 -> 68.
+Graphical Changes:
+	Fixed Scrin refinery docking offset.
+	Re rendered Guardian Platform, Paladin, Forgotten Knight.
+	Cleaned some sprites, Scrin harvester, landerd glider and tank have now shadows.
+Audio:
+	Guardian Platform:
+		New voice lines courtesy of SkyHunter713
+	Music:
+		New audio tracks from 8BitArmies by Frank Klepacki.
+Performance:
+	Reordered unit code to make the map editor easier to handle.
+	Fixed a bug that made the game crash when selecting some units.
+
+[2016 - 04 - 13]
+New Code:
+	New mod code thanks to Graion.
+AI Updates:
+	Improved AI’s use of air and Mutants can now build Ravagers.
+
+[2016 - 04 - 09]
+Bug Fixes:
+	Fixed Scrin tractor beam aiming issues.
+	Fixed some sequences.
+	Corrected cyborg drone voices.
+	Aircraft will no longer self repair in the middle of combat.
+
+Balance Changes:
+	Artisans can now store up to 8 turrets and start empty when built.
+	Stasis chamber changes: cost 600 -> 350, hp 500 -> 250.
+	Reclaimer now requires stasis chamber.
+	Floater changes: cost 400 -> 500.
+	Battleship changes: damage 60 -> 40 hp: 800 -> 900.
+	Crusaders can now attack infantry, but with a giant inaccuracy debuff.
+	Reduced fall explosion damage from small aircraft by half.
+	Reworked mutant Bull and forgotten knight.
+	Reduced IFV cargo capacity to 2 from 4.
+
+Economy Changes:
+	Harvester capacity: 40 -> 30.
+
+Content Changes:
+	Added Ravager.
+	Removed Battlefortress
+	Added updated audio lines for Nod Beam Cannon.
+
+[2016 - 04 - 01]
+Unit Balance Changes
+	Devourer: Damage: 10 -> 40
+	Devourer debuff: damage: 30 -> 10, time between damage: 3 seconds -> 4 seconds.
+	Devourer debuff duration: 5 seconds -> 10 seconds.
+[2016 - 04 - 01]
+Unit Balance Changes
+	Reduced Scrin Tractor Beam speed: 1200 < 600
+	Reduced AircraftSelfHeal: Heal if below 50%. Scrin Battleship, Destroyer and CABAL Basilisk can still completely self-heal.
+Eco Balance Changes:
+	Further nerfs as we continue to balance.
+	Green Tib:
+		ValuePerUnit: 25 < 22
+	Blue Tib:
+		ValuePerUnit: 45 < 42
+	Harvesters:
+		Reduced Capacity: 40 < 36
+VO Added:
+	Harvester thanks to HiJanxy.
+Some unit/building description fixes.
+[2016 - 03 - 30]
+Theoretically fixed a bug that made AA aircraft miss their targets.
+Balance Changes:
+	Gargoyle: Reloaddelay: 200 -> 100
+	Basilisk torpedo damage reworked
+	Cyborg Commando: health: 500 -> 300
+	Reclaimer: Health: 130 -> 110
+	Grenadier: Won't explode when killed.	
+	Guardian platform: Railgun damage: 35 -> 45
+	Orca Fighter: AA damage: 20 -> 25
+	Amphibious APC: Turn Speed: 5 -> 8
+	Hvr MRLS: Turn Speed 5 -> 9
+	Basilisks can only attack ground units.
+	Basilisk torpedo speed and spread reduced.
+
+[2016 - 03 - 30]
+Balance Changes:
+	Crab Egg Spawn chance reduced.
+Eco changes:
+	Harvester:
+		Reduced capacity 48 < 40
+	Scrin Harvester:
+		Reduced capacity 48 < 40
+	Green Tiberium:
+		Reduced value 30 < 25
+	Blue Tiberium:
+		Reduced value 50 < 45
+AI changes:
+	Tay AI:
+		Massive refactoring of code.
+	Panzerkin AI:
+		Massive refactoring of code.
+	Zerg AI:
+		Massive refactoring of code.
+		Renamed from “Waaagh!”
+	F-18kin AI:
+		Massive refactoring of code.
+		Renamed from “Earhart”
+	Lex AI:
+		Added new tech focused AI. First version.
+Audio:
+	Stealth Tank:
+		New lines thanks to DrWhitePsyker.
+
+
+[2016 - 03 - 29]
+reworked seeder bird
+Forgotten defences now require refineries in order to build them.
+Cleaned CABAL warfactory build animation.
+Stalker disabled
+Radar changes: Cost: 1500 -> 1000 , to all factions.
+GDI, NOD, and MUT equivalent to Helipad now requires a radar to be built.
+Tay AI improvements:
+	Scrin can now train stalkers.
+	GDI can train medics.
+	Mutants can will now build stable and train tiberium creatures.
+	Refactored a lot of the build percentages.
+Panzerkin AI:
+	Added Panzerkin 1.0. This is an armor focused AI. Works best for GDI.
+Earhart AI:
+	Added Earhart 1.0. This is an aircraft focused AI. Works best for Scrin and possibly CABAL.
+Waaagh! AI:
+	Added Waaagh! 1.0. This is a basic ground units focused AI with rush timings. Works best for Mutants.
+Added two more music tracks.
+
+[2016 - 03 - 28]
+Updated CABAL Powerplant, barracks and factory graphics.
+Returned blossom trees to default interval.
+Increased harvester capacity 32 > 48
+Fixed some unit descriptions.
+Tay AI enhancements:
+Can now build Nod air.
+Can now build Mutant rangers and psykers.
+Can now build Mutant air.
+Increased rush interval to 45 seconds (1125 ticks).
+Increased interval to check for new bases to one minute (1500 ticks).
+Decreased StructureProductionActiveDelay: 25 < 0
+Decreased StructureProductionInactiveDelay: 125 < 25
+Increased squad size.
+Fixed production common names.
+Too many build queue tweaks to list.
+Added several new music tracks.
+
+
+[2016 - 03 - 28]
+Green tib value: 20 > 30
+Blue tib value: 35 > 50
+Increase Harvester Capacity: 28 > 32
+Lots and lots of tweaking of Tay AI.
+
+[2016 - 03 - 27]
+Falcon Changes: damage per bomb 7 -> 5
+Fixed error that made some units crash the game when sent to repair.
+Flak Cannon changes: Reload delay: 50 -> 75
+Quad Cannon AA Changes: damage 40 -> 20, minimun range: 1-> 3
+Gargoyl AA changes: damage: 15 -> 10, Burst: 1 -> 3, Increased Innacuracy, reload delay: 100 -> 200
+Fixed some typing errors.
+Added Tay AI. A brand new AI that has teeth!
+Increased blossom tree production.
+
+[2016 - 03 - 24]
+Hand of Kane can no longer be mind controlled.
+Destroyer changes: bullet speed: 220 -> 240
+Ichor Waste Turret Changes cost: 500 -> 700, hp: 350 -> 400, range 4 -> 7, power: 20 -> 40
+Drone hive changes cost: 1100 -> 900 , hp 500 -> 600,
+
+[2016 - 03 - 25]
+>>>>>>> origin/Bleed
+Added new Scrin explosions.
+Wolf Changes Speed: 42 -> 70
+Corrected some infantry selection boxes.
+Increased infantry selection box width.
+
+[2016 - 03 - 24]
+Added tiberium mutation icon and guardian platform repair icon.
+Fixed Shapeshifter being hurt by tiberium.
+Fixed warfactories having no sight.
+Fixed experience given by killing scrin infantry.
+
+[2016 - 03 - 23]
+Reaper mortar can now only target infantry.
+Switched Floater and purifier tech requirements.
+Decreased Centurion walk animation speed.
+Updated faction descriptions.
+NOD's Repair vehicle weapon now repair units in an area.
+Added NOD Mobile repair vehicle.
+Lowered devil's tongue tech requirement to radar.
+Aircraft can now repair near factories.
+Cabal units that do self heal do it until 50% health.
+Removed cabal self heal bonus to all units excep Paladings, grinders, devourers, reapers, aircraft, cyborg commandos and gladiators.
+CABAL units can now gain experience.
+Removed NOD veterancy cap bonus.
+Added new song, unhide score and mission selection songs on the music options.
+Factories can now repair vehicles by ordering vehicles to move into a factory.
+Added new music track.
+Corrected eagle warrior crush animation.
+Floater Changes hp 120 -> 180 Cost 850 -> 1200
+Purifier Changes: hp 280 -> 220. Cost 1200 -> 900.
+Blaster Turret Changes: Cost 1800 -> 1400
+Mechanic Changes: Reload delay 80 -> 100, repair amount: 25 -> 20
+Gargoyle changes 2: Ammo 30 -> 40 Reload Count 15 -> 20
+Gargoyle changes: Price 800 -> 700, seconds to reload 16 -> 10
+Guardian Platform Changes: Price: 1800 > 2000, Speed: 80 < 70, HP: 600 > 725
+
+[2016 - 03 - 22]
+Changed blaster warhead.
+Decreased Drone carrier and destroyer weapon radius damage.
+Amount of health repaired by the guardian platform reduced to 100 from 200.
+RPG Tower damage reduced to 60 from 110.
+Orca hellfire damage reduced to 30 from 40.
+Bunker cost increased to 900 from 800. hp increased to 800 from 600.
+Nerfed Disruptor damage and duration.
+Disruptor cost increased to 1300 from 1200.
+Jumpjet speed increased to 50 from 42.
+Marine HP reduced to 120 from 125, damage increased to 20 from 18.
+Flame Warrior Speed reduced to 70 from 76, hp increased to 100 from 95.
+Refinery Armor changed to light from heavy.
+Increased Gargoyle rocket damage to 50 from 40.
+Skirmisher speed increased to 50 from 42.
+Ranger cost increased to 350.
+Increased Battle fortress cost to 1600 from 1300, Decreased speed to 68.
+Marauder Speed increased to 55 from 42, cost increased to 110 from 100..
+Corrected a firing animation of the marauder.
+Tiberian Fiend cost reduced to 400 from 450, hp increased to 280 from 220.
+Fixed Ranger and Tiberian fiend cloak noise glitch.
+Refined GDI tooltips.
+
+[2016 - 02 - 20]
+Removed Infiltration ability from Rangers.
+Fixed mutant airstrip offset.
+Forgotten Rangers now cloak only on tiberium.
+Enhanced Tracking capabilities of the Flak Station bullet (yes, it tracks).
+Enabled Cancer AI, this one is equal to fun AI, except it builds mcvs.
+Militant Flamethrower reload delay decreased to 90 from 100.
+Tiberian Bulls now disable enemies for 4/5 of a second.
+Ranger damage increased to 35 from 10.
+Mutant ranger and Cabal Gladiator can now detect stealth units.
+Mutant Quad cannons no longer detect stealth units.
+Updated engine to the current developer version.
+
+[2016 - 02 - 18]
+Falcon damage per bomb reduced to 7 from 10.
+Visceroids now explode violently when killed.
+
+[2016 - 02 - 17]
+Enabled Beam Cannon Voice over
+Hijackers and rangers can now infiltrate structures (only power plants and radars).
+Decreased Obelisk reload delay to 125 from 150.
+Increased Hand of Kane sight to 12 from 7.
+Fixed demolition bugs and some cloaking related bugs.
+
+[2016 - 02 - 15]
+Forgotten Psyker renamed to mind walker.
+Black hand sniper turned into a commando, now named the hand of kane, has c4.
+Hand of kane turned into a vehicle hijacker.
+Militant converted into Flame Warrior, a full time flamethrower soldier.
+Buggy cost increased to 550 from 350, now also fires rockets.
+Attack Cycle converted to Demo Cycle (a suicide unit).
+Changed Devil's tongue armor to heavy from light.
+Added Innacuracy to beam cannon (half of a cell)
+Beam Cannon hp reduced to 160 from 170.
+Increased Devil's tongue reload delay to 125 form 80.
+Stealth tank per rocket damage reduced to 25 from 30.
+Stealth tank anti air damage reduced to 10 per rocket from 15, reload delay increased to 150 from 125
+Reduced Human refinery capacity to 1500 from 3000
+Reduced scrin refinery capacity to 2500 from 400.
+Increased building vision to 6 from 3.
+Harpies can now detect stealth.
+Removed stealth detection from orca fighters, added stealth detection to Guardian Platforms.
+Changed infantry default sight radius to 6 from 4.
+Increased Vehicle vision to 9 from 7.
+Increased Helicopter sight to 12 from 8.
+Increased Mammoth mk II to 11 from 8.
+
+[2016 - 02 - 12]
+Reduced toxin mine range to 5 form 8, fixed a bug that made it affect it's own allies instead of enemies.
+reduced tiberium damage to 4 points per second from 4.5
+Reworked defence and building time reductions to 100, 80, 65, 50, 35, 30
+Crusaders no longer explode when killed, increased their health to 110 from 100.
+Tick tanks now self heal.
+Fixed bug that made the tick tank not acquire targets.
+Tick tank damage reduced to 40 from 70.
+Reduced laser power cost to -50 from -60, hp increased to 200 from 150, armor changed to heavy.
+beam cannon damage increased to 100 from 80, Changed warhead to 120 100 80 50.
+Fixed bug that made forgotten infantry self heal by default.
+Increased Stormrider damage to 30 from 20.
+Fixed one of the marauder death anims.
+Reduced mutant armory cost to 300 from 400.
+Mutant skirmishers and marauders have a 3% chance of turning into hostile zombies or visceroids when killed.
+Increased Ichor waste turret damage percentage against unnarmored targets to 200 from 70.
+Build speed modifier of everything except aircraft increased to 0.45 from 0.4
+Tripod Armor changed to light from Heavy, hp reduced to 400 from 550, and cost reduced to 1200 from 1500.
+Tripod range decreased to 6 from 8, speed increased to 80 from 70.
+Floater damage reduced to 6 from 8 (fires 2 times per strike).
+
+[2016 - 02 - 11]
+Fixed a bug that made the game not show some icons.
+Updated the credits.
+Fixed glyder and carryall not being able to land in any type of ground tileset.
+Reduced Ichor Waste turret cost to 500 from 700
+Razorsharks will now acquire targets if there are any 5 cells around them.
+Reduced host station selection bounds.
+Adjusted build time decrease percentage to 100, 85, 75, 65, 55, 45, 37, 30, being every next number fraction of time it takes to build something after the next factory is built
+
+[2016 - 02 - 21]
+Cyborg reaper cost decreased to 450 from 1200.
+grenadier cost reduced to 180 from 300
+Decreased nod/gdi sam damage to 40 from 50.
+Increased Wolverine prize to 500 from 400, decreased reload time to 40 from 50
+Removed civ vehicle infantry Black holes
+All vehicles occupy 3 spaces if placed on a scrin transport.
+Nerfed veterancy buffs, decreased elite veterancy requirements
+Nod self heal ticks when cloaked (time between heal bursts) increased to 40 from 15.
+Changed Reclaimer warhead, now it matches the cyborg vulcan warhead, damage reduced to 70 from 75.
+Increased nod bike range to 6 cells from five, increased rate of turning.
+Decreased Razorshark speed to 75 from 80
+Mammoth mk II now heals if damaged (with no hp restriction).
+Guardian AA rocket burst increased to 3, damage reduced to 18 from 50, and reload rate decreased to 100 from 125
+Guardian AA rockets deal full damage to any air unit.
+Grenadier burst increased to 2 from 1, innacuracy increased to 2 cells from 1.
+Grenade damage increased to 45 from 20, reload time increased to 90 from 75.
+Changed Sentry armor to none from wood.
+Reduced Militant cost to 125 from 140
+Reduced Orca Bomber reload delay
+Reduced sam reload rate to 80 from 100, increased horizontal rate of turn
+nerfed scrin hovertank warhead to 25, 65, 75, 100.
+Harvesters and MCV can now crush infantry.
+
+[2016 - 02 - 20]
+Increased Falcon reload delay to 4 from 2, increased range to 5 from 4
+Changed seeker warhead to 25, 75, 100, 150, reduced damage to 25 from 50, reload rate decreased to 125 from 150.
+Laser turret armor changed to wood from light.
+Laser turret hp changed to 150 from 400.
+Changed JJ armor to none from light
+Increased JJ damage to 25 from 15.
+Jumpjet cost decreased to 200 from 300
+Grenadier cost decreased to 300 from 400
+The mammoth mk2 has its sam back.
+Changed obelisk armor to light from heavy.
+Decreased Juggernaut price to 600 from 800
+Increased Juggernaut damage to heavy armor to 80 from 40
+Increased Obelisk reload rate to 150 from 50
+
+[2016 - 02 - 18]
+Reduced banshee damage to 45 from 60.
+the beam cannon now deals full damage to all units.
+Changed beam Cannon armor to wood
+Beam cannon damage reduced to 70 from 100
+NOD Subterranean APC won't require tech center anymore.
+Reduced Guardian AA burst to 1 from 2, increased reload rate to 125 from 100
+
+[2016 - 02 - 15]
+Added aircraft husks into the game.
+Reduced Hover MRLS anti air damage to 25 x 2 from 40 x 2
+Added Scrin energy walls into the game.
+
+[2016 - 02 - 13]
+Centurion cost reduced to 1000 from 1400, hp increased to 500 from 450
+Gladiator hp reduced to 550 from 650
+Paladin hp reduced to 300 from 60, self healing rate increased to 30 from 10.
+Devourer debuff won't apply on friendly units.
+
+[2016 - 02 - 11]
+Cabal devourer moved up to tier 3.
+Fixed mrls bug.
+Removed Build limit from eagle guard, hp decreased to 200 from 250.
+Added new Scrin drone tower graphics, moved the earlier model to the scrin shield generator.
+Added new Mutant tiberium ventilator, moved the vanilla EMP cannon to CABAL.
+The tiberium ventilator shares the bull passive, the shield gen the ichor battery passive.
+Added the firestorm generator, it will make the nearby buildings harder to harm.
+Decreased grenadier burst to 1 from 2, increased damage to 30 from 20, and increased reload rate to 100 from 75.
+Reduced Blaster turret damage to 25 from 40, increased burst to 7 from 6.
+Increased hover mrls AA damage to 40 from 35
+Increasded quad cannon damage to 35 from 30, and AA damage to 20 from 12
+
+[2016 - 02 - 09]
+Increased Seeker speed to 80 from 90
+Increased Cyborg Reaper cost to 1200 from 800
+Reduced Cabal Blaster damage to 40 from 60.
+Reduced Wasp bazooka damage to 30 from 40.
+Cyborg Reapers won't share cells anymore.
+Knights, berserkers, zombies, crabs and visceroids won't spawn cabal units when being killed.
+Paladin Laser damage reduced to 25 from 60 (deals true damage)
+
+[2016 - 02 - 08]
+Reduced Orca Guardian damage to 25 from 30, Increased innacuracy to 1 cell from half a cell.
+GDI AI will no longer train medics.
+Fixed bug that made cabal unable to spawn workers and paladings from killed units.
+Reduced worker refund gain to 45 from 60, reduced paladin gain to 80.
+Now every unit killed with a scavenger unit will reward the killed with $10.
+Cleaned some bits of the worker death animation.
+Reaper speed increased to 80 from 60
+Reaper disable time reduced to 35 from 40, weapon warhead changed.
+Increased Cyborg self heal to 8 points every 4 seconds, from 5 points every 4 seconds.
+Cyborg reaper cannot be disabled by it's mortar anymore.
+
+[2016 - 02 - 04]
+Fixed more targetting bugs.
+Added Scrin UI
+Decreased Purifier Cost to 1400 from 2400
+Decreased Floater Cost to 750 from 1200
+Decreased Legionarie cost to 500 from 750
+Decreased Shapeshifter cost to 750 from 1500
+Decreased Stalker cost to 1000 from 2250
+Stalker is now always cloaked.
+Legionaire Weapon spread increased to 350 from 128
+Changed Floater warhead so it is now more effective against heavy armor and weaker vs unnarmored targets, reduced damage to 8 from 18, reload deleay increased to 80 from 70.
+Razorshark Weapon range increased to 1.5 cells from 1.
+Added a second weapon for the Tripod. Speed decreased to 70 from 100, hp increased to 500 from 350
+Reduced Ichor walker cost to 550 from 700
+Increased hover tank hp to 225 from 180.
+Increased Glyder hp to 200 from 150, increased price to 900 from 750.
+Razorsharks can no longer hurt themselves.
+the scrin stalker now applies an on hit debuff on enemies.
+Increased blue tib bail worth to 40 from 32
+cyborg cost increased to 600 from 550
+Scrin Legionaire hp reduced to 150 from 200
+Scrin Glyder can no longer crush infantry.
+Cabal reactor no longer scales power with health, but will lose health if it reaches less than 20% health
+
+[2016 - 02 - 01]
+Reduced Razorshark cost to 390 from 1150
+Added Forgotten UI
+Disabled all SuperWeapons
+Decreased Cabal Railgun turret cost to 750 from 1400
+Cyborg Drones can no longer be crushed
+Decreased reclaimer cost to 150 from 200, increased range to 1 cell and half from 1.
+^ decreased reload delay to 50 from 60.
+Added a new instance of the Falcon's weapon to itself (it's attack is more bursty).
+Added 3 cells minimun range to the seeker's weapon.
+Increased Gargoil Ammunition to 30 from 24.
+
+[2016 - 01 - 30]
+Decreased crusader rocket damage to 8 from 12, added 1 cell Innacuracy and changed projectile to missile.
+^ Reduced reload rate to 150 from 160 (150/25 = 6 seconds), range increased to 8.
+Removed innacuracy from Jumpjet cannon, increased reload rate to 40 from 30.
+Increased purifier weapon damage percentage to none armor to 700 from 400, increased health to 315 from 225, and decreased cost to 2400 from 2700
+Increased flame tongue weapon damage to heavy armor to 24 from 6
+Fixed bug that forbid gargoils and crusaders to hit conyards, radars and powerplants.
+flak cannon weapon and AA quad cannon weapon proyectile changed to missile.
+Cabal's railgun turret can now hit allies.
+Disruptor damage increased to 24 from 8.
+Increased nod and gdi sam damage to 50 from 40
+Grenadier weapon innacuracy reduced to 1 from 2
+Increased Gargoil hp to 200 from 150, decreased speed to 75 from 95
+Increased mrls damage per rocket to 50 from 10, increased burst to 12
+Fixed bug that made the grenadier deal no damage to buildings, nor target them, increased projectile speed to 320 from 160, spread increased to 342 from 171
+Reduced purifier damage to 4 from 6, reload rate inscreased to 100 (4 seconds) from 60.
+Decreased Orca anti air weapon reload rate to 25 from 50.
+Black hand sniper can now only fire at infantry, increased range to 7 from 6
+Fixed bug that made the orca bomber unable to target structures
+Fixed tooltip on the tiberian bull that says it's effective against aircraft (spoiler: it is not).
+Changed Eagle Guard's weapon to an EMP laser, adjusted tooltip.
+Black hand sniper victims now explode, adjusted tooltip.
+Increased Leonid Cannon reload delay to 75 from 50, decreased damage to 50 from 60, speed decreased to 110 from 120, and cost icreased to 700 from 600
+Fixed a render error on the crab eggs.
+Reduced Bunker cost to 800 from 1400
+Reduced Cabal blaster power cost to -100 from -120
+Increased Gargoil Ammunition to 24 from 6
+Increased Hover Missile damage to 30 from 25
+Decreased Firefly health to 120 from 175, increased speed to 120 from 110.
+Decreased wasp hp to 130 from 150, increased speed to 110 from 120.
+
+[2016 - 01 - 25]
+Reduced Falcon's Armor to 12 from 18.
+Reduced Cabal's railgun turret hp to 350 from 500.
+Increased Cabal's railgun turret power consumption to -100 from -70
+Reduced Mutant mine's vision to 3 cells
+Increased Mutant Mine damage.
+Made the Gargoil a T2 Helicopter
+Reduced Gargoil cost to 800 from 1200
+reduced gargoil health to 150 from 200
+Increased Falcon Cost to 1200 from 800
+Increased Falcon Health to 240 from 180
+Made Falcon a t2 aircraft.
+
+[2016 - 01 - 24]
+Did a lot of stuff between 21 and 25, I messed the mod so much I couldn't keep track of it.
+
+[2016 - 01 - 21]
+Added the Ichor Battery
+Added the Stalker.
+Changed Glyder weapon to missile.
+Reduced Stormrider hp to 90 from 120
+Increased Battleship damage to targets with to armor to 250% from 150%
+Increased Battleship Health to 1400 from 1000
+Reduced Harpy Innacuracy to 1 cell, from 2 cells.
+Increased Floater health to 170 from 120
+Added 3 new maps.
+Decreased the Legionaire HP to 110 from 110.
+Increased destroyer sight to 6 cells from 2
+Increased Battlecruiser sight to 8 from 4
+Battleship Cannon damage increased to 60 from 40 and damage to no armor target reduces to 150% from 250%
+Scrin Destroyer damage rides to 90 from 75.
+Legionaire cost increased to 300 from 200
+Reduced Scorpion reload time to 30 from 40.
+
+[2016 - 01 - 20]
+Enabled Toxin mine as a proper mine, true weapon still disabled.
+Reduced Toxin mine cost to 450.
+Added Scrin Tractor beam.
+Changed Scrin Legionarie weapon type to missile, from bullet.
+Increased Seeker speed to 80
+Cabal Centurion is now deployable, gets an inceased self healing rate when deployed.
+Added the CABAL Firefly
+
+[2016 - 01 - 19]
+Increased Stargate Cost to 1500 from 500
+Reduced Scrin factory cost to 1500 from 2000
+Enabled Scrin Host Station as constructable Aircraft.
+Changed Needler Tower requirements to Landing Zone instead of Scrin radar.
+The Following units can now detected stealthed units in a 4 cell radius:
+Hover MRLS, Orca Fighter, Quad Cannon, Gargoil, Wasp, Seeker, Attack Cycle, Harpy, Glyder, Battlecruiser
+Reduced damage received by all buildings by 20% (Buildings take 20% less damage)
+Increased Skirmisher ReloadDelay to 75 from 65
+Increased Wasp ReloadDelay to 80 from 60
+Raised Stormrider cost to 700 from 600
+Reduced Building build speed to 0.35 from 0.4
+Increased LeonidCannon Reload delay to 60 from 25, and increased damage to 35 from 15
+Risen Refinery health to 1200 from 900
+Risen Factory Health to 1300 from 1000
+
+[2016 - 01 - 18]
+Fixed IFV and Leonid tank tooltips.
+Mutant IFV can now carry up to 5 soldiers.
+Removed corrode effect from Ranger, added wip minelaying ability tooltip.
+Reduced MarauderShotgun damage to 15, reduced volleys to 15, and rate of fire set to 40
+Changed Marauder shotgun attack sound to gun18 (the weapon used by the civilians.)
+Increased capacity of GDI apc to 7 soldiers.
+Scrin transport can now land and also carry up to 8 soldiers.
+Reduced Skirmisher rocket damage to 20.
+Changed Scrin Battleship armor to concrete, Increased cost to 3500
+Leonid Tanks turrets now recoil.
+Flak Stations now fire at air targets, cost reduced to 450 from 600 and health reduced to 350 from 500
+Fixed wrong death sequence palettes being displayed when destroying mut, cab or scr buildings.
+Increased tib tree seeding interval to 50 from 42
+Fixed Quad Cannon not being able to fire at air targets.
+Reduced Gargoil Vulcan ReloadDelay to 10 from 15, and 25 from 50 to their rockets.
+Reduced Harpy claw reload delay to 21 from 72
+Reduced Orca Fighter Rockets reload delay to 25 from 50
+Removed explosion effect from Large Visecoird.
+Added new Tiberian Zombie, spawns randomly from tiberium deaths and can explode when killed.
+Set Tiberian Zombie weapon to SlimeAttack (visceroid weapon), and changed visceroid weapon to WarriorAcid
+Removed Standard engineer from mutant queue.
+Set Visceroid Health to 200 from 500, and Armor to wood.
+Set Zombie health to 75 and armor to none.
+Reduced chances of spawning visceroids and Zombies to 10%
+Decreased Battleship self reloaded speed to 1/5 th a second.
+Reduced price of forgotten aistrip to 300 from 500
+Reduced power consumption of forgotten airstrip to 0 from -10
+Changed Gargoil's armor to wood from light
+Reduced Orca Fighter damage to 30 from 60
+templar laser reload delay reduced to 40 from 50.
+
+[2016 - 01 - 17]
+Increased Marauder Shotgun Damage to 32 (fires 5 volleys with innaccuracy)
+Increased medic heal rate of fire to 80 from 40.
+Increased eagle warrior rate of fire to 100 from 50.
