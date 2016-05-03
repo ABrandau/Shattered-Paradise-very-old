@@ -1,5 +1,10 @@
 ﻿YEAR - MONTH - DAY
 
+[2016 - 05 - 03]
+Balance Changes:
+	Cabal railgun turret no longer does friendly fire.
+	Minor tweaks on the Bassilisk weapon.
+
 [2016 - 05 - 01]
 AI Changes:
 	GDI AI now builds turrets.

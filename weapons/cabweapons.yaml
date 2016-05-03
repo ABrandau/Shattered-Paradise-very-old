@@ -477,6 +477,7 @@ BasiliskProton:
 		ValidImpactTypes: Water	
 
 BasiliskBomb:
+	Inherits: ^RifleWarhead
 	ReloadDelay: 150
 	Range: 4c0
 	Burst: 1
@@ -499,11 +500,6 @@ BasiliskBomb:
 		Damage: 180
 		ValidTargets: Ground
 		Versus:
-			None: 80
-			Wood: 75
-			Light: 60
-			Heavy: 35
-			Concrete: 50
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: firestormexplo
@@ -622,7 +618,7 @@ AARail:
 	Report: biggun1.aud
 	ValidTargets: Air
 	MinRange: 3c0
-	Projectile: AreaBeam
+	Projectile: LaserZap
 		Speed: 20c0
 		Duration: 3
 		DamageInterval: 2
