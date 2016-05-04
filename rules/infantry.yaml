@@ -865,7 +865,7 @@ FLOAT:
 	Selectable:
 		Class: FLoat
 	Valued:
-		Cost: 1650
+		Cost: 1000
 	GivesExperience:
 		Experience: 550
 	-Crushable:

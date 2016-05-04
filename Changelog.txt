@@ -1,8 +1,12 @@
 ﻿YEAR - MONTH - DAY
 
 [2016 - 05 - 03]
+Other:	
+	Restored shellmap song.
 Performance:
 	Fixed a bug that made the game crash when ordering a paladin to repair at a warfactory.
+Balance Changes:
+	Floater: Cost: 1650 -> 1000
 
 [2016 - 05 - 03]
 Balance Changes:
