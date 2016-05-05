@@ -630,6 +630,8 @@ WOLF:
 	-Crushable:
 	AutoTarget:
 		ScanRadius: 8
+	Targetable:
+		TargetTypes: Ground, Infantry, Razorshark
 	Health:
 		HP: 300
 	Armor:
@@ -665,6 +667,8 @@ DEATHCLAW:
 		OwnerType: Killer
 		DeathType: CabalDeathInfantry
 		RequiresLobbyCreeps: true
+	Targetable:
+		TargetTypes: Ground, Infantry, Razorshark
 	AutoTarget:
 		ScanRadius: 8
 		InitialStance: AttackAnything

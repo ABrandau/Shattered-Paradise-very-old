@@ -552,8 +552,6 @@ MUTFIEND:
 		TargetTypes: Ground, Infantry, Razorshark
 	Voiced:
 		VoiceSet: Fiend
-	Targetable:
-		TargetTypes: Infantry, Ground
 	RenderSprites:
 		Image: doggie
 	Armament@Primary:
@@ -787,7 +785,7 @@ BUG:
 		Cost: 600
 	Tooltip:
 		Name: Purifier
-		Description: Heavy duty alien.\nCan take lots of punishment.\n  Strong vs Ground units.\n  Weak vs Aircraft.
+		Description: Heavy duty alien.\nUsed for dishing out damage\nSelf heals.\n  Strong vs Ground units.\n  Weak vs Aircraft.
 	FreeActor@1:
 		Actor: bugclone
 	Targetable:
@@ -795,9 +793,13 @@ BUG:
 	Selectable:
 		Bounds: 26,30,0,-10
 	Health:
-		HP: 220
+		HP: 270
 	Mobile:
 		Speed: 60
+	SelfHealing@Puri:
+		Step: 3
+		Delay: 100
+		DamageCooldown: 125
 	SpawnActorOnDeath@conversion:
 		Actor: cybdog
 		Probability: 100

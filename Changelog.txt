@@ -1,6 +1,14 @@
 ﻿YEAR - MONTH - DAY
 
-[2016 - 05 - 03]
+[2016 - 05 - 05]
+Balance Changes:
+	Scrin Destroyer: Blast Radius: 750 -> 600
+	Ravagers, bulls and tiberian fiends are now immune to Razorshark attacks.
+	Scrin Hover tank: Blast Radius: 512 -> 364
+	Purifier: Hp: 220 -> 270
+	Purifier Now self heals up to 50% health
+
+[2016 - 05 - 04]
 Other:	
 	Restored shellmap song.
 Performance:

@@ -139,7 +139,7 @@ ScrMbtCannon:
 		Angle: 62
 		Palette: pips
 	Warhead@1Dam: SpreadDamage
-		Spread: 512
+		Spread: 364
 		Damage: 90
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -337,7 +337,7 @@ DestroyerCannon:
 		Shadow: false
 		Angle: 62
 	Warhead@1Dam: SpreadDamage
-		Spread: 750
+		Spread: 600
 		Damage: 80
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
