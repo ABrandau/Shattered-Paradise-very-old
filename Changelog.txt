@@ -1,6 +1,6 @@
 ﻿YEAR - MONTH - DAY
 
-[2016 - 05 - 03]
+[2016 - 05 - 07]
 Balance Changes:
 	Demolition units can not target any structure.
 
