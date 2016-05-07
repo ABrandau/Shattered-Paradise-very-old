@@ -1,0 +1,8 @@
+World:
+	-StartGameNotification:
+	-SpawnMPUnits:
+	-MPStartLocations:
+	MusicPlaylist:
+		BackgroundMusic: serenade
+	LuaScript:
+		Scripts: map.lua

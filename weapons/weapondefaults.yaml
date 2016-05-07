@@ -1,0 +1,103 @@
+^RifleWarhead:	#Inherits: ^RifleWarhead
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 20
+		Versus:
+			Wood: 60
+			Light: 40
+			Heavy: 25
+			Concrete: 10
+
+^MeleeWarhead:	#Inherits: ^MeleeWarhead
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 15
+		Versus:
+			None: 100
+			Wood: 80
+			Light: 65
+			Heavy: 45
+			Concrete: 5			
+			
+^GrenadeWarhead:	#Inherits: ^GrenadeWarhead
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 40
+		ValidTargets: Ground
+		Versus:
+			None: 60
+			Wood: 100
+			Light: 40
+			Heavy: 15
+			Concrete: 28
+
+^RocketWarhead:	#Inherits: ^RocketWarhead
+	Warhead@1Dam: SpreadDamage
+		Versus:
+			None: 25
+			Wood: 65
+			Light: 100
+			Heavy: 150
+			Concrete: 60
+			
+^APWarhead:	#Inherits: ^APWarhead
+	Warhead@1Dam: SpreadDamage
+		Versus:
+			None: 25
+			Wood: 65
+			Light: 75
+			Heavy: 100
+			Concrete: 60
+
+ArtilleryWarhead: #Inherits: ArtilleryWarhead
+	Warhead@1Dam: SpreadDamage
+		Versus:
+			None: 80
+			Wood: 75
+			Light: 60
+			Heavy: 35
+			Concrete: 50
+			
+BombWarhead: #Inherits: BombWarhead			
+	Warhead@1Dam: SpreadDamage			
+		Versus:
+			None: 200
+			Wood: 100
+			Light: 75
+			Heavy: 32
+			Concrete: 100			
+
+^FlameWarhead:	#Inherits: ^FlameWarhead
+	Warhead@1Dam: SpreadDamage
+		Versus:
+			None: 600
+			Wood: 148
+			Light: 59
+			Heavy: 6
+			Concrete: 2
+
+^AcidWarhead:	#Inherits: ^AcidWarhead
+	Warhead@1Dam: SpreadDamage
+		Versus:
+			None: 300
+			Wood: 148
+			Light: 80
+			Heavy: 60
+			Concrete: 2	
+			
+^ExplosionWarhead:	#Inherits: ^ExplosionWarhead
+	Warhead@1Dam: SpreadDamage
+		Versus:
+			None: 90
+			Wood: 75
+			Light: 60
+			Heavy: 25
+
+^FullDamage:	#Inherits: ^FullDamage
+	Warhead@1Dam: SpreadDamage
+		Versus:
+			None: 100
+			Wood: 100
+			Light: 100
+			Heavy: 100
+			Concrete: 25

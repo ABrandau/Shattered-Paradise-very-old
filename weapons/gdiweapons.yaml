@@ -1,0 +1,600 @@
+MarineRifle:
+	Inherits: ^RifleWarhead
+	ReloadDelay: 70
+	Range: 6c0
+	Report: infgun3.aud, gostgun1.aud, slvkgun1.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 20
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: piffs
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: water_piffs
+		ExplosionPalette: ra
+		ValidImpactTypes: Water
+
+JJCannon:
+	Inherits: ^APWarhead
+	ReloadDelay: 55
+	Range: 4c0
+	Report: 120mmf.aud
+	ValidTargets: Ground, Helicopter
+	Projectile: Bullet
+		Speed: 682
+		Image: 120mm
+		Shadow: true
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 16
+		ValidTargets: Ground, Helicopter
+			None: 25
+			Wood: 35
+			Light: 75
+			Heavy: 120
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: medium_clsn
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: SmallCrater		
+		
+Grenade:
+	Inherits: ^GrenadeWarhead
+	ReloadDelay: 80
+	Range: 7c0
+	MinRange: 2c0
+	ValidTargets: Ground
+	Projectile: Bullet # TODO: Add bounce effect
+		Speed: 320
+		Blockable: false
+		Shadow: true
+		Angle: 45
+		Inaccuracy: 0c512
+		Image: DISCUS
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 40
+		ValidTargets: Ground
+		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: large_grey_explosion
+		ImpactSound: expnew13.aud
+		InvalidImpactTypes: Water
+	# Warhead@3EffWater: CreateEffect
+		# Explosion: small_watersplash
+		# ExplosionPalette: player
+		# ImpactSound: ssplash3.aud
+		# ValidImpactTypes: Water
+	# Warhead@4Smu: LeaveSmudge
+		# SmudgeType: MediumCrater
+
+Heal:
+	ReloadDelay: 150
+	Range: 4c0
+	Report: healer1.aud
+	ValidTargets: Infantry
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		DebugOverlayColor: 00FF00
+		Spread: 213
+		Damage: -40
+		Versus:
+			Light: 60
+		ValidTargets: Infantry
+		
+TrooperRail:
+	Inherits: ^FullDamage
+	ReloadDelay: 125
+	Range: 5c0
+	Report: biggun1.aud
+	Projectile: LaserZap
+		BeamWidth: 2
+		BeamDuration: 20
+		Blockable: true
+		Color: 0080FFC8		
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 40
+		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath		
+		Versus:
+			Concrete: 5
+	Warhead@emp: GrantUpgrade
+		Range: 1c0
+		Duration: 40
+		Upgrades: empdisable, notmobile
+
+#############################################
+# Vehicles
+#############################################		
+WolverineVulcan:
+	Inherits: ^RifleWarhead
+	ReloadDelay: 40
+	Range: 6c0
+	Report: tsgun4.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 25
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: piffs
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: water_piffs
+		ExplosionPalette: ra
+		ValidImpactTypes: Water
+		
+Titan120mm:
+	Inherits: ^APWarhead
+	ReloadDelay: 80
+	Range: 5c0
+	Report: 120mmf.aud
+	Projectile: Bullet
+		Speed: 1c512
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 70
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: large_clsn
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+	
+HoverMissile:
+	Inherits: ^RocketWarhead
+	ReloadDelay: 85
+	Burst: 2
+	Range: 6c512
+	Report: hovrmis1.aud
+	ValidTargets: Ground, Air
+	Projectile: Missile
+		MaximumLaunchSpeed: 213
+		Arm: 2
+		Blockable: false
+		Shadow: true
+		Inaccuracy: 128
+		Image: DRAGON
+		TrailImage: small_smoke_trail
+		HorizontalRateOfTurn: 8
+		RangeLimit: 35
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 30
+		ValidTargets: Ground, Air
+		Versus:
+			None: 25
+			Wood: 65
+			Light: 75
+			Heavy: 100
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: small_clsn
+		ImpactSound: expnew12.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@5: LeaveSmudge
+		SmudgeType: SmallCrater
+
+JuggCannon:
+	Inherits: ArtilleryWarhead
+	ReloadDelay: 100
+	Range: 20c0
+	Burst: 3
+	Report: jugger1.aud
+	Projectile: Bullet
+		Speed: 170
+		Image: 120mm
+		Angle: 165
+		Shadow: true
+		Inaccuracy: 2c0
+		Blockable: false
+		Palette: ra
+	MinRange: 5c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 350
+		Damage: 40
+		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: small_clsn
+		ImpactSound: expnew12.aud
+		InvalidImpactTypes: Water, Air, AirHit
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4EffAir: CreateEffect
+		Explosions: small_twlt
+		ImpactSound: expnew12.aud
+		ValidImpactTypes: Air, AirHit
+	Warhead@5Smu: LeaveSmudge
+		SmudgeType: SmallCrater		
+	# Warhead@2Eff: CreateEffect
+		# Explosion: large_explosion
+		# ImpactSound: expnew06.aud
+		# InvalidImpactTypes: Water
+	# Warhead@3EffWater: CreateEffect
+		# Explosion: small_watersplash
+		# ExplosionPalette: player
+		# ImpactSound: ssplash2.aud
+		# ValidImpactTypes: Water
+	# Warhead@4Smu: LeaveSmudge
+		# SmudgeType: MediumCrater
+
+SonicZap:
+	ReloadDelay: 250
+	Range: 4c0
+	Report: sonic4.aud
+	Projectile: AreaBeam
+		Speed: 0c128
+		Duration: 80
+		DamageInterval: 4 # Roughly 18 impacts.
+		Width: 0c384
+		Shape: Flat
+		ZOffset: 2047
+		BeyondTargetRange: 0c256
+		Blockable: true
+		Color: 00FFFFC8
+	Warhead@1Dam: SpreadDamage
+		Range: 0, 32
+		Falloff: 100, 100
+		Damage: 20
+		AffectsParent: false
+		ValidStances: Neutral, Enemy
+		Versus:
+			Heavy: 80
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@2Dam: SpreadDamage
+		Range: 0, 32
+		Falloff: 50, 50
+		Damage: 12
+		InvalidTargets: Disruptor # Does not affect friendly disruptors at all
+		AffectsParent: false
+		ValidStances: Ally
+		Versus:
+			Heavy: 80
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+
+MechRailgun:
+	ReloadDelay: 80
+	Range: 8c0
+	Burst: 1 # for alternating muzzle offsets, dmg/s identical to original
+	BurstDelay: 60
+	Report: railuse5.aud
+	Projectile: AreaBeam
+		Speed: 20c0
+		Duration: 3
+		DamageInterval: 2
+		Width: 0c128
+		BeyondTargetRange: 0c64
+		Blockable: true
+		Color: 00FFFFC8
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 150
+		Versus:
+			None: 200
+			Wood: 175
+			Light: 160
+			Heavy: 100
+			Concrete: 25
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath
+	
+MammothTusk:
+	ReloadDelay: 80
+	Range: 6c0
+	Report: misl1.aud
+	ValidTargets: Air
+	Burst: 2
+	Projectile: Missile
+		Blockable: false
+		Shadow: true
+		Inaccuracy: 128
+		Image: DRAGON
+		TrailImage: small_smoke_trail
+		HorizontalRateOfTurn: 10
+		MaximumLaunchSpeed: 213
+		RangeLimit: 50
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 171
+		Damage: 40
+		ValidTargets: Air
+		Versus:
+		DamageTypes: Explosion
+	Warhead@2Eff: CreateEffect
+		Explosions: medium_twlt
+		ImpactSound: expnew07.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water	
+#############################################
+# Aircraft
+#############################################				
+FighterHellfire:
+	Inherits: ^RocketWarhead
+	ReloadDelay: 50
+	Range: 6c0
+	Report: orcamis1.aud
+	Burst: 2
+	ValidTargets: Ground
+	Projectile: Missile
+		Speed: 800
+		MaximumLaunchSpeed: 512
+		Arm: 2
+		Blockable: false
+		Shadow: true
+		Image: DRAGON
+		TrailImage: small_smoke_trail
+		HorizontalRateOfTurn: 8
+		RangeLimit: 35
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 85
+		Damage: 30
+		ValidTargets: Ground
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: small_clsn
+		ImpactSound: expnew12.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@5Smu: LeaveSmudge
+		SmudgeType: SmallCrater
+
+AAFighterHellfire:
+	ReloadDelay: 25
+	Range: 6c0
+	Report: orcamis1.aud
+	Burst: 2
+	ValidTargets: Air
+	Projectile: Missile
+		Speed: 250
+		Blockable: false
+		Shadow: true
+		Image: DRAGON
+		TrailImage: small_smoke_trail
+		HorizontalRateOfTurn: 20
+		RangeLimit: 35
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 110
+		Damage: 25
+		ValidTargets: Air
+		Versus:
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: small_clsn
+		ImpactSound: expnew12.aud
+		InvalidImpactTypes: Water, Air, AirHit
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4EffAir: CreateEffect
+		Explosions: small_twlt
+		ValidImpactTypes: Air, AirHit
+		ImpactSound: expnew06.aud
+	Warhead@5Smu: LeaveSmudge
+		SmudgeType: SmallCrater		
+
+OBBomb:
+	Inherits: BombWarhead
+	ReloadDelay: 60
+	Burst: 5
+	BurstDelay: 7
+	ValidTargets: Ground, Building, Infantry, Vehicle
+	Range: 3c512
+	Projectile: GravityBomb
+		Speed: 170
+		Image: 120mm
+		Shadow: true
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 1000
+		Damage: 120
+		ValidTargets: Ground, Building, Infantry, Vehicle
+		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: large_explosion
+		ImpactSound: expnew09.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+
+GuardianRail:
+	Inherits: ^FullDamage
+	ReloadDelay: 100
+	Range: 8c0
+	Report: biggun1.aud
+	Projectile: LaserZap
+		BeamWidth: 2
+		BeamDuration: 20
+		Blockable: true
+		Color: 0080FFC8		
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 45
+		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath		
+		Versus:
+			None: 150
+			Concrete: 5
+
+GuardianTusk:
+	ReloadDelay: 150
+	Range: 8c0
+	Report: misl1.aud
+	ValidTargets: Air
+	Burst: 3
+	BurstDelay: 10
+	Projectile: Missile
+		Blockable: false
+		Shadow: true
+		Image: DRAGON
+		Inaccuracy: 1c0
+		Speed: 600
+		TrailImage: small_smoke_trail
+		HorizontalRateOfTurn: 10
+		MaximumLaunchSpeed: 213
+		RangeLimit: 50
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 600
+		Damage: 30
+		ValidTargets: Air
+		Versus:
+		DamageTypes: Explosion
+	Warhead@2Eff: CreateEffect
+		Explosions: medium_twlt
+		ImpactSound: expnew07.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+		
+GuardianRepair:
+	ReloadDelay: 300
+	Range: 8c0
+	Report: repair11.aud
+	ValidTargets: Repair
+	Projectile: Missile
+		Speed: 150
+		HorizontalRateOfTurn: 10		
+		Image: projwyverm
+		Palette: playerscrin		
+		ContrailLength: 30
+	Warhead@1Dam: SpreadDamage
+		Spread: 213
+		Damage: -100
+		ValidTargets: Repair		
+
+#############################################
+# Defences
+#############################################		
+VulcanTower:
+	Inherits: ^RifleWarhead
+	ReloadDelay: 26
+	Range: 8c0
+	Report: chaingn1.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 15
+		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: piffs
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: water_piffs
+		ExplosionPalette: ra
+		ValidImpactTypes: Water
+		
+GdiRedEye:
+	ReloadDelay: 60
+	Range: 10c0
+	Report: samshot1.aud
+	ValidTargets: Air
+	Projectile: Missile
+		MaximumLaunchSpeed: 384
+		Arm: 2
+		Blockable: false
+		Shadow: true
+		Inaccuracy: 128
+		Image: DRAGON
+		TrailImage: small_smoke_trail
+		HorizontalRateOfTurn: 8
+		RangeLimit: 100
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 40
+		ValidTargets: Air
+		DamageTypes: SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: tiny_twlt
+		ImpactSound: expnew05.aud
+
+RPGTower:
+	Inherits: ^APWarhead
+	ReloadDelay: 80
+	Range: 8c0
+	Report: glnch4.aud
+	Projectile: Bullet
+		Speed: 384
+		Blockable: false
+		Shadow: true
+		Angle: 62
+		Image: canister
+		Palette: player
+	Warhead@1Dam: SpreadDamage
+		Spread: 1C0
+		Damage: 60
+		DamageTypes: Prone70Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: large_clsn
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSound: ssplash2.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+
+RepairGun:
+	ReloadDelay: 60
+	Range: 4c0
+	Report: repair11.aud
+	ValidTargets: Repair
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 213
+		Damage: -50
+		ValidTargets: Repair
+
