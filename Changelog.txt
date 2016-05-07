@@ -1,6 +1,10 @@
 ﻿YEAR - MONTH - DAY
 
 [2016 - 05 - 03]
+Balance Changes:
+	Demolition units can not target any structure.
+
+[2016 - 05 - 03]
 Other:	
 	Restored shellmap song.
 Performance:
