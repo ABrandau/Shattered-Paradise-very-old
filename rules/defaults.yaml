@@ -256,7 +256,7 @@
 	Selectable:
 		Priority: 3
 	Targetable:
-		TargetTypes: Ground, Building, C4
+		TargetTypes: Building, Ground, C4, DetonateAttack
 	Building:
 		Dimensions: 1,1
 		Footprint: x
@@ -390,7 +390,7 @@
 	LineBuildNode:
 		Types: wall
 	Targetable:
-		TargetTypes: Ground, Wall, C4
+		TargetTypes: Ground, Wall, C4, DetonateAttack
 	WithWallSpriteBody:
 		Type: wall
 	AutoTargetIgnore:
@@ -1052,7 +1052,8 @@
 	AutoTarget:
 	RenderRangeCircle:
 	Targetable:
-		TargetTypes: Ground, C4, Defence
+	Targetable:
+		TargetTypes: Building, Ground, C4, DetonateAttack, Defence
 	RenderDetectionCircle:
 	RevealsShroud:
 		Range: 10c0
@@ -1071,7 +1072,7 @@
 		IsPlayerPalette: true
 		CloakSound: cloak5.aud
 		UncloakSound: cloak5.aud
-		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage, DetonateAttack
 	Voiced:
 		VoiceSet: Vehicle
 	AttackTurreted:

@@ -1,5 +1,9 @@
 ﻿YEAR - MONTH - DAY
 
+[2016 - 05 - 07]
+Balance Changes:
+	Demolition units can not target any structure.
+
 [2016 - 05 - 05]
 Balance Changes:
 	RPG Tower Blast radius: 1c0 -> 300, reload delay: 80 -> 90
@@ -9,7 +13,7 @@ Balance Changes:
 	Purifier: Hp: 220 -> 270
 	Purifier Now self heals up to 50% health
 
-[2016 - 05 - 04]
+[2016 - 05 - 03]
 Other:	
 	Restored shellmap song.
 Performance:
