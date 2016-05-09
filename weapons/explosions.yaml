@@ -12,7 +12,7 @@ SmallPlaneExplode:
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
 		Damage: 25
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		# Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			None: 90
 			Wood: 75
@@ -27,7 +27,7 @@ UnitExplode:
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
 		Damage: 50
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		# Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			None: 90
 			Wood: 75
@@ -42,7 +42,7 @@ ScrinUnitExplode:
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
 		Damage: 40
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		# Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			None: 90
 			Wood: 75
@@ -58,7 +58,7 @@ ScrinUnitExplode2:
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
 		Damage: 50
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		# Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			None: 90
 			Wood: 75

@@ -560,7 +560,7 @@ GdiRedEye:
 
 RPGTower:
 	Inherits: ^APWarhead
-	ReloadDelay: 80
+	ReloadDelay: 90
 	Range: 8c0
 	Report: glnch4.aud
 	Projectile: Bullet
@@ -571,7 +571,7 @@ RPGTower:
 		Image: canister
 		Palette: player
 	Warhead@1Dam: SpreadDamage
-		Spread: 1C0
+		Spread: 300
 		Damage: 60
 		DamageTypes: Prone70Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect

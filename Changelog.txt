@@ -2,6 +2,7 @@
 
 [2016 - 05 - 05]
 Balance Changes:
+	RPG Tower Blast radius: 1c0 -> 300, reload delay: 80 -> 90
 	Scrin Destroyer: Blast Radius: 750 -> 600
 	Ravagers, bulls and tiberian fiends are now immune to Razorshark attacks.
 	Scrin Hover tank: Blast Radius: 512 -> 364
