@@ -4,4 +4,21 @@
 		Offset: 0, 0
 		UseTilesetCode: false
 		ZOffset: 512
-		BlendMode: Additive	
+		BlendMode: Additive
+		
+^InfantryDeathAnims:
+	die3: infdie
+		Length: *
+	die4: s_bang34
+		Length: *
+	die-crushed:
+		Start: 206
+		Length: 6
+		ShadowStart: 418
+		ZOffset: -511
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *

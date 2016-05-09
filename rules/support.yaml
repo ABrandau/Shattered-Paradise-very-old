@@ -1191,7 +1191,7 @@ SCRDRONE:
 		Range: 12c0
 	Armament:
 		Weapon: DronePlane
-		LocalOffset: 1400,210,800
+		LocalOffset: 0,0,800
 	AttackCharge:
 		ChargeAudio: obelpowr.aud
 		ReloadTime: 75

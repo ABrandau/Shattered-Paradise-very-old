@@ -552,6 +552,8 @@ MUTFIEND:
 		TargetTypes: Ground, Infantry, Razorshark
 	Voiced:
 		VoiceSet: Fiend
+	Targetable:
+		TargetTypes: Infantry, Ground
 	RenderSprites:
 		Image: doggie
 	Armament@Primary:
@@ -771,35 +773,30 @@ SHAPESHIFTER:
 	-GainsExperience:
 	RenderSprites:
 
-BUG:
+COLOSSI:
 	Inherits: ^ScrinSoldier
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 27
 		Prerequisites: ~scrrax, scrradr
-	Selectable:
-		Class: bug
-	GivesExperience:
-		Experience: 300
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Purifier
-		Description: Heavy duty alien.\nUsed for dishing out damage\nSelf heals.\n  Strong vs Ground units.\n  Weak vs Aircraft.
-	FreeActor@1:
-		Actor: bugclone
+		Name: Colossus
+		Description: Heavy duty alien.\nCan take lots of punishment.\n  Strong vs Ground units.\n  Weak vs Aircraft.
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark
 	Selectable:
 		Bounds: 26,30,0,-10
 	Health:
-		HP: 270
-	Mobile:
-		Speed: 60
-	SelfHealing@Puri:
+		HP: 440
+	SelfHealing@colos:
 		Step: 3
 		Delay: 100
 		DamageCooldown: 125
+	Mobile:
+		Speed: 60
+		SharesCell: False
 	SpawnActorOnDeath@conversion:
 		Actor: cybdog
 		Probability: 100
@@ -810,8 +807,8 @@ BUG:
 		Type: light
 	Armament:
 		Weapon: BugRail
-		LocalOffset: 150,0,400
-		FireDelay: 5
+		LocalOffset: 300,0,1000
+		FireDelay: 20
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:
@@ -872,7 +869,7 @@ FLOAT:
 		Experience: 550
 	-Crushable:
 	Tooltip:
-		Name: Floater
+		Name: Purifier
 		Description: Recon unit, suited for harassment.\nCan move through water and Cliffs.\n  Strong vs Infantry, Buildings\n  Weak vs Tanks, Aircraft
 	Health:
 		HP: 180
@@ -893,6 +890,50 @@ FLOAT:
 		Weapon: FloatTesla
 		LocalOffset: 0,250,500
 		FireDelay: 10
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: throw
+	-TakeCover:
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+		
+BUG:
+	Inherits: ^ScrinSoldier
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 30
+		Prerequisites: ~scrrax, scrradr
+	Selectable:
+		Class: bug
+	GivesExperience:
+		Experience: 500
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Stalker
+		Description: Special Alien.\nCan mind control enemies.\n  Strong vs Ground units.\n  Weak vs Aircraft.
+	FreeActor@1:
+		Actor: bugclone
+	Targetable:
+		TargetTypes: Ground, Infantry, Razorshark, MindControlInmune
+	Selectable:
+		Bounds: 26,30,0,-10
+	Health:
+		HP: 220
+	Mobile:
+		Speed: 60
+	SpawnActorOnDeath@conversion:
+		Actor: cybdog
+		Probability: 100
+		OwnerType: Killer
+		DeathType: CabalDeathInfantry
+		RequiresLobbyCreeps: true
+	Armor:
+		Type: none
+	Armament:
+		Weapon: StalkerSteal
+		FireDelay: 5
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:

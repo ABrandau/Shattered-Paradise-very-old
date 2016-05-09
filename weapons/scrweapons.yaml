@@ -38,15 +38,6 @@ LegioNeedler:
 	Warhead@2Eff: CreateEffect
 		Explosions: scrinpulse3
 		ImpactSound: expnew12.aud
-		# InvalidImpactTypes: Water, Air, AirHit
-	# Warhead@3EffWater: CreateEffect
-		# Explosion: small_watersplash
-		# ImpactSound: ssplash3.aud
-		# ValidImpactTypes: Water
-	# Warhead@4EffAir: CreateEffect
-		# Explosion: small_twlt
-		# ImpactSound: expnew12.aud
-		# ValidImpactTypes: Air, AirHit
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater
 
@@ -57,22 +48,25 @@ StalkerSteal:
 	ValidTargets: Infantry, Vehicle
 	InvalidTargets: MindControlInmune
 	Projectile: Bullet
-		Speed: 1c682
+		Speed: 200
 		Image: 120mm
 		# Inaccuracy: 1
 		ValidTargets: Infantry, Vehicle
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
+		Spread: 64
 		Damage: 1
 		ValidTargets: Infantry, Vehicle
 		Versus:
-			Concrete: 30
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@4OwnerChange: ChangeOwner
-		Range: 300
+		Range: 64
 		Duration: 50
 		InvalidTargets: C4, MindControlInmune
+	Warhead@emp: GrantUpgrade
+		Range: 100
+		Duration: 60
+		Upgrades: MindControlTargetting
 
 BugRail:
 	Inherits: ^FullDamage
@@ -82,6 +76,7 @@ BugRail:
 	Projectile: LaserZap
 		BeamWidth: 2
 		BeamDuration: 5
+		Color: b300b3
 	Warhead@1Dam: SpreadDamage
 		Spread: 125
 		Damage: 7
@@ -139,7 +134,7 @@ ScrMbtCannon:
 		Angle: 62
 		Palette: pips
 	Warhead@1Dam: SpreadDamage
-		Spread: 364
+		Spread: 512
 		Damage: 90
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -194,6 +189,7 @@ TripodLaser:
 		Width: 85
 		BeamDuration: 5
 		ZOffset: 2047
+		Color: b300b3
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 40
@@ -337,7 +333,7 @@ DestroyerCannon:
 		Shadow: false
 		Angle: 62
 	Warhead@1Dam: SpreadDamage
-		Spread: 600
+		Spread: 750
 		Damage: 80
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -423,7 +419,7 @@ TractorBeam:
 		ValidTargets: Air
 
 DronePlane:
-	Inherits: ^RocketWarhead
+	Inherits: ^GrenadeWarhead
 	ReloadDelay: 1
 	Range: 11c0
 	MinRange: 2c0
@@ -432,15 +428,14 @@ DronePlane:
 	BurstDelay: 5
 	ValidTargets: Ground, Air
 	Projectile: Missile
-		Speed: 130
-		Image: projwyverm
-		Palette: playerscrin
-		Shadow: false
+		Speed: 240
+		Image: destroshell
+		Trail: blueballminitrail
+		Palette: pips
 		Angle: 50
-		ContrailLength: 30
 	Warhead@1Dam: SpreadDamage
-		Spread: 500
-		Damage: 70
+		Spread: 150
+		Damage: 80
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, ScrinDroneDeath
 	Warhead@2Eff: CreateEffect

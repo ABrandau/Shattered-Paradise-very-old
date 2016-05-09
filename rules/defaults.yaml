@@ -127,13 +127,6 @@
 	TimedUpgradeBar@WebDisable:
 		Upgrade: WebDisable
 		Color: FFFFFF
-	# WithIdleOverlay@WebDisable:
-		# Sequence: emp-overlay
-		# Palette: effect
-		# UpgradeTypes: WebDisable
-		# ShowToEnemies: true
-		# ZOffset: 512
-		# UpgradeMinEnabledLevel: 1
 	Mobile:
 		UpgradeTypes: WebDisable
 		UpgradeMaxEnabledLevel: 0
@@ -466,6 +459,13 @@
 	IgnoresDisguise:
 	Targetable:
 		TargetTypes: Ground, Infantry
+		UpgradeMaxEnabledLevel: 0
+		UpgradeMinEnabledLevel:	0
+		UpgradeTypes: MindControlTargetting
+	Targetable@MindControl:
+		TargetTypes: Ground, Infantry, MindControlInmune
+		UpgradeTypes: MindControlTargetting
+		UpgradeMinEnabledLevel: 1
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	WithInfantryBody:
@@ -739,7 +739,14 @@
 	Voiced:
 		VoiceSet: Vehicle
 	Targetable:
-		TargetTypes: Ground, Vehicle, Repair
+		TargetTypes: Ground, Vehicle, Repair, MindControlInmune
+		UpgradeTypes: MindControlTargetting
+		UpgradeMaxEnabledLevel: 0
+		UpgradeMinEnabledLevel:	0
+	Targetable:
+		TargetTypes: Ground, Vehicle, Repair, MindControlInmune
+		UpgradeMinEnabledLevel: 1
+		UpgradeTypes: MindControlTargetting
 	Repairable:
 		RepairBuildings: gadept
 		Voice: Move
@@ -1072,7 +1079,7 @@
 		IsPlayerPalette: true
 		CloakSound: cloak5.aud
 		UncloakSound: cloak5.aud
-		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage, DetonateAttack
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
 	Voiced:
 		VoiceSet: Vehicle
 	AttackTurreted:
@@ -1090,7 +1097,7 @@
 		Palette: pips
 	Selectable:
 	Targetable:
-		TargetTypes: Ground, Repair
+		TargetTypes: Ground, Repair, DetonateAttack
 	Guardable:
 	HiddenUnderFog:
 	ActorLostNotification:
