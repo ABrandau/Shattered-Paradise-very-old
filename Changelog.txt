@@ -1,5 +1,14 @@
 ﻿YEAR - MONTH - DAY
 
+
+[2016 - 05 - 08]
+Balance Changes:
+	Added new scrin unit, the stalker, uses the Purifier Sprite.
+	Old Purifier has now a new model and is named the Colossus, his stats changed a bit.
+Other:
+	Floaters are now named purifiers.
+	Scrin Advanced Defence renamed.	
+
 [2016 - 05 - 07]
 Balance Changes:
 	Demolition units can not target any structure.

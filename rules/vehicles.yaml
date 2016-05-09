@@ -624,6 +624,8 @@ WOLF:
 		OwnerType: Killer
 		DeathType: CabalDeathInfantry
 		RequiresLobbyCreeps: true
+	Targetable:
+		TargetTypes: Ground, Infantry, Razorshark
 	UpgradeActorsNear@lobo:
 		Upgrades: ForgInfantryBuff
 		Range: 4c0
@@ -665,6 +667,8 @@ DEATHCLAW:
 		OwnerType: Killer
 		DeathType: CabalDeathInfantry
 		RequiresLobbyCreeps: true
+	Targetable:
+		TargetTypes: Ground, Infantry, Razorshark
 	AutoTarget:
 		ScanRadius: 8
 		InitialStance: AttackAnything

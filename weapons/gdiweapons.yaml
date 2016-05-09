@@ -560,7 +560,7 @@ GdiRedEye:
 
 RPGTower:
 	Inherits: ^APWarhead
-	ReloadDelay: 80
+	ReloadDelay: 90
 	Range: 8c0
 	Report: glnch4.aud
 	Projectile: Bullet

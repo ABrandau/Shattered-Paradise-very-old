@@ -1167,7 +1167,7 @@ SCRDRONE:
 	Valued:
 		Cost: 900
 	Tooltip:
-		Name: Needler Hive
+		Name: Plasma Hive
 		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs All
 	Buildable:
 		Queue: Defense
