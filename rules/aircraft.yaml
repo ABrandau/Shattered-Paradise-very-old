@@ -924,9 +924,6 @@ SCRBATTLESHIP:
 		LocalOffset:0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
 	AttackTurreted:
 	Turreted:
-	# AttackHeli:
-		# FacingTolerance: 20
-		# Voice: Attack
 	AmmoPool:
 		Ammo: 25
 		PipCount: 0
@@ -956,8 +953,8 @@ SCRINCOUNCIL:
 	Valued:
 		Cost: 2500
 	Tooltip:
-		Name: The Architect
-		Description: Scrin mobile factory, constructs vehicles.\n  Unarmed.
+		Name: Creation engine
+		Description: Scrin mobile forge, constructs vehicles.\n  Unarmed.
 	Selectable:
 		Bounds: 100,90
 	Voiced:

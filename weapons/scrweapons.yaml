@@ -288,7 +288,7 @@ BattleshipCannon:
 	Report: 120mmf.aud
 	Burst: 6
 	BurstDelay: 5
-	ValidTargets: Ground, Air, water
+	ValidTargets: Ground, Infantry, Vehicle, Air, water
 	Projectile: Bullet
 		Speed: 500
 		Image: purpBullet
@@ -301,7 +301,7 @@ BattleshipCannon:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 30
-		ValidTargets: Ground, Air, water
+		ValidTargets: Ground, Infantry, Vehicle, Air, water
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: scrinexplo1

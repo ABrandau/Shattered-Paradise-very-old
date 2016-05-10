@@ -903,7 +903,7 @@ BUG:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 30
-		Prerequisites: ~scrrax, scrradr
+		Prerequisites: ~scrrax, scrtech
 	Selectable:
 		Class: bug
 	GivesExperience:
@@ -911,8 +911,8 @@ BUG:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Stalker
-		Description: Special Alien.\nCan mind control enemies.\n  Strong vs Ground units.\n  Weak vs Aircraft.
+		Name: Mind Leech
+		Description: Special Alien. Can\ntake over enemies for brief moments.\n  Strong vs Ground units.\n  Weak vs Aircraft.
 	FreeActor@1:
 		Actor: bugclone
 	Targetable:
