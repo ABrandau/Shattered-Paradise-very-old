@@ -535,7 +535,7 @@ MUTFIEND:
 		Actor: cybdog
 		Probability: 100
 		OwnerType: Killer
-		DeathType: CabalDeathInfantry
+		DeathType: CabalDeath
 		RequiresLobbyCreeps: true
 	Valued:
 		Cost: 400
@@ -670,7 +670,7 @@ shark:
 		Actor: cybdog
 		Probability: 100
 		OwnerType: Killer
-		DeathType: CabalDeathInfantry
+		DeathType: CabalDeath
 		RequiresLobbyCreeps: true
 	Guard:
 		Voice: Move
@@ -801,7 +801,7 @@ COLOSSI:
 		Actor: cybdog
 		Probability: 100
 		OwnerType: Killer
-		DeathType: CabalDeathInfantry
+		DeathType: CabalDeath
 		RequiresLobbyCreeps: true
 	Armor:
 		Type: light
@@ -927,7 +927,7 @@ BUG:
 		Actor: cybdog
 		Probability: 100
 		OwnerType: Killer
-		DeathType: CabalDeathInfantry
+		DeathType: CabalDeath
 		RequiresLobbyCreeps: true
 	Armor:
 		Type: none
@@ -1144,6 +1144,7 @@ PDRONE:
 	Passenger:
 	WithInfantryBody:
 		AttackSequence: shoot
+		IdleSequences: idle1,idle2
 	AutoTarget:
 		ScanRadius: 8
 		InitialStance: AttackAnything
