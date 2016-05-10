@@ -750,8 +750,6 @@ SHAPESHIFTER:
 		Prerequisites: ~scrrax
 	Voiced:
 		VoiceSet: Hijacker
-	WithDisguisingInfantryBody:
-	Disguise:
 	FreeActor@1:
 		Actor: shapeshifterclone
 	FreeActor@2:
