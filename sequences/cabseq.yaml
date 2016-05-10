@@ -238,13 +238,11 @@ pdrone:
 		Length: 7
 		Facings: 8
 		ShadowStart: 218
-	Idle1:
-		Tick: 40
+	idle1:
 		Start: 64
 		Length: 13
 		ShadowStart: 274
-	Idle2:
-		Tick: 40
+	idle2:
 		Start: 108
 		Length: 18
 		ShadowStart: 317
