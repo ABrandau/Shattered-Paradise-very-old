@@ -740,10 +740,10 @@
 		VoiceSet: Vehicle
 	Targetable:
 		TargetTypes: Ground, Vehicle, Repair, MindControlInmune
-		UpgradeTypes: MindControlTargetting
 		UpgradeMaxEnabledLevel: 0
 		UpgradeMinEnabledLevel:	0
-	Targetable:
+		UpgradeTypes: MindControlTargetting
+	Targetable@asd:
 		TargetTypes: Ground, Vehicle, Repair, MindControlInmune
 		UpgradeMinEnabledLevel: 1
 		UpgradeTypes: MindControlTargetting

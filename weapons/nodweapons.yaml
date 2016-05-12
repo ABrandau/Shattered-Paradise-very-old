@@ -395,11 +395,11 @@ HarpyClaw:
 	Report: cygun1.aud
 	Projectile: Bullet
 		Speed: 1c682
-	ValidTargets: Ground, Air
+		ValidTargets: Ground, Vehicle, Building, Infantry, Air
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 35
-		ValidTargets: Ground, Air
+		ValidTargets: Ground, Vehicle, Building, Infantry, Air
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -416,7 +416,7 @@ Proton:
 	Report: scrin5b.aud
 	Burst: 3
 	BurstDelay: 3
-	ValidTargets: Ground, water
+	ValidTargets: Ground, water, Infantry, Vehicle, Building
 	Projectile: Bullet
 		Speed: 341
 		Blockable: false
@@ -427,7 +427,7 @@ Proton:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 45
-		ValidTargets: Ground, water
+		ValidTargets: Ground, water, Infantry, Vehicle, Building
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_bang

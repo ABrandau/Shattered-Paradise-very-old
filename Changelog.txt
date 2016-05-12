@@ -1,5 +1,9 @@
 ﻿YEAR - MONTH - DAY
 
+[2016 - 05 - 08]
+Balance Changes:
+	Wolverine: Armor: Wood -> Light, HP: 150 -> 175
+	Orca Fighter: Rocket damage: 30 -> 40
 
 [2016 - 05 - 08]
 Balance Changes:

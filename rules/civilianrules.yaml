@@ -462,7 +462,7 @@ BERSERKER:
 		ScanRadius: 8
 	WithInfantryBody:
 		AttackSequence: shoot
-		IdleSequences: Idle1, Idle2, Idle3
+		IdleSequences: idle1, idle2, idle3
 	AttackFrontal:
 		Voice: Attack
 

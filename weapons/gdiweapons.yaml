@@ -348,7 +348,7 @@ FighterHellfire:
 	Range: 6c0
 	Report: orcamis1.aud
 	Burst: 2
-	ValidTargets: Ground
+	ValidTargets: Ground, Vehicle, Building, Infantry
 	Projectile: Missile
 		Speed: 800
 		MaximumLaunchSpeed: 512
@@ -362,8 +362,8 @@ FighterHellfire:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 85
-		Damage: 30
-		ValidTargets: Ground
+		Damage: 40
+		ValidTargets: Ground, Vehicle, Building, Infantry
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn

@@ -139,8 +139,8 @@ GACTWR:
 GAVULC:
 	Inherits: ^Defense
 	Inherits@1: ^TowerStealthDetection
-	-WithSpriteBody:
-	WithWallSpriteBody:
+	WithSpriteBody:
+	# WithWallSpriteBody:
 		Type: wall
 	Valued:
 		Cost: 350
@@ -198,8 +198,8 @@ GAROCK:
 	Inherits@1: ^TowerStealthDetection
 	Power:
 		Amount: -20
-	-WithSpriteBody:
-	WithWallSpriteBody:
+	WithSpriteBody:
+	# WithWallSpriteBody:
 		Type: wall
 	Valued:
 		Cost: 800
@@ -253,8 +253,8 @@ GACSAM:
 	Inherits@1: ^TowerStealthDetection
 	Power:
 		Amount: -30
-	-WithSpriteBody:
-	WithWallSpriteBody:
+	WithSpriteBody:
+	# WithWallSpriteBody:
 		Type: wall
 	Valued:
 		Cost: 800
