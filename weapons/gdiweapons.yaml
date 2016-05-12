@@ -428,7 +428,7 @@ OBBomb:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 1000
-		Damage: 120
+		Damage: 140
 		ValidTargets: Ground, Building, Infantry, Vehicle
 		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect

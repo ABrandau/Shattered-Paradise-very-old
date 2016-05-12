@@ -360,12 +360,12 @@ APACHE:
 		FacingTolerance: 20
 		Voice: Attack
 	AmmoPool:
-		Ammo: 12
-		PipCount: 4
-		ReloadCount: 4
+		Ammo: 20
+		PipCount: 6
+		ReloadCount: 5
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		ReloadTicks: 100
+		ReloadTicks: 50
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire

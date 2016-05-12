@@ -398,7 +398,7 @@ HarpyClaw:
 		ValidTargets: Ground, Vehicle, Building, Infantry, Air
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 35
+		Damage: 40
 		ValidTargets: Ground, Vehicle, Building, Infantry, Air
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
@@ -410,7 +410,7 @@ HarpyClaw:
 		ValidImpactTypes: Water
 
 Proton:
-	Inherits: ^APWarhead
+	Inherits: BombWarhead
 	ReloadDelay: 50
 	Range: 5c0
 	Report: scrin5b.aud
@@ -425,8 +425,8 @@ Proton:
 		Image: TORPEDO
 		RangeLimit: 35
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 45
+		Spread: 250
+		Damage: 50
 		ValidTargets: Ground, water, Infantry, Vehicle, Building
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
