@@ -204,7 +204,7 @@ GAROCK:
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: RPG Upgrade
+		Name: RPG Tower
 		Description: GDI Advanced base defense.\nDoes not require power to operate.\n  Strong vs Armored ground units\n  Weak vs Aircraft
 	Buildable:
 		Queue: Defense
@@ -259,7 +259,7 @@ GACSAM:
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: SAM Upgrade
+		Name: SAM Tower
 		Description: GDI Anti-Air base defense.\nStronger than average AA.\nDoes not require extra power to operate.\n  Strong vs Aircraft\n  Weak vs Ground units
 	Buildable:
 		Queue: Defense
