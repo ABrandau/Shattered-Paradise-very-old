@@ -38,6 +38,14 @@ beacon:
 		Length: 5
 		Tick: 200
 		ZOffset: 2047
+	arrow: mouse
+		Start: 6
+		Offset: 1,-12
+		ZOffset: 2535
+	circles: ring
+		Length: 12
+		BlendMode: Additive
+		ZOffset: 2047
 
 crate:
 	idle:
