@@ -499,7 +499,7 @@ cyc2:
 		Length: *
 		ZOffset: 512
 		BlendMode: Additive
-	icon: cybcicon
+	icon: cyc2icon
 ##########################################################
 # Vehicles
 ##########################################################	

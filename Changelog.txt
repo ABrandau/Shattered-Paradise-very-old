@@ -1,17 +1,21 @@
 ﻿YEAR - MONTH - DAY
 
-[2016 - 05 - 08]
+[2016 - xx - xx]
 Balance Changes:
-	Wolverine: Armor: Wood -> Light, HP: 150 -> 175
-	Orca Fighter: Rocket damage: 30 -> 40
-	Harpy: Damage: 35 -> 40, Ammunition: 12 -> 20
-	Banshee: damage: 45 -> 60, spread: 128 -> 250, Warhead: Armor piercing -> Bomb
-	Orca Bomber: 120 -> 140
-
-[2016 - 05 - 08]
-Balance Changes:
+	Nod Buggy: Rocket damage: 50 -> 40
+	Falcon: Damage per bomb: 5 -> 4
+	Wolverine: Armor: Wood -> Light, HP: 150 -> 175.
+	Orca Fighter: Rocket damage: 30 -> 40.
+	Harpy: Damage: 35 -> 40, Ammunition: 12 -> 20.
+	Banshee: damage: 45 -> 60, spread: 128 -> 250, Warhead: Armor piercing -> Bomb.
+	Orca Bomber: damage 120 -> 140.
 	Added new scrin unit, the stalker, uses the Purifier Sprite.
-	Old Purifier has now a new model and is named the Colossus, his stats changed a bit.
+	Nod Laser: Power Consumption: 50 -> 35
+Graphic Changes:
+	Old Purifier has now a new model (the bug) and is named the Colossus, his stats changed a bit.
+	Cyborg Commando icon changed.
+	Adjusted nod turret voxel offset somewhat.
+	Increased Tick rate of the attack animation of the flame warrior.
 Other:
 	Floaters are now named purifiers.
 	Scrin Advanced Defence renamed.	

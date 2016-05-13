@@ -34,13 +34,9 @@ rallypoint:
 	circles: null
 
 beacon:
-	arrow: mouse
-		Start: 6
-		Offset: 1,-12
-		ZOffset: 2535
-	circles: ring
-		Length: 12
-		BlendMode: Additive
+	idle:
+		Length: 5
+		Tick: 200
 		ZOffset: 2047
 
 crate:
@@ -95,7 +91,7 @@ darken:
 		Length: 1
 
 pips:
-	medic: 
+	medic:
 		Start: 6
 	groups: pipsra #TODO: backfall to RA asset
 		Start: 8
@@ -303,6 +299,7 @@ resources:
 		Length: 12
 		ShadowStart: 12
 		Offset: 0, -12
+		ZRamp: 1
 	tib01: tib01
 	tib02: tib02
 	tib03: tib03
@@ -327,10 +324,12 @@ resources:
 		Length: 1
 		Start: 52
 		ShadowStart: -1
+		Tick: 180
 
 shroud:
 	Defaults:
 		Offset: 0, -1
+		ZRamp: 1
 	shroud:
 		Length: *
 	fog: fog

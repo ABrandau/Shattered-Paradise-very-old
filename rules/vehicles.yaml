@@ -684,7 +684,7 @@ DEATHCLAW:
 		SharesCell: false
 	Armament@PRIMARY:
 		Weapon: DeathclawBlow
-		LocalOffset: 128,0,640
+		LocalOffset: 128,0,500
 	AttackFrontal:
 		Voice: Attack
 

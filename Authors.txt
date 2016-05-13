@@ -30,7 +30,7 @@ All graphical assets fall into three categories:
 
 If an asset doesn't have credit, then either WW or Nolt made it, let us know if we made any mistakes.
 
-The_Dementor	: Skirmisher, EMP pulse Icons, Harvester, and MCV Cameos (mut and cab), Wrench and Tiberium Icons.
+The_Dementor	: Skirmisher, EMP pulse Icons, Harvester, and MCV Cameos (mut and cab), cyborg commando icon, Wrench and Tiberium Icons.
 Gangster	: His template.
 Zoidzilla	: His template.	
 Scipción	: Shattered Paradise planet logo.
@@ -41,7 +41,8 @@ Moder.U		: Falcon vxl, Battle Fortress vxl, Beam Cannon vxl.
 Super Joe	: Marine shp, Militant shp.			
 Lin Kuei Ominae	: Seeker shp, Tripod shp.
 wirecase.com	: Guardian Platform model.				
-Hassan_2030	: Grinder vxl.				
+Hassan_2030	: Grinder vxl.		
+Marn:		: Maps: Riverside, The Pit, Islotropolis, Sidestep TS.		
 Jah		: Storm Rider vxl.				
 Sane Disruption	: Forgotten MRLS vxl.				
 GameMaster0000	: Tiberian Fiend Icon.

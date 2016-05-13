@@ -161,7 +161,7 @@ BikeMissile:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 50
+		Damage: 40
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect

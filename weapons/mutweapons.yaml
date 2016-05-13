@@ -689,7 +689,7 @@ FalconPunch:
 		Inaccuracy: 1c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
-		Damage: 5
+		Damage: 4 
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
