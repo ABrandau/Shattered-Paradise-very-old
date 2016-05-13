@@ -129,7 +129,7 @@ grenadier:
 		ShadowStart: 732
 	prone-shoot:
 		Start: 358
-		Length: 7
+		Length: 6
 		Facings: 8
 		ShadowStart: 788
 	standup-0:
