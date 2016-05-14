@@ -1269,10 +1269,7 @@ JENN:
 		Weapon: SeekerBazooka
 		Recoil: 127
 		RecoilRecovery: 26
-		LocalOffset: 300,200,500, 300,-250,500
-	# RenderVoxels:
-	# WithVoxelBarrel:
-		# LocalOffset: -128, 85, 256
+		LocalOffset: 300,250,500, 300,-250,500
 	AutoTarget:
 	Selectable:
 		Bounds: 30, 42, 0, -8

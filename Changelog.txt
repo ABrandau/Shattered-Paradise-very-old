@@ -1,5 +1,19 @@
 ﻿YEAR - MONTH - DAY
 
+[2016 - xx - xx]
+Balance Changes:
+	Cabal Railgun turret: Power Consumption: -70 -> -60
+	Cabal Blaster: Warhead: Bomb, Reload delay: 200 -> 150, Spread: 512 -> 300, Cost: 1400 -> 1200, range: 9 -> 10
+	Plasma Hive: Warhead: Grenade -> Bomb.
+	Cyberdog: Grind Payload: 150 -> 100, Changed weapon to Rockets.
+	Sentinel: Grind Payload: 80 -> 150.
+Graphical Changes:
+	Adjusted Seeker weapon offset.
+	Corrected CABAL Sentinel Sprites.
+	Removed Bullet icons from CABAL Wasp.
+	Reduced CABAL railgun turret line width.
+
+
 [2016 - 05 - 13]
 Balance Changes:
 	Scrin hover vehicles no longer have terrain movement penalties.

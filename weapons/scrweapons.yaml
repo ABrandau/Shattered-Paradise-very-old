@@ -282,7 +282,7 @@ Glyder1Cannon:
 		SmudgeType: SmallCrater
 
 BattleshipCannon:
-	Inherits: BombWarhead
+	Inherits: ^BombWarhead
 	ReloadDelay: 45
 	Range: 5c768
 	Report: 120mmf.aud
@@ -419,7 +419,7 @@ TractorBeam:
 		ValidTargets: Air
 
 DronePlane:
-	Inherits: ^GrenadeWarhead
+	Inherits: ^BombWarhead
 	ReloadDelay: 1
 	Range: 11c0
 	MinRange: 2c0

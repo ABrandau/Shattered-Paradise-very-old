@@ -1366,10 +1366,10 @@ CABBLAST:
 	Inherits@2: ^CyborgSelfHeal
 	Inherits@3: ^TowerStealthDetection
 	Valued:
-		Cost: 1400
+		Cost: 1200
 	Tooltip:
 		Name: Blaster Turret
-		Description: Artillery, fires plasma.\nHas a minimun range of fire.\nRequires power to operate.\n  Strong vs Ground Units.\n  Weak vs Aircraft.
+		Description: Artillery, fires plasma.\nHas a minimun range of fire.\nRequires power to operate.\n  Strong vs Infantry.\n  Weak vs Tanks, Aircraft.
 	Buildable:
 		Queue: Defense
 		Prerequisites: cabtech, ~structures.cab
@@ -1385,8 +1385,6 @@ CABBLAST:
 		Type: Light
 	BodyOrientation:
 		QuantizedFacings: 32
-	# RenderRangeCircle:
-		# RangeCircleType: aa
 	Turreted:
 		TurnSpeed: 10
 		InitialFacing: 50
@@ -1441,7 +1439,7 @@ CABRAIL:
 		Weapon: AARail
 		LocalOffset: 550,-400,700
 	Power:
-		Amount: -70
+		Amount: -60
 	SelectionDecorations:
 		VisualBounds: 40, 36, -3, -8
 

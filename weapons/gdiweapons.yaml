@@ -415,7 +415,7 @@ AAFighterHellfire:
 		SmudgeType: SmallCrater		
 
 OBBomb:
-	Inherits: BombWarhead
+	Inherits: ^BombWarhead
 	ReloadDelay: 60
 	Burst: 5
 	BurstDelay: 7

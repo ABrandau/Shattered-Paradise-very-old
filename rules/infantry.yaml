@@ -419,11 +419,6 @@ E3:
 		Weapon: SkirmisherRocket
 		LocalOffset: 128,0,640
 		Name: OnFoot
-		# TargetStances: Ally, Enemy, Neutral
-	# RejectsOrders:
-	# AutoTarget:
-		# InitialStanceAI: HoldFire
-		# InitialStance: HoldFire
 	Armament@GARRISON:
 		Weapon: GSkirmisherRocket
 		LocalOffset: 128,0,640
@@ -1374,15 +1369,12 @@ WORKER:
 
 PALADIN2:
 	Inherits: ^CabalDroneInfantry
+	Inherits@2: ^CabRender
 	Valued:
 		Cost: 800
 	Tooltip:
 		Name: Sentinel
 		Description: General purpose mechanized walker.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
-	# Buildable:
-		# Queue: Infantry
-		# BuildPaletteOrder: 30
-		# Prerequisites: ~cabrax
 	Mobile:
 		TurnSpeed: 5
 		Speed: 56
@@ -1393,7 +1385,7 @@ PALADIN2:
 	RevealsShroud:
 		Range: 8c0
 	SupplyTruck
-		Payload: 80
+		Payload: 150
 		Voice: Move
 	BodyOrientation:
 		QuantizedFacings: 32
@@ -1410,9 +1402,6 @@ PALADIN2:
 		Weapon: SentryGun
 		Recoil: 127
 		RecoilRecovery: 26
-	# RenderVoxels:
-	# WithVoxelBarrel:
-		# LocalOffset: -128, 85, 256
 	AutoTarget:
 	Selectable:
 		Bounds: 30, 42, 0, -8
@@ -1427,16 +1416,12 @@ cybdog:
 	Tooltip:
 		Name: Cyberdog
 		Description: Cybernetic infantry unit.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
-	# Buildable:
-		# Queue: Infantry
-		# BuildPaletteOrder: 40
-		# Prerequisites: ~cabclaw, cabradr
 	Selectable:
 		Bounds: 16,31,0,-10
 	Voiced:
 		VoiceSet: Cyborg
 	SupplyTruck
-		Payload: 150
+		Payload: 100
 		Voice: Move
 	Mobile:
 		Speed: 65
@@ -1446,7 +1431,11 @@ cybdog:
 	RevealsShroud:
 		Range: 5c0
 	Armament:
-		Weapon: Vulcan3
+		Weapon: Dogzooka
+		LocalOffset: 0,-100,300
+	Armament@2:
+		Weapon: Dogzooka
+		LocalOffset: 0,-100,300
 	AttackFrontal:
 		Voice: Attack
 	SelectionDecorations:

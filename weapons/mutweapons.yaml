@@ -680,7 +680,7 @@ GargoylRocketAA:
 		ValidImpactTypes: Air, AirHit
 
 FalconPunch:
-	Inherits: BombWarhead
+	Inherits: ^BombWarhead
 	ValidTargets: Ground, Water
 	ReloadDelay: 1
 	Range: 4c0
