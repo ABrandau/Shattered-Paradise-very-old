@@ -162,7 +162,7 @@ PsykerRay:
 GMarauderShotgun:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 40
-	Range: 6c0
+	Range: 6c768
 	Report: gun18.aud
 	Projectile: Bullet
 		Speed: 1c682
@@ -183,7 +183,7 @@ GMarauderShotgun:
 GSkirmisherRocket:
 	Inherits: ^RocketWarhead
 	ReloadDelay: 65
-	Range: 6c0
+	Range: 6c768
 	MinRange: 0c512
 	Report: rketinf1.aud
 	ValidTargets: Ground
@@ -222,7 +222,7 @@ GFiendShard2:
 	Inherits: ^APWarhead
 	ReloadDelay: 50
 	Burst: 2
-	Range: 6c0
+	Range: 6c768
 	Report: fiend2.aud
 	Projectile: Bullet
 		Speed: 213
@@ -243,7 +243,7 @@ GFiendShard2:
 GRangerRifle:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 75
-	Range: 6c0
+	Range: 6c768
 	Report: gun18.aud
 	Projectile: Bullet
 		Speed: 1c682
@@ -259,23 +259,25 @@ GRangerRifle:
 		ValidImpactTypes: Water
 		
 GWarriorAcid:
-	Inherits: ^AcidWarhead
-	ReloadDelay: 75
-	Range: 3c0
-	Report: flamtnk1.aud
+	Inherits: ^FullDamage
+	ReloadDelay: 60
+	Range: 6c768
+	Report: rketinf1.aud
+	ValidTargets: Ground
 	Projectile: Bullet
-		Speed: 72
-		Image: acidall32mini
-		Inaccuracy: 384
-		Palette: apolgreenalpha
-	Burst: 5
-	BurstDelay: 5
+		Speed: 250
+		Image: blueballminitrail
+		Palette: apgreen
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 3
-		DamageTypes: Prone100Percent, TriggerProne, FireDeath, TiberiumDeath
-	Warhead@2Smu: LeaveSmudge
-		SmudgeType: SmallScorch
+		Spread: 350
+		Damage: 18
+		ValidTargets: Ground
+		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeathStrong
+	Warhead@2Eff: CreateEffect
+		Explosions: tib_expsmall
+		ImpactSound: expnew12.aud
+	Warhead@5Smu: LeaveSmudge
+		SmudgeType: SmallCrater
 
 GPsykerRay:
 	Inherits: ^FullDamage

@@ -392,8 +392,10 @@ sonic:
 	icon: soniicon
 
 mmch:
+	Inherits: ^BasicTankMuzzle
 	stand:
 		Facings: -8
+		Length: 1
 		Stride: 15
 		ShadowStart: 152
 	run:
@@ -402,9 +404,8 @@ mmch:
 		ShadowStart: 152
 	turret:
 		Start: 120
+		Length: 1
 		Facings: -32
-	muzzle: gunfire
-		Length: *
 	emp-overlay: emp_fx01
 		Length: *
 		BlendMode: Additive
@@ -421,7 +422,7 @@ hvr:
 		Length: *
 		BlendMode: Additive
 	icon: hovricon
-	
+
 jugger:
 	stand:
 		Facings: -8

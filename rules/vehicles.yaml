@@ -69,9 +69,12 @@ MMCH:
 		Weapon: Titan120mm
 		Recoil: 127
 		RecoilRecovery: 26
+		MuzzleSequence: muzzle
+		LocalOffset: 600, 300, 700
 	RenderVoxels:
 	WithVoxelBarrel:
 		LocalOffset: -128, 85, 256
+	WithMuzzleOverlay:
 	AutoTarget:
 	Selectable:
 		Bounds: 30, 42, 0, -8
@@ -367,7 +370,8 @@ TTNK:
 	AutoTarget:
 	Armament@PRIMARY:
 		Weapon: Tick90mm
-		LocalOffset: 256,0,256
+		LocalOffset: 256,-400,600
+		MuzzleSequence: muzzle
 	WithMuzzleOverlay:
 	Transforms:
 		IntoActor: gatick
@@ -543,7 +547,7 @@ ARMH:
 		Scale: 0.7
 	Armament:
 		Weapon: BCLazor
-		LocalOffset: 300,0,500
+		LocalOffset: 300,0,450
 	AttackFrontal:
 		Voice: Attack
 	AutoTarget:
@@ -712,7 +716,10 @@ MUTAPC:
 		Type: Light
 	Armament:
 		Weapon: IFVulcan
-		LocalOffset: -50,0,410
+		LocalOffset: 300,0,500
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+	WithMuzzleOverlay:
 	Cargo:
 		Types: Infantry
 		MaxWeight: 2
@@ -755,7 +762,9 @@ MUTTANK:
 		Type: Heavy
 	Armament:
 		Weapon: LeonidCannon
-		LocalOffset: -50,0,410
+		LocalOffset: 600,0,500
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
 	AttackTurreted:
 		Voice: Attack
 	RenderVoxels:
@@ -790,16 +799,16 @@ MUTQUAD:
 		Type: Light
 	RenderVoxels:
 		Scale: 1 #0.75
-	# WithMuzzleOverlay:
+	WithMuzzleOverlay:
 	Armament@primary:
 		Weapon: QuadFire
 		MuzzleSequence: muzzle
-		LocalOffset: 600,0,450
+		LocalOffset: 700,0,650
 	Armament@Secondary:
 		Weapon: QuadFireAA
 		MuzzleSequence: muzzle
 		MuzzlePalette: apgrey
-		LocalOffset: 600,0,450
+		LocalOffset: 700,0,650
 	AttackTurreted:
 		Voice: Attack
 	Turreted:
@@ -961,14 +970,7 @@ SCRHARV:
 		Speed: 74
 		Crushes: wall, crate
 		TerrainSpeeds:
-			Water: 80
-			Clear: 90
-			Rough: 70
-			Road: 100
-			Beach: 70
-			Tiberium: 80
-			BlueTiberium: 80
-			Veins: 80
+			Water: 74
 	Health:
 		HP: 1000
 	SelfHealing:
@@ -1049,17 +1051,10 @@ SCRMBT:
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 130
+		Speed: 120
 		Crushes: crate
 		TerrainSpeeds:
-			Water: 100
-			Clear: 90
-			Rough: 70
-			Road: 100
-			Beach: 70
-			Tiberium: 80
-			BlueTiberium: 80
-			Veins: 80
+			Water: 120
 	Hovers:
 	Turreted:
 		TurnSpeed: 7
@@ -1098,14 +1093,7 @@ SCRGLYDER2:
 		Speed: 91
 		Crushes: crate
 		TerrainSpeeds:
-			Water: 80
-			Clear: 90
-			Rough: 70
-			Road: 100
-			Beach: 70
-			Tiberium: 80
-			BlueTiberium: 80
-			Veins: 80
+			Water: 91
 	Transforms:
 		IntoActor: scrglyder1
 	Hovers:
@@ -1327,13 +1315,19 @@ CENTURION:
 		Voice: Move
 	RenderSprites:
 		Scale: 0.8
+	WithMuzzleOverlay:
 	Armament:
 		Weapon: CenturionVulcan
 		Recoil: 127
 		RecoilRecovery: 26
-	# RenderVoxels:
-	# WithVoxelBarrel:
-		# LocalOffset: -128, 85, 256
+		LocalOffset: 500,300,500
+		MuzzleSequence: muzzle
+	Armament@asd:
+		Weapon: CenturionVulcan
+		Recoil: 127
+		RecoilRecovery: 26
+		LocalOffset: 500,-300,500
+		MuzzleSequence: muzzle
 	AutoTarget:
 	Selectable:
 		Bounds: 45, 42, 0, -8

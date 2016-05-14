@@ -474,7 +474,7 @@ ProtonAA:
 TurretLaserFire:
 	Inherits: ^FullDamage
 	ReloadDelay: 40
-	Range: 5c512
+	Range: 6c768
 	Report: lastur1.aud
 	Projectile: LaserZap
 		Width: 85

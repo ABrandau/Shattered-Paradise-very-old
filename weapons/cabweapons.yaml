@@ -276,7 +276,7 @@ CenturionVulcan:
 		Inaccuracy: 0c512
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 40
+		Damage: 20
 		DamageTypes: Prone70Percent, TriggerProne
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -579,7 +579,7 @@ CTurretCannon:
 BlasterProton:
 	ReloadDelay: 200
 	Burst: 8
-	Range: 10c0
+	Range: 9c0
 	Report: hovrmis1.aud
 	ValidTargets: Ground, Vehicle, Infantry, water
 	Projectile: Bullet

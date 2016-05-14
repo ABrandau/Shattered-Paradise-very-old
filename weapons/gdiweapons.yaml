@@ -517,7 +517,7 @@ GuardianRepair:
 VulcanTower:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 26
-	Range: 8c0
+	Range: 6c768
 	Report: chaingn1.aud
 	Projectile: Bullet
 		Speed: 1c682
@@ -561,7 +561,7 @@ GdiRedEye:
 RPGTower:
 	Inherits: ^APWarhead
 	ReloadDelay: 90
-	Range: 8c0
+	Range: 6c768
 	Report: glnch4.aud
 	Projectile: Bullet
 		Speed: 384

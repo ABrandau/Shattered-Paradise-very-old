@@ -871,7 +871,7 @@ MUFLAK:
 		Weapon: FlakFire
 		MuzzleSequence: muzzle
 		MuzzlePalette: apgrey
-		LocalOffset: 450,0,350
+		LocalOffset: 450,0,300
 	Power:
 		Amount: -10
 	SelectionDecorations:
@@ -1344,8 +1344,7 @@ CABCANNON:
 		Type: Light
 	BodyOrientation:
 		QuantizedFacings: 32
-	# RenderRangeCircle:
-		# RangeCircleType: aa
+	WithMuzzleOverlay:
 	Turreted:
 		TurnSpeed: 10
 		InitialFacing: 50
@@ -1354,7 +1353,8 @@ CABCANNON:
 		Recoils: no
 	Armament:
 		Weapon: CTurretCannon
-		LocalOffset: 512,0,512
+		LocalOffset: 650,0,550
+		MuzzleSequence: muzzle
 	Power:
 		Amount: -20
 	SelectionDecorations:

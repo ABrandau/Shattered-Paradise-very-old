@@ -1,3 +1,9 @@
+^BasicTankMuzzle:
+	Defaults:
+		Length: *
+	muzzle: gunfire
+		Length: *
+
 ^EmpOverlay:
 	emp-overlay: emp_fx01
 		Length: *

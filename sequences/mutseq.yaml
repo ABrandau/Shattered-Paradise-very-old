@@ -552,15 +552,26 @@ deathclaw:
 # Vehicles
 ##########################################################		
 mutapc:
+	Defaults:
+		Length: *
 	emp-overlay: emp_fx01
 		Length: *
 		Offset: 0, 0
 		UseTilesetCode: false
 		ZOffset: 512
 		BlendMode: Additive
+	muzzle0: mgun-n
+	muzzle1: mgun-nw
+	muzzle2: mgun-w
+	muzzle3: mgun-sw
+	muzzle4: mgun-s
+	muzzle5: mgun-se
+	muzzle6: mgun-e
+	muzzle7: mgun-ne
 	icon: mutapcicon	
 
 muttank:
+	Inherits: ^BasicTankMuzzle
 	emp-overlay: emp_fx01
 		Length: *
 		Offset: 0, 0
@@ -571,6 +582,7 @@ muttank:
 
 	
 mutquad:
+	Inherits: ^BasicTankMuzzle
 	emp-overlay: emp_fx01
 		Length: *
 		Offset: 0, 0

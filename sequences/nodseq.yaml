@@ -390,8 +390,10 @@ bggy:
 	icon: bggyicon
 
 ttnk:
-	muzzle: gunfire
+	Defaults:
 		Length: *
+	muzzle: gunfire
+		UseTilesetCode: false
 	emp-overlay: emp_fx01
 		Length: *
 		BlendMode: Additive
