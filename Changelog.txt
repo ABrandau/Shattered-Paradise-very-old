@@ -2,10 +2,11 @@
 
 [2016 - xx - xx]
 Balance Changes:
+	Reworked forgotten knight, now it can place mines.
 	Removed structure damage multiplier.
 	Templar damage: 10 -> 15
 	Stealth Tank: damage: 25 -> 35
-	Tiberian Fiend: Weapon warhead: Armor Piercing -> Full damage, Armor: Light -> none
+	Tiberian Fiend: Weapon warhead: Armor Piercing -> Full damage, Armor: Light -> none, Damage: 8 -> 10
 	Cyborg Commando: Reload Delay: 50 -> 100, Proyectile Type: Missle -> Bullet
 	Cabal Railgun turret: Power Consumption: -70 -> -60
 	Cabal Blaster: Warhead: Bomb, Reload delay: 200 -> 150, Spread: 512 -> 300, Cost: 1400 -> 1200, range: 9 -> 10

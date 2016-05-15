@@ -19,6 +19,7 @@ Packages:
 
 # Tiberian Sun
 	~scores.mix
+	~extramusic.mix
 	~sidenc01.mix
 	~sidenc02.mix
 	~gmenu.mix

@@ -483,7 +483,7 @@ SEER:
 		Cost: 550
 	Tooltip:
 		Name: Seer
-		Description: Psychic mutant that works as a recoinnesance unit.\nCan deploy sentry wards.\n  Detects cloaked units.\n  Unnarmed.
+		Description: Psychic mutant that works as a reconnaissance unit.\nCan deploy sentry wards and Detects cloaked units.\n  Unnarmed.
 	Voiced:
 		VoiceSet: Umagon
 	Health:
@@ -508,7 +508,7 @@ MUTFIEND:
 	Inherits: ^Mutant
 	Tooltip:
 		Name: Tiberian Fiend
-		Description: Tiberian Beast, fires tiberium shards at enemies.\nCannot be crushed.\n  Strong vs Infantry, Vehicles.\n  Weak vs Aircraft, Armor Piercing Weapons.
+		Description: Tiberian Beast, fires tiberium shards at enemies.\nCannot be crushed.\n  Strong vs Ground units.\n  Weak vs Aircraft.
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 22
@@ -527,7 +527,7 @@ MUTFIEND:
 			Radius: 213
 	-Crushable:
 	Armor:
-		Type: Light
+		Type: none
 	Mobile:
 		Speed: 80
 	Targetable:
@@ -569,7 +569,7 @@ AWARRIOR:
 		Cost: 350
 	Tooltip:
 		Name: Forgotten Knight
-		Description: Suicide Infantry\nTurns into berserkers when killed.\n  Strong vs Infantry, Vehicles, Buildings.\n  Weak vs Aircraft, Anti Infantry Weapons.
+		Description: Support infantry, can fire shells from\nafar and also places mines.\nTurns into berserkers when killed.\n  Strong vs Infantry.\n  Weak vs Aircraft, Vehicles.
 	Voiced:
 		VoiceSet: Rocket
 	-UpdatesPlayerStatistics:
@@ -580,6 +580,15 @@ AWARRIOR:
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark
 	-SpawnActorOnDeath@conversion:
+	Minelayer:
+		Mine: mumine
+	AmmoPool:
+		Ammo: 5
+		PipCount: 1
+		PipType: Ammo
+		SelfReloadDelay: 500
+		SelfReloads: true
+		PipTypeEmpty: AmmoEmpty	
 	Armament@PRIMARY:
 		Weapon: KnightGun
 		Name: OnFoot
