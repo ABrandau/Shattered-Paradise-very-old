@@ -58,7 +58,6 @@ Packages:
 	~e01vox02.mix
 	~ecache01.mix
 	sp|bits
-	sp|bits/audio/music
 	sp|bits/audio/nod
 	sp|bits/audio/shared
 	sp|bits/audio/gdi
