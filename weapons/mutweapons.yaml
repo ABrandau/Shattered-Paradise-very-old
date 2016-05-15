@@ -84,7 +84,7 @@ FiendShard2:
 		Angle: 60
 		Palette: greentiberium
 	Warhead@1Dam: SpreadDamage
-		Damage: 8
+		Damage: 10
 		ValidTargets: Ground
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath
 	Warhead@3EffWater: CreateEffect
@@ -232,7 +232,7 @@ GFiendShard2:
 		Angle: 60
 		Palette: greentiberium
 	Warhead@1Dam: SpreadDamage
-		Damage: 8
+		Damage: 10
 		DamageTypes: Prone100Percent, TriggerProne, BulletDeath, TiberiumDeath
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
