@@ -20,6 +20,7 @@ SchismNavigator	: Lore, design and AI.
 BuhDan: Sound design.
 Alex06: Graphics and maps.
 
+
 #Assets
 
 All graphical assets fall into three categories:
