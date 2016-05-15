@@ -1020,11 +1020,33 @@ mutgate_b:
 	icon: mutwallbicon
 		Offset: 0, 0
 		UseTilesetCode: false		
-		
+
+muward:
+	Defaults:
+		Offset: 0, -12
+		UseTilesetCode: true
+		Length: 1
+	idle:
+		Length: 10
+	damaged-idle:
+	make:
+	dead:
+		Tick: 400
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive		
+	icon: muflakicon
+		Offset: 0, 0
+		UseTilesetCode: false	
+
 mumine:
 	Defaults:
 		Offset: 0, -12
 		UseTilesetCode: true
+		ZOffset: -512
 	idle:
 	damaged-idle:
 	make:

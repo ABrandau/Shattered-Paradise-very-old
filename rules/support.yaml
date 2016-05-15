@@ -926,6 +926,35 @@ MUBUNKR:
 	SelectionDecorations:
 		VisualBounds: 88, 72, 0, -12
 
+MUWARD:
+	Inherits: ^DeployedVehicle
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Forgotten Ward
+	Health:
+		HP: 50
+	-AttackTurreted:
+	-AutoTarget:
+	-RenderRangeCircle:
+	-Voiced:
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 7c0
+	BodyOrientation:
+		QuantizedFacings: 32
+	Cloak@cloakgenerator:
+		UpgradeTypes:
+		InitialDelay: 50
+		CloakDelay: 50
+		CloakSound: 
+		UncloakSound:
+		Palette: cloakmut
+		IsPlayerPalette: true
+		CloakTypes: cloakgenerator
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+
 MUMINE:
 	Inherits: ^DeployedVehicle
 	Valued:
@@ -947,8 +976,10 @@ MUMINE:
 	Cloak@cloakgenerator:
 		UpgradeTypes:
 		CloakSound:
+		InitialDelay: 50
+		CloakDelay: 50
 		UncloakSound:
-		Palette: playermut
+		Palette: cloakmut
 		IsPlayerPalette: true
 		CloakTypes: cloakgenerator
 	Mine:

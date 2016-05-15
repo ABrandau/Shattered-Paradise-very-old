@@ -20,6 +20,7 @@ Balance Changes:
 Bug Fixes:
 	Fixed crash that happened when destroying a mutant or scrin gate.
 Graphical Changes:
+	Changed Forgotten Mine sprite.
 	Fixed mutant gate build anim.
 	Adjusted Seeker weapon offset.
 	Corrected CABAL Sentinel Sprites.

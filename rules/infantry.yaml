@@ -493,15 +493,15 @@ SEER:
 	-AutoTarget:
 	RevealsShroud:
 		Range: 11c0
-	Cloak@CLOAKGENERATOR:
-		UpgradeTypes: FiendCloak, cloakgenerator
-		UpgradeMinEnabledLevel: 1
-		InitialDelay: 15
-		CloakDelay: 15
-		IsPlayerPalette: true
-		CloakSound:
-		UncloakSound:
-		UncloakOn: Attack, Move
+	Minelayer:
+		Mine: muward
+	AmmoPool:
+		Ammo: 2
+		PipCount: 2
+		PipType: Ammo
+		SelfReloadDelay: 500
+		SelfReloads: true
+		PipTypeEmpty: AmmoEmpty
 	RenderSprites:	
 
 MUTFIEND:
