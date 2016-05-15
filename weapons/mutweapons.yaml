@@ -70,7 +70,7 @@ MechanicRepair:
 		ValidTargets: Repair		
 		
 FiendShard2:
-	Inherits: ^APWarhead
+	Inherits: ^FullDamage
 	ReloadDelay: 60
 	Burst: 2
 	Range: 4c0
@@ -219,7 +219,7 @@ GSkirmisherRocket:
 		SmudgeType: SmallCrater
 
 GFiendShard2:
-	Inherits: ^APWarhead
+	Inherits: ^FullDamage
 	ReloadDelay: 50
 	Burst: 2
 	Range: 6c768

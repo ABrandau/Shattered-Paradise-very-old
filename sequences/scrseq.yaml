@@ -943,7 +943,7 @@ scrgate_a:
 		Offset: -24, -24
 		UseTilesetCode: true
 	idle: scrgate
-		Length: 21
+	dead: scrgate
 	make: scrgate
 		Frames: 9, 8, 7, 6, 5, 4, 3, 2, 1
 		Length: 9
@@ -963,7 +963,8 @@ scrgate_b:
 		UseTilesetCode: true
 	idle: scrgate
 		Start: 21
-		Length: 21
+	dead: scrgate
+		Start: 21
 	make: scrgate
 		Frames: 41, 40, 39, 38, 37, 36, 35, 34, 33
 		Length: 9

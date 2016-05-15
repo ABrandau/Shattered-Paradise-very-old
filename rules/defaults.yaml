@@ -242,8 +242,8 @@
 		Modifier: 80
 		UpgradeTypes: FirestormGen
 		BaseLevel: 1
-	DamageMultiplier:
-		Modifier: 75
+	# DamageMultiplier:
+		# Modifier: 75
 	SelectionDecorations:
 		Palette: pips
 	Selectable:

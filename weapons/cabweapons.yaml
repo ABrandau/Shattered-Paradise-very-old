@@ -134,11 +134,11 @@ GLAD120mm:
 		SmudgeType: MediumCrater
 
 CyCannon:
-	ReloadDelay: 50
+	ReloadDelay: 100
 	Range: 7c0
 	Report: scrin5b.aud
 	ValidTargets: Ground
-	Projectile: Missile
+	Projectile: Bullet
 		MaximumLaunchSpeed: 192
 		Blockable: false
 		HorizontalRateOfTurn: 2

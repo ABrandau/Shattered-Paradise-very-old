@@ -216,6 +216,58 @@ e2:
 		Length: *
 	icon: e2icon
 
+seer:
+	Inherits: ^InfantryDeathAnims
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 454
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		ShadowStart: 462
+	idle1:
+		Start: 72
+		Length: 13
+		ShadowStart: 526
+	idle2:
+		Start: 136
+		Length: 23
+		ShadowStart: 577
+	prone-run:
+		Start: 174
+		Length: 8
+		Facings: 8
+		ShadowStart: 628
+	prone-stand:
+		Start: 406
+		Stride: 1
+		Facings: 8
+		ShadowStart: 860
+	die1:
+		Start: 422
+		Length: 8
+		ShadowStart: 876
+	die2:
+		Start: 446
+		Length: 7
+		ShadowStart: 892
+		Tick: 80
+	die-crushed:
+		Start: 441
+		Length: 4
+		ShadowStart: 896
+		Tick: 800
+		ZOffset: -511
+	standup-0:
+		Start: 406
+		Length: 2
+		Facings: 8
+		ShadowStart: 860
+	icon: seericon
+	
 doggie:
 	Defaults:
 		Tick: 80
@@ -927,6 +979,9 @@ mutgate_a:
 	damaged-idle: mutgate
 		Start: 24
 		Length 12
+	dead: mutgate
+		Start: 24
+		Length 12
 	make: mutgate
 		Frames: 9, 8, 7, 6, 5, 4, 3, 2, 1
 		Length: 9
@@ -950,8 +1005,11 @@ mutgate_b:
 	damaged-idle: mutgate
 		Start: 36
 		Length 12
+	dead: mutgate
+		Start: 36
+		Length 12
 	make: mutgate
-		Frames: 9, 8, 7, 6, 5, 4, 3, 2, 1
+		Frames: 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13
 		Length: 9
 	emp-overlay: emp_fx01
 		Length: *

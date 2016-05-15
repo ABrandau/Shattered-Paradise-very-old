@@ -909,7 +909,7 @@ MUBUNKR:
 	RevealsShroud:
 		Range: 8c0
 	Cargo:
-		InitialUnits: e3, e3, marauder, marauder
+		InitialUnits: e3, marauder
 		MaxWeight: 8
 		PipCount: 8
 		Types: Infantry

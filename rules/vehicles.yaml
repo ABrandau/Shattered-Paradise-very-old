@@ -699,7 +699,7 @@ MUTAPC:
 		Cost: 500
 	Tooltip:
 		Name: IFV
-		Description: Light combat vehicle equipped with a\nMachinegun, can transport up to 3 soldiers.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft
+		Description: Light combat vehicle equipped with a\nMachinegun, can transport up to 2 soldiers.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 25

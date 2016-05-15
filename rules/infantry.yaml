@@ -348,7 +348,6 @@ BLACKHANDDUMMY:
 ############################################
 # Mutant
 ############################################
-
 MARAUDER:
 	Inherits: ^Mutant
 	Inherits@1: ^MutRender
@@ -473,7 +472,7 @@ E2:
 		Probability: 6
 		DeathType:
 
-RANGER:
+SEER:
 	Inherits: ^Mutant
 	Inherits@3: ^BasicStealthDetection
 	Buildable:
@@ -481,18 +480,17 @@ RANGER:
 		BuildPaletteOrder: 21
 		Prerequisites: ~murax, muradr
 	Valued:
-		Cost: 350
+		Cost: 550
 	Tooltip:
-		Name: Ranger
-		Description: Scout Soldier.\ncloaks on tiberium.\n  Detects cloaked units.\n  Strong vs Infantry.\n  Weak vs Vehicles.
+		Name: Seer
+		Description: Psychic mutant that works as a recoinnesance unit.\nCan deploy sentry wards.\n  Detects cloaked units.\n  Unnarmed.
 	Voiced:
 		VoiceSet: Umagon
 	Health:
 		HP: 110
 	Mobile:
 		Speed: 75
-	PoisonedByTiberium@buff:
-		Weapon: FiendBuffer
+	-AutoTarget:
 	RevealsShroud:
 		Range: 11c0
 	Cloak@CLOAKGENERATOR:
@@ -504,18 +502,7 @@ RANGER:
 		CloakSound:
 		UncloakSound:
 		UncloakOn: Attack, Move
-	Armament@PRIMARY:
-		Weapon: RangerRifle
-		LocalOffset: 128,0,640
-		Name: OnFoot
-	Armament@GARRISON:
-		Weapon: GRangerRifle
-		LocalOffset: 128,0,640
-	AttackFrontal:
-		Voice: Attack
-		Armaments: OnFoot
-	RenderSprites:
-		Image: UMAGON
+	RenderSprites:	
 
 MUTFIEND:
 	Inherits: ^Mutant

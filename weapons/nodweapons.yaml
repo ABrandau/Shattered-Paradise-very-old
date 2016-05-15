@@ -98,7 +98,7 @@ TemplarLasor:
 		Inaccuracy: 1
 	Warhead@1Dam: SpreadDamage
 		Spread: 125
-		Damage: 10
+		Damage: 15
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 		
 BHRifle:
@@ -315,7 +315,7 @@ StealthRocket:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 25
+		Damage: 35
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
