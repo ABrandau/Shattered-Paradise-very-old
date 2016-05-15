@@ -58,7 +58,7 @@ ArtilleryWarhead: #Inherits: ArtilleryWarhead
 			Heavy: 35
 			Concrete: 50
 			
-BombWarhead: #Inherits: BombWarhead			
+^BombWarhead: #Inherits: ^BombWarhead			
 	Warhead@1Dam: SpreadDamage			
 		Versus:
 			None: 200

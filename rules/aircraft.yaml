@@ -329,7 +329,7 @@ APACHE:
 		Cost: 700
 	Tooltip:
 		Name: Harpy
-		Description: Scout helicopter\narmed with dual chain guns.\nDetects cloaked units.\nCloaks when idle.\nDetects cloaked units.\n  Strong vs Infantry, Light armor, Aircraft\n  Weak vs Vehicles
+		Description: Scout helicopter\narmed with dual chain guns.\nDetects cloaked units.\nCloaks when idle.\nDetects cloaked units.\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 20
@@ -360,12 +360,12 @@ APACHE:
 		FacingTolerance: 20
 		Voice: Attack
 	AmmoPool:
-		Ammo: 12
-		PipCount: 4
-		ReloadCount: 4
+		Ammo: 20
+		PipCount: 6
+		ReloadCount: 5
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-		ReloadTicks: 100
+		ReloadTicks: 50
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
@@ -924,9 +924,6 @@ SCRBATTLESHIP:
 		LocalOffset:0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
 	AttackTurreted:
 	Turreted:
-	# AttackHeli:
-		# FacingTolerance: 20
-		# Voice: Attack
 	AmmoPool:
 		Ammo: 25
 		PipCount: 0
@@ -956,8 +953,8 @@ SCRINCOUNCIL:
 	Valued:
 		Cost: 2500
 	Tooltip:
-		Name: The Architect
-		Description: Scrin mobile factory, constructs vehicles.\n  Unarmed.
+		Name: Creation engine
+		Description: Scrin mobile forge, constructs vehicles.\n  Unarmed.
 	Selectable:
 		Bounds: 100,90
 	Voiced:
@@ -1056,7 +1053,7 @@ WASP:
 		PipTypeEmpty: AmmoEmpty
 	AmmoPool@Rocket:
 		Ammo: 2
-		PipCount: 2
+		PipCount: 0
 		SelfReloads: true
 		SelfReloadDelay: 250
 		PipType: Ammo

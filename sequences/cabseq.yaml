@@ -238,13 +238,11 @@ pdrone:
 		Length: 7
 		Facings: 8
 		ShadowStart: 218
-	Idle1:
-		Tick: 40
+	idle1:
 		Start: 64
 		Length: 13
 		ShadowStart: 274
-	Idle2:
-		Tick: 40
+	idle2:
 		Start: 108
 		Length: 18
 		ShadowStart: 317
@@ -501,7 +499,7 @@ cyc2:
 		Length: *
 		ZOffset: 512
 		BlendMode: Additive
-	icon: cybcicon
+	icon: cyc2icon
 ##########################################################
 # Vehicles
 ##########################################################	
@@ -527,12 +525,14 @@ jenn:
 	emp-overlay: emp_fx01
 		Length: *
 		ZOffset: 512
-		BlendMode: Additive		
+		BlendMode: Additive
 	icon: jennicon
-	
+
 centurion:
+	Inherits: ^BasicTankMuzzle
 	stand:
 		Facings: -8
+		Length: 1
 		ShadowStart: 155
 	run:
 		Start: 8
@@ -542,9 +542,8 @@ centurion:
 		ShadowStart: 163
 	turret:
 		Start: 72
+		Length: 1
 		Facings: -32		
-	muzzle: gunfire
-		Length: *
 	icon: centurionicon
 	make:
 		Start: 104
@@ -552,13 +551,16 @@ centurion:
 		ShadowStart: 259
 	idle:
 		Start: 122
+		Length: 1
 		ShadowStart:  277
 	damaged-idle:	
 		Start: 122
+		Length: 1
 		ShadowStart:  277
 	turret2:
 		Start: 123
 		Facings: -32
+		Length: 1
 		ShadowStart:  278	
 		Offset: 0, 12
 	emp-overlay: emp_fx01
@@ -964,17 +966,14 @@ cabcannon:
 		Offset: 0, -12
 		UseTilesetCode: true
 	idle: dot	
-			# ZOffset: -512
 	damaged-idle: dot
-			# ZOffset: -512
 	dead: dot
-			# ZOffset: -512	
 		Tick: 400
 	turret:
 		Start: 31
 		Facings: 32
 		ShadowStart: 127
-		Offset: 0,-12#-4, 0
+		Offset: 0,-12
 	damaged-turret:
 		Start: 64
 		Facings: 32
@@ -985,7 +984,11 @@ cabcannon:
 		Offset: 0, 0
 		UseTilesetCode: false
 		ZOffset: 512
-		BlendMode: Additive		
+		BlendMode: Additive
+	muzzle: gunfire
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
 	make:
 		Length: 25
 		ShadowStart: 97

@@ -70,7 +70,7 @@ MechanicRepair:
 		ValidTargets: Repair		
 		
 FiendShard2:
-	Inherits: ^APWarhead
+	Inherits: ^FullDamage
 	ReloadDelay: 60
 	Burst: 2
 	Range: 4c0
@@ -84,7 +84,7 @@ FiendShard2:
 		Angle: 60
 		Palette: greentiberium
 	Warhead@1Dam: SpreadDamage
-		Damage: 8
+		Damage: 10
 		ValidTargets: Ground
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath
 	Warhead@3EffWater: CreateEffect
@@ -162,7 +162,7 @@ PsykerRay:
 GMarauderShotgun:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 40
-	Range: 6c0
+	Range: 6c768
 	Report: gun18.aud
 	Projectile: Bullet
 		Speed: 1c682
@@ -183,7 +183,7 @@ GMarauderShotgun:
 GSkirmisherRocket:
 	Inherits: ^RocketWarhead
 	ReloadDelay: 65
-	Range: 6c0
+	Range: 6c768
 	MinRange: 0c512
 	Report: rketinf1.aud
 	ValidTargets: Ground
@@ -219,10 +219,10 @@ GSkirmisherRocket:
 		SmudgeType: SmallCrater
 
 GFiendShard2:
-	Inherits: ^APWarhead
+	Inherits: ^FullDamage
 	ReloadDelay: 50
 	Burst: 2
-	Range: 6c0
+	Range: 6c768
 	Report: fiend2.aud
 	Projectile: Bullet
 		Speed: 213
@@ -232,7 +232,7 @@ GFiendShard2:
 		Angle: 60
 		Palette: greentiberium
 	Warhead@1Dam: SpreadDamage
-		Damage: 8
+		Damage: 10
 		DamageTypes: Prone100Percent, TriggerProne, BulletDeath, TiberiumDeath
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
@@ -243,7 +243,7 @@ GFiendShard2:
 GRangerRifle:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 75
-	Range: 6c0
+	Range: 6c768
 	Report: gun18.aud
 	Projectile: Bullet
 		Speed: 1c682
@@ -259,23 +259,25 @@ GRangerRifle:
 		ValidImpactTypes: Water
 		
 GWarriorAcid:
-	Inherits: ^AcidWarhead
-	ReloadDelay: 75
-	Range: 3c0
-	Report: flamtnk1.aud
+	Inherits: ^FullDamage
+	ReloadDelay: 60
+	Range: 6c768
+	Report: rketinf1.aud
+	ValidTargets: Ground
 	Projectile: Bullet
-		Speed: 72
-		Image: acidall32mini
-		Inaccuracy: 384
-		Palette: apolgreenalpha
-	Burst: 5
-	BurstDelay: 5
+		Speed: 250
+		Image: blueballminitrail
+		Palette: apgreen
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 3
-		DamageTypes: Prone100Percent, TriggerProne, FireDeath, TiberiumDeath
-	Warhead@2Smu: LeaveSmudge
-		SmudgeType: SmallScorch
+		Spread: 350
+		Damage: 18
+		ValidTargets: Ground
+		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeathStrong
+	Warhead@2Eff: CreateEffect
+		Explosions: tib_expsmall
+		ImpactSound: expnew12.aud
+	Warhead@5Smu: LeaveSmudge
+		SmudgeType: SmallCrater
 
 GPsykerRay:
 	Inherits: ^FullDamage
@@ -678,7 +680,7 @@ GargoylRocketAA:
 		ValidImpactTypes: Air, AirHit
 
 FalconPunch:
-	Inherits: BombWarhead
+	Inherits: ^BombWarhead
 	ValidTargets: Ground, Water
 	ReloadDelay: 1
 	Range: 4c0
@@ -689,7 +691,7 @@ FalconPunch:
 		Inaccuracy: 1c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
-		Damage: 5
+		Damage: 4 
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath

@@ -1,5 +1,69 @@
 ﻿YEAR - MONTH - DAY
 
+[2016 - xx - xx]
+Balance Changes:
+	Wolf: Lost his weapon, now places mines instead.
+	Forgotten Knight: Now has the Wolf weapon, and does full damage.
+	Templar damage: 10 -> 15
+	Stealth Tank: damage: 25 -> 35
+	Tiberian Fiend: Weapon warhead: Armor Piercing -> Full damage, Armor: Light -> none, Damage: 8 -> 10
+	Cyborg Commando: Reload Delay: 50 -> 100, Proyectile Type: Missle -> Bullet
+	Cabal Railgun turret: Power Consumption: -70 -> -60
+	Cabal Blaster: Warhead: Bomb, Reload delay: 200 -> 150, Spread: 512 -> 300, Cost: 1400 -> 1200, range: 9 -> 10
+	Plasma Hive: Warhead: Grenade -> Bomb.
+	Cyberdog: Grind Payload: 150 -> 100, Changed weapon to Rockets.
+	Sentinel: Grind Payload: 80 -> 150.
+	Bunkers now hold only one marauder and skirmisher instead of two.
+	Added Forgotten Seer, a scout unit that will soon be able to place vision wards.
+	Removed structure damage multiplier.
+	Removed Forgotten ranger.
+Bug Fixes:
+	Fixed crash that happened when destroying a mutant or scrin gate.
+Graphical Changes:
+	Fixed mutant gate build anim.
+	Adjusted Seeker weapon offset.
+	Corrected CABAL Sentinel Sprites.
+	Removed Bullet icons from CABAL Wasp.
+	Reduced CABAL railgun turret line width.
+Other:
+	Corrected IFV tooltip.
+
+[2016 - 05 - 13]
+Balance Changes:
+	Scrin hover vehicles no longer have terrain movement penalties.
+	All tier one turrets have a range of aproximately 7 cells. (with the exception of anti air emplacements).
+	Nod Buggy: Rocket damage: 50 -> 40
+	Falcon: Damage per bomb: 5 -> 4
+	Wolverine: Armor: Wood -> Light, HP: 150 -> 175.
+	Orca Fighter: Rocket damage: 30 -> 40.
+	Harpy: Damage: 35 -> 40, Ammunition: 12 -> 20.
+	Banshee: damage: 45 -> 60, spread: 128 -> 250, Warhead: Armor piercing -> Bomb.
+	Orca Bomber: damage 120 -> 140.
+	Added new scrin unit, the stalker, uses the Purifier Sprite.
+	Nod Laser: Power Consumption: 50 -> 35
+Graphic Changes:
+	Old Purifier has now a new model (the bug) and is named the Colossus, his stats changed a bit.
+	Cyborg Commando icon changed.
+	Adjusted nod turret voxel offset somewhat.
+	Increased Tick rate of the attack animation of the flame warrior.
+	Most tanks now have muzzle effects.
+Other:
+	Floaters are now named purifiers.
+	Scrin Advanced Defence renamed.	
+
+[2016 - 05 - 07]
+Balance Changes:
+	Demolition units can not target any structure.
+
+[2016 - 05 - 05]
+Balance Changes:
+	RPG Tower Blast radius: 1c0 -> 300, reload delay: 80 -> 90
+	Scrin Destroyer: Blast Radius: 750 -> 600
+	Ravagers, bulls and tiberian fiends are now immune to Razorshark attacks.
+	Scrin Hover tank: Blast Radius: 512 -> 364
+	Purifier: Hp: 220 -> 270
+	Purifier Now self heals up to 50% health
+
 [2016 - 05 - 03]
 Other:	
 	Restored shellmap song.

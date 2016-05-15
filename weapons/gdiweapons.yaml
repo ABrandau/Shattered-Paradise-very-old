@@ -348,7 +348,7 @@ FighterHellfire:
 	Range: 6c0
 	Report: orcamis1.aud
 	Burst: 2
-	ValidTargets: Ground
+	ValidTargets: Ground, Vehicle, Building, Infantry
 	Projectile: Missile
 		Speed: 800
 		MaximumLaunchSpeed: 512
@@ -362,8 +362,8 @@ FighterHellfire:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 85
-		Damage: 30
-		ValidTargets: Ground
+		Damage: 40
+		ValidTargets: Ground, Vehicle, Building, Infantry
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
@@ -415,7 +415,7 @@ AAFighterHellfire:
 		SmudgeType: SmallCrater		
 
 OBBomb:
-	Inherits: BombWarhead
+	Inherits: ^BombWarhead
 	ReloadDelay: 60
 	Burst: 5
 	BurstDelay: 7
@@ -428,7 +428,7 @@ OBBomb:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 1000
-		Damage: 120
+		Damage: 140
 		ValidTargets: Ground, Building, Infantry, Vehicle
 		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -517,7 +517,7 @@ GuardianRepair:
 VulcanTower:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 26
-	Range: 8c0
+	Range: 6c768
 	Report: chaingn1.aud
 	Projectile: Bullet
 		Speed: 1c682
@@ -560,8 +560,8 @@ GdiRedEye:
 
 RPGTower:
 	Inherits: ^APWarhead
-	ReloadDelay: 80
-	Range: 8c0
+	ReloadDelay: 90
+	Range: 6c768
 	Report: glnch4.aud
 	Projectile: Bullet
 		Speed: 384

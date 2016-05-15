@@ -56,11 +56,13 @@ altnode1:
 		Length: 6
 		Facings: 8
 		ShadowStart: 456
+		Tick: 60
 	prone-shoot:
 		Start: 212
 		Length: 6
 		Facings: 8
 		ShadowStart: 504
+		Tick: 60
 	standup-0:
 		Start: 260
 		Length: 2
@@ -388,8 +390,10 @@ bggy:
 	icon: bggyicon
 
 ttnk:
-	muzzle: gunfire
+	Defaults:
 		Length: *
+	muzzle: gunfire
+		UseTilesetCode: false
 	emp-overlay: emp_fx01
 		Length: *
 		BlendMode: Additive

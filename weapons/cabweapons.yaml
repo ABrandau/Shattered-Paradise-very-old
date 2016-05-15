@@ -134,11 +134,11 @@ GLAD120mm:
 		SmudgeType: MediumCrater
 
 CyCannon:
-	ReloadDelay: 50
+	ReloadDelay: 100
 	Range: 7c0
 	Report: scrin5b.aud
 	ValidTargets: Ground
-	Projectile: Missile
+	Projectile: Bullet
 		MaximumLaunchSpeed: 192
 		Blockable: false
 		HorizontalRateOfTurn: 2
@@ -207,7 +207,7 @@ Dogzooka:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 20
+		Damage: 10
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -276,7 +276,7 @@ CenturionVulcan:
 		Inaccuracy: 0c512
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 40
+		Damage: 20
 		DamageTypes: Prone70Percent, TriggerProne
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -577,7 +577,8 @@ CTurretCannon:
 		SmudgeType: MediumCrater
 
 BlasterProton:
-	ReloadDelay: 200
+	Inherits: ^BombWarhead
+	ReloadDelay: 150
 	Burst: 8
 	Range: 10c0
 	Report: hovrmis1.aud
@@ -590,15 +591,10 @@ BlasterProton:
 		Image: TORPEDO
 		RangeLimit: 35
 	Warhead@1Dam: SpreadDamage
-		Spread: 512
+		Spread: 300
 		Damage: 25
 		ValidTargets: Ground, Vehicle, Infantry, water
 		Versus:
-			None: 80
-			Wood: 75
-			Light: 60
-			Heavy: 35
-			Concrete: 50
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
@@ -622,7 +618,7 @@ AARail:
 		Speed: 20c0
 		Duration: 3
 		DamageInterval: 2
-		Width: 0c128
+		Width: 0c100
 		BeyondTargetRange: 0c64
 		Blockable: true
 		Color: 0080FFC8

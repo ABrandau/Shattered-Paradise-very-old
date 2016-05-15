@@ -206,7 +206,56 @@ shapeshifter:
 	die6: electro
 		Length: *
 	icon: gosticon
-	
+
+bug:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 212
+	run:
+		Start: 8
+		Length: 9
+		Facings: 8
+		ShadowStart: 220
+	idle1:
+		Start: 80
+		Length: 14
+		ShadowStart: 292
+	idle2:
+		Start: 120
+		Length: 15
+		ShadowStart: 327
+	die1:
+		Start: 182
+		Length: 9
+		ShadowStart: 394
+	die2:
+		Start: 206
+		Length: 6
+		ShadowStart: 418
+	die3: infdie
+		Length: *
+	die4: s_bang34
+		Length: *
+	die-crushed:
+		Start: 206
+		Length: 6
+		ShadowStart: 418
+		ZOffset: -511
+	throw:
+		Start: 134
+		Length: 6
+		Facings: 8
+		ShadowStart: 346
+	die5: flameguy # TODO: walking animation unused
+		Start: 42
+		Length: 104
+		ShadowStart: 190
+	die6: electro
+		Length: *
+	icon: bugicon
+
 float:
 	Defaults:
 		Tick: 80
@@ -312,55 +361,41 @@ stalker:
 	die6: electro
 		Length: *		
 	icon: stalkericon
-	
-bug:
+
+colossi:
+	Inherits: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
 		Facings: 8
-		ShadowStart: 212
+		ShadowStart: 225
 	run:
 		Start: 8
-		Length: 9
+		Length: 8
 		Facings: 8
-		ShadowStart: 220
+		ShadowStart: 233
 	idle1:
-		Start: 80
-		Length: 14
-		ShadowStart: 292
+		Start: 136
+		Length: 44
+		ShadowStart: 361
 	idle2:
-		Start: 120
-		Length: 15
-		ShadowStart: 327
+		Start: 180
+		Length: 27
+		ShadowStart: 406
 	die1:
-		Start: 182
+		Start: 209
 		Length: 9
-		ShadowStart: 394
+		ShadowStart: 433
 	die2:
-		Start: 206
+		Start: 218
 		Length: 6
-		ShadowStart: 418
-	die3: infdie
-		Length: *
-	die4: s_bang34
-		Length: *
-	die-crushed:
-		Start: 206
-		Length: 6
-		ShadowStart: 418
-		ZOffset: -511
+		ShadowStart: 443
 	throw:
-		Start: 134
-		Length: 6
+		Start: 72
+		Length: 8
 		Facings: 8
-		ShadowStart: 346
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
-	icon: bugicon	
+		ShadowStart: 297
+	icon: colossiicon
 ##########################################################
 # Vehicles
 ##########################################################	
@@ -908,7 +943,7 @@ scrgate_a:
 		Offset: -24, -24
 		UseTilesetCode: true
 	idle: scrgate
-		Length: 21
+	dead: scrgate
 	make: scrgate
 		Frames: 9, 8, 7, 6, 5, 4, 3, 2, 1
 		Length: 9
@@ -928,7 +963,8 @@ scrgate_b:
 		UseTilesetCode: true
 	idle: scrgate
 		Start: 21
-		Length: 21
+	dead: scrgate
+		Start: 21
 	make: scrgate
 		Frames: 41, 40, 39, 38, 37, 36, 35, 34, 33
 		Length: 9

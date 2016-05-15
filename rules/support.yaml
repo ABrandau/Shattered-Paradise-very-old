@@ -139,8 +139,8 @@ GACTWR:
 GAVULC:
 	Inherits: ^Defense
 	Inherits@1: ^TowerStealthDetection
-	-WithSpriteBody:
-	WithWallSpriteBody:
+	WithSpriteBody:
+	# WithWallSpriteBody:
 		Type: wall
 	Valued:
 		Cost: 350
@@ -198,13 +198,13 @@ GAROCK:
 	Inherits@1: ^TowerStealthDetection
 	Power:
 		Amount: -20
-	-WithSpriteBody:
-	WithWallSpriteBody:
+	WithSpriteBody:
+	# WithWallSpriteBody:
 		Type: wall
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: RPG Upgrade
+		Name: RPG Tower
 		Description: GDI Advanced base defense.\nDoes not require power to operate.\n  Strong vs Armored ground units\n  Weak vs Aircraft
 	Buildable:
 		Queue: Defense
@@ -253,13 +253,13 @@ GACSAM:
 	Inherits@1: ^TowerStealthDetection
 	Power:
 		Amount: -30
-	-WithSpriteBody:
-	WithWallSpriteBody:
+	WithSpriteBody:
+	# WithWallSpriteBody:
 		Type: wall
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: SAM Upgrade
+		Name: SAM Tower
 		Description: GDI Anti-Air base defense.\nStronger than average AA.\nDoes not require extra power to operate.\n  Strong vs Aircraft\n  Weak vs Ground units
 	Buildable:
 		Queue: Defense
@@ -291,7 +291,7 @@ GACSAM:
 		Recoils: no
 	Armament@SAM:
 		Weapon: GdiRedEye
-		LocalOffset: 512,0,512
+		LocalOffset: 400,0,512
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 	LineBuildNode:
@@ -487,7 +487,7 @@ NALASR:
 	Turreted:
 		TurnSpeed: 10
 		InitialFacing: 300
-		Offset: 298,-171,0
+		Offset: 270,-165,330#298,-171,400
 	AttackTurreted:
 	Armament:
 		Weapon: TurretLaserFire
@@ -495,7 +495,7 @@ NALASR:
 	RenderVoxels:
 	WithVoxelTurret:
 	Power:
-		Amount: -50
+		Amount: -35
 	SelectionDecorations:
 		VisualBounds: 40, 36, -8, -8
 
@@ -573,7 +573,7 @@ NASAM:
 		Recoils: no
 	Armament:
 		Weapon: RedEye2
-		LocalOffset: 512,0,512
+		LocalOffset: 400,0,512
 	Power:
 		Amount: -30
 	SelectionDecorations:
@@ -871,7 +871,7 @@ MUFLAK:
 		Weapon: FlakFire
 		MuzzleSequence: muzzle
 		MuzzlePalette: apgrey
-		LocalOffset: 450,0,350
+		LocalOffset: 450,0,300
 	Power:
 		Amount: -10
 	SelectionDecorations:
@@ -909,7 +909,7 @@ MUBUNKR:
 	RevealsShroud:
 		Range: 8c0
 	Cargo:
-		InitialUnits: e3, e3, marauder, marauder
+		InitialUnits: e3, marauder
 		MaxWeight: 8
 		PipCount: 8
 		Types: Infantry
@@ -1167,7 +1167,7 @@ SCRDRONE:
 	Valued:
 		Cost: 900
 	Tooltip:
-		Name: Needler Hive
+		Name: Plasma Hive
 		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs All
 	Buildable:
 		Queue: Defense
@@ -1191,7 +1191,7 @@ SCRDRONE:
 		Range: 12c0
 	Armament:
 		Weapon: DronePlane
-		LocalOffset: 1400,210,800
+		LocalOffset: 0,0,800
 	AttackCharge:
 		ChargeAudio: obelpowr.aud
 		ReloadTime: 75
@@ -1344,8 +1344,7 @@ CABCANNON:
 		Type: Light
 	BodyOrientation:
 		QuantizedFacings: 32
-	# RenderRangeCircle:
-		# RangeCircleType: aa
+	WithMuzzleOverlay:
 	Turreted:
 		TurnSpeed: 10
 		InitialFacing: 50
@@ -1354,7 +1353,8 @@ CABCANNON:
 		Recoils: no
 	Armament:
 		Weapon: CTurretCannon
-		LocalOffset: 512,0,512
+		LocalOffset: 650,0,550
+		MuzzleSequence: muzzle
 	Power:
 		Amount: -20
 	SelectionDecorations:
@@ -1366,10 +1366,10 @@ CABBLAST:
 	Inherits@2: ^CyborgSelfHeal
 	Inherits@3: ^TowerStealthDetection
 	Valued:
-		Cost: 1400
+		Cost: 1200
 	Tooltip:
 		Name: Blaster Turret
-		Description: Artillery, fires plasma.\nHas a minimun range of fire.\nRequires power to operate.\n  Strong vs Ground Units.\n  Weak vs Aircraft.
+		Description: Artillery, fires plasma.\nHas a minimun range of fire.\nRequires power to operate.\n  Strong vs Infantry.\n  Weak vs Tanks, Aircraft.
 	Buildable:
 		Queue: Defense
 		Prerequisites: cabtech, ~structures.cab
@@ -1385,8 +1385,6 @@ CABBLAST:
 		Type: Light
 	BodyOrientation:
 		QuantizedFacings: 32
-	# RenderRangeCircle:
-		# RangeCircleType: aa
 	Turreted:
 		TurnSpeed: 10
 		InitialFacing: 50
@@ -1441,7 +1439,7 @@ CABRAIL:
 		Weapon: AARail
 		LocalOffset: 550,-400,700
 	Power:
-		Amount: -70
+		Amount: -60
 	SelectionDecorations:
 		VisualBounds: 40, 36, -3, -8
 

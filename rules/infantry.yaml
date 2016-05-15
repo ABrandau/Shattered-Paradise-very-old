@@ -348,7 +348,6 @@ BLACKHANDDUMMY:
 ############################################
 # Mutant
 ############################################
-
 MARAUDER:
 	Inherits: ^Mutant
 	Inherits@1: ^MutRender
@@ -419,11 +418,6 @@ E3:
 		Weapon: SkirmisherRocket
 		LocalOffset: 128,0,640
 		Name: OnFoot
-		# TargetStances: Ally, Enemy, Neutral
-	# RejectsOrders:
-	# AutoTarget:
-		# InitialStanceAI: HoldFire
-		# InitialStance: HoldFire
 	Armament@GARRISON:
 		Weapon: GSkirmisherRocket
 		LocalOffset: 128,0,640
@@ -478,7 +472,7 @@ E2:
 		Probability: 6
 		DeathType:
 
-RANGER:
+SEER:
 	Inherits: ^Mutant
 	Inherits@3: ^BasicStealthDetection
 	Buildable:
@@ -486,18 +480,17 @@ RANGER:
 		BuildPaletteOrder: 21
 		Prerequisites: ~murax, muradr
 	Valued:
-		Cost: 350
+		Cost: 550
 	Tooltip:
-		Name: Ranger
-		Description: Scout Soldier.\ncloaks on tiberium.\n  Detects cloaked units.\n  Strong vs Infantry.\n  Weak vs Vehicles.
+		Name: Seer
+		Description: Psychic mutant that works as a reconnaissance unit.\nCan deploy sentry wards and Detects cloaked units.\n  Unnarmed.
 	Voiced:
 		VoiceSet: Umagon
 	Health:
 		HP: 110
 	Mobile:
 		Speed: 75
-	PoisonedByTiberium@buff:
-		Weapon: FiendBuffer
+	-AutoTarget:
 	RevealsShroud:
 		Range: 11c0
 	Cloak@CLOAKGENERATOR:
@@ -509,24 +502,13 @@ RANGER:
 		CloakSound:
 		UncloakSound:
 		UncloakOn: Attack, Move
-	Armament@PRIMARY:
-		Weapon: RangerRifle
-		LocalOffset: 128,0,640
-		Name: OnFoot
-	Armament@GARRISON:
-		Weapon: GRangerRifle
-		LocalOffset: 128,0,640
-	AttackFrontal:
-		Voice: Attack
-		Armaments: OnFoot
-	RenderSprites:
-		Image: UMAGON
+	RenderSprites:	
 
 MUTFIEND:
 	Inherits: ^Mutant
 	Tooltip:
 		Name: Tiberian Fiend
-		Description: Tiberian Beast, fires tiberium shards at enemies.\nCannot be crushed.\n  Strong vs Infantry, Vehicles.\n  Weak vs Aircraft, Armor Piercing Weapons.
+		Description: Tiberian Beast, fires tiberium shards at enemies.\nCannot be crushed.\n  Strong vs Ground units.\n  Weak vs Aircraft.
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 22
@@ -535,7 +517,7 @@ MUTFIEND:
 		Actor: cybdog
 		Probability: 100
 		OwnerType: Killer
-		DeathType: CabalDeathInfantry
+		DeathType: CabalDeath
 		RequiresLobbyCreeps: true
 	Valued:
 		Cost: 400
@@ -545,7 +527,7 @@ MUTFIEND:
 			Radius: 213
 	-Crushable:
 	Armor:
-		Type: Light
+		Type: none
 	Mobile:
 		Speed: 80
 	Targetable:
@@ -587,7 +569,7 @@ AWARRIOR:
 		Cost: 350
 	Tooltip:
 		Name: Forgotten Knight
-		Description: Suicide Infantry\nTurns into berserkers when killed.\n  Strong vs Infantry, Vehicles, Buildings.\n  Weak vs Aircraft, Anti Infantry Weapons.
+		Description: Suicide Infantry\nTurns into berserkers when killed.\n  Strong vs Infantry, Buildings.\n  Weak vs Aircraft, Vehicles.
 	Voiced:
 		VoiceSet: Rocket
 	-UpdatesPlayerStatistics:
@@ -599,11 +581,11 @@ AWARRIOR:
 		TargetTypes: Ground, Infantry, Razorshark
 	-SpawnActorOnDeath@conversion:
 	Armament@PRIMARY:
-		Weapon: KnightGun
+		Weapon: BullAcid
 		Name: OnFoot
 		LocalOffset: 128,0,400
 	Armament@GARRISON:
-		Weapon: KnightGun
+		Weapon: BullAcid
 		LocalOffset: 128,0,400
 	AttackFrontal:
 		Voice: Attack
@@ -670,7 +652,7 @@ shark:
 		Actor: cybdog
 		Probability: 100
 		OwnerType: Killer
-		DeathType: CabalDeathInfantry
+		DeathType: CabalDeath
 		RequiresLobbyCreeps: true
 	Guard:
 		Voice: Move
@@ -750,8 +732,6 @@ SHAPESHIFTER:
 		Prerequisites: ~scrrax
 	Voiced:
 		VoiceSet: Hijacker
-	WithDisguisingInfantryBody:
-	Disguise:
 	FreeActor@1:
 		Actor: shapeshifterclone
 	FreeActor@2:
@@ -773,43 +753,42 @@ SHAPESHIFTER:
 	-GainsExperience:
 	RenderSprites:
 
-BUG:
+COLOSSI:
 	Inherits: ^ScrinSoldier
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 27
 		Prerequisites: ~scrrax, scrradr
-	Selectable:
-		Class: bug
-	GivesExperience:
-		Experience: 300
 	Valued:
 		Cost: 600
 	Tooltip:
-		Name: Purifier
+		Name: Colossus
 		Description: Heavy duty alien.\nCan take lots of punishment.\n  Strong vs Ground units.\n  Weak vs Aircraft.
-	FreeActor@1:
-		Actor: bugclone
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark
 	Selectable:
 		Bounds: 26,30,0,-10
 	Health:
-		HP: 220
+		HP: 440
+	SelfHealing@colos:
+		Step: 3
+		Delay: 100
+		DamageCooldown: 125
 	Mobile:
 		Speed: 60
+		SharesCell: False
 	SpawnActorOnDeath@conversion:
 		Actor: cybdog
 		Probability: 100
 		OwnerType: Killer
-		DeathType: CabalDeathInfantry
+		DeathType: CabalDeath
 		RequiresLobbyCreeps: true
 	Armor:
 		Type: light
 	Armament:
 		Weapon: BugRail
-		LocalOffset: 150,0,400
-		FireDelay: 5
+		LocalOffset: 300,0,1000
+		FireDelay: 20
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:
@@ -870,7 +849,7 @@ FLOAT:
 		Experience: 550
 	-Crushable:
 	Tooltip:
-		Name: Floater
+		Name: Purifier
 		Description: Recon unit, suited for harassment.\nCan move through water and Cliffs.\n  Strong vs Infantry, Buildings\n  Weak vs Tanks, Aircraft
 	Health:
 		HP: 180
@@ -891,6 +870,50 @@ FLOAT:
 		Weapon: FloatTesla
 		LocalOffset: 0,250,500
 		FireDelay: 10
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: throw
+	-TakeCover:
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+		
+BUG:
+	Inherits: ^ScrinSoldier
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 30
+		Prerequisites: ~scrrax, scrtech
+	Selectable:
+		Class: bug
+	GivesExperience:
+		Experience: 500
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Mind Leech
+		Description: Special Alien. Can\ntake over enemies for brief moments.\n  Strong vs Ground units.\n  Weak vs Aircraft.
+	FreeActor@1:
+		Actor: bugclone
+	Targetable:
+		TargetTypes: Ground, Infantry, Razorshark, MindControlInmune
+	Selectable:
+		Bounds: 26,30,0,-10
+	Health:
+		HP: 220
+	Mobile:
+		Speed: 60
+	SpawnActorOnDeath@conversion:
+		Actor: cybdog
+		Probability: 100
+		OwnerType: Killer
+		DeathType: CabalDeath
+		RequiresLobbyCreeps: true
+	Armor:
+		Type: none
+	Armament:
+		Weapon: StalkerSteal
+		FireDelay: 5
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:
@@ -1101,6 +1124,7 @@ PDRONE:
 	Passenger:
 	WithInfantryBody:
 		AttackSequence: shoot
+		IdleSequences: idle1,idle2
 	AutoTarget:
 		ScanRadius: 8
 		InitialStance: AttackAnything
@@ -1332,15 +1356,12 @@ WORKER:
 
 PALADIN2:
 	Inherits: ^CabalDroneInfantry
+	Inherits@2: ^CabRender
 	Valued:
 		Cost: 800
 	Tooltip:
 		Name: Sentinel
 		Description: General purpose mechanized walker.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
-	# Buildable:
-		# Queue: Infantry
-		# BuildPaletteOrder: 30
-		# Prerequisites: ~cabrax
 	Mobile:
 		TurnSpeed: 5
 		Speed: 56
@@ -1351,7 +1372,7 @@ PALADIN2:
 	RevealsShroud:
 		Range: 8c0
 	SupplyTruck
-		Payload: 80
+		Payload: 150
 		Voice: Move
 	BodyOrientation:
 		QuantizedFacings: 32
@@ -1368,9 +1389,6 @@ PALADIN2:
 		Weapon: SentryGun
 		Recoil: 127
 		RecoilRecovery: 26
-	# RenderVoxels:
-	# WithVoxelBarrel:
-		# LocalOffset: -128, 85, 256
 	AutoTarget:
 	Selectable:
 		Bounds: 30, 42, 0, -8
@@ -1385,16 +1403,12 @@ cybdog:
 	Tooltip:
 		Name: Cyberdog
 		Description: Cybernetic infantry unit.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
-	# Buildable:
-		# Queue: Infantry
-		# BuildPaletteOrder: 40
-		# Prerequisites: ~cabclaw, cabradr
 	Selectable:
 		Bounds: 16,31,0,-10
 	Voiced:
 		VoiceSet: Cyborg
 	SupplyTruck
-		Payload: 150
+		Payload: 100
 		Voice: Move
 	Mobile:
 		Speed: 65
@@ -1404,7 +1418,11 @@ cybdog:
 	RevealsShroud:
 		Range: 5c0
 	Armament:
-		Weapon: Vulcan3
+		Weapon: Dogzooka
+		LocalOffset: 0,-100,300
+	Armament@2:
+		Weapon: Dogzooka
+		LocalOffset: 0,-100,300
 	AttackFrontal:
 		Voice: Attack
 	SelectionDecorations:

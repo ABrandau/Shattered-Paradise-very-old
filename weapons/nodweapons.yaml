@@ -98,7 +98,7 @@ TemplarLasor:
 		Inaccuracy: 1
 	Warhead@1Dam: SpreadDamage
 		Spread: 125
-		Damage: 10
+		Damage: 15
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 		
 BHRifle:
@@ -161,7 +161,7 @@ BikeMissile:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 50
+		Damage: 40
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -315,7 +315,7 @@ StealthRocket:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 25
+		Damage: 35
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -395,11 +395,11 @@ HarpyClaw:
 	Report: cygun1.aud
 	Projectile: Bullet
 		Speed: 1c682
-	ValidTargets: Ground, Air
+		ValidTargets: Ground, Vehicle, Building, Infantry, Air
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 35
-		ValidTargets: Ground, Air
+		Damage: 40
+		ValidTargets: Ground, Vehicle, Building, Infantry, Air
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -410,13 +410,13 @@ HarpyClaw:
 		ValidImpactTypes: Water
 
 Proton:
-	Inherits: ^APWarhead
+	Inherits: ^BombWarhead
 	ReloadDelay: 50
 	Range: 5c0
 	Report: scrin5b.aud
 	Burst: 3
 	BurstDelay: 3
-	ValidTargets: Ground, water
+	ValidTargets: Ground, water, Infantry, Vehicle, Building
 	Projectile: Bullet
 		Speed: 341
 		Blockable: false
@@ -425,9 +425,9 @@ Proton:
 		Image: TORPEDO
 		RangeLimit: 35
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 45
-		ValidTargets: Ground, water
+		Spread: 250
+		Damage: 50
+		ValidTargets: Ground, water, Infantry, Vehicle, Building
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_bang
@@ -474,7 +474,7 @@ ProtonAA:
 TurretLaserFire:
 	Inherits: ^FullDamage
 	ReloadDelay: 40
-	Range: 5c512
+	Range: 6c768
 	Report: lastur1.aud
 	Projectile: LaserZap
 		Width: 85

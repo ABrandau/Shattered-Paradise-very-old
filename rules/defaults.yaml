@@ -127,13 +127,6 @@
 	TimedUpgradeBar@WebDisable:
 		Upgrade: WebDisable
 		Color: FFFFFF
-	# WithIdleOverlay@WebDisable:
-		# Sequence: emp-overlay
-		# Palette: effect
-		# UpgradeTypes: WebDisable
-		# ShowToEnemies: true
-		# ZOffset: 512
-		# UpgradeMinEnabledLevel: 1
 	Mobile:
 		UpgradeTypes: WebDisable
 		UpgradeMaxEnabledLevel: 0
@@ -249,14 +242,14 @@
 		Modifier: 80
 		UpgradeTypes: FirestormGen
 		BaseLevel: 1
-	DamageMultiplier:
-		Modifier: 75
+	# DamageMultiplier:
+		# Modifier: 75
 	SelectionDecorations:
 		Palette: pips
 	Selectable:
 		Priority: 3
 	Targetable:
-		TargetTypes: Ground, Building, C4
+		TargetTypes: Building, Ground, C4, DetonateAttack
 	Building:
 		Dimensions: 1,1
 		Footprint: x
@@ -390,7 +383,7 @@
 	LineBuildNode:
 		Types: wall
 	Targetable:
-		TargetTypes: Ground, Wall, C4
+		TargetTypes: Ground, Wall, C4, DetonateAttack
 	WithWallSpriteBody:
 		Type: wall
 	AutoTargetIgnore:
@@ -466,6 +459,13 @@
 	IgnoresDisguise:
 	Targetable:
 		TargetTypes: Ground, Infantry
+		UpgradeMaxEnabledLevel: 0
+		UpgradeMinEnabledLevel:	0
+		UpgradeTypes: MindControlTargetting
+	Targetable@MindControl:
+		TargetTypes: Ground, Infantry, MindControlInmune
+		UpgradeTypes: MindControlTargetting
+		UpgradeMinEnabledLevel: 1
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	WithInfantryBody:
@@ -739,7 +739,14 @@
 	Voiced:
 		VoiceSet: Vehicle
 	Targetable:
-		TargetTypes: Ground, Vehicle, Repair
+		TargetTypes: Ground, Vehicle, Repair, MindControlInmune
+		UpgradeMaxEnabledLevel: 0
+		UpgradeMinEnabledLevel:	0
+		UpgradeTypes: MindControlTargetting
+	Targetable@asd:
+		TargetTypes: Ground, Vehicle, Repair, MindControlInmune
+		UpgradeMinEnabledLevel: 1
+		UpgradeTypes: MindControlTargetting
 	Repairable:
 		RepairBuildings: gadept
 		Voice: Move
@@ -1052,7 +1059,8 @@
 	AutoTarget:
 	RenderRangeCircle:
 	Targetable:
-		TargetTypes: Ground, C4, Defence
+	Targetable:
+		TargetTypes: Building, Ground, C4, DetonateAttack, Defence
 	RenderDetectionCircle:
 	RevealsShroud:
 		Range: 10c0
@@ -1089,7 +1097,7 @@
 		Palette: pips
 	Selectable:
 	Targetable:
-		TargetTypes: Ground, Repair
+		TargetTypes: Ground, Repair, DetonateAttack
 	Guardable:
 	HiddenUnderFog:
 	ActorLostNotification:
