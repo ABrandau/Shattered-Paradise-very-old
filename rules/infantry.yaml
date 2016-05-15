@@ -569,7 +569,7 @@ AWARRIOR:
 		Cost: 350
 	Tooltip:
 		Name: Forgotten Knight
-		Description: Support infantry, can fire shells from\nafar and also places mines.\nTurns into berserkers when killed.\n  Strong vs Infantry.\n  Weak vs Aircraft, Vehicles.
+		Description: Suicide Infantry\nTurns into berserkers when killed.\n  Strong vs Infantry, Buildings.\n  Weak vs Aircraft, Vehicles.
 	Voiced:
 		VoiceSet: Rocket
 	-UpdatesPlayerStatistics:
@@ -580,21 +580,12 @@ AWARRIOR:
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark
 	-SpawnActorOnDeath@conversion:
-	Minelayer:
-		Mine: mumine
-	AmmoPool:
-		Ammo: 5
-		PipCount: 1
-		PipType: Ammo
-		SelfReloadDelay: 500
-		SelfReloads: true
-		PipTypeEmpty: AmmoEmpty	
 	Armament@PRIMARY:
-		Weapon: KnightGun
+		Weapon: BullAcid
 		Name: OnFoot
 		LocalOffset: 128,0,400
 	Armament@GARRISON:
-		Weapon: KnightGun
+		Weapon: BullAcid
 		LocalOffset: 128,0,400
 	AttackFrontal:
 		Voice: Attack

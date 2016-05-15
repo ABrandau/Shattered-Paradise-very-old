@@ -619,7 +619,7 @@ WOLF:
 		Cost: 800
 	Tooltip:
 		Name: Tiberian Bull
-		Description: Tiberian Beast, expels tiberium toxins\naffecting nearby units.\nIncreases the strength of nearby infantry.\n  Strong vs none\n  Weak vs Infantry, Aircraft
+		Description: Support Beast, expels tiberium toxins\nthat affect nearby infantry. Can also\nplace mines.\n  Unarmed.
 	Voiced:
 		VoiceSet: Fiend
 	SpawnActorOnDeath@conversion:
@@ -634,8 +634,16 @@ WOLF:
 		Upgrades: ForgInfantryBuff
 		Range: 4c0
 	-Crushable:
-	AutoTarget:
-		ScanRadius: 8
+	-AutoTarget:
+	Minelayer:
+		Mine: mumine
+	AmmoPool:
+		Ammo: 5
+		PipCount: 5
+		PipType: Ammo
+		SelfReloadDelay: 500
+		SelfReloads: true
+		PipTypeEmpty: AmmoEmpty	
 	Health:
 		HP: 300
 	Armor:
@@ -643,11 +651,6 @@ WOLF:
 	Mobile:
 		Speed: 70
 		SharesCell: false
-	Armament@PRIMARY:
-		Weapon: BullAcid
-		LocalOffset: 128,0,640
-	AttackFrontal:
-		Voice: Attack
 	WithInfantryBody:
 		AttackSequence: shoot
 

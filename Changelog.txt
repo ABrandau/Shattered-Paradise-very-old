@@ -2,8 +2,8 @@
 
 [2016 - xx - xx]
 Balance Changes:
-	Reworked forgotten knight, now it can place mines.
-	Removed structure damage multiplier.
+	Wolf: Lost his weapon, now places mines instead.
+	Forgotten Knight: Now has the Wolf weapon, and does full damage.
 	Templar damage: 10 -> 15
 	Stealth Tank: damage: 25 -> 35
 	Tiberian Fiend: Weapon warhead: Armor Piercing -> Full damage, Armor: Light -> none, Damage: 8 -> 10
@@ -15,6 +15,7 @@ Balance Changes:
 	Sentinel: Grind Payload: 80 -> 150.
 	Bunkers now hold only one marauder and skirmisher instead of two.
 	Added Forgotten Seer, a scout unit that will soon be able to place vision wards.
+	Removed structure damage multiplier.
 	Removed Forgotten ranger.
 Bug Fixes:
 	Fixed crash that happened when destroying a mutant or scrin gate.
