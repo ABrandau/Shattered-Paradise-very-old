@@ -488,14 +488,14 @@ TurretLaserFire:
 ObeliskLaserFire:
 	Inherits: ^FullDamage
 	ReloadDelay: 1
-	Range: 10c512
+	Range: 9c0
 	Report: obelray1.aud
 	Projectile: LaserZap
 		Width: 170
 		ZOffset: 2047
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 250
+		Damage: 125
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 
 		

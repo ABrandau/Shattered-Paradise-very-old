@@ -524,11 +524,11 @@ NAOBEL:
 		Type: Heavy
 	Armament:
 		Weapon: ObeliskLaserFire
-		LocalOffset: 1400,210,800
+		LocalOffset: 1400,210,700
 	AttackCharge:
 		ChargeAudio: obelpowr.aud
-		ReloadTime: 125
-		InitialChargeDelay: 125
+		ReloadTime: 50
+		InitialChargeDelay: 50
 	WithChargeOverlay:
 		Sequence: active
 		Palette: player

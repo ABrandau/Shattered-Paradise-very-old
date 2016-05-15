@@ -2,6 +2,7 @@
 
 [2016 - xx - xx]
 Balance Changes:
+	Obelisk: Reload delay: 100 -> 50, range: 10c512 -> 9c0, damage: 250 -> 125
 	Wolf: Lost his weapon, now places mines instead.
 	Forgotten Knight: Now has the Wolf weapon, and does full damage.
 	Templar damage: 10 -> 15
