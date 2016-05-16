@@ -1097,7 +1097,7 @@
 		Palette: pips
 	Selectable:
 	Targetable:
-		TargetTypes: Ground, Repair, DetonateAttack
+		TargetTypes: Ground, Repair, DetonateAttack, MindControlInmune
 	Guardable:
 	HiddenUnderFog:
 	ActorLostNotification:

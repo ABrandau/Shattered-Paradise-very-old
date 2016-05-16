@@ -4,6 +4,7 @@ MineExplode:
 		Damage: 150
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		InvalidTargets: Mine
 	Warhead@2Eff: CreateEffect
 		Explosions: large_twlt
 		ImpactSound: expnew09.aud

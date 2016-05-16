@@ -565,7 +565,7 @@ ARMH:
 STNK:
 	Inherits: ^VoxelTank
 	Valued:
-		Cost: 900
+		Cost: 1100
 	Tooltip:
 		Name: Stealth Tank
 		Description: Lightly armoured tank equipped with a personal\nstealth generator. Armed with missiles.\nCan be spotted by infantry at close range.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
@@ -583,8 +583,8 @@ STNK:
 		Type: Light
 	Cloak@cloakgenerator:
 		UpgradeTypes:
-		InitialDelay: 60
-		CloakDelay: 60
+		InitialDelay: 80
+		CloakDelay: 80
 		CloakSound: cloak5.aud
 		UncloakSound: cloak5.aud
 		IsPlayerPalette: true
@@ -635,6 +635,7 @@ WOLF:
 		Range: 4c0
 	-Crushable:
 	-AutoTarget:
+	MineImmune:
 	Minelayer:
 		Mine: mumine
 	AmmoPool:

@@ -1,6 +1,7 @@
 overlay:
-	Defaults: place
+	Defaults: place2
 		Offset: 0, -12
+		ZOffset: -512
 	build-valid-snow:
 	build-valid-temperate:
 	build-invalid:
@@ -8,7 +9,7 @@ overlay:
 	target-select:
 
 editor-overlay:
-	Defaults: place
+	Defaults: place2
 		Offset: 0, -12
 	copy:
 	paste:

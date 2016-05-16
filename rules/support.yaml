@@ -971,6 +971,8 @@ MUMINE:
 		Type: Wood
 	RevealsShroud:
 		Range: 3c0
+	Targetable:
+		TargetTypes: Ground, Repair, DetonateAttack, MindControlInmune, Mine
 	BodyOrientation:
 		QuantizedFacings: 32
 	Cloak@cloakgenerator:

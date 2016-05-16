@@ -6,7 +6,7 @@ Balance Changes:
 	Wolf: Lost his weapon, now places mines instead.
 	Forgotten Knight: Now has the Wolf weapon, and does full damage.
 	Templar damage: 10 -> 15
-	Stealth Tank: damage: 25 -> 35
+	Stealth Tank: damage: 25 -> 35, price: 900 -> 1100, cloak delay: 60 -> 80
 	Tiberian Fiend: Weapon warhead: Armor Piercing -> Full damage, Armor: Light -> none, Damage: 8 -> 10
 	Cyborg Commando: Reload Delay: 50 -> 100, Proyectile Type: Missle -> Bullet
 	Cabal Railgun turret: Power Consumption: -70 -> -60
@@ -16,11 +16,14 @@ Balance Changes:
 	Sentinel: Grind Payload: 80 -> 150.
 	Bunkers now hold only one marauder and skirmisher instead of two.
 	Added Forgotten Seer, a scout unit that will soon be able to place vision wards.
+	Mines are no inmune to the explosion of other mines.
+	Deployable vehicles are now inmune to mind control.
 	Removed structure damage multiplier.
 	Removed Forgotten ranger.
 Bug Fixes:
 	Fixed crash that happened when destroying a mutant or scrin gate.
 Graphical Changes:
+	Changed placement tile graphic due to some troubles related to minelaying.
 	Changed Forgotten Mine sprite.
 	Fixed mutant gate build anim.
 	Adjusted Seeker weapon offset.
