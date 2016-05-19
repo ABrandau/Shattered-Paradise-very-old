@@ -2,6 +2,7 @@
 
 [2016 - xx - xx]
 Balance Changes:
+	Mind Leech: range: 6 -> 8, reload delay: 100 -> 150
 	Obelisk: Reload delay: 100 -> 50, range: 10c512 -> 9c0, damage: 250 -> 125
 	Wolf: Lost his weapon, now places mines instead.
 	Forgotten Knight: Now has the Wolf weapon, and does full damage.
@@ -20,6 +21,7 @@ Balance Changes:
 	Deployable vehicles are now inmune to mind control.
 	Removed structure damage multiplier.
 	Removed Forgotten ranger.
+	Veteran units are now inmune to mind control.
 Bug Fixes:
 	Fixed crash that happened when destroying a mutant or scrin gate.
 Graphical Changes:
@@ -32,6 +34,7 @@ Graphical Changes:
 	Reduced CABAL railgun turret line width.
 Other:
 	Corrected IFV tooltip.
+	Corrected Ichor Battery voice set.
 
 [2016 - 05 - 13]
 Balance Changes:

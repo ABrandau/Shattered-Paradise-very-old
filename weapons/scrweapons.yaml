@@ -42,13 +42,13 @@ LegioNeedler:
 		SmudgeType: SmallCrater
 
 StalkerSteal:
-	ReloadDelay: 100
-	Range: 6c0
+	ReloadDelay: 150
+	Range: 8c0
 	Report:
 	ValidTargets: Infantry, Vehicle
 	InvalidTargets: MindControlInmune
 	Projectile: Bullet
-		Speed: 200
+		Speed: 400
 		Image: 120mm
 		# Inaccuracy: 1
 		ValidTargets: Infantry, Vehicle
@@ -397,9 +397,7 @@ TractorBeam:
 	Inherits: ^FullDamage
 	ReloadDelay: 25
 	Range: 6c768
-	Report: 120mmf.aud
-	Burst: 1
-	BurstDelay: 5
+	Report:
 	ValidTargets: Air
 	Projectile: Bullet
 		Speed: 100c0

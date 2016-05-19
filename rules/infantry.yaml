@@ -788,7 +788,6 @@ COLOSSI:
 	Armament:
 		Weapon: BugRail
 		LocalOffset: 300,0,1000
-		FireDelay: 20
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:
@@ -799,20 +798,12 @@ COLOSSI:
 
 STALKER:
 	Inherits: ^ScrinSoldier
-	# Buildable:
-		# Queue: Infantry
-		# BuildPaletteOrder: 28
-		# Prerequisites: ~scrrax, scrtech
 	Selectable:
 		Class: Stalker
 	Valued:
 		Cost: 1000
 	GivesExperience:
 		Experience: 333
-	FreeActor@1:
-		Actor: stalkerclone
-	FreeActor@2:
-		Actor: stalkerclone
 	Tooltip:
 		Name: Stalker
 		Description: Disruption infantry\nConfuses enemies for shorter periods of time.\nchanging their alegiance.\nCan move through water.\n  Unarmed.
@@ -924,12 +915,6 @@ BUG:
 ##########################################################
 # Clones
 ##########################################################
-SHARKCLONE:
-	Inherits: shark
-	RenderSprites:
-		Image: Shark
-	-Buildable:
-
 LEGIOCLONE:
 	Inherits: LEGIO
 	RenderSprites:
@@ -950,14 +935,6 @@ SHAPESHIFTERCLONE:
 	Inherits: SHAPESHIFTER
 	RenderSprites:
 		Image: shapeshifter
-	-Buildable:
-	-FreeActor@1:
-	-FreeActor@2:
-
-STALKERCLONE:
-	Inherits: STALKER
-	RenderSprites:
-		Image: stalker
 	-Buildable:
 	-FreeActor@1:
 	-FreeActor@2:

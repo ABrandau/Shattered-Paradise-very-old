@@ -19,7 +19,7 @@
 	GainsExperience:
 		Upgrades:
 			400: rank, firepower, damage, speed, reload
-			800: rank, firepower, damage, speed, reload, selfheal
+			800: rank, firepower, damage, speed, reload, selfheal, MindControlInmune
 	FirepowerMultiplier@EXPERIENCE:
 		UpgradeTypes: firepower
 		Modifier: 110, 120, 130, 140
@@ -739,14 +739,14 @@
 	Voiced:
 		VoiceSet: Vehicle
 	Targetable:
-		TargetTypes: Ground, Vehicle, Repair, MindControlInmune
+		TargetTypes: Ground, Vehicle, Repair
 		UpgradeMaxEnabledLevel: 0
 		UpgradeMinEnabledLevel:	0
 		UpgradeTypes: MindControlTargetting
-	Targetable@asd:
+	Targetable@MindControl:
 		TargetTypes: Ground, Vehicle, Repair, MindControlInmune
-		UpgradeMinEnabledLevel: 1
 		UpgradeTypes: MindControlTargetting
+		UpgradeMinEnabledLevel: 1
 	Repairable:
 		RepairBuildings: gadept
 		Voice: Move

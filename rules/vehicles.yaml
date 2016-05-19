@@ -1134,8 +1134,6 @@ SCRRECHARGER:
 		HP: 300
 	Armor:
 		Type: Wood
-	Voiced:
-		VoiceSet: Mech
 	WithRangeCircle:
 		Range: 6c0
 		Type: cloakgenerator
