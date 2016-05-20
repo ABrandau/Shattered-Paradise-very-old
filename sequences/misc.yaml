@@ -187,6 +187,11 @@ explosion:
 	medium_grey_explosion: xgrymed1
 	large_grey_explosion: xgrymed2
 	## SP Explos start here
+	## Misc
+	fire1: fire1
+	fire2: fire2
+	fire3: fire3
+	fire4: fire4
 	#Mutants
 	ion_ray: lbolt1
 	ion_ray1: lbolt1

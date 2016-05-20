@@ -20,6 +20,9 @@ MilitantFireball:
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
+	Warhead@3Eff: CreateEffect
+		Explosions: fire3, fire4
+		InvalidImpactTypes: Water, Air, AirHit
 
 CrusaderBazooka:
 	Inherits: ^RocketWarhead
@@ -251,6 +254,9 @@ DevilsFlame:
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
+	Warhead@3Eff: CreateEffect
+		Explosions: fire1, fire2
+		InvalidImpactTypes: Water, Air, AirHit
 
 NODRepair:
 	ReloadDelay: 125
@@ -371,20 +377,7 @@ StealthRocketAA:
 		ImpactSound: expnew06.aud
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater		
-
-StealthLasor:
-	ReloadDelay: 50
-	Burst: 1
-	Range: 5c512
-	Report: lastur1.aud
-	Projectile: LaserZap
-		BeamWidth: 2
-		BeamDuration: 5
-		Inaccuracy: 1
-	Warhead@1Dam: SpreadDamage
-		Spread: 125
-		Damage: 25
-		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath		
+	
 ##################################################
 # Aircraft
 ##################################################
@@ -477,7 +470,7 @@ TurretLaserFire:
 	Range: 6c768
 	Report: lastur1.aud
 	Projectile: LaserZap
-		Width: 85
+		Width: 55
 		BeamDuration: 5
 		ZOffset: 2047
 	Warhead@1Dam: SpreadDamage
