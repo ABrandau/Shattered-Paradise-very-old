@@ -30,6 +30,7 @@ Nod:
 	Laser Turret: cost: 100 -> 200 hp: 200 -> 250
 Scrin:
 	Mind Leech: range: 6 -> 8, reload delay: 100 -> 150
+	Ichor waste turret: Cloak delay: 1 second -> 5 seconds.
 Bug Fixes:
 	Fixed crash that happened when destroying a mutant or scrin gate.
 	Fixed a bug that made NOD aircraft unable to attack air.
