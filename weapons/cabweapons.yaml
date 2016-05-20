@@ -203,7 +203,7 @@ Dogzooka:
 		Image: DRAGON
 		Trail: small_smoke_trail
 		RateOfTurn: 8
-		RangeLimit: 50
+		RangeLimit: 15c0
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
@@ -243,7 +243,7 @@ SeekerBazooka:
 		Image: DRAGON
 		Trail: small_smoke_trail
 		RateOfTurn: 10
-		RangeLimit: 50
+		RangeLimit: 15c0
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
@@ -424,7 +424,7 @@ WaspBazooka:
 		Image: DRAGON
 		Trail: small_smoke_trail
 		RateOfTurn: 8
-		RangeLimit: 50
+		RangeLimit: 15c0
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
@@ -493,7 +493,6 @@ BasiliskBomb:
 		Image: DRAGON
 		TrailImage: small_smoke_trail
 		HorizontalRateOfTurn: 8
-		RangeLimit: 50
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c400

@@ -33,7 +33,7 @@ SkirmisherRocket:
 		Image: DRAGON
 		TrailImage: small_smoke_trail
 		HorizontalRateOfTurn: 8
-		RangeLimit: 50
+		RangeLimit: 7c204
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
@@ -195,7 +195,7 @@ GSkirmisherRocket:
 		Image: DRAGON
 		TrailImage: small_smoke_trail
 		HorizontalRateOfTurn: 8
-		RangeLimit: 50
+		RangeLimit: 7c204
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
@@ -498,7 +498,7 @@ TiberianRocket:
 		Image: DRAGON
 		TrailImage: small_smoke_trail
 		HorizontalRateOfTurn: 8
-		RangeLimit: 50
+		RangeLimit: 15c0
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 200
@@ -624,7 +624,7 @@ GargoylRocket:
 		Image: DRAGON
 		Trail: small_smoke_trail
 		RateOfTurn: 8
-		RangeLimit: 35
+		RangeLimit: 15c0
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 85
@@ -663,7 +663,7 @@ GargoylRocketAA:
 		Trail: small_smoke_trail
 		RateOfTurn: 20
 		HorizontalRateOfTurn: 20
-		RangeLimit: 35
+		RangeLimit: 15c0
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 110

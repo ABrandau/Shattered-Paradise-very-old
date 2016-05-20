@@ -41,7 +41,7 @@ CrusaderBazooka:
 		Angle: 90
 		Trail: small_smoke_trail
 		RateOfTurn: 8
-		RangeLimit: 50
+		RangeLimit: 15c0
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
@@ -74,7 +74,7 @@ CrusaderBazookaInf:
 		Angle: 90
 		Trail: small_smoke_trail
 		RateOfTurn: 8
-		RangeLimit: 50
+		RangeLimit: 15c0
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
@@ -160,7 +160,7 @@ BikeMissile:
 		TrailImage: small_smoke_trail
 		HorizontalRateOfTurn: 8
 		MaximumLaunchSpeed: 213
-		RangeLimit: 50
+		RangeLimit: 15c0
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
@@ -317,7 +317,7 @@ StealthRocket:
 		Image: DRAGON
 		TrailImage: small_smoke_trail
 		HorizontalRateOfTurn: 8
-		RangeLimit: 50
+		RangeLimit: 15c0
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
@@ -355,7 +355,7 @@ StealthRocketAA:
 		Image: DRAGON
 		TrailImage: small_smoke_trail
 		HorizontalRateOfTurn: 8
-		RangeLimit: 50
+		RangeLimit: 15c0
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
@@ -445,7 +445,7 @@ ProtonAA:
 		Blockable: false
 		Shadow: true
 		Image: TORPEDO
-		RangeLimit: 35
+		RangeLimit: 15c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 30

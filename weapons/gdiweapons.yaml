@@ -177,7 +177,7 @@ HoverMissile:
 		Image: DRAGON
 		TrailImage: small_smoke_trail
 		HorizontalRateOfTurn: 8
-		RangeLimit: 35
+		RangeLimit: 15c0
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
@@ -322,7 +322,7 @@ MammothTusk:
 		TrailImage: small_smoke_trail
 		HorizontalRateOfTurn: 10
 		MaximumLaunchSpeed: 213
-		RangeLimit: 50
+		RangeLimit: 15c0
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 171
@@ -358,7 +358,7 @@ FighterHellfire:
 		Image: DRAGON
 		TrailImage: small_smoke_trail
 		HorizontalRateOfTurn: 8
-		RangeLimit: 35
+		RangeLimit: 15c0
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 85
@@ -390,7 +390,7 @@ AAFighterHellfire:
 		Image: DRAGON
 		TrailImage: small_smoke_trail
 		HorizontalRateOfTurn: 20
-		RangeLimit: 35
+		RangeLimit: 15c0
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 110
@@ -477,7 +477,7 @@ GuardianTusk:
 		TrailImage: small_smoke_trail
 		HorizontalRateOfTurn: 10
 		MaximumLaunchSpeed: 213
-		RangeLimit: 50
+		RangeLimit: 15c0
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 600
@@ -547,7 +547,7 @@ GdiRedEye:
 		Image: DRAGON
 		TrailImage: small_smoke_trail
 		HorizontalRateOfTurn: 8
-		RangeLimit: 100
+		RangeLimit: 15c0
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128

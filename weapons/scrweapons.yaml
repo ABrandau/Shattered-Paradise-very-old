@@ -28,7 +28,7 @@ LegioNeedler:
 		Image: blueballminitrail
 		# Angle: 90
 		RateOfTurn: 8
-		RangeLimit: 50
+		RangeLimit: 15c0
 		Palette: pips
 	Warhead@1Dam: SpreadDamage
 		Spread: 350
