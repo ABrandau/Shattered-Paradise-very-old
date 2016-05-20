@@ -1131,11 +1131,11 @@ SCRNEEDLER:
 		UpgradeMinEnabledLevel: 0
 		Palette: cloakscrin
 		InitialDelay: 125
-		CloakDelay: 125
-		# CloakSound: cloak5.aud
-		# UncloakSound: cloak5.aud
+		CloakDelay: 75
+		CloakSound:
+		UncloakSound:
 		IsPlayerPalette: true
-		UncloakOn: Move, Attack
+		UncloakOn: Move, Attack, Damage
 	Turreted:
 		TurnSpeed: 10
 		InitialFacing: 50

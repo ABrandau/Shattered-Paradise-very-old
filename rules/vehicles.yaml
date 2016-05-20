@@ -944,7 +944,7 @@ FORTRESS:
 SCRHARV:
 	Inherits: ^ScrinTank
 	Valued:
-		Cost: 1600
+		Cost: 1100
 	Tooltip:
 		Name: Harvester
 		Description: Collects Ichor for processing.\nIncompatible with human refineries.\n  Unarmed.

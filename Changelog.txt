@@ -6,6 +6,8 @@ General:
 	Deployable vehicles are now inmune to mind control.
 	Removed structure damage multiplier.
 	Veteran units are now inmune to mind control.
+	Refinery hp: 1200 -> 1400
+	Harvester Cost: 1400 -> 1100
 Cabal:
 	Cyborg Commando: Reload Delay: 50 -> 100, Proyectile Type: Missle -> Bullet
 	Cabal Railgun turret: Power Consumption: -70 -> -60
@@ -30,7 +32,10 @@ Nod:
 	Laser Turret: cost: 100 -> 200 hp: 200 -> 250
 Scrin:
 	Mind Leech: range: 6 -> 8, reload delay: 100 -> 150
-	Ichor waste turret: Cloak delay: 1 second -> 5 seconds.
+	Ichor waste turret: Cloak delay: 1 second -> 3 seconds, range reduced.
+	Ichor waste turret: new warhead -> Flame, Burst: 12 -> 10, Speed: 120 -> 150
+	Refinery hp: 1100 -> 1400
+	Scrin harvester and refinery have the same price as their human counterpart.
 Bug Fixes:
 	Fixed crash that happened when destroying a mutant or scrin gate.
 	Fixed a bug that made NOD aircraft unable to attack air.

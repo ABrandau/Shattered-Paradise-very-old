@@ -119,7 +119,7 @@ MCV:
 HARV:
 	Inherits: ^VoxelTank
 	Valued:
-		Cost: 1400
+		Cost: 1100
 	Tooltip:
 		Name: Harvester
 		Description: Collects Tiberium for processing.\nIncompatible with scrin refineries.\n  Unarmed
@@ -370,7 +370,7 @@ PROC:
 	Selectable:
 		Bounds: 134, 96, 0, -12
 	Health:
-		HP: 1200
+		HP: 1400
 	RevealsShroud:
 		Range: 6c0
 	TiberianSunRefinery:

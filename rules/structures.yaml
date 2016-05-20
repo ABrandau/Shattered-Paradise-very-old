@@ -1534,7 +1534,7 @@ scrproc:
 	Inherits: ^Building
 	Inherits@2: ^ScrinRender
 	Valued:
-		Cost: 2200
+		Cost: 2100
 	Tooltip:
 		Name: Scrin Refinery
 		Description: Processes raw Ichor\ninto usable resources.\nIncompatible with human harvesters.
@@ -1553,7 +1553,7 @@ scrproc:
 	Selectable:
 		Bounds: 134, 96, 0, -12
 	Health:
-		HP: 1200
+		HP: 1400
 	RevealsShroud:
 		Range: 6c0
 	Refinery:

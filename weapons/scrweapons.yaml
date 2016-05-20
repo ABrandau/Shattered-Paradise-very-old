@@ -375,13 +375,13 @@ CouncilSteal:
 # Defences
 #################################################
 NeedlerAcid:
-	Inherits: ^AcidWarhead
+	Inherits: ^FlameWarhead
 	ReloadDelay: 100
-	Range: 6c768
-	Burst: 12
+	Range: 4c768
+	Burst: 10
 	Report: flamtnk1.aud
 	Projectile: Bullet
-		Speed: 120
+		Speed: 150
 		Image: acidall32
 		Inaccuracy: 1c0
 		Palette: apolredalpha
