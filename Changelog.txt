@@ -21,6 +21,8 @@ Forgotten:
 	Mines are now inmune to the explosion of other mines.
 	Tiberian Fiend: Weapon warhead: Armor Piercing -> Full damage, Armor: Light -> none, Damage: 8 -> 10
 	Removed Forgotten ranger.
+GDI:
+	GDI Vulcan turret: Hp: 500 -> 400
 Nod:
 	Obelisk: Reload delay: 100 -> 50, range: 10c512 -> 9c0, damage: 250 -> 125
 	Templar damage: 10 -> 15
@@ -30,6 +32,7 @@ Scrin:
 	Mind Leech: range: 6 -> 8, reload delay: 100 -> 150
 Bug Fixes:
 	Fixed crash that happened when destroying a mutant or scrin gate.
+	Fixed a bug that made NOD aircraft unable to attack air.
 Graphical Changes:
 	Changed placement tile graphic due to some troubles related to minelaying.
 	Changed Forgotten Mine sprite.

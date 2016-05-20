@@ -156,7 +156,7 @@ GAVULC:
 		Bounds: 48, 36, 0, -6
 	DisabledOverlay:
 	Health:
-		HP: 500
+		HP: 400
 	Armor:
 		Type: Light
 	BlocksProjectiles:

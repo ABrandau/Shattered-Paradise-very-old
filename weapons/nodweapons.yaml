@@ -386,6 +386,7 @@ HarpyClaw:
 	ReloadDelay: 50
 	Range: 5c0
 	Report: cygun1.aud
+	ValidTargets: Ground, Vehicle, Building, Infantry, Air
 	Projectile: Bullet
 		Speed: 1c682
 		ValidTargets: Ground, Vehicle, Building, Infantry, Air
@@ -408,6 +409,7 @@ Proton:
 	Range: 5c0
 	Report: scrin5b.aud
 	Burst: 3
+	ValidTargets: Ground, Vehicle, Building, Infantry, Air
 	BurstDelay: 3
 	ValidTargets: Ground, water, Infantry, Vehicle, Building
 	Projectile: Bullet
