@@ -25,9 +25,9 @@
 		Damage: 40
 		ValidTargets: Ground
 		Versus:
-			None: 60
+			None: 80
 			Wood: 100
-			Light: 40
+			Light: 60
 			Heavy: 15
 			Concrete: 28
 

@@ -49,7 +49,7 @@ JJCannon:
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallCrater		
-		
+
 Grenade:
 	Inherits: ^GrenadeWarhead
 	ReloadDelay: 80
@@ -65,7 +65,7 @@ Grenade:
 		Image: DISCUS
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 40
+		Damage: 50
 		ValidTargets: Ground
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -427,7 +427,7 @@ OBBomb:
 		Shadow: true
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 1000
+		Spread: 400
 		Damage: 140
 		ValidTargets: Ground, Building, Infantry, Vehicle
 		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath

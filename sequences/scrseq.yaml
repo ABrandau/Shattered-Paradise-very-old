@@ -574,11 +574,6 @@ scrglyder1:
 scrdestroyer:
 	idle:
 		Facings: 32
-	# rotor: lrotor
-		# Length: 4
-	# slow-rotor: lrotor
-		# Start: 4
-		# Length: 8
 	emp-overlay: emp_fx01
 		Length: *
 		BlendMode: Additive		
@@ -587,11 +582,6 @@ scrdestroyer:
 scrtrans:
 	idle:
 		Facings: -32
-	# rotor: lrotor
-		# Length: 4
-	# slow-rotor: lrotor
-		# Start: 4
-		# Length: 8
 	emp-overlay: emp_fx01
 		Length: *
 		BlendMode: Additive		
@@ -600,11 +590,6 @@ scrtrans:
 scrbattleship:
 	idle:
 		Facings: 32
-	# rotor: lrotor
-		# Length: 4
-	# slow-rotor: lrotor
-		# Start: 4
-		# Length: 8
 	emp-overlay: emp_fx01
 		Length: *
 		BlendMode: Additive		
@@ -894,6 +879,35 @@ scrradr:
 		ZOffset: 512
 		BlendMode: Additive
 	icon: scrradricon
+		Offset: 0, 0
+		UseTilesetCode: false
+
+scrdepot:
+	Defaults:
+		Offset: 0, -24
+		UseTilesetCode: true
+	idle:
+		Start: 29
+		Length: 10
+		ShadowStart: 81
+	damaged-idle:
+		Start: 41
+		Length: 10
+		ShadowStart: 93
+	dead:
+		Start: 41
+		ShadowStart: 83
+		Tick: 400
+	make:
+		Length: 30
+		ShadowStart: 52
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: scrdepoticon
 		Offset: 0, 0
 		UseTilesetCode: false	
 

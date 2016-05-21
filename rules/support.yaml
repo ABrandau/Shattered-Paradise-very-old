@@ -141,7 +141,6 @@ GAVULC:
 	Inherits@1: ^TowerStealthDetection
 	WithSpriteBody:
 	# WithWallSpriteBody:
-		Type: wall
 	Valued:
 		Cost: 350
 	Tooltip:
@@ -155,6 +154,7 @@ GAVULC:
 	Selectable:
 		Bounds: 48, 36, 0, -6
 	DisabledOverlay:
+	RequiresPower:
 	Health:
 		HP: 400
 	Armor:
@@ -171,9 +171,6 @@ GAVULC:
 		InitialFacing: 50
 	AttackTurreted:
 	CanPowerDown:
-		IndicatorPalette: mouse
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
 	WithSpriteTurret@VULC:
 		Recoils: no
 	Armament@VULCPRIMARY:
@@ -200,7 +197,6 @@ GAROCK:
 		Amount: -20
 	WithSpriteBody:
 	# WithWallSpriteBody:
-		Type: wall
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -210,10 +206,11 @@ GAROCK:
 		Queue: Defense
 		BuildPaletteOrder: 40
 		Prerequisites: gapile, garadr, ~structures.gdi
+	DisabledOverlay:
+	RequiresPower:
 	Building:
 	Selectable:
 		Bounds: 48, 36, 0, -6
-	DisabledOverlay:
 	Health:
 		HP: 500
 	Armor:
@@ -229,9 +226,6 @@ GAROCK:
 		InitialFacing: 50
 	AttackTurreted:
 	CanPowerDown:
-		IndicatorPalette: mouse
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
 	WithSpriteTurret@ROCKET:
 		Recoils: no
 	Armament@ROCKET:
@@ -255,7 +249,6 @@ GACSAM:
 		Amount: -30
 	WithSpriteBody:
 	# WithWallSpriteBody:
-		Type: wall
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -265,10 +258,11 @@ GACSAM:
 		Queue: Defense
 		BuildPaletteOrder: 40
 		Prerequisites: gapile, ~structures.gdi
+	DisabledOverlay:
+	RequiresPower:
 	Building:
 	Selectable:
 		Bounds: 48, 36, 0, -6
-	DisabledOverlay:
 	Health:
 		HP: 500
 	Armor:
@@ -284,9 +278,6 @@ GACSAM:
 		InitialFacing: 50
 	AttackTurreted:
 	CanPowerDown:
-		IndicatorPalette: mouse
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
 	WithSpriteTurret@SAM:
 		Recoils: no
 	Armament@SAM:
@@ -348,7 +339,6 @@ GAPLUG3:
 		Type: plug.ioncannon
 	Power:
 		Amount: -100
-		}
 
 REPAIRTUR:
 	Inherits: ^Defense
@@ -357,10 +347,10 @@ REPAIRTUR:
 	Tooltip:
 		Name: Maintenance Turret
 		Description: GDI utility structure, repairs\nnearby vehciles. Requires power to operate.\n  Unnarmed.
-	Buildable:
-		Queue: Defense
-		Prerequisites: garadr, ~structures.gdi
-		BuildPaletteOrder: 60
+	# Buildable:
+		# Queue: Defense
+		# Prerequisites: garadr, ~structures.gdi
+		# BuildPaletteOrder: 60
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1241,8 +1231,8 @@ SCRSHIELD:
 		Cost: 1000
 	Tooltip:
 		Name: Stasis Field Generator
-		Description: Stasis Field\nBuffs and heals nearby units.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft.
-
+		Description: Disables vehicles.\nRequires power to operate.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft		
+		# Description: Stasis Field\nBuffs and heals nearby units.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft.
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
@@ -1250,16 +1240,16 @@ SCRSHIELD:
 	WithBuildingExplosion:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
-	GrantUpgradePower:
-		Upgrades: StasisDisable, notmobile
-		OrderName: Stasis Field
-		Description: Stasis Field
-		LongDesc: Disables all units in the area but\nalso makes then invulnerable.
-		Duration: 200
-		Range: 5
-		ChargeTime: 200
-		Icon: ScrStasis
-		IconPalette: chromescrin
+	# GrantUpgradePower:
+		# Upgrades: StasisDisable, notmobile
+		# OrderName: Stasis Field
+		# Description: Stasis Field
+		# LongDesc: Disables all units in the area but\nalso makes then invulnerable.
+		# Duration: 200
+		# Range: 5
+		# ChargeTime: 200
+		# Icon: ScrStasis
+		# IconPalette: chromescrin
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1267,9 +1257,17 @@ SCRSHIELD:
 		Bounds: 88, 42, 0, -6
 	RequiresPower:
 	DisabledOverlay:
-	WithRangeCircle:
-		Range: 12c0
-		Type: cloakgenerator
+	# WithRangeCircle:
+		# Range: 12c0
+		# Type: cloakgenerator
+	Turreted:
+		TurnSpeed: 10
+		InitialFacing: 300
+	AttackTurreted:
+	Armament:
+		Weapon: EMPulseCannon
+		LocalOffset: 0,0,1800
+	AutoTarget:
 	Health:
 		HP: 400
 	Armor:

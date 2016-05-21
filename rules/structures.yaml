@@ -127,7 +127,7 @@ GAWEAP:
 		Cost: 2000
 	Tooltip:
 		Name: GDI War Factory
-		Description: Produces and repairs vehicles.
+		Description: Produces vehicles.
 	ProvidesPrerequisite:
 		Prerequisite: factory
 	Buildable:
@@ -141,8 +141,6 @@ GAWEAP:
 		Bounds: 154, 96, -2, -12
 	Health:
 		HP: 1300
-	RepairsUnits:
-		FinishRepairingNotification: UnitRepaired
 	RallyPoint:
 		Offset: 4,1
 		Palette: mouse
@@ -236,57 +234,6 @@ GAHPAD:
 		ZOffset: 256
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
-
-GADEPT:
-	Inherits: ^Building
-	Valued:
-		Cost: 1200
-	Tooltip:
-		Name: Service Depot
-		Description: Repairs vehicles.
-	# Buildable:
-		# BuildPaletteOrder: 80
-		# Prerequisites: factory, ~structures.gdi
-		# Queue: Building
-	Building:
-		Footprint: =x= xxx =x=
-		Dimensions: 3,3
-	Selectable:
-		Bounds: 96, 64, -6, -6
-	Health:
-		HP: 1100
-	RevealsShroud:
-		Range: 5c0
-	Reservable:
-	RepairsUnits:
-	RallyPoint:
-		Palette: mouse
-		IsPlayerPalette: false
-	RevealsShroud:
-		Range: 6c0		
-	WithIdleOverlay@LIGHT:
-		Sequence: idle-light
-	WithIdleOverlay@GROUND:
-		Sequence: ground
-	WithIdleOverlay@CIRCUITS:
-		Sequence: circuits
-	WithRepairOverlay@CRANE:
-		Sequence: crane
-	WithRepairOverlay@PLATFORM:
-		Sequence: platform
-	WithDeathAnimation@BIB:
-		DeathSequence: dead-ground
-		UseDeathTypeSuffix: false
-	Power:
-		Amount: -30
-	ProvidesPrerequisite@buildingname:
-	SelectionDecorations:
-		VisualBounds: 98, 68, -6, -6
-	RenderSprites:
-		Image: gadept.gdi
-		FactionImages:
-			gdi: gadept.gdi
-			nod: gadept.nod
 
 GARADR:
 	Inherits: ^Building
@@ -547,49 +494,6 @@ GAPLUG3:
 		Type: plug.ioncannon
 	Power:
 		Amount: -100
-		}
-
-REPAIRTUR:
-	Inherits: ^Defense
-	Valued:
-		Cost: 1400
-	Tooltip:
-		Name: Maintenance Turret
-		Description: GDI utility structure, repairs\nnearby vehciles. Requires power to operate.\n  Unnarmed.
-	Buildable:
-		Queue: Defense
-		Prerequisites: garadr, ~structures.gdi
-		BuildPaletteOrder: 60
-	Building:
-		Footprint: xx xx
-		Dimensions: 2,2
-	Selectable:
-		Bounds: 40, 30, -3, -8
-	RequiresPower:
-	DisabledOverlay:
-	Health:
-		HP: 500
-	Armor:
-		Type: Light
-	BodyOrientation:
-		QuantizedFacings: 32
-	RenderRangeCircle:
-		RangeCircleType: aa
-	Turreted:
-		TurnSpeed: 10
-		InitialFacing: 50
-	AttackTurreted:
-	WithSpriteTurret:
-		Recoils: no
-	Power:
-		Amount: -60
-	SelectionDecorations:
-		VisualBounds: 40, 36, -3, -8
-	Armament:
-		Weapon: Repair
-		LocalOffset: 512,0,512
-		TargetStances: Ally
-		ForceTargetStances: None
 
 GAFIRE:
 	Inherits: ^Building
@@ -767,7 +671,7 @@ NAWEAP:
 		Cost: 2000
 	Tooltip:
 		Name: Nod War Factory
-		Description: Produces and repairs vehicles.
+		Description: Produces vehicles.
 	ProvidesPrerequisite:
 		Prerequisite: factory
 	Buildable:
@@ -781,8 +685,6 @@ NAWEAP:
 		Bounds: 149, 80, -3, -10
 	Health:
 		HP: 1300
-	RepairsUnits:
-		FinishRepairingNotification: UnitRepaired
 	RevealsShroud:
 		Range: 6c0
 	RallyPoint:
@@ -1182,7 +1084,7 @@ MUWEAP:
 		Cost: 1800
 	Tooltip:
 		Name: Mutant War Factory
-		Description: Produces and repairs vehicles.
+		Description: Produces vehicles.
 	ProvidesPrerequisite:
 		Prerequisite: factory
 	Buildable:
@@ -1196,8 +1098,6 @@ MUWEAP:
 		Bounds: 154, 96, -2, -12
 	Health:
 		HP: 1300
-	RepairsUnits:
-		FinishRepairingNotification: UnitRepaired
 	RevealsShroud:
 		Range: 6c0
 	RallyPoint:
@@ -1555,7 +1455,7 @@ scrproc:
 	Selectable:
 		Bounds: 134, 96, 0, -12
 	Health:
-		HP: 1400
+		HP: 1200
 	RevealsShroud:
 		Range: 6c0
 	Refinery:
@@ -1585,7 +1485,7 @@ SCRWEAP:
 		Cost: 2000
 	Tooltip:
 		Name: Scrin Forge
-		Description: Produces and repairs vehicles.\nCan also repair aircraft.
+		Description: Produces vehicles.
 	WithBuildingExplosion:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
@@ -1604,8 +1504,6 @@ SCRWEAP:
 		HP: 1300
 	Armor:
 		Type: Heavy
-	RepairsUnits:
-		FinishRepairingNotification: UnitRepaired
 	RallyPoint:
 		Offset: 4,1
 		Palette: mouse
@@ -1694,6 +1592,40 @@ SCRAIR:
 		ZOffset: 256
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
+		
+SCRDEPOT:
+	Inherits: ^Building
+	Inherits@2: ^ScrinRender
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 100
+		Prerequisites: scrweap, ~structures.scr
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Scrin Maintenance Depot
+		Description: Allows the scrin commander\nto repair vehicles..
+	WithBuildingExplosion:
+		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
+		Palette: apolbluealpha
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	Selectable:
+		Bounds: 110, 60, 3, -4
+	Health:
+		HP: 500
+	Armor:
+		Type: Wood
+	RepairsUnits:
+		FinishRepairingNotification: UnitRepaired
+	RevealsShroud:
+		Range: 4c0
+	Power:
+		Amount: -30
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 110, 60, 3, -4
 
 SCRRADR:
 	Inherits: ^Building
@@ -1883,7 +1815,7 @@ CABWEAP:
 		Cost: 2000
 	Tooltip:
 		Name: C.A.B.A.L. War Factory
-		Description: Produces and repairs vehicles.\nCan also repair aircraft.
+		Description: Produces vehicles.
 	ProvidesPrerequisite:
 		Prerequisite: factory
 	Buildable:
@@ -1897,8 +1829,6 @@ CABWEAP:
 		Bounds: 154, 96, -2, -12
 	Health:
 		HP: 1300
-	RepairsUnits:
-		FinishRepairingNotification: UnitRepaired
 	RallyPoint:
 		Offset: 4,1
 		Palette: mouse

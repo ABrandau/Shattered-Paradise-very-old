@@ -68,11 +68,16 @@ GRENADIER:
 		Cost: 210
 	Tooltip:
 		Name: Grenadier
-		Description: Support Infantry armed with grenade launchers.\n  Strong vs Buildings, Infantry, Light Vehicles.\n  Weak vs Vehicles, Aircraft
+		Description: Support Infantry armed with grenade launchers.\nCan explode violently when killed.\n  Strong vs Buildings, Infantry, Light Vehicles.\n  Weak vs Vehicles, Aircraft
 	Health:
 		HP: 90
 	Mobile:
 		Speed: 50
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+		LoadedChance: 100
+		Chance: 5
 	Armament:
 		Weapon: Grenade
 		LocalOffset: 0,0,555

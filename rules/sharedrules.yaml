@@ -119,7 +119,7 @@ MCV:
 HARV:
 	Inherits: ^VoxelTank
 	Valued:
-		Cost: 1100
+		Cost: 1300
 	Tooltip:
 		Name: Harvester
 		Description: Collects Tiberium for processing.\nIncompatible with scrin refineries.\n  Unarmed
@@ -370,7 +370,7 @@ PROC:
 	Selectable:
 		Bounds: 134, 96, 0, -12
 	Health:
-		HP: 1400
+		HP: 1200
 	RevealsShroud:
 		Range: 6c0
 	TiberianSunRefinery:
@@ -407,6 +407,61 @@ PROC:
 			mut: proc.mut
 			cab: proc.cab
 
+GADEPT:
+	Inherits: ^Building
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Service Depot
+		Description: Repairs vehicles.
+	Buildable:
+		BuildPaletteOrder: 80
+		Prerequisites:  ~humanproc, factory
+		Queue: Building
+	Building:
+		Footprint: =x= xxx =x=
+		Dimensions: 3,3
+	Selectable:
+		Bounds: 96, 64, -6, -6
+	Health:
+		HP: 1100
+	RevealsShroud:
+		Range: 5c0
+	# Reservable:
+	# RepairsUnits:
+	# RallyPoint:
+		# Palette: mouse
+		# IsPlayerPalette: false
+	RevealsShroud:
+		Range: 6c0
+	RepairsUnits:
+		FinishRepairingNotification: UnitRepaired
+	WithIdleOverlay@LIGHT:
+		Sequence: idle-light
+	WithIdleOverlay@GROUND:
+		Sequence: ground
+	WithIdleOverlay@CIRCUITS:
+		Sequence: circuits
+	WithRepairOverlay@CRANE:
+		Sequence: crane
+	WithRepairOverlay@PLATFORM:
+		Sequence: platform
+	WithDeathAnimation@BIB:
+		DeathSequence: dead-ground
+		UseDeathTypeSuffix: false
+	Power:
+		Amount: -30
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 98, 68, -6, -6
+	RenderSprites:
+		Image: gadept.gdi
+		FactionImages:
+			gdi: gadept.gdi
+			nod: gadept.nod	
+			mut: gadept.mut	
+			cab: gadept.cab
+	
 GASILO:
 	Inherits: ^Building
 	Buildable:
@@ -546,6 +601,7 @@ NAPULS:
 	AttackTurreted:
 	Armament:
 		Weapon: EMPulseCannon
+		LocalOffset: 100,0,1000
 	WithSpriteTurret:
 		Sequence: turret
 	Power:

@@ -6,9 +6,10 @@ General:
 	Deployable vehicles are now inmune to mind control.
 	Removed structure damage multiplier.
 	Veteran units are now inmune to mind control.
-	Refinery hp: 1200 -> 1400
-	Harvester Cost: 1400 -> 1100
+	Harvester Cost: 1400 -> 1300
 	Conyards now have a build radius of 16 cells.
+	Warfactories no longer repair vehicles or aircraft.
+	Added the service depot to the game, allows the player to repair many vehicles at once.
 Cabal:
 	Cyborg Commando: Reload Delay: 50 -> 100, Proyectile Type: Missle -> Bullet
 	Cabal Railgun turret: Power Consumption: -70 -> -60
@@ -26,6 +27,11 @@ Forgotten:
 	Removed Forgotten ranger.
 GDI:
 	GDI Vulcan turret: Hp: 500 -> 400
+	Disabled repair turret.
+	Orca Bomber: Spread: 1000 -> 400
+	Grenadier: damage: 40 -> 50
+	Grenadiers have a 5% chance of exploding violently when killed.
+	Vulcan cannons will now shut down on low power.
 Nod:
 	Obelisk: Reload delay: 100 -> 50, range: 10c512 -> 9c0, damage: 250 -> 125
 	Templar damage: 10 -> 15
@@ -37,9 +43,12 @@ Scrin:
 	Ichor waste turret: new warhead -> Flame, Burst: 12 -> 10, Speed: 120 -> 150
 	Refinery hp: 1100 -> 1400
 	Scrin harvester and refinery have the same price as their human counterpart.
+	Stasis field generator now works like an EMP cannon.
+	Added Scrin maintenance depot.
 Bug Fixes:
 	Fixed crash that happened when destroying a mutant or scrin gate.
 	Fixed a bug that made NOD aircraft unable to attack air.
+	Fixed bug that made the power down icon have the wrong palette on some cases.
 Graphical Changes:
 	Changed placement tile graphic due to some troubles related to minelaying.
 	Changed Forgotten Mine sprite.

@@ -862,7 +862,135 @@ gadept.nod:
 		ZOffset: 512
 		BlendMode: Additive
 	icon: sidebar-nod|fixicon
-		Offset: 76, 66
+		Offset: 0,0
+		UseTilesetCode: false
+		
+gadept.mut:
+	Defaults: gtdept
+		Offset: 0, -36
+		UseTilesetCode: true
+	idle:
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	dead:
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	ground: gtdeptbb
+		ShadowStart: 3
+		ZOffset: -1c611
+	damaged-ground: gtdeptbb
+		Start: 1
+		ShadowStart: 4
+		ZOffset: -1c611
+	dead-ground: gtdeptbb
+		Start: 2
+		ShadowStart: 5
+		ZOffset: -1c611
+		Tick: 400
+	idle-light: gtdept_b
+		Length: 7
+		Tick: 120
+	damaged-idle-light: gtdept_b
+		Start: 7
+		Length: 7
+		Tick: 120
+	circuits: gtdept_a
+		Length: 5
+		ZOffset: -1c511
+		Tick: 120
+	damaged-circuits: gtdept_a
+		Start: 5
+		Length: 5
+		ZOffset: -1c511
+		Tick: 120
+	crane: gtdept_c
+		Length: 16
+	platform: gtdept_d
+		Length: 7
+		ZOffset: -1c511
+	damaged-platform: gtdept_d
+		Start: 7
+		Length: 7
+		ZOffset: -1c511
+	make: gtdeptmk
+		Length: 10
+		Tick: 60
+		ShadowStart: 10
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: fixforg
+		Offset: 0,0
+		UseTilesetCode: false
+		
+gadept.cab:
+	Defaults: gtdept
+		Offset: 0, -36
+		UseTilesetCode: true
+	idle:
+		ShadowStart: 3
+	damaged-idle:
+		Start: 1
+		ShadowStart: 4
+	dead:
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	ground: gtdeptbb
+		ShadowStart: 3
+		ZOffset: -1c611
+	damaged-ground: gtdeptbb
+		Start: 1
+		ShadowStart: 4
+		ZOffset: -1c611
+	dead-ground: gtdeptbb
+		Start: 2
+		ShadowStart: 5
+		ZOffset: -1c611
+		Tick: 400
+	idle-light: gtdept_b
+		Length: 7
+		Tick: 120
+	damaged-idle-light: gtdept_b
+		Start: 7
+		Length: 7
+		Tick: 120
+	circuits: gtdept_a
+		Length: 5
+		ZOffset: -1c511
+		Tick: 120
+	damaged-circuits: gtdept_a
+		Start: 5
+		Length: 5
+		ZOffset: -1c511
+		Tick: 120
+	crane: gtdept_c
+		Length: 16
+	platform: gtdept_d
+		Length: 7
+		ZOffset: -1c511
+	damaged-platform: gtdept_d
+		Start: 7
+		Length: 7
+		ZOffset: -1c511
+	make: gtdeptmk
+		Length: 10
+		Tick: 60
+		ShadowStart: 10
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: fixcab
+		Offset: 0,0
 		UseTilesetCode: false
 ##########################################################
 # Infantry
