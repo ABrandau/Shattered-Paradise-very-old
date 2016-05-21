@@ -301,12 +301,12 @@ GACNST:
 	Production:
 		Produces: Building,Defense
 	Valued:
-		Cost: 2500
+		Cost: 1500
 	Tooltip:
 		Name: Construction Yard
 		Description: Builds base structures.
-	CustomSellValue:
-		Value: 2500
+	BaseProvider:
+		Range: 16c0
 	Targetable:
 		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate, MindControlInmune
 	BaseBuilding:

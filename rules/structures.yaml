@@ -1405,7 +1405,7 @@ drached:
 	Production:
 		Produces: Building,Defense
 	Valued:
-		Cost: 2500
+		Cost: 1500
 	Tooltip:
 		Name: Deployed Host Station
 		Description: Builds base structures.
@@ -1420,6 +1420,8 @@ drached:
 		Offset: 1,1
 		Facing: 96
 		DeployCursor: undeploy
+	BaseProvider:
+		Range: 16c0
 	Targetable:
 		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate, MindControlInmune
 	Power:

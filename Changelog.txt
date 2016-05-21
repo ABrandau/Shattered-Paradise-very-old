@@ -8,6 +8,7 @@ General:
 	Veteran units are now inmune to mind control.
 	Refinery hp: 1200 -> 1400
 	Harvester Cost: 1400 -> 1100
+	Conyards now have a build radius of 16 cells.
 Cabal:
 	Cyborg Commando: Reload Delay: 50 -> 100, Proyectile Type: Missle -> Bullet
 	Cabal Railgun turret: Power Consumption: -70 -> -60
