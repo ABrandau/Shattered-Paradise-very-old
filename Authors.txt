@@ -30,6 +30,8 @@ All graphical assets fall into three categories:
 
 If an asset doesn't have credit, then either WW or Nolt made it, let us know if we made any mistakes.
 
+Abc013		: Scrin mission 01
+abcdefg30	: Scrin mission 01
 The_Dementor	: Skirmisher, EMP pulse Icons, Harvester and MCV Cameos (mut and cab), 
 The_Dementor	: cyborg commando icon, Wrench and Tiberium Icons.
 Gangster	: His template.

@@ -94,6 +94,7 @@ Packages:
 
 MapFolders:
 	sp|maps: System
+	sp|maps/missions
 	~^maps/ts/{DEV_VERSION}: User
 	~^maps/sp/{DEV_VERSION}: User
 
