@@ -411,7 +411,6 @@ Proton:
 	Burst: 3
 	ValidTargets: Ground, Vehicle, Building, Infantry, Air
 	BurstDelay: 3
-	ValidTargets: Ground, water, Infantry, Vehicle, Building
 	Projectile: Bullet
 		Speed: 341
 		Blockable: false
@@ -419,10 +418,11 @@ Proton:
 		Inaccuracy: 128
 		Image: TORPEDO
 		RangeLimit: 35
+		ValidTargets: Ground, water, Infantry, Vehicle, Building, Air
 	Warhead@1Dam: SpreadDamage
 		Spread: 250
 		Damage: 50
-		ValidTargets: Ground, water, Infantry, Vehicle, Building
+		ValidTargets: Ground, water, Infantry, Vehicle, Building, Air
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_bang
