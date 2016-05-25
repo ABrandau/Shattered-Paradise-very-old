@@ -362,12 +362,18 @@ BullAcid:
 		Damage: 2
 		ValidTargets: Ground	
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong
-	Warhead@2Smu: LeaveSmudge
+	Warhead@2Eff: CreateEffect
+		Explosions: tibexp2mini
+		ExplosionPalette: apolgreenalpha
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3Smu: LeaveSmudge
 		SmudgeType: SmallScorch
-	Warhead@emp: GrantUpgrade
+	Warhead@4emp: GrantUpgrade
 		Range: 300
 		Duration: 20
 		Upgrades: ForgInfantrydeBuff
+		
 		
 DeathclawBlow:
 	Inherits: ^MeleeWarhead

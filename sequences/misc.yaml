@@ -199,10 +199,14 @@ explosion:
 	ion_ray3: lbolt3
 	ion_ray4: lbolt4
 	tibexp: tibexp
+	tibexp2: tibexp2
+	tibexp2mini: tibexp2mini
 	tib_expsmall: tibexpsmall	
 	#CABAL
 	destroexp: destroexp
 	#Scrin
+	alienpiff3: alienpiff3
+	alienpiff4: alienpiff4
 	scrinpulse2: scrinpulse2
 	scrinpulse3: scrinpulse3
 	firestormexplo: firestormexplo

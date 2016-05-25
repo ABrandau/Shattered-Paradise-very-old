@@ -117,6 +117,11 @@ ScorpAcid:
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, TiberiumDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
+	Warhead@2Eff: CreateEffect
+		Explosions: tibexp2
+		ExplosionPalette: apolredalpha
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
 
 ScrMbtCannon:
 	Inherits: ^APWarhead
@@ -392,6 +397,11 @@ NeedlerAcid:
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, TiberiumDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
+	Warhead@2Eff: CreateEffect
+		Explosions: tibexp2
+		ExplosionPalette: apolredalpha
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
 
 TractorBeam:
 	Inherits: ^FullDamage

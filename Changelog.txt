@@ -1,6 +1,6 @@
 ﻿YEAR - MONTH - DAY
 
-[2016 - xx - xx]
+[2016 - 05 - 24]
 Balance Changes:
 General:
 	Deployable vehicles are now inmune to mind control.
@@ -11,7 +11,7 @@ General:
 	Warfactories no longer repair vehicles or aircraft.
 	Added the service depot to the game, allows the player to repair many vehicles at once.
 Cabal:
-	Cyborg Commando: Reload Delay: 50 -> 100, Proyectile Type: Missle -> Bullet
+	Cyborg Commando: Reload Delay: 50 -> 100, Proyectile Type: Missile -> Bullet
 	Cabal Railgun turret: Power Consumption: -70 -> -60
 	Cabal Blaster: Warhead: Bomb, Reload delay: 200 -> 150, Spread: 512 -> 300, Cost: 1400 -> 1200, range: 9 -> 10
 	Plasma Hive: Warhead: Grenade -> Bomb.
@@ -58,6 +58,7 @@ Graphical Changes:
 	Removed Bullet icons from CABAL Wasp.
 	Reduced CABAL railgun turret line width.
 	Fixed laser turret weapon offset, reduced laser width.
+	Forgotten knights, Scrin Scorpions and Scrin Ichor Waste turrets have now a flame impact animation.
 Other:
 	Corrected IFV tooltip.
 	Corrected Ichor Battery voice set.

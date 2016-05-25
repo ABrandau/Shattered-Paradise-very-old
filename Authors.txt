@@ -6,51 +6,63 @@ WestWood Studios Studios
 	
 OpenRA dev team for their effort in creating openra (no ORA, no SP).
 
-Scipción	: Got Nolt into 3D modelling.
-Penev		: Saved the mod from countless bugs.
-Graion & Astor	: For their help when Nolt began to use this engine.
-FiveAces	: Streaming and testing.
-Xanax		: Gave some support when I was starting.
+Scipción		: Got Nolt into 3D modelling.
+Penev			: Saved the mod from countless bugs.
+Graion Dilach & Astor	: For their help when Nolt began to use this engine.
+FiveAces		: Streaming and testing.
+Xanax			: Gave some support when I was starting.
 
 #Shattered Paradise Team
 
-Nolt: Founder, design, scripting, models.
+Nolt: Founder, Mod design, Balance and Mainentance, Sprite work.
 SchismNavigator	: Lore, design and AI.
 4XS: Concept art.
 BuhDan: Sound design.
-Alex06: Graphics and maps.
+Alex06: Testing.
 
+#Images and Others.
 
-#Assets
+Nolt		: CABAL, Scrin and Mutant UI, skirmish faction logos.
+Scipción	: Shattered Paradise planet logo.
+Alex06		: Dev Blog image.
 
-All graphical assets fall into three categories:
-1) Westwood made
-2) Nolt made
-3) C&C Community made
+If an asset doesn't have credit, then either it was made by WW or we missed it, let us know if we made any mistakes.
 
-If an asset doesn't have credit, then either WW or Nolt made it, let us know if we made any mistakes.
+#Game Art
 
-Abc013		: Scrin mission 01
-abcdefg30	: Scrin mission 01
-The_Dementor	: Skirmisher, EMP pulse Icons, Harvester and MCV Cameos (mut and cab), 
-The_Dementor	: cyborg commando icon, Wrench and Tiberium Icons.
+Nolt: The following exclude the shared units (Harvester, MCV, conyards, etc).
+	GDI	: Grenadier, Eagle Guard sprites and cameo.
+	NOD	: Crusader and templar sprites and cameo.
+ 	Scrin	: Every unit, cameo and structure except the tripod and shapeshifter.
+	CABAL	: Every unit, cameo and structure except the cyborg, cyborg reaper, Cyborg Commando,
+		  Seeker, Grinder and Bassilisk.
+	Forgotten: Every unit, cameo and structure except the Rocket trooper, Mechanic,
+		  Tiberian Fiend, IFV, Leonid Tank, MRLS, Quad Cannon, Gargoyle and Falcon.
+
+The_Dementor	: Cameos: Skirmisher, EMP pulse Icons, Harvester and MCV (mut and cab), 
+The_Dementor	: cyborg commando cameo, Wrench and Tiberium Icons.
 Gangster	: His template.
 Zoidzilla	: His template.	
-Scipción	: Shattered Paradise planet logo.
 Zero18		: Gargoil vxl,	Quad Cannon vxl, Basilisk vxl,	Leonid tank vxl.	
 CalChillin	: Ion Storm SHPS				
 ApolloTD	: Gradient Colored Palettes.				
 Moder.U		: Falcon vxl, Battle Fortress vxl, Beam Cannon vxl.
 Super Joe	: Marine shp, Militant shp.			
-Lin Kuei Ominae	: Seeker shp, Tripod shp.
+Lin Kuei Ominae	: Seeker shp, Tripod shp (Unit and Cameo).
 wirecase.com	: Guardian Platform model.				
-Hassan_2030	: Grinder vxl.		
-Marn:		: Maps: Riverside, The Pit, Islotropolis, Sidestep TS.		
+Hassan_2030	: Grinder vxl.
 Jah		: Storm Rider vxl.				
 Sane Disruption	: Forgotten MRLS vxl.				
 GameMaster0000	: Tiberian Fiend Icon.
 CyborgCommandoKerem: Black Hand Sniper shp.				
-DonutArnold	: Basilisk torpedo explosion effect, scrin structure and aircraft crash explosion effects.
+DonutArnold	: Basilisk torpedo explosion effect, scrin structure and aircraft crash explosion
+		  effects.
+
+#Maps
+
+Abc013		: Scrin mission 01
+abcdefg30	: Scrin mission 01
+Marn:		: Maps: Riverside, The Pit, Islotropolis, Sidestep TS.	
 
 #Voice Cast
 
