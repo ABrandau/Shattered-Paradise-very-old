@@ -1,5 +1,9 @@
 ﻿YEAR - MONTH - DAY
 
+[2016 - xx - xx]
+Graphical Changes:
+	Corrected some scrin weapons graphics.
+
 [2016 - 05 - 24]
 Balance Changes:
 General:

@@ -1176,10 +1176,10 @@ TRIPOD:
 	AutoTarget:
 	Armament:
 		Weapon: TripodLaser
-		LocalOffset: 100,200,2700
+		LocalOffset: 100,200,2500
 	Armament@2:
 		Weapon: TripodLaser
-		LocalOffset: 100,-200,2700
+		LocalOffset: 100,-200,2500
 	WithInfantryBody:
 		AttackSequence: shoot
 	QuantizeFacingsFromSequence:

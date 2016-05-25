@@ -711,7 +711,7 @@ LEGIO:
 		Speed: 60
 	Armament:
 		Weapon: LegioNeedler
-		LocalOffset: 500,250,800
+		LocalOffset: 350,250,800
 		FireDelay: 5
 	AttackFrontal:
 		Voice: Attack
