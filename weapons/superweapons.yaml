@@ -78,7 +78,9 @@ IonCannon:
 EMPulseCannon:
 	ReloadDelay: 300
 	Range: 10c0
+	MinRange: 3c0
 	Report: PLSECAN2.AUD
+	ValidTargets: Vehicle, Building
 	Projectile: Bullet
 		Speed: 425
 		Blockable: false
@@ -89,7 +91,8 @@ EMPulseCannon:
 		Explosions: pulse_explosion
 	Warhead@emp: GrantUpgrade
 		Range: 3c0
-		Duration: 200
+		Duration: 100
+		ValidTargets: Vehicle, Building
 		Upgrades: empdisable, notmobile
 
 ClusterMissile:
