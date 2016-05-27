@@ -107,6 +107,7 @@ Rules:
 	sp|rules/defaults.yaml
 	sp|rules/trees.yaml
 	sp|rules/infantry.yaml
+	sp|rules/dummies.yaml
 	sp|rules/vehicles.yaml
 	sp|rules/aircraft.yaml
 	sp|rules/structures.yaml

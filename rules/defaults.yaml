@@ -869,6 +869,8 @@
 		LandWhenIdle: no
 		Voice: Move
 		AltitudeVelocity: 250
+	Passenger:
+		CargoType: Aircraft
 	Voiced:
 		VoiceSet: Heli
 	HiddenUnderFog:
@@ -885,9 +887,6 @@
 	MustBeDestroyed:
 	RenderVoxels:
 	WithVoxelBody:
-	# AmmoPool:
-		# SelfReloads: true
-		# SelfReloadDelay: 3000
 
 ^Helicopter:
 	Inherits: ^Aircraft
@@ -1061,7 +1060,6 @@
 		PowerdownSpeech: DisablePower
 	AutoTarget:
 	RenderRangeCircle:
-	Targetable:
 	Targetable:
 		TargetTypes: Building, Ground, C4, DetonateAttack, Defence
 	RenderDetectionCircle:

@@ -572,6 +572,19 @@ WETP:
 	SpawnActorOnDeath:
 		Actor: WETP.Husk
 
+WETPSW:
+	Inherits: WETP
+	-Buildable:
+	-Selectable:
+	Cargo:
+		MaxWeight: 10
+		Types: Infantry, Vehicle, Aircraft
+	ParaDrop:
+	-RevealsShroud:
+	-Targetable@GROUND:
+	-Targetable@AIRBORNE:
+	RenderVoxels:
+		Image: wetp
 ##########################################################
 # Scrin
 ##########################################################

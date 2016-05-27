@@ -412,13 +412,14 @@ icon:
 	clustermissile: mltiicon
 	ioncannon: ioncicon
 	hunterseeker: detnicon
-	ScrStasis: scrshieldicon	
-
+	ScrStasis: scrshieldicon
+	
 clustermissile:
-	up: null # TODO
-		Length: *
-	down: null # TODO
-		Length: *
+	up: atnuke
+		ZOffset: 1023
+	down: atnuke
+		Start: 1
+		ZOffset: 1023	
 ionbeam:
 	idle:
 		Length: *

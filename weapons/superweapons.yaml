@@ -177,3 +177,28 @@ ClusterMissile:
 		SmudgeType: SmallScorch
 		Size: 5
 		Delay: 20
+
+IonRay:
+	Inherits: ^FullDamage
+	ReloadDelay: 15
+	Range: 12c0
+	Inaccuracy: 30c0
+	Burst: 4
+	Projectile: Bullet
+		Speed: 100c0
+		Inaccuracy: 30c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 200
+		Damage: 100
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: large_explosion
+		ImpactSound: expnew09.aud
+	Warhead@3Eff: CreateEffect
+		Explosions: ion_ray1, ion_ray2, ion_ray3, ion_ray4
+		ImpactSound: expnew09.aud
+	Warhead@3EffWater: CreateEffect
+		Explosions: large_explosion
+		ImpactSound: expnew09.aud
+	Warhead@4: LeaveSmudge
+		SmudgeType: SmallCrater	

@@ -1184,8 +1184,10 @@ apache:
 ##########################################################		
 		
 blackhanddummy:
+	Inherits: ^EmpOverlay
 	idle: dot
 	stand: dot
+	icon: apchicon
 
 fire:
 	idle: dot

@@ -709,11 +709,11 @@ GAARTY:
 
 NAMISL:
 	Inherits: ^Building
-	# Buildable:
-		# Queue: Defense
-		# BuildPaletteOrder: 100
-		# Prerequisites: natech, ~structures.nod
-		# BuildLimit: 1
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 100
+		Prerequisites: natech, ~structures.nod, ~sw
+		BuildLimit: 1
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -758,9 +758,11 @@ NAMISL:
 		LaunchSound: icbm1.aud
 		MissileWeapon: ClusterMissile
 		SpawnOffset: 0,427,0
-		DisplayTimer: False
-		DisplayBeacon: False
+		DisplayTimer: True
+		DisplayBeacon: True
 		DisplayRadarPing: True
+		MissilePalette: player
+		IsPlayerPalette: True
 		BeaconPoster:
 		CameraActor: camera
 	SelectionDecorations:

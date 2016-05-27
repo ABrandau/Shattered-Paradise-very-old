@@ -1,0 +1,141 @@
+DUMMYPLANE:
+	Inherits: WETP
+	-Buildable:
+	-Selectable:
+	Cargo:
+		MaxWeight: 10
+		Types: Infantry, Vehicle, Aircraft
+	Aircraft:
+		Speed: 999
+	ParaDrop:
+	-RevealsShroud:
+	-Targetable@GROUND:
+	-Targetable@AIRBORNE:
+	-RenderVoxels:
+
+IONSTORMSPAWNER:
+	Inherits: ^BasicBuilding
+	Targetable:
+		TargetTypes:
+	-WithSpriteBody:
+	-WithBuildingExplosion:
+	-ShakeOnDeath:
+	-UpdatesPlayerStatistics:
+	-SoundOnDamageTransition:
+	-AutoSelectionSize
+	-SelectionDecorations:
+	Selectable:
+		Bounds: 1,1
+	SelfHealing:
+		Step: -10
+		HealIfBelow: 200
+	RenderSprites:
+		Image: blackhanddummy
+	SpawnActorOnDeath@cabalcrate:
+		Actor: IONSTORMGENERATOR
+		Probability: 100
+		OwnerType: Victim
+		# DeathType: CabalDeathCrate
+		RequiresLobbyCreeps: true
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+
+	
+IONSTORMGENERATOR:
+	Inherits: ^BasicBuilding
+	-Targetable:
+	-WithSpriteBody:
+	-WithBuildingExplosion:
+	-ShakeOnDeath:
+	-UpdatesPlayerStatistics:
+	-SoundOnDamageTransition:
+	-AutoSelectionSize
+	-SelectionDecorations:
+	Selectable:
+		Bounds: 1,1
+	SelfHealing:
+		Step: -1
+		Delay: 25
+		HealIfBelow: 200
+	RenderSprites:
+		Image: blackhanddummy
+	Health:
+		HP: 20
+		NotifyAppliedDamage: False
+	AttackOmni:
+		IngoresVisibility: True
+	Armament:
+		Weapon: IonRay
+		TargetStances: Ally, Enemy, Neutral
+	AutoTarget:
+
+CABALMONEYDUMMY:
+	Inherits: ^BasicBuilding
+	Targetable:
+		TargetTypes:
+	-WithSpriteBody:
+	-WithBuildingExplosion:
+	-ShakeOnDeath:
+	-UpdatesPlayerStatistics:
+	-SoundOnDamageTransition:
+	AutoSelectionSize:
+	Selectable:
+		Bounds: 1,1
+	SelfHealing:
+		Step: -10
+		HealIfBelow: 200
+	RenderSprites:
+		Image: blackhanddummy
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+	CashTrickler:
+		Amount: 10
+		Period: 999
+
+CABALMONEYDUMMY1:
+	Inherits: ^BasicBuilding
+	Targetable:
+		TargetTypes:
+	-WithSpriteBody:
+	-WithBuildingExplosion:
+	-ShakeOnDeath:
+	-SoundOnDamageTransition:
+	AutoSelectionSize:
+	-UpdatesPlayerStatistics:
+	Selectable:
+		Bounds: 1,1
+	SelfHealing:
+		Step: -5
+		HealIfBelow: 110
+	RenderSprites:
+		Image: blackhanddummy
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+	CashTrickler:
+		Amount: 250
+		Period: 999
+		
+BLACKHANDDUMMY:
+	Inherits: ^BasicBuilding
+	Targetable:
+		TargetTypes:
+	-WithSpriteBody:
+	-WithBuildingExplosion:
+	-ShakeOnDeath:
+	AutoSelectionSize:
+	-UpdatesPlayerStatistics:
+	Selectable:
+		Bounds: 1,1
+	SelfHealing:
+		Step: -10
+		HealIfBelow: 200
+	RenderSprites:
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
