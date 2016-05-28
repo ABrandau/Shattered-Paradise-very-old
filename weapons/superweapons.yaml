@@ -183,13 +183,13 @@ IonRay:
 	ReloadDelay: 15
 	Range: 12c0
 	Inaccuracy: 30c0
-	Burst: 4
+	Burst: 6
 	Projectile: Bullet
 		Speed: 100c0
 		Inaccuracy: 30c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 200
-		Damage: 100
+		Damage: 300
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_explosion
