@@ -192,6 +192,11 @@ explosion:
 	fire2: fire2
 	fire3: fire3
 	fire4: fire4
+	#Nod
+	smokebomb1: smokebomb1
+	smokebomb2: smokebomb2
+	smokebomb3: smokebomb3
+	smokebomb4: smokebomb4
 	#Mutants
 	ion_ray: lbolt1
 	ion_ray1: lbolt1

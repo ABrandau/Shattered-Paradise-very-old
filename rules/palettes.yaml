@@ -113,6 +113,10 @@
 #########################
 # Nolt was here
 #########################
+	PaletteFromPaletteWithAlpha@effectalpha:
+		Name: effectalpha
+		BasePalette: effect
+		Alpha: 0.8
 	PaletteFromFile@chromescrin:
 		Name: chromescrin
 		Filename: cameoscrin.pal

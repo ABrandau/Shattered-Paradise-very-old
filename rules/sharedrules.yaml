@@ -354,7 +354,7 @@ GACNST:
 		# Actor: ionstormspawner
 		# Icon: hunterseeker
 		# Description: Ion Storm
-		# LongDesc: Summons an Ion Storm on the targetted area\nthe lightning rays will strike the nearest target\nwill not fire if there no targets are\n nearby. Lasts 20 seconds. 
+		# LongDesc: Summons an Ion Storm on the targetted area\nthe lightning rays will strike the nearest target\nwill not fire if there no targets are nearby.\nLasts 20 seconds. 
 
 PROC:
 	Inherits: ^Building
