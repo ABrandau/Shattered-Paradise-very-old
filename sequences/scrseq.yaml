@@ -884,7 +884,7 @@ scrradr:
 
 scrdepot:
 	Defaults:
-		Offset: 0, -24
+		Offset: 0, -36
 		UseTilesetCode: true
 	idle:
 		Start: 29

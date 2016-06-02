@@ -737,6 +737,9 @@ mupowr:
 	make:
 		Length: 35
 		ShadowStart: 57
+	light: ulpha
+		# BlendMode: Multiply
+		UseTilesetCode: false
 	emp-overlay: emp_fx01
 		Length: *
 		Offset: 0, 0

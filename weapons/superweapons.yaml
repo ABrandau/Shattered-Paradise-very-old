@@ -199,6 +199,7 @@ IonRay:
 		ImpactSound: expnew09.aud
 	Warhead@3EffWater: CreateEffect
 		Explosions: large_explosion
+		# Delay: 1000
 		ImpactSound: expnew09.aud
 	Warhead@4: LeaveSmudge
 		SmudgeType: SmallCrater	

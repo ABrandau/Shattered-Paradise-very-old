@@ -1610,8 +1610,8 @@ SCRDEPOT:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
 	Building:
-		Footprint: xxx xxx
-		Dimensions: 3,2
+		Footprint: _x_ xxx _x_
+		Dimensions: 3,3
 	Selectable:
 		Bounds: 110, 60, 3, -4
 	Health:

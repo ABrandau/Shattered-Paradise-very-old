@@ -198,11 +198,14 @@ explosion:
 	smokebomb3: smokebomb3
 	smokebomb4: smokebomb4
 	#Mutants
-	ion_ray: lbolt1
 	ion_ray1: lbolt1
+		Tick: 45
 	ion_ray2: lbolt2
+		Tick: 45
 	ion_ray3: lbolt3
+		Tick: 45
 	ion_ray4: lbolt4
+		Tick: 45
 	tibexp: tibexp
 	tibexp2: tibexp2
 	tibexp2mini: tibexp2mini
