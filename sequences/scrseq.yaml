@@ -1136,4 +1136,33 @@ scrshield:
 		BlendMode: Additive
 	icon: scrshieldicon
 		Offset: 0, 0
-		UseTilesetCode: false			
+		UseTilesetCode: false
+
+scrsw1:
+	Defaults:
+		Offset: -6, -30
+		UseTilesetCode: true
+	idle:
+		Start: 30
+		Length: 9
+		ShadowStart: 82
+	damaged-idle:
+		Start: 41
+		Length: 9
+		ShadowStart: 93
+	dead:
+		Start: 41
+		ShadowStart: 93
+		Tick: 400
+	make:
+		Length: 29
+		ShadowStart: 52
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: scrsw1icon
+		Offset: 0, 0
+		UseTilesetCode: false	

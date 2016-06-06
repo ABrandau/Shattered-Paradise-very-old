@@ -987,6 +987,9 @@
 		Footprint: x
 		Dimensions: 1,1
 	AppearsOnRadar:
+	WithIdleOverlay:
+		Sequence: light
+		Palette: tibtreepal
 	RadarColorFromTerrain:
 		Terrain: Tiberium
 	FrozenUnderFog:

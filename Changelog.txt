@@ -1,8 +1,13 @@
 ﻿YEAR - MONTH - DAY
 
 [2016 - xx - xx]
+Balance Changes:
+General:
+	Enabled Basic superweapon structures for all sides.
 Graphical Changes:
 	Corrected some scrin weapons graphics.
+	Tiberium trees now have a small green glow.
+
 
 [2016 - 05 - 24]
 Balance Changes:

@@ -144,7 +144,7 @@
 	PaletteFromPaletteWithAlpha@tibtree:
 		Name: tibtreepal
 		BasePalette: apgreen
-		Alpha: 0.2
+		Alpha: 0.17
 	PaletteFromPaletteWithAlpha@apolgreenalpha:
 		Name: apolgreenalpha
 		BasePalette: apgreen

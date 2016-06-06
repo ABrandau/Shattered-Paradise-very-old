@@ -4,6 +4,9 @@ tibtre01:
 		Offset: 0, -12
 	idle:
 		ShadowStart: 11
+	light: ulpha
+		UseTilesetExtension: false
+		BlendMode: Additive
 	active:
 		Start: 1
 		Length: 10
@@ -16,6 +19,9 @@ tibtre02:
 		Offset: 0, -12
 	idle:
 		ShadowStart: 11
+	light: ulpha
+		UseTilesetExtension: false
+		BlendMode: Additive
 	active:
 		Start: 1
 		Length: 10
@@ -28,6 +34,9 @@ tibtre03:
 		Offset: 0, -12
 	idle:
 		ShadowStart: 11
+	light: ulpha
+		UseTilesetExtension: false
+		BlendMode: Additive
 	active:
 		Start: 1
 		Length: 10

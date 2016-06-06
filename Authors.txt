@@ -1,3 +1,5 @@
+Shattered Paradise, a mod for OpenRA made by Alfredo Brandau (Nolt).
+
 #Special Thanks
 
 A warm thank you to the following folks.
@@ -7,18 +9,11 @@ WestWood Studios Studios
 OpenRA dev team for their effort in creating openra (no ORA, no SP).
 
 Scipción		: Got Nolt into 3D modelling.
-Penev			: Saved the mod from countless bugs.
+Penev & abcdefg30	: Saved the mod from countless bugs.
 Graion Dilach & Astor	: For their help when Nolt began to use this engine.
 FiveAces		: Streaming and testing.
-Xanax			: Gave some support when I was starting.
-
-#Shattered Paradise Team
-
-Nolt: Founder, Mod design, Balance and Mainentance, Sprite work.
-SchismNavigator	: Lore, design and AI.
-4XS: Concept art.
-BuhDan: Sound design.
-Alex06: Testing.
+SchismNavigator		: Worked on SP for some time.
+4XS			: For his help with concept art.
 
 #Images and Others.
 
