@@ -327,7 +327,7 @@ WolfAcid:
 	ValidTargets: Ground
 	Projectile: Bullet
 		Speed: 100
-		Image: acidall32mini
+		Image: acidall32mini #flamebro 
 		Inaccuracy: 384
 		Palette: apolgreenalpha
 	Burst: 5

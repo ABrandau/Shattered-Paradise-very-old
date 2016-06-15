@@ -130,6 +130,13 @@
 	PaletteFromFile@apred:
 		Name: apred
 		Filename: apolred.pal
+	PaletteFromFile@apcyan:
+		Name: apcyan
+		Filename: apolcyan.pal
+	PaletteFromPaletteWithAlpha@apolcyanalpha:
+		Name: apolcyanalpha
+		BasePalette: apcyan
+		Alpha: 0.8
 	PaletteFromPaletteWithAlpha@apolbluealpha:
 		Name: apolbluealpha
 		BasePalette: apblue
@@ -141,10 +148,6 @@
 	PaletteFromFile@apgreen:
 		Name: apgreen
 		Filename: apolgren.pal
-	PaletteFromPaletteWithAlpha@tibtree:
-		Name: tibtreepal
-		BasePalette: apgreen
-		Alpha: 0.17
 	PaletteFromPaletteWithAlpha@apolgreenalpha:
 		Name: apolgreenalpha
 		BasePalette: apgreen
@@ -156,16 +159,14 @@
 		Name: apolgreyalpha
 		BasePalette: apgrey
 		Alpha: 0.8
-	PaletteFromFile@tibtreegreen:
-		Name: tibtrealpha
-		Filename: greenalpha.pal
-	PaletteFromFile@tibtreegreen:
-		Name: tibtree
-		Filename: greenalpha2.pal
-	PaletteFromPaletteWithAlpha@tibtreegreenalpha:
-		Name: tibtreealpha
-		BasePalette: tibtree
-		Alpha: 0.2
+	PaletteFromPaletteWithAlpha@tibtree:
+		Name: tibtreepal
+		BasePalette: apgreen
+		Alpha: 0.17
+	PaletteFromPaletteWithAlpha@tibcrystal:
+		Name: tibcrystalpal
+		BasePalette: apblue
+		Alpha: 0.17
 	VoxelNormalsPalette@ra2normals:
 		Name: ra2normals
 		Type: RedAlert2

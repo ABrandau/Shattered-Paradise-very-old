@@ -72,6 +72,11 @@ rank:
 	rank: pips
 		Start: 7
 		Length: 2
+		
+meteor:
+	idle:
+		Length: 8
+		Facings: 8
 
 tibicon:
 	idle: tibicon
@@ -212,6 +217,7 @@ explosion:
 	tib_expsmall: tibexpsmall	
 	#CABAL
 	destroexp: destroexp
+	cabexplo: cabexplo
 	#Scrin
 	alienpiff3: alienpiff3
 	alienpiff4: alienpiff4
@@ -291,6 +297,20 @@ small_smoke_trail:
 	idle: smokey2
 		Length: *
 		ZOffset: 1023
+
+cabswproj:
+	idle:
+		Offset: 0,6
+		Length: *
+		ZOffset: 1023
+		BlendMode: Additive
+
+cabswproj2:
+	idle:
+		Offset: 0,6
+		Length: *
+		ZOffset: 1023
+		BlendMode: Additive		
 
 largefire:
 	idle: fire1
@@ -419,9 +439,11 @@ largecraters:
 icon:
 	clustermissile: mltiicon
 	ioncannon: ioncicon
+	meteor: metricon
 	ionstorm: ionstormicon
 	hunterseeker: detnicon
 	ScrStasis: scrshieldicon
+	mothershipicon: mothershipicon
 	
 clustermissile:
 	up: atnuke
@@ -682,6 +704,12 @@ acidall32mini:
 		Length: 15
 		Facings: -32
 		Tick: 160		
+
+flamebro:
+	idle:
+		Length: 17
+		Facings: 8
+		# Tick: 160
 		
 litning:
 	bright:
@@ -704,13 +732,13 @@ blueballmini:
 	idle:
 		Facings: 1
 		Length: 5
-		ZOffset: 1023	
+		ZOffset: 1023
 
 blueballminitrail:
 	idle:
 		Facings: 1
 		Length: *
-		ZOffset: 1023	
+		ZOffset: 1023
 
 projwyverm:
 	idle:

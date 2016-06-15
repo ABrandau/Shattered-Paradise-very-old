@@ -95,6 +95,73 @@ EMPulseCannon:
 		ValidTargets: Vehicle, Building
 		Upgrades: empdisable, notmobile
 
+MeteorRain:
+	Inherits: ^BombWarhead
+	ReloadDelay: 1
+	# Range: 1c0
+	Range: 3c0
+	ValidTargets: Ground, Vehicle, Building, Infantry, Water
+	Inaccuracy: 1c0
+	Projectile: Bullet
+		Speed: 200
+		Image: meteor
+		Palette: apgreen
+		Shadow: true
+		Inaccuracy: 1c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 650
+		Damage: 200
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		ValidTargets: Ground, Vehicle, Building, Infantry, Water
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: SmallCrater
+	Warhead@3Eff: CreateEffect
+		Explosions: small_clsn
+		ImpactSounds: expnew12.aud
+	Warhead@4resource: CreateResource
+		AddsResourceType: Tiberium
+		Size: 1,1
+
+CabalCannon:
+	Inherits: ^RifleWarhead
+	ReloadDelay: 1200
+	Range: 999c0
+	Burst: 3
+	BurstDelay: 25
+	Inaccuracy: 100c0
+	Report: MISL1.AUD
+	ValidTargets: cabalcannon
+	Projectile: Bullet
+		Speed: 300
+		Inaccuracy: 100c0
+		Image: cabswproj
+		Angle: 90
+		Shadow: true
+		Palette: apcyan
+		ContrailLength: 10
+		ContrailColor: 00ffff
+		# TrailImage: cabswproj2
+		TrailPalette: apolcyanalpha
+	Warhead@1Dam: SpreadDamage
+		Spread: 1000
+		Damage: 250
+		ValidTargets: Ground, cabalcannon
+		Versus:
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: cabexplo
+		ExplosionPalette: apolcyanalpha
+		ImpactSound: expnew09.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSound: ssplash2.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+
 ClusterMissile:
 	ValidTargets: Ground, Water, Air
 	Warhead@ImpactDamage0: SpreadDamage

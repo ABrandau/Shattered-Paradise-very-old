@@ -48,6 +48,9 @@ bigblue:
 		Offset: 0, -12
 	idle: bigblue2
 		ShadowStart: 10
+	light: ulpha
+		UseTilesetExtension: false
+		BlendMode: Additive
 	active: bigblue2
 		Start: 1
 		Length: 9
