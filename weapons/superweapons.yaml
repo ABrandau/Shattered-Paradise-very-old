@@ -51,30 +51,7 @@ SuicideBomb:
 			Concrete: 50
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@2Res: DestroyResource
-
-IonCannon:
-	ValidTargets: Ground, Air
-	Warhead@1Dam_impact: SpreadDamage
-		Spread: 1c0
-		Damage: 100
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		ValidTargets: Ground, Air
-		DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
-	Warhead@2Eff_impact: CreateEffect
-		Explosions: ionring
-		ImpactSound: ion1.aud
-	Warhead@3Dam_area: SpreadDamage
-		Spread: 1c0
-		Damage: 250
-		Falloff: 100, 50, 25, 0
-		Delay: 3
-		ValidTargets: Ground, Air
-		DamageTypes: Prone50Percent, TriggerProne, EnergyDeath
-	Warhead@4Smu_area: LeaveSmudge
-		SmudgeType: SmallScorch
-		Size: 2,1
-		Delay: 3
-
+	
 EMPulseCannon:
 	ReloadDelay: 300
 	Range: 10c0
@@ -95,11 +72,90 @@ EMPulseCannon:
 		ValidTargets: Vehicle, Building
 		Upgrades: empdisable, notmobile
 
+IonCannon:
+	ValidTargets: Ground, Air
+	Warhead@1Dam_impact: SpreadDamage
+		Spread: 1c0
+		Damage: 100
+		Falloff: 500, 368, 135, 50, 18, 7, 0
+		ValidTargets: Ground, Air
+		DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
+	Warhead@2Eff_impact: CreateEffect
+		Explosions: ionring
+		ImpactSound: ion1.aud
+	Warhead@3Dam_area: SpreadDamage
+		Spread: 1c0
+		Damage: 200
+		Falloff: 100, 50, 25, 0
+		ValidTargets: Ground, Air
+		DamageTypes: Prone50Percent, TriggerProne, EnergyDeath
+	Warhead@4Smu_area: LeaveSmudge
+		SmudgeType: SmallScorch
+		Size: 2,1
+		# Delay: 3
+
+ClusterMissile:
+	ValidTargets: Ground, Water, Air
+	Warhead@ImpactDamage0: SpreadDamage
+		Spread: 1c0
+		Damage: 125
+		Falloff: 500, 368, 135, 50, 18, 7, 0
+		ValidTargets: Ground, Water, Air
+		Versus:
+			Concrete: 25
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+	Warhead@ClusterDamage3: SpreadDamage
+		Spread: 4c0
+		Damage: 50
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Delay: 15
+		ValidTargets: Ground, Water, Air
+		Versus:
+			Concrete: 25
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+	Warhead@SoundEffect0: CreateEffect
+		Explosions: large_explosion
+		ImpactSound: expnew19.aud
+	Warhead@ResourceDestruction0: DestroyResource
+		Size: 1
+	Warhead@ClusterSmudges0: LeaveSmudge
+		SmudgeType: LargeCrater
+		Size: 1
+	Warhead@ResourceDestruction1: DestroyResource
+		Size: 2
+		Delay: 5
+	Warhead@ClusterSmudges1: LeaveSmudge
+		SmudgeType: LargeScorch
+		Size: 2
+		Delay: 5
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+	Warhead@ResourceDestruction2: DestroyResource
+		Size: 3
+		Delay: 10
+	Warhead@ClusterSmudges2: LeaveSmudge
+		SmudgeType: LargeScorch
+		Size: 3
+		Delay: 10
+	Warhead@ResourceDestruction3: DestroyResource
+		Size: 4
+		Delay: 15
+	Warhead@ClusterSmudges3: LeaveSmudge
+		SmudgeType: MediumScorch
+		Size: 4
+		Delay: 15
+	Warhead@ResourceDestruction4: DestroyResource
+		Size: 5
+		Delay: 20
+	Warhead@ClusterSmudges4: LeaveSmudge
+		SmudgeType: SmallScorch
+		Size: 5
+		Delay: 20
+
 MeteorRain:
 	Inherits: ^BombWarhead
-	ReloadDelay: 1
+	ReloadDelay: 8
 	# Range: 1c0
-	Range: 3c0
+	Range: 2c0
 	ValidTargets: Ground, Vehicle, Building, Infantry, Water
 	Inaccuracy: 1c0
 	Projectile: Bullet
@@ -108,10 +164,12 @@ MeteorRain:
 		Palette: apgreen
 		Shadow: true
 		Inaccuracy: 1c0
+		ContrailLength: 10
+		ContrailColor: 228B22
 	Warhead@1Dam: SpreadDamage
 		Spread: 650
-		Damage: 200
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Damage: 20
+		Falloff: 1000, 500, 250, 125, 75, 50, 25, 12, 0
 		ValidTargets: Ground, Vehicle, Building, Infantry, Water
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
@@ -124,8 +182,8 @@ MeteorRain:
 		Size: 1,1
 
 CabalCannon:
-	Inherits: ^RifleWarhead
-	ReloadDelay: 1200
+	Inherits: ^FullDamage
+	ReloadDelay: 400
 	Range: 999c0
 	Burst: 3
 	BurstDelay: 25
@@ -145,7 +203,7 @@ CabalCannon:
 		TrailPalette: apolcyanalpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 1000
-		Damage: 250
+		Damage: 300
 		ValidTargets: Ground, cabalcannon
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
@@ -162,111 +220,30 @@ CabalCannon:
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
 
-ClusterMissile:
-	ValidTargets: Ground, Water, Air
-	Warhead@ImpactDamage0: SpreadDamage
-		Spread: 1c0
-		Damage: 150
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		ValidTargets: Ground, Water, Air
-		Versus:
-			Concrete: 25
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath
-	Warhead@SoundEffect0: CreateEffect
-		Explosions: large_explosion
-		ImpactSound: expnew19.aud
-	Warhead@ResourceDestruction0: DestroyResource
-		Size: 1
-	Warhead@ClusterSmudges0: LeaveSmudge
-		SmudgeType: LargeCrater
-		Size: 1
-	Warhead@ClusterDamage1: SpreadDamage
-		Spread: 2c0
-		Damage: 60
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 5
-		ValidTargets: Ground, Water, Air
-		Versus:
-			Concrete: 25
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath
-	Warhead@ResourceDestruction1: DestroyResource
-		Size: 2
-		Delay: 5
-	Warhead@ClusterSmudges1: LeaveSmudge
-		SmudgeType: LargeScorch
-		Size: 2
-		Delay: 5
-	Warhead@ClusterDamage2: SpreadDamage
-		Spread: 3c0
-		Damage: 60
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 10
-		ValidTargets: Ground, Water, Air
-		Versus:
-			Concrete: 25
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath
-	Warhead@ResourceDestruction2: DestroyResource
-		Size: 3
-		Delay: 10
-	Warhead@ClusterSmudges2: LeaveSmudge
-		SmudgeType: LargeScorch
-		Size: 3
-		Delay: 10
-	Warhead@ClusterDamage3: SpreadDamage
-		Spread: 4c0
-		Damage: 60
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 15
-		ValidTargets: Ground, Water, Air
-		Versus:
-			Concrete: 25
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath
-	Warhead@ResourceDestruction3: DestroyResource
-		Size: 4
-		Delay: 15
-	Warhead@ClusterSmudges3: LeaveSmudge
-		SmudgeType: MediumScorch
-		Size: 4
-		Delay: 15
-	Warhead@ClusterDamage4: SpreadDamage
-		Spread: 5c0
-		Damage: 60
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 20
-		ValidTargets: Ground, Water, Air
-		Versus:
-			Concrete: 25
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath
-	Warhead@ResourceDestruction4: DestroyResource
-		Size: 5
-		Delay: 20
-	Warhead@ClusterSmudges4: LeaveSmudge
-		SmudgeType: SmallScorch
-		Size: 5
-		Delay: 20
-
 IonRay:
 	Inherits: ^FullDamage
-	ReloadDelay: 15
+	ReloadDelay: 6
 	Range: 12c0
 	Inaccuracy: 30c0
-	Burst: 6
 	Projectile: Bullet
 		Speed: 100c0
 		Inaccuracy: 30c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 200
-		Damage: 300
+		Damage: 200
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+		Delay: 5
 	Warhead@2Eff: CreateEffect
 		Explosions: large_explosion
 		ImpactSound: expnew09.aud
+		Delay: 5
 	Warhead@3Eff: CreateEffect
 		Explosions: ion_ray1, ion_ray2, ion_ray3, ion_ray4
 		ImpactSound: expnew09.aud
 	Warhead@3EffWater: CreateEffect
 		Explosions: large_explosion
-		# Delay: 1000
+		Delay: 5
 		ImpactSound: expnew09.aud
 	Warhead@4: LeaveSmudge
-		SmudgeType: SmallCrater	
+		SmudgeType: SmallCrater
+		Delay: 5

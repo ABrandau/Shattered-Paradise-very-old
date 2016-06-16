@@ -715,7 +715,7 @@ NAMISL:
 		Prerequisites: natech, ~structures.nod, ~sw
 		BuildLimit: 1
 	Valued:
-		Cost: 1300
+		Cost: 2000
 	Tooltip:
 		Name: Nod Missile Silo
 		Description: Launches a devastating missile\nat a target location.\nRequires power to operate.
@@ -926,7 +926,7 @@ MUTSW1:
 		BuildPaletteOrder: 90
 		Prerequisites: tech, ~structures.mut
 	Valued:
-		Cost: 300
+		Cost: 2000
 	Tooltip:
 		Name: Meditation Hall
 		Description: Allows the player to generate Ion Storms.
@@ -945,10 +945,11 @@ MUTSW1:
 		Amount: -100
 	SelectionDecorations:
 		VisualBounds: 116, 78, 3, -8
-	SpawnActorPower:
+	SpawnActorPower@ionstorm:
 		Actor: ionstormspawner
 		Icon: ionstorm
-		ChargeTime: 210
+		ChargeTime: 300
+		OrderName: IonStorm
 		DisplayTimer: True
 		DisplayBeacon: True
 		Description: Ion Storm
@@ -1270,7 +1271,7 @@ SCRSW1:
 		BuildPaletteOrder: 90
 		Prerequisites: tech, ~structures.scr
 	Valued:
-		Cost: 300
+		Cost: 2000
 	Tooltip:
 		Name: Signal Transmiter
 		Description: Allows the player to generate Ion Storms.
@@ -1289,7 +1290,7 @@ SCRSW1:
 		Amount: -100
 	SelectionDecorations:
 		VisualBounds: 116, 78, 3, -8
-	AirstrikePower:
+	AirstrikePower@meteor:
 		UnitType: meteorplane
 		Icon: meteor
 		SquadSize: 3
@@ -1297,7 +1298,7 @@ SCRSW1:
 		DisplayTimer: True
 		DisplayBeacon: True
 		LongDesc: Creates a meteor storm
-		ChargeTime: 210
+		ChargeTime: 480
 	# SpawnActorPower@Mothership:
 		# Actor: MOTHERSHIPDEPDUMMY
 		# Icon: mothershipicon
@@ -1647,7 +1648,7 @@ CABSW1:
 	Inherits: ^Defense
 	Inherits@1: ^CabRender
 	Valued:
-		Cost: 800
+		Cost: 2000
 	Tooltip:
 		Name: Singularity Cannon
 		Description: Super Weapon.
@@ -1687,8 +1688,9 @@ CABSW1:
 		VisualBounds: 40, 36, -3, -8
 	SpawnActorPower@cabcannon:
 		Actor: swtargetdummy
-		ChargeTime: 210
-		Icon: ionstorm
+		ChargeTime: 120
+		Icon: cabcannon
+		OrderName: CabCannon
 		DisplayTimer: True
 		DisplayBeacon: True
 		Description: Singularity

@@ -34,26 +34,33 @@ METEORPLANE:
 	-AttackPlane:
 	Armament:
 		Weapon: MeteorRain
+		LocalOffset: 750, 750,0
 	Armament@1:
 		Weapon: MeteorRain
+		LocalOffset: -750, 750,0
 	Armament@2:
 		Weapon: MeteorRain
+		LocalOffset: -750, -750,0
 	Armament@3:
 		Weapon: MeteorRain
+		LocalOffset: 750, -750,0
 	Armament@4:
 		Weapon: MeteorRain
-	# Armament@5:
-		# Weapon: MeteorRain
-	# Armament@6:
-		# Weapon: MeteorRain
-	# Armament@7:
-		# Weapon: MeteorRain
-	# Armament@8:
-		# Weapon: MeteorRain
-	# Armament@9:
-		# Weapon: MeteorRain
-	# Armament@10:
-		# Weapon: MeteorRain
+		LocalOffset: 0, 0,0
+	Armament@5:
+		Weapon: MeteorRain
+		LocalOffset: 1500, 1000,0
+	Armament@6:
+		Weapon: MeteorRain
+		LocalOffset: -1500, 1000,0
+	Armament@7:
+		Weapon: MeteorRain
+		LocalOffset: -1500, -1000,0
+	Armament@8:
+		Weapon: MeteorRain
+		LocalOffset: 1500, -1000,0
+	Armament@9:
+		Weapon: MeteorRain
 	ParaDrop:
 	-RevealsShroud:
 	-Targetable@GROUND:
@@ -82,7 +89,7 @@ IONSTORMGENERATOR:
 		Delay: 25
 		HealIfBelow: 200
 	Health:
-		HP: 20
+		HP: 40
 		NotifyAppliedDamage: False
 	AttackOmni:
 		IngoresVisibility: True

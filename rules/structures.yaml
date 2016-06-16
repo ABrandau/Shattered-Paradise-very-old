@@ -352,7 +352,7 @@ GAPLUG:
 		UpgradeMinEnabledLevel: 1
 		Icon: ioncannon
 		Effect: ionbeam
-		ChargeTime: 180
+		ChargeTime: 240
 		Description: Ion Cannon
 		LongDesc: Initiate an Ion Cannon strike.\nApplies instant damage to a small area.
 		BeginChargeSound:
