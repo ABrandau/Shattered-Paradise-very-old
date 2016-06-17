@@ -902,10 +902,10 @@ SCRBATTLESHIP:
 	Inherits@3: ^SelfReloads
 	Inherits@4: ^BasicStealthDetection
 	Valued:
-		Cost: 2500
+		Cost: 2000
 	Tooltip:
 		Name: Battlecruiser
-		Description: Scrin spacecraft designed for combat on front lines.\nEquipped with blaster turrets and two fighters.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft.
+		Description: Scrin spacecraft designed for frontline combat.\nEquipped with blaster turrets.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft.
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 21
@@ -961,7 +961,7 @@ SCRINCOUNCIL:
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 22
-		Prerequisites: ~scrair, scrtech
+		Prerequisites: ~scrair, scrweap
 		BuildLimit: 1
 	Valued:
 		Cost: 2500

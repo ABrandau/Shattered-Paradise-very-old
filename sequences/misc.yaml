@@ -77,6 +77,9 @@ meteor:
 	idle:
 		Length: 8
 		Facings: 8
+		
+meteor2:
+	Inherits: meteor
 
 tibicon:
 	idle: tibicon
@@ -310,7 +313,19 @@ cabswproj2:
 		Offset: 0,6
 		Length: *
 		ZOffset: 1023
-		BlendMode: Additive		
+		BlendMode: Additive
+
+metstral:
+	idle:
+		Length: *
+		ZOffset: 1023
+		BlendMode: Additive
+		
+meteortrail:
+	idle:
+		Length: *
+		ZOffset: 1023
+		BlendMode: Additive
 
 largefire:
 	idle: fire1

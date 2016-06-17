@@ -479,9 +479,9 @@ QuadFireAA:
 		VerticalRateOfTurn: 20
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
+		Spread: 192
 		ValidTargets: Air
-		Damage: 30
+		Damage: 22
 		Versus:
 			Concrete: 5
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, TiberiumDeath

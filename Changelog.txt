@@ -4,9 +4,19 @@
 Balance Changes:
 General:
 	Enabled Basic superweapon structures for all sides.
+NOD:
+	Demo Cycle: Hp: 100 -> 70
+	Mobile stealth generators now require a stealth generator to be available.
+Scrin:
+	Creation engine now requires a warfactory instead of a tech center.
+	Destroyer: Minimun Range: 5 cells -> 4 cells, damage: 80 -> 110, Spread: 200 -> 256.
+	Battlecruiser: Cost: 2500 -> 2000, Innacuracy: 1c512 -> 1c0.
+	Plasma Hive: Bullet speed: 240 -> 360.
+Mutants:
+	Quad Cannon: AA Spread: 128 -> 192, AA Damage: 30 -> 22.
 Graphical Changes:
 	Corrected some scrin weapons graphics.
-	Tiberium trees now have a small green glow.
+	Tiberium trees and crystals now make the surrounding area glow.
 	Scrin Harvesters now render shadow when unloading its cargo.
 
 

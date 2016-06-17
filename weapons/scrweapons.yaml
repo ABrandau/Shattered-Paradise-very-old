@@ -308,7 +308,7 @@ BattleshipCannon:
 		Speed: 500
 		Image: purpBullet
 		Trail: purpBullet
-		Inaccuracy: 1c512
+		Inaccuracy: 1c0
 		ContrailLength: 5
 		Shadow: true
 		Palette: playerscrin
@@ -335,7 +335,7 @@ DestroyerCannon:
 	Inherits: ArtilleryWarhead
 	ReloadDelay: 150
 	Range: 16c0
-	MinRange: 5c0
+	MinRange: 4c0
 	Report: 120mmf.aud
 	Burst: 1
 	Inaccuracy: 2c0
@@ -348,8 +348,8 @@ DestroyerCannon:
 		Shadow: false
 		Angle: 62
 	Warhead@1Dam: SpreadDamage
-		Spread: 200
-		Damage: 80
+		Spread: 256
+		Damage: 110
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: scrinpulse2
@@ -442,11 +442,9 @@ DronePlane:
 	Range: 11c0
 	MinRange: 2c0
 	Report: 120mmf.aud
-	Burst: 1
-	BurstDelay: 5
 	ValidTargets: Ground, Air
 	Projectile: Missile
-		Speed: 240
+		Speed: 360
 		Image: destroshell
 		Trail: blueballminitrail
 		Palette: pips

@@ -332,7 +332,7 @@ BIKE:
 		Speed: 180
 		Crushes: crate
 	Health:
-		HP: 100
+		HP: 70
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -505,7 +505,7 @@ SGEN:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 16
-		Prerequisites: ~naweap, naradr
+		Prerequisites: ~naweap, mastl
 	Mobile:
 		TurnSpeed: 6
 		Speed: 80

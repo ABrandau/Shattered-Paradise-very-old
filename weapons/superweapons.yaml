@@ -160,12 +160,13 @@ MeteorRain:
 	Inaccuracy: 1c0
 	Projectile: Bullet
 		Speed: 200
-		Image: meteor
-		Palette: apgreen
+		Image: meteor2
+		Palette: effect
 		Shadow: true
 		Inaccuracy: 1c0
-		ContrailLength: 10
-		ContrailColor: 228B22
+		Trail: meteortrail #metstral
+		TrailPalette: effectalpha
+		TrailInterval: 1
 	Warhead@1Dam: SpreadDamage
 		Spread: 650
 		Damage: 20
@@ -197,28 +198,29 @@ CabalCannon:
 		Angle: 90
 		Shadow: true
 		Palette: apcyan
-		ContrailLength: 10
-		ContrailColor: 00ffff
-		# TrailImage: cabswproj2
+		# ContrailLength: 10
+		# ContrailColor: 00ffff
+		Trail: cabswproj2
 		TrailPalette: apolcyanalpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 1000
 		Damage: 300
-		ValidTargets: Ground, cabalcannon
+		ValidTargets: Ground, cabalcannon, Water
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: cabexplo
 		ExplosionPalette: apolcyanalpha
 		ImpactSound: expnew09.aud
-		InvalidImpactTypes: Water
+		# InvalidImpactTypes: Water
 	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSound: ssplash2.aud
-		ValidImpactTypes: Water
+		# Explosions: small_watersplash
+		# ExplosionPalette: player
+		# ImpactSound: ssplash2.aud
+		# ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
+		InvalidImpactTypes: Water
 
 IonRay:
 	Inherits: ^FullDamage
