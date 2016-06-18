@@ -324,7 +324,7 @@ metstral:
 meteortrail:
 	idle:
 		Length: *
-		ZOffset: 1023
+		ZOffset: 3000
 		BlendMode: Additive
 
 largefire:
