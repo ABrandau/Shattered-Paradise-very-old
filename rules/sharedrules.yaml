@@ -593,6 +593,7 @@ NAPULS:
 		HP: 500
 	Armor:
 		Type: Heavy
+	-AutoTarget:
 	RevealsShroud:
 		Range: 8c0
 	Turreted:
@@ -601,7 +602,8 @@ NAPULS:
 	AttackTurreted:
 	Armament:
 		Weapon: EMPulseCannon
-		LocalOffset: 100,0,1000
+		LocalOffset: 150,0,1250
+		LocalYaw: 0,100
 	WithSpriteTurret:
 		Sequence: turret
 	Power:
@@ -615,6 +617,20 @@ NAPULS:
 			nod: napuls.nod
 			mut: napuls.mut
 			cab: napuls.cab
+	ProvidesPrerequisite@gdi:
+		Prerequisite: emp.gdi
+		Factions: gdi, mut, nod, cab, scr
+		ResetOnOwnerChange: true
+	AttackOrderPower@nod:
+		Cursor: emp
+		Icon: emp
+		ChargeTime: 135
+		Description: E.M. Pulse
+		LongDesc: Fires a pulse blast which disables\nall mechanical units in the area.
+		EndChargeSound: speech-nod|00-i158.aud
+		SelectTargetSound: speech-nod|00-i042.aud
+		Prerequisites: emp.gdi
+		OrderName: Nodemp
 
 GATE_A:
 	Inherits: ^Gate_A

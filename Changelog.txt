@@ -4,8 +4,9 @@
 Balance Changes:
 General:
 	Enabled Basic superweapon structures for all sides.
-NOD:
-	Demo Cycle: Hp: 100 -> 70
+	EMP cannons now work the same way as vanilla TS.
+NOD
+	Demo Cycle: Hp: 100 -> 70.
 	Mobile stealth generators now require a stealth generator to be available.
 Scrin:
 	Creation engine now requires a warfactory instead of a tech center.

@@ -8,6 +8,11 @@ MineExplode:
 	Warhead@2Eff: CreateEffect
 		Explosions: large_twlt
 		ImpactSound: expnew09.aud
+		
+CyborgExplode:
+	Warhead@1Eff: CreateEffect
+		Explosions: medium_bang
+		ImpactSounds: expnew10.aud
 
 SmallPlaneExplode:
 	Warhead@1Dam: SpreadDamage

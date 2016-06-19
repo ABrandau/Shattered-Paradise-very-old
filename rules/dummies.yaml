@@ -122,52 +122,6 @@ CABALMONEYDUMMY1:
 		Amount: 250
 		Period: 999
 
-SWTARGETDUMMY:
-	Inherits: ^DUMMYSTRUCTURE
-	Targetable:
-		TargetTypes: cabalcannon
-	SelfHealing:
-		Step: -1
-		Delay: 25
-		HealIfBelow: 110
-	SpawnActorOnDeath@cabalcrate:
-		Actor: SWTARGETDUMMY2
-		Probability: 100
-		OwnerType: Victim
-		RequiresLobbyCreeps: true
-	Health:
-		HP: 20
-		NotifyAppliedDamage: False
-		
-SWTARGETDUMMY2:
-	Inherits: ^DUMMYSTRUCTURE
-	Targetable:
-		TargetTypes: cabalcannon
-	SelfHealing:
-		Step: -1
-		Delay: 25
-		HealIfBelow: 110
-	Health:
-		HP: 20
-		NotifyAppliedDamage: False
-		
-SWTARGETDUMMY3:
-	Inherits: ^DUMMYSTRUCTURE
-	Targetable:
-		TargetTypes: cabalcannon
-	SpawnActorOnDeath@cabalcrate:
-		Actor: SWTARGETDUMMY3
-		Probability: 100
-		OwnerType: Victim
-		RequiresLobbyCreeps: true
-	SelfHealing:
-		Step: -1
-		Delay: 25
-		HealIfBelow: 110
-	Health:
-		HP: 20
-		NotifyAppliedDamage: False
-
 BLACKHANDDUMMY:
 	Inherits: ^DUMMYSTRUCTURE
 	SelfHealing:

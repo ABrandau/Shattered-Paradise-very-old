@@ -201,7 +201,7 @@ Dogzooka:
 		Shadow: true
 		Inaccuracy: 128
 		Image: DRAGON
-		Trail: small_smoke_trail
+		TrailImage: small_smoke_trail
 		RateOfTurn: 8
 		RangeLimit: 15c0
 		Palette: ra
@@ -241,7 +241,7 @@ SeekerBazooka:
 		Shadow: true
 		Inaccuracy: 128
 		Image: DRAGON
-		Trail: small_smoke_trail
+		TrailImage: small_smoke_trail
 		RateOfTurn: 10
 		RangeLimit: 15c0
 		Palette: ra
@@ -422,7 +422,7 @@ WaspBazooka:
 		Shadow: true
 		Inaccuracy: 128
 		Image: DRAGON
-		Trail: small_smoke_trail
+		TrailImage: small_smoke_trail
 		RateOfTurn: 8
 		RangeLimit: 15c0
 		Palette: ra

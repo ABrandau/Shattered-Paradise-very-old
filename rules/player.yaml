@@ -38,18 +38,17 @@ Player:
 	PlaceBuilding:
 		Palette: placebuilding
 	SupportPowerManager:
-	ProvidesTechPrerequisite@normal:
-		Name: No Superweapons
-	ProvidesTechPrerequisite@sw:
-		Name: Superweapons ON
-		Prerequisites: sw
+	# ProvidesTechPrerequisite@normal:
+		# Name: No Superweapons
+	# ProvidesTechPrerequisite@sw:
+		# Name: Superweapons ON
+		# Prerequisites: sw
 	ScriptTriggers:
 	MissionObjectives:
 	ConquestVictoryConditions:
 	PowerManager:
 	AllyRepair:
 	PlayerResources:
-		SelectableCash: 5000, 10000, 20000
 	ActorGroupProxy:
 	DeveloperMode:
 		Enabled: true
@@ -59,6 +58,4 @@ Player:
 		AllyNotification: OurAllyIsUnderAttack
 	HarvesterAttackNotifier:
 	PlayerStatistics:
-	PlaceBeacon:
-	# ResourceStorageWarning:
-	# InsufficientFundsWarning:
+	PlaceSimpleBeacon:

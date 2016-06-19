@@ -544,7 +544,7 @@ centurion:
 		Start: 72
 		Length: 1
 		Facings: -32		
-	icon: centurionicon
+		ShadowStart:  278
 	make:
 		Start: 104
 		Length: 19
@@ -561,12 +561,13 @@ centurion:
 		Start: 123
 		Facings: -32
 		Length: 1
-		ShadowStart:  278	
+		ShadowStart:  278
 		Offset: 0, 12
 	emp-overlay: emp_fx01
 		Length: *
 		ZOffset: 512
-		BlendMode: Additive		
+		BlendMode: Additive
+	icon: centurionicon
 	
 cabapc:
 	icon: cabapcicon

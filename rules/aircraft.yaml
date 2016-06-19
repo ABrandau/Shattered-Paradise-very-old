@@ -369,8 +369,16 @@ APACHE:
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
-	WithSpriteRotorOverlay:
+	WithIdleOverlay@ROTORAIR:
 		Offset: 85,0,384
+		Sequence: rotor
+		UpgradeTypes: airborne
+		UpgradeMinEnabledLevel: 1
+	WithIdleOverlay@ROTORGROUND:
+		Offset: 85,0,384
+		Sequence: slow-rotor
+		UpgradeTypes: airborne
+		UpgradeMaxEnabledLevel: 0
 	RenderSprites:
 	SpawnActorOnDeath:
 		Actor: APACHE.Husk
@@ -496,8 +504,16 @@ MUTHELI:
 		Scale: 9
 	Armor:
 		Type: Light
-	WithSpriteRotorOverlay
-		Offset: 200,0,480
+	WithIdleOverlay@ROTORAIR:
+		Offset: 85,0,384
+		Sequence: rotor
+		UpgradeTypes: airborne
+		UpgradeMinEnabledLevel: 1
+	WithIdleOverlay@ROTORGROUND:
+		Offset: 85,0,384
+		Sequence: slow-rotor
+		UpgradeTypes: airborne
+		UpgradeMaxEnabledLevel: 0
 	Armament@primary:
 		Weapon: GargoylVulcan
 	Armament@secondary:

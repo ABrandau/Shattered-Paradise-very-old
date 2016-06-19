@@ -145,7 +145,7 @@ ScrMbtCannon:
 		Speed: 550
 		Image: blueball
 		# Angle: 90
-		Trail: blueballminitrail
+		TrailImage: blueballminitrail
 		Shadow: true
 		Angle: 62
 		Palette: pips
@@ -225,7 +225,7 @@ StormRiderBlast:
 		Shadow: true
 		Angle: 45
 		Palette: pips
-		Trail: blueballminitrail
+		TrailImage: blueballminitrail
 		ContrailLength: 5
 		Inaccuracy: 384
 		Image: blueplasma
@@ -251,7 +251,7 @@ StormRiderBlastAA:
 		Shadow: true
 		Angle: 45
 		Palette: pips
-		Trail: blueballminitrail
+		TrailImage: blueballminitrail
 		ContrailLength: 5
 		Inaccuracy: 384
 		Image: blueplasma
@@ -307,7 +307,7 @@ BattleshipCannon:
 	Projectile: Bullet
 		Speed: 500
 		Image: purpBullet
-		Trail: purpBullet
+		TrailImage: purpBullet
 		Inaccuracy: 1c0
 		ContrailLength: 5
 		Shadow: true
@@ -343,7 +343,7 @@ DestroyerCannon:
 	Projectile: Bullet
 		Speed: 240
 		Image: destroshell
-		Trail: blueballminitrail
+		TrailImage: blueballminitrail
 		Palette: pips
 		Shadow: false
 		Angle: 62
@@ -422,7 +422,7 @@ TractorBeam:
 	Projectile: Bullet
 		Speed: 100c0
 		Image: blueball
-		Trail: blueballminitrail
+		TrailImage: blueballminitrail
 		Shadow: true
 		Palette: pips
 	Warhead@1Dam: SpreadDamage
@@ -446,7 +446,7 @@ DronePlane:
 	Projectile: Missile
 		Speed: 360
 		Image: destroshell
-		Trail: blueballminitrail
+		TrailImage: blueballminitrail
 		Palette: pips
 		Angle: 50
 	Warhead@1Dam: SpreadDamage

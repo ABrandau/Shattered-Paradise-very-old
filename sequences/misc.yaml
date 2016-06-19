@@ -454,6 +454,7 @@ largecraters:
 icon:
 	clustermissile: mltiicon
 	ioncannon: ioncicon
+	emp: pulsicon
 	meteor: metricon
 	cabcannon: cabsw1powericon
 	ionstorm: ionstormicon

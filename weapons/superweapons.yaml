@@ -54,10 +54,10 @@ SuicideBomb:
 	
 EMPulseCannon:
 	ReloadDelay: 300
-	Range: 10c0
+	Range: 15c0
 	MinRange: 3c0
 	Report: PLSECAN2.AUD
-	ValidTargets: Vehicle, Building
+	ValidTargets: Vehicle, Building, Ground
 	Projectile: Bullet
 		Speed: 425
 		Blockable: false
@@ -67,10 +67,10 @@ EMPulseCannon:
 	Warhead@1Eff: CreateEffect
 		Explosions: pulse_explosion
 	Warhead@emp: GrantUpgrade
-		Range: 3c0
-		Duration: 100
-		ValidTargets: Vehicle, Building
+		Range: 4c0
+		Duration: 250
 		Upgrades: empdisable, notmobile
+		ValidTargets: Vehicle, Building
 
 IonCannon:
 	ValidTargets: Ground, Air
@@ -164,7 +164,7 @@ MeteorRain:
 		Palette: effect
 		Shadow: true
 		Inaccuracy: 1c0
-		Trail: meteortrail #metstral
+		TrailImage: meteortrail #metstral
 		TrailPalette: effectalpha
 		TrailInterval: 1
 	Warhead@1Dam: SpreadDamage
@@ -190,7 +190,7 @@ CabalCannon:
 	BurstDelay: 25
 	Inaccuracy: 100c0
 	Report: MISL1.AUD
-	ValidTargets: cabalcannon
+		ValidTargets: Ground, Water
 	Projectile: Bullet
 		Speed: 300
 		Inaccuracy: 100c0
@@ -198,26 +198,18 @@ CabalCannon:
 		Angle: 90
 		Shadow: true
 		Palette: apcyan
-		# ContrailLength: 10
-		# ContrailColor: 00ffff
-		Trail: cabswproj2
+		TrailImage: cabswproj2
 		TrailPalette: apolcyanalpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 1000
 		Damage: 300
-		ValidTargets: Ground, cabalcannon, Water
+		ValidTargets: Ground, Water
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: cabexplo
 		ExplosionPalette: apolcyanalpha
 		ImpactSound: expnew09.aud
-		# InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		# Explosions: small_watersplash
-		# ExplosionPalette: player
-		# ImpactSound: ssplash2.aud
-		# ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
 		InvalidImpactTypes: Water

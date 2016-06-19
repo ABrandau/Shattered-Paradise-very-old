@@ -80,35 +80,46 @@ MMCH:
 		Bounds: 30, 42, 0, -8
 
 APC:
-	Inherits: ^VoxelVehicle
+	Inherits: ^VoxelTank
 	Valued:
-		Cost: 600
+		Cost: 800
 	Tooltip:
 		Name: Amphibious APC
-		Description: Armored Personnel Carrier.\nCan travel on water.\n  Unarmed
+		Description: Armored infantry transport.\nCan move on water.\n  Unarmed
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 4
-		Prerequisites: ~gaweap, garadr
+		BuildPaletteOrder: 30
+		Prerequisites: ~gaweap, gapile
 	Mobile:
-		TurnSpeed: 8
+		TurnSpeed: 5
 		Speed: 113
 		TerrainSpeeds:
 			Water: 80
 	Health:
 		HP: 200
 	Armor:
-		Type: Wood
+		Type: Heavy
+	RevealsShroud:
+		Range: 5c0
 	Turreted:
 		TurnSpeed: 10
 	Cargo:
 		Types: Infantry
-		MaxWeight: 7
-		PipCount: 7
+		MaxWeight: 5
+		PipCount: 5
 		UnloadVoice: Unload
 		LoadingUpgrades: notmobile
-	-WithVoxelBody:
-	WithVoxelWaterBody:
+		EjectOnDeath: true
+	UpgradeOnTerrain:
+		Upgrades: inwater
+		TerrainTypes: Water
+	WithVoxelBody:
+		UpgradeTypes: inwater
+		UpgradeMaxEnabledLevel: 0
+	WithVoxelBody@water:
+		Sequence: water
+		UpgradeTypes: inwater
+		UpgradeMinEnabledLevel: 1
 	LeavesTrails:
 		Image: wake
 		Palette: effect
@@ -348,37 +359,78 @@ TTNK:
 		Cost: 800
 	Tooltip:
 		Name: Tick Tank
-		Description: Main Battle Tank.\nCan deploy to gain extra protection.\nTick tanks self repair when not deployed.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
-	SelfHealing@lel:
-		Step: 2
-		Delay: 100
-		HealIfBelow: 50
+		Description: Nod's main battle tank.\nCan deploy to gain extra protection.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 11
+		BuildPaletteOrder: 60
 		Prerequisites: ~naweap
 	Mobile:
-		TurnSpeed: 4
+		TurnSpeed: 5
 		Speed: 85
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 400
+		HP: 350
 	Armor:
-		Type: Heavy
-	AttackFrontal:
-		Voice: Attack
-	AutoTarget:
+		Type: Light
+		UpgradeTypes: undeployed
+		UpgradeMinEnabledLevel: 1
 	Armament@PRIMARY:
 		Weapon: Tick90mm
 		LocalOffset: 256,-400,600
 		MuzzleSequence: muzzle
+	Armament@DEPLOYED:
+		Name: deployed
+		Turret: deployed
+		Weapon: Tick90mm
+		LocalOffset: 256,-400,600
+		MuzzleSequence: muzzle
 	WithMuzzleOverlay:
-	Transforms:
-		IntoActor: gatick
-		Facing: 159
-		TransformSounds: place2.aud
-		NoTransformSounds:
-		Voice: Move
+	RevealsShroud:
+		Range: 5c0
+	RenderSprites:
+		Image: ttnk
+	DeployToUpgrade:
+		DeployedUpgrades: deployed, notmobile
+		UndeployedUpgrades: undeployed
+		DeployAnimation: make
+		Facing: 160
+		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
+		DeploySound: place2.aud
+		UndeploySound: clicky1.aud
+	WithVoxelBody:
+		UpgradeTypes: undeployed
+		UpgradeMinEnabledLevel: 1
+	WithSpriteBody@deployed:
+		UpgradeTypes: undeployed
+		UpgradeMaxEnabledLevel: 0
+	AttackFrontal:
+		Voice: Attack
+		UpgradeTypes: undeployed
+		UpgradeMinEnabledLevel: 1
+		UpgradeMaxAcceptedLevel: 1
+	Turreted:
+		TurnSpeed: 6
+		Turret: deployed
+		InitialFacing: 160
+		Offset: -20, -130, 180
+	WithVoxelBarrel: #Exception of type `System.AggregateException`: Se han producido uno o varios errores. Inner Exception of type `System.Collections.Generic.KeyNotFoundException`: La clave proporcionada no se encontró en el diccionario.
+		Armament: deployed
+		LocalOffset: 128, 0, 256
+		UpgradeTypes: deployed
+		UpgradeMinEnabledLevel: 1
+	WithVoxelTurret@deployed:
+		Turret: deployed
+		UpgradeTypes: deployed
+		UpgradeMinEnabledLevel: 1
+	AttackTurreted@deployed:
+		Voice: Attack
+		UpgradeTypes: deployed
+		UpgradeMinEnabledLevel: 1
+	Armor@deployed:
+		Type: Concrete
+		UpgradeTypes: deployed
+		UpgradeMinEnabledLevel: 1
+	AutoTarget:
 
 SAPC:
 	Inherits: ^VoxelTank
@@ -1299,21 +1351,28 @@ CENTURION:
 		Type: Heavy
 	BodyOrientation:
 		QuantizedFacings: 32
-	WithInfantryBody:
 	Turreted:
 		TurnSpeed: 5
 	AttackTurreted:
 		Voice: Attack
 	WithSpriteTurret:
 		Recoils: no
-	Transforms:
-		IntoActor: cabcent
-		Facing: 159
-		TransformSounds: place2.aud
-		NoTransformSounds:
-		Voice: Move
+	DeployToUpgrade:
+		DeployedUpgrades: deployed, notmobile
+		UndeployedUpgrades: undeployed
+		DeployAnimation: make
+		Facing: 160
+		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
+		DeploySound: place2.aud
+		UndeploySound: clicky1.aud
 	RenderSprites:
 		Scale: 0.8
+	WithInfantryBody:
+		UpgradeTypes: undeployed
+		UpgradeMinEnabledLevel: 1
+	WithSpriteBody@deployed:
+		UpgradeTypes: undeployed
+		UpgradeMaxEnabledLevel: 0
 	WithMuzzleOverlay:
 	Armament:
 		Weapon: CenturionVulcan

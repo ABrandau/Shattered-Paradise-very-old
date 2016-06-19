@@ -474,7 +474,6 @@
 			BulletDeath: 1
 			SmallExplosionDeath: 2
 			HeadshotDeath: 3
-			FireDeath: 5
 			CabalDeath: 2
 			ScrinDroneDeath: 1
 			CabalDeathCrate: 2
@@ -501,6 +500,9 @@
 	Crushable:
 		CrushSound: squish6.aud
 	PoisonedByTiberium:
+	SpawnActorOnDeath@FLAMEGUY:
+		Actor: FLAMEGUY
+		DeathType: FireDeath
 	SpawnActorOnDeath@tiberium:
 		Actor: zombie
 		Probability: 10
@@ -627,17 +629,36 @@
 	-PoisonedByTiberium:
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
+		
 
 ^Cyborg:
 	Inherits@1: ^Infantry
-	# Inherits@2: ^EmpDisableMobile
+	Inherits@2: ^EmpDisableMobile
 	-SpawnActorOnDeath@conversion:
+	ExplosionOnDamageTransition:
+		Weapon: CyborgExplode
+		DamageState: Critical
+		TriggerOnlyOnce: true
+	Explodes:
+		Weapon: CyborgExplode
+		EmptyWeapon: CyborgExplode
+	DeathSounds:
+	RevealsShroud:
+		Range: 4c0
 	MustBeDestroyed:
-	-Crushable:
+	PoisonedByTiberium:
+		Weapon: TiberiumHeal
 	WithPermanentInjury:
 	WithInfantryBody:
-		AttackSequence: shoot
+		AttackSequence: attack
 		IdleSequences: idle1,idle2
+	UpgradeOnDamage@CRITICAL:
+		Upgrades: criticalspeed
+		ValidDamageStates: Critical
+		GrantPermanently: true
+	SpeedMultiplier@CRITICAL:
+		UpgradeTypes: criticalspeed
+		Modifier: 50
 
 ^CabalDroneInfantry:
 	Inherits@1: ^Infantry

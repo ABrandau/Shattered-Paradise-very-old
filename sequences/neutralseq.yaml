@@ -1,6 +1,21 @@
 ###############################################################
 # INFANTRY
 ###############################################################
+flameguy:
+	Defaults:
+		Facings: 8
+		Tick: 80
+		ShadowStart: 148
+	idle:
+	stand:
+	run:
+		Length: 6
+	die:
+		Start: 44
+		Facings: 1
+		Length: 104
+		ShadowStart: 192
+
 zombie:
 	Defaults:
 		Tick: 80

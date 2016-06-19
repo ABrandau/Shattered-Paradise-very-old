@@ -569,40 +569,6 @@ NASAM:
 	SelectionDecorations:
 		VisualBounds: 40, 36, -3, -8
 
-GATICK:
-	Inherits: ^DeployedVehicle
-	Valued:
-		Cost: 800
-	Tooltip:
-		Name: Deployed Tick Tank
-	Health:
-		HP: 400
-	Armor:
-		Type: Concrete
-	RevealsShroud:
-		Range: 5c0
-	Turreted:
-		TurnSpeed: 6
-		InitialFacing: 128
-		Offset: 170,0,213
-	Armament@PRIMARY:
-		Weapon: Tick90mm
-		LocalOffset: 384,0,128
-		MuzzleSequence: muzzle
-	BodyOrientation:
-		QuantizedFacings: 32
-	RenderVoxels:
-	WithVoxelBarrel:
-		LocalOffset: 170,0,0
-	WithVoxelTurret:
-	Transforms:
-		IntoActor: ttnk
-		Facing: 159
-		TransformSounds: place2.aud
-		NoTransformSounds:
-		Voice: Move
-	WithMuzzleOverlay:
-
 MASTL:
 	Inherits: ^DeployedVehicle
 	Valued:
@@ -1410,16 +1376,6 @@ SCRSHIELD:
 	WithBuildingExplosion:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
-	# GrantUpgradePower:
-		# Upgrades: StasisDisable, notmobile
-		# OrderName: Stasis Field
-		# Description: Stasis Field
-		# LongDesc: Disables all units in the area but\nalso makes then invulnerable.
-		# Duration: 200
-		# Range: 5
-		# ChargeTime: 200
-		# Icon: ScrStasis
-		# IconPalette: chromescrin
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1427,9 +1383,6 @@ SCRSHIELD:
 		Bounds: 88, 42, 0, -6
 	RequiresPower:
 	DisabledOverlay:
-	# WithRangeCircle:
-		# Range: 12c0
-		# Type: cloakgenerator
 	Turreted:
 		TurnSpeed: 10
 		InitialFacing: 300
@@ -1437,7 +1390,6 @@ SCRSHIELD:
 	Armament:
 		Weapon: EMPulseCannon
 		LocalOffset: 0,0,1800
-	AutoTarget:
 	Health:
 		HP: 400
 	Armor:
@@ -1448,6 +1400,20 @@ SCRSHIELD:
 		Amount: -100
 	SelectionDecorations:
 		VisualBounds: 88, 72, 0, -12
+	ProvidesPrerequisite@gdi:
+		Prerequisite: emp.gdi
+		Factions: gdi, mut, nod, cab, scr
+		ResetOnOwnerChange: true
+	AttackOrderPower@nod:
+		Cursor: emp
+		Icon: emp
+		ChargeTime: 135
+		Description: E.M. Pulse
+		LongDesc: Fires a pulse blast which disables\nall mechanical units in the area.
+		EndChargeSound: speech-nod|00-i158.aud
+		SelectTargetSound: speech-nod|00-i042.aud
+		Prerequisites: emp.gdi
+		OrderName: Nodemp
 
 SCRMINE:
 	Inherits: ^DeployedVehicle
@@ -1682,58 +1648,22 @@ CABSW1:
 		Weapon: CabalCannon
 		LocalOffset: 1000,0,1500
 		TargetStances: Ally
+	-AutoTarget:
 	Power:
 		Amount: -60
 	SelectionDecorations:
 		VisualBounds: 40, 36, -3, -8
-	SpawnActorPower@cabcannon:
-		Actor: swtargetdummy
-		ChargeTime: 120
+	ProvidesPrerequisite@singularity:
+		Prerequisite: singularity
+		Factions: gdi, mut, nod, cab
+		ResetOnOwnerChange: true
+	AttackOrderPower@singularity:
+		Cursor: emp
 		Icon: cabcannon
-		OrderName: CabCannon
-		DisplayTimer: True
-		DisplayBeacon: True
+		ChargeTime: 120
 		Description: Singularity
 		LongDesc: Fires a volley of bullets at the target location.
-
-CABCENT:
-	Inherits: ^DeployedVehicle
-	Inherits@2: ^CyborgSelfHeal
-	Valued:
-		Cost: 800
-	Tooltip:
-		Name: Deployed Centurion
-	Health:
-		HP: 600
-	Armor:
-		Type: Concrete
-	RevealsShroud:
-		Range: 5c0
-	Turreted:
-		TurnSpeed: 6
-		InitialFacing: 128
-		Offset: 170,0,213
-	SelfHealing@Cabal:
-		Step: 4
-		Delay: 75
-		HealIfBelow: 110
-	RenderSprites:
-		Scale: 0.8
-		Image: centurion
-	WithSpriteTurret:
-		Recoils: no
-		Sequence: turret2
-	Armament@PRIMARY:
-		Weapon: CenturionVulcan
-		MuzzleSequence: muzzle
-	BodyOrientation:
-		QuantizedFacings: 32
-	Transforms:
-		IntoActor: centurion
-		Facing: 159
-		TransformSounds: place2.aud
-		NoTransformSounds:
-		Voice: Move
-	WithMuzzleOverlay:
-	Selectable:
-		Bounds: 45, 42, 0, -8
+		EndChargeSound: speech-nod|00-i158.aud
+		SelectTargetSound: speech-nod|00-i042.aud
+		Prerequisites: singularity
+		OrderName: singularity

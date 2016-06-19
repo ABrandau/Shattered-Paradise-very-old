@@ -65,7 +65,7 @@ Hellfire:
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater		
 		
-LtRail:
+LTrail:
 	ReloadDelay: 60
 	Range: 6c0
 	Report: biggun1.aud

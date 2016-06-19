@@ -255,12 +255,12 @@ SonicZap:
 		Speed: 0c128
 		Duration: 80
 		DamageInterval: 4 # Roughly 18 impacts.
-		Width: 0c384
+		Width: 384
 		Shape: Flat
 		ZOffset: 2047
 		BeyondTargetRange: 0c256
 		Blockable: true
-		Color: 00FFFFC8
+		Color: 50F5FF45
 	Warhead@1Dam: SpreadDamage
 		Range: 0, 32
 		Falloff: 100, 100

@@ -628,7 +628,7 @@ GargoylRocket:
 		Blockable: false
 		Shadow: true
 		Image: DRAGON
-		Trail: small_smoke_trail
+		TrailImage: small_smoke_trail
 		RateOfTurn: 8
 		RangeLimit: 15c0
 		Palette: ra
@@ -666,7 +666,7 @@ GargoylRocketAA:
 		Blockable: false
 		Shadow: true
 		Image: DRAGON
-		Trail: small_smoke_trail
+		TrailImage: small_smoke_trail
 		RateOfTurn: 20
 		HorizontalRateOfTurn: 20
 		RangeLimit: 15c0
