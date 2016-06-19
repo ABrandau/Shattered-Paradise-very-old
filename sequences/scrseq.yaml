@@ -448,8 +448,10 @@ scrharv:
 		ShadowStart: 33
 	dock:
 		Start: 12
+		ShadowStart: 45
 	dock-loop:
 		Start: 12
+		ShadowStart: 45
 	emp-overlay: emp_fx01
 		Length: *
 		BlendMode: Additive
@@ -594,7 +596,55 @@ scrbattleship:
 		Length: *
 		BlendMode: Additive		
 	icon: scrbattleshipicon
-	
+
+mothership:
+	stand:
+		Start: 50
+		Facings: -8
+		Stride: 8
+	idle:
+		Start: 50
+		Facings: -8
+		Stride: 8
+	run:
+		Start: 50
+		Length: 8
+		Facings: -8
+	emp-overlay: emp_fx01
+		Length: *
+		BlendMode: Additive
+	icon: mothershipicon
+
+mothershipdep:
+	Defaults: mothership
+		# Offset: 0, -36
+		ZOffset: -2048
+		UseTilesetCode: false
+	idle: mothership
+		Start: 30
+		Length: 9
+		ShadowStart: 145
+		ZOffset: -1024
+	dead: mothership
+		Start: 30
+		ShadowStart: 145
+		ZOffset: -1024
+	make: mothership
+		Length: 29
+		Tick: 40
+		ShadowStart: 114
+	make2: mothership
+		Start: 50
+		Length: -9
+		ShadowStart: 154
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: mothershipicon
+
 scrincouncil:
 	Defaults:
 		Tick: 80
@@ -884,7 +934,7 @@ scrradr:
 
 scrdepot:
 	Defaults:
-		Offset: 0, -24
+		Offset: 0, -36
 		UseTilesetCode: true
 	idle:
 		Start: 29
@@ -1136,4 +1186,33 @@ scrshield:
 		BlendMode: Additive
 	icon: scrshieldicon
 		Offset: 0, 0
-		UseTilesetCode: false			
+		UseTilesetCode: false
+
+scrsw1:
+	Defaults:
+		Offset: -6, -30
+		UseTilesetCode: true
+	idle:
+		Start: 30
+		Length: 9
+		ShadowStart: 82
+	damaged-idle:
+		Start: 41
+		Length: 9
+		ShadowStart: 93
+	dead:
+		Start: 41
+		ShadowStart: 93
+		Tick: 400
+	make:
+		Length: 29
+		ShadowStart: 52
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: scrsw1icon
+		Offset: 0, 0
+		UseTilesetCode: false	

@@ -709,13 +709,13 @@ GAARTY:
 
 NAMISL:
 	Inherits: ^Building
-	# Buildable:
-		# Queue: Defense
-		# BuildPaletteOrder: 100
-		# Prerequisites: natech, ~structures.nod
-		# BuildLimit: 1
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 100
+		Prerequisites: natech, ~structures.nod, ~sw
+		BuildLimit: 1
 	Valued:
-		Cost: 1300
+		Cost: 2000
 	Tooltip:
 		Name: Nod Missile Silo
 		Description: Launches a devastating missile\nat a target location.\nRequires power to operate.
@@ -758,9 +758,11 @@ NAMISL:
 		LaunchSound: icbm1.aud
 		MissileWeapon: ClusterMissile
 		SpawnOffset: 0,427,0
-		DisplayTimer: False
-		DisplayBeacon: False
+		DisplayTimer: True
+		DisplayBeacon: True
 		DisplayRadarPing: True
+		MissilePalette: player
+		IsPlayerPalette: True
 		BeaconPoster:
 		CameraActor: camera
 	SelectionDecorations:
@@ -878,7 +880,7 @@ MUBUNKR:
 		Description: Advanced base defense.\nRequires power to operate.\nCannot target air units.\n  Strong vs Ground units\n  Weak vs Aircraft
 	Buildable:
 		Queue: Defense
-		BuildPaletteOrder: 90
+		BuildPaletteOrder: 30
 		Prerequisites: murax, proc, ~structures.mut
 	Building:
 		Footprint: xx xx
@@ -915,6 +917,43 @@ MUBUNKR:
 		Amount: -10
 	SelectionDecorations:
 		VisualBounds: 88, 72, 0, -12
+
+MUTSW1:
+	Inherits: ^Building
+	Inherits@1: ^MutRender
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 90
+		Prerequisites: tech, ~structures.mut
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Meditation Hall
+		Description: Allows the player to generate Ion Storms.
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	Selectable:
+		Bounds: 116, 60, 3, -6
+	Health:
+		HP: 800
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+	Power:
+		Amount: -100
+	SelectionDecorations:
+		VisualBounds: 116, 78, 3, -8
+	SpawnActorPower@ionstorm:
+		Actor: ionstormspawner
+		Icon: ionstorm
+		ChargeTime: 300
+		OrderName: IonStorm
+		DisplayTimer: True
+		DisplayBeacon: True
+		Description: Ion Storm
+		LongDesc: Summons an Ion Storm on the targetted area\nthe lightning rays will strike the nearest target\nwill not fire if there no targets are nearby.\nLasts 20 seconds. 
 
 MUWARD:
 	Inherits: ^DeployedVehicle
@@ -1100,7 +1139,7 @@ SCRNEEDLER:
 	Buildable:
 		Queue: Defense
 		Prerequisites: scrrax, ~structures.scr
-		BuildPaletteOrder: 60
+		BuildPaletteOrder: 30
 	Building:
 	Selectable:
 		Bounds: 40, 30, -3, -8
@@ -1152,7 +1191,7 @@ SCRTRACTOR:
 	Buildable:
 		Queue: Defense
 		Prerequisites: scrrax, ~structures.scr
-		BuildPaletteOrder: 60
+		BuildPaletteOrder: 40
 	WithBuildingExplosion:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
@@ -1194,7 +1233,7 @@ SCRDRONE:
 		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs All
 	Buildable:
 		Queue: Defense
-		BuildPaletteOrder: 90
+		BuildPaletteOrder: 60
 		Prerequisites: scrtech, ~structures.scr
 	WithBuildingExplosion:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
@@ -1224,6 +1263,137 @@ SCRDRONE:
 	SelectionDecorations:
 		VisualBounds: 88, 72, 0, -12
 
+SCRSW1:
+	Inherits: ^Building
+	Inherits@2: ^ScrinRender
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 90
+		Prerequisites: tech, ~structures.scr
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Signal Transmiter
+		Description: Allows the player to generate Ion Storms.
+	Building:
+		Footprint: xxx xxx
+		Dimensions: 3,2
+	Selectable:
+		Bounds: 116, 60, 3, -6
+	Health:
+		HP: 800
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+	Power:
+		Amount: -100
+	SelectionDecorations:
+		VisualBounds: 116, 78, 3, -8
+	AirstrikePower@meteor:
+		UnitType: meteorplane
+		Icon: meteor
+		SquadSize: 3
+		Description: Meteor Storm
+		DisplayTimer: True
+		DisplayBeacon: True
+		LongDesc: Creates a meteor storm
+		ChargeTime: 480
+	# SpawnActorPower@Mothership:
+		# Actor: MOTHERSHIPDEPDUMMY
+		# Icon: mothershipicon
+		# Palette: cameoscrin
+		# Description: Mothership Drop
+		# ChargeTime: 50
+		# LongDesc: Summons an Ion Storm on the targetted area\nthe lightning rays will strike the nearest target\nwill not fire if there no targets are nearby.\nLasts 20 seconds. 
+
+MOTHERSHIPDEPDUMMY:
+	Inherits: ^Defense
+	Inherits@2: ^ScrinRender
+	Inherits@3: ^TowerStealthDetection
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Deployed Mothership
+		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs All
+	-WithBuildingExplosion:
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	Selectable:
+		Bounds: 88, 42, 0, -6
+	RequiresPower:
+	-Targetable:
+	DisabledOverlay:
+	Health:
+		HP: 90
+	SelfHealing:
+		Step: -10
+		HealIfBelow: 200
+	SpawnActorOnDeath@mothershipspawn:
+		Actor: MOTHERSHIPDEP
+		Probability: 100
+		OwnerType: Victim
+		RequiresLobbyCreeps: false
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 12c0
+	Armament:
+		Weapon: DronePlane
+		LocalOffset: 0,0,800
+	RenderSprites:
+		Image: mothershipdep
+	AttackCharge:
+		ChargeAudio: obelpowr.aud
+		ReloadTime: 75
+		InitialChargeDelay: 75
+	Power:
+		Amount: -40
+	SelectionDecorations:
+		VisualBounds: 88, 72, 0, -12
+
+MOTHERSHIPDEP:
+	Inherits: ^Defense
+	Inherits@2: ^ScrinRender
+	Inherits@3: ^TowerStealthDetection
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Deployed Mothership
+		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs All
+	WithBuildingExplosion:
+		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
+		Palette: apolbluealpha
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	Selectable:
+		Bounds: 88, 42, 0, -6
+	RequiresPower:
+	Transforms:
+		IntoActor: mothership
+	DisabledOverlay:
+	WithMakeAnimation:
+		Sequence: make2
+	Health:
+		HP: 600
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 12c0
+	Armament:
+		Weapon: DronePlane
+		LocalOffset: 0,0,800
+	AttackCharge:
+		ChargeAudio: obelpowr.aud
+		ReloadTime: 75
+		InitialChargeDelay: 75
+	Power:
+		Amount: -40
+	SelectionDecorations:
+		VisualBounds: 88, 72, 0, -12
+
 SCRSHIELD:
 	Inherits: ^Building
 	Inherits@2: ^ScrinRender
@@ -1235,7 +1405,7 @@ SCRSHIELD:
 		# Description: Stasis Field\nBuffs and heals nearby units.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft.
 	Buildable:
 		Queue: Defense
-		BuildPaletteOrder: 90
+		BuildPaletteOrder: 80
 		Prerequisites: scrradr, ~structures.scr
 	WithBuildingExplosion:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
@@ -1363,7 +1533,7 @@ CABCANNON:
 	Buildable:
 		Queue: Defense
 		Prerequisites: cabclaw, ~structures.cab
-		BuildPaletteOrder: 60
+		BuildPaletteOrder: 30
 	Building:
 	Selectable:
 		Bounds: 40, 30, -3, -8
@@ -1388,6 +1558,50 @@ CABCANNON:
 		MuzzleSequence: muzzle
 	Power:
 		Amount: -20
+	SelectionDecorations:
+		VisualBounds: 40, 36, -3, -8
+
+CABRAIL:
+	Inherits: ^Defense
+	Inherits@1: ^CabRender
+	Inherits@2: ^CyborgSelfHeal
+	Inherits@3: ^TowerStealthDetection
+	Valued:
+		Cost: 800
+	Tooltip:
+		Name: Railgun Turret
+		Description: Anti-Air defence with low rate of fire.\nRequires power to operate.\n  Strong vs Aircraft.\n  Weak vs Ground Units.
+	Buildable:
+		Queue: Defense
+		Prerequisites: cabclaw, ~structures.cab
+		BuildPaletteOrder: 30
+	Building:
+	Selectable:
+		Bounds: 40, 30, -3, -8
+	RequiresPower:
+	DisabledOverlay:
+	Health:
+		HP: 350
+	Armor:
+		Type: Light
+	BodyOrientation:
+		QuantizedFacings: 32
+	RenderRangeCircle:
+		RangeCircleType: aa
+	Turreted:
+		TurnSpeed: 10
+		InitialFacing: 50
+	AttackTurreted:
+	WithSpriteTurret:
+		Recoils: no
+	Armament:
+		Weapon: AARail
+		LocalOffset: 550,400,700
+	Armament@2:
+		Weapon: AARail
+		LocalOffset: 550,-400,700
+	Power:
+		Amount: -60
 	SelectionDecorations:
 		VisualBounds: 40, 36, -3, -8
 
@@ -1429,24 +1643,25 @@ CABBLAST:
 		Amount: -100
 	SelectionDecorations:
 		VisualBounds: 40, 36, -3, -8
-
-CABRAIL:
+		
+CABSW1:
 	Inherits: ^Defense
 	Inherits@1: ^CabRender
-	Inherits@2: ^CyborgSelfHeal
-	Inherits@3: ^TowerStealthDetection
 	Valued:
-		Cost: 800
+		Cost: 2000
 	Tooltip:
-		Name: Railgun Turret
-		Description: Anti-Air defence with low rate of fire.\nRequires power to operate.\n  Strong vs Aircraft.\n  Weak vs Ground Units.
+		Name: Singularity Cannon
+		Description: Super Weapon.
 	Buildable:
 		Queue: Defense
-		Prerequisites: cabclaw, ~structures.cab
-		BuildPaletteOrder: 60
+		Prerequisites: cabtech, ~structures.cab
+		BuildPaletteOrder: 90
+		BuildLimit: 1
 	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
 	Selectable:
-		Bounds: 40, 30, -3, -8
+		Bounds: 120, 120, -3, -8
 	RequiresPower:
 	DisabledOverlay:
 	Health:
@@ -1458,21 +1673,28 @@ CABRAIL:
 	RenderRangeCircle:
 		RangeCircleType: aa
 	Turreted:
-		TurnSpeed: 10
+		TurnSpeed: 1
 		InitialFacing: 50
 	AttackTurreted:
 	WithSpriteTurret:
 		Recoils: no
 	Armament:
-		Weapon: AARail
-		LocalOffset: 550,400,700
-	Armament@2:
-		Weapon: AARail
-		LocalOffset: 550,-400,700
+		Weapon: CabalCannon
+		LocalOffset: 1000,0,1500
+		TargetStances: Ally
 	Power:
 		Amount: -60
 	SelectionDecorations:
 		VisualBounds: 40, 36, -3, -8
+	SpawnActorPower@cabcannon:
+		Actor: swtargetdummy
+		ChargeTime: 120
+		Icon: cabcannon
+		OrderName: CabCannon
+		DisplayTimer: True
+		DisplayBeacon: True
+		Description: Singularity
+		LongDesc: Fires a volley of bullets at the target location.
 
 CABCENT:
 	Inherits: ^DeployedVehicle

@@ -1057,4 +1057,32 @@ cabrail:
 		ShadowStart: 95
 	icon: cabrailicon
 		Offset: 0, 0
-		UseTilesetCode: false	
+		UseTilesetCode: false
+
+cabsw1:
+	Defaults:
+		Offset: 0, -36
+		UseTilesetCode: true
+	idle: dot	
+	damaged-idle: dot
+	dead: dot
+	turret:
+		Start: 31
+		Facings: 32
+		Shadowstart: 126
+	damaged-turret:
+		Start: 63
+		Facings: 32
+		Shadowstart: 158
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive		
+	make:
+		Length: 29
+		ShadowStart: 95
+	icon: cabsw1icon
+		Offset: 0, 0
+		UseTilesetCode: false

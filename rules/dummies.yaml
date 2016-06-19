@@ -1,0 +1,181 @@
+^DUMMYSTRUCTURE:
+	Inherits: ^BasicBuilding
+	-Targetable:
+	-WithSpriteBody:
+	-WithBuildingExplosion:
+	-ShakeOnDeath:
+	-UpdatesPlayerStatistics:
+	-SoundOnDamageTransition:
+	-AutoSelectionSize:
+	-SelectionDecorations:
+	-Selectable:
+	AlwaysVisible:
+	-FrozenUnderFog:
+	RenderSprites:
+		Image: blackhanddummy
+
+METEORPLANE:
+	Inherits: WETP
+	-Buildable:
+	-Selectable:
+	Cargo:
+		MaxWeight: 10
+		Types: Infantry, Vehicle, Aircraft
+	Aircraft:
+		Speed: 200
+		CruiseAltitude: 4c0
+	AttackBomber:
+		Bombs: Secondary
+		Guns: primary
+	Health:
+		HP: 150
+	Armor:
+		Type: Light
+	-AttackPlane:
+	Armament:
+		Weapon: MeteorRain
+		LocalOffset: 750, 750,0
+	Armament@1:
+		Weapon: MeteorRain
+		LocalOffset: -750, 750,0
+	Armament@2:
+		Weapon: MeteorRain
+		LocalOffset: -750, -750,0
+	Armament@3:
+		Weapon: MeteorRain
+		LocalOffset: 750, -750,0
+	Armament@4:
+		Weapon: MeteorRain
+		LocalOffset: 0, 0,0
+	Armament@5:
+		Weapon: MeteorRain
+		LocalOffset: 1500, 1000,0
+	Armament@6:
+		Weapon: MeteorRain
+		LocalOffset: -1500, 1000,0
+	Armament@7:
+		Weapon: MeteorRain
+		LocalOffset: -1500, -1000,0
+	Armament@8:
+		Weapon: MeteorRain
+		LocalOffset: 1500, -1000,0
+	Armament@9:
+		Weapon: MeteorRain
+	ParaDrop:
+	-RevealsShroud:
+	-Targetable@GROUND:
+	-Targetable@AIRBORNE:
+	-WithVoxelBody:
+	-RenderVoxels:
+
+IONSTORMSPAWNER:
+	Inherits: ^DUMMYSTRUCTURE
+	SelfHealing:
+		Step: -10
+		HealIfBelow: 200
+	SpawnActorOnDeath@cabalcrate:
+		Actor: IONSTORMGENERATOR
+		Probability: 100
+		OwnerType: Victim
+		RequiresLobbyCreeps: true
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+
+IONSTORMGENERATOR:
+	Inherits: ^DUMMYSTRUCTURE
+	SelfHealing:
+		Step: -1
+		Delay: 25
+		HealIfBelow: 200
+	Health:
+		HP: 40
+		NotifyAppliedDamage: False
+	AttackOmni:
+		IngoresVisibility: True
+	Armament:
+		Weapon: IonRay
+		TargetStances: Ally, Enemy, Neutral
+	AutoTarget:
+
+CABALMONEYDUMMY:
+	Inherits: ^DUMMYSTRUCTURE
+	SelfHealing:
+		Step: -10
+		HealIfBelow: 200
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+	CashTrickler:
+		Amount: 10
+		Period: 999
+
+CABALMONEYDUMMY1:
+	Inherits: ^DUMMYSTRUCTURE
+	SelfHealing:
+		Step: -5
+		HealIfBelow: 110
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+	CashTrickler:
+		Amount: 250
+		Period: 999
+
+SWTARGETDUMMY:
+	Inherits: ^DUMMYSTRUCTURE
+	Targetable:
+		TargetTypes: cabalcannon
+	SelfHealing:
+		Step: -1
+		Delay: 25
+		HealIfBelow: 110
+	SpawnActorOnDeath@cabalcrate:
+		Actor: SWTARGETDUMMY2
+		Probability: 100
+		OwnerType: Victim
+		RequiresLobbyCreeps: true
+	Health:
+		HP: 20
+		NotifyAppliedDamage: False
+		
+SWTARGETDUMMY2:
+	Inherits: ^DUMMYSTRUCTURE
+	Targetable:
+		TargetTypes: cabalcannon
+	SelfHealing:
+		Step: -1
+		Delay: 25
+		HealIfBelow: 110
+	Health:
+		HP: 20
+		NotifyAppliedDamage: False
+		
+SWTARGETDUMMY3:
+	Inherits: ^DUMMYSTRUCTURE
+	Targetable:
+		TargetTypes: cabalcannon
+	SpawnActorOnDeath@cabalcrate:
+		Actor: SWTARGETDUMMY3
+		Probability: 100
+		OwnerType: Victim
+		RequiresLobbyCreeps: true
+	SelfHealing:
+		Step: -1
+		Delay: 25
+		HealIfBelow: 110
+	Health:
+		HP: 20
+		NotifyAppliedDamage: False
+
+BLACKHANDDUMMY:
+	Inherits: ^DUMMYSTRUCTURE
+	SelfHealing:
+		Step: -10
+		HealIfBelow: 200
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall

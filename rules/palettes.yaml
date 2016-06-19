@@ -113,6 +113,10 @@
 #########################
 # Nolt was here
 #########################
+	PaletteFromPaletteWithAlpha@effectalpha:
+		Name: effectalpha
+		BasePalette: effect
+		Alpha: 0.6
 	PaletteFromFile@chromescrin:
 		Name: chromescrin
 		Filename: cameoscrin.pal
@@ -126,6 +130,13 @@
 	PaletteFromFile@apred:
 		Name: apred
 		Filename: apolred.pal
+	PaletteFromFile@apcyan:
+		Name: apcyan
+		Filename: apolcyan.pal
+	PaletteFromPaletteWithAlpha@apolcyanalpha:
+		Name: apolcyanalpha
+		BasePalette: apcyan
+		Alpha: 0.8
 	PaletteFromPaletteWithAlpha@apolbluealpha:
 		Name: apolbluealpha
 		BasePalette: apblue
@@ -133,7 +144,7 @@
 	PaletteFromPaletteWithAlpha@apolredalpha:
 		Name: apolredalpha
 		BasePalette: apred
-		Alpha: 0.8		
+		Alpha: 0.8
 	PaletteFromFile@apgreen:
 		Name: apgreen
 		Filename: apolgren.pal
@@ -143,11 +154,19 @@
 		Alpha: 0.8
 	PaletteFromFile@apgrey:
 		Name: apgrey
-		Filename: apolgrey.pal	
+		Filename: apolgrey.pal
 	PaletteFromPaletteWithAlpha@apolgreyalpha:
 		Name: apolgreyalpha
 		BasePalette: apgrey
 		Alpha: 0.8
+	PaletteFromPaletteWithAlpha@tibtree:
+		Name: tibtreepal
+		BasePalette: apgreen
+		Alpha: 0.17
+	PaletteFromPaletteWithAlpha@tibcrystal:
+		Name: tibcrystalpal
+		BasePalette: apblue
+		Alpha: 0.17
 	VoxelNormalsPalette@ra2normals:
 		Name: ra2normals
 		Type: RedAlert2

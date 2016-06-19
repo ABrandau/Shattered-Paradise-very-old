@@ -25,13 +25,13 @@ LegioNeedler:
 		Blockable: false
 		Shadow: true
 		Inaccuracy: 128
+		palette: apolblue
 		Image: blueballminitrail
 		# Angle: 90
 		RateOfTurn: 8
 		RangeLimit: 15c0
-		Palette: pips
 	Warhead@1Dam: SpreadDamage
-		Spread: 350
+		Spread: 60
 		Damage: 18
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
@@ -40,6 +40,45 @@ LegioNeedler:
 		ImpactSound: expnew12.aud
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		
+BugRail:
+	Inherits: ^FullDamage
+	ReloadDelay: 100
+	Range: 4c0
+	Inaccuracy: 0c512
+	Report: rketinf1.aud
+	Projectile: Missile
+		Speed: 250
+		Blockable: false
+		Shadow: true
+		Angle: 270
+		Inaccuracy: 0c512
+		palette: apred
+		Image: purpBullet
+		RateOfTurn: 8
+		RangeLimit: 15c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 125
+		Damage: 7
+		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: alienpiff3, alienpiff4, alienpiff5 
+		ExplosionPalette: apred
+		ImpactSound: expnew12.aud
+
+FloatTesla:
+	Inherits: ^RifleWarhead
+	ReloadDelay: 80
+	Range: 4c0
+	Report: TESLA1.AUD
+	Charges: yes
+	Projectile: TeslaZap
+	palette: apolblue
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 35
+		Versus:
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 
 StalkerSteal:
 	ReloadDelay: 150
@@ -67,34 +106,6 @@ StalkerSteal:
 		Range: 100
 		Duration: 60
 		Upgrades: MindControlTargetting
-
-BugRail:
-	Inherits: ^FullDamage
-	ReloadDelay: 100
-	Range: 4c0
-	Report: lastur1.aud
-	Projectile: LaserZap
-		BeamWidth: 2
-		BeamDuration: 5
-		Color: b300b3
-	Warhead@1Dam: SpreadDamage
-		Spread: 125
-		Damage: 7
-		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
-		
-FloatTesla:
-	Inherits: ^RifleWarhead
-	ReloadDelay: 80
-	Range: 4c0
-	Report: TESLA1.AUD
-	Charges: yes
-	Projectile: TeslaZap
-		palette: pips
-	Warhead@1Dam: SpreadDamage
-		Spread: 42
-		Damage: 35
-		Versus:
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 
 #################################################
 # Vehicles
@@ -139,7 +150,7 @@ ScrMbtCannon:
 		Angle: 62
 		Palette: pips
 	Warhead@1Dam: SpreadDamage
-		Spread: 364
+		Spread: 150
 		Damage: 90
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -269,14 +280,13 @@ Glyder1Cannon:
 		Shadow: true
 		Palette: apblue
 	Warhead@1Dam: SpreadDamage
-		Spread: 0c512
+		Spread: 100
 		Damage: 18
 		ValidTargets: Ground
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
-		Explosions: scrinexplo1
-		ExplosionPalette: apolbluealpha
-		ImpactSound: expnew14.aud
+		Explosions: scrinpulse3
+		ImpactSound: expnew12.aud
 		InvalidImpactTypes: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
@@ -298,7 +308,7 @@ BattleshipCannon:
 		Speed: 500
 		Image: purpBullet
 		Trail: purpBullet
-		Inaccuracy: 1c512
+		Inaccuracy: 1c0
 		ContrailLength: 5
 		Shadow: true
 		Palette: playerscrin
@@ -325,7 +335,7 @@ DestroyerCannon:
 	Inherits: ArtilleryWarhead
 	ReloadDelay: 150
 	Range: 16c0
-	MinRange: 5c0
+	MinRange: 4c0
 	Report: 120mmf.aud
 	Burst: 1
 	Inaccuracy: 2c0
@@ -338,11 +348,11 @@ DestroyerCannon:
 		Shadow: false
 		Angle: 62
 	Warhead@1Dam: SpreadDamage
-		Spread: 600
-		Damage: 80
+		Spread: 256
+		Damage: 110
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
-		Explosions: destroexp
+		Explosions: scrinpulse2
 		ImpactSound: expnew14.aud
 		InvalidImpactTypes: Water
 	Warhead@3EffWater: CreateEffect
@@ -432,11 +442,9 @@ DronePlane:
 	Range: 11c0
 	MinRange: 2c0
 	Report: 120mmf.aud
-	Burst: 1
-	BurstDelay: 5
 	ValidTargets: Ground, Air
 	Projectile: Missile
-		Speed: 240
+		Speed: 360
 		Image: destroshell
 		Trail: blueballminitrail
 		Palette: pips

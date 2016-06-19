@@ -328,28 +328,6 @@ BHS:
 		Prerequisites: barracks.upgraded
 	RenderSprites:
 
-BLACKHANDDUMMY:
-	Inherits: ^BasicBuilding
-	Targetable:
-		TargetTypes:
-	-WithSpriteBody:
-	-WithBuildingExplosion:
-	-ShakeOnDeath:
-	AutoSelectionSize:
-	-UpdatesPlayerStatistics:
-	Selectable:
-		Bounds: 1,1
-	SelfHealing:
-		Step: -10
-		HealIfBelow: 200
-	RenderSprites:
-	Health:
-		HP: 5
-		NotifyAppliedDamage: False
-	Explodes:
-		Weapon: UnitExplodeSmall
-		EmptyWeapon: UnitExplodeSmall
-		
 ############################################
 # Mutant
 ############################################
@@ -711,7 +689,7 @@ LEGIO:
 		Speed: 60
 	Armament:
 		Weapon: LegioNeedler
-		LocalOffset: 500,250,800
+		LocalOffset: 350,250,800
 		FireDelay: 5
 	AttackFrontal:
 		Voice: Attack
@@ -1257,53 +1235,6 @@ CYC2:
 ################################################
 # Non Combat Cyborgs
 ################################################
-CABALMONEYDUMMY:
-	Inherits: ^BasicBuilding
-	Targetable:
-		TargetTypes:
-	-WithSpriteBody:
-	-WithBuildingExplosion:
-	-ShakeOnDeath:
-	-UpdatesPlayerStatistics:
-	-SoundOnDamageTransition:
-	AutoSelectionSize:
-	Selectable:
-		Bounds: 1,1
-	SelfHealing:
-		Step: -10
-		HealIfBelow: 200
-	RenderSprites:
-		Image: blackhanddummy
-	Health:
-		HP: 5
-		NotifyAppliedDamage: False
-	CashTrickler:
-		Amount: 10
-		Period: 999
-
-CABALMONEYDUMMY1:
-	Inherits: ^BasicBuilding
-	Targetable:
-		TargetTypes:
-	-WithSpriteBody:
-	-WithBuildingExplosion:
-	-ShakeOnDeath:
-	-SoundOnDamageTransition:
-	AutoSelectionSize:
-	-UpdatesPlayerStatistics:
-	Selectable:
-		Bounds: 1,1
-	SelfHealing:
-		Step: -5
-		HealIfBelow: 110
-	RenderSprites:
-		Image: blackhanddummy
-	Health:
-		HP: 5
-		NotifyAppliedDamage: False
-	CashTrickler:
-		Amount: 250
-		Period: 999
 
 WORKER:
 	Inherits: ^Soldier
@@ -1409,3 +1340,4 @@ cybdog:
 		Voice: Attack
 	SelectionDecorations:
 		VisualBounds: 16,31,0,-10
+		

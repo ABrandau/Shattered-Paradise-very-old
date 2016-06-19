@@ -38,6 +38,11 @@ Player:
 	PlaceBuilding:
 		Palette: placebuilding
 	SupportPowerManager:
+	ProvidesTechPrerequisite@normal:
+		Name: No Superweapons
+	ProvidesTechPrerequisite@sw:
+		Name: Superweapons ON
+		Prerequisites: sw
 	ScriptTriggers:
 	MissionObjectives:
 	ConquestVictoryConditions:

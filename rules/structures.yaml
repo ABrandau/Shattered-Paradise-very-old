@@ -321,10 +321,10 @@ GAPLUG:
 		Description: Can be upgraded for additional technology.
 	Selectable:
 		Bounds: 115,72,0,-12
-	# Buildable:
-		# BuildPaletteOrder: 100
-		# Prerequisites: proc, gatech, ~structures.gdi
-		# Queue: Building
+	Buildable:
+		BuildPaletteOrder: 100
+		Prerequisites: proc, gatech, ~structures.gdi, ~sw
+		Queue: Building
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 2,3
@@ -352,7 +352,7 @@ GAPLUG:
 		UpgradeMinEnabledLevel: 1
 		Icon: ioncannon
 		Effect: ionbeam
-		ChargeTime: 180
+		ChargeTime: 240
 		Description: Ion Cannon
 		LongDesc: Initiate an Ion Cannon strike.\nApplies instant damage to a small area.
 		BeginChargeSound:
@@ -470,10 +470,10 @@ GAPLUG2:
 	Tooltip:
 		Name: Seeker Control
 		Description: Enables use of the hunter-seeker droid.
-	# Buildable:
-		# Queue: Defense
-		# BuildPaletteOrder: 1000
-		# Prerequisites: gaplug, gatech, gaweap, ~structures.gdi
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 1000
+		Prerequisites: gaplug, gatech, gaweap, ~structures.gdi, ~sw
 	Plug:
 		Type: plug.hunterseeker
 	Power:
@@ -486,10 +486,10 @@ GAPLUG3:
 	Tooltip:
 		Name: Ion Cannon Uplink
 		Description: Enables use of the Ion Cannon.
-	# Buildable:
-		# Queue: Defense
-		# BuildPaletteOrder: 1000
-		# Prerequisites: gaplug, gatech, ~structures.gdi
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 1000
+		Prerequisites: gaplug, gatech, ~structures.gdi, ~sw
 	Plug:
 		Type: plug.ioncannon
 	Power:
@@ -854,10 +854,11 @@ NATECH:
 
 NATMPL:
 	Inherits: ^Building
-	# Buildable:
-		# Queue: Building
-		# BuildPaletteOrder: 200
-		# Prerequisites: natech, ~structures.nod
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 200
+		Prerequisites: natech, ~structures.nod, ~sw
+		BuildLimit: 1
 	ProvidesPrerequisite@buildingname:
 	Valued:
 		Cost: 2000
@@ -1254,7 +1255,7 @@ MUHALL:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 110, 60, 3, -4
-
+		
 MUSTABLE:
 	Inherits: ^Building
 	Inherits@1: ^MutRender
@@ -1609,8 +1610,8 @@ SCRDEPOT:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
 	Building:
-		Footprint: xxx xxx
-		Dimensions: 3,2
+		Footprint: _x_ xxx _x_
+		Dimensions: 3,3
 	Selectable:
 		Bounds: 110, 60, 3, -4
 	Health:

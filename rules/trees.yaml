@@ -13,6 +13,9 @@ BIGBLUE:
 		Name: Large Blue Tiberium Crystal
 	RenderSprites:
 		Palette: bluetiberium
+	WithIdleOverlay:
+		Sequence: light
+		Palette: tibcrystalpal
 	RadarColorFromTerrain:
 		Terrain: BlueTiberium
 	SeedsResource:

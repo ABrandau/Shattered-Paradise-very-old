@@ -572,6 +572,19 @@ WETP:
 	SpawnActorOnDeath:
 		Actor: WETP.Husk
 
+WETPSW:
+	Inherits: WETP
+	-Buildable:
+	-Selectable:
+	Cargo:
+		MaxWeight: 10
+		Types: Infantry, Vehicle, Aircraft
+	ParaDrop:
+	-RevealsShroud:
+	-Targetable@GROUND:
+	-Targetable@AIRBORNE:
+	RenderVoxels:
+		Image: wetp
 ##########################################################
 # Scrin
 ##########################################################
@@ -889,10 +902,10 @@ SCRBATTLESHIP:
 	Inherits@3: ^SelfReloads
 	Inherits@4: ^BasicStealthDetection
 	Valued:
-		Cost: 2500
+		Cost: 2000
 	Tooltip:
 		Name: Battlecruiser
-		Description: Scrin spacecraft designed for combat on front lines.\nEquipped with blaster turrets and two fighters.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft.
+		Description: Scrin spacecraft designed for frontline combat.\nEquipped with blaster turrets.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft.
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 21
@@ -934,7 +947,7 @@ SCRBATTLESHIP:
 	-RenderVoxels:
 	-WithVoxelBody:
 	RenderSprites:
-		Scale: 0.8
+		# Scale: 0.8
 	WithFacingSpriteBody:
 	WithShadow:
 	BodyOrientation:
@@ -948,7 +961,7 @@ SCRINCOUNCIL:
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 22
-		Prerequisites: ~scrair, scrtech
+		Prerequisites: ~scrair, scrweap
 		BuildLimit: 1
 	Valued:
 		Cost: 2500
@@ -1005,6 +1018,69 @@ SCRINCOUNCIL:
 	-WithVoxelBody:
 	SpawnActorOnDeath:
 		Actor: SCRCOUNCIL.Husk
+
+MOTHERSHIP:
+	Inherits: ^Helicopter
+	Inherits@2: ^ScrinRender
+	Inherits@3: ^SelfReloads
+	Inherits@4: ^BasicStealthDetection
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Mothership
+		Description: Scrin spacecraft designed for combat on front lines.\nEquipped with blaster turrets and two fighters.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft.
+	# Buildable:
+		# Queue: Air
+		# BuildPaletteOrder: 21
+		# Prerequisites: ~scrair, scrtech
+	Voiced:
+		VoiceSet: Limpet
+	Selectable:
+		Bounds: 175,125
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 80
+		Repulsable: true
+		MoveIntoShroud: true
+		TakeoffSound: orcaup1.aud
+		LandingSound: orcadwn1.aud
+		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green
+	Health:
+		HP: 900
+	Armor:
+		Type: Heavy
+	SelfHealing:
+		Step: 4
+		Delay: 75
+		HealIfBelow: 100
+	RevealsShroud:
+		Range: 14c0
+		Type: CenterPosition
+	Armament:
+		Weapon: BattleshipCannon
+		LocalOffset:0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
+	AttackTurreted:
+	Turreted:
+	Transforms:
+		IntoActor: mothershipdep
+	AmmoPool:
+		Ammo: 25
+		PipCount: 0
+		ReloadTicks: 5
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+	AutoTarget:
+	-RenderVoxels:
+	-WithVoxelBody:
+	WithInfantryBody:
+	RenderSprites:
+		# Scale: 0.8
+	# WithFacingSpriteBody:
+	WithShadow:
+	BodyOrientation:
+		QuantizedFacings: 32
+	SpawnActorOnDeath:
+		Actor: SCRBATTLESHIP.Husk
 
 ##########################################################
 # CABAL
