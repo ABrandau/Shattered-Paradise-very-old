@@ -422,7 +422,6 @@ TractorBeam:
 	Projectile: Bullet
 		Speed: 100c0
 		Image: blueball
-		TrailImage: blueballminitrail
 		Shadow: true
 		Palette: pips
 	Warhead@1Dam: SpreadDamage
@@ -438,12 +437,12 @@ TractorBeam:
 
 DronePlane:
 	Inherits: ^BombWarhead
-	ReloadDelay: 1
+	ReloadDelay: 150
 	Range: 11c0
 	MinRange: 2c0
 	Report: 120mmf.aud
-	ValidTargets: Ground, Air
-	Projectile: Missile
+	ValidTargets: Infantry, Vehicle, Building
+	Projectile: Bullet
 		Speed: 360
 		Image: destroshell
 		TrailImage: blueballminitrail
@@ -451,9 +450,9 @@ DronePlane:
 		Angle: 50
 	Warhead@1Dam: SpreadDamage
 		Spread: 150
-		Damage: 80
+		Damage: 40
 		ValidTargets: Ground, Air
-		DamageTypes: Prone50Percent, TriggerProne, ScrinDroneDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: destroexp
 		ImpactSound: expnew14.aud
@@ -465,3 +464,6 @@ DronePlane:
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
+	Warhead@5Actor: SpawnActor
+		Actors: VISC_LRG_SCRIN
+		FallRate: 5000

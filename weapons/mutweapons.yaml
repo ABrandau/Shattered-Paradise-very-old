@@ -342,7 +342,7 @@ WolfAcid:
 	Warhead@emp: GrantUpgrade
 		Range: 300
 		Duration: 20
-		Upgrades: ForgInfantrydeBuff
+		Upgrades: forgbulldebuff
 
 BullAcid:
 	Inherits: ^AcidWarhead
@@ -372,7 +372,7 @@ BullAcid:
 	Warhead@4emp: GrantUpgrade
 		Range: 300
 		Duration: 20
-		Upgrades: ForgInfantrydeBuff
+		Upgrades: forgbulldebuff
 		
 		
 DeathclawBlow:
@@ -411,7 +411,7 @@ IFVulcan:
 		Explosions: water_piffs
 		ExplosionPalette: ra
 		ValidImpactTypes: Water	
-	
+
 LeonidCannon:
 	Inherits: ^APWarhead
 	ReloadDelay: 75
@@ -474,7 +474,6 @@ QuadFireAA:
 	Projectile: Missile
 		Speed: 600
 		Image: 120mm
-		RangeLimit: 10		
 		HorizontalRateOfTurn: 20
 		VerticalRateOfTurn: 20
 		Palette: ra

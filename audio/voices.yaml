@@ -119,6 +119,7 @@ Limpet:
 	Voices:
 		Select: limpc3, limpc4, limpq3, limpq4
 		Move: limpc3, limpc4, limpq3, limpq4
+		Unload: limpc3, limpc4, limpq3, limpq4
 		Action: limpc3, limpc4, limpq3, limpq4
 		Attack: limpc3, limpc4, limpq3, limpq4
 		Die: 69-n102,

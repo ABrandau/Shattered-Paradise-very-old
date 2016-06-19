@@ -23,7 +23,7 @@ METEORPLANE:
 		Types: Infantry, Vehicle, Aircraft
 	Aircraft:
 		Speed: 200
-		CruiseAltitude: 4c0
+		# CruiseAltitude: 4c0
 	AttackBomber:
 		Bombs: Secondary
 		Guns: primary

@@ -71,27 +71,6 @@
 		UpgradeTypes: empdisable
 		Modifier: 0
 
-^StasisDisable:
-	UpgradeOverlay@StasisDisable:
-		UpgradeTypes: StasisDisable
-		UpgradeMinEnabledLevel: 1
-		Palette: disabled
-	DisableOnUpgrade@StasisDisable:
-		UpgradeTypes: StasisDisable
-		UpgradeMinEnabledLevel: 1
-	TimedUpgradeBar@StasisDisable:
-		Upgrade: StasisDisable
-		Color: FFFFFF
-	PowerMultiplier@StasisDisable:
-		UpgradeTypes: StasisDisable
-		Modifier: 0
-	DamageMultiplier@StasisDisable:
-		UpgradeTypes: StasisDisable
-		Modifier: 0
-	RangeMultiplier@StasisDisable:
-		UpgradeTypes: StasisDisable
-		Modifier: 0
-
 ^ROTreduction:
 	UpgradeOverlay@ROTreduction:
 		UpgradeTypes: ROTreduction
@@ -134,14 +113,14 @@
 ^ForgBullBuff:
 	ReloadDelayMultiplier@ForgBullBuff:
 		Modifier: 80
-		UpgradeTypes: ForgInfantryBuff
+		UpgradeTypes: forgbullbuff
 	SpeedMultiplier@ForgBullBuff:
 		Modifier: 110
-		UpgradeTypes: ForgInfantryBuff
+		UpgradeTypes: forgbullbuff
 	SelfHealing@ForgBullBuff:
-		Step: 3
+		Step: 1
 		Delay: 50
-		UpgradeTypes: ForgInfantryBuff
+		UpgradeTypes: forgbullbuff
 		UpgradeMinEnabledLevel: 1
 	WithDecoration@tibicon:
 		Image: tibicon
@@ -149,23 +128,23 @@
 		ReferencePoint: Bottom, Left
 		Palette: mouse
 		ShowToEnemies: true
-		UpgradeTypes: ForgInfantryBuff
+		UpgradeTypes: forgbullbuff
 		UpgradeMinEnabledLevel: 1
 
 ^ForgBulldebuff:
 	ReloadDelayMultiplier@ForgBulldebuff:
 		Modifier: 120
-		UpgradeTypes: ForgBulldebuff
+		UpgradeTypes: forgbulldebuff
 	SpeedMultiplier@ForgBulldebuff:
 		Modifier: 90
-		UpgradeTypes: ForgBulldebuff
+		UpgradeTypes: forgbulldebuff
 	WithDecoration@tibicon2:
 		Image: tibicon
 		Sequence: idle
 		ReferencePoint: Bottom, Left
 		Palette: mouse
 		ShowToEnemies: true
-		UpgradeTypes: ForgInfantryBuff
+		UpgradeTypes: forgbullbuff
 		UpgradeMinEnabledLevel: 1
 
 ^NodToxindebuff:
@@ -182,15 +161,8 @@
 ^EmpDisableMobile:
 	Inherits: ^EmpDisable
 	Mobile:
-		UpgradeTypes: notmobile, StasisDisable
+		UpgradeTypes: notmobile
 		UpgradeMaxEnabledLevel: 0
-
-^eagleboost:
-	DamageMultiplier:
-		UpgradeTypes: eagleboost
-		Modifier: 90
-		BaseLevel: 1
-		UpgradeMinEnabledLevel: 1
 
 ^tractorstop:
 	SpeedMultiplier:
@@ -242,8 +214,6 @@
 		Modifier: 80
 		UpgradeTypes: FirestormGen
 		BaseLevel: 1
-	# DamageMultiplier:
-		# Modifier: 75
 	SelectionDecorations:
 		Palette: pips
 	Selectable:
@@ -281,7 +251,6 @@
 ^Building:
 	Inherits@1: ^BasicBuilding
 	Inherits@2: ^EmpDisable
-	Inherits@3: ^StasisDisable
 	GivesBuildableArea:
 	Capturable:
 	RepairableBuilding:
@@ -309,11 +278,11 @@
 	CaptureNotification:
 	Sellable:
 		SellSounds: cashturn.aud
-	SpawnActorOnDeath@cabalcrate:
-		Actor: CABALMONEYDUMMY1
+	SpawnActorOnDeath:
+		Actor: cabalmoneydummy1
 		Probability: 80
 		OwnerType: Killer
-		DeathType: CabalDeathCrate
+		DeathType: cabaldeathcrate
 		RequiresLobbyCreeps: true
 	WithMakeAnimation:
 	ThrowsShrapnel:
@@ -409,11 +378,8 @@
 	Inherits@2: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
 	Inherits@5: ^WebDisable
-	Inherits@7: ^eagleboost
-	Inherits@9: ^ForgBulldebuff
 	Inherits@10: ^NodToxindebuff
 	Inherits@12: ^nomnomnom
-	Inherits@13: ^StasisDisable
 	DrawLineToTarget:
 	TemporaryOwnerManager:
 	Cloak@CLOAKGENERATOR:
@@ -437,7 +403,6 @@
 		Range: 6c0
 	Mobile:
 		Voice: Move
-		UpgradeTypes: StasisDisable
 		Speed: 71
 		Crushes: crate
 		SharesCell: true
@@ -475,7 +440,6 @@
 			SmallExplosionDeath: 2
 			HeadshotDeath: 3
 			CabalDeath: 2
-			ScrinDroneDeath: 1
 			CabalDeathCrate: 2
 			TiberiumDeath: 3
 			BlackHandRfle: 2
@@ -549,12 +513,6 @@
 		OwnerType: Victim
 		DeathType: BlackHandRfle
 		RequiresLobbyCreeps: false
-	SpawnActorOnDeath@scrmine:
-		Actor: scrmine
-		Probability: 100
-		OwnerType: Killer
-		DeathType: ScrinDroneDeath
-		RequiresLobbyCreeps: false
 	Guard:
 		Voice: Move
 	Guardable:
@@ -569,6 +527,7 @@
 
 ^Soldier:
 	Inherits: ^Infantry
+	Inherits@9: ^ForgBulldebuff
 	MustBeDestroyed:
 	TakeCover:
 		DamageModifiers:
@@ -606,11 +565,17 @@
 		CrushedSequence: die-crushed
 		CrushedSequencePalette: player
 		CrushedPaletteIsPlayerPalette: true
+		
+^Beast:
+	Inherits: ^Mutant
+	-TakeCover:
 
 ^ScrinSoldier:
 	Inherits: ^Infantry
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^batteryboost
+	Inherits@4: ^ScrinDeathAnim
+	Inherits@9: ^ForgBulldebuff
 	Voiced:
 		VoiceSet: Limpet
 	MustBeDestroyed:
@@ -633,6 +598,7 @@
 
 ^Cyborg:
 	Inherits@1: ^Infantry
+	Inherits@9: ^ForgBulldebuff
 	Inherits@2: ^EmpDisableMobile
 	-SpawnActorOnDeath@conversion:
 	ExplosionOnDamageTransition:
@@ -673,6 +639,7 @@
 
 ^CivilianInfantry:
 	Inherits: ^Infantry
+	Inherits@9: ^ForgBulldebuff
 	Voiced:
 		VoiceSet: Civilian
 	Tooltip:
@@ -688,11 +655,9 @@
 	Inherits@2: ^ExistsInWorld
 	Inherits@3: ^EmpDisableMobile
 	Inherits@5: ^ROTreduction
-	Inherits@7: ^eagleboost
 	Inherits@9: ^NodToxindebuff
 	Inherits@10:^NodVehicleRepair
 	Inherits@11: ^nomnomnom
-	Inherits@12: ^StasisDisable
 	DrawLineToTarget:
 	TemporaryOwnerManager:
 	Mobile:
@@ -1213,6 +1178,7 @@
 		Type: Heavy
 	LineBuildNode:
 		Types: wall, gate
+	-WithDeathAnimation:
 	-Building:
 	-Capturable:
 	-GivesBuildableArea:
@@ -1231,6 +1197,7 @@
 		ClosingSound: gatedwn1.aud
 		TerrainTypes: Clear, Rough, Road, DirtRoad, Green, Sand, Pavement
 		BlocksProjectilesHeight: 640
+	-SpawnActorOnDeath:
 
 ^Gate_A:
 	Inherits: ^Gate
@@ -1262,6 +1229,8 @@
 		PlayerPalette: playerscrin
 	Cloak@CLOAKGENERATOR:
 		Palette: cloakscrin
+
+^ScrinDeathAnim:
 	WithDeathAnimation:
 		DeathSequencePalette: playerscrin
 		CrushedSequencePalette: playerscrin
@@ -1272,6 +1241,8 @@
 		PlayerPalette: playermut
 	Cloak@CLOAKGENERATOR:
 		Palette: cloakmut
+
+^MutDeathAnim:
 	WithDeathAnimation:
 		DeathSequencePalette: playermut
 		CrushedSequencePalette: playermut
@@ -1282,6 +1253,8 @@
 		PlayerPalette: playercab
 	Cloak@CLOAKGENERATOR:
 		Palette: cloakcab
+
+^CabDeathAnim:
 	WithDeathAnimation:
 		DeathSequencePalette: playercab
 		CrushedSequencePalette: playercab

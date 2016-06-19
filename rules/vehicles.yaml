@@ -269,10 +269,6 @@ HMEC:
 	AttackFrontal:
 		Voice: Attack
 	AutoTarget:
-	UpgradeActorsNear:
-		Upgrades: eagleboost
-		Range: 6c0
-		AffectsParent: false
 	Armament@MISSILES:
 		Weapon: MammothTusk
 		LocalOffset: -172,-260,854, -172,260,854
@@ -557,7 +553,7 @@ SGEN:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 16
-		Prerequisites: ~naweap, mastl
+		Prerequisites: ~naweap, nastlh
 	Mobile:
 		TurnSpeed: 6
 		Speed: 80
@@ -662,7 +658,7 @@ STNK:
 ################################################
 
 WOLF:
-	Inherits: ^Mutant
+	Inherits: ^Beast
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 27
@@ -683,13 +679,14 @@ WOLF:
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark
 	UpgradeActorsNear@lobo:
-		Upgrades: ForgInfantryBuff
+		Upgrades: forgbullbuff, forgbulldebuff
 		Range: 4c0
 	-Crushable:
 	-AutoTarget:
 	MineImmune:
 	Minelayer:
 		Mine: mumine
+		RearmBuildings:
 	AmmoPool:
 		Ammo: 5
 		PipCount: 5
@@ -708,7 +705,7 @@ WOLF:
 		AttackSequence: shoot
 
 DEATHCLAW:
-	Inherits: ^Mutant
+	Inherits: ^Beast
 	Inherits@1: ^MutRender
 	Buildable:
 		Queue: Vehicle
@@ -1452,6 +1449,7 @@ ECM:
 		Range: 11c0
 	Minelayer:
 		Mine: cabsentryturret
+		RearmBuildings:
 	AmmoPool:
 		InitialAmmo: 0
 		Ammo: 8

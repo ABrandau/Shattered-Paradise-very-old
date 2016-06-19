@@ -8,9 +8,9 @@ WestWood Studios Studios
 	
 OpenRA dev team for their effort in creating openra (no ORA, no SP).
 
-Scipción		: Got Nolt into 3D modelling.
-Penev & abcdefg30	: Saved the mod from countless bugs.
-Graion Dilach & Astor	: For their help when Nolt began to use this engine.
+Scipción		: Got me into 3D modelling.
+Penev, abcdefg30	: Saved the mod from countless bugs.
+Graion Dilach		: For his work on his own game logics.
 FiveAces		: Streaming and testing.
 SchismNavigator		: Worked on SP for some time.
 4XS			: For his help with concept art.

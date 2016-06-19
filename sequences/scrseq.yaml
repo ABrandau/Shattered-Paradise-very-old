@@ -409,7 +409,7 @@ drache:
 		Start: 1
 		Length: 20
 		Facings: 1
-		Tick: 100
+		Tick: 150
 	icon: dracheicon
 		Offset: 0, 0
 	idle:

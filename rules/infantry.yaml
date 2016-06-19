@@ -306,7 +306,6 @@ BHS:
 		VoiceSet: Oxanna
 	Armament@PRIMARY:
 		Weapon: BHRifle
-		UpgradeTypes: eliteweapon
 	RevealsShroud:
 		Range: 12c0
 	AttackFrontal:
@@ -320,8 +319,6 @@ BHS:
 		UpgradeMinEnabledLevel: 0
 		InitialDelay: 50
 		CloakDelay: 50
-		# CloakSound: cloak5.aud
-		# UncloakSound: cloak5.aud
 		IsPlayerPalette: true
 		UncloakOn: Attack
 	ProducibleWithLevel:
@@ -334,6 +331,7 @@ BHS:
 MARAUDER:
 	Inherits: ^Mutant
 	Inherits@1: ^MutRender
+	Inherits@2: ^MutDeathAnim
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 18
@@ -478,6 +476,7 @@ SEER:
 		Range: 11c0
 	Minelayer:
 		Mine: muward
+		RearmBuildings:
 	AmmoPool:
 		Ammo: 2
 		PipCount: 2
@@ -544,6 +543,7 @@ MUTFIEND:
 AWARRIOR:
 	Inherits: ^Mutant
 	Inherits@1: ^MutRender
+	Inherits@2: ^MutDeathAnim
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 23
@@ -579,6 +579,7 @@ AWARRIOR:
 PSYKER:
 	Inherits: ^Mutant
 	Inherits@1: ^MutRender
+	Inherits@2: ^MutDeathAnim
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 24
@@ -935,6 +936,7 @@ BUGCLONE:
 CABSENTRY:
 	Inherits: ^CabalDroneInfantry
 	Inherits@1: ^CabRender
+	Inherits@2: ^CabDeathAnim
 	Armor:
 		Type: None
 	Valued:
@@ -1238,10 +1240,6 @@ CYC2:
 
 WORKER:
 	Inherits: ^Soldier
-	# Buildable:
-		# Queue: Infantry
-		# BuildPaletteOrder: 10
-		# Prerequisites: ~gapile
 	Valued:
 		Cost: 120
 	Tooltip:
@@ -1256,9 +1254,6 @@ WORKER:
 		Voice: Move
 	Armament@PRIMARY:
 		Weapon: Minigun
-		UpgradeTypes: eliteweapon
-		UpgradeMaxEnabledLevel: 0
-		UpgradeMaxAcceptedLevel: 1
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:

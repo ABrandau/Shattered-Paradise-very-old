@@ -58,7 +58,7 @@ ScorpBuffer:
 	Warhead@Buff: GrantUpgrade
 		Range: 1c0
 		Duration: 125
-		Upgrades: ScorpBuff	
+		Upgrades: ScorpBuffer
 
 FiendBuffer:
 	ReloadDelay: 125

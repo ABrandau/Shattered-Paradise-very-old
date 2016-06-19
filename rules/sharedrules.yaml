@@ -3,10 +3,6 @@
 ######################################################
 E1:
 	Inherits: ^Soldier
-	# Buildable:
-		# Queue: Infantry
-		# BuildPaletteOrder: 10
-		# Prerequisites: ~barracks
 	Valued:
 		Cost: 120
 	Tooltip:
@@ -18,13 +14,6 @@ E1:
 		Speed: 71
 	Armament@PRIMARY:
 		Weapon: Minigun
-		UpgradeTypes: eliteweapon
-		UpgradeMaxEnabledLevel: 0
-		UpgradeMaxAcceptedLevel: 1
-	Armament@ELITE:
-		Weapon: M1Carbine
-		UpgradeTypes: eliteweapon
-		UpgradeMinEnabledLevel: 1
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:

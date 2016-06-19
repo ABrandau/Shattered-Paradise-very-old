@@ -323,7 +323,7 @@ GAPLUG:
 		Bounds: 115,72,0,-12
 	Buildable:
 		BuildPaletteOrder: 100
-		Prerequisites: proc, gatech, ~structures.gdi, ~sw
+		Prerequisites: proc, gatech, ~structures.gdi
 		Queue: Building
 	Building:
 		Footprint: xxx xxx
@@ -931,12 +931,12 @@ NASTLH:
 		EnableSound: cloak5.aud
 		DisableSound: cloak5.aud
 		AffectsParent: false
-	UpgradeActorsNear@mini:
-		Upgrades: cloakgeneratormini
-		Range: 12c0
-		EnableSound: cloak5.aud
-		DisableSound: cloak5.aud
-		AffectsParent: false
+	# UpgradeActorsNear@mini:
+		# Upgrades: cloakgeneratormini
+		# Range: 12c0
+		# EnableSound: cloak5.aud
+		# DisableSound: cloak5.aud
+		# AffectsParent: false
 	Selectable:
 		Bounds: 106, 48, 8, -6
 	SelectionDecorations:

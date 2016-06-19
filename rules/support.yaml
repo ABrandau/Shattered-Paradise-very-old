@@ -665,12 +665,6 @@ GAARTY:
 	WithVoxelBarrel:
 		LocalOffset: 0,0,-512
 	WithVoxelTurret:
-	Transforms:
-		IntoActor: art2
-		Facing: 96
-		TransformSounds: place2.aud
-		NoTransformSounds:
-		Voice: Move
 	WithMuzzleOverlay:
 
 NAMISL:
@@ -678,7 +672,7 @@ NAMISL:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 100
-		Prerequisites: natech, ~structures.nod, ~sw
+		Prerequisites: natech, ~structures.nod
 		BuildLimit: 1
 	Valued:
 		Cost: 2000
@@ -891,6 +885,7 @@ MUTSW1:
 		Queue: Defense
 		BuildPaletteOrder: 90
 		Prerequisites: tech, ~structures.mut
+		BuildLimit: 1
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -1009,10 +1004,10 @@ MUVENTI:
 		Range: 12c0
 		Type: cloakgenerator
 	UpgradeActorsNear@lobo:
-		Upgrades: ForgInfantryBuff
+		Upgrades: forgbullbuff
 		Range: 12c0
 	UpgradeActorsNear@qlo:
-		Upgrades: ForgInfantrydeBuff
+		Upgrades: forgbulldebuff
 		Range: 12c0
 		ValidStances: Enemy
 	RevealsShroud:
@@ -1195,8 +1190,8 @@ SCRDRONE:
 	Valued:
 		Cost: 900
 	Tooltip:
-		Name: Plasma Hive
-		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs All
+		Name: Hive Colony
+		Description: Advanced base defense.\nSpawns Visceroids near the enemies.\nRequires power to operate.\n  Strong vs All
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 60
@@ -1217,13 +1212,11 @@ SCRDRONE:
 		Type: Heavy
 	RevealsShroud:
 		Range: 12c0
+	AttackOmni:
 	Armament:
 		Weapon: DronePlane
+		ForceTargetStances: Enemy
 		LocalOffset: 0,0,800
-	AttackCharge:
-		ChargeAudio: obelpowr.aud
-		ReloadTime: 75
-		InitialChargeDelay: 75
 	Power:
 		Amount: -40
 	SelectionDecorations:
@@ -1236,6 +1229,7 @@ SCRSW1:
 		Queue: Defense
 		BuildPaletteOrder: 90
 		Prerequisites: tech, ~structures.scr
+		BuildLimit: 1
 	Valued:
 		Cost: 2000
 	Tooltip:

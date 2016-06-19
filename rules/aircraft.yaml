@@ -460,6 +460,7 @@ MUTBIRD:
 		Type: Wood
 	Minelayer:
 		Mine: eggs
+		RearmBuildings: muair
 	AmmoPool:
 		Ammo: 3
 		PipCount: 3

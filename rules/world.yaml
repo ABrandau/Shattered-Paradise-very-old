@@ -123,60 +123,11 @@ World:
 		ClassName: MCV Only
 		Factions: gdi, nod, cab, mut
 		BaseActor: mcv
-		SupportActors: ttnk, centurion
 	MPStartUnits@MCVscr:
 		Class: none
 		ClassName: MCV Only
 		Factions: scr
 		BaseActor: drached
-	# MPStartUnits@light.gdi:
-		# Class: light
-		# ClassName: Light
-		# Factions: gdi
-		# BaseActor: mcv
-		# SupportActors: e1,e1,e1,e2,e2
-		# InnerSupportRadius: 3
-		# OuterSupportRadius: 5
-	# MPStartUnits@light.nod:
-		# Class: light
-		# ClassName: Light
-		# Factions: nod
-		# BaseActor: mcv
-		# SupportActors: e1,e1,e1,e3,e3
-		# InnerSupportRadius: 3
-		# OuterSupportRadius: 5
-	# MPStartUnits@med.gdi:
-		# Class: medium
-		# ClassName: Medium
-		# Factions: gdi
-		# BaseActor: mcv
-		# SupportActors: e1,e1,e2,jumpjet,smech
-		# InnerSupportRadius: 3
-		# OuterSupportRadius: 5
-	# MPStartUnits@med.nod:
-		# Class: medium
-		# ClassName: Medium
-		# Factions: nod
-		# BaseActor: mcv
-		# SupportActors: e1,e1,e3,cyborg,bggy
-		# InnerSupportRadius: 3
-		# OuterSupportRadius: 5
-	# MPStartUnits@heavy.gdi:
-		# Class: heavy
-		# ClassName: Heavy
-		# Factions: gdi
-		# BaseActor: mcv
-		# SupportActors: e1,e2,e2,smech,mmch
-		# InnerSupportRadius: 3
-		# OuterSupportRadius: 5
-	# MPStartUnits@heavy.nod:
-		# Class: heavy
-		# ClassName: Heavy
-		# Factions: nod
-		# BaseActor: mcv
-		# SupportActors: e1,e3,bggy,bike,ttnk
-		# InnerSupportRadius: 3
-		# OuterSupportRadius: 5
 	MPStartLocations:
 	SpawnMPUnits:
 	CrateSpawner:

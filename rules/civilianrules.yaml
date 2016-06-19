@@ -8,11 +8,6 @@ GHOST:
 	Tooltip:
 		Name: Ghost Stalker
 		Description: Elite commando infantry, armed with\na railgun and C4.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft\n  Special Ability: Destroy Building with C4\nMaximum 1 can be trained.
-	# Buildable:
-		# Queue: Infantry
-		# BuildPaletteOrder: 50
-		# Prerequisites: ~gapile, gatech
-		# BuildLimit: 1
 	Voiced:
 		VoiceSet: Ghost
 	Mobile:
@@ -332,15 +327,47 @@ VISC_LRG:
 		Crushes: nada
 	RenderSprites:
 		Image: vislrg
-		
+
+VISC_LRG_SCRIN:
+	Inherits: ^Viceroid
+	Tooltip:
+		Name: Adult Visceroid
+		Description: 2 small visceroids combine into this
+	Health:
+		HP: 200
+	Armor:
+		Type: wood
+	Armament:
+		Weapon: SlimeAttack
+	-PoisonedByTiberium:
+	RejectsOrders:
+	AutoTarget:
+		ScanRadius: 8
+		InitialStance: AttackAnything
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall	
+	RevealsShroud:
+		Range: 4c0
+	AttackFrontal:
+		Voice: Attack
+	AttackWander:
+		WanderMoveRadius: 2
+		MinMoveDelayInTicks: 200
+		MaxMoveDelayInTicks: 360
+	SelfHealing:
+		Step: -20
+		Delay: 25
+		HealIfBelow: 200
+	Mobile:
+		Crushes: nada
+	RenderSprites:
+		Image: vislrg
+
 ZOMBIE:
 	Inherits: ^Soldier
 	Tooltip:
 		Name: Zombie
-	# Buildable:
-		# Queue: Infantry
-		# BuildPaletteOrder: 18
-		# Prerequisites: ~murax	
 	-GainsExperience:		
 	Health:
 		HP: 75
@@ -362,6 +389,7 @@ ZOMBIE:
 		Speed: 113
 		Crushes: nada
 	-SpawnActorOnDeath@conversion:	
+	-TakeCover:
 	Voiced:
 		VoiceSet: Fiend
 	Targetable:
@@ -378,14 +406,10 @@ ZOMBIE:
 		MaxMoveDelayInTicks: 45
 		
 CRAB:
-	Inherits: ^Soldier
-	Inherits@1: ^MutRender	
+	Inherits: ^Beast
+	Inherits@1: ^MutRender
 	Tooltip:
 		Name: Crab
-	# Buildable:
-		# Queue: Infantry
-		# BuildPaletteOrder: 18
-		# Prerequisites: ~murax	
 	-GainsExperience:		
 	Health:
 		HP: 200
@@ -421,13 +445,10 @@ CRAB:
 		
 BERSERKER:
 	Inherits: ^Soldier
-	Inherits@1: ^MutRender	
+	Inherits@1: ^MutRender
+	Inherits@2: ^MutDeathAnim
 	Tooltip:
 		Name: Berserker
-	# Buildable:
-		# Queue: Infantry
-		# BuildPaletteOrder: 18
-		# Prerequisites: ~murax	
 	-GainsExperience:		
 	Health:
 		HP: 250
@@ -454,6 +475,7 @@ BERSERKER:
 		Crushes: nada
 	Voiced:
 		VoiceSet: Fiend
+	-TakeCover:
 	Targetable:
 		TargetTypes: Infantry, Ground
 	Armament:
