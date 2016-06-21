@@ -21,6 +21,7 @@ METEORPLANE:
 	Cargo:
 		MaxWeight: 10
 		Types: Infantry, Vehicle, Aircraft
+	-AppearsOnRadar:
 	Aircraft:
 		Speed: 200
 		# CruiseAltitude: 4c0
@@ -34,31 +35,31 @@ METEORPLANE:
 	-AttackPlane:
 	Armament:
 		Weapon: MeteorRain
-		LocalOffset: 750, 750,0
+		LocalOffset: 3000, 3000,6000
 	Armament@1:
 		Weapon: MeteorRain
-		LocalOffset: -750, 750,0
+		LocalOffset: -3000, 3000,6000
 	Armament@2:
 		Weapon: MeteorRain
-		LocalOffset: -750, -750,0
+		LocalOffset: -3000, -3000,6000
 	Armament@3:
 		Weapon: MeteorRain
-		LocalOffset: 750, -750,0
+		LocalOffset: 3000, -3000,6000
 	Armament@4:
 		Weapon: MeteorRain
-		LocalOffset: 0, 0,0
+		LocalOffset: 0, 0,10000
 	Armament@5:
 		Weapon: MeteorRain
-		LocalOffset: 1500, 1000,0
+		LocalOffset: 3000, 4000,6000
 	Armament@6:
 		Weapon: MeteorRain
-		LocalOffset: -1500, 1000,0
+		LocalOffset: -3000, 4000,6000
 	Armament@7:
 		Weapon: MeteorRain
-		LocalOffset: -1500, -1000,0
+		LocalOffset: -3000, -4000,6000
 	Armament@8:
 		Weapon: MeteorRain
-		LocalOffset: 1500, -1000,0
+		LocalOffset: 3000, -4000,6000
 	Armament@9:
 		Weapon: MeteorRain
 	ParaDrop:
@@ -121,6 +122,27 @@ CABALMONEYDUMMY1:
 	CashTrickler:
 		Amount: 250
 		Period: 999
+
+METEORSHRNAPEL:
+	Inherits: ^Infantry
+	-Targetable:
+	-UpdatesPlayerStatistics:
+	-AutoSelectionSize:
+	-SelectionDecorations:
+	-Selectable:
+	-AutoTarget:
+	RenderSprites:
+		Image: blackhanddummy
+	SelfHealing:
+		Step: -5
+		HealIfBelow: 110
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+	ThrowsShrapnel:
+		Weapons: LargeDebris
+		Pieces: 3, 7
+		Range: 2c0, 5c0
 
 BLACKHANDDUMMY:
 	Inherits: ^DUMMYSTRUCTURE

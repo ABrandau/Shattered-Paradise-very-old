@@ -444,9 +444,9 @@ DronePlane:
 	ValidTargets: Infantry, Vehicle, Building
 	Projectile: Bullet
 		Speed: 360
-		Image: destroshell
-		TrailImage: blueballminitrail
-		Palette: pips
+		Image: viscproj
+		Shadow: true
+		Palette: effect
 		Angle: 50
 	Warhead@1Dam: SpreadDamage
 		Spread: 150
@@ -454,12 +454,13 @@ DronePlane:
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
-		Explosions: destroexp
+		Explosions: viscexplo
+		ExplosionPalette: effect
 		ImpactSound: expnew14.aud
 		InvalidImpactTypes: Water
 	Warhead@3EffWater: CreateEffect
-		Explosions: destroexp
-		ExplosionPalette: player
+		Explosions: viscexplo
+		ExplosionPalette: effect
 		ImpactSound: ssplash3.aud
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
@@ -467,3 +468,4 @@ DronePlane:
 	Warhead@5Actor: SpawnActor
 		Actors: VISC_LRG_SCRIN
 		FallRate: 5000
+		Range: 3

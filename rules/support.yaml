@@ -1216,11 +1216,51 @@ SCRDRONE:
 	Armament:
 		Weapon: DronePlane
 		ForceTargetStances: Enemy
-		LocalOffset: 0,0,800
+		LocalOffset: 0,0,1500
 	Power:
 		Amount: -40
 	SelectionDecorations:
 		VisualBounds: 88, 72, 0, -12
+
+SCREXTRACTOR:
+	Inherits: ^Defense
+	Inherits@2: ^ScrinRender
+	Inherits@3: ^TowerStealthDetection
+	Valued:
+		Cost: 750
+	Tooltip:
+		Name: Tiberium Extractor
+		Description: Low output extractor that passively seeds tiberium and\nadds money to the player.
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 60
+		Prerequisites: scrtech, ~structures.scr
+	WithBuildingExplosion:
+		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
+		Palette: apolbluealpha
+	-RenderRangeCircle:
+	Building:
+		Footprint: x
+		Dimensions: 1,1
+	Selectable:
+		Bounds: 40, 30, -3, -8
+	SeedsResource:
+		ResourceType: Tiberium
+		Interval: 200
+		MaxRange: 1
+	RequiresPower:
+	DisabledOverlay:
+	-AutoTarget:
+	Health:
+		HP: 600
+	Armor:
+		Type: wood
+	RevealsShroud:
+		Range: 4c0
+	Power:
+		Amount: -200
+	SelectionDecorations:
+		VisualBounds: 40, 36, -3, -8
 
 SCRSW1:
 	Inherits: ^Building
@@ -1603,7 +1643,46 @@ CABBLAST:
 		Amount: -100
 	SelectionDecorations:
 		VisualBounds: 40, 36, -3, -8
-		
+
+CABEYE:
+	Inherits: ^Building
+	Inherits@1: ^CabRender
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 95
+		Prerequisites: ~structures.cab, cabtech
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Eye of Cabal
+		Description: Provides vision on a great area, stealth\ndetection and also shrouds the enemy vision\nif no enemy units are nearby.
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Health:
+		HP: 750
+	Armor:
+		Type: Wood
+	DetectCloaked:
+		Range: 9c0
+	WithRangeCircle:
+		Range: 9c0
+		Type: cloakgenerator
+	CreatesShroud:
+		Range: 9c0
+	RevealsShroud:
+		Range: 16c0
+	Selectable:
+		Bounds: 90, 48, 0, -6
+	Power:
+		Amount: -100
+	Targetable:
+		TargetTypes: Building, Ground, C4, DetonateAttack
+	DisabledOverlay:
+	ProvidesPrerequisite@buildingname:
+	SelectionDecorations:
+		VisualBounds: 90, 84, 0, -12
+
 CABSW1:
 	Inherits: ^Defense
 	Inherits@1: ^CabRender

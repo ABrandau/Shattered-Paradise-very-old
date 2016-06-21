@@ -222,6 +222,7 @@ explosion:
 	destroexp: destroexp
 	cabexplo: cabexplo
 	#Scrin
+	viscexplo: viscexplo
 	alienpiff3: alienpiff3
 	alienpiff4: alienpiff4
 	alienpiff5: alienpiff5
@@ -298,6 +299,12 @@ large_smoke_trail:
 
 small_smoke_trail:
 	idle: smokey2
+		Length: *
+		ZOffset: 1023
+
+viscproj:
+	idle:
+		Offset: 0,6
 		Length: *
 		ZOffset: 1023
 

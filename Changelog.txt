@@ -14,8 +14,13 @@ Scrin:
 	Battlecruiser: Cost: 2500 -> 2000, Innacuracy: 1c512 -> 1c0.
 	Plasma Hive renamed to Hive Colony, it's damage has been set to 20 and now it spawns visceroids when attacking.
 	The hive's visceroids are uncontrollable and will loose health at a constant rate.
+	Added Scrin Tiberium extractor.
 Mutants:
 	Quad Cannon: AA Spread: 128 -> 192, AA Damage: 30 -> 22.
+CABAL:
+	Added Eye of CABAL.
+Neutral:
+	Visceroid Damage: 100 -> 75
 Graphical Changes:
 	Corrected some scrin weapons graphics.
 	Tiberium trees and crystals now make the surrounding area glow.

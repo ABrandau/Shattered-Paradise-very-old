@@ -1095,12 +1095,12 @@ scrtractor:
 		Start: 32
 		Facings: 32
 		Offset: -0,-12
-		ShadowStart: 129		
+		ShadowStart: 129
 	damaged-turret:
 		Start: 65
 		Facings: 32
 		Offset: -4, 0	
-		ShadowStart: 129		
+		ShadowStart: 129
 	make:
 		Length: 25
 		ShadowStart: 97
@@ -1132,8 +1132,36 @@ scrmine:
 	icon: muflakicon
 		Offset: 0, 0
 		UseTilesetCode: false	
-		
-		
+
+scrextractor:
+	Defaults:
+		Offset: 0, -12
+		UseTilesetCode: true
+	idle:
+		Start: 31
+		Length: 11
+		ShadowStart: 85
+	damaged-idle:
+		Start: 42
+		Length: 11
+		ShadowStart: 96
+	dead:
+		Start: 42
+		ShadowStart: 96
+		Tick: 400
+	make:
+		Length: 30
+		ShadowStart: 55
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: scrextractoricon
+		Offset: 0, 0
+		UseTilesetCode: false
+
 scrdrone:
 	Defaults:
 		Offset: 0, -24

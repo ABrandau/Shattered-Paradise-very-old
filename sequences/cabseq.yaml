@@ -1060,6 +1060,34 @@ cabrail:
 		Offset: 0, 0
 		UseTilesetCode: false
 
+cabeye:
+	Defaults:
+		Offset: 0, -24
+		UseTilesetCode: true
+	idle:
+		Start: 30
+		Length: 17
+		ShadowStart: 96
+		Tick: 70
+	damaged-idle:
+		Start: 48
+		Length: 17
+		ShadowStart: 114
+		Tick: 70
+	dead:
+	make:
+		Length: 29
+		ShadowStart: 66
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: cabeyeicon
+		Offset: 0, 0
+		UseTilesetCode: false
+
 cabsw1:
 	Defaults:
 		Offset: 0, -36

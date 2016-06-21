@@ -341,8 +341,10 @@ VISC_LRG_SCRIN:
 		Weapon: SlimeAttack
 	-PoisonedByTiberium:
 	RejectsOrders:
+	-UpdatesPlayerStatistics:
+	-AppearsOnRadar:	
 	AutoTarget:
-		ScanRadius: 8
+		ScanRadius: 5
 		InitialStance: AttackAnything
 	Explodes:
 		Weapon: UnitExplodeSmall

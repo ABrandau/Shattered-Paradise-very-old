@@ -916,7 +916,7 @@ NASTLH:
 		Sequence: pulse
 		PauseOnLowPower: true
 	WithRangeCircle:
-		Range: 12c0
+		Range: 10c0
 		Type: cloakgenerator
 	Power:
 		Amount: -300
