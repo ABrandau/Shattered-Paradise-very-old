@@ -1367,7 +1367,7 @@ SCRPOWR:
 	Selectable:
 		Bounds: 90, 48, 0, -6
 	Power:
-		Amount: 160
+		Amount: 150
 	InfiltrateForPowerOutage:
 	AffectedByPowerOutage:
 	Targetable:

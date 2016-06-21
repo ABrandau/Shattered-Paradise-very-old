@@ -341,7 +341,7 @@ DestroyerCannon:
 	Inaccuracy: 2c0
 	BurstDelay: 5
 	Projectile: Bullet
-		Speed: 240
+		Speed: 280
 		Image: destroshell
 		TrailImage: blueballminitrail
 		Palette: pips
