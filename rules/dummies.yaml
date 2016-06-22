@@ -26,8 +26,8 @@ METEORPLANE:
 		Speed: 200
 		# CruiseAltitude: 4c0
 	AttackBomber:
-		Bombs: Secondary
-		Guns: primary
+		Bombs: primary#Secondary
+		# Guns: primary
 	Health:
 		HP: 150
 	Armor:
@@ -68,6 +68,27 @@ METEORPLANE:
 	-Targetable@AIRBORNE:
 	-WithVoxelBody:
 	-RenderVoxels:
+
+METEORSHRNAPEL:
+	Inherits: ^Infantry
+	-Targetable:
+	-UpdatesPlayerStatistics:
+	-AutoSelectionSize:
+	-SelectionDecorations:
+	-Selectable:
+	-AutoTarget:
+	RenderSprites:
+		Image: blackhanddummy
+	SelfHealing:
+		Step: -10
+		HealIfBelow: 200
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+	ThrowsShrapnel:
+		Weapons: LargeDebris
+		Pieces: 3, 7
+		Range: 2c0, 5c0
 
 IONSTORMSPAWNER:
 	Inherits: ^DUMMYSTRUCTURE
@@ -122,27 +143,6 @@ CABALMONEYDUMMY1:
 	CashTrickler:
 		Amount: 250
 		Period: 999
-
-METEORSHRNAPEL:
-	Inherits: ^Infantry
-	-Targetable:
-	-UpdatesPlayerStatistics:
-	-AutoSelectionSize:
-	-SelectionDecorations:
-	-Selectable:
-	-AutoTarget:
-	RenderSprites:
-		Image: blackhanddummy
-	SelfHealing:
-		Step: -5
-		HealIfBelow: 110
-	Health:
-		HP: 5
-		NotifyAppliedDamage: False
-	ThrowsShrapnel:
-		Weapons: LargeDebris
-		Pieces: 3, 7
-		Range: 2c0, 5c0
 
 BLACKHANDDUMMY:
 	Inherits: ^DUMMYSTRUCTURE

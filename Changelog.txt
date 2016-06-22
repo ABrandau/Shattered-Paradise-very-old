@@ -5,6 +5,7 @@ NOD Changes:
 	Added a muzzle effect for the NOD obelisk and reduced the laser width.
 Scrin Changes:
 	Scrin extractor Power consumption: 200 -> 150, Cost: 800 -> 1000
+	Single Meteor Damage: 20 -> 100
 Forgotten  Changes:
 	Tiberian Fiends no longer "Take Cover" when hit.
 CABAL Changes:

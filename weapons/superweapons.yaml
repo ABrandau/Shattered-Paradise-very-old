@@ -153,22 +153,21 @@ ClusterMissile:
 MeteorRain:
 	Inherits: ^BombWarhead
 	ReloadDelay: 8
-	# Range: 1c0
-	Range: 2c0
+	Range: 3c0
 	ValidTargets: Ground, Vehicle, Building, Infantry, Water
-	Inaccuracy: 500
+	Inaccuracy: 400
 	Projectile: Bullet
 		Speed: 300
 		Image: meteor2
 		Palette: effect
 		Shadow: true
-		Inaccuracy: 500
+		Inaccuracy: 400
 		TrailImage: meteortrail #metstral
 		TrailPalette: effectalpha
 		TrailInterval: 1
 	Warhead@1Dam: SpreadDamage
 		Spread: 650
-		Damage: 20
+		Damage: 100
 		Falloff: 1000, 500, 250, 125, 75, 50, 25, 12, 0
 		ValidTargets: Ground, Vehicle, Building, Infantry, Water
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
