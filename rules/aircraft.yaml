@@ -1173,7 +1173,7 @@ FIREFLY:
 		Cost: 700
 	Tooltip:
 		Name: Firefly
-		Description: Support drone, reduces\n enemy attack speed.\nof targetted vehicles.\nDetects cloaked units.\n Unarmed.
+		Description: Support drone, reduces enemy attack speed.\nof targetted vehicles.\nDetects cloaked units.\n Unarmed.
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 20

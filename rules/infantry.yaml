@@ -508,6 +508,7 @@ MUTFIEND:
 		Shape: Circle
 			Radius: 213
 	-Crushable:
+	-TakeCover:
 	Armor:
 		Type: none
 	Mobile:

@@ -63,7 +63,7 @@ Packages:
 	sp|bits/audio/gdi
 	sp|bits/pal
 	sp|bits/anims/icon
-	sp|bits/anims/effects
+	sp|bits/anims/muzzle
 	sp|bits/anims/explosions
 	sp|bits/anims/proyectiles
 	sp|bits/anims/trail
@@ -233,7 +233,7 @@ Translations:
 
 LoadScreen: LogoStripeLoadScreen
 	Image: sp|uibits/loadscreen.png
-	Text: Exterminating the Martian race..., Sending the tacitus to Earth..., Building Civilization..., Allowing tiberium to grow..., Starting the third tiberian war..., Reinstalling bugs...
+	Text: Exterminating the Martian race..., Sending the tacitus to Earth..., Developing human civilization..., Allowing Tiberium to go rampant...,Increasing political tension..., Reinstalling bugs..., Alerting the Scrin...
 
 ServerTraits:
 	LobbyCommands

@@ -512,9 +512,12 @@ NAOBEL:
 		HP: 600
 	Armor:
 		Type: Heavy
+	WithMuzzleOverlay:
 	Armament:
 		Weapon: ObeliskLaserFire
 		LocalOffset: 1400,210,700
+		MuzzleSequence: muzzle
+		MuzzlePalette: obelpal
 	AttackCharge:
 		ChargeAudio: obelpowr.aud
 		ReloadTime: 50
@@ -1227,7 +1230,7 @@ SCREXTRACTOR:
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^TowerStealthDetection
 	Valued:
-		Cost: 800
+		Cost: 1000
 	Tooltip:
 		Name: Tiberium Extractor
 		Description: Low output extractor that passively seeds tiberium and\nadds money to the player.
@@ -1258,7 +1261,7 @@ SCREXTRACTOR:
 	RevealsShroud:
 		Range: 4c0
 	Power:
-		Amount: -200
+		Amount: -150
 	SelectionDecorations:
 		VisualBounds: 40, 36, -3, -8
 
@@ -1625,7 +1628,7 @@ CABBLAST:
 	RequiresPower:
 	DisabledOverlay:
 	Health:
-		HP: 500
+		HP: 600
 	Armor:
 		Type: Light
 	BodyOrientation:
@@ -1640,7 +1643,7 @@ CABBLAST:
 		Weapon: BlasterProton
 		LocalOffset: 512,0,512
 	Power:
-		Amount: -100
+		Amount: -75
 	SelectionDecorations:
 		VisualBounds: 40, 36, -3, -8
 
@@ -1671,11 +1674,11 @@ CABEYE:
 	CreatesShroud:
 		Range: 9c0
 	RevealsShroud:
-		Range: 16c0
+		Range: 19c0
 	Selectable:
 		Bounds: 90, 48, 0, -6
 	Power:
-		Amount: -100
+		Amount: -50
 	Targetable:
 		TargetTypes: Building, Ground, C4, DetonateAttack
 	DisabledOverlay:

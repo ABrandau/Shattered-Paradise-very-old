@@ -1076,6 +1076,11 @@ naobel:
 	make: ntobelmk
 		Length: 19
 		ShadowStart: 19
+	muzzle: lightmuzzle
+		Offset: 0, 0
+		Length: *
+		UseTilesetCode: false
+		BlendMode: Additive
 	emp-overlay: emp_fx01
 		Length: *
 		Offset: 0, 0
@@ -1197,6 +1202,7 @@ blackhanddummy:
 	idle: dot
 	stand: dot
 	icon: apchicon
+	run: dot
 
 fire:
 	idle: dot

@@ -486,7 +486,7 @@ ObeliskLaserFire:
 	Range: 9c0
 	Report: obelray1.aud
 	Projectile: LaserZap
-		Width: 85
+		Width: 75
 		ZOffset: 2047
 	Warhead@1Dam: SpreadDamage
 		Spread: 42

@@ -417,13 +417,13 @@ WaspBazooka:
 	Burst: 1
 	ValidTargets: Ground, Air
 	Projectile: Missile
-		Speed: 200
+		Speed: 250
 		Blockable: false
 		Shadow: true
 		Inaccuracy: 128
 		Image: DRAGON
 		TrailImage: small_smoke_trail
-		RateOfTurn: 8
+		RateOfTurn: 16
 		RangeLimit: 15c0
 		Palette: ra
 	Warhead@1Dam: SpreadDamage

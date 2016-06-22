@@ -145,6 +145,10 @@
 		Name: apolredalpha
 		BasePalette: apred
 		Alpha: 0.8
+	PaletteFromPaletteWithAlpha@obelpal:
+		Name: obelpal
+		BasePalette: apred
+		Alpha: 0.6
 	PaletteFromFile@apgreen:
 		Name: apgreen
 		Filename: apolgren.pal

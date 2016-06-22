@@ -92,6 +92,7 @@ paladin2:
 	icon: sentinelicon	
 
 cybdog:
+	Inherits: ^EmpOverlay
 	Defaults:
 		Tick: 80
 	stand:
