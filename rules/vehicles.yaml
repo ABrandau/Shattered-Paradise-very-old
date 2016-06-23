@@ -899,6 +899,9 @@ MLRS:
 	Armament:
 		Weapon: tiberianrocket
 		LocalOffset: -50,0,410
+	Armament@2:
+		Weapon: tiberianrocket2
+		LocalOffset: -50,0,410
 	AttackTurreted:
 		Voice: Attack
 	Turreted:

@@ -1,6 +1,8 @@
 ﻿YEAR - MONTH - DAY
 
 [2016 - xx - xx]
+General Changes:
+	Tiberium gas clouds added to the game.
 NOD Changes:
 	Added a muzzle effect for the NOD obelisk and reduced the laser width.
 Scrin Changes:
@@ -8,6 +10,7 @@ Scrin Changes:
 	Single Meteor Damage: 20 -> 100
 Forgotten  Changes:
 	Tiberian Fiends no longer "Take Cover" when hit.
+	Ostwind damage per rocket: 55 -> 40, Ostwinds now spawn two tiberian clouds per burst.
 CABAL Changes:
 	Eye of CABAL power consumption: 100 -> 50, vision: 16c0 -> 19c0
 	Wasp: Rocket speed: 200 -> 250, rocket rot: 8 -> 16

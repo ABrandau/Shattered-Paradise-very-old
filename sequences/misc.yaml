@@ -200,6 +200,7 @@ explosion:
 	fire2: fire2
 	fire3: fire3
 	fire4: fire4
+	gasclouddeath: cloud1d
 	#Nod
 	smokebomb1: smokebomb1
 	smokebomb2: smokebomb2

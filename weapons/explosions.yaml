@@ -32,6 +32,39 @@ SmallPlaneExplode:
 UnitExplode:
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
+		Damage: 80
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Versus:
+			None: 90
+			Wood: 75
+			Light: 60
+			Heavy: 25
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: large_twlt
+		ImpactSound: expnew09.aud
+
+GasCloudDeathWeapon:
+	Inherits: ^RifleWarhead
+	Warhead@1Dam: SpreadDamage
+		Spread: 200
+		Damage: 40
+		# Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Versus:
+			None: 90
+			Wood: 75
+			Light: 60
+			Heavy: 25
+		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeath
+
+GasCloudDeathWeapon2:
+	Inherits: GasCloudDeathWeapon
+	Warhead@2Eff: CreateEffect
+		Explosions: gasclouddeath
+
+VeinholeExplosion:
+	Warhead@1Dam: SpreadDamage
+		Spread: 426
 		Damage: 50
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
@@ -43,6 +76,8 @@ UnitExplode:
 	Warhead@2Eff: CreateEffect
 		Explosions: large_twlt
 		ImpactSound: expnew09.aud
+	Warhead@3Veinholekill: DestroyResource
+		Size: 30,0
 
 ScrinUnitExplode:
 	Warhead@1Dam: SpreadDamage

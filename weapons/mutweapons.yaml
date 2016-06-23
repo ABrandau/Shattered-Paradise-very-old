@@ -489,7 +489,45 @@ TiberianRocket:
 	Inherits: ArtilleryWarhead
 	ReloadDelay: 250
 	Range: 12c0
-	Burst: 10
+	Burst: 8
+	Report: rketinf1.aud
+	ValidTargets: Ground
+	MinRange: 3c0
+	Projectile: Bullet
+		MaximumLaunchSpeed: 213
+		Speed: 350
+		Blockable: false
+		Shadow: true
+		Angle: 62	
+		Inaccuracy: 3c0
+		Image: DRAGON
+		TrailImage: small_smoke_trail
+		HorizontalRateOfTurn: 8
+		RangeLimit: 15c0
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 200
+		Damage: 40
+		ValidTargets: Ground
+		Versus:
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, TiberiumDeath
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@5Smu: LeaveSmudge
+		SmudgeType: SmallCrater	
+	Warhead@6Eff: CreateEffect
+		Explosions: tib_expsmall
+		ImpactSound: expnew12.aud
+		InvalidImpactTypes: Water, Air, AirHit
+
+TiberianRocket2:
+	Inherits: ArtilleryWarhead
+	ReloadDelay: 250
+	Range: 12c0
+	Burst: 2
 	Report: rketinf1.aud
 	ValidTargets: Ground
 	MinRange: 3c0
@@ -521,8 +559,12 @@ TiberianRocket:
 	Warhead@6Eff: CreateEffect
 		Explosions: tib_expsmall
 		ImpactSound: expnew12.aud
-		InvalidImpactTypes: Water, Air, AirHit		
-		
+		InvalidImpactTypes: Water, Air, AirHit
+	Warhead@5Actor: SpawnActor
+		Actors: cloud1
+		FallRate: 5000
+		Range: 3
+
 MiniNuke:
 	ValidTargets: Ground, Water, Air
 	Warhead@1Dam_impact: SpreadDamage

@@ -108,7 +108,14 @@ VEINHOLEDUMMY:
 		QuantizedFacings: 1
 
 VEINHOLE:
-	Inherits: VEINHOLEDUMMY
+	HiddenUnderShroud:
+	RadarColorFromTerrain:
+		Terrain: Veins
+	Building:
+		Footprint: xx xx
+		Dimensions: 2, 2
+	BodyOrientation:
+		QuantizedFacings: 1
 	AppearsOnRadar:
 	Tooltip:
 		Name: Veinhole
@@ -116,3 +123,15 @@ VEINHOLE:
 		Palette: player
 	WithSpriteBody:
 	AutoSelectionSize:
+	Selectable:
+		Priority: 3
+	ShakeOnDeath:
+	Targetable:
+		TargetTypes: Building, Ground, Veinhole
+	Health:
+		HP: 2000
+	Armor:
+		Type: Wood
+	Explodes:
+		Weapon: VeinholeExplosion
+		EmptyWeapon: VeinholeExplosion

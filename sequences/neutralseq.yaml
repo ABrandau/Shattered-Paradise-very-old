@@ -15,6 +15,14 @@ flameguy:
 		Facings: 1
 		Length: 104
 		ShadowStart: 192
+	
+cloud1:
+	idle:
+		Length: *
+	run:
+		Length: *
+	stand:
+		Length: *
 
 zombie:
 	Defaults:

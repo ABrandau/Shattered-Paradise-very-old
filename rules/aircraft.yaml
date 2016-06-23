@@ -1,4 +1,225 @@
 #######################################################
+#Neutral
+#######################################################
+CLOUD1:
+	Inherits: ^Helicopter
+	Inherits@3: ^SelfReloads
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Wasp
+		Description: Aerial drone equiped with dual\rocket launchers.\n  Strong vs Infantry, Light Vehicles\n  Weak vs Aircraft, Anti air units.
+	Selectable:
+		Bounds: 40,30
+	Aircraft:
+		CruiseAltitude: 300
+		TurnSpeed: 6
+		Repulsable: false
+		AltitudeVelocity: 400#0c43
+		Speed: 60
+		MoveIntoShroud: true
+	Health:
+		HP: 2
+	SelfHealing:
+		Step: -1
+		Delay: 15
+		HealIfBelow: 200
+	Armor:
+		Type: Wood
+	Voiced:
+		VoiceSet: Limpet
+	AttackHeli:
+		FacingTolerance: 20
+		Voice: Attack
+	AmmoPool@Rocket:
+		Ammo: 2
+		PipCount: 0
+		SelfReloads: true
+		SelfReloadDelay: 250
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+		Name: Rocket
+	Explodes:
+		Weapon: GasCloudDeathWeapon
+		EmptyWeapon: GasCloudDeathWeapon
+		LoadedChance: 100
+	-RenderVoxels:
+	-WithVoxelBody:
+	WithDeathAnimation:
+		DeathSequencePalette: effect
+		DeathPaletteIsPlayerPalette: false
+	RenderSprites:
+		Image: cloud1
+		Palette: effect
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32
+	AttackWander:
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD2
+		Probability: 100
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		RequiresLobbyCreeps: true
+
+CLOUD2:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD3
+
+CLOUD3:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD4
+
+CLOUD4:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD5
+
+CLOUD5:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD6
+
+CLOUD6:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD7
+
+CLOUD7:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD8
+
+CLOUD8:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD9
+
+CLOUD9:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD10
+
+CLOUD10:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD11
+
+CLOUD11:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD12
+
+CLOUD12:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD13
+
+CLOUD13:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD14
+
+CLOUD14:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD15
+
+CLOUD15:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD16
+
+CLOUD16:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD17
+
+CLOUD17:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD18
+
+CLOUD18:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD19
+
+CLOUD19:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD20
+
+CLOUD20:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD21
+		
+CLOUD21:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD22
+
+CLOUD22:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD23
+
+CLOUD23:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD24
+
+CLOUD24:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD25
+
+CLOUD25:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD26
+
+CLOUD26:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD27
+
+CLOUD27:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD28
+
+CLOUD28:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD29
+
+CLOUD29:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD30
+
+CLOUD30:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD31
+
+CLOUD31:
+	Inherits: CLOUD1
+	SpawnActorOnDeath@cloud:
+		Actor: CLOUD32
+
+CLOUD32:
+	Inherits: CLOUD1
+	-SpawnActorOnDeath@cloud:
+	Explodes:
+		Weapon: GasCloudDeathWeapon2
+		EmptyWeapon: GasCloudDeathWeapon2
+
+#######################################################
 #GDI
 #######################################################
 ORCA:
