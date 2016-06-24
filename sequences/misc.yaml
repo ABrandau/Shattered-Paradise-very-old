@@ -201,6 +201,13 @@ explosion:
 	fire3: fire3
 	fire4: fire4
 	gasclouddeath: cloud1d
+		Offset: 0,-12
+		ZOffset: 4096
+	veins: veinatac
+		Offset: 0,-12
+		Length: 12
+		UseTilesetExtension: true
+		ZOffset: 1023
 	#Nod
 	smokebomb1: smokebomb1
 	smokebomb2: smokebomb2

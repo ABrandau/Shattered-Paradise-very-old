@@ -690,6 +690,9 @@
 		Bounds: 40,30
 	SelectionDecorations:
 		Palette: pips
+	PoisonedByTiberium:
+		Weapon: Veins
+		Resources: Veins
 	SpawnActorOnDeath@conversion:
 		Actor: PALADIN2
 		Probability: 100

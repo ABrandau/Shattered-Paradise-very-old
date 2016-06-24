@@ -489,7 +489,7 @@ TiberianRocket:
 	Inherits: ArtilleryWarhead
 	ReloadDelay: 250
 	Range: 12c0
-	Burst: 8
+	Burst: 7
 	Report: rketinf1.aud
 	ValidTargets: Ground
 	MinRange: 3c0
@@ -510,7 +510,7 @@ TiberianRocket:
 		Damage: 40
 		ValidTargets: Ground
 		Versus:
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, TiberiumDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, TiberiumDeathStrong
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
@@ -524,42 +524,9 @@ TiberianRocket:
 		InvalidImpactTypes: Water, Air, AirHit
 
 TiberianRocket2:
-	Inherits: ArtilleryWarhead
-	ReloadDelay: 250
-	Range: 12c0
-	Burst: 2
-	Report: rketinf1.aud
-	ValidTargets: Ground
-	MinRange: 3c0
-	Projectile: Bullet
-		MaximumLaunchSpeed: 213
-		Speed: 350
-		Blockable: false
-		Shadow: true
-		Angle: 62	
-		Inaccuracy: 3c0
-		Image: DRAGON
-		TrailImage: small_smoke_trail
-		HorizontalRateOfTurn: 8
-		RangeLimit: 15c0
-		Palette: ra
-	Warhead@1Dam: SpreadDamage
-		Spread: 200
-		Damage: 55
-		ValidTargets: Ground
-		Versus:
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, TiberiumDeath
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
-	Warhead@5Smu: LeaveSmudge
-		SmudgeType: SmallCrater	
-	Warhead@6Eff: CreateEffect
-		Explosions: tib_expsmall
-		ImpactSound: expnew12.aud
-		InvalidImpactTypes: Water, Air, AirHit
+	Inherits: TiberianRocket
+	Burst: 3
+	Delay: 10
 	Warhead@5Actor: SpawnActor
 		Actors: cloud1
 		FallRate: 5000
@@ -576,9 +543,6 @@ MiniNuke:
 			Concrete: 25
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
-	# Warhead@3Eff_impact: CreateEffect
-		# Explosion: nuke
-		# ImpactSound: kaboom1.aud
 	Warhead@4Dam_areanuke1: SpreadDamage
 		Spread: 2c0
 		Damage: 30
@@ -589,12 +553,6 @@ MiniNuke:
 			Concrete: 25
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
-	Warhead@5Res_areanuke1: DestroyResource
-		Size: 2
-		Delay: 5
-	# Warhead@6Eff_areanuke1: CreateEffect
-		# ImpactSound: kaboom22.aud
-		# Delay: 5
 	Warhead@7Dam_areanuke2: SpreadDamage
 		Spread: 3c0
 		Damage: 30
@@ -605,9 +563,6 @@ MiniNuke:
 			Concrete: 25
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
-	# Warhead@8Res_areanuke2: DestroyResource
-		# Size: 3
-		# Delay: 10
 	Warhead@9Dam_areanuke3: SpreadDamage
 		Spread: 4c0
 		Damage: 30

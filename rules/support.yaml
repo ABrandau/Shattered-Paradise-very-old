@@ -1193,7 +1193,7 @@ SCRDRONE:
 	Valued:
 		Cost: 900
 	Tooltip:
-		Name: Hive Colony
+		Name: Visceroid Hive
 		Description: Advanced base defense.\nSpawns Visceroids near the enemies.\nRequires power to operate.\n  Strong vs All
 	Buildable:
 		Queue: Defense
@@ -1219,7 +1219,7 @@ SCRDRONE:
 	Armament:
 		Weapon: DronePlane
 		ForceTargetStances: Enemy
-		LocalOffset: 0,0,1500
+		LocalOffset: 0,0,1750
 	Power:
 		Amount: -40
 	SelectionDecorations:

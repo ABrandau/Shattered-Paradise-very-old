@@ -49,7 +49,7 @@ SuicideBomb:
 			Heavy: 25
 			Concrete: 50
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
-	Warhead@2Res: DestroyResource
+	# Warhead@2Res: DestroyResource
 	
 EMPulseCannon:
 	ReloadDelay: 300
@@ -115,36 +115,36 @@ ClusterMissile:
 	Warhead@SoundEffect0: CreateEffect
 		Explosions: large_explosion
 		ImpactSound: expnew19.aud
-	Warhead@ResourceDestruction0: DestroyResource
-		Size: 1
+	# Warhead@ResourceDestruction0: DestroyResource
+		# Size: 1
 	Warhead@ClusterSmudges0: LeaveSmudge
 		SmudgeType: LargeCrater
 		Size: 1
-	Warhead@ResourceDestruction1: DestroyResource
-		Size: 2
-		Delay: 5
+	# Warhead@ResourceDestruction1: DestroyResource
+		# Size: 2
+		# Delay: 5
 	Warhead@ClusterSmudges1: LeaveSmudge
 		SmudgeType: LargeScorch
 		Size: 2
 		Delay: 5
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
-	Warhead@ResourceDestruction2: DestroyResource
-		Size: 3
-		Delay: 10
+	# Warhead@ResourceDestruction2: DestroyResource
+		# Size: 3
+		# Delay: 10
 	Warhead@ClusterSmudges2: LeaveSmudge
 		SmudgeType: LargeScorch
 		Size: 3
 		Delay: 10
-	Warhead@ResourceDestruction3: DestroyResource
-		Size: 4
-		Delay: 15
+	# Warhead@ResourceDestruction3: DestroyResource
+		# Size: 4
+		# Delay: 15
 	Warhead@ClusterSmudges3: LeaveSmudge
 		SmudgeType: MediumScorch
 		Size: 4
 		Delay: 15
-	Warhead@ResourceDestruction4: DestroyResource
-		Size: 5
-		Delay: 20
+	# Warhead@ResourceDestruction4: DestroyResource
+		# Size: 5
+		# Delay: 20
 	Warhead@ClusterSmudges4: LeaveSmudge
 		SmudgeType: SmallScorch
 		Size: 5

@@ -7,17 +7,20 @@ CLOUD1:
 	Valued:
 		Cost: 900
 	Tooltip:
-		Name: Wasp
-		Description: Aerial drone equiped with dual\rocket launchers.\n  Strong vs Infantry, Light Vehicles\n  Weak vs Aircraft, Anti air units.
+		Name: Gas Cloud
+		Description: yeeeeeeeeeeee
 	Selectable:
 		Bounds: 40,30
+	-UpdatesPlayerStatistics:
 	Aircraft:
-		CruiseAltitude: 300
+		CruiseAltitude: 0
 		TurnSpeed: 6
 		Repulsable: false
 		AltitudeVelocity: 400#0c43
 		Speed: 60
 		MoveIntoShroud: true
+	-Targetable@GROUND:
+	-Targetable@AIRBORNE:
 	Health:
 		HP: 2
 	SelfHealing:
@@ -41,16 +44,15 @@ CLOUD1:
 		Name: Rocket
 	Explodes:
 		Weapon: GasCloudDeathWeapon
-		EmptyWeapon: GasCloudDeathWeapon
 		LoadedChance: 100
 	-RenderVoxels:
 	-WithVoxelBody:
 	WithDeathAnimation:
-		DeathSequencePalette: effect
+		DeathSequencePalette: effectalpha
 		DeathPaletteIsPlayerPalette: false
 	RenderSprites:
 		Image: cloud1
-		Palette: effect
+		Palette: effectalpha
 	WithFacingSpriteBody:
 	BodyOrientation:
 		QuantizedFacings: 32

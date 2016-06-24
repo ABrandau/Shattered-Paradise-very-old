@@ -48,14 +48,15 @@ GasCloudDeathWeapon:
 	Inherits: ^RifleWarhead
 	Warhead@1Dam: SpreadDamage
 		Spread: 200
-		Damage: 40
+		Damage: 50
 		# Falloff: 1000, 368, 135, 50, 18, 7, 0
+		InvalidTargets: Veinhole
 		Versus:
 			None: 90
 			Wood: 75
 			Light: 60
 			Heavy: 25
-		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeath
+		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeathStrong
 
 GasCloudDeathWeapon2:
 	Inherits: GasCloudDeathWeapon

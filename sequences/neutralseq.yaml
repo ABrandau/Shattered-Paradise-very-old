@@ -17,6 +17,9 @@ flameguy:
 		ShadowStart: 192
 	
 cloud1:
+	Defaults:
+		Offset: 0,-12
+		ZOffset: 4096
 	idle:
 		Length: *
 	run:

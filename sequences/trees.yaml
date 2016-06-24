@@ -208,7 +208,14 @@ tree25:
 		Offset: 0, -12
 
 veinhole:
-	idle:
-		ShadowStart: 1
+	Defaults:
 		UseTilesetExtension: true
+		ZOffset: -512
+	idle:
 		Offset: 0,-60
+	stand:
+		Offset: 0,-60
+	shoot:
+		Length: 23
+		Offset: 0,-60
+		Tick: 50

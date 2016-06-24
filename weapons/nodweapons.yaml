@@ -189,9 +189,6 @@ BikeExplo:
 		ValidTargets: Ground, Water, Air
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
-	Warhead@8Res_areanuke2: DestroyResource
-		Size: 3
-		Delay: 10
 	Warhead@2Eff: CreateEffect
 		Explosions: large_explosion
 		ImpactSound: expnew09.aud

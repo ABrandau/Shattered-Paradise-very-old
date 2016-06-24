@@ -97,18 +97,8 @@ TREE24:
 TREE25:
 	Inherits: ^Tree
 
-VEINHOLEDUMMY:
-	HiddenUnderShroud:
-	RadarColorFromTerrain:
-		Terrain: Veins
-	Building:
-		Footprint: xx xx
-		Dimensions: 2, 2
-	BodyOrientation:
-		QuantizedFacings: 1
-
 VEINHOLE:
-	HiddenUnderShroud:
+	Inherits: ^Building
 	RadarColorFromTerrain:
 		Terrain: Veins
 	Building:
@@ -116,13 +106,32 @@ VEINHOLE:
 		Dimensions: 2, 2
 	BodyOrientation:
 		QuantizedFacings: 1
-	AppearsOnRadar:
 	Tooltip:
-		Name: Veinhole
+		Name: Veinhole Monster
+	SeedsResource:
+		Interval: 25
+		ResourceType: Veins
+		MaxRange: 24
 	RenderSprites:
 		Palette: player
+	SelfHealing:
+		HealIfBelow: 200
+		Delay: 25
 	WithSpriteBody:
 	AutoSelectionSize:
+	WithChargeOverlay:
+		Sequence: shoot
+		Palette: player
+		IsPlayerPalette: false
+	AttackCharge:
+		ChargeAudio:
+		ReloadDelay: 15
+		ChargeDelay: 1
+	Armament:
+		Weapon: VeinholeAttack
+		TargetStances: Enemy, Ally, Neutral
+		LocalOffset: 500, 0, 0
+	AutoTarget:
 	Selectable:
 		Priority: 3
 	ShakeOnDeath:
@@ -135,3 +144,8 @@ VEINHOLE:
 	Explodes:
 		Weapon: VeinholeExplosion
 		EmptyWeapon: VeinholeExplosion
+	-UpgradeOverlay@EMPDISABLE:
+	-DisableOnUpgrade@EMPDISABLE:
+	-TimedUpgradeBar@EMPDISABLE:
+	-WithIdleOverlay@EMPDISABLE:
+	-PowerMultiplier@EMPDISABLE:

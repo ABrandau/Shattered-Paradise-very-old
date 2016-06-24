@@ -37,6 +37,30 @@ SlimeAttack:
 			Concrete: 20
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath
 
+VeinholeAttack:
+	ReloadDelay: 1
+	Range: 7c0
+	Report:
+	Projectile: InstantExplode
+	Warhead@1Dam: SpreadDamage
+		Damage: 1
+		Versus:
+		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath
+	Warhead@5Actor: SpawnActor
+		Actors: cloud1
+		FallRate: 5000
+		Range: 3
+
+Veins:
+	ReloadDelay: 12
+	Warhead@Damage: SpreadDamage
+		Spread: 42
+		Damage: 6
+		DamageTypes: TiberiumDeath
+	Warhead@Effect: CreateEffect
+		Explosions: veins
+		ExplosionPalette: player
+
 Tiberium:
 	ReloadDelay: 16
 	Warhead@1Dam: SpreadDamage
