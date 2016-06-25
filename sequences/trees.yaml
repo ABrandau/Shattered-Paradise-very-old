@@ -219,3 +219,14 @@ veinhole:
 		Length: 23
 		Offset: 0,-60
 		Tick: 50
+
+veinholeforg:
+	Defaults: veinhole
+		Offset: 0,-30
+		UseTilesetExtension: true
+		ZOffset: -512
+	idle:
+	stand:
+	shoot:
+		Length: 23
+		Tick: 50

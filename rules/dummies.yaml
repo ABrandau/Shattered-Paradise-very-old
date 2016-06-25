@@ -99,7 +99,7 @@ IONSTORMSPAWNER:
 		Actor: IONSTORMGENERATOR
 		Probability: 100
 		OwnerType: Victim
-		RequiresLobbyCreeps: true
+		RequiresLobbyCreeps: false
 	Health:
 		HP: 5
 		NotifyAppliedDamage: False
@@ -119,6 +119,30 @@ IONSTORMGENERATOR:
 		Weapon: IonRay
 		TargetStances: Ally, Enemy, Neutral
 	AutoTarget:
+
+VEINHOLESPAWNERDUMMY:
+	Inherits: ^Infantry
+	-Targetable:
+	-UpdatesPlayerStatistics:
+	-AutoSelectionSize:
+	-SelectionDecorations:
+	-Selectable:
+	-AutoTarget:
+	RenderSprites:
+		Image: blackhanddummy
+	SelfHealing:
+		Step: -10
+		HealIfBelow: 200
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+	SpawnActorOnDeath@cabalcrate:
+		Actor: VEINHOLEFORG
+		Probability: 100
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		RequiresLobbyCreeps: true
+
 
 CABALMONEYDUMMY:
 	Inherits: ^DUMMYSTRUCTURE

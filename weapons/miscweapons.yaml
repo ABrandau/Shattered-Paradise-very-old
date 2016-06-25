@@ -42,6 +42,7 @@ VeinholeAttack:
 	Range: 7c0
 	Report:
 	Projectile: InstantExplode
+	InvalidTargets: Veinhole
 	Warhead@1Dam: SpreadDamage
 		Damage: 1
 		Versus:

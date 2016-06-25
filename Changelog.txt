@@ -14,6 +14,7 @@ Scrin Changes:
 Forgotten  Changes:
 	Tiberian Fiends no longer "Take Cover" when hit.
 	Ostwind damage per rocket: 55 -> 40, Ostwinds now spawn two tiberian clouds per burst.
+	Enabled Forgotten Support Superweapon.
 CABAL Changes:
 	Eye of CABAL power consumption: 100 -> 50, vision: 16c0 -> 19c0
 	Wasp: Rocket speed: 200 -> 250, rocket rot: 8 -> 16

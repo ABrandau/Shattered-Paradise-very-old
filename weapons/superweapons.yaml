@@ -243,3 +243,19 @@ IonRay:
 	Warhead@4: LeaveSmudge
 		SmudgeType: SmallCrater
 		Delay: 5
+
+VeinholeSummonerWeapon:
+	Inherits: ^BombWarhead
+	ReloadDelay: 8
+	Range: 3c0
+	ValidTargets: Ground, Vehicle, Building, Infantry, Water
+	Warhead@1Dam: SpreadDamage
+		Spread: 650
+		Damage: 1
+		Falloff: 1000, 500, 250, 125, 75, 50, 25, 12, 0
+		ValidTargets: Ground, Vehicle, Building, Infantry, Water
+		DamageTypes:
+	Warhead@5Actor: SpawnActor
+		Actors: VEINHOLESPAWNERDUMMY
+		FallRate: 5000
+		Range: 3

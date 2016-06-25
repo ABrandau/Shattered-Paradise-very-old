@@ -1182,4 +1182,33 @@ mutsw1:
 		BlendMode: Additive
 	icon: mutsw1icon
 		Offset: 0, 0
-		UseTilesetCode: false		
+		UseTilesetCode: false
+
+mutsw2:
+	Defaults:
+		Offset: 0, -36
+		UseTilesetCode: true
+	idle:
+		Start: 31
+		Length: 19
+		ShadowStart: 102
+	damaged-idle:
+		Start: 51
+		Length: 19
+		ShadowStart: 122
+	dead:
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	make:
+		Length: 29
+		ShadowStart: 71
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: mutsw2icon
+		Offset: 0, 0
+		UseTilesetCode: false

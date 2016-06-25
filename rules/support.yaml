@@ -919,6 +919,45 @@ MUTSW1:
 		Description: Ion Storm
 		LongDesc: Summons an Ion Storm on the targetted area\nthe lightning rays will strike the nearest target\nwill not fire if there no targets are nearby.\nLasts 20 seconds. 
 
+MUTSW2:
+	Inherits: ^Building
+	Inherits@1: ^MutRender
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 90
+		Prerequisites: tech, ~structures.mut
+		BuildLimit: 1
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Mother Veinhole
+		Description: Allows the player to summon\nveinhole monsters on the battlefield.
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	Selectable:
+		Bounds: 96, 64, -6, -6
+	Health:
+		HP: 800
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 5c0
+	Power:
+		Amount: -100
+	SelectionDecorations:
+		VisualBounds: 96, 64, -6, -6
+	IonCannonPower:
+		Weapon: VeinholeSummonerWeapon
+		Effect: ionbeam
+		Icon: veinholesw
+		ChargeTime: 300
+		OrderName: Veinhole
+		DisplayTimer: True
+		DisplayBeacon: True
+		Description: Veinhole summon
+		LongDesc: Spawns a veinhole monster\non the targetted location.
+
 MUWARD:
 	Inherits: ^DeployedVehicle
 	Valued:

@@ -109,7 +109,7 @@ VEINHOLE:
 	Tooltip:
 		Name: Veinhole Monster
 	SeedsResource:
-		Interval: 25
+		Interval: 10
 		ResourceType: Veins
 		MaxRange: 24
 	RenderSprites:
@@ -149,3 +149,10 @@ VEINHOLE:
 	-TimedUpgradeBar@EMPDISABLE:
 	-WithIdleOverlay@EMPDISABLE:
 	-PowerMultiplier@EMPDISABLE:
+
+VEINHOLEFORG:
+	Inherits: VEINHOLE
+	RenderSprites:
+		Image: veinholeforg
+		Palette: player
+	
