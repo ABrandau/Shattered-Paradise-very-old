@@ -683,7 +683,7 @@ MUTBIRD:
 		Type: Wood
 	Minelayer:
 		Mine: eggs
-		RearmBuildings: muair
+		# RearmBuildings: muair
 	AmmoPool:
 		Ammo: 3
 		PipCount: 3
@@ -1187,7 +1187,6 @@ SCRBATTLESHIP:
 	-RenderVoxels:
 	-WithVoxelBody:
 	RenderSprites:
-		# Scale: 0.8
 	WithFacingSpriteBody:
 	WithShadow:
 	BodyOrientation:
@@ -1236,20 +1235,6 @@ SCRINCOUNCIL:
 		RequiredForShortGame: true
 	Targetable:
 		TargetTypes: Air, MindControlInmune
-	# Turreted:
-	# AttackTurreted:
-	# AmmoPool:
-		# Ammo: 1
-		# PipCount: 1
-		# SelfReloads: true
-		# ReloadCount: 1
-		# SelfReloadsTicks: 300
-		# ResetOnFire: false
-		# PipType: Ammo
-		# PipTypeEmpty: AmmoEmpty
-	# AutoTarget:
-		# Weapon: CouncilSteal
-	# Armament:
 	RenderSprites:
 	Hovers:
 	WithInfantryBody:
@@ -1265,14 +1250,15 @@ MOTHERSHIP:
 	Inherits@3: ^SelfReloads
 	Inherits@4: ^BasicStealthDetection
 	Valued:
-		Cost: 2500
+		Cost: 3500
 	Tooltip:
-		Name: Mothership
-		Description: Scrin spacecraft designed for combat on front lines.\nEquipped with blaster turrets and two fighters.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft.
-	# Buildable:
-		# Queue: Air
-		# BuildPaletteOrder: 21
-		# Prerequisites: ~scrair, scrtech
+		Name: Scrin Council
+		Description: Scrin Flagship, disables nearby power plants.
+	Buildable:
+		Queue: Air
+		BuildPaletteOrder: 21
+		Prerequisites: ~scrair, scrtech, ~!mothershipdep
+		BuildLimit: 1
 	Voiced:
 		VoiceSet: Limpet
 	Selectable:
@@ -1286,7 +1272,7 @@ MOTHERSHIP:
 		LandingSound: orcadwn1.aud
 		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green
 	Health:
-		HP: 900
+		HP: 1500
 	Armor:
 		Type: Heavy
 	SelfHealing:
@@ -1299,6 +1285,16 @@ MOTHERSHIP:
 	Armament:
 		Weapon: BattleshipCannon
 		LocalOffset:0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
+	ProduceActorPower@as:
+		Description: Energy Assimilator
+		LongDesc: Disables hostile powerplants\nmapwide.
+		Icon: hunterseeker
+		Actors: scrinenergydummy
+		Type: HunterSeeker
+		ChargeTime: 240
+	Exit@1:
+	Production:
+		Produces: HunterSeeker
 	AttackTurreted:
 	Turreted:
 	Transforms:
@@ -1314,8 +1310,6 @@ MOTHERSHIP:
 	-WithVoxelBody:
 	WithInfantryBody:
 	RenderSprites:
-		# Scale: 0.8
-	# WithFacingSpriteBody:
 	WithShadow:
 	BodyOrientation:
 		QuantizedFacings: 32

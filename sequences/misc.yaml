@@ -236,6 +236,8 @@ explosion:
 	alienpiff5: alienpiff5
 	scrinpulse2: scrinpulse2
 	scrinpulse3: scrinpulse3
+	scrinenergyeff: scrinenergyeff
+		Tick: 25
 	firestormexplo: firestormexplo
 	scrinexplo1: scrinexplo1
 	scrinexplo2: scrinexplo2
@@ -326,6 +328,12 @@ cabswproj:
 cabswproj2:
 	idle:
 		Offset: 0,6
+		Length: *
+		ZOffset: 1023
+		BlendMode: Additive
+
+scrinenergyeff:
+	idle:
 		Length: *
 		ZOffset: 1023
 		BlendMode: Additive

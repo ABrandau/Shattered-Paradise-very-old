@@ -91,7 +91,6 @@ IonCannon:
 	Warhead@4Smu_area: LeaveSmudge
 		SmudgeType: SmallScorch
 		Size: 2,1
-		# Delay: 3
 
 ClusterMissile:
 	ValidTargets: Ground, Water, Air
@@ -115,40 +114,51 @@ ClusterMissile:
 	Warhead@SoundEffect0: CreateEffect
 		Explosions: large_explosion
 		ImpactSound: expnew19.aud
-	# Warhead@ResourceDestruction0: DestroyResource
-		# Size: 1
 	Warhead@ClusterSmudges0: LeaveSmudge
 		SmudgeType: LargeCrater
 		Size: 1
-	# Warhead@ResourceDestruction1: DestroyResource
-		# Size: 2
-		# Delay: 5
 	Warhead@ClusterSmudges1: LeaveSmudge
 		SmudgeType: LargeScorch
 		Size: 2
 		Delay: 5
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
-	# Warhead@ResourceDestruction2: DestroyResource
-		# Size: 3
-		# Delay: 10
 	Warhead@ClusterSmudges2: LeaveSmudge
 		SmudgeType: LargeScorch
 		Size: 3
 		Delay: 10
-	# Warhead@ResourceDestruction3: DestroyResource
-		# Size: 4
-		# Delay: 15
 	Warhead@ClusterSmudges3: LeaveSmudge
 		SmudgeType: MediumScorch
 		Size: 4
 		Delay: 15
-	# Warhead@ResourceDestruction4: DestroyResource
-		# Size: 5
-		# Delay: 20
 	Warhead@ClusterSmudges4: LeaveSmudge
 		SmudgeType: SmallScorch
 		Size: 5
 		Delay: 20
+
+##########################################################
+# Scrin
+##########################################################
+
+EnergyAssimilator:
+	ValidTargets: Ground, Air, Building
+	Warhead@1Dam_impact: SpreadDamage
+		Spread: 250
+		Damage: 50
+		Falloff: 500, 368, 135, 50, 18, 7, 0
+		ValidTargets: Ground, Air
+		DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
+		Delay: 15
+	Warhead@2Eff_impact: CreateEffect
+		Explosions: scrinenergyeff
+		ExplosionPalette: scrinenergystuffsalpha
+		ImpactSound: ion1.aud
+	Warhead@emp: GrantUpgrade
+		Range: 999c0
+		Duration: 200
+		Upgrades: empdisable
+		ValidTargets: Powerplant
+		ValidStances: Enemy, Neutral
+		Delay: 15
 
 MeteorRain:
 	Inherits: ^BombWarhead
@@ -184,6 +194,10 @@ MeteorRain:
 		FallRate: 5000
 		Range: 3
 
+##########################################################
+# CABAL
+##########################################################
+
 CabalCannon:
 	Inherits: ^FullDamage
 	ReloadDelay: 400
@@ -203,8 +217,8 @@ CabalCannon:
 		TrailImage: cabswproj2
 		TrailPalette: apolcyanalpha
 	Warhead@1Dam: SpreadDamage
-		Spread: 1000
-		Damage: 300
+		Spread: 600
+		Damage: 400
 		ValidTargets: Ground, Water
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
@@ -215,6 +229,10 @@ CabalCannon:
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
 		InvalidImpactTypes: Water
+
+##########################################################
+# Mutants
+##########################################################
 
 IonRay:
 	Inherits: ^FullDamage

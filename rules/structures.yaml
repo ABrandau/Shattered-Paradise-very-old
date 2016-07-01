@@ -34,7 +34,7 @@ GAPOWR:
 	InfiltrateForPowerOutage:
 	AffectedByPowerOutage:
 	Targetable:
-		TargetTypes:Building, Ground, C4, DetonateAttack, SpyInfiltrate
+		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate, Powerplant
 	ScalePowerWithHealth:
 	DisabledOverlay:
 	Pluggable@pluga:
@@ -568,7 +568,7 @@ NAPOWR:
 	InfiltrateForPowerOutage:
 	AffectedByPowerOutage:
 	Targetable:
-		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate
+		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate, Powerplant
 	ScalePowerWithHealth:
 	DisabledOverlay:
 	SelectionDecorations:
@@ -605,7 +605,7 @@ NAAPWR:
 	InfiltrateForPowerOutage:
 	AffectedByPowerOutage:
 	Targetable:
-		TargetTypes: Ground, C4, DetonateAttack, SpyInfiltrate
+		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate, Powerplant
 	ScalePowerWithHealth:
 	DisabledOverlay:
 	SelectionDecorations:
@@ -1021,7 +1021,7 @@ MUPOWR:
 	InfiltrateForPowerOutage:
 	AffectedByPowerOutage:
 	Targetable:
-		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate
+		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate, Powerplant
 	ScalePowerWithHealth:
 	DisabledOverlay:
 	ProvidesPrerequisite@buildingname:
@@ -1371,7 +1371,7 @@ SCRPOWR:
 	InfiltrateForPowerOutage:
 	AffectedByPowerOutage:
 	Targetable:
-		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate
+		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate, Powerplant
 	ScalePowerWithHealth:
 	DisabledOverlay:
 	# ProvidesPrerequisite@buildingname:
@@ -1748,7 +1748,7 @@ CABPOWR:
 	InfiltrateForPowerOutage:
 	AffectedByPowerOutage:
 	Targetable:
-		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate
+		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate, Powerplant
 	# ScalePowerWithHealth:
 	SelfHealing@reactorcritical:
 		Step: -5

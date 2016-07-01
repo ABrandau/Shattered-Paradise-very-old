@@ -213,6 +213,8 @@ veinhole:
 		ZOffset: -512
 	idle:
 		Offset: 0,-60
+	dead:
+		Offset: 0,-60
 	stand:
 		Offset: 0,-60
 	shoot:

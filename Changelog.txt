@@ -7,6 +7,7 @@ General Changes:
 	Tiberium gas clouds added to the game.
 NOD Changes:
 	Added a muzzle effect for the NOD obelisk and reduced the laser width.
+	Corrected NOD powerplant target type.
 Scrin Changes:
 	Scrin extractor Power consumption: 200 -> 150, Cost: 800 -> 1000
 	Single Meteor Damage: 20 -> 100
@@ -16,11 +17,14 @@ Forgotten  Changes:
 	Ostwind damage per rocket: 55 -> 40, Ostwinds now spawn two tiberian clouds per burst.
 	Enabled Forgotten Support Superweapon.
 CABAL Changes:
+	Singularity Cannon: Cooldown: 120 secs -> 150.
+	Increased Cyborg's Commando proyectile speed.
 	Eye of CABAL power consumption: 100 -> 50, vision: 16c0 -> 19c0
 	Wasp: Rocket speed: 200 -> 250, rocket rot: 8 -> 16
 	Blaster Turret HP: 500 -> 600, Power consumption: -100 -> -75
 Bug Fixes:
 	Added EMP overlay for Cyber dogs.
+	Fixed a bug that made seeder birds crash the game when needing to reload.
 
 [2016 - 06 - 21]
 Balance Changes:

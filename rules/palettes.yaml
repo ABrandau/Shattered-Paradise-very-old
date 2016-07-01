@@ -178,7 +178,7 @@
 		Name: playerscrin
 		Filename: unitscrin.pal	
 		ShadowIndex: 1
-		AllowModifiers: true	
+		AllowModifiers: true
 	PaletteFromFile@cameoscrin:
 		Name: cameoscrin
 		Filename: cameoscrin.pal	
@@ -224,4 +224,12 @@
 	PlayerColorPalette@playertemonly:
 		BasePalette: playertemperate
 		BaseName: playertemperate
-		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31	
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
+	PaletteFromFile@scrinenergysw:
+		Name: scrinenergystuffs
+		Filename: scrinenergyeffectpal.pal	
+		ShadowIndex: 1
+	PaletteFromPaletteWithAlpha@scrinenergyswalpha:
+		Name: scrinenergystuffsalpha
+		BasePalette: scrinenergystuffs
+		Alpha: 0.55

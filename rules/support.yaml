@@ -1341,59 +1341,6 @@ SCRSW1:
 		DisplayBeacon: True
 		LongDesc: Creates a meteor storm
 		ChargeTime: 480
-	# SpawnActorPower@Mothership:
-		# Actor: MOTHERSHIPDEPDUMMY
-		# Icon: mothershipicon
-		# Palette: cameoscrin
-		# Description: Mothership Drop
-		# ChargeTime: 50
-		# LongDesc: Summons an Ion Storm on the targetted area\nthe lightning rays will strike the nearest target\nwill not fire if there no targets are nearby.\nLasts 20 seconds. 
-
-MOTHERSHIPDEPDUMMY:
-	Inherits: ^Defense
-	Inherits@2: ^ScrinRender
-	Inherits@3: ^TowerStealthDetection
-	Valued:
-		Cost: 900
-	Tooltip:
-		Name: Deployed Mothership
-		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs All
-	-WithBuildingExplosion:
-	Building:
-		Footprint: xxx xxx xxx
-		Dimensions: 3,3
-	Selectable:
-		Bounds: 88, 42, 0, -6
-	RequiresPower:
-	-Targetable:
-	DisabledOverlay:
-	Health:
-		HP: 90
-	SelfHealing:
-		Step: -10
-		HealIfBelow: 200
-	SpawnActorOnDeath@mothershipspawn:
-		Actor: MOTHERSHIPDEP
-		Probability: 100
-		OwnerType: Victim
-		RequiresLobbyCreeps: false
-	Armor:
-		Type: Heavy
-	RevealsShroud:
-		Range: 12c0
-	Armament:
-		Weapon: DronePlane
-		LocalOffset: 0,0,800
-	RenderSprites:
-		Image: mothershipdep
-	AttackCharge:
-		ChargeAudio: obelpowr.aud
-		ReloadTime: 75
-		InitialChargeDelay: 75
-	Power:
-		Amount: -40
-	SelectionDecorations:
-		VisualBounds: 88, 72, 0, -12
 
 MOTHERSHIPDEP:
 	Inherits: ^Defense
@@ -1407,6 +1354,11 @@ MOTHERSHIPDEP:
 	WithBuildingExplosion:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 90
+		Prerequisites: tech, ~structures.scr
+		BuildLimit: 1
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -1415,6 +1367,17 @@ MOTHERSHIPDEP:
 	RequiresPower:
 	Transforms:
 		IntoActor: mothership
+	ProduceActorPower@as:
+		Description: Energy Assimilator
+		LongDesc: Disables hostile powerplants\nmapwide.
+		Icon: hunterseeker
+		Actors: scrinenergydummy
+		Type: HunterSeeker
+		ChargeTime: 240
+	Exit@1:
+		SpawnOffset: 0,0,128
+	Production:
+		Produces: HunterSeeker
 	DisabledOverlay:
 	WithMakeAnimation:
 		Sequence: make2
@@ -1775,7 +1738,7 @@ CABSW1:
 	AttackOrderPower@singularity:
 		Cursor: emp
 		Icon: cabcannon
-		ChargeTime: 120
+		ChargeTime: 150
 		Description: Singularity
 		LongDesc: Fires a volley of bullets at the target location.
 		EndChargeSound: speech-nod|00-i158.aud
