@@ -319,10 +319,6 @@ TRNSPORT:
 	Tooltip:
 		Name: Carryall
 		Description: VTOL Aircraft capable of lifting\nand transporting Vehicles.\n  Unarmed
-	# Buildable:
-		# Queue: Air
-		# BuildPaletteOrder: 10
-		# Prerequisites: ~gahpad
 	Aircraft:
 		LandWhenIdle: yes
 		TurnSpeed: 5

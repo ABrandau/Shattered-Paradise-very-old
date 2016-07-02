@@ -362,18 +362,18 @@ GAPLUG:
 		InsufficientPowerSound:
 		DisplayRadarPing: True
 		CameraActor: camera
-	ProduceActorPower:
+	AirstrikePower@meteor:
+		UnitType: droppodplane
+		Icon: droppods
+		SquadSize: 1
+		DisplayTimer: True
+		DisplayBeacon: True
+		Description: Drop Pods
+		LongDesc: Deploys reinforcements at any place.
 		UpgradeTypes: plug.hunterseeker
 		UpgradeMinEnabledLevel: 1
-		Description: Hunter Seeker
-		LongDesc: Releases a drone that will acquire and destroy an enemy target.
-		Icon: hunterseeker
-		Actors: hunter
-		Type: HunterSeeker
-		ChargeTime: 720
-	Production:
-		Produces: HunterSeeker
-	Exit@1:
+		ChargeTime: 480
+		OrderName: Droppod
 	SupportPowerChargeBar:
 	Power:
 		Amount: -150

@@ -252,6 +252,12 @@ discus:
 	idle:
 		Length: *
 		ZOffset: 1023
+		
+gdidroppod:
+	idle:
+		Length: 1
+		Facings: 32
+		ZOffset: 1023
 
 canister:
 	idle:
@@ -478,6 +484,7 @@ icon:
 	clustermissile: mltiicon
 	toxinmissile: chemicon
 	ioncannon: ioncicon
+	droppods: podsicon
 	emp: pulsicon
 	meteor: metricon
 	cabcannon: cabsw1powericon

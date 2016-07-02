@@ -71,6 +71,10 @@ EMPulseCannon:
 		Upgrades: empdisable, notmobile
 		ValidTargets: Vehicle, Building
 
+########################################################
+# GDI
+########################################################
+
 IonCannon:
 	ValidTargets: Ground, Air
 	Warhead@1Dam_impact: SpreadDamage
@@ -92,6 +96,70 @@ IonCannon:
 		SmudgeType: SmallScorch
 		Size: 2,1
 
+droppod1:
+	Inherits: ^BombWarhead
+	ReloadDelay: 1
+	Range: 3c0
+	ValidTargets: Ground, Vehicle, Building, Infantry, Water
+	Inaccuracy: 400
+	Projectile: Bullet
+		Speed: 300
+		Image: gdidroppod
+		Palette: player
+		Shadow: true
+		Inaccuracy: 400
+		# TrailImage: meteortrail
+		# TrailPalette: effectalpha
+		# TrailInterval: 1
+	Warhead@1Dam: SpreadDamage
+		Spread: 650
+		Damage: 1
+		Falloff: 1000, 500, 250, 125, 75, 50, 25, 12, 0
+		ValidTargets: Ground, Vehicle, Building, Infantry, Water
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: SmallCrater
+	Warhead@3Eff: CreateEffect
+		Explosions: small_clsn, large_twlt, medium_brnl
+		ImpactSounds: expnew12.aud
+	Warhead@5Actor: SpawnActor
+		Actors: gdie1, gdie1, JUMPJET,
+		Range: 3
+
+droppod2:
+	Inherits: ^BombWarhead
+	ReloadDelay: 1
+	Range: 3c0
+	ValidTargets: Ground, Vehicle, Building, Infantry, Water
+	Inaccuracy: 400
+	Projectile: Bullet
+		Speed: 300
+		Image: gdidroppod
+		Palette: player
+		Shadow: true
+		Inaccuracy: 400
+		# TrailImage: meteortrail
+		# TrailPalette: effectalpha
+		# TrailInterval: 1
+	Warhead@1Dam: SpreadDamage
+		Spread: 650
+		Damage: 1
+		Falloff: 1000, 500, 250, 125, 75, 50, 25, 12, 0
+		ValidTargets: Ground, Vehicle, Building, Infantry, Water
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: SmallCrater
+	Warhead@3Eff: CreateEffect
+		Explosions: small_clsn, large_twlt, medium_brnl
+		ImpactSounds: expnew12.aud
+	Warhead@5Actor: SpawnActor
+		Actors: MEDIC, EAGLEGUARD
+		Range: 3
+
+########################################################
+# NOD
+########################################################
+		
 ClusterMissile:
 	ValidTargets: Ground, Water, Air
 	Warhead@ImpactDamage0: SpreadDamage

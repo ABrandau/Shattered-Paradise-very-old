@@ -69,6 +69,39 @@ METEORPLANE:
 	-WithVoxelBody:
 	-RenderVoxels:
 
+DROPPODPLANE:
+	Inherits: WETP
+	-Buildable:
+	-Selectable:
+	Cargo:
+		MaxWeight: 10
+		Types: Infantry, Vehicle, Aircraft
+	-AppearsOnRadar:
+	Aircraft:
+		Speed: 1000
+	AttackBomber:
+		Bombs: primary
+	Health:
+		HP: 150
+	Armor:
+		Type: Light
+	-AttackPlane:
+	Armament:
+		Weapon: droppod1
+		LocalOffset: 3000, 3000,4000
+	Armament@1:
+		Weapon: droppod1
+		LocalOffset: -3000, 3000,4000
+	Armament@4:
+		Weapon: droppod2
+		LocalOffset: 0, 0,4000
+	ParaDrop:
+	-RevealsShroud:
+	-Targetable@GROUND:
+	-Targetable@AIRBORNE:
+	-WithVoxelBody:
+	-RenderVoxels:
+
 METEORSHRNAPEL:
 	Inherits: ^Infantry
 	-Targetable:

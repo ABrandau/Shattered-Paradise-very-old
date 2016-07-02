@@ -313,12 +313,12 @@ GAPLUG2:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Seeker Control
-		Description: Enables use of the hunter-seeker droid.
-	# Buildable:
-		# Queue: Defense
-		# BuildPaletteOrder: 1000
-		# Prerequisites: gaplug, gatech, gaweap, ~structures.gdi
+		Name: Drop pod Control
+		Description: Enables use of the drop pods.
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 1000
+		Prerequisites: gaplug, gatech, gaweap, ~structures.gdi
 	Plug:
 		Type: plug.hunterseeker
 	Power:
@@ -331,10 +331,10 @@ GAPLUG3:
 	Tooltip:
 		Name: Ion Cannon Uplink
 		Description: Enables use of the Ion Cannon.
-	# Buildable:
-		# Queue: Defense
-		# BuildPaletteOrder: 1000
-		# Prerequisites: gaplug, gatech, ~structures.gdi
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 1000
+		Prerequisites: gaplug, gatech, ~structures.gdi
 	Plug:
 		Type: plug.ioncannon
 	Power:
