@@ -193,6 +193,7 @@ SCRINENERGYDUMMY:
 		TerrainSpeeds:
 			Cliff: 80
 			Water: 80
+	-UpdatesPlayerStatistics:
 	Armor:
 		Type: light
 	RenderSprites:
@@ -210,4 +211,4 @@ SCRINENERGYDUMMY:
 		NotifyAppliedDamage: False
 	Explodes:
 		Weapon: EnergyAssimilator
-		LoadedChance: 100		
+		LoadedChance: 100

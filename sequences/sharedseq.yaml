@@ -364,6 +364,7 @@ gacnst:
 		Start: 2
 		ShadowStart: 5
 		Tick: 400
+	active: dot
 	make: gtcnstmk
 		Length: 24
 		ShadowStart: 24

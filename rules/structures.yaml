@@ -864,7 +864,7 @@ NATMPL:
 		Cost: 2000
 	Tooltip:
 		Name: Temple of Nod
-		Description: Provides access to advanced Nod technologies.
+		Description: Allows the player to prepare\nToxin Missiles from missile\nsilos.
 	Building:
 		Adjacent: 3
 		Footprint: xxxx xxxx xxxx
@@ -881,16 +881,9 @@ NATMPL:
 		Amount: -200
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
-	ProduceActorPower:
-		Description: Hunter Seeker
-		LongDesc: Releases a drone that will acquire and destroy an enemy target.
-		Icon: hunterseeker
-		Actors: hunter
-		Type: HunterSeeker
-		ChargeTime: 720
-	Production:
-		Produces: HunterSeeker
-	Exit@1:
+	ProvidesPrerequisite:
+		Prerequisite: ToxinMissile
+		Factions: gdi, nod, cab, mut, scr
 
 NASTLH:
 	Inherits: ^Building

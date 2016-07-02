@@ -134,6 +134,39 @@ ClusterMissile:
 		SmudgeType: SmallScorch
 		Size: 5
 		Delay: 20
+		
+ToxinMissile:
+	ValidTargets: Ground, Water, Air
+	Warhead@ImpactDamage0: SpreadDamage
+		Spread: 1c0
+		Damage: 5
+		Falloff: 500, 368, 135, 50, 18, 7, 0
+		ValidTargets: Ground, Water, Air
+		Versus:
+			Concrete: 25
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+	Warhead@SoundEffect0: CreateEffect
+		Explosions: large_explosion
+		ImpactSound: expnew19.aud
+	Warhead@ClusterSmudges0: LeaveSmudge
+		SmudgeType: LargeCrater
+		Size: 1
+	Warhead@ClusterSmudges1: LeaveSmudge
+		SmudgeType: LargeScorch
+		Size: 2
+		Delay: 5
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+	# Warhead@emp: GrantUpgrade
+		# Range: 4c0
+		# Duration: 120
+		# Upgrades: berserk
+		# ValidTargets: Infantry, Vehicle, Building
+		# ValidStances: Enemy, Neutral
+		# Delay: 15
+	Warhead@5Actor: SpawnActor
+		Actors: CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1
+		FallRate: 5000
+		Range: 3
 
 ##########################################################
 # Scrin

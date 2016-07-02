@@ -681,7 +681,7 @@ NAMISL:
 		Cost: 2000
 	Tooltip:
 		Name: Nod Missile Silo
-		Description: Launches a devastating missile\nat a target location.\nRequires power to operate.
+		Description: Allows the player to launch Missiles.\nRequires power to operate.
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	Building:
@@ -707,7 +707,7 @@ NAMISL:
 	DisabledOverlay:
 	ProvidesPrerequisite@buildingname:
 	SupportPowerChargeBar:
-	NukePower:
+	NukePower@NodNuke:
 		Cursor: nuke
 		Icon: clustermissile
 		ChargeTime: 540
@@ -727,7 +727,35 @@ NAMISL:
 		MissilePalette: player
 		IsPlayerPalette: True
 		BeaconPoster:
+		OrderName: ClusterMissile
 		CameraActor: camera
+	NukePower@ToxinMissile:
+		Cursor: nuke
+		Icon: toxinmissile
+		ChargeTime: 540
+		Description: Toxin Missile
+		LongDesc: Launches a warhead filled with\ntoxins that make affected unit\nengage any unit nearby, friend or foe.\nAlso spawns some gas clouds.
+		BeginChargeSound:
+		EndChargeSound: 00-i154.aud
+		SelectTargetSound:
+		InsufficientPowerSound:
+		IncomingSound: 00-i150.aud
+		LaunchSound: icbm1.aud
+		MissileWeapon: ToxinMissile
+		SpawnOffset: 0,427,0
+		DisplayTimer: True
+		DisplayBeacon: True
+		DisplayRadarPing: True
+		MissilePalette: player
+		IsPlayerPalette: True
+		OrderName: ToxinMissile
+		BeaconPoster:
+		CameraActor: camera
+		UpgradeTypes: ToxinMissile
+		UpgradeMinEnabledLevel: 1
+	GlobalUpgradable:
+		Upgrades: ToxinMissile
+		Prerequisites: ToxinMissile
 	SelectionDecorations:
 		VisualBounds: 75,48
 

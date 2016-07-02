@@ -476,6 +476,7 @@ largecraters:
 
 icon:
 	clustermissile: mltiicon
+	toxinmissile: chemicon
 	ioncannon: ioncicon
 	emp: pulsicon
 	meteor: metricon
@@ -491,7 +492,15 @@ clustermissile:
 		ZOffset: 1023
 	down: atnuke
 		Start: 1
-		ZOffset: 1023	
+		ZOffset: 1023
+
+toxinmissile:
+	up: atnuke
+		ZOffset: 1023
+	down: atnuke
+		Start: 1
+		ZOffset: 1023
+
 ionbeam:
 	idle:
 		Length: *
