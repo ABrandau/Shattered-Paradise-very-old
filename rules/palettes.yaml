@@ -155,7 +155,7 @@
 	PaletteFromPaletteWithAlpha@apolgreenalpha:
 		Name: apolgreenalpha
 		BasePalette: apgreen
-		Alpha: 0.8
+		Alpha: 0.6
 	PaletteFromFile@apgrey:
 		Name: apgrey
 		Filename: apolgrey.pal

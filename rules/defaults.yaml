@@ -110,6 +110,19 @@
 		UpgradeTypes: WebDisable
 		UpgradeMaxEnabledLevel: 0
 
+^BurstRecovery:
+	SelfHealing@NanomachineBurst:
+		Step: 10
+		Delay: 75
+		HealIfBelow: 100
+		UpgradeTypes: nanomachineburst
+		UpgradeMinEnabledLevel: 1
+	SpawnActorOnDeath@nanomachineburst:
+		Actor: KILLEDACTOR
+		Probability: 100
+		OwnerType: Killer
+		RequiresLobbyCreeps: false
+
 ^ForgBullBuff:
 	ReloadDelayMultiplier@ForgBullBuff:
 		Modifier: 80
@@ -378,6 +391,7 @@
 	Inherits@2: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
 	Inherits@5: ^WebDisable
+	Inherits@6: ^BurstRecovery
 	Inherits@10: ^NodToxindebuff
 	Inherits@12: ^nomnomnom
 	DrawLineToTarget:
@@ -655,6 +669,7 @@
 	Inherits@2: ^ExistsInWorld
 	Inherits@3: ^EmpDisableMobile
 	Inherits@5: ^ROTreduction
+	Inherits@6: ^BurstRecovery
 	Inherits@9: ^NodToxindebuff
 	Inherits@10:^NodVehicleRepair
 	Inherits@11: ^nomnomnom

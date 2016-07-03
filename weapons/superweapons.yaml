@@ -305,9 +305,10 @@ CabalCannon:
 	Range: 999c0
 	Burst: 3
 	BurstDelay: 25
+	MinRange: 6c0
 	Inaccuracy: 100c0
 	Report: MISL1.AUD
-		ValidTargets: Ground, Water
+	ValidTargets: Vehicle, Infantry, Building, Ground, Water
 	Projectile: Bullet
 		Speed: 300
 		Inaccuracy: 100c0
@@ -320,7 +321,7 @@ CabalCannon:
 	Warhead@1Dam: SpreadDamage
 		Spread: 600
 		Damage: 400
-		ValidTargets: Ground, Water
+		ValidTargets: Vehicle, Infantry, Building, Ground, Wate
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -330,6 +331,32 @@ CabalCannon:
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
 		InvalidImpactTypes: Water
+
+NanoMachineBurst:
+	ValidTargets: Ground, Air
+	Warhead@1Dam_impact: SpreadDamage
+		Spread: 1c0
+		Damage: 5
+		Falloff: 500, 368, 135, 50, 18, 7, 0
+		ValidTargets: Ground, Air
+		DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
+	Warhead@5Actor: SpawnActor
+		Actors: NANOMACHINEBURSTSPAWNER
+		FallRate: 5000
+		Range: 3
+
+RecoveryGun:
+	Inherits: ^FullDamage
+	ReloadDelay: 1
+	Range: 12c0
+	ValidTargets: KilledUnit
+	Projectile: Bullet
+		Speed: 100c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 200
+		Damage: 200
+		DamageTypes: Prone70Percent, TriggerProne, WorkerSummon
+		ValidTargets: KilledUnit
 
 ##########################################################
 # Mutants

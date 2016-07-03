@@ -14,6 +14,198 @@
 	RenderSprites:
 		Image: blackhanddummy
 
+DROPPODPLANE:
+	Inherits: WETP
+	-Buildable:
+	-Selectable:
+	Cargo:
+		MaxWeight: 10
+		Types: Infantry, Vehicle, Aircraft
+	-AppearsOnRadar:
+	Aircraft:
+		Speed: 1000
+	AttackBomber:
+		Bombs: primary
+	Health:
+		HP: 150
+	Armor:
+		Type: Light
+	-AttackPlane:
+	Armament:
+		Weapon: droppod1
+		LocalOffset: 3000, 3000,4000
+	Armament@1:
+		Weapon: droppod1
+		LocalOffset: -3000, 3000,4000
+	Armament@4:
+		Weapon: droppod2
+		LocalOffset: 0, 0,4000
+	ParaDrop:
+	-RevealsShroud:
+	-Targetable@GROUND:
+	-Targetable@AIRBORNE:
+	-WithVoxelBody:
+	-RenderVoxels:
+
+CABALMONEYDUMMY:
+	Inherits: ^DUMMYSTRUCTURE
+	SelfHealing:
+		Step: -10
+		HealIfBelow: 200
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+	CashTrickler:
+		Amount: 10
+		Period: 999
+
+CABALMONEYDUMMY1:
+	Inherits: ^DUMMYSTRUCTURE
+	SelfHealing:
+		Step: -5
+		HealIfBelow: 110
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+	CashTrickler:
+		Amount: 250
+		Period: 999
+
+KILLEDACTOR:
+	Inherits: ^DUMMYSTRUCTURE
+	SelfHealing:
+		Step: -5
+		HealIfBelow: 110
+	Health:
+		HP: 25
+		NotifyAppliedDamage: False
+	Targetable:
+		TargetTypes: KilledUnit
+	SpawnActorOnDeath@workerspawn:
+		Actor: worker
+		Probability: 100
+		InternalOwner: Killer
+		DeathType: WorkerSummon
+		RequiresLobbyCreeps: true
+
+NANOMACHINEBURSTSPAWNER:
+	Inherits: ^Infantry
+	-Targetable:
+	-UpdatesPlayerStatistics:
+	-AutoSelectionSize:
+	-SelectionDecorations:
+	-Selectable:
+	-AutoTarget:
+	RenderSprites:
+		Image: blackhanddummy
+	SelfHealing:
+		Step: -10
+		HealIfBelow: 200
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+	SpawnActorOnDeath@workerspawn:
+		Actor: NANOMACHINEBURSTDUMMY
+		Probability: 100
+		RequiresLobbyCreeps: false
+		SkipMakeAnimations: false
+	-SpawnActorOnDeath@nanomachineburst:
+
+NANOMACHINEBURSTDUMMY:
+	Inherits: ^Tree
+	SelfHealing:
+		Step: -1
+		Delay: 25
+		HealIfBelow: 200
+	RenderSprites:
+		Image: nanomachineswarmdummy
+		Palette: apolgreyalpha
+	Health:
+		HP: 40
+		NotifyAppliedDamage: False
+	UpgradeActorsNear:
+		Upgrades: nanomachineburst
+		Range: 6c0
+	WithMakeAnimation:
+	WithIdleOverlay:
+		Sequence: stand
+		Palette: apolgreyalpha
+	WithDeathAnimation:
+		DeathPaletteIsPlayerPalette: false
+		DeathSequencePalette: apolgreyalpha
+		UseDeathTypeSuffix: false
+	AttackOmni:
+		IngoresVisibility: True
+	Armament:
+		Weapon: RecoveryGun
+		TargetStances: Ally, Enemy, Neutral
+	AutoTarget:
+
+IONSTORMGENERATOR:
+	Inherits: ^DUMMYSTRUCTURE
+	SelfHealing:
+		Step: -1
+		Delay: 25
+		HealIfBelow: 200
+	Health:
+		HP: 40
+		NotifyAppliedDamage: False
+	AttackOmni:
+		IngoresVisibility: True
+	Armament:
+		Weapon: IonRay
+	AutoTarget:
+
+IONSTORMSPAWNER:
+	Inherits: ^DUMMYSTRUCTURE
+	SelfHealing:
+		Step: -10
+		HealIfBelow: 200
+	SpawnActorOnDeath@cabalcrate:
+		Actor: IONSTORMGENERATOR
+		Probability: 100
+		OwnerType: Victim
+		RequiresLobbyCreeps: false
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+
+VEINHOLESPAWNERDUMMY:
+	Inherits: ^Infantry
+	-Targetable:
+	-UpdatesPlayerStatistics:
+	-AutoSelectionSize:
+	-SelectionDecorations:
+	-Selectable:
+	-AutoTarget:
+	RenderSprites:
+		Image: blackhanddummy
+	SelfHealing:
+		Step: -10
+		HealIfBelow: 200
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+	SpawnActorOnDeath@cabalcrate:
+		Actor: VEINHOLEFORG
+		Probability: 100
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		RequiresLobbyCreeps: true
+	-SpawnActorOnDeath@nanomachineburst:
+
+BLACKHANDDUMMY:
+	Inherits: ^DUMMYSTRUCTURE
+	SelfHealing:
+		Step: -10
+		HealIfBelow: 200
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+
 METEORPLANE:
 	Inherits: WETP
 	-Buildable:
@@ -23,11 +215,9 @@ METEORPLANE:
 		Types: Infantry, Vehicle, Aircraft
 	-AppearsOnRadar:
 	Aircraft:
-		Speed: 200
-		# CruiseAltitude: 4c0
+		Speed: 800
 	AttackBomber:
-		Bombs: primary#Secondary
-		# Guns: primary
+		Bombs: primary
 	Health:
 		HP: 150
 	Armor:
@@ -69,39 +259,6 @@ METEORPLANE:
 	-WithVoxelBody:
 	-RenderVoxels:
 
-DROPPODPLANE:
-	Inherits: WETP
-	-Buildable:
-	-Selectable:
-	Cargo:
-		MaxWeight: 10
-		Types: Infantry, Vehicle, Aircraft
-	-AppearsOnRadar:
-	Aircraft:
-		Speed: 1000
-	AttackBomber:
-		Bombs: primary
-	Health:
-		HP: 150
-	Armor:
-		Type: Light
-	-AttackPlane:
-	Armament:
-		Weapon: droppod1
-		LocalOffset: 3000, 3000,4000
-	Armament@1:
-		Weapon: droppod1
-		LocalOffset: -3000, 3000,4000
-	Armament@4:
-		Weapon: droppod2
-		LocalOffset: 0, 0,4000
-	ParaDrop:
-	-RevealsShroud:
-	-Targetable@GROUND:
-	-Targetable@AIRBORNE:
-	-WithVoxelBody:
-	-RenderVoxels:
-
 METEORSHRNAPEL:
 	Inherits: ^Infantry
 	-Targetable:
@@ -122,96 +279,7 @@ METEORSHRNAPEL:
 		Weapons: LargeDebris
 		Pieces: 3, 7
 		Range: 2c0, 5c0
-
-IONSTORMSPAWNER:
-	Inherits: ^DUMMYSTRUCTURE
-	SelfHealing:
-		Step: -10
-		HealIfBelow: 200
-	SpawnActorOnDeath@cabalcrate:
-		Actor: IONSTORMGENERATOR
-		Probability: 100
-		OwnerType: Victim
-		RequiresLobbyCreeps: false
-	Health:
-		HP: 5
-		NotifyAppliedDamage: False
-
-IONSTORMGENERATOR:
-	Inherits: ^DUMMYSTRUCTURE
-	SelfHealing:
-		Step: -1
-		Delay: 25
-		HealIfBelow: 200
-	Health:
-		HP: 40
-		NotifyAppliedDamage: False
-	AttackOmni:
-		IngoresVisibility: True
-	Armament:
-		Weapon: IonRay
-		TargetStances: Ally, Enemy, Neutral
-	AutoTarget:
-
-VEINHOLESPAWNERDUMMY:
-	Inherits: ^Infantry
-	-Targetable:
-	-UpdatesPlayerStatistics:
-	-AutoSelectionSize:
-	-SelectionDecorations:
-	-Selectable:
-	-AutoTarget:
-	RenderSprites:
-		Image: blackhanddummy
-	SelfHealing:
-		Step: -10
-		HealIfBelow: 200
-	Health:
-		HP: 5
-		NotifyAppliedDamage: False
-	SpawnActorOnDeath@cabalcrate:
-		Actor: VEINHOLEFORG
-		Probability: 100
-		OwnerType: InternalName
-		InternalOwner: Creeps
-		RequiresLobbyCreeps: true
-
-
-CABALMONEYDUMMY:
-	Inherits: ^DUMMYSTRUCTURE
-	SelfHealing:
-		Step: -10
-		HealIfBelow: 200
-	Health:
-		HP: 5
-		NotifyAppliedDamage: False
-	CashTrickler:
-		Amount: 10
-		Period: 999
-
-CABALMONEYDUMMY1:
-	Inherits: ^DUMMYSTRUCTURE
-	SelfHealing:
-		Step: -5
-		HealIfBelow: 110
-	Health:
-		HP: 5
-		NotifyAppliedDamage: False
-	CashTrickler:
-		Amount: 250
-		Period: 999
-
-BLACKHANDDUMMY:
-	Inherits: ^DUMMYSTRUCTURE
-	SelfHealing:
-		Step: -10
-		HealIfBelow: 200
-	Health:
-		HP: 5
-		NotifyAppliedDamage: False
-	Explodes:
-		Weapon: UnitExplodeSmall
-		EmptyWeapon: UnitExplodeSmall
+	-SpawnActorOnDeath@nanomachineburst:
 
 SCRINENERGYDUMMY:
 	Inherits: ^Tank
@@ -245,3 +313,4 @@ SCRINENERGYDUMMY:
 	Explodes:
 		Weapon: EnergyAssimilator
 		LoadedChance: 100
+	-SpawnActorOnDeath@nanomachineburst:

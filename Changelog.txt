@@ -12,6 +12,7 @@ Scrin Changes:
 	Scrin extractor Power consumption: 200 -> 150, Cost: 800 -> 1000
 	Single Meteor Damage: 20 -> 100
 	Renamed Hive Colony to Visceroid Hive.
+	Meteor Storm reaction time increased.
 Forgotten  Changes:
 	Tiberian Fiends no longer "Take Cover" when hit.
 	Ostwind damage per rocket: 55 -> 40, Ostwinds now spawn two tiberian clouds per burst.
@@ -25,6 +26,7 @@ CABAL Changes:
 Bug Fixes:
 	Added EMP overlay for Cyber dogs.
 	Fixed a bug that made seeder birds crash the game when needing to reload.
+	Fixed bug that allowed the CABAL superweapon to target friendly structures.
 
 [2016 - 06 - 21]
 Balance Changes:

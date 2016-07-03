@@ -1178,7 +1178,7 @@ nastlh:
 		BlendMode: Additive
 	icon: clckicon
 		Offset: 0, 0
-		UseTilesetCode: false		
+		UseTilesetCode: false
 		
 ##########################################################
 # Aircraft
@@ -1200,7 +1200,12 @@ apache:
 blackhanddummy:
 	Inherits: ^EmpOverlay
 	idle: dot
+		UseTilesetCode: false
 	stand: dot
+	nanomachinecloud: smokebomb4
+		Length: 30
+		Ticks: 40
+		UseTilesetCode: false
 	icon: apchicon
 	run: dot
 

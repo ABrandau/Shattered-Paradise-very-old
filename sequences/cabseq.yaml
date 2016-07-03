@@ -757,12 +757,6 @@ cabobelisk:
 		Start: 26
 		ShadowStart: 53
 		Tick: 400
-	# active: ntobel_b
-		# Length: 12
-		# Tick: 200
-	# idle-lights: ntobel_a
-		# Length: 12
-		# Tick: 80
 	emp-overlay: emp_fx01
 		Length: *
 		Offset: 0, 0
@@ -775,9 +769,7 @@ cabobelisk:
 	icon: cabobeliskicon
 		Offset: 0, 0
 		UseTilesetCode: false
-	
 
-		
 cabradr:
 	Defaults:
 		Offset: 0, -36
@@ -1116,3 +1108,17 @@ cabsw1:
 	icon: cabsw1icon
 		Offset: 0, 0
 		UseTilesetCode: false
+
+nanomachineswarmdummy:
+	Inherits: ^EmpOverlay
+	idle: dot
+		UseTilesetCode: false
+	make: smokebomb4
+		Length: 19
+	stand: smokebomb4
+		Start: 19
+		Length: 25
+		Tick: 100
+	die: smokebomb4
+		Start: 45
+		Length: 15

@@ -340,7 +340,6 @@ GACNST:
 	SelectionDecorations:
 		VisualBounds: 144, 80, 0, -12
 
-
 PROC:
 	Inherits: ^Building
 	Valued:

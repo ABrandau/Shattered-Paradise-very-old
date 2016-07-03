@@ -3,10 +3,6 @@
 #######################################################
 GAWALL:
 	Inherits: ^Wall
-	# Buildable:
-		# Queue: Defense
-		# BuildPaletteOrder: 20
-		# Prerequisites: ~structures.gdi
 	SoundOnDamageTransition:
 		DamagedSounds:
 		DestroyedSounds:
@@ -347,10 +343,6 @@ REPAIRTUR:
 	Tooltip:
 		Name: Maintenance Turret
 		Description: GDI utility structure, repairs\nnearby vehciles. Requires power to operate.\n  Unnarmed.
-	# Buildable:
-		# Queue: Defense
-		# Prerequisites: garadr, ~structures.gdi
-		# BuildPaletteOrder: 60
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -426,10 +418,6 @@ GAFIRE:
 
 NAWALL:
 	Inherits: ^Wall
-	# Buildable:
-		# Queue: Defense
-		# BuildPaletteOrder: 20
-		# Prerequisites: ~structures.nod
 	SoundOnDamageTransition:
 		DamagedSounds:
 		DestroyedSounds:
@@ -1434,8 +1422,7 @@ SCRSHIELD:
 		Cost: 1000
 	Tooltip:
 		Name: Stasis Field Generator
-		Description: Disables vehicles.\nRequires power to operate.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft		
-		# Description: Stasis Field\nBuffs and heals nearby units.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft.
+		Description: Disables vehicles.\nRequires power to operate.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 80
@@ -1538,8 +1525,6 @@ CABSENTRYTURRET:
 		Type: Wood
 	BodyOrientation:
 		QuantizedFacings: 32
-	# RenderRangeCircle:
-		# RangeCircleType: aa
 	-CanPowerDown:
 	Turreted:
 		TurnSpeed: 10
@@ -1722,7 +1707,7 @@ CABSW1:
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Singularity Cannon
+		Name: Iron Savior
 		Description: Super Weapon.
 	Buildable:
 		Queue: Defense
@@ -1753,7 +1738,6 @@ CABSW1:
 	Armament:
 		Weapon: CabalCannon
 		LocalOffset: 1000,0,1500
-		TargetStances: Ally
 	-AutoTarget:
 	Power:
 		Amount: -60
@@ -1767,9 +1751,58 @@ CABSW1:
 		Cursor: emp
 		Icon: cabcannon
 		ChargeTime: 150
-		Description: Singularity
-		LongDesc: Fires a volley of bullets at the target location.
+		Description: Iron Savior
+		LongDesc: Fires a volley of bullets\nat the target location.
 		EndChargeSound: speech-nod|00-i158.aud
 		SelectTargetSound: speech-nod|00-i042.aud
 		Prerequisites: singularity
 		OrderName: singularity
+
+cabobelisk:
+	Inherits: ^Defense
+	Inherits@1: ^CabRender
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Nanomachine Core
+		Description: Allows you to create nanomachine swarms.
+	Buildable:
+		Queue: Defense
+		Prerequisites: cabtech, ~structures.cab
+		BuildPaletteOrder: 90
+		BuildLimit: 1
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 40, 30, -3, -8
+	RequiresPower:
+	DisabledOverlay:
+	Health:
+		HP: 350
+	Armor:
+		Type: Light
+	BodyOrientation:
+		QuantizedFacings: 32
+	-AutoTarget:
+	-RenderRangeCircle:
+	Power:
+		Amount: -60
+	SelectionDecorations:
+		VisualBounds: 40, 30, -3, -8
+	IonCannonPower@nanomachinesson:
+		Cursor: ioncannon
+		Icon: ioncannon
+		Effect: ionbeam
+		ChargeTime: 240
+		Weapon: NanoMachineBurst
+		Description: Nanomachine Swarm
+		LongDesc: Fills an area with nanomachines\nhealing friendly units and turning\nany fallen units into workers.
+		BeginChargeSound:
+		EndChargeSound: 00-i156.aud
+		LaunchSound:
+		SelectTargetSound:
+		InsufficientPowerSound:
+		OrderName: Nanomachine swarm
+		DisplayRadarPing: True
+		CameraActor: camera
