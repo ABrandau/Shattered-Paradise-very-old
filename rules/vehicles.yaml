@@ -1099,7 +1099,7 @@ SCRMBT:
 		BuildPaletteOrder: 32
 		Prerequisites: ~scrweap, scrradr
 	Valued:
-		Cost: 800
+		Cost: 900
 	Tooltip:
 		Name: Hover Tank
 		Description: Light Tank, good for scouting, deals damage\nover an area.\n Strong vs Light, heavy armor\n  Weak vs Infantry, Aircraft

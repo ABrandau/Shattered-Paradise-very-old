@@ -71,6 +71,50 @@ marauder:
 		ShadowStart: 190
 	die6: electro
 		Length: *
+	make:
+		Start: 367
+		Length: 9
+		ShadowStart: 815
+	turret:
+		Start: 440
+		Facings: 8
+		ShadowStart: 888
+	idle:
+		Start: 440
+		Facings: 8
+		ShadowStart: 888
+	muzzle0:
+		Start: 376
+		Length: 8
+		ShadowStart: 824
+	muzzle1:
+		Start: 384
+		Length: 8
+		ShadowStart: 832
+	muzzle2:
+		Start: 392
+		Length: 8
+		ShadowStart: 840
+	muzzle3:
+		Start: 400
+		Length: 8
+		ShadowStart: 848
+	muzzle4:
+		Start: 408
+		Length: 8
+		ShadowStart: 856
+	muzzle5:
+		Start: 416
+		Length: 8
+		ShadowStart: 864
+	muzzle6:
+		Start: 424
+		Length: 8
+		ShadowStart: 872
+	muzzle7:
+		Start: 432
+		Length: 8
+		ShadowStart: 880
 	icon: maraudericon	
 	
 e3:

@@ -1,7 +1,7 @@
 MarineRifle:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 70
-	Range: 6c0
+	Range: 5c0
 	Report: infgun3.aud, gostgun1.aud, slvkgun1.aud
 	Projectile: Bullet
 		Speed: 1c682
@@ -455,7 +455,7 @@ GuardianRail:
 		Color: 0080FFC8		
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 45
+		Damage: 75
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath		
 		Versus:
 			None: 150

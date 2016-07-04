@@ -5,19 +5,25 @@ General Changes:
 	Veinhole Monsters now spit toxic gases when attacked.
 	Vehicles receive damage when crossing veins.
 	Tiberium gas clouds added to the game.
+	Enabled Support Superweapons for all factions.
+GDI Changes:
+	Guardian Platform repair move removed.
 NOD Changes:
 	Added a muzzle effect for the NOD obelisk and reduced the laser width.
 	Corrected NOD powerplant target type.
 Scrin Changes:
+	Hover Tank: price 800 -> 900
 	Scrin extractor Power consumption: 200 -> 150, Cost: 800 -> 1000
 	Single Meteor Damage: 20 -> 100
 	Renamed Hive Colony to Visceroid Hive.
 	Meteor Storm reaction time increased.
 Forgotten  Changes:
+	Forg Marauders can now deploy similar to RA2 GIs.
 	Tiberian Fiends no longer "Take Cover" when hit.
 	Ostwind damage per rocket: 55 -> 40, Ostwinds now spawn two tiberian clouds per burst.
 	Enabled Forgotten Support Superweapon.
 CABAL Changes:
+	Cyborg: Armor: Light -> Wood, hp: 200 -> 250
 	Singularity Cannon: Cooldown: 120 secs -> 150.
 	Increased Cyborg's Commando proyectile speed.
 	Eye of CABAL power consumption: 100 -> 50, vision: 16c0 -> 19c0

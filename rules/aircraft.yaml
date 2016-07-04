@@ -346,7 +346,7 @@ GUARDIAN:
 		Cost: 2000
 	Tooltip:
 		Name: Guardian Platform
-		Description: Mobile Air Fortress.\nHas two firing modes.\nFirst mode can attack air and ground units (slow ROF).\nSecond mode repairs vehicles.\n  Does not need to rearm.
+		Description: Frigate.\n  Does not need to rearm.
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 20
@@ -371,43 +371,13 @@ GUARDIAN:
 		Step: 10
 		Delay: 300
 		HealIfBelow: 110
-	SpeedMultiplier:
-		UpgradeTypes: undeployed
-		Modifier: 40
 	Armament@primary:
 		Weapon: GuardianRail
-		UpgradeTypes: weaponswitch
-		UpgradeMaxEnabledLevel: 0
-		UpgradeMaxAcceptedLevel: 1
 	Armament@secondary:
 		Weapon: GuardianTusk
-		UpgradeTypes: weaponswitch
-		UpgradeMaxEnabledLevel: 0
-		UpgradeMaxAcceptedLevel: 1
-	Armament@Repair:
-		Weapon: GuardianRepair
-		LocalOffset: 256,0,256
-		UpgradeTypes: weaponswitch
-		UpgradeMinEnabledLevel: 1
-		TargetStances: Ally
 	AttackHeli:
 		FacingTolerance: 240
 		Voice: Attack
-	DeployToUpgrade:
-		DeployedUpgrades: weaponswitch
-		UndeployedUpgrades: undeployed
-		Facing: 160
-		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
-		DeploySound: guardian0029.aud
-		UndeploySound: guardian0030.aud
-	WithDecoration@weaponswitch:
-		Image: wrenchicon
-		Sequence: idle
-		ReferencePoint: Bottom, Left
-		Palette: player
-		ShowToEnemies: true
-		UpgradeTypes: weaponswitch
-		UpgradeMinEnabledLevel: 1
 	AmmoPool:
 		Ammo: 10
 		PipCount: 0
@@ -1284,7 +1254,7 @@ MOTHERSHIP:
 	ProduceActorPower@as:
 		Description: Energy Assimilator
 		LongDesc: Disables hostile powerplants\nmapwide.
-		Icon: hunterseeker
+		Icon: mothershipicon
 		Actors: scrinenergydummy
 		Type: HunterSeeker
 		ChargeTime: 240

@@ -172,6 +172,9 @@ ALTNODE1:
 	Mobile:
 		Speed: 70
 	Armament@PRIMARY:
+		Weapon: MilitantRifle
+		LocalOffset: 0,0,200
+	Armament@SECONDARY:
 		Weapon: MilitantFireball
 		LocalOffset: 0,0,200
 	AttackFrontal:
@@ -344,40 +347,97 @@ MARAUDER:
 	Voiced:
 		VoiceSet: Rocket
 	Health:
-		HP: 110
+		HP: 90
 	AutoTarget:
 		ScanRadius: 8
 	Mobile:
 		Speed: 55
-	Armament@PRIMARY:
+		UpgradeTypes: notmobile
+		UpgradeMaxEnabledLevel: 0
+	Armament@1:
 		Weapon: MarauderShotgun
 		Name: OnFoot
-	Armament@PRIMARY2:
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: playermut
+	Armament@2:
 		Weapon: MarauderShotgun
 		Name: OnFoot
-	Armament@PRIMARY3:
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: playermut
+	Armament@3:
 		Weapon: MarauderShotgun
 		Name: OnFoot
-	Armament@PRIMARY4:
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: playermut
+	Armament@4:
 		Weapon: MarauderShotgun
 		Name: OnFoot
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+		MuzzlePalette: playermut
 	Armament@GARRISON1:
 		Weapon: GMarauderShotgun
+		MuzzlePalette: playermut
 	Armament@GARRISON2:
 		Weapon: GMarauderShotgun
+		MuzzlePalette: playermut
 	Armament@GARRISON3:
 		Weapon: GMarauderShotgun
+		MuzzlePalette: playermut
 	Armament@GARRISON4:
 		Weapon: GMarauderShotgun
+		MuzzlePalette: playermut
+	DeployToUpgrade:
+		DeployedUpgrades: deployed, notmobile
+		UndeployedUpgrades: undeployed
+		DeployAnimation: make
+		Facing: 160
+		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
+		DeploySound: place2.aud
+		UndeploySound: clicky1.aud
+	WithInfantryBody:
+		UpgradeTypes: undeployed
+		UpgradeMinEnabledLevel: 1
+	WithInfantryBody@deployed:
+		StandSequences: turret
+		UpgradeTypes: undeployed
+		UpgradeMaxEnabledLevel: 0
+	WithMuzzleOverlay:
+		UpgradeTypes: undeployed
+		UpgradeMaxEnabledLevel: 0
+	Turreted:
+		TurnSpeed: 6
+		InitialFacing: 160
 	AttackFrontal:
-		Voice: Attack
 		Armaments: OnFoot
+		Voice: Attack
+		UpgradeTypes: undeployed
+		UpgradeMinEnabledLevel: 1
+		UpgradeMaxAcceptedLevel: 1
+	AttackTurreted@deployed:
+		Armaments: OnFoot
+		Voice: Attack
+		UpgradeTypes: deployed
+		UpgradeMinEnabledLevel: 1
 	SpawnActorOnDeath@tiberium:
 		Probability: 7
 		DeathType:
 	SpawnActorOnDeath@tiberium2:
 		Probability: 7
 		DeathType:
+	RangeMultiplier@deployed:
+		UpgradeTypes:
+		Modifier: 120
+	DamageMultiplier@deployed:
+		UpgradeTypes:
+		Modifier: 75
+	FirepowerMultiplier@deployed:
+		UpgradeTypes:
+		Modifier: 140
+
 E3:
 	Inherits: ^Mutant
 	Buildable:
@@ -487,7 +547,7 @@ SEER:
 	RenderSprites:	
 
 MUTFIEND:
-	Inherits: ^Mutant
+	Inherits: ^Beast
 	Tooltip:
 		Name: Tiberian Fiend
 		Description: Tiberian Beast, fires tiberium shards at enemies.\nCannot be crushed.\n  Strong vs Ground units.\n  Weak vs Aircraft.
@@ -508,7 +568,6 @@ MUTFIEND:
 		Shape: Circle
 			Radius: 213
 	-Crushable:
-	-TakeCover:
 	Armor:
 		Type: none
 	Mobile:
@@ -999,7 +1058,7 @@ CABSENTRY:
 CYBORG:
 	Inherits: ^Cyborg
 	Armor:
-		Type: Light
+		Type: Wood
 	Valued:
 		Cost: 350
 	Tooltip:
@@ -1021,7 +1080,7 @@ CYBORG:
 	Mobile:
 		Speed: 45
 	Health:
-		HP: 200
+		HP: 250
 	Passenger:
 	Armament:
 		Weapon: CyborgVulcan

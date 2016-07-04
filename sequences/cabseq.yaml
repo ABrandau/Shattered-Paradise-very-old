@@ -1113,12 +1113,19 @@ nanomachineswarmdummy:
 	Inherits: ^EmpOverlay
 	idle: dot
 		UseTilesetCode: false
+		ZOffset: -1024
 	make: smokebomb4
 		Length: 19
+		UseTilesetCode: false
+		ZOffset: -1024
 	stand: smokebomb4
 		Start: 19
 		Length: 25
 		Tick: 100
+		UseTilesetCode: false
+		ZOffset: -1024
 	die: smokebomb4
 		Start: 45
 		Length: 15
+		UseTilesetCode: false
+		ZOffset: -1024

@@ -12,7 +12,7 @@ CyborgVulcan:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 10
-		DamageTypes: Prone70Percent, TriggerProne, Cabal
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
 		InvalidImpactTypes: Water
@@ -278,7 +278,7 @@ CenturionVulcan:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 20
-		DamageTypes: Prone70Percent, TriggerProne
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
 		InvalidImpactTypes: Water

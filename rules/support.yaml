@@ -965,7 +965,7 @@ MUTSW2:
 		VisualBounds: 96, 64, -6, -6
 	IonCannonPower:
 		Weapon: VeinholeSummonerWeapon
-		Effect: ionbeam
+		Effect:
 		Icon: veinholesw
 		ChargeTime: 300
 		OrderName: Veinhole
@@ -1386,7 +1386,7 @@ MOTHERSHIPDEP:
 	ProduceActorPower@as:
 		Description: Energy Assimilator
 		LongDesc: Disables hostile powerplants\nmapwide.
-		Icon: hunterseeker
+		Icon: mothershipicon
 		Actors: scrinenergydummy
 		Type: HunterSeeker
 		ChargeTime: 240
@@ -1723,6 +1723,7 @@ CABSW1:
 	DisabledOverlay:
 	Health:
 		HP: 350
+	RejectsOrders:
 	Armor:
 		Type: Light
 	BodyOrientation:
@@ -1745,7 +1746,7 @@ CABSW1:
 		VisualBounds: 40, 36, -3, -8
 	ProvidesPrerequisite@singularity:
 		Prerequisite: singularity
-		Factions: gdi, mut, nod, cab
+		Factions: gdi, mut, nod, cab, scr
 		ResetOnOwnerChange: true
 	AttackOrderPower@singularity:
 		Cursor: emp
@@ -1792,8 +1793,8 @@ cabobelisk:
 		VisualBounds: 40, 30, -3, -8
 	IonCannonPower@nanomachinesson:
 		Cursor: ioncannon
-		Icon: ioncannon
-		Effect: ionbeam
+		Icon: nanomachineswarm
+		Effect:
 		ChargeTime: 240
 		Weapon: NanoMachineBurst
 		Description: Nanomachine Swarm

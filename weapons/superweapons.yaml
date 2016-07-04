@@ -301,7 +301,7 @@ MeteorRain:
 
 CabalCannon:
 	Inherits: ^FullDamage
-	ReloadDelay: 400
+	ReloadDelay: 3000
 	Range: 999c0
 	Burst: 3
 	BurstDelay: 25
@@ -321,7 +321,7 @@ CabalCannon:
 	Warhead@1Dam: SpreadDamage
 		Spread: 600
 		Damage: 400
-		ValidTargets: Vehicle, Infantry, Building, Ground, Wate
+		ValidTargets: Vehicle, Infantry, Building, Ground, Water
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect

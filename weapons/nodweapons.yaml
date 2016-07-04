@@ -1,12 +1,30 @@
 ##########################################
 # Infantry
 ##########################################
+MilitantRifle:
+	Inherits: ^RifleWarhead
+	ReloadDelay: 30
+	Range: 4c0
+	Report: infgun3.aud, gostgun1.aud, slvkgun1.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 8
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: piffs
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: water_piffs
+		ExplosionPalette: ra
+		ValidImpactTypes: Water
+
 MilitantFireball:
 	Inherits: ^AcidWarhead
 	ReloadDelay: 90
-	Range: 3c0
+	Range: 1c512
 	Report: flamtnk1.aud
-	MinRange: 1c0
 	Projectile: Bullet
 		Speed: 120
 		Image: FLAMEALL
