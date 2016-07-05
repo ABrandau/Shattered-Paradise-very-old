@@ -1217,7 +1217,7 @@ MOTHERSHIP:
 	Inherits@3: ^SelfReloads
 	Inherits@4: ^BasicStealthDetection
 	Valued:
-		Cost: 3500
+		Cost: 2000
 	Tooltip:
 		Name: Scrin Council
 		Description: Scrin Flagship, disables nearby power plants.

@@ -32,7 +32,7 @@ ENGINEER:
 		Cost: 500
 	Tooltip:
 		Name: Engineer
-		Description: Infiltrates and captures enemy structures.\n  Unarmed
+		Description: Infiltrates, captures enemy structures\nand also places mines.\n  Unarmed
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 8
@@ -43,6 +43,21 @@ ENGINEER:
 		Speed: 56
 	Health:
 		HP: 100
+	MineImmune:
+	Minelayer:
+		Mine: mumine
+		RearmBuildings:
+	AmmoPool:
+		Ammo: 5
+		PipCount: 5
+		PipType: Ammo
+		SelfReloadDelay: 500
+		SelfReloads: true
+		PipTypeEmpty: AmmoEmpty	
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 13
+		Prerequisites: ~cabclaw
 	Passenger:
 		PipType: Yellow
 	EngineerRepair:

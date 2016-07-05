@@ -122,7 +122,7 @@ MEDIC:
 EAGLEGUARD:
 	Inherits: ^Soldier
 	Valued:
-		Cost: 800
+		Cost: 700
 	Tooltip:
 		Name: Eagle Guard
 		Description: Elite Infantry, armed with power\narmor and a an EMP ray. Its\nattacks disable vehicles briefly.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft.
@@ -478,13 +478,24 @@ E2:
 		Cost: 400
 	Tooltip:
 		Name: Mutant Engineer
-		Description: Infiltrates and captures enemy structures.\n  Unarmed
+		Description: Infiltrates, captures enemy structures\nand also places mines.\n  Unarmed
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 20
 		Prerequisites: ~murax
 	Voiced:
 		VoiceSet: Engineer
+	MineImmune:
+	Minelayer:
+		Mine: mumine
+		RearmBuildings:
+	AmmoPool:
+		Ammo: 5
+		PipCount: 5
+		PipType: Ammo
+		SelfReloadDelay: 500
+		SelfReloads: true
+		PipTypeEmpty: AmmoEmpty	
 	Mobile:
 		Speed: 56
 	Health:
@@ -606,7 +617,7 @@ AWARRIOR:
 		Cost: 350
 	Tooltip:
 		Name: Forgotten Knight
-		Description: Suicide Infantry\nTurns into berserkers when killed.\n  Strong vs Infantry, Buildings.\n  Weak vs Aircraft, Vehicles.
+		Description: Suicide Infantry armed\nwith autocannons, they turn\n into berserkers when killed.\n  Strong vs Infantry, Buildings.\n  Weak vs Aircraft, Vehicles.
 	Voiced:
 		VoiceSet: Rocket
 	-UpdatesPlayerStatistics:
@@ -615,20 +626,30 @@ AWARRIOR:
 	Mobile:
 		Speed: 68
 	Targetable:
-		TargetTypes: Ground, Infantry, Razorshark
+		TargetTypes: Ground, Infantry, Razorshark, Knight
 	-SpawnActorOnDeath@conversion:
+	-SpawnActorOnDeath@FLAMEGUY:
+	-SpawnActorOnDeath@tiberium:
+	-SpawnActorOnDeath@tiberium2:
+	-SpawnActorOnDeath@tiberium3:
+	-SpawnActorOnDeath@tiberium4:
+	-WithDeathAnimation@normal:
+	-WithDeathAnimation@explosion:
+	-WithDeathAnimation@energy:
 	Armament@PRIMARY:
-		Weapon: BullAcid
+		Weapon: KnightGun
 		Name: OnFoot
 		LocalOffset: 128,0,400
 	Armament@GARRISON:
-		Weapon: BullAcid
+		Weapon: GKnightGun
 		LocalOffset: 128,0,400
 	AttackFrontal:
 		Voice: Attack
 	SpawnActorOnDeath:
 		Actor: berserker
 		probability: 100
+		OwnerType: InternalName
+		InternalOwner: Creeps
 
 PSYKER:
 	Inherits: ^Mutant
@@ -763,7 +784,18 @@ SHAPESHIFTER:
 		Experience: 250
 	Tooltip:
 		Name: Shapeshifter
-		Description: Infiltrates and captures enemy structures.\n  Unarmed
+		Description: Infiltrates, captures enemy structures\nand also places mines.\n  Unarmed
+	MineImmune:
+	Minelayer:
+		Mine: mumine
+		RearmBuildings:
+	AmmoPool:
+		Ammo: 5
+		PipCount: 5
+		PipType: Ammo
+		SelfReloadDelay: 500
+		SelfReloads: true
+		PipTypeEmpty: AmmoEmpty
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 26
@@ -815,6 +847,19 @@ COLOSSI:
 	Mobile:
 		Speed: 60
 		SharesCell: False
+	-SpawnActorOnDeath@FLAMEGUY:
+	-SpawnActorOnDeath@tiberium:
+	-SpawnActorOnDeath@tiberium2:
+	-SpawnActorOnDeath@tiberium3:
+	-SpawnActorOnDeath@tiberium4:
+	-SpawnActorOnDeath@cabmoney:
+	-SpawnActorOnDeath@blackhand:
+	SpawnActorOnDeath:
+		Actor: colossi
+		Probability: 5
+		OwnerType: Victim
+		DeathType:
+		RequiresLobbyCreeps: false
 	SpawnActorOnDeath@conversion:
 		Actor: cybdog
 		Probability: 100
@@ -1089,7 +1134,18 @@ SWARMLING:
 		Cost: 550
 	Tooltip:
 		Name: Swarmling
-		Description: Infiltrates and captures enemy structures.\n  Unarmed
+		Description: Infiltrates, captures enemy structures\nand also places mines.\n  Unarmed
+	MineImmune:
+	Minelayer:
+		Mine: mumine
+		RearmBuildings:
+	AmmoPool:
+		Ammo: 5
+		PipCount: 5
+		PipType: Ammo
+		SelfReloadDelay: 500
+		SelfReloads: true
+		PipTypeEmpty: AmmoEmpty	
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 13

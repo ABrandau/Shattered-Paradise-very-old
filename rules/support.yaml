@@ -384,7 +384,7 @@ GAFIRE:
 		Cost: 2000
 	Tooltip:
 		Name: Firestorm Generator
-		Description: Makes the nearby structures\nmore resistant to damage.
+		Description: Makes the nearby units and\nstructures more resistant to damage.
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
@@ -407,7 +407,7 @@ GAFIRE:
 	WithIdleOverlay@2:
 		Sequence: idle2
 	Power:
-		Amount: -150
+		Amount: 50
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 110, 60, 3, -4
@@ -666,7 +666,7 @@ NAMISL:
 		Prerequisites: natech, ~structures.nod
 		BuildLimit: 1
 	Valued:
-		Cost: 2000
+		Cost: 2500
 	Tooltip:
 		Name: Nod Missile Silo
 		Description: Allows the player to launch Missiles.\nRequires power to operate.
@@ -834,6 +834,7 @@ MUFLAK:
 		TurnSpeed: 10
 		InitialFacing: 50
 	AttackTurreted:
+	-CanPowerDown:
 	WithMuzzleOverlay:
 	WithSpriteTurret:
 		Recoils: no
@@ -863,6 +864,7 @@ MUBUNKR:
 		Dimensions: 2,2
 	Selectable:
 		Bounds: 88, 42, 0, -6
+	-CanPowerDown:
 	DisabledOverlay:
 	-EmitInfantryOnSell@gdi:
 	-EmitInfantryOnSell@nod:
@@ -897,7 +899,7 @@ MUTSW1:
 		Prerequisites: tech, ~structures.mut
 		BuildLimit: 1
 	Valued:
-		Cost: 3500
+		Cost: 2500
 	Tooltip:
 		Name: Meditation Hall
 		Description: Allows the player to generate Ion Storms.
@@ -1318,7 +1320,7 @@ SCRSW1:
 		Prerequisites: tech, ~structures.scr
 		BuildLimit: 1
 	Valued:
-		Cost: 2000
+		Cost: 2500
 	Tooltip:
 		Name: Signal Transmiter
 		Description: Allows the player to generate Ion Storms.
@@ -1334,7 +1336,7 @@ SCRSW1:
 	RevealsShroud:
 		Range: 5c0
 	Power:
-		Amount: -100
+		Amount: -150
 	SelectionDecorations:
 		VisualBounds: 116, 78, 3, -8
 	AirstrikePower@meteor:
@@ -1352,7 +1354,7 @@ MOTHERSHIPDEP:
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^TowerStealthDetection
 	Valued:
-		Cost: 900
+		Cost: 2000
 	Tooltip:
 		Name: Deployed Mothership
 		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs All
@@ -1694,7 +1696,7 @@ CABSW1:
 	Inherits: ^Defense
 	Inherits@1: ^CabRender
 	Valued:
-		Cost: 3500
+		Cost: 2500
 	Tooltip:
 		Name: Iron Savior
 		Description: Super Weapon.

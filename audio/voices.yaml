@@ -176,6 +176,7 @@ Fiend:
 	Voices:
 		Select: fiend1
 		Attack: fiend1
+		Action: fiend1
 		Move: fiend1
 		Die: fiend1
 		Burned: fiend1

@@ -683,18 +683,11 @@ WOLF:
 		Upgrades: forgbullbuff, forgbulldebuff
 		Range: 4c0
 	-Crushable:
-	-AutoTarget:
-	MineImmune:
-	Minelayer:
-		Mine: mumine
-		RearmBuildings:
-	AmmoPool:
-		Ammo: 5
-		PipCount: 5
-		PipType: Ammo
-		SelfReloadDelay: 500
-		SelfReloads: true
-		PipTypeEmpty: AmmoEmpty	
+	AttackFrontal:
+	AutoTarget:
+	Armament@PRIMARY:
+		Weapon: BullAcid
+		LocalOffset: 128,0,400
 	Health:
 		HP: 300
 	Armor:

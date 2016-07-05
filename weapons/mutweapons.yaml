@@ -112,18 +112,20 @@ RangerRifle:
 		ValidImpactTypes: Water
 
 KnightGun:
-	Inherits: ^FullDamage
+	Inherits: ^GrenadeWarhead
 	ReloadDelay: 60
-	Range: 6c0
+	Range: 4c0
 	Report: rketinf1.aud
 	ValidTargets: Ground
 	Projectile: Bullet
-		Speed: 250
-		Image: blueballminitrail
-		Palette: apgreen
+		Speed: 300
+		Shadow: true
+		Inaccuracy: 200
+		Image: DISCUS
+		# Palette: apgreen
 	Warhead@1Dam: SpreadDamage
-		Spread: 350
-		Damage: 18
+		Spread: 125
+		Damage: 30
 		ValidTargets: Ground
 		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeathStrong
 	Warhead@2Eff: CreateEffect
@@ -258,19 +260,21 @@ GRangerRifle:
 		Explosions: water_piff
 		ValidImpactTypes: Water
 		
-GWarriorAcid:
-	Inherits: ^FullDamage
+GKnightGun:
+	Inherits: ^GrenadeWarhead
 	ReloadDelay: 60
 	Range: 6c768
 	Report: rketinf1.aud
 	ValidTargets: Ground
 	Projectile: Bullet
-		Speed: 250
-		Image: blueballminitrail
-		Palette: apgreen
+		Speed: 300
+		Shadow: true
+		Inaccuracy: 200
+		Image: DISCUS
+		# Palette: apgreen
 	Warhead@1Dam: SpreadDamage
-		Spread: 350
-		Damage: 18
+		Spread: 125
+		Damage: 30
 		ValidTargets: Ground
 		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeathStrong
 	Warhead@2Eff: CreateEffect
@@ -310,9 +314,15 @@ BerserkerBlow:
 	ReloadDelay: 50
 	Range: 1c512
 	Report: fiend2.aud
+	InvalidTargets: Knight
 	Projectile: Bullet
 		Speed: 5c682
 		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath, TiberiumDeath
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 50
+		ValidTargets: Ground	
+		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
 		ImpactSound: expnew12.aud
@@ -349,7 +359,7 @@ BullAcid:
 	ReloadDelay: 75
 	Range: 4c0
 	Report: flamtnk1.aud
-	ValidTargets: Ground
+	ValidTargets: Vehicle, Infantry, Building, Ground, Water
 	Projectile: Bullet
 		Speed: 100
 		Image: acidall32mini
@@ -359,9 +369,9 @@ BullAcid:
 	BurstDelay: 5
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 2
-		ValidTargets: Ground	
+		Damage: 5
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong
+		ValidTargets: Vehicle, Infantry, Building, Ground, Water
 	Warhead@2Eff: CreateEffect
 		Explosions: tibexp2mini
 		ExplosionPalette: apolgreenalpha

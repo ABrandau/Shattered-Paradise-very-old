@@ -142,7 +142,7 @@ CyCannon:
 		MaximumLaunchSpeed: 192
 		Blockable: false
 		HorizontalRateOfTurn: 2
-		Speed: 200
+		Speed: 250
 		Shadow: true
 		Image: TORPEDO
 	Warhead@1Dam: SpreadDamage

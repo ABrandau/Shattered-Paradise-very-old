@@ -315,7 +315,7 @@ GATECH:
 GAPLUG:
 	Inherits: ^Building
 	Valued:
-		Cost: 1000
+		Cost: 1500
 	Tooltip:
 		Name: GDI Upgrade Center
 		Description: Can be upgraded for additional technology.
