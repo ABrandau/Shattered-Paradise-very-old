@@ -1007,7 +1007,7 @@ MUMINE:
 	-RenderRangeCircle:
 	-Voiced:
 	Armor:
-		Type: Wood
+		Type: Heavy
 	RevealsShroud:
 		Range: 3c0
 	Targetable:

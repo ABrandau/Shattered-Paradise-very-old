@@ -2,6 +2,25 @@
 
 [2016 - xx - xx]
 General Changes:
+	Mine Armor: wood -> heavy.
+	Rifle warhead damage to unarmored targets: 100% -> 120%.
+	Engineer can hold 3 mines instead of 5.
+NOD Changes:
+	Stealth Tank: Health: 210 -> 310.
+	Banshee: hp: 230 -> 200.
+	Harpy: hp: 160 -> 100, cost: 700 -> 500.
+Scrin Changes:
+	Destroyer: hp: 450 -> 300.
+	Glyder: hp: 170 -> 150.
+	Battlecruiser: hp: 900 -> 600.
+CABAL Changes:
+	Paladin damage: 40 -> 60, warhead: full damage -> rifle.
+	Wasp: hp: 130 -> 120.
+Forgotten  Changes:
+	Gargoyle HP: 225 -> 180.
+
+[2016 - 07 - 04]
+General Changes:
 	Veinhole Monsters now spit toxic gases when attacked.
 	Vehicles receive damage when crossing veins.
 	Tiberium gas clouds added to the game.

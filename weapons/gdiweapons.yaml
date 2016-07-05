@@ -127,7 +127,7 @@ WolverineVulcan:
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
+		Spread: 256
 		Damage: 25
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect

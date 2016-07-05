@@ -245,7 +245,7 @@ ORCA:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 175
+		HP: 120
 	Armor:
 		Type: Wood
 	Armament:
@@ -290,7 +290,7 @@ ORCAB:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 180
+		HP: 160
 	Armor:
 		Type: Heavy
 	Armament:
@@ -516,7 +516,7 @@ APACHE:
 	Inherits: ^Helicopter
 	Inherits@3: ^BasicStealthDetection
 	Valued:
-		Cost: 700
+		Cost: 500
 	Tooltip:
 		Name: Harpy
 		Description: Scout helicopter\narmed with dual chain guns.\nDetects cloaked units.\nCloaks when idle.\nDetects cloaked units.\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles
@@ -531,7 +531,7 @@ APACHE:
 		Speed: 130
 		MoveIntoShroud: true
 	Health:
-		HP: 150
+		HP: 100
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -597,7 +597,7 @@ SCRIN:
 		TakeoffSound: dropup1.aud
 		LandingSound: dropdwn1.aud
 	Health:
-		HP: 230
+		HP: 200
 	Armor:
 		Type: Wood
 	Armament:
@@ -690,7 +690,7 @@ MUTHELI:
 		LandingSound: orcadwn1.aud
 		RearmBuildings: muair, gahpad, nahpad
 	Health:
-		HP: 225
+		HP: 180
 	RenderVoxels:
 		Scale: 9
 	Armor:
@@ -877,10 +877,7 @@ STORMRIDER:
 		Weapon: StormRiderBlastAA
 	-ReturnOnIdle:
 	RenderVoxels:
-		Scale: 0.7
-	# AttackPlane:
-		# Voice: Attack
-		# FacingTolerance: 20
+		# Scale: 0.7
 	AttackTurreted:
 	Turreted:
 	AmmoPool:
@@ -977,7 +974,7 @@ SCRGLYDER1:
 		LandingSound: orcadwn1.aud
 		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green
 	Health:
-		HP: 170
+		HP: 150
 	Armor:
 		Type: Light
 	Armament:
@@ -1027,7 +1024,7 @@ SCRDESTROYER:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 450
+		HP: 300
 	Armor:
 		Type: Light
 	SelfHealing:
@@ -1129,7 +1126,7 @@ SCRBATTLESHIP:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 900
+		HP: 600
 	Armor:
 		Type: Heavy
 	SelfHealing:
@@ -1310,7 +1307,7 @@ WASP:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 130
+		HP: 120
 	Armor:
 		Type: Wood
 	Voiced:

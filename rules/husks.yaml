@@ -132,13 +132,21 @@ MUTHELI.Husk:
 	Aircraft:
 		TurnSpeed: 5
 		Speed: 168	
-	WithIdleOverlay:
-		Offset: -50,0,480			
+	WithIdleOverlay@ROTORAIR:
+		Offset: 85,0,384
+		Sequence: rotor
+		UpgradeTypes: airborne
+		UpgradeMinEnabledLevel: 1
+	WithIdleOverlay@ROTORGROUND:
+		Offset: 85,0,384
+		Sequence: slow-rotor
+		UpgradeTypes: airborne
+		UpgradeMaxEnabledLevel: 0		
 	RenderSprites:
 		Image: mutheli
 	RenderVoxels:
 		Image: mutheli
-		Scale: 1
+		Scale: 9
 	FallsToEarth:
 		Explosion: SmallPlaneExplode
 		

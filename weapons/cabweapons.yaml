@@ -380,7 +380,7 @@ ecmwave:
 			Concrete: 0			
 
 PalaLazor:
-	Inherits: ^FullDamage
+	Inherits: ^RifleWarhead
 	ReloadDelay: 90
 	Range: 6c0
 	Report: obelray1.aud
@@ -389,7 +389,7 @@ PalaLazor:
 		BeamDuration: 7
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 30
+		Damage: 60
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 
 ########################################################################

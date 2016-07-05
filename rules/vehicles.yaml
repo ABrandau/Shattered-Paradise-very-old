@@ -626,7 +626,7 @@ STNK:
 		Speed: 100
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 210
+		HP: 310
 	Armor:
 		Type: Light
 	Cloak@cloakgenerator:
@@ -1136,7 +1136,7 @@ SCRGLYDER2:
 		Name: Glider
 		Description: Specialized weapons platform.\nCan vary from a ground version and aerial version.\nThe aerial version attacks ground units and vice versa.\n Strong vs Armor.\n  Weak vs Light units.
 	Health:
-		HP: 170
+		HP: 150
 	Armor:
 		Type: Wood
 	Mobile:

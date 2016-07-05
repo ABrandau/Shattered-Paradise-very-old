@@ -23,15 +23,15 @@ MilitantRifle:
 MilitantFireball:
 	Inherits: ^AcidWarhead
 	ReloadDelay: 90
-	Range: 1c512
+	Range: 3c0
 	Report: flamtnk1.aud
+	Burst: 4
+	BurstDelay: 3
 	Projectile: Bullet
 		Speed: 120
 		Image: FLAMEALL
 		Inaccuracy: 384
-		TrailImage: small_smoke_trail		
-	Burst: 4
-	BurstDelay: 3
+		TrailImage: small_smoke_trail
 	Warhead@1Dam: SpreadDamage
 		Spread: 300
 		Damage: 5

@@ -3,6 +3,7 @@
 		Spread: 128
 		Damage: 20
 		Versus:
+			None: 120
 			Wood: 60
 			Light: 40
 			Heavy: 25
@@ -58,14 +59,14 @@ ArtilleryWarhead: #Inherits: ArtilleryWarhead
 			Heavy: 35
 			Concrete: 50
 			
-^BombWarhead: #Inherits: ^BombWarhead			
-	Warhead@1Dam: SpreadDamage			
+^BombWarhead: #Inherits: ^BombWarhead
+	Warhead@1Dam: SpreadDamage
 		Versus:
 			None: 200
 			Wood: 100
 			Light: 75
 			Heavy: 32
-			Concrete: 100			
+			Concrete: 100
 
 ^FlameWarhead:	#Inherits: ^FlameWarhead
 	Warhead@1Dam: SpreadDamage
