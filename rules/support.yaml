@@ -686,7 +686,7 @@ NAMISL:
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 	Power:
-		Amount: -50
+		Amount: -150
 	CanPowerDown:
 		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
@@ -821,7 +821,6 @@ MUFLAK:
 	Building:
 	Selectable:
 		Bounds: 40, 30, -3, -8
-	RequiresPower:
 	DisabledOverlay:
 	Health:
 		HP: 350
@@ -843,8 +842,6 @@ MUFLAK:
 		MuzzleSequence: muzzle
 		MuzzlePalette: apgrey
 		LocalOffset: 450,0,300
-	Power:
-		Amount: -10
 	SelectionDecorations:
 		VisualBounds: 40, 36, -3, -8
 
@@ -866,7 +863,6 @@ MUBUNKR:
 		Dimensions: 2,2
 	Selectable:
 		Bounds: 88, 42, 0, -6
-	# RequiresPower:
 	DisabledOverlay:
 	-EmitInfantryOnSell@gdi:
 	-EmitInfantryOnSell@nod:
@@ -889,11 +885,6 @@ MUBUNKR:
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
 		PortYaws: 0, 176, 341, 512, 682, 853
 		PortCones: 86, 86, 86, 86, 86, 86
-	RangeMultiplier:
-		Modifier: 300
-		BaseLevel: 0
-	Power:
-		Amount: -10
 	SelectionDecorations:
 		VisualBounds: 88, 72, 0, -12
 
@@ -906,7 +897,7 @@ MUTSW1:
 		Prerequisites: tech, ~structures.mut
 		BuildLimit: 1
 	Valued:
-		Cost: 2000
+		Cost: 3500
 	Tooltip:
 		Name: Meditation Hall
 		Description: Allows the player to generate Ion Storms.
@@ -921,8 +912,6 @@ MUTSW1:
 		Type: Wood
 	RevealsShroud:
 		Range: 5c0
-	Power:
-		Amount: -100
 	SelectionDecorations:
 		VisualBounds: 116, 78, 3, -8
 	SpawnActorPower@ionstorm:
@@ -960,12 +949,12 @@ MUTSW2:
 	RevealsShroud:
 		Range: 5c0
 	Power:
-		Amount: -100
+		Amount: -150
 	SelectionDecorations:
 		VisualBounds: 96, 64, -6, -6
 	IonCannonPower:
 		Weapon: VeinholeSummonerWeapon
-		Effect:
+		Effect: dot
 		Icon: veinholesw
 		ChargeTime: 300
 		OrderName: Veinhole
@@ -1705,7 +1694,7 @@ CABSW1:
 	Inherits: ^Defense
 	Inherits@1: ^CabRender
 	Valued:
-		Cost: 2000
+		Cost: 3500
 	Tooltip:
 		Name: Iron Savior
 		Description: Super Weapon.
@@ -1741,7 +1730,7 @@ CABSW1:
 		LocalOffset: 1000,0,1500
 	-AutoTarget:
 	Power:
-		Amount: -60
+		Amount: -200
 	SelectionDecorations:
 		VisualBounds: 40, 36, -3, -8
 	ProvidesPrerequisite@singularity:
@@ -1794,7 +1783,7 @@ cabobelisk:
 	IonCannonPower@nanomachinesson:
 		Cursor: ioncannon
 		Icon: nanomachineswarm
-		Effect:
+		Effect: dot
 		ChargeTime: 240
 		Weapon: NanoMachineBurst
 		Description: Nanomachine Swarm

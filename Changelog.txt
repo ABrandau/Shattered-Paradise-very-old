@@ -18,6 +18,9 @@ Scrin Changes:
 	Renamed Hive Colony to Visceroid Hive.
 	Meteor Storm reaction time increased.
 Forgotten  Changes:
+	Mechanics renamed to engineers, they cannot repair vehicles anymore.
+	Power Plant cost: 200 -> 230
+	Forgotten defences no longer require power.
 	Forg Marauders can now deploy similar to RA2 GIs.
 	Tiberian Fiends no longer "Take Cover" when hit.
 	Ostwind damage per rocket: 55 -> 40, Ostwinds now spawn two tiberian clouds per burst.

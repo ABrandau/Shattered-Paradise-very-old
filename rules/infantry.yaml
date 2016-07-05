@@ -396,8 +396,8 @@ MARAUDER:
 		DeployAnimation: make
 		Facing: 160
 		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
-		DeploySound: place2.aud
-		UndeploySound: clicky1.aud
+		DeploySound:
+		UndeploySound:
 	WithInfantryBody:
 		UpgradeTypes: undeployed
 		UpgradeMinEnabledLevel: 1
@@ -477,7 +477,7 @@ E2:
 	Valued:
 		Cost: 400
 	Tooltip:
-		Name: Mechanic
+		Name: Mutant Engineer
 		Description: Infiltrates and captures enemy structures.\n  Unarmed
 	Buildable:
 		Queue: Infantry
@@ -489,19 +489,13 @@ E2:
 		Speed: 56
 	Health:
 		HP: 80
+	-AutoTarget:
 	Passenger:
 		PipType: Yellow
 	EngineerRepair:
 	RepairsBridges:
-	AttackFrontal:
-	Armament:
-		Weapon: MechanicRepair
-		TargetStances: Ally
-		ForceTargetStances: None
 	Captures:
 		CaptureTypes: building
-	AutoTarget:
-		ScanRadius: 8
 	-GainsExperience:
 	RenderSprites:
 	WithInfantryBody:

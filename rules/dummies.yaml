@@ -98,6 +98,7 @@ NANOMACHINEBURSTSPAWNER:
 	-AutoTarget:
 	RenderSprites:
 		Image: blackhanddummy
+	-ActorLostNotification:
 	SelfHealing:
 		Step: -10
 		HealIfBelow: 200
@@ -178,6 +179,7 @@ VEINHOLESPAWNERDUMMY:
 	-SelectionDecorations:
 	-Selectable:
 	-AutoTarget:
+	-ActorLostNotification:
 	RenderSprites:
 		Image: blackhanddummy
 	SelfHealing:

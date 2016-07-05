@@ -72,6 +72,11 @@ rank:
 	rank: pips
 		Start: 7
 		Length: 2
+
+dot:
+	idle:
+		UseTilesetExtension: false
+		Length: *
 		
 meteor:
 	idle:

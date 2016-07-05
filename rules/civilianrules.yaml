@@ -317,6 +317,9 @@ VISC_LRG:
 		EmptyWeapon: UnitExplodeSmall	
 	RevealsShroud:
 		Range: 4c0
+	-WithSpriteBody:
+	WithInfantryBody:
+		AttackSequence: muzzle
 	AttackFrontal:
 		Voice: Attack
 	AttackWander:

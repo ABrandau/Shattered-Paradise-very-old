@@ -878,7 +878,7 @@ NATMPL:
 	RevealsShroud:
 		Range: 6c0
 	Power:
-		Amount: -200
+		Amount: -150
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 	ProvidesPrerequisite:
@@ -990,7 +990,7 @@ MUPOWR:
 		BuildPaletteOrder: 0
 		Prerequisites: ~structures.mut
 	Valued:
-		Cost: 200
+		Cost: 230
 	Tooltip:
 		Name: Mutant Power Plant
 		Description: Provides power for other structures.
