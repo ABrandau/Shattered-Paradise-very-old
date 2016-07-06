@@ -30,7 +30,7 @@ JJCannon:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 16
+		Damage: 30
 		ValidTargets: Ground, Helicopter
 			None: 25
 			Wood: 35

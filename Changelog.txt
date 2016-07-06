@@ -5,6 +5,8 @@ General Changes:
 	Mine Armor: wood -> heavy.
 	Rifle warhead damage to unarmored targets: 100% -> 120%.
 	Engineer can hold 3 mines instead of 5.
+GDI Changes:
+	JJ damage: 16 -> 30.
 NOD Changes:
 	Stealth Tank: Health: 210 -> 310.
 	Banshee: hp: 230 -> 200.
