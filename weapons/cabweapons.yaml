@@ -324,7 +324,7 @@ DevourerShell:
 		Shadow: true
 		Image: DRAGON
 		Inaccuracy: 1c0
-		ContrailLength: 5
+		ContrailLength: 10
 		Angle: 150
 		RangeLimit: 35
 	Warhead@1Dam: SpreadDamage
