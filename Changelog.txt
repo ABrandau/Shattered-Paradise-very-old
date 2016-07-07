@@ -9,6 +9,7 @@ General Changes:
 	Set General support power cooldown time to 3 minutes.
 GDI Changes:
 	JJ damage: 16 -> 30.
+	Reduced the amount of troopers delivered by the drop pods.
 NOD Changes:
 	Stealth Tank: Health: 210 -> 310.
 	Banshee: hp: 230 -> 200.
