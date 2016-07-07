@@ -27,6 +27,7 @@ Bug Fixes:
 	Fixed bug that made engineers unbuildable for GDI and NOD.
 	Fixed bug that made non scrin players unable to access Scrin tech if they capture a host station.
 	Fixed bug that allowed players to build many motherships.
+	Fixed Marn's maps being non-compatible.
 
 [2016 - 07 - 04]
 General Changes:

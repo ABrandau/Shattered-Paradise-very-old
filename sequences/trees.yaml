@@ -229,6 +229,7 @@ veinholeforg:
 		ZOffset: -512
 	idle:
 	stand:
+	dead
 	shoot:
 		Length: 23
 		Tick: 50
