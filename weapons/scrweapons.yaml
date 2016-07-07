@@ -440,7 +440,7 @@ DronePlane:
 	ReloadDelay: 150
 	Range: 11c0
 	MinRange: 2c0
-	Report: 120mmf.aud
+	# Report: 120mmf.aud
 	ValidTargets: Infantry, Vehicle, Building
 	Projectile: Bullet
 		Speed: 360

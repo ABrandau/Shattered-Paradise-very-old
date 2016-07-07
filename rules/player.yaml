@@ -59,3 +59,5 @@ Player:
 	HarvesterAttackNotifier:
 	PlayerStatistics:
 	PlaceSimpleBeacon:
+	ResourceStorageWarning:
+		AdviceInterval: 120

@@ -77,7 +77,7 @@ GAPILE:
 		Name: GDI Barracks
 		Description: Produces infantry.
 	ProvidesPrerequisite:
-		Prerequisite: barracks
+		Prerequisite: ~barracks
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -622,8 +622,8 @@ NAHAND:
 	Tooltip:
 		Name: Hand of Nod
 		Description: Produces infantry.
-	ProvidesPrerequisite:
-		Prerequisite: barracks
+	ProvidesPrerequisite@engineer:
+		Prerequisite: ~barracks
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
@@ -857,7 +857,7 @@ NATMPL:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 200
-		Prerequisites: natech, ~structures.nod, ~sw
+		Prerequisites: natech, ~structures.nod
 		BuildLimit: 1
 	ProvidesPrerequisite@buildingname:
 	Valued:
@@ -1324,7 +1324,7 @@ drached:
 	Selectable:
 		Bounds: 144, 60, 0, -6
 	ProvidesPrerequisite@scr:
-		Factions: scr
+		# Factions: scr
 		Prerequisite: structures.scr
 	SelectionDecorations:
 		VisualBounds: 144, 80, 0, -12

@@ -141,7 +141,7 @@ GAVULC:
 		Cost: 350
 	Tooltip:
 		Name: Vulcan Tower
-		Description: Basic base defense.\nDoes not require power to operate.\n  Strong vs Infantry, Light armor\n  Weak vs Aircraft
+		Description: Basic base defense.\n  Strong vs Infantry, Light armor\n  Weak vs Aircraft
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 40
@@ -197,7 +197,7 @@ GAROCK:
 		Cost: 800
 	Tooltip:
 		Name: RPG Tower
-		Description: GDI Advanced base defense.\nDoes not require power to operate.\n  Strong vs Armored ground units\n  Weak vs Aircraft
+		Description: GDI Advanced base defense.\n  Strong vs Armored ground units\n  Weak vs Aircraft
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 40
@@ -249,7 +249,7 @@ GACSAM:
 		Cost: 800
 	Tooltip:
 		Name: SAM Tower
-		Description: GDI Anti-Air base defense.\nStronger than average AA.\nDoes not require extra power to operate.\n  Strong vs Aircraft\n  Weak vs Ground units
+		Description: GDI Anti-Air base defense.\nStronger than average AA.\n  Strong vs Aircraft\n  Weak vs Ground units
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 40
@@ -384,7 +384,7 @@ GAFIRE:
 		Cost: 2000
 	Tooltip:
 		Name: Firestorm Generator
-		Description: Makes the nearby units and\nstructures more resistant to damage.
+		Description: Makes the nearby units and\nstructures more resistant to\ndamage.
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
@@ -999,7 +999,7 @@ MUMINE:
 	Valued:
 		Cost: 800
 	Tooltip:
-		Name: Forgotten Mine
+		Name: Mine
 	Health:
 		HP: 50
 	-AttackTurreted:
@@ -1364,7 +1364,7 @@ MOTHERSHIPDEP:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: tech, ~structures.scr
+		Prerequisites: tech, ~structures.scr, ~!mothership
 		BuildLimit: 1
 	Building:
 		Footprint: xxx xxx xxx
@@ -1374,7 +1374,7 @@ MOTHERSHIPDEP:
 	RequiresPower:
 	Transforms:
 		IntoActor: mothership
-	ProduceActorPower@as:
+	ProduceActorPower@es:
 		Description: Energy Assimilator
 		LongDesc: Disables hostile powerplants\nmapwide.
 		Icon: mothershipicon
@@ -1389,20 +1389,22 @@ MOTHERSHIPDEP:
 	WithMakeAnimation:
 		Sequence: make2
 	Health:
-		HP: 600
+		HP: 1500
 	Armor:
 		Type: Heavy
+	-CanPowerDown:
+	AttackOmni:
 	RevealsShroud:
 		Range: 12c0
-	Armament:
-		Weapon: DronePlane
-		LocalOffset: 0,0,800
-	AttackCharge:
-		ChargeAudio: obelpowr.aud
-		ReloadTime: 75
-		InitialChargeDelay: 75
-	Power:
-		Amount: -40
+	Armament@1:
+		Weapon: BattleshipCannon
+		LocalOffset:0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
+	Armament@2:
+		Weapon: BattleshipCannon
+		LocalOffset:0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
+	Armament@3:
+		Weapon: BattleshipCannon
+		LocalOffset:0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
 	SelectionDecorations:
 		VisualBounds: 88, 72, 0, -12
 

@@ -5,6 +5,7 @@ General Changes:
 	Mine Armor: wood -> heavy.
 	Rifle warhead damage to unarmored targets: 100% -> 120%.
 	Engineer can hold 3 mines instead of 5.
+	Re enabled the silos needed notification.
 GDI Changes:
 	JJ damage: 16 -> 30.
 NOD Changes:
@@ -15,11 +16,17 @@ Scrin Changes:
 	Destroyer: hp: 450 -> 300.
 	Glyder: hp: 170 -> 150.
 	Battlecruiser: hp: 900 -> 600.
+	Tweaked Scrin Mothership HP and weapons.
 CABAL Changes:
 	Paladin damage: 40 -> 60, warhead: full damage -> rifle.
 	Wasp: hp: 130 -> 120.
 Forgotten  Changes:
 	Gargoyle HP: 225 -> 180.
+Bug Fixes:
+	Fixed bug that made the Temple of NOD unbuildable.
+	Fixed bug that made engineers unbuildable for GDI and NOD.
+	Fixed bug that made non scrin players unable to access Scrin tech if they capture a host station.
+	Fixed bug that allowed players to build many motherships.
 
 [2016 - 07 - 04]
 General Changes:
