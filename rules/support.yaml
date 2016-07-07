@@ -445,7 +445,7 @@ NALASR:
 	Inherits: ^Defense
 	Inherits@1: ^TowerStealthDetection
 	Valued:
-		Cost: 200
+		Cost: 350
 	Tooltip:
 		Name: Laser Turret
 		Description: Basic base defense.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft
@@ -459,7 +459,7 @@ NALASR:
 	RequiresPower:
 	DisabledOverlay:
 	Health:
-		HP: 250
+		HP: 300
 	Armor:
 		Type: Heavy
 	Turreted:
@@ -698,7 +698,7 @@ NAMISL:
 	NukePower@NodNuke:
 		Cursor: nuke
 		Icon: clustermissile
-		ChargeTime: 540
+		ChargeTime: 480
 		Description: Cluster Missile
 		LongDesc: Launches a conventional warhead\nat a target location.
 		BeginChargeSound:
@@ -720,7 +720,7 @@ NAMISL:
 	NukePower@ToxinMissile:
 		Cursor: nuke
 		Icon: toxinmissile
-		ChargeTime: 540
+		ChargeTime: 180
 		Description: Toxin Missile
 		LongDesc: Launches a warhead filled with\ntoxins that make affected unit\nengage any unit nearby, friend or foe.\nAlso spawns some gas clouds.
 		BeginChargeSound:
@@ -919,7 +919,7 @@ MUTSW1:
 	SpawnActorPower@ionstorm:
 		Actor: ionstormspawner
 		Icon: ionstorm
-		ChargeTime: 300
+		ChargeTime: 240
 		OrderName: IonStorm
 		DisplayTimer: True
 		DisplayBeacon: True
@@ -943,7 +943,7 @@ MUTSW2:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 	Selectable:
-		Bounds: 96, 64, -6, -6
+		Bounds: 42,42
 	Health:
 		HP: 800
 	Armor:
@@ -953,12 +953,12 @@ MUTSW2:
 	Power:
 		Amount: -150
 	SelectionDecorations:
-		VisualBounds: 96, 64, -6, -6
+		VisualBounds: 42,42
 	IonCannonPower:
 		Weapon: VeinholeSummonerWeapon
 		Effect: dot
 		Icon: veinholesw
-		ChargeTime: 300
+		ChargeTime: 240
 		OrderName: Veinhole
 		DisplayTimer: True
 		DisplayBeacon: True
@@ -1327,6 +1327,7 @@ SCRSW1:
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
+	RequiresPower:
 	Selectable:
 		Bounds: 116, 60, 3, -6
 	Health:
@@ -1347,7 +1348,7 @@ SCRSW1:
 		DisplayTimer: True
 		DisplayBeacon: True
 		LongDesc: Creates a meteor storm
-		ChargeTime: 480
+		ChargeTime: 660
 
 MOTHERSHIPDEP:
 	Inherits: ^Defense
@@ -1371,7 +1372,6 @@ MOTHERSHIPDEP:
 		Dimensions: 3,3
 	Selectable:
 		Bounds: 88, 42, 0, -6
-	RequiresPower:
 	Transforms:
 		IntoActor: mothership
 	ProduceActorPower@es:
@@ -1380,7 +1380,8 @@ MOTHERSHIPDEP:
 		Icon: mothershipicon
 		Actors: scrinenergydummy
 		Type: HunterSeeker
-		ChargeTime: 240
+		IconPalette: chromescrin
+		ChargeTime: 180
 	Exit@1:
 		SpawnOffset: 0,0,128
 	Production:
@@ -1711,7 +1712,7 @@ CABSW1:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 	Selectable:
-		Bounds: 120, 120, -3, -8
+		Bounds: 42,42
 	RequiresPower:
 	DisabledOverlay:
 	Health:
@@ -1736,7 +1737,7 @@ CABSW1:
 	Power:
 		Amount: -200
 	SelectionDecorations:
-		VisualBounds: 40, 36, -3, -8
+		VisualBounds: 42,42
 	ProvidesPrerequisite@singularity:
 		Prerequisite: singularity
 		Factions: gdi, mut, nod, cab, scr
@@ -1744,7 +1745,7 @@ CABSW1:
 	AttackOrderPower@singularity:
 		Cursor: emp
 		Icon: cabcannon
-		ChargeTime: 150
+		ChargeTime: 180
 		Description: Iron Savior
 		LongDesc: Fires a volley of bullets\nat the target location.
 		EndChargeSound: speech-nod|00-i158.aud
@@ -1788,7 +1789,7 @@ cabobelisk:
 		Cursor: ioncannon
 		Icon: nanomachineswarm
 		Effect: dot
-		ChargeTime: 240
+		ChargeTime: 180
 		Weapon: NanoMachineBurst
 		Description: Nanomachine Swarm
 		LongDesc: Fills an area with nanomachines\nhealing friendly units and turning\nany fallen units into workers.

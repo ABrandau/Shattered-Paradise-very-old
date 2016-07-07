@@ -339,6 +339,28 @@ SCRBATTLESHIP.Husk:
 	-RenderVoxels:
 	-WithVoxelBody:
 
+MOTHERSHIP.Husk:		
+	Inherits: ^AircraftHusk
+	Inherits@2: ^ScrinRender
+	-Cloak@CLOAKGENERATOR:
+	Tooltip:
+		Name: Battlecruiser
+	FallsToEarth:
+		Explosion: ScrinUnitExplode2
+	Selectable:
+		Bounds: 1,1
+	WithShadow:
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32			
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 149
+	RenderSprites:
+		Image: mothership
+	-RenderVoxels:
+	-WithVoxelBody:
+
 SCRTRANS.Husk:		
 	Inherits: ^AircraftHusk
 	Inherits@2: ^ScrinRender	

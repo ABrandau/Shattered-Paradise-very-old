@@ -6,12 +6,14 @@ General Changes:
 	Rifle warhead damage to unarmored targets: 100% -> 120%.
 	Engineer can hold 3 mines instead of 5.
 	Re enabled the silos needed notification.
+	Set General support power cooldown time to 3 minutes.
 GDI Changes:
 	JJ damage: 16 -> 30.
 NOD Changes:
 	Stealth Tank: Health: 210 -> 310.
 	Banshee: hp: 230 -> 200.
 	Harpy: hp: 160 -> 100, cost: 700 -> 500.
+	Laser Cost: 200 -> 350, hp: 250 -> 300.
 Scrin Changes:
 	Destroyer: hp: 450 -> 300.
 	Glyder: hp: 170 -> 150.
@@ -20,9 +22,14 @@ Scrin Changes:
 CABAL Changes:
 	Paladin damage: 40 -> 60, warhead: full damage -> rifle.
 	Wasp: hp: 130 -> 120.
+	Reduced iron Savior damage by 50 points.
+
 Forgotten  Changes:
 	Gargoyle HP: 225 -> 180.
+	Veinhole Support power spawn cooldown time set to 4 minutes.
 Bug Fixes:
+	Fixed Mothership displaying a wrong husk when killed.
+	Fixed bug that crashed the game when gargoyles were destroyed.
 	Fixed bug that made the Temple of NOD unbuildable.
 	Fixed bug that made engineers unbuildable for GDI and NOD.
 	Fixed bug that made non scrin players unable to access Scrin tech if they capture a host station.

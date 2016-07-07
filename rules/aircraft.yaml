@@ -1261,7 +1261,8 @@ MOTHERSHIP:
 		Icon: mothershipicon
 		Actors: scrinenergydummy
 		Type: HunterSeeker
-		ChargeTime: 240
+		IconPalette: chromescrin
+		ChargeTime: 180
 	Exit@1:
 	Production:
 		Produces: HunterSeeker
@@ -1284,7 +1285,7 @@ MOTHERSHIP:
 	BodyOrientation:
 		QuantizedFacings: 32
 	SpawnActorOnDeath:
-		Actor: SCRBATTLESHIP.Husk
+		Actor: MOTHERSHIP.Husk
 
 ##########################################################
 # CABAL

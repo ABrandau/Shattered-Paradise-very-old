@@ -319,6 +319,7 @@ VISC_LRG:
 		Range: 4c0
 	-WithSpriteBody:
 	WithInfantryBody:
+		MoveSequence: idle
 		AttackSequence: muzzle
 	AttackFrontal:
 		Voice: Attack

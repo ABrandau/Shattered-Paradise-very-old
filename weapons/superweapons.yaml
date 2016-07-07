@@ -98,55 +98,35 @@ IonCannon:
 
 droppod1:
 	Inherits: ^BombWarhead
-	ReloadDelay: 1
+	ReloadDelay: 3
 	Range: 3c0
 	ValidTargets: Ground, Vehicle, Building, Infantry, Water
-	Inaccuracy: 400
 	Projectile: Bullet
-		Speed: 300
+		Speed: 350
 		Image: gdidroppod
 		Palette: player
 		Shadow: true
-		Inaccuracy: 400
-		# TrailImage: meteortrail
-		# TrailPalette: effectalpha
-		# TrailInterval: 1
-	Warhead@1Dam: SpreadDamage
-		Spread: 650
-		Damage: 1
-		Falloff: 1000, 500, 250, 125, 75, 50, 25, 12, 0
-		ValidTargets: Ground, Vehicle, Building, Infantry, Water
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+		Inaccuracy: 600
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallCrater
 	Warhead@3Eff: CreateEffect
 		Explosions: small_clsn, large_twlt, medium_brnl
 		ImpactSounds: expnew12.aud
 	Warhead@5Actor: SpawnActor
-		Actors: gdie1, gdie1, JUMPJET,
+		Actors: gdie1, gdie1, JUMPJET
 		Range: 3
 
 droppod2:
 	Inherits: ^BombWarhead
-	ReloadDelay: 1
+	ReloadDelay: 3
 	Range: 3c0
 	ValidTargets: Ground, Vehicle, Building, Infantry, Water
-	Inaccuracy: 400
 	Projectile: Bullet
-		Speed: 300
+		Speed: 350
 		Image: gdidroppod
 		Palette: player
 		Shadow: true
-		Inaccuracy: 400
-		# TrailImage: meteortrail
-		# TrailPalette: effectalpha
-		# TrailInterval: 1
-	Warhead@1Dam: SpreadDamage
-		Spread: 650
-		Damage: 1
-		Falloff: 1000, 500, 250, 125, 75, 50, 25, 12, 0
-		ValidTargets: Ground, Vehicle, Building, Infantry, Water
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+		Inaccuracy: 600
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallCrater
 	Warhead@3Eff: CreateEffect
@@ -301,7 +281,7 @@ MeteorRain:
 
 CabalCannon:
 	Inherits: ^FullDamage
-	ReloadDelay: 3000
+	ReloadDelay: 90
 	Range: 999c0
 	Burst: 3
 	BurstDelay: 25
@@ -320,7 +300,7 @@ CabalCannon:
 		TrailPalette: apolcyanalpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 600
-		Damage: 400
+		Damage: 350
 		ValidTargets: Vehicle, Infantry, Building, Ground, Water
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
