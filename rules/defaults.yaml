@@ -650,6 +650,7 @@
 	-WithDeathAnimation@explosion:
 	-WithDeathAnimation@energy:
 	-SpawnActorOnDeath@conversion:
+	-SpawnActorOnDeath@FLAMEGUY:
 	-PoisonedByTiberium:
 	Voiced:
 		VoiceSet: Limpet

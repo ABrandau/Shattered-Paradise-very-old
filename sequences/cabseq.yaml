@@ -253,30 +253,25 @@ pdrone:
 		Facings: 8
 		ShadowStart: 356
 	die1: 
-		Start: 127
+		Start: 126
 		Length: 10
 		ShadowStart: 336
-	die2: worker
-		Start: 287
-		Length: 13
-		ShadowStart: 689
-		Tick: 80
-	die3: worker # TODO: copy-paste of die2
-		Start: 149
-		Length: 15
-		ShadowStart: 441
+	die2:
+		Start: 126
+		Length: 10
+		ShadowStart: 336
+	die3:
+		Start: 126
+		Length: 10
+		ShadowStart: 336
 	die4: s_bang34
 		Length: *	
-	die-crushed: worker
-		Start: 159
-		Length: 5
-		ShadowStart: 451
+	die-crushed:
+		Start: 132
+		Length: 1
+		ShadowStart: 336
 		Tick: 800
 		ZOffset: -511
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
 	die6: electro
 		Length: *
 	emp-overlay: emp_fx01

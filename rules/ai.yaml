@@ -189,8 +189,8 @@ Player:
 			jugger: 3
 			hmec: 1
 			guardian: 1
-			orca: 3
-			orcab: 2
+			# orca: 3
+			# orcab: 2
 #NOD
 			altnode1: 9
 			crusader: 9
@@ -201,8 +201,8 @@ Player:
 			armh: 5
 			subtank: 5
 			stnk: 5
-			apache: 3
-			scrin: 2
+			# apache: 3
+			# scrin: 2
 #MUT#
 			marauder: 18
 			e3: 18
@@ -216,15 +216,14 @@ Player:
 			mrls: 6
 			wolf: 6
 			deathclaw: 3
-
-			mutbird: 3
-			mutheli: 5
-			wetp: 3
+			# mutbird: 3
+			# mutheli: 5
+			# wetp: 3
 #CAB#
 			cyborg: 7
 			cabsentry: 7
 			reapercab: 7
-			pdrone: 6
+			pdrone: 8
 			glad: 6
 			cyc2: 1
 			jenn: 8
@@ -248,7 +247,6 @@ Player:
 			stormrider: 14
 			scrdestroyer: 5
 			scrbattleship: 5
-
 		UnitsToBuild:
 #PRODUCTION#
 			harv: 7.5%
@@ -266,8 +264,8 @@ Player:
 			jugger: 5%
 			hmec: 15%
 			guardian: 2.5%
-			orca: 1%
-			orcab: 5%
+			# orca: 1%
+			# orcab: 5%
 #NOD
 			altnode1: 2%
 			crusader: 1%
@@ -278,8 +276,8 @@ Player:
 			armh: 5%
 			subtank: 5%
 			stnk: 7.5%
-			apache: 1%
-			scrin: 5%
+			# apache: 1%
+			# scrin: 5%
 #MUT#
 			marauder: 1%
 			e3: 1%
@@ -293,9 +291,9 @@ Player:
 			mrls: 7.5%
 			wolf: 7.5%
 			deathclaw: 10%
-			mutbird: 1%
-			mutheli: 1%
-			wetp: 1%
+			# mutbird: 1%
+			# mutheli: 1%
+			# wetp: 1%
 #CAB#
 			cyborg: 2%
 			cabsentry: 1%

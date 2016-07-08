@@ -854,7 +854,7 @@ MUBUNKR:
 		Cost: 900
 	Tooltip:
 		Name: Bunker
-		Description: Advanced base defense.\nRequires power to operate.\nCannot target air units.\n  Strong vs Ground units\n  Weak vs Aircraft
+		Description: Advanced base defense.\nCannot target air units.\n  Strong vs Ground units\n  Weak vs Aircraft
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 30
@@ -877,16 +877,25 @@ MUBUNKR:
 		Type: Heavy
 	RevealsShroud:
 		Range: 8c0
+	AutoTarget:
 	Cargo:
 		InitialUnits: e3, marauder
-		MaxWeight: 8
-		PipCount: 8
+		MaxWeight: 6
+		PipCount: 6
 		Types: Infantry
-	AutoTarget:
 	AttackGarrisoned:
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
 		PortYaws: 0, 176, 341, 512, 682, 853
-		PortCones: 86, 86, 86, 86, 86, 86
+		PortCones: 88, 88, 88, 88, 88, 887
+	AttackOmni:
+	# Armament@1:
+		# Weapon:GMarauderShotgun
+	# Armament@2:
+		# Weapon:GMarauderShotgun
+	# Armament@3:
+		# Weapon: GSkirmisherRocket
+	# Armament@4:
+		# Weapon: GSkirmisherRocket
 	SelectionDecorations:
 		VisualBounds: 88, 72, 0, -12
 

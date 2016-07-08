@@ -24,10 +24,10 @@ CABAL Changes:
 	Paladin damage: 40 -> 60, warhead: full damage -> rifle.
 	Wasp: hp: 130 -> 120.
 	Reduced iron Savior damage by 50 points.
-
 Forgotten  Changes:
 	Gargoyle HP: 225 -> 180.
 	Veinhole Support power spawn cooldown time set to 4 minutes.
+	Removed Garrison logic from bunkers.
 Bug Fixes:
 	Fixed Mothership displaying a wrong husk when killed.
 	Fixed bug that crashed the game when gargoyles were destroyed.

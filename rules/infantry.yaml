@@ -1207,6 +1207,25 @@ PDRONE:
 	-UpgradeOverlay@WebDisable:
 	-DisableOnUpgrade@WebDisable:
 	-TimedUpgradeBar@WebDisable:
+	WithDeathAnimation@normal:
+		DeathTypes:
+			BulletDeath: 1
+			SmallExplosionDeath: 2
+			HeadshotDeath: 3
+			CabalDeath: 2
+			CabalDeathCrate: 2
+			TiberiumDeath: 3
+			BlackHandRfle: 2
+	WithDeathAnimation@explosion:
+		DeathSequencePalette: effect
+		DeathPaletteIsPlayerPalette: False
+		DeathTypes:
+			ExplosionDeath: 4
+	WithDeathAnimation@energy:
+		DeathSequencePalette: ra
+		DeathPaletteIsPlayerPalette: False
+		DeathTypes:
+			EnergyDeath: 6
 
 REAPERCAB:
 	Inherits: ^CabalDroneInfantry
