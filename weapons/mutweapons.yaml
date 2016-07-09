@@ -320,7 +320,7 @@ BerserkerBlow:
 		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath, TiberiumDeath
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 50
+		Damage: 40
 		ValidTargets: Ground	
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong
 	Warhead@2Eff: CreateEffect

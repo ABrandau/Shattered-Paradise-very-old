@@ -221,7 +221,7 @@ BikeExplo:
 
 Tick90mm:
 	Inherits: ^APWarhead
-	ReloadDelay: 100
+	ReloadDelay: 70
 	Range: 7c0
 	Report: 120mmf.aud
 	Projectile: Bullet

@@ -698,7 +698,7 @@ NAMISL:
 	NukePower@NodNuke:
 		Cursor: nuke
 		Icon: clustermissile
-		ChargeTime: 480
+		ChargeTime: 390
 		Description: Cluster Missile
 		LongDesc: Launches a conventional warhead\nat a target location.
 		BeginChargeSound:
@@ -720,7 +720,7 @@ NAMISL:
 	NukePower@ToxinMissile:
 		Cursor: nuke
 		Icon: toxinmissile
-		ChargeTime: 180
+		ChargeTime: 120
 		Description: Toxin Missile
 		LongDesc: Launches a warhead filled with\ntoxins that make affected unit\nengage any unit nearby, friend or foe.\nAlso spawns some gas clouds.
 		BeginChargeSound:
@@ -896,7 +896,7 @@ MUTSW1:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: tech, ~structures.mut
+		Prerequisites: muhall, ~structures.mut
 		BuildLimit: 1
 	Valued:
 		Cost: 2500
@@ -932,7 +932,7 @@ MUTSW2:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: tech, ~structures.mut
+		Prerequisites: muhall, ~structures.mut
 		BuildLimit: 1
 	Valued:
 		Cost: 2000
@@ -958,7 +958,7 @@ MUTSW2:
 		Weapon: VeinholeSummonerWeapon
 		Effect: dot
 		Icon: veinholesw
-		ChargeTime: 240
+		ChargeTime: 300
 		OrderName: Veinhole
 		DisplayTimer: True
 		DisplayBeacon: True
@@ -1317,7 +1317,7 @@ SCRSW1:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: tech, ~structures.scr
+		Prerequisites: scrtech, ~structures.scr
 		BuildLimit: 1
 	Valued:
 		Cost: 2500
@@ -1347,8 +1347,8 @@ SCRSW1:
 		Description: Meteor Storm
 		DisplayTimer: True
 		DisplayBeacon: True
-		LongDesc: Creates a meteor storm
-		ChargeTime: 660
+		LongDesc: Drags meteors from orbit dealing moderate \ndamage over a wide area.
+		ChargeTime: 360
 
 MOTHERSHIPDEP:
 	Inherits: ^Defense
@@ -1365,7 +1365,7 @@ MOTHERSHIPDEP:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: tech, ~structures.scr, ~!mothership
+		Prerequisites: scrtech, ~structures.scr, ~!mothership
 		BuildLimit: 1
 	Building:
 		Footprint: xxx xxx xxx
@@ -1712,12 +1712,13 @@ CABSW1:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 	Selectable:
-		Bounds: 42,42
+		Bounds: 110, 60, 3, -4
 	RequiresPower:
 	DisabledOverlay:
 	Health:
 		HP: 350
 	RejectsOrders:
+		Except: Stop, Sell
 	Armor:
 		Type: Light
 	BodyOrientation:
@@ -1737,7 +1738,7 @@ CABSW1:
 	Power:
 		Amount: -200
 	SelectionDecorations:
-		VisualBounds: 42,42
+		VisualBounds: 110, 60, 3, -4
 	ProvidesPrerequisite@singularity:
 		Prerequisite: singularity
 		Factions: gdi, mut, nod, cab, scr
@@ -1745,7 +1746,7 @@ CABSW1:
 	AttackOrderPower@singularity:
 		Cursor: emp
 		Icon: cabcannon
-		ChargeTime: 180
+		ChargeTime: 240
 		Description: Iron Savior
 		LongDesc: Fires a volley of bullets\nat the target location.
 		EndChargeSound: speech-nod|00-i158.aud

@@ -172,51 +172,6 @@ CLOUD22:
 
 CLOUD23:
 	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD24
-
-CLOUD24:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD25
-
-CLOUD25:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD26
-
-CLOUD26:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD27
-
-CLOUD27:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD28
-
-CLOUD28:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD29
-
-CLOUD29:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD30
-
-CLOUD30:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD31
-
-CLOUD31:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD32
-
-CLOUD32:
-	Inherits: CLOUD1
 	-SpawnActorOnDeath@cloud:
 	Explodes:
 		Weapon: GasCloudDeathWeapon2

@@ -113,7 +113,7 @@ droppod1:
 		Explosions: small_clsn, large_twlt, medium_brnl
 		ImpactSounds: expnew12.aud
 	Warhead@5Actor: SpawnActor
-		Actors: gdie1, gdie1, JUMPJET
+		Actors: gdie1, gdie1, jumpjet
 		Range: 3
 
 droppod2:
@@ -133,7 +133,27 @@ droppod2:
 		Explosions: small_clsn, large_twlt, medium_brnl
 		ImpactSounds: expnew12.aud
 	Warhead@5Actor: SpawnActor
-		Actors: MEDIC, EAGLEGUARD
+		Actors: medic, medic, medic
+		Range: 3
+
+droppod3:
+	Inherits: ^BombWarhead
+	ReloadDelay: 3
+	Range: 3c0
+	ValidTargets: Ground, Vehicle, Building, Infantry, Water
+	Projectile: Bullet
+		Speed: 350
+		Image: gdidroppod
+		Palette: player
+		Shadow: true
+		Inaccuracy: 600
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: SmallCrater
+	Warhead@3Eff: CreateEffect
+		Explosions: small_clsn, large_twlt, medium_brnl
+		ImpactSounds: expnew12.aud
+	Warhead@5Actor: SpawnActor
+		Actors: eagleguard, eagleguard
 		Range: 3
 
 ########################################################
@@ -144,7 +164,7 @@ ClusterMissile:
 	ValidTargets: Ground, Water, Air
 	Warhead@ImpactDamage0: SpreadDamage
 		Spread: 1c0
-		Damage: 125
+		Damage: 120
 		Falloff: 500, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water, Air
 		Versus:
@@ -152,7 +172,7 @@ ClusterMissile:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@ClusterDamage3: SpreadDamage
 		Spread: 4c0
-		Damage: 50
+		Damage: 70
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 15
 		ValidTargets: Ground, Water, Air
@@ -187,7 +207,7 @@ ToxinMissile:
 	ValidTargets: Ground, Water, Air
 	Warhead@ImpactDamage0: SpreadDamage
 		Spread: 1c0
-		Damage: 5
+		Damage: 40
 		Falloff: 500, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water, Air
 		Versus:
@@ -212,7 +232,7 @@ ToxinMissile:
 		# ValidStances: Enemy, Neutral
 		# Delay: 15
 	Warhead@5Actor: SpawnActor
-		Actors: CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1
+		Actors: CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1
 		FallRate: 5000
 		Range: 3
 
@@ -244,21 +264,20 @@ EnergyAssimilator:
 MeteorRain:
 	Inherits: ^BombWarhead
 	ReloadDelay: 8
-	Range: 3c0
+	Range: 1c0
 	ValidTargets: Ground, Vehicle, Building, Infantry, Water
-	Inaccuracy: 400
 	Projectile: Bullet
 		Speed: 300
 		Image: meteor2
 		Palette: effect
 		Shadow: true
-		Inaccuracy: 400
+		Inaccuracy: 800
 		TrailImage: meteortrail #metstral
 		TrailPalette: effectalpha
 		TrailInterval: 1
 	Warhead@1Dam: SpreadDamage
-		Spread: 650
-		Damage: 100
+		Spread: 300
+		Damage: 120
 		Falloff: 1000, 500, 250, 125, 75, 50, 25, 12, 0
 		ValidTargets: Ground, Vehicle, Building, Infantry, Water
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
@@ -281,7 +300,7 @@ MeteorRain:
 
 CabalCannon:
 	Inherits: ^FullDamage
-	ReloadDelay: 90
+	ReloadDelay: 200
 	Range: 999c0
 	Burst: 3
 	BurstDelay: 25

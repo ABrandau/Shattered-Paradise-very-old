@@ -6,13 +6,27 @@ General Changes:
 	Removed Air specialist AI as it doesn't handle aircraft well.
 	Added Easy AI, but it needs some tweaking to be really easy.
 	Fixed a glitch that rendered the death animation of some actors using wrong palettes.
+GDI Changes:
+	Reduced the amount of infantry delivered by drop pods.
+Nod Changes:
+	Toxin Missile Cooldown: 3 min -> 2 min.
+	Nuke damage: 50 -> 75 (multiplied by 10 on the blast zone).
+	Nuke cooldown: 8 minutes -> 6:30 minutes.
 Forgotten  Changes:
 	Reduced Bunker room to 6 from 8.
+	Reduced Gas cloud lifetime.
+	Veinhole superweapon cooldown: 4 min -> 5 min.
 CABAL  Changes:
 	Corrected Wasp missile offsets... somewhat.
+	Iron Savior Cooldown: 180 -> 240.
+Scrin Changes:
+	Meteor Storm Cooldown: 11 minutes -> 6, removed chance of repeatable strikes.
+	Meteor Storm damage: 100 -> 120 (multiplied by 10 in the bast zone).
+	Increased the innacuracy of the meteor by a lot.
 Bug Fixes:
 	Fixed crash that ocurred when visceroids spawned from dying units.
 	Corrected Stormrider scale glitch.
+	Fixed bug that made the Iron savior fire continuously over a target.
 
 [2016 - 07 - 07]
 General Changes:

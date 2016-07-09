@@ -36,10 +36,24 @@ DROPPODPLANE:
 		LocalOffset: 3000, 3000,4000
 	Armament@1:
 		Weapon: droppod1
+		LocalOffset: -3000, -3000,4000
+	Armament@2:
+		Weapon: droppod1
+		LocalOffset: 3000, -3000,4000
+	Armament@3:
+		Weapon: droppod2
 		LocalOffset: -3000, 3000,4000
 	Armament@4:
-		Weapon: droppod2
+		Weapon: droppod3
 		LocalOffset: 0, 0,4000
+	AmmoPool:
+		Ammo: 5
+		PipCount: 1
+		ReloadCount: 20
+		ReloadTicks: 150
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+		RearmBuildings: muair, gahpad, nahpad
 	ParaDrop:
 	-RevealsShroud:
 	-Targetable@GROUND:
@@ -155,6 +169,7 @@ IONSTORMGENERATOR:
 		IngoresVisibility: True
 	Armament:
 		Weapon: IonRay
+		TargetStances: Ally, Enemy, Neutral
 	AutoTarget:
 
 IONSTORMSPAWNER:
@@ -217,9 +232,10 @@ METEORPLANE:
 		Types: Infantry, Vehicle, Aircraft
 	-AppearsOnRadar:
 	Aircraft:
-		Speed: 800
+		Speed: 500
 	AttackBomber:
-		Bombs: primary
+		Guns: primary
+		# Bombs: primary
 	Health:
 		HP: 150
 	Armor:
@@ -251,9 +267,17 @@ METEORPLANE:
 		LocalOffset: -3000, -4000,6000
 	Armament@8:
 		Weapon: MeteorRain
-		LocalOffset: 3000, -4000,6000
+		LocalOffset: -3000, -4000,6000
 	Armament@9:
 		Weapon: MeteorRain
+	AmmoPool:
+		Ammo: 9
+		PipCount: 1
+		ReloadCount: 20
+		ReloadTicks: 150
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+		RearmBuildings: muair, gahpad, nahpad
 	ParaDrop:
 	-RevealsShroud:
 	-Targetable@GROUND:
