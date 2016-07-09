@@ -334,7 +334,6 @@ BHS:
 MARAUDER:
 	Inherits: ^Mutant
 	Inherits@1: ^MutRender
-	Inherits@2: ^MutDeathAnim
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 18
@@ -429,13 +428,13 @@ MARAUDER:
 		Probability: 7
 		DeathType:
 	RangeMultiplier@deployed:
-		UpgradeTypes:
 		Modifier: 120
+		UpgradeTypes: deployed
 	DamageMultiplier@deployed:
-		UpgradeTypes:
+		UpgradeTypes: deployed
 		Modifier: 75
 	FirepowerMultiplier@deployed:
-		UpgradeTypes:
+		UpgradeTypes: deployed
 		Modifier: 140
 
 E3:
@@ -608,7 +607,6 @@ MUTFIEND:
 AWARRIOR:
 	Inherits: ^Mutant
 	Inherits@1: ^MutRender
-	Inherits@2: ^MutDeathAnim
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 23
@@ -654,7 +652,6 @@ AWARRIOR:
 PSYKER:
 	Inherits: ^Mutant
 	Inherits@1: ^MutRender
-	Inherits@2: ^MutDeathAnim
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 24
@@ -1035,7 +1032,6 @@ BUGCLONE:
 CABSENTRY:
 	Inherits: ^CabalDroneInfantry
 	Inherits@1: ^CabRender
-	Inherits@2: ^CabDeathAnim
 	Armor:
 		Type: None
 	Valued:

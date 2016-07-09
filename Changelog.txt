@@ -2,6 +2,20 @@
 
 [2016 - xx - xx]
 General Changes:
+	Reorganized tay.
+	Removed Air specialist AI as it doesn't handle aircraft well.
+	Added Easy AI, but it needs some tweaking to be really easy.
+	Fixed a glitch that rendered the death animation of some actors using wrong palettes.
+Forgotten  Changes:
+	Reduced Bunker room to 6 from 8.
+CABAL  Changes:
+	Corrected Wasp missile offsets... somewhat.
+Bug Fixes:
+	Fixed crash that ocurred when visceroids spawned from dying units.
+	Corrected Stormrider scale glitch.
+
+[2016 - 07 - 07]
+General Changes:
 	Mine Armor: wood -> heavy.
 	Rifle warhead damage to unarmored targets: 100% -> 120%.
 	Engineer can hold 3 mines instead of 5.
@@ -27,7 +41,6 @@ CABAL Changes:
 Forgotten  Changes:
 	Gargoyle HP: 225 -> 180.
 	Veinhole Support power spawn cooldown time set to 4 minutes.
-	Removed Garrison logic from bunkers.
 Bug Fixes:
 	Fixed Mothership displaying a wrong husk when killed.
 	Fixed bug that crashed the game when gargoyles were destroyed.

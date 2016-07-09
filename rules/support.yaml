@@ -887,15 +887,6 @@ MUBUNKR:
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
 		PortYaws: 0, 176, 341, 512, 682, 853
 		PortCones: 88, 88, 88, 88, 88, 887
-	AttackOmni:
-	# Armament@1:
-		# Weapon:GMarauderShotgun
-	# Armament@2:
-		# Weapon:GMarauderShotgun
-	# Armament@3:
-		# Weapon: GSkirmisherRocket
-	# Armament@4:
-		# Weapon: GSkirmisherRocket
 	SelectionDecorations:
 		VisualBounds: 88, 72, 0, -12
 

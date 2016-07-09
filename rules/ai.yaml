@@ -27,6 +27,319 @@ Player:
 		AttackForceInterval: 25
 		IdleBaseUnitsMaximum: 10
 		RallyPointScanRadius: 25
+		MinBaseRadius: 4
+		MaxBaseRadius: 40
+		MaxResourceCellsToCheck: 9
+		ShouldRepairBuildings: True
+		CheckForNewBasesDelay: 1500
+		NewProductionCashThreshold: 90000
+		BuildingLimits:
+#PRODUCTION#
+			proc: 4
+			scrproc: 4
+			gasilo: 0
+#POWER#
+			napowr: 9
+			naapwr: 3
+			gapowr: 12
+			mupowr: 14
+			cabpowr: 12
+			scrpowr: 12
+#Barracks#
+			gapile: 2
+			nahand: 2
+			murax: 3
+			cabclaw: 2
+			scrrax: 2
+#Weapons Factory#
+			gaweap: 2
+			cabweap: 2
+			naweap: 2
+			muweap: 2
+			scrweap: 2
+#radar#
+			garadr: 1
+			naradr: 1
+			cabradr: 1
+			muradr: 1
+			scrradr: 1
+#Tech Center#
+			gatech: 1
+			natech: 1
+			muthall: 1
+			scrtech: 1
+			cabtech: 1
+#Tier 1 Defences#
+			gavulc: 8
+			cabcannon: 8
+			mubunkr: 12
+			nalasr: 8
+			scrneedler: 8
+			muflak: 7
+			gacsam: 7
+			nasam:	7
+			cabrail: 7
+			scrtractor: 7
+#Tier 2 Defences#
+			cabblast: 5
+			garock: 5
+			naobel: 5
+			scrdrone: 5
+#Support Structure#
+			gafire: 2
+			nastlh: 2
+			cabeye: 2
+			scrextractor: 3
+			muventi: 3
+			mustable: 1
+			cabgrinder: 1
+#Superweapons#
+#Helipads#
+			nahpad: 0
+			gahpad: 0
+			mutair: 0
+			scrair: 2
+			cabair: 2
+		BuildingFractions:
+#PRODUCTION#
+			proc: 99%
+			scrproc: 99%
+#POWER#
+			napowr: 30%
+			naapwr: 30%
+			gapowr: 30%
+			mupowr: 30%
+			cabpowr: 30%
+			scrpowr: 30%
+#Barracks#
+			gapile: 5%
+			nahand: 5%
+			murax: 5%
+			cabclaw: 5%
+			scrrax: 5%
+#Weapons Factory#
+			gaweap: 5%
+			cabweap: 5%
+			naweap: 5%
+			muweap: 5%
+			scrweap: 5%
+#radar#
+			garadr: 1%
+			naradr: 1%
+			cabradr: 1%
+			muradr: 1%
+			scrradr: 1%
+#Tech Center#
+			gatech: 1%
+			natech: 1%
+			muthall: 1%
+			scrtech: 1%
+			cabtech: 1%
+#Tier 1 Defences#
+			gavulc: 10%
+			gacsam: 10%
+			nalasr: 10%
+			nasam:	10%
+			cabcannon: 10%
+			cabrail: 10%
+			mubunkr: 10%
+			muflak: 10%
+			scrneedler: 10%
+			scrtractor: 10%
+#Tier 2 Defences#
+			cabblast: 5%
+			garock: 5%
+			naobel: 5%
+			scrdrone: 5%
+#Support Structure#
+			gafire: 1%
+			nastlh: 1%
+			muventi: 1%
+			cabeye: 1%
+			scrextrator: 1%
+			mustable: 1%
+			cabgrinder: 1%
+#Superweapons#
+#Helipads#
+			nahpad: 5%
+			gahpad: 5%
+			mutair: 5%
+			scrair: 5%
+			cabair: 5%
+		UnitLimits:
+#Harvesters#
+			harv: 5
+			scrharv: 5
+#T1 Inf#
+			gdie1: 18
+			marauder: 18
+			cyborg: 18
+			shark: 18
+			jumpjet: 13
+			altnode1: 13
+			crusader: 13
+			e3: 13
+			cabsentry: 13
+			pdrone: 13
+			legio: 13
+#T2 Inf#
+			grenadier: 9
+			medic: 9
+			templar: 9
+			mutfiend: 9
+			reapercab: 9
+			colossi: 9
+#T3 Inf#
+			eagleguard: 7
+			bhs: 1
+			awarrior: 7
+			psyker: 1
+			glad: 7
+			cyc2: 1
+			float: 7
+			bug: 4
+#T1 Vehicle#
+
+			smech: 7
+			bggy: 7
+			mutapc: 7
+			jenn: 7
+			mmch: 7
+			muttank: 10
+			centurion: 10
+			scrscorpion: 10
+			scrglyder1: 10
+#T2 Vehicle#
+			hvr: 8
+			ttnk: 8
+			subtank: 8
+			mutquad: 8
+			wolf: 8
+			grinder: 8
+			scrmbt: 8
+			scrrecharger: 3
+#T3 Vehicle#
+			sonic: 7
+			deathclaw: 7
+			paladin: 7
+			stnk: 7
+			tripod: 7
+			hmec: 1
+			armh: 5
+			jugger: 5
+			blaster: 5
+			mrls: 5
+#T1 Air#
+			wasp: 10
+			stormrider: 5
+			scrglyder2: 5
+#T2 Air#
+			scrdestroyer: 5
+#T3 Air#
+			guardian: 4
+			basilisk: 4
+			scrbattleship: 4
+		UnitsToBuild:
+#Harvesters#
+			harv: 7.5%
+			scrharv: 7.5%
+#T1 Inf#
+			gdie1: 2%
+			altnode1: 2%
+			pdrone: 2%
+			shark: 2%
+			jumpjet: 1%
+			crusader: 1%
+			e3: 1%
+			marauder: 1%
+			cabsentry: 1%
+			cyborg: 1%
+			legio: 1%
+#T2 Inf#
+			grenadier: 1.5%
+			medic: 1.5%
+			templar: 1.5%
+			mutfiend: 1.5%
+			reapercab: 1.5%
+			colossi: 1.5%
+#T3 Inf#
+			eagleguard: 2.5%
+			bhs: 2.5%
+			awarrior: 2.5%
+			psyker: 2.5%
+			glad: 2.5%
+			cyc2: 2.5%
+			float: 2.5%
+			bug: 2.5%
+#T1 Vehicle#
+			mmch: 5%
+			smech: 7%
+			bggy: 5%
+			mutapc: 5%
+			muttank: 7%
+			jenn: 5%
+			centurion: 7%
+			scrscorpion: 5%
+			scrglyder1: 7%
+#T2 Vehicle#
+			hvr: 9%
+			ttnk: 9%
+			subtank: 9%
+			mutquad: 9%
+			wolf: 9%
+			grinder: 9%
+			scrmbt: 9%
+			scrrecharger: 9%
+#T3 Vehicle#
+			sonic: 12%
+			jugger: 12%
+			hmec: 12%
+			armh: 12%
+			stnk: 12%
+			mrls: 12%
+			deathclaw: 12%
+			blaster: 12%
+			paladin: 12%
+			tripod: 12%
+#T1 Air#
+			wasp: 7%
+			stormrider: 7%
+			scrglyder2: 5%
+#T2 Air#
+			scrdestroyer: 3%
+#T3 Air#
+			guardian: 3%
+			basilisk: 3%
+			scrbattleship: 1%
+
+	HackyAI@ICI:
+		Name: Easy AI
+		SquadSize: 7
+		SquadSizeRandomBonus: 2
+		MinimumExcessPower: 40
+		BuildingCommonNames:
+			ConstructionYard: gacnst, drached
+			Refinery: proc, scrproc
+			Power: gapowr, napowor, naapwr, cabpowr, mutpowr, scrpowr
+			Barracks: gapile, nahand, mutrax, cabrax, scrrax
+			VehiclesFactory: gaweap, naweap, mutweap, cabweap, scrweap
+			Production: gapile, nahand, mutrax, cabclaw, scrrax, gaweap, naweap, mutweap, cabweap, scrweap, gahpad, nahpad, muair, cabair, scrair
+			Silo: gasilo
+		UnitQueues: Vehicle, Infantry, Air
+		UnitsCommonNames:
+			Mcv: mcv, drache
+		ProtectUnitScanRadius: 35
+		RushAttackScanRadius: 35
+		RushInterval: 2000
+		StructureProductionInactiveDelay: 60
+		StructureProductionActiveDelay: 90
+		StructureProductionRandomBonusDelay: 60
+		MinimumDefenseRadius: 5
+		MaximumDefenseRadius: 40
+		AssignRolesInterval: 20
+		AttackForceInterval: 25
+		IdleBaseUnitsMaximum: 5
+		RallyPointScanRadius: 25
 		MinBaseRadius: 3
 		MaxBaseRadius: 35
 		MaxResourceCellsToCheck: 9
@@ -35,293 +348,282 @@ Player:
 		NewProductionCashThreshold: 90000
 		BuildingLimits:
 #PRODUCTION#
-			proc: 2
-			scrproc: 2
+			proc: 1
+			scrproc: 1
 			gasilo: 0
-#GDI CORE#
-			gapowr: 5
+#POWER#
+			napowr: 5
+			naapwr: 2
+			gapowr: 7
+			mupowr: 8
+			cabpowr: 7
+			scrpowr: 7
+#Barracks#
 			gapile: 2
-			gaweap: 2
-			gahpad: 6
-#GDI DEFENSES#
-			gavulc: 5
-			garock: 5
-			gacsam: 5
-#GDI TECH#
-			garadr: 1
-			gatech: 1
-			gafire: 2
-#NOD CORE#
-			napowr: 6
 			nahand: 2
-			naweap: 2
-			nahpad: 6
-			naapwr: 3
-#NOD DEFENSES#
-			naobel: 3
-			nalasr: 7
-			nasam:	5
-#NOD TECH#
-			naradr: 1
-			natech: 1
-			nastlh: 1
-#MUT CORE#
-			mupowr: 10
 			murax: 3
-			muweap: 2
-			mutair: 3
-#MUT DEFENSES#
-			mubunkr: 12
-			muflak: 5
-#MUT TECH#
-			muradr: 1
-			mutall: 1
-			muventi: 2
-			mustable: 1
-#CAB CORE#
-			cabpowr: 8
 			cabclaw: 2
-			cabweap: 2
-			cabair: 1
-#CAB DEFENSES#
-			cabcannon: 5
-			cabblast: 5
-			cabrail: 5
-#CAB TECH#
-			cabradr: 1
-			cabtech: 1
-#SCRIN CORE#
-			scrpowr: 8
 			scrrax: 2
+#Weapons Factory#
+			gaweap: 2
+			cabweap: 2
+			naweap: 2
+			muweap: 2
 			scrweap: 2
-			scrair: 2
-#SCRIN DEFENSES#
-			scrneedler: 5
-			scrdrone: 5
-			scrtractor: 5
-#SCRIN TECH#
+#radar#
+			garadr: 1
+			naradr: 1
+			cabradr: 1
+			muradr: 1
 			scrradr: 1
-			scrtech: 1
-
+#Tech Center#
+			gatech: 0
+			natech: 0
+			muthall: 0
+			scrtech: 0
+			cabtech: 0
+#Tier 1 Defences#
+			gavulc: 5
+			cabcannon: 5
+			mubunkr: 7
+			nalasr: 5
+			scrneedler: 5
+			muflak: 2
+			gacsam: 2
+			nasam:	2
+			cabrail: 2
+			scrtractor: 2
+#Tier 2 Defences#
+			cabblast: 5
+			garock: 5
+			naobel: 5
+			scrdrone: 5
+#Support Structure#
+			gafire: 2
+			nastlh: 2
+			cabeye: 2
+			scrextractor: 3
+			muventi: 3
+			mustable: 1
+			cabgrinder: 1
+#Superweapons#
+#Helipads#
+			nahpad: 0
+			gahpad: 0
+			mutair: 0
+			scrair: 2
+			cabair: 2
 		BuildingFractions:
 #PRODUCTION#
 			proc: 99%
 			scrproc: 99%
-#GDI CORE#
-			gapowr: 20%
+#POWER#
+			napowr: 30%
+			naapwr: 30%
+			gapowr: 30%
+			mupowr: 30%
+			cabpowr: 30%
+			scrpowr: 30%
+#Barracks#
 			gapile: 5%
-			gaweap: 5%
-			gahpad: 5%
-#GDI DEFENSES#
-			gavulc: 10%
-			garock: 5.5%
-			gacsam: 4.5%
-#GDI TECH#
-			garadr: 1%
-			gatech: 1%
-			gafire: 5%
-#NOD CORE#
-			napowr: 20%
 			nahand: 5%
-			naweap: 5%
-			nahpad: 5%
-			naapwr: 10%
-#NOD DEFENSES#
-			naobel: 10%
-			nalasr: 5.5%
-			nasam: 4.5%
-#NOD TECH#
-			naradr: 1%
-			natech: 1%
-			nastlh: 3%
-#MUT CORE#
-			mupowr: 20%
 			murax: 5%
-			muweap: 5%
-			mutair: 5%
-#MUT DEFENSES#
-			mubunkr: 5.5%
-			muflak: 4.5%
-#MUT TECH#
-			muradr: 1%
-			mutall: 1%
-			muventi: 8%
-			mustable: 1%
-#CAB CORE#
-			cabpowr: 20%
 			cabclaw: 5%
-			cabweap: 5%
-			cabair: 5%
-#CAB DEFENSES#
-			cabcannon: 3.5%
-			cabblast: 3.5%
-			cabrail: 3%
-#CAB TECH#
-			cabradr: 1%
-			cabtech: 1%
-#SCRIN CORE#
-			scrpowr: 20%
 			scrrax: 5%
+#Weapons Factory#
+			gaweap: 5%
+			cabweap: 5%
+			naweap: 5%
+			muweap: 5%
 			scrweap: 5%
-			scrair: 5%
-#SCRIN DEFENSES#
-			scrneedler: 3.3%
-			scrdrone: 3.3%
-			scrtractor: 3.3%
-#SCRIN TECH#
+#radar#
+			garadr: 1%
+			naradr: 1%
+			cabradr: 1%
+			muradr: 1%
 			scrradr: 1%
+#Tech Center#
+			gatech: 1%
+			natech: 1%
+			muthall: 1%
 			scrtech: 1%
-
+			cabtech: 1%
+#Tier 1 Defences#
+			gavulc: 10%
+			gacsam: 10%
+			nalasr: 10%
+			nasam:	10%
+			cabcannon: 10%
+			cabrail: 10%
+			mubunkr: 10%
+			muflak: 10%
+			scrneedler: 10%
+			scrtractor: 10%
+#Tier 2 Defences#
+			cabblast: 5%
+			garock: 5%
+			naobel: 5%
+			scrdrone: 5%
+#Support Structure#
+			gafire: 1%
+			nastlh: 1%
+			muventi: 1%
+			cabeye: 1%
+			scrextrator: 1%
+			mustable: 1%
+			cabgrinder: 1%
+#Superweapons#
+#Helipads#
+			nahpad: 5%
+			gahpad: 5%
+			mutair: 5%
+			scrair: 5%
+			cabair: 5%
 		UnitLimits:
-#PRODUCTION#
-			harv: 4
-			scrharv: 4
-#GDI#
-			gdie1: 9
-			jumpjet: 9
-			grenadier: 9
-			medic: 1
-			eagleguard: 8
-			mmch: 6
-			smech: 6
-			hvr: 6
-			sonic: 6
-			jugger: 3
-			hmec: 1
-			guardian: 1
-			# orca: 3
-			# orcab: 2
-#NOD
-			altnode1: 9
-			crusader: 9
-			templar: 8
-			bhs: 1
-			bggy: 6
-			ttnk: 6
-			armh: 5
-			subtank: 5
-			stnk: 5
-			# apache: 3
-			# scrin: 2
-#MUT#
+#Harvesters#
+			harv: 2
+			scrharv: 2
+#T1 Inf#
+			gdie1: 18
 			marauder: 18
-			e3: 18
-			mutfiend: 10
-			ranger: 10
-			awarrior: 10
+			cyborg: 18
+			shark: 18
+			jumpjet: 13
+			altnode1: 13
+			crusader: 13
+			e3: 13
+			cabsentry: 13
+			pdrone: 13
+			legio: 13
+#T2 Inf#
+			grenadier: 9
+			medic: 9
+			templar: 9
+			mutfiend: 9
+			reapercab: 9
+			colossi: 9
+#T3 Inf#
+			eagleguard: 7
+			bhs: 1
+			awarrior: 7
 			psyker: 1
-			mutapc: 6
-			muttank: 6
-			mutquad: 6
-			mrls: 6
-			wolf: 6
-			deathclaw: 3
-			# mutbird: 3
-			# mutheli: 5
-			# wetp: 3
-#CAB#
-			cyborg: 7
-			cabsentry: 7
-			reapercab: 7
-			pdrone: 8
-			glad: 6
+			glad: 7
 			cyc2: 1
-			jenn: 8
-			centurion: 6
-			grinder: 6
+			float: 7
+			bug: 4
+#T1 Vehicle#
+
+			smech: 7
+			bggy: 7
+			mutapc: 7
+			jenn: 7
+			mmch: 7
+			muttank: 10
+			centurion: 10
+			scrscorpion: 10
+			scrglyder1: 10
+#T2 Vehicle#
+			hvr: 8
+			ttnk: 8
+			subtank: 8
+			mutquad: 8
+			wolf: 8
+			grinder: 8
+			scrmbt: 8
+			scrrecharger: 3
+#T3 Vehicle#
+			sonic: 7
+			deathclaw: 7
+			paladin: 7
+			stnk: 7
+			tripod: 7
+			hmec: 1
+			armh: 5
+			jugger: 5
 			blaster: 5
-			paladin: 5
-			wasp: 5
-			basilisk: 3
-#SCRIN#
-			shark: 6
-			legio: 9
-			bug: 8
-			float: 5
-			scrscorpion: 6
-			scrmbt: 6
-			scrrecharger: 1
-			scrglyder1: 9
-			scrglyder2: 9
-			tripod: 5
-			stormrider: 14
+			mrls: 5
+#T1 Air#
+			wasp: 10
+			stormrider: 5
+			scrglyder2: 5
+#T2 Air#
 			scrdestroyer: 5
-			scrbattleship: 5
+#T3 Air#
+			guardian: 4
+			basilisk: 4
+			scrbattleship: 4
 		UnitsToBuild:
-#PRODUCTION#
+#Harvesters#
 			harv: 7.5%
 			scrharv: 7.5%
-#GDI#
+#T1 Inf#
 			gdie1: 2%
-			jumpjet: 1%
-			grenadier: 1%
-			medic: 0.5%
-			eagleguard: 2.5%
-			mmch: 5%
-			smech: 7.5%
-			hvr: 7.5%
-			sonic: 10%
-			jugger: 5%
-			hmec: 15%
-			guardian: 2.5%
-			# orca: 1%
-			# orcab: 5%
-#NOD
 			altnode1: 2%
+			pdrone: 2%
+			shark: 2%
+			jumpjet: 1%
 			crusader: 1%
-			templar: 2.5%
-			bhs: 5%
-			bggy: 7.5%
-			ttnk: 10%
-			armh: 5%
-			subtank: 5%
-			stnk: 7.5%
-			# apache: 1%
-			# scrin: 5%
-#MUT#
-			marauder: 1%
 			e3: 1%
-			mutfiend: 1%
-			ranger: 2.5%
-			awarrior: 2%
-			psyker: 5%
-			mutapc: 7.5%
-			muttank: 7.5%
-			mutquad: 7.5%
-			mrls: 7.5%
-			wolf: 7.5%
-			deathclaw: 10%
-			# mutbird: 1%
-			# mutheli: 1%
-			# wetp: 1%
-#CAB#
-			cyborg: 2%
+			marauder: 1%
 			cabsentry: 1%
-			reapercab: 0.5%
-			pdrone: 1%
-			glad: 1%
-			cyc2: 5%
-			jenn: 7.5%
-			centurion: 5%
-			grinder: 5%
-			blaster: 7.5%
-			paladin: 10%
-			wasp: 1%
-			basilisk: 2.5%
-#SCRIN#
-			shark: 1%
-			legio: 2%
-			bug: 1%
-			float: 0.5%
-			scrscorpion: 2.5%
-			scrmbt: 5%
-			scrrecharger: 0.5%
-			scrglyder1: 7.5%
-			scrglyder2: 7.5%
-			tripod: 10%
-			stormrider: 7.5%
-			scrdestroyer: 15%
-			scrbattleship: 25%
+			cyborg: 1%
+			legio: 1%
+#T2 Inf#
+			grenadier: 1.5%
+			medic: 1.5%
+			templar: 1.5%
+			mutfiend: 1.5%
+			reapercab: 1.5%
+			colossi: 1.5%
+#T3 Inf#
+			eagleguard: 2.5%
+			bhs: 2.5%
+			awarrior: 2.5%
+			psyker: 2.5%
+			glad: 2.5%
+			cyc2: 2.5%
+			float: 2.5%
+			bug: 2.5%
+#T1 Vehicle#
+			mmch: 5%
+			smech: 7%
+			bggy: 5%
+			mutapc: 5%
+			muttank: 7%
+			jenn: 5%
+			centurion: 7%
+			scrscorpion: 5%
+			scrglyder1: 7%
+#T2 Vehicle#
+			hvr: 9%
+			ttnk: 9%
+			subtank: 9%
+			mutquad: 9%
+			wolf: 9%
+			grinder: 9%
+			scrmbt: 9%
+			scrrecharger: 9%
+#T3 Vehicle#
+			sonic: 12%
+			jugger: 12%
+			hmec: 12%
+			armh: 12%
+			stnk: 12%
+			mrls: 12%
+			deathclaw: 12%
+			blaster: 12%
+			paladin: 12%
+			tripod: 12%
+#T1 Air#
+			wasp: 7%
+			stormrider: 7%
+			scrglyder2: 5%
+#T2 Air#
+			scrdestroyer: 3%
+#T3 Air#
+			guardian: 3%
+			basilisk: 3%
+			scrbattleship: 1%
 
 #SPECIALIST AI#
 
@@ -1215,282 +1517,3 @@ Player:
 			tripod: 30%
 			scrdestroyer: 35%
 			scrbattleship: 35.9%
-
-	HackyAI@F-18kin:
-		Name: F-18kin
-		SquadSize: 5
-		SquadSizeRandomBonus: 15
-		MinimumExcessPower: 40
-		BuildingCommonNames:
-			ConstructionYard: gacnst, drached
-			Refinery: proc, scrproc
-			Power: gapowr, napowor, naapwr, cabpowr, mutpowr, scrpowr
-			Barracks: gapile, nahand, mutrax, cabrax, scrrax
-			VehiclesFactory: gaweap, naweap, mutweap, cabweap, scrweap
-			Production: gapile, nahand, mutrax, cabclaw, scrrax, gaweap, naweap, mutweap, cabweap, scrweap, gahpad, nahpad, muair, cabair, scrair
-			Silo: gasilo
-		UnitQueues: Vehicle, Infantry, Air
-		UnitsCommonNames:
-			Mcv: mcv, drache
-		ProtectUnitScanRadius: 35
-		RushAttackScanRadius: 35
-		RushInterval: 1125
-		StructureProductionInactiveDelay: 25
-		StructureProductionActiveDelay: 0
-		StructureProductionRandomBonusDelay: 25
-		MinimumDefenseRadius: 5
-		MaximumDefenseRadius: 40
-		AssignRolesInterval: 20
-		AttackForceInterval: 25
-		IdleBaseUnitsMaximum: 12
-		RallyPointScanRadius: 25
-		MinBaseRadius: 3
-		MaxBaseRadius: 35
-		MaxResourceCellsToCheck: 9
-		ShouldRepairBuildings: True
-		CheckForNewBasesDelay: 1500
-		NewProductionCashThreshold: 90000
-		BuildingLimits:
-#PRODUCTION#
-			proc: 2
-			scrproc: 2
-			gasilo: 0
-#GDI CORE#
-			gapowr: 5
-			gapile: 1
-			gaweap: 0
-			gahpad: 9
-#GDI DEFENSES#
-			gavulc: 5
-			garock: 5
-			gacsam: 5
-#GDI TECH#
-			garadr: 1
-			gatech: 1
-			gafire: 2
-#NOD CORE#
-			napowr: 5
-			nahand: 1
-			naweap: 0
-			nahpad: 9
-			naapwr: 3
-#NOD DEFENSES#
-			naobel: 3
-			nalasr: 5
-			nasam:	5
-#NOD TECH#
-			naradr: 1
-			natech: 1
-			nastlh: 1
-#MUT CORE#
-			mupowr: 10
-			murax: 3
-			muweap: 2
-			mutair: 9
-#MUT DEFENSES#
-			mubunkr: 12
-			muflak: 5
-#MUT TECH#
-			muradr: 1
-			mutall: 1
-			muventi: 2
-			mustable: 1
-#CAB CORE#
-			cabpowr: 6
-			cabclaw: 1
-			cabweap: 0
-			cabair: 3
-#CAB DEFENSES#
-			cabcannon: 3
-			cabblast: 3
-			cabrail: 3
-#CAB TECH#
-			cabradr: 1
-			cabtech: 1
-#SCRIN CORE#
-			scrpowr: 6
-			scrrax: 1
-			scrweap: 0
-			scrair: 4
-#SCRIN DEFENSES#
-			scrneedler: 3
-			scrdrone: 3
-			scrtractor: 3
-#SCRIN TECH#
-			scrradr: 1
-			scrtech: 1
-
-		BuildingFractions:
-#PRODUCTION#
-			proc: 99%
-			scrproc: 99%
-#GDI CORE#
-			gapowr: 20%
-			gapile: 5%
-			gahpad: 12.5%
-#GDI DEFENSES#
-			gavulc: 10%
-			garock: 5.5%
-			gacsam: 4.5%
-#GDI TECH#
-			garadr: 1%
-			gatech: 1%
-			gafire: 5%
-#NOD CORE#
-			napowr: 20%
-			nahand: 5%
-			nahpad: 12.5%%
-			naapwr: 10%
-#NOD DEFENSES#
-			naobel: 10%
-			nalasr: 5.5%
-			nasam: 4.5%
-#NOD TECH#
-			naradr: 1%
-			natech: 1%
-			nastlh: 3%
-#MUT CORE#
-			mupowr: 20%
-			murax: 5%
-			mutair: 12.5%%
-#MUT DEFENSES#
-			mubunkr: 5.5%
-			muflak: 4.5%
-#MUT TECH#
-			muradr: 1%
-			mutall: 1%
-			muventi: 8%
-			mustable: 1%
-#CAB CORE#
-			cabpowr: 20%
-			cabclaw: 5%
-			cabair: 12.5%%
-#CAB DEFENSES#
-			cabcannon: 3.5%
-			cabblast: 3.5%
-			cabrail: 3%
-#CAB TECH#
-			cabradr: 1%
-			cabtech: 1%
-#SCRIN CORE#
-			scrpowr: 20%
-			scrrax: 5%
-			scrair: 12.5%%
-#SCRIN DEFENSES#
-			scrneedler: 3.3%
-			scrdrone: 3.3%
-			scrtractor: 3.3%
-#SCRIN TECH#
-			scrradr: 1%
-			scrtech: 1%
-
-		UnitLimits:
-#PRODUCTION#
-			harv: 4
-			scrharv: 4
-#GDI#
-			gdie1: 3
-			jumpjet: 2
-			grenadier: 2
-			medic: 1
-			eagleguard: 0
-			mmch: 0
-			smech: 0
-			hvr: 0
-			sonic: 0
-			jugger: 0
-			hmec: 0
-			guardian: 1
-#NOD
-			altnode1: 3
-			crusader: 2
-			templar: 1
-			bhs: 1
-			bggy: 0
-			ttnk: 0
-			armh: 0
-			subtank: 0
-			stnk: 0
-#MUT#
-			marauder: 5
-			e3: 3
-			mutfiend: 2
-			ranger: 2
-			awarrior: 2
-			psyker: 1
-			mutapc: 0
-			muttank: 0
-			mutquad: 0
-			mrls: 0
-			wolf: 1
-#CAB#
-			cyborg: 3
-			cabsentry: 2
-			reapercab: 1
-			pdrone: 1
-			glad: 1
-			cyc2: 1
-			jenn: 8
-			centurion: 0
-			grinder: 0
-			blaster: 0
-			paladin: 0
-#SCRIN#
-			shark: 3
-			legio: 3
-			bug: 2
-			float: 1
-			scrscorpion: 0
-			scrmbt: 0
-			scrrecharger: 0
-			tripod: 0
-
-		UnitsToBuild:
-#PRODUCTION#
-			harv: 7.5%
-			scrharv: 7.5%
-#GDI#
-			gdie1: 2%
-			jumpjet: 1%
-			grenadier: 1%
-			medic: 0.5%
-			eagleguard: 2.5%
-			guardian: 2.5%
-			orca: 10%
-			orcab: 50%
-#NOD
-			altnode1: 2%
-			crusader: 1%
-			templar: 2.5%
-			bhs: 5%
-			apache: 10%
-			scrin: 50%
-#MUT#
-			marauder: 1%
-			e3: 1%
-			mutfiend: 1%
-			ranger: 2.5%
-			awarrior: 2%
-			psyker: 5%
-			mutbird: 10%
-			mutheli: 10%
-			wetp: 10%
-#CAB#
-			cyborg: 2%
-			cabsentry: 1%
-			reapercab: 0.5%
-			pdrone: 1%
-			glad: 1%
-			cyc2: 5%
-			wasp: 10%
-			basilisk: 20.5%
-#SCRIN#
-			shark: 1%
-			legio: 2%
-			bug: 1%
-			float: 0.5%
-			scrglyder1: 7.5%
-			scrglyder2: 7.5%
-			stormrider: 70.5%
-			scrdestroyer: 30%
-			scrbattleship: 50%

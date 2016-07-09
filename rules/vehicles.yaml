@@ -659,7 +659,6 @@ STNK:
 
 WOLF:
 	Inherits: ^Beast
-	Inherits@4: ^MutDeathAnim
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 27

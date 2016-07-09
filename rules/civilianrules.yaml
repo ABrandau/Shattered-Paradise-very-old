@@ -321,6 +321,7 @@ VISC_LRG:
 	WithInfantryBody:
 		MoveSequence: idle
 		AttackSequence: muzzle
+		StandSequences: idle
 	AttackFrontal:
 		Voice: Attack
 	AttackWander:
@@ -452,7 +453,6 @@ CRAB:
 BERSERKER:
 	Inherits: ^Soldier
 	Inherits@1: ^MutRender
-	Inherits@2: ^MutDeathAnim
 	Tooltip:
 		Name: Berserker
 	-GainsExperience:		

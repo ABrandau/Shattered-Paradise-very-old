@@ -493,7 +493,7 @@
 		DeathType: TiberiumDeath
 		RequiresLobbyCreeps: true
 	SpawnActorOnDeath@tiberium2:
-		Actor: VISC_LRG
+		Actor: visc_lrg
 		Probability: 10
 		OwnerType: InternalName
 		InternalOwner: Creeps
@@ -592,7 +592,6 @@
 	Inherits: ^Infantry
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^batteryboost
-	Inherits@4: ^ScrinDeathAnim
 	Inherits@9: ^ForgBulldebuff
 	Voiced:
 		VoiceSet: Limpet
@@ -1253,8 +1252,6 @@
 		PlayerPalette: playerscrin
 	Cloak@CLOAKGENERATOR:
 		Palette: cloakscrin
-
-^ScrinDeathAnim:
 	WithDeathAnimation:
 		DeathSequencePalette: playerscrin
 		CrushedSequencePalette: playerscrin
@@ -1265,8 +1262,6 @@
 		PlayerPalette: playermut
 	Cloak@CLOAKGENERATOR:
 		Palette: cloakmut
-
-^MutDeathAnim:
 	WithDeathAnimation:
 		DeathSequencePalette: playermut
 		CrushedSequencePalette: playermut
@@ -1277,8 +1272,6 @@
 		PlayerPalette: playercab
 	Cloak@CLOAKGENERATOR:
 		Palette: cloakcab
-
-^CabDeathAnim:
 	WithDeathAnimation:
 		DeathSequencePalette: playercab
 		CrushedSequencePalette: playercab

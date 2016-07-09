@@ -877,7 +877,7 @@ STORMRIDER:
 		Weapon: StormRiderBlastAA
 	-ReturnOnIdle:
 	RenderVoxels:
-		# Scale: 0.7
+		Scale: 0.7
 	AttackTurreted:
 	Turreted:
 	AmmoPool:
@@ -1325,6 +1325,7 @@ WASP:
 	Armament@Secondary:
 		Weapon: WaspBazooka
 		AmmoPoolName: Rocket
+		LocalOffset: 200,-350,-100, 200,350,-100
 	AttackHeli:
 		FacingTolerance: 20
 		Voice: Attack
