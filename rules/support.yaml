@@ -1000,6 +1000,8 @@ MUMINE:
 		Cost: 800
 	Tooltip:
 		Name: Mine
+	Selectable:
+		Priority: 1
 	Health:
 		HP: 50
 	-AttackTurreted:

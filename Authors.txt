@@ -53,7 +53,6 @@ GameMaster0000	: Tiberian Fiend Icon.
 CyborgCommandoKerem: Black Hand Sniper shp.				
 DonutArnold	: Basilisk torpedo explosion effect, scrin structure and aircraft crash explosion
 		  effects.
-
 #Maps
 
 Abc013		: Scrin mission 01
@@ -66,10 +65,3 @@ SchismNavigator - Beam Cannon
 DrWhitePsyker - Stealth Tank
 HiJinxy - Harvester
 SkyHunter713 - Guardian Platform
-
-#Additional Music
-
-Frank Klepacki
-Static-X
-KD Labs
-Nicolas Signat

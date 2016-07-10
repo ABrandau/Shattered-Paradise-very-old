@@ -27,6 +27,7 @@ Bug Fixes:
 	Fixed crash that ocurred when visceroids spawned from dying units.
 	Corrected Stormrider scale glitch.
 	Fixed bug that made the Iron savior fire continuously over a target.
+	Fixed bug that made tech structures uncapturable for some factions on Islotropolis and sidestep.
 
 [2016 - 07 - 07]
 General Changes:
