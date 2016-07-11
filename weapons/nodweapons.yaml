@@ -419,7 +419,7 @@ HarpyClaw:
 		ValidImpactTypes: Water
 
 Proton:
-	Inherits: ^BombWarhead
+	Inherits: ^APWarhead
 	ReloadDelay: 50
 	Range: 5c0
 	Report: scrin5b.aud

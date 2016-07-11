@@ -13,6 +13,7 @@ CLOUD1:
 		Bounds: 40,30
 	-UpdatesPlayerStatistics:
 	-ActorLostNotification:
+	-AppearsOnRadar:
 	Aircraft:
 		CruiseAltitude: 0
 		TurnSpeed: 6

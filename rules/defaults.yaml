@@ -635,6 +635,8 @@
 	WithInfantryBody:
 		AttackSequence: shoot
 		IdleSequences: idle1, idle2
+	RepairableNear:
+		Buildings: gadept, scrdepot
 	UpgradeOnDamage@CRITICAL:
 		Upgrades: criticalspeed
 		ValidDamageStates: Critical
@@ -651,6 +653,8 @@
 	-SpawnActorOnDeath@conversion:
 	-SpawnActorOnDeath@FLAMEGUY:
 	-PoisonedByTiberium:
+	RepairableNear:
+		Buildings: gadept, scrdepot
 	Voiced:
 		VoiceSet: Limpet
 	-Crushable:

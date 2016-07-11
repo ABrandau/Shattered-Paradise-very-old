@@ -323,32 +323,6 @@ BGGY:
 	AutoTarget:
 	WithMuzzleOverlay:
 
-BIKE:
-	Inherits: ^VoxelVehicle
-	Valued:
-		Cost: 650
-	Tooltip:
-		Name: Demo Cycle
-		Description: Suicide Vehicle armed with an explosive warhead.\nExplodes its warhead when destroyed.\n Strong vs Infantry, Vehicles\n  Weak vs Structures.
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 10
-		Prerequisites: ~naweap
-	Mobile:
-		TurnSpeed: 10
-		Speed: 180
-		Crushes: crate
-	Health:
-		HP: 70
-	Armor:
-		Type: Wood
-	RevealsShroud:
-		Range: 7c0
-	Explodes:
-		Weapon: BikeExplo
-		EmptyWeapon: BikeExplo
-	AttackSuicides:
-
 TTNK:
 	Inherits: ^VoxelTank
 	Valued:
@@ -358,7 +332,7 @@ TTNK:
 		Description: Nod's main battle tank.\nCan deploy to gain extra protection.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 60
+		BuildPaletteOrder: 11
 		Prerequisites: ~naweap
 	Mobile:
 		TurnSpeed: 5
@@ -428,6 +402,33 @@ TTNK:
 		UpgradeMinEnabledLevel: 1
 	AutoTarget:
 
+
+BIKE:
+	Inherits: ^VoxelVehicle
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: Demo Cycle
+		Description: Suicide Vehicle armed with an explosive warhead.\nExplodes its warhead when destroyed.\n Strong vs Infantry, Vehicles\n  Weak vs Structures.
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 12
+		Prerequisites: ~naweap, naradr
+	Mobile:
+		TurnSpeed: 10
+		Speed: 180
+		Crushes: crate
+	Health:
+		HP: 70
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 7c0
+	Explodes:
+		Weapon: BikeExplo
+		EmptyWeapon: BikeExplo
+	AttackSuicides:
+
 SAPC:
 	Inherits: ^VoxelTank
 	Valued:
@@ -437,8 +438,8 @@ SAPC:
 		Description: Troop transport that can move\nunderground to avoid detection.\n  Unarmed
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 12
-		Prerequisites: ~naweap
+		BuildPaletteOrder: 13
+		Prerequisites: ~naweap, naradr
 	Mobile:
 		TurnSpeed: 7
 		Speed: 100
@@ -457,7 +458,7 @@ REPAIR:
 	Inherits: ^VoxelTank
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 70
+		BuildPaletteOrder: 14
 		Prerequisites: ~naweap, naradr
 	Valued:
 		Cost: 1000
@@ -479,40 +480,6 @@ REPAIR:
 		ForceTargetStances: None
 	AttackFrontal:
 		Voice: Attack
-
-Limped:
-	Inherits: ^Vehicle
-	Inherits@2: ^ScrinRender
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 13
-		Prerequisites: ~naweap, naradr
-	Valued:
-		Cost: 450
-	Tooltip:
-		Name: Toxin Drone
-		Description: Hover Drone, cloaks when deployed.\nSpreads invisible gas around\n slowing and weaking whoever passes through.\nUnnarmed.
-	Health:
-		HP: 220
-	Armor:
-		Type: Wood
-	Mobile:
-		Speed: 140
-		Crushes: wall, mine, crate, infantry
-	Transforms:
-		IntoActor: dlimpet
-		Facing: 96
-		TransformSounds: place2.aud
-		NoTransformSounds:
-		Voice: Move
-	WithSpriteBody:
-	RevealsShroud:
-		Range: 5c0
-	RenderSprites:
-	BodyOrientation:
-		QuantizedFacings: 32
-	Hovers:
-
 
 SUBTANK:
 	Inherits: ^VoxelTank
@@ -543,32 +510,6 @@ SUBTANK:
 		Voice: Attack
 	AutoTarget:
 
-SGEN:
-	Inherits: ^VoxelTank
-	Valued:
-		Cost: 1400
-	Tooltip:
-		Name: Mobile Stealth Generator
-		Description: High tech vehicle that can cloak\nnearby units when deployed.\nDoes not cloak structures.\n  Unarmed
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 16
-		Prerequisites: ~naweap, nastlh
-	Mobile:
-		TurnSpeed: 6
-		Speed: 80
-	Health:
-		HP: 200
-	Armor:
-		Type: Wood
-	Transforms:
-		IntoActor: mastl
-		# Offset: -1,-1
-		Facing: 96
-		TransformSounds: place2.aud
-		NoTransformSounds:
-		Voice: Move
-
 ARMH:
 	Inherits: ^VoxelTank
 	Inherits@2:	^Ra2vxl
@@ -579,7 +520,7 @@ ARMH:
 		Description: Core unit, artillery, fires a beam of\nenergy through long distances.\n  Strong vs Ground units\n  Weak vs Aircraft
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 14
+		BuildPaletteOrder: 16
 		Prerequisites: ~naweap, natech
 	Health:
 		HP: 160
@@ -652,6 +593,67 @@ STNK:
 	Voiced:
 		VoiceSet: StealthTankVO
 		Volume: 7
+
+Limped:
+	Inherits: ^Vehicle
+	Inherits@2: ^ScrinRender
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 18
+		Prerequisites: ~naweap, natech
+	Valued:
+		Cost: 450
+	Tooltip:
+		Name: Toxin Drone
+		Description: Hover Drone, cloaks when deployed.\nSpreads invisible gas around\n slowing and weaking whoever passes through.\nUnnarmed.
+	Health:
+		HP: 220
+	Armor:
+		Type: Wood
+	Mobile:
+		Speed: 140
+		Crushes: wall, mine, crate, infantry
+	Transforms:
+		IntoActor: dlimpet
+		Facing: 96
+		TransformSounds: place2.aud
+		NoTransformSounds:
+		Voice: Move
+	WithSpriteBody:
+	RevealsShroud:
+		Range: 5c0
+	RenderSprites:
+	BodyOrientation:
+		QuantizedFacings: 32
+	Hovers:
+
+SGEN:
+	Inherits: ^VoxelTank
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Mobile Stealth Generator
+		Description: High tech vehicle that can cloak\nnearby units when deployed.\nDoes not cloak structures.\n  Unarmed
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 19
+		Prerequisites: ~naweap, nastlh
+	Mobile:
+		TurnSpeed: 6
+		Speed: 80
+	Health:
+		HP: 200
+	Armor:
+		Type: Wood
+	Transforms:
+		IntoActor: mastl
+		# Offset: -1,-1
+		Facing: 96
+		TransformSounds: place2.aud
+		NoTransformSounds:
+		Voice: Move
+
+
 
 ################################################
 # Mutant

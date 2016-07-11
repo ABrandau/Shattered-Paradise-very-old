@@ -63,10 +63,10 @@ Veins:
 		ExplosionPalette: player
 
 Tiberium:
-	ReloadDelay: 16
+	ReloadDelay: 25
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 3
+		Damage: 2
 		DamageTypes: TiberiumDeath
 		
 ScorpBuffer:

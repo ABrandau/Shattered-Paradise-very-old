@@ -722,13 +722,14 @@ NAMISL:
 		Icon: toxinmissile
 		ChargeTime: 120
 		Description: Toxin Missile
-		LongDesc: Launches a warhead filled with\ntoxins that make affected unit\nengage any unit nearby, friend or foe.\nAlso spawns some gas clouds.
+		LongDesc: Launches a warhead filled with toxins,\n it spawns gas clouds and has\n a fast reaction time.
 		BeginChargeSound:
 		EndChargeSound: 00-i154.aud
 		SelectTargetSound:
 		InsufficientPowerSound:
 		IncomingSound: 00-i150.aud
 		LaunchSound: icbm1.aud
+		FlightDelay: 200
 		MissileWeapon: ToxinMissile
 		SpawnOffset: 0,427,0
 		DisplayTimer: True
