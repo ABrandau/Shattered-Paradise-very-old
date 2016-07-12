@@ -291,6 +291,7 @@ METEORSHRNAPEL:
 	-UpdatesPlayerStatistics:
 	-AutoSelectionSize:
 	-SelectionDecorations:
+	-ActorLostNotification:
 	-Selectable:
 	-AutoTarget:
 	RenderSprites:

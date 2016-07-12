@@ -276,8 +276,8 @@ MeteorRain:
 		TrailPalette: effectalpha
 		TrailInterval: 1
 	Warhead@1Dam: SpreadDamage
-		Spread: 300
-		Damage: 120
+		Spread: 500
+		Damage: 180
 		Falloff: 1000, 500, 250, 125, 75, 50, 25, 12, 0
 		ValidTargets: Ground, Vehicle, Building, Infantry, Water
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath

@@ -1199,7 +1199,7 @@ SCRRECHARGER:
 TRIPOD:
 	Inherits: ^ScrinTank
 	Valued:
-		Cost: 1200
+		Cost: 1400
 	Tooltip:
 		Name: Anhilator Tripod
 		Description: Combat walker.\nCan crush vehicles and infantry.\nHas great damage but slow firing rate.\n  Strong vs Ground units in general.\n  Weak vs Aircraft.

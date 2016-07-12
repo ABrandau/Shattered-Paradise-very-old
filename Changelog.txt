@@ -28,12 +28,17 @@ Scrin Changes:
 	Meteor Storm Cooldown: 11 minutes -> 6, removed chance of repeatable strikes.
 	Meteor Storm damage: 100 -> 120 (multiplied by 10 in the bast zone).
 	Increased the innacuracy of the meteor by a lot.
+	Tripod cost: 1200 -> 1400, reduced laser width.
+	Meteor damage: 120 -> 160, increased area of effect.
+	Doubled mind leech projectile speed.
+	Increased destroyer area of effect.
 Bug Fixes:
 	Fixed crash that ocurred when visceroids spawned from dying units.
 	Corrected Stormrider scale glitch.
 	Fixed bug that made the Iron savior fire continuously over a target.
 	Fixed bug that made tech structures uncapturable for some factions on Islotropolis and sidestep.
 	Fixed crash that happened when you ordered some cabal infantry to move at a factory.
+	Fixed glitch that made the player hear unit lost messages when using the meteor storm.
 
 [2016 - 07 - 07]
 General Changes:
