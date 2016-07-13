@@ -46,6 +46,7 @@ SentryGun:
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 	
 ReaperMortar:
 	Inherits: ^GrenadeWarhead
@@ -132,6 +133,7 @@ GLAD120mm:
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 CyCannon:
 	ReloadDelay: 100
@@ -166,7 +168,8 @@ CyCannon:
 		ImpactSound: ssplash3.aud
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
-		SmudgeType: SmallScorch		
+		SmudgeType: SmallScorch
+		InvalidTargets: Vehicle, Building, Wall
 ########################################################################
 # Non Combat Cyborgs
 ########################################################################				
@@ -225,6 +228,7 @@ Dogzooka:
 		ValidImpactTypes: Air, AirHit
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 ########################################################################
 # Vehicles
 ########################################################################		
@@ -265,6 +269,7 @@ SeekerBazooka:
 		ValidImpactTypes: Air, AirHit
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 CenturionVulcan:
 	Inherits: ^RifleWarhead
@@ -308,6 +313,7 @@ TermitaGrinder:
 		ImpactSound: expnew12.aud
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 DevourerShell:
 	Inherits: ArtilleryWarhead
@@ -342,7 +348,8 @@ DevourerShell:
 		ImpactSound: ssplash3.aud
 		ValidImpactTypes: Water
 	Warhead@5: LeaveSmudge
-		SmudgeType: SmallCrater	
+		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 	Warhead@nomnomnom: GrantUpgrade
 		Range: 1c512
 		Duration: 400
@@ -446,7 +453,8 @@ WaspBazooka:
 		ImpactSound: expnew12.aud
 		ValidImpactTypes: Air, AirHit
 	Warhead@5Smu: LeaveSmudge
-		SmudgeType: SmallCrater		
+		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 	
 BasiliskProton:
 	Inherits: ^RifleWarhead
@@ -517,7 +525,8 @@ BasiliskBomb:
 		ExplosionPalette: playercab
 		ImpactSound: expnew05.aud
 	Warhead@5Smu: LeaveSmudge
-		SmudgeType: SmallCrater			
+		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 ########################################################################
 # Building
 ########################################################################
@@ -547,6 +556,7 @@ SentryTurretGun:
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 CTurretCannon:
 	Inherits: ^APWarhead
@@ -576,6 +586,7 @@ CTurretCannon:
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 BlasterProton:
 	Inherits: ^BombWarhead
@@ -607,7 +618,8 @@ BlasterProton:
 		ImpactSound: ssplash3.aud
 		ValidImpactTypes: Water
 	Warhead@5: LeaveSmudge
-		SmudgeType: SmallCrater	
+		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 AARail:
 	ReloadDelay: 150

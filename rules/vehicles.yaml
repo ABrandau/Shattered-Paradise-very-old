@@ -1065,8 +1065,9 @@ SCRSCORPION:
 		Type: Light
 	AttackFrontal:
 		Voice: Attack
-	PoisonedByTiberium@buff:
+	DamagedByTerrain@buff:
 		Weapon: ScorpBuffer
+		Terrain: Tiberium, BlueTiberium
 	AutoTarget:
 	Armament@PRIMARY:
 		Weapon: ScorpAcid

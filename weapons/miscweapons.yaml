@@ -30,7 +30,7 @@ SlimeAttack:
 	Projectile: Bullet
 		Speed: 426
 	Warhead@1Dam: SpreadDamage
-		Damage: 75
+		Damage: 60
 		Versus:
 			Light: 60
 			Heavy: 40

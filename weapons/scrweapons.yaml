@@ -40,6 +40,7 @@ LegioNeedler:
 		ImpactSound: expnew12.aud
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 		
 BugRail:
 	Inherits: ^FullDamage
@@ -127,6 +128,7 @@ ScorpAcid:
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, TiberiumDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
+		InvalidTargets: Vehicle, Building, Wall
 	Warhead@2Eff: CreateEffect
 		Explosions: tibexp2
 		ExplosionPalette: apolredalpha
@@ -163,6 +165,7 @@ ScrMbtCannon:
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 Glyder2Cannon:
 	Inherits: ^FullDamage
@@ -194,6 +197,7 @@ Glyder2Cannon:
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 TripodLaser:
 	Inherits: ^FullDamage
@@ -294,6 +298,7 @@ Glyder1Cannon:
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 BattleshipCannon:
 	Inherits: ^BombWarhead
@@ -327,8 +332,9 @@ BattleshipCannon:
 		ExplosionPalette: player
 		ImpactSound: ssplash3.aud
 		ValidImpactTypes: Water
-	# Warhead@4Smu: LeaveSmudge
-		# SmudgeType: MediumCrater
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 DestroyerCannon:
 	Inherits: ArtilleryWarhead
@@ -361,6 +367,7 @@ DestroyerCannon:
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 CouncilSteal:
 	ReloadDelay: 150
@@ -406,6 +413,7 @@ NeedlerAcid:
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, TiberiumDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
+		InvalidTargets: Vehicle, Building, Wall
 	Warhead@2Eff: CreateEffect
 		Explosions: tibexp2
 		ExplosionPalette: apolredalpha
@@ -449,7 +457,7 @@ DronePlane:
 		Angle: 50
 	Warhead@1Dam: SpreadDamage
 		Spread: 150
-		Damage: 40
+		Damage: 30
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -464,7 +472,8 @@ DronePlane:
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
+		InvalidTargets: Vehicle, Building, Wall
 	Warhead@5Actor: SpawnActor
-		Actors: VISC_LRG_SCRIN
+		Actors: VISC_LRG_SCRIN, VISC_LRG_SCRIN
 		FallRate: 5000
 		Range: 3

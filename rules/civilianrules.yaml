@@ -14,8 +14,9 @@ GHOST:
 		Speed: 56
 	Health:
 		HP: 200
-	PoisonedByTiberium:
+	DamagedByTerrain:
 		Weapon: TiberiumHeal
+		Terrain: Tiberium, BlueTiberium
 	Passenger:
 	RevealsShroud:
 		Range: 6c0
@@ -67,8 +68,9 @@ UMAGON:
 		Speed: 71
 	Health:
 		HP: 150
-	PoisonedByTiberium:
+	DamagedByTerrain:
 		Weapon: TiberiumHeal
+		Terrain: Tiberium, BlueTiberium
 	Passenger:
 	RevealsShroud:
 		Range: 7c0
@@ -122,8 +124,9 @@ MUTANT:
 		VoiceSet: Mutant
 	Health:
 		HP: 50
-	PoisonedByTiberium:
+	DamagedByTerrain:
 		Weapon: TiberiumHeal
+		Terrain: Tiberium, BlueTiberium
 	Mobile:
 		Speed: 56
 	RevealsShroud:
@@ -138,7 +141,7 @@ MUTANT:
 		Prerequisites: barracks.upgraded
 
 MWMN:
-	Inherits: ^Soldier
+	Inherits: ^Mutant
 	Valued:
 		Cost: 100
 	Tooltip:
@@ -147,8 +150,6 @@ MWMN:
 		VoiceSet: CivilianFemale
 	Health:
 		HP: 50
-	PoisonedByTiberium:
-		Weapon: TiberiumHeal
 	Mobile:
 		Speed: 56
 	RevealsShroud:
@@ -163,7 +164,7 @@ MWMN:
 		Prerequisites: barracks.upgraded
 
 MUTANT3:
-	Inherits: ^Soldier
+	Inherits: ^Mutant
 	Valued:
 		Cost: 100
 	Tooltip:
@@ -172,8 +173,6 @@ MUTANT3:
 		VoiceSet: Mutant
 	Health:
 		HP: 50
-	PoisonedByTiberium:
-		Weapon: TiberiumHeal
 	Mobile:
 		Speed: 56
 	RevealsShroud:
@@ -188,7 +187,7 @@ MUTANT3:
 		Prerequisites: barracks.upgraded
 
 TRATOS:
-	Inherits: ^Soldier
+	Inherits: ^Mutant
 	Valued:
 		Cost: 100
 	Tooltip:
@@ -197,8 +196,6 @@ TRATOS:
 		VoiceSet: Tratos
 	Health:
 		HP: 200
-	PoisonedByTiberium:
-		Weapon: TiberiumHeal
 	Mobile:
 		Speed: 71
 	RevealsShroud:
@@ -244,15 +241,13 @@ SLAV:
 		AttackSequence: shoot
 
 DOGGIE:
-	Inherits: ^Infantry
+	Inherits: ^Beast
 	Tooltip:
 		Name: Tiberian Fiend
 	Health:
 		HP: 250
 		Shape: Circle
 			Radius: 213
-	PoisonedByTiberium:
-		Weapon: TiberiumHeal
 	Valued:
 		Cost: 100
 	Armor:
@@ -339,12 +334,12 @@ VISC_LRG_SCRIN:
 		Name: Adult Visceroid
 		Description: 2 small visceroids combine into this
 	Health:
-		HP: 200
+		HP: 100
 	Armor:
 		Type: wood
 	Armament:
 		Weapon: SlimeAttack
-	-PoisonedByTiberium:
+	-DamagedByTerrain:
 	RejectsOrders:
 	-UpdatesPlayerStatistics:
 	-AppearsOnRadar:	
@@ -372,7 +367,7 @@ VISC_LRG_SCRIN:
 		Image: vislrg
 
 ZOMBIE:
-	Inherits: ^Soldier
+	Inherits: ^Mutant
 	Tooltip:
 		Name: Zombie
 	-GainsExperience:		
@@ -380,8 +375,6 @@ ZOMBIE:
 		HP: 75
 		Shape: Circle
 			Radius: 213
-	PoisonedByTiberium:
-		Weapon: TiberiumHeal
 	Valued:
 		Cost: 100
 	Armor:
@@ -422,8 +415,6 @@ CRAB:
 		HP: 200
 		Shape: Circle
 			Radius: 213
-	PoisonedByTiberium:
-		Weapon: TiberiumHeal
 	Valued:
 		Cost: 100
 	Armor:
@@ -451,7 +442,7 @@ CRAB:
 		MaxMoveDelayInTicks: 45	
 		
 BERSERKER:
-	Inherits: ^Soldier
+	Inherits: ^Mutant
 	Inherits@1: ^MutRender
 	Tooltip:
 		Name: Berserker
@@ -460,8 +451,6 @@ BERSERKER:
 		HP: 200
 		Shape: Circle
 			Radius: 213
-	PoisonedByTiberium:
-		Weapon: TiberiumHeal
 	Valued:
 		Cost: 100
 	Armor:
@@ -493,7 +482,6 @@ BERSERKER:
 		IdleSequences: idle1, idle2, idle3
 	AttackFrontal:
 		Voice: Attack
-
 
 CIV1:
 	Inherits: ^CivilianInfantry

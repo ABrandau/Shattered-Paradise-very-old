@@ -138,7 +138,7 @@ EAGLEGUARD:
 		HP: 250
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark
-	-PoisonedByTiberium:
+	-DamagedByTerrain:
 	Armor:
 		Type: Light
 	Passenger:
@@ -234,8 +234,9 @@ TEMPLAR:
 	Armament@PRIMARY:
 		Weapon: TemplarLasor
 		LocalOffset: 200,-50,320
-	PoisonedByTiberium:
+	DamagedByTerrain:
 		Weapon: TiberiumHeal
+		Terrain: Tiberium, BlueTiberium
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:
@@ -260,8 +261,9 @@ MHIJACK:
 	-Crushable:
 	Health:
 		HP: 110
-	PoisonedByTiberium:
+	DamagedByTerrain:
 		Weapon: TiberiumHeal
+		Terrain: Tiberium, BlueTiberium
 	Targetable:
 		TargetTypes: Ground, Infantry, MindControlInmune
 	Mobile:
@@ -303,8 +305,9 @@ BHS:
 		HP: 190
 	Mobile:
 		Speed: 80
-	PoisonedByTiberium:
+	DamagedByTerrain:
 		Weapon: TiberiumHeal
+		Terrain: Tiberium, BlueTiberium
 	Voiced:
 		VoiceSet: Oxanna
 	Armament@PRIMARY:
@@ -589,8 +592,9 @@ MUTFIEND:
 		Name: OnFoot
 	Armament@Garrison:
 		Weapon: GFiendShard2
-	PoisonedByTiberium@buff:
+	DamagedByTerrain@buff:
 		Weapon: FiendBuffer
+		Terrain: Tiberium, BlueTiberium
 	Cloak@CLOAKGENERATOR:
 		UpgradeTypes: FiendCloak, cloakgenerator
 		UpgradeMinEnabledLevel: 1
@@ -803,7 +807,7 @@ SHAPESHIFTER:
 		Actor: shapeshifterclone
 	FreeActor@2:
 		Actor: shapeshifterclone
-	-PoisonedByTiberium:
+	-DamagedByTerrain:
 	Mobile:
 		Speed: 65
 	Health:

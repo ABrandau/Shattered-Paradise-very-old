@@ -1240,7 +1240,7 @@ SCRDRONE:
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^TowerStealthDetection
 	Valued:
-		Cost: 900
+		Cost: 1300
 	Tooltip:
 		Name: Visceroid Hive
 		Description: Advanced base defense.\nSpawns Visceroids near the enemies.\nRequires power to operate.\n  Strong vs All
@@ -1270,7 +1270,7 @@ SCRDRONE:
 		ForceTargetStances: Enemy
 		LocalOffset: 0,0,1750
 	Power:
-		Amount: -40
+		Amount: -75
 	SelectionDecorations:
 		VisualBounds: 88, 72, 0, -12
 

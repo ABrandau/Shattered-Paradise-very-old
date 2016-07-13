@@ -20,6 +20,7 @@ FireballLauncher:
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
+		InvalidTargets: Vehicle, Building, Wall
 
 Hellfire:
 	ReloadDelay: 50
@@ -63,7 +64,8 @@ Hellfire:
 		ValidImpactTypes: Air, AirHit
 		ImpactSound: expnew06.aud
 	Warhead@5Smu: LeaveSmudge
-		SmudgeType: SmallCrater		
+		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 		
 LTrail:
 	ReloadDelay: 60

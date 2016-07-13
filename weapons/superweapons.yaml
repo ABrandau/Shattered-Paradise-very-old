@@ -34,6 +34,7 @@ MultiCluster:
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 SuicideBomb:
 	ReloadDelay: 1
@@ -95,6 +96,7 @@ IonCannon:
 	Warhead@4Smu_area: LeaveSmudge
 		SmudgeType: SmallScorch
 		Size: 2,1
+		InvalidTargets: Vehicle, Building, Wall
 
 droppod1:
 	Inherits: ^BombWarhead
@@ -112,6 +114,7 @@ droppod1:
 	Warhead@3Eff: CreateEffect
 		Explosions: small_clsn, large_twlt, medium_brnl
 		ImpactSounds: expnew12.aud
+		InvalidTargets: Vehicle, Building, Wall
 	Warhead@5Actor: SpawnActor
 		Actors: gdie1, gdie1, jumpjet
 		Range: 3
@@ -129,6 +132,7 @@ droppod2:
 		Inaccuracy: 600
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 	Warhead@3Eff: CreateEffect
 		Explosions: small_clsn, large_twlt, medium_brnl
 		ImpactSounds: expnew12.aud
@@ -149,6 +153,7 @@ droppod3:
 		Inaccuracy: 600
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 	Warhead@3Eff: CreateEffect
 		Explosions: small_clsn, large_twlt, medium_brnl
 		ImpactSounds: expnew12.aud
@@ -185,22 +190,27 @@ ClusterMissile:
 	Warhead@ClusterSmudges0: LeaveSmudge
 		SmudgeType: LargeCrater
 		Size: 1
+		InvalidTargets: Vehicle, Building, Wall
 	Warhead@ClusterSmudges1: LeaveSmudge
 		SmudgeType: LargeScorch
 		Size: 2
 		Delay: 5
+		InvalidTargets: Vehicle, Building, Wall
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@ClusterSmudges2: LeaveSmudge
 		SmudgeType: LargeScorch
 		Size: 3
 		Delay: 10
+		InvalidTargets: Vehicle, Building, Wall
 	Warhead@ClusterSmudges3: LeaveSmudge
 		SmudgeType: MediumScorch
 		Size: 4
+		InvalidTargets: Vehicle, Building, Wall
 		Delay: 15
 	Warhead@ClusterSmudges4: LeaveSmudge
 		SmudgeType: SmallScorch
 		Size: 5
+		InvalidTargets: Vehicle, Building, Wall
 		Delay: 20
 		
 ToxinMissile:
@@ -219,9 +229,11 @@ ToxinMissile:
 	Warhead@ClusterSmudges0: LeaveSmudge
 		SmudgeType: LargeCrater
 		Size: 1
+		InvalidTargets: Vehicle, Building, Wall
 	Warhead@ClusterSmudges1: LeaveSmudge
 		SmudgeType: LargeScorch
 		Size: 2
+		InvalidTargets: Vehicle, Building, Wall
 		Delay: 5
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	# Warhead@emp: GrantUpgrade
@@ -283,6 +295,7 @@ MeteorRain:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 	Warhead@3Eff: CreateEffect
 		Explosions: small_clsn, large_twlt, medium_brnl
 		ImpactSounds: expnew12.aud
@@ -330,6 +343,7 @@ CabalCannon:
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
 		InvalidImpactTypes: Water
+		InvalidTargets: Vehicle, Building, Wall
 
 NanoMachineBurst:
 	ValidTargets: Ground, Air
@@ -388,6 +402,7 @@ IonRay:
 	Warhead@4: LeaveSmudge
 		SmudgeType: SmallCrater
 		Delay: 5
+		InvalidTargets: Vehicle, Building, Wall
 
 VeinholeSummonerWeapon:
 	Inherits: ^BombWarhead

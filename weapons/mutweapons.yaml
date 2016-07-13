@@ -55,6 +55,7 @@ SkirmisherRocket:
 		ImpactSound: expnew05.aud
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 MechanicRepair:
 	ReloadDelay: 100
@@ -133,6 +134,7 @@ KnightGun:
 		ImpactSound: expnew12.aud
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 PsykerRay:
 	Inherits: ^FullDamage
@@ -156,7 +158,8 @@ PsykerRay:
 		Explosions: large_explosion
 		ImpactSound: expnew09.aud
 	Warhead@4: LeaveSmudge
-		SmudgeType: SmallCrater	
+		SmudgeType: SmallCrater
+	InvalidTargets: Vehicle, Building, Wall		
 		
 ################################################
 # GARRISON
@@ -219,6 +222,7 @@ GSkirmisherRocket:
 		ImpactSound: expnew05.aud
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 GFiendShard2:
 	Inherits: ^FullDamage
@@ -282,6 +286,7 @@ GKnightGun:
 		ImpactSound: expnew12.aud
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 GPsykerRay:
 	Inherits: ^FullDamage
@@ -305,7 +310,8 @@ GPsykerRay:
 		Explosions: large_explosion
 		ImpactSound: expnew09.aud
 	Warhead@4: LeaveSmudge
-		SmudgeType: SmallCrater	
+		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 ###############################################################		
 # Beast
 ###############################################################		
@@ -328,6 +334,7 @@ BerserkerBlow:
 		ImpactSound: expnew12.aud
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 WolfAcid:
 	Inherits: ^AcidWarhead
@@ -349,6 +356,7 @@ WolfAcid:
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
+		InvalidTargets: Vehicle, Building, Wall
 	Warhead@emp: GrantUpgrade
 		Range: 300
 		Duration: 20
@@ -379,6 +387,7 @@ BullAcid:
 		InvalidImpactTypes: Water
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: SmallScorch
+		InvalidTargets: Vehicle, Building, Wall
 	Warhead@4emp: GrantUpgrade
 		Range: 300
 		Duration: 20
@@ -444,7 +453,8 @@ LeonidCannon:
 		ImpactSound: ssplash3.aud
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
-		SmudgeType: MediumCrater			
+		SmudgeType: MediumCrater
+		InvalidTargets: Vehicle, Building, Wall
 		
 QuadFire:
 	Inherits: ^RifleWarhead
@@ -527,7 +537,8 @@ TiberianRocket:
 		ImpactSound: ssplash3.aud
 		ValidImpactTypes: Water
 	Warhead@5Smu: LeaveSmudge
-		SmudgeType: SmallCrater	
+		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 	Warhead@6Eff: CreateEffect
 		Explosions: tib_expsmall
 		ImpactSound: expnew12.aud
@@ -593,7 +604,8 @@ MiniNuke:
 		ImpactSound: ssplash3.aud
 		ValidImpactTypes: Water
 	Warhead@10Smu: LeaveSmudge
-		SmudgeType: MediumCrater	
+		SmudgeType: MediumCrater
+		InvalidTargets: Vehicle, Building, Wall
 #################################################################
 # Aircraft
 #################################################################
@@ -659,6 +671,7 @@ GargoylRocket:
 		ValidImpactTypes: Air, AirHit
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 		
 GargoylRocketAA:
 	Inherits: ^FullDamage
@@ -709,6 +722,7 @@ FalconPunch:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 	Warhead@3Eff: CreateEffect
 		Explosions: small_clsn
 		ImpactSounds: expnew12.aud

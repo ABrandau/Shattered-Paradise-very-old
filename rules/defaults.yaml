@@ -481,7 +481,9 @@
 	ActorLostNotification:
 	Crushable:
 		CrushSound: squish6.aud
-	PoisonedByTiberium:
+	DamagedByTerrain:
+		Terrain: Tiberium, BlueTiberium
+		Weapon: Tiberium
 	SpawnActorOnDeath@FLAMEGUY:
 		Actor: FLAMEGUY
 		DeathType: FireDeath
@@ -574,7 +576,8 @@
 			Prone100Percent: 100
 			Prone350Percent: 350
 		DamageTriggers: TriggerProne
-	PoisonedByTiberium:
+	DamagedByTerrain:
+		Terrain: Tiberium, BlueTiberium
 		Weapon: TiberiumHeal
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
@@ -608,7 +611,7 @@
 			Prone100Percent: 100
 			Prone350Percent: 350
 		DamageTriggers: TriggerProne
-	-PoisonedByTiberium:
+	-DamagedByTerrain:
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
 		
@@ -629,8 +632,8 @@
 	RevealsShroud:
 		Range: 4c0
 	MustBeDestroyed:
-	PoisonedByTiberium:
-		Weapon: TiberiumHeal
+	# PoisonedByTiberium:
+		# Weapon: TiberiumHeal
 	WithPermanentInjury:
 	WithInfantryBody:
 		AttackSequence: shoot
@@ -652,7 +655,7 @@
 	-WithDeathAnimation@energy:
 	-SpawnActorOnDeath@conversion:
 	-SpawnActorOnDeath@FLAMEGUY:
-	-PoisonedByTiberium:
+	-DamagedByTerrain:
 	RepairableNear:
 		Buildings: gadept, scrdepot
 	Voiced:
@@ -714,9 +717,9 @@
 		Bounds: 40,30
 	SelectionDecorations:
 		Palette: pips
-	PoisonedByTiberium:
+	DamagedByTerrain:
 		Weapon: Veins
-		Resources: Veins
+		Terrain: Veins
 	SpawnActorOnDeath@conversion:
 		Actor: PALADIN2
 		Probability: 100
@@ -984,8 +987,9 @@
 		TargetTypes: Ground
 	AttackMove:
 	HiddenUnderFog:
-	PoisonedByTiberium:
+	DamagedByTerrain:
 		Weapon: TiberiumHeal
+		Terrain: Tiberium, BlueTiberium
 	Guardable:
 	WithSpriteBody:
 

@@ -1,25 +1,6 @@
 ##########################################
 # Infantry
 ##########################################
-MilitantRifle:
-	Inherits: ^RifleWarhead
-	ReloadDelay: 30
-	Range: 4c0
-	Report: infgun3.aud, gostgun1.aud, slvkgun1.aud
-	Projectile: Bullet
-		Speed: 1c682
-	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 8
-		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: piffs
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: water_piffs
-		ExplosionPalette: ra
-		ValidImpactTypes: Water
-
 MilitantFireball:
 	Inherits: ^AcidWarhead
 	ReloadDelay: 90
@@ -38,6 +19,7 @@ MilitantFireball:
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
+		InvalidTargets: Vehicle, Building, Wall
 	Warhead@3Eff: CreateEffect
 		Explosions: fire3, fire4
 		InvalidImpactTypes: Water, Air, AirHit
@@ -196,6 +178,7 @@ BikeMissile:
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 BikeExplo:
 	Inherits: ^FullDamage
@@ -217,7 +200,8 @@ BikeExplo:
 		ImpactSound: ssplash3.aud
 		ValidImpactTypes: Water
 	Warhead@10Smu: LeaveSmudge
-		SmudgeType: MediumCrater			
+		SmudgeType: MediumCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 Tick90mm:
 	Inherits: ^APWarhead
@@ -251,6 +235,7 @@ Tick90mm:
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 		
 DevilsFlame:
 	Inherits: ^FlameWarhead
@@ -269,6 +254,7 @@ DevilsFlame:
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
+		InvalidTargets: Vehicle, Building, Wall
 	Warhead@3Eff: CreateEffect
 		Explosions: fire1, fire2
 		InvalidImpactTypes: Water, Air, AirHit
@@ -314,7 +300,8 @@ BCLazor:
 		ImpactSound: ssplash3.aud
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
-		SmudgeType: MediumCrater	
+		SmudgeType: MediumCrater
+		InvalidTargets: Vehicle, Building, Wall
 		
 StealthRocket:
 	Inherits: ^RocketWarhead
@@ -354,6 +341,7 @@ StealthRocket:
 		ImpactSound: expnew06.aud
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 		
 StealthRocketAA:
 	ReloadDelay: 150
@@ -391,7 +379,8 @@ StealthRocketAA:
 		ValidImpactTypes: Air, AirHit
 		ImpactSound: expnew06.aud
 	Warhead@5Smu: LeaveSmudge
-		SmudgeType: SmallCrater		
+		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 	
 ##################################################
 # Aircraft

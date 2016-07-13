@@ -25,6 +25,7 @@
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 120mmx:
 	ReloadDelay: 80
@@ -59,6 +60,7 @@
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 155mm:
 	ReloadDelay: 110
@@ -93,3 +95,4 @@
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
+		InvalidTargets: Vehicle, Building, Wall

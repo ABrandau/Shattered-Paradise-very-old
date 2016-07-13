@@ -48,7 +48,8 @@ JJCannon:
 		ImpactSound: ssplash3.aud
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
-		SmudgeType: SmallCrater		
+		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 Grenade:
 	Inherits: ^GrenadeWarhead
@@ -72,13 +73,14 @@ Grenade:
 		Explosions: large_grey_explosion
 		ImpactSound: expnew13.aud
 		InvalidImpactTypes: Water
-	# Warhead@3EffWater: CreateEffect
-		# Explosion: small_watersplash
-		# ExplosionPalette: player
-		# ImpactSound: ssplash3.aud
-		# ValidImpactTypes: Water
-	# Warhead@4Smu: LeaveSmudge
-		# SmudgeType: MediumCrater
+	Warhead@3EffWater: CreateEffect
+		Explosion: small_watersplash
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 Heal:
 	ReloadDelay: 150
@@ -160,6 +162,7 @@ Titan120mm:
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
+		InvalidTargets: Vehicle, Building, Wall
 	
 HoverMissile:
 	Inherits: ^RocketWarhead
@@ -201,6 +204,7 @@ HoverMissile:
 		ValidImpactTypes: Water
 	Warhead@5: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 JuggCannon:
 	Inherits: ArtilleryWarhead
@@ -234,18 +238,16 @@ JuggCannon:
 		ImpactSound: expnew12.aud
 		ValidImpactTypes: Air, AirHit
 	Warhead@5Smu: LeaveSmudge
-		SmudgeType: SmallCrater		
-	# Warhead@2Eff: CreateEffect
-		# Explosion: large_explosion
-		# ImpactSound: expnew06.aud
-		# InvalidImpactTypes: Water
-	# Warhead@3EffWater: CreateEffect
-		# Explosion: small_watersplash
-		# ExplosionPalette: player
-		# ImpactSound: ssplash2.aud
-		# ValidImpactTypes: Water
-	# Warhead@4Smu: LeaveSmudge
-		# SmudgeType: MediumCrater
+		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
+	Warhead@3EffWater: CreateEffect
+		Explosion: small_watersplash
+		ExplosionPalette: player
+		ImpactSound: ssplash2.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 SonicZap:
 	ReloadDelay: 250
@@ -376,6 +378,7 @@ FighterHellfire:
 		ValidImpactTypes: Water
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 AAFighterHellfire:
 	ReloadDelay: 25
@@ -412,7 +415,8 @@ AAFighterHellfire:
 		ValidImpactTypes: Air, AirHit
 		ImpactSound: expnew06.aud
 	Warhead@5Smu: LeaveSmudge
-		SmudgeType: SmallCrater		
+		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 OBBomb:
 	Inherits: ^BombWarhead
@@ -442,6 +446,7 @@ OBBomb:
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 GuardianRail:
 	Inherits: ^FullDamage
@@ -585,6 +590,7 @@ RPGTower:
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
+		InvalidTargets: Vehicle, Building, Wall
 
 RepairGun:
 	ReloadDelay: 60

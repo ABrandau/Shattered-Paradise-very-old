@@ -111,13 +111,11 @@ GAPILE:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 88, 56, 0, -8
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		Palette: ra
+	WithTextDecoration@primary:
+		Text: PRIMARY
 		ReferencePoint: Top
-		ZOffset: 256
+		Color: E0D048
+		ZOffset: 9999
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
 
@@ -171,13 +169,11 @@ GAWEAP:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 154, 100, -2, -12
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		Palette: ra
+	WithTextDecoration@primary:
+		Text: PRIMARY
 		ReferencePoint: Top
-		ZOffset: 256
+		Color: E0D048
+		ZOffset: 9999
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
 
@@ -225,13 +221,11 @@ GAHPAD:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 88, 66, 0, -5
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		Palette: ra
+	WithTextDecoration@primary:
+		Text: PRIMARY
 		ReferencePoint: Top
-		ZOffset: 256
+		Color: E0D048
+		ZOffset: 9999
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
 
@@ -655,13 +649,11 @@ NAHAND:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 116, 78, 3, -8
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		Palette: ra
+	WithTextDecoration@primary:
+		Text: PRIMARY
 		ReferencePoint: Top
-		ZOffset: 256
+		Color: E0D048
+		ZOffset: 9999
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
 
@@ -711,13 +703,11 @@ NAWEAP:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 149, 116, -3, -20
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		Palette: ra
+	WithTextDecoration@primary:
+		Text: PRIMARY
 		ReferencePoint: Top
-		ZOffset: 256
+		Color: E0D048
+		ZOffset: 9999
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
 
@@ -765,13 +755,11 @@ NAHPAD:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 78, 54, 0, -8
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		Palette: ra
+	WithTextDecoration@primary:
+		Text: PRIMARY
 		ReferencePoint: Top
-		ZOffset: 256
+		Color: E0D048
+		ZOffset: 9999
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
 
@@ -924,12 +912,6 @@ NASTLH:
 		EnableSound: cloak5.aud
 		DisableSound: cloak5.aud
 		AffectsParent: false
-	# UpgradeActorsNear@mini:
-		# Upgrades: cloakgeneratormini
-		# Range: 12c0
-		# EnableSound: cloak5.aud
-		# DisableSound: cloak5.aud
-		# AffectsParent: false
 	Selectable:
 		Bounds: 106, 48, 8, -6
 	SelectionDecorations:
@@ -942,11 +924,6 @@ NAWAST:
 	Tooltip:
 		Name: Waste Refinery
 		Description: Processes Veins\ninto useable resources.
-	# Buildable:
-		# BuildPaletteOrder: 110
-		# Prerequisites: natech, ~structures.nod
-		# Queue: Building
-		# BuildLimit: 1
 	Building:
 		Footprint: =x= xx= =x=
 		Dimensions: 3,3
@@ -963,10 +940,6 @@ NAWAST:
 		PipColor: Red
 		PipCount: 15
 		Capacity: 56
-	# FreeActor:
-		# Actor: WEED
-		# SpawnOffset: 3,1
-		# Facing: 160
 	WithIdleOverlay@GLOW:
 		Sequence: idle-glow
 	WithIdleOverlay@LIGHTS:
@@ -1062,13 +1035,11 @@ MURAX:
 	# ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 88, 56, 0, -8
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		Palette: ra
+	WithTextDecoration@primary:
+		Text: PRIMARY
 		ReferencePoint: Top
-		ZOffset: 256
+		Color: E0D048
+		ZOffset: 9999
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
 
@@ -1118,13 +1089,11 @@ MUWEAP:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 154, 100, -2, -12
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		Palette: ra
+	WithTextDecoration@primary:
+		Text: PRIMARY
 		ReferencePoint: Top
-		ZOffset: 256
+		Color: E0D048
+		ZOffset: 9999
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
 
@@ -1166,13 +1135,11 @@ MUAIR:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 88, 66, 0, -5
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		Palette: ra
+	WithTextDecoration@primary:
+		Text: PRIMARY
 		ReferencePoint: Top
-		ZOffset: 256
+		Color: E0D048
+		ZOffset: 9999
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
 
@@ -1416,13 +1383,11 @@ SCRRAX:
 		Amount: -5
 	SelectionDecorations:
 		VisualBounds: 88, 56, 0, -8
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		Palette: ra
+	WithTextDecoration@primary:
+		Text: PRIMARY
 		ReferencePoint: Top
-		ZOffset: 256
+		Color: E0D048
+		ZOffset: 9999
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
 
@@ -1512,24 +1477,19 @@ SCRWEAP:
 		Produces: Vehicle
 	PrimaryBuilding:
 	ProductionBar:
-	# WithRoof:
-		# Sequence: idle-zaz
 	WithIdleOverlay@ROOF:
 		Sequence: idle-roof
 	WithProductionOverlay@WHITELIGHTS:
 		Sequence: production-lights-white
 	Power:
 		Amount: -30
-	# ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 154, 100, -2, -12
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		Palette: ra
+	WithTextDecoration@primary:
+		Text: PRIMARY
 		ReferencePoint: Top
-		ZOffset: 256
+		Color: E0D048
+		ZOffset: 9999
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
 
@@ -1577,13 +1537,11 @@ SCRAIR:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 88, 66, 0, -5
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		Palette: ra
+	WithTextDecoration@primary:
+		Text: PRIMARY
 		ReferencePoint: Top
-		ZOffset: 256
+		Color: E0D048
+		ZOffset: 9999
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
 		
@@ -1792,13 +1750,11 @@ CABCLAW:
 		Amount: -20
 	SelectionDecorations:
 		VisualBounds: 88, 56, 0, -8
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		Palette: ra
+	WithTextDecoration@primary:
+		Text: PRIMARY
 		ReferencePoint: Top
-		ZOffset: 256
+		Color: E0D048
+		ZOffset: 9999
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
 
@@ -1847,13 +1803,11 @@ CABWEAP:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 154, 100, -2, -12
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		Palette: ra
+	WithTextDecoration@primary:
+		Text: PRIMARY
 		ReferencePoint: Top
-		ZOffset: 256
+		Color: E0D048
+		ZOffset: 9999
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
 
@@ -1894,13 +1848,11 @@ CABAIR:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 88, 66, 0, -5
-	WithDecoration@primary:
-		RequiresSelection: true
-		Image: pips
-		Sequence: tag-primary
-		Palette: ra
+	WithTextDecoration@primary:
+		Text: PRIMARY
 		ReferencePoint: Top
-		ZOffset: 256
+		Color: E0D048
+		ZOffset: 9999
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
 
