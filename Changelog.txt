@@ -11,6 +11,7 @@ Nod Changes:
 Mutant Changes:
 	Beasts will now become uncontrollable when reaching half their health and also will get increased combat stats
 	teamed up with some self healing, this process is reversible once the unit heals back up.
+	Corrected MRLS offset.
 
 [2016 - 07 - 09]
 General Changes:

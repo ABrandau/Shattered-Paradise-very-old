@@ -361,7 +361,7 @@ WolfAcid:
 	Warhead@emp: GrantUpgrade
 		Range: 300
 		Duration: 20
-		Upgrades: forgbulldebuff
+		Upgrades: speeddebuff, reloaddebuff, damagedebuff
 
 BullAcid:
 	Inherits: ^AcidWarhead

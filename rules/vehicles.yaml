@@ -681,8 +681,8 @@ WOLF:
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark
 	UpgradeActorsNear@lobo:
-		Upgrades: forgbullbuff, forgbulldebuff
-		Range: 4c0
+		Upgrades: firepower, selfheal, damage, speed
+		Range: 3c0
 	-Crushable:
 	AttackFrontal:
 	AutoTarget:
@@ -870,7 +870,7 @@ MLRS:
 	Valued:
 		Cost: 700
 	Tooltip:
-		Name: Ostwind
+		Name: Forgotten MRLS
 		Description: Light artillery outfitted with \nTiberium fueled rockets, deals damage\non a wide area.\n  Strong vs Infantry, Buildings\n  Weak vs Armored Targets.
 	Buildable:
 		Queue: Vehicle
@@ -892,10 +892,10 @@ MLRS:
 		Scale: 1 # 0.95
 	Armament:
 		Weapon: tiberianrocket
-		LocalOffset: -50,0,410
+		LocalOffset: 400,100,900, 400,-100,900
 	Armament@2:
 		Weapon: tiberianrocket2
-		LocalOffset: -50,0,410
+		LocalOffset: 400,100,900, 400,-100,900
 	AttackTurreted:
 		Voice: Attack
 	Turreted:

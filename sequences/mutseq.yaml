@@ -989,7 +989,7 @@ muhall:
 		Tick: 400
 	make:
 		Length: 25
-		ShadowStart: 0
+		ShadowStart: 28
 	emp-overlay: emp_fx01
 		Length: *
 		Offset: 0, 0

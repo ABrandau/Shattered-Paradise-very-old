@@ -1227,7 +1227,7 @@ MUSTABLE:
 		Cost: 500
 	Tooltip:
 		Name: Mutant Stable
-		Description: Allows beast herding.
+		Description: Allows beast herding.\nBeasts become stronger when\nhurt, gain regenerative capabilities\nbut they can't be ordered in\n this state.
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	Building:

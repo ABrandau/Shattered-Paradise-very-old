@@ -32,6 +32,18 @@
 	ReloadDelayMultiplier@EXPERIENCE:
 		UpgradeTypes: reload
 		Modifier: 90, 80, 70, 60
+	FirepowerMultiplier@debuff:
+		UpgradeTypes: firepowerdebuff
+		Modifier: 90, 80, 70, 60
+	DamageMultiplier@debuff:
+		UpgradeTypes: damagedebuff
+		Modifier: 110, 120, 130, 140
+	SpeedMultiplier@debuff:
+		UpgradeTypes: speeddebuff
+		Modifier: 85, 80, 75, 70
+	ReloadDelayMultiplier@debuff:
+		UpgradeTypes: reloaddebuff
+		Modifier: 90, 80, 70, 60
 	SelfHealing@ELITE:
 		Step: 3
 		Delay: 100
@@ -147,22 +159,6 @@
 		UpgradeTypes: forgbullbuff
 		UpgradeMinEnabledLevel: 1
 	WithDecoration@tibicon:
-		Image: tibicon
-		Sequence: idle
-		ReferencePoint: Bottom, Left
-		Palette: mouse
-		ShowToEnemies: true
-		UpgradeTypes: forgbullbuff
-		UpgradeMinEnabledLevel: 1
-
-^ForgBulldebuff:
-	ReloadDelayMultiplier@ForgBulldebuff:
-		Modifier: 120
-		UpgradeTypes: forgbulldebuff
-	SpeedMultiplier@ForgBulldebuff:
-		Modifier: 90
-		UpgradeTypes: forgbulldebuff
-	WithDecoration@tibicon2:
 		Image: tibicon
 		Sequence: idle
 		ReferencePoint: Bottom, Left
@@ -553,7 +549,6 @@
 
 ^Soldier:
 	Inherits: ^Infantry
-	Inherits@9: ^ForgBulldebuff
 	MustBeDestroyed:
 	TakeCover:
 		DamageModifiers:
@@ -598,7 +593,7 @@
 	-TakeCover:
 	UpgradeOnDamage@beastberserk:
 		Upgrades: firepower, speed, reload, berserk
-		ValidDamageStates: Heavy
+		ValidDamageStates: Heavy, Critical
 	SelfHealing@BerserkBeast:
 		Step: 10
 		Delay: 150
@@ -609,7 +604,6 @@
 	Inherits: ^Infantry
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^batteryboost
-	Inherits@9: ^ForgBulldebuff
 	Voiced:
 		VoiceSet: Limpet
 	MustBeDestroyed:
@@ -632,7 +626,6 @@
 
 ^Cyborg:
 	Inherits@1: ^Infantry
-	Inherits@9: ^ForgBulldebuff
 	Inherits@2: ^EmpDisableMobile
 	-SpawnActorOnDeath@conversion:
 	ExplosionOnDamageTransition:
@@ -678,7 +671,6 @@
 
 ^CivilianInfantry:
 	Inherits: ^Infantry
-	Inherits@9: ^ForgBulldebuff
 	Voiced:
 		VoiceSet: Civilian
 	Tooltip:
