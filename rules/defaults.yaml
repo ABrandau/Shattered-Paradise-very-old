@@ -49,6 +49,11 @@
 		UpgradeMinEnabledLevel: 1
 		UpgradeMaxAcceptedLevel: 2
 
+^RejectsOrdersBerkserk:
+	RejectsOrders:
+		UpgradeTypes: berserk
+		UpgradeMinEnabledLevel: 1
+
 ^EmpDisable:
 	UpgradeOverlay@EMPDISABLE:
 		UpgradeTypes: empdisable
@@ -396,6 +401,7 @@
 	Inherits@5: ^WebDisable
 	Inherits@6: ^BurstRecovery
 	Inherits@7: ^firestormgen
+	Inherits@8: ^RejectsOrdersBerkserk
 	Inherits@10: ^NodToxindebuff
 	Inherits@12: ^nomnomnom
 	DrawLineToTarget:
@@ -682,6 +688,7 @@
 	Inherits@5: ^ROTreduction
 	Inherits@6: ^BurstRecovery
 	Inherits@7: ^firestormgen
+	Inherits@8: ^RejectsOrdersBerkserk	
 	Inherits@9: ^NodToxindebuff
 	Inherits@10:^NodVehicleRepair
 	Inherits@11: ^nomnomnom
@@ -849,6 +856,7 @@
 ^Aircraft:
 	Inherits@1: ^GainsExperience
 	Inherits@2: ^ExistsInWorld
+	Inherits@3: ^RejectsOrdersBerkserk
 	Inherits@4: ^tractorstop
 	Inherits@5: ^AircraftSelfHeal
 	DrawLineToTarget:

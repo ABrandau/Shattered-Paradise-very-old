@@ -5,7 +5,9 @@ General Changes:
 	Updated bleed engine to the version of 13th of july
 	Made some adjustments to the smudges so they hopefully don't spam all around the map.
 	Visceroids hive spawn 3 visceroids per hit.
-	Scrin Visceroid hp -> 200 -> 100, damage 75 -> 60. 
+	Scrin Visceroid hp -> 200 -> 100, damage 75 -> 60.
+Nod Changes:
+	Nod Toxin missile will make units uncontrollable for a short period. damage reduced by 25%.
 
 [2016 - 07 - 09]
 General Changes:

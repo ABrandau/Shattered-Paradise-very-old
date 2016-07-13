@@ -217,7 +217,7 @@ ToxinMissile:
 	ValidTargets: Ground, Water, Air
 	Warhead@ImpactDamage0: SpreadDamage
 		Spread: 1c0
-		Damage: 40
+		Damage: 30
 		Falloff: 500, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water, Air
 		Versus:
@@ -236,13 +236,12 @@ ToxinMissile:
 		InvalidTargets: Vehicle, Building, Wall
 		Delay: 5
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
-	# Warhead@emp: GrantUpgrade
-		# Range: 4c0
-		# Duration: 120
-		# Upgrades: berserk
-		# ValidTargets: Infantry, Vehicle, Building
-		# ValidStances: Enemy, Neutral
-		# Delay: 15
+	Warhead@emp: GrantUpgrade
+		Range: 4c0
+		Duration: 120
+		Upgrades: berserk
+		ValidTargets: Infantry, Vehicle, Building
+		ValidStances: Ally, Enemy, Neutral
 	Warhead@5Actor: SpawnActor
 		Actors: CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1, CLOUD1
 		FallRate: 5000
