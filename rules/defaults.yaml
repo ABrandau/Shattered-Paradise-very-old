@@ -596,6 +596,14 @@
 ^Beast:
 	Inherits: ^Mutant
 	-TakeCover:
+	UpgradeOnDamage@beastberserk:
+		Upgrades: firepower, speed, reload, berserk
+		ValidDamageStates: Heavy
+	SelfHealing@BerserkBeast:
+		Step: 10
+		Delay: 150
+		Upgrade: berserk
+		UpgradeMinEnabledLevel: 1
 
 ^ScrinSoldier:
 	Inherits: ^Infantry

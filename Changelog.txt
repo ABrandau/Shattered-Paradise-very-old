@@ -8,6 +8,9 @@ General Changes:
 	Scrin Visceroid hp -> 200 -> 100, damage 75 -> 60.
 Nod Changes:
 	Nod Toxin missile will make units uncontrollable for a short period. damage reduced by 25%.
+Mutant Changes:
+	Beasts will now become uncontrollable when reaching half their health and also will get increased combat stats
+	teamed up with some self healing, this process is reversible once the unit heals back up.
 
 [2016 - 07 - 09]
 General Changes:
