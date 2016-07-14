@@ -666,7 +666,7 @@ WOLF:
 		BuildPaletteOrder: 27
 		Prerequisites: ~muweap, mustable, muradr
 	Valued:
-		Cost: 800
+		Cost: 1300
 	Tooltip:
 		Name: Tiberian Bull
 		Description: Support Beast, expels tiberium toxins\nthat affect nearby infantry. Can also\nplace mines.\n  Unarmed.
@@ -681,7 +681,7 @@ WOLF:
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark
 	UpgradeActorsNear@lobo:
-		Upgrades: firepower, selfheal, damage, speed
+		Upgrades: firepower, selfheal, damage, speed, forgbullbuff
 		Range: 3c0
 	-Crushable:
 	AttackFrontal:

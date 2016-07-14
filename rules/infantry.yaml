@@ -853,7 +853,6 @@ COLOSSI:
 	-SpawnActorOnDeath@tiberium2:
 	-SpawnActorOnDeath@tiberium3:
 	-SpawnActorOnDeath@tiberium4:
-	-SpawnActorOnDeath@cabmoney:
 	-SpawnActorOnDeath@blackhand:
 	SpawnActorOnDeath:
 		Actor: colossi
@@ -1383,7 +1382,6 @@ WORKER:
 		AttackSequence: shoot
 	RenderSprites:
 	-SpawnActorOnDeath@conversion:
-	-SpawnActorOnDeath@cabmoney:
 
 PALADIN2:
 	Inherits: ^CabalDroneInfantry
@@ -1423,7 +1421,6 @@ PALADIN2:
 	AutoTarget:
 	Selectable:
 		Bounds: 30, 42, 0, -8
-	-SpawnActorOnDeath@cabmoney:
 
 cybdog:
 	Inherits: ^Cyborg

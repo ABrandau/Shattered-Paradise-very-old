@@ -23,8 +23,8 @@ Player:
 		StructureProductionRandomBonusDelay: 25
 		MinimumDefenseRadius: 5
 		MaximumDefenseRadius: 40
-		AssignRolesInterval: 20
-		AttackForceInterval: 25
+		AssignRolesInterval: 75
+		AttackForceInterval: 100
 		IdleBaseUnitsMaximum: 10
 		RallyPointScanRadius: 25
 		MinBaseRadius: 4

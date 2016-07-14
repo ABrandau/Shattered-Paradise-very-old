@@ -60,11 +60,24 @@
 		ZOffset: 256
 		UpgradeMinEnabledLevel: 1
 		UpgradeMaxAcceptedLevel: 2
+	WithDecoration@tibicon:
+		Image: tibicon
+		Sequence: idle
+		ReferencePoint: Bottom, Left
+		Palette: mouse
+		ShowToEnemies: true
+		UpgradeTypes: forgbullbuff
+		UpgradeMinEnabledLevel: 1
 
 ^RejectsOrdersBerkserk:
 	RejectsOrders:
 		UpgradeTypes: berserk
 		UpgradeMinEnabledLevel: 1
+
+^CabalBounty:
+	GivesBounty@Cabal:
+		ValidStances: Enemy
+		DeathTypes: cabaldeathcrate
 
 ^EmpDisable:
 	UpgradeOverlay@EMPDISABLE:
@@ -108,7 +121,7 @@
 		UpgradeMinEnabledLevel: 1
 	ReloadDelayMultiplier:
 		UpgradeTypes: ROTreduction
-		Modifier: 300
+		Modifier: 200, 300, 400, 500, 600, 700
 		BaseLevel: 1
 		UpgradeMinEnabledLevel: 1
 
@@ -268,6 +281,7 @@
 ^Building:
 	Inherits@1: ^BasicBuilding
 	Inherits@2: ^EmpDisable
+	Inherits@3: ^CabalBounty
 	GivesBuildableArea:
 	Capturable:
 	RepairableBuilding:
@@ -295,12 +309,6 @@
 	CaptureNotification:
 	Sellable:
 		SellSounds: cashturn.aud
-	SpawnActorOnDeath:
-		Actor: cabalmoneydummy1
-		Probability: 80
-		OwnerType: Killer
-		DeathType: cabaldeathcrate
-		RequiresLobbyCreeps: true
 	WithMakeAnimation:
 	ThrowsShrapnel:
 		Weapons: LargeDebris
@@ -398,6 +406,7 @@
 	Inherits@6: ^BurstRecovery
 	Inherits@7: ^firestormgen
 	Inherits@8: ^RejectsOrdersBerkserk
+	Inherits@9: ^CabalBounty
 	Inherits@10: ^NodToxindebuff
 	Inherits@12: ^nomnomnom
 	DrawLineToTarget:
@@ -520,12 +529,6 @@
 	SpawnActorOnDeath@conversion:
 		Actor: worker
 		Probability: 80
-		OwnerType: Killer
-		DeathType: CabalDeath
-		RequiresLobbyCreeps: false
-	SpawnActorOnDeath@cabmoney:
-		Actor: cabalmoneydummy
-		Probability: 100
 		OwnerType: Killer
 		DeathType: CabalDeath
 		RequiresLobbyCreeps: false
@@ -685,6 +688,7 @@
 	Inherits@1: ^GainsExperience
 	Inherits@2: ^ExistsInWorld
 	Inherits@3: ^EmpDisableMobile
+	Inherits@4: ^CabalBounty
 	Inherits@5: ^ROTreduction
 	Inherits@6: ^BurstRecovery
 	Inherits@7: ^firestormgen
@@ -729,12 +733,6 @@
 		Terrain: Veins
 	SpawnActorOnDeath@conversion:
 		Actor: PALADIN2
-		Probability: 100
-		OwnerType: Killer
-		DeathType: CabalDeath
-		RequiresLobbyCreeps: false
-	SpawnActorOnDeath@cabmoney:
-		Actor: cabalmoneydummy
 		Probability: 100
 		OwnerType: Killer
 		DeathType: CabalDeath
@@ -1236,7 +1234,6 @@
 		ClosingSound: gatedwn1.aud
 		TerrainTypes: Clear, Rough, Road, DirtRoad, Green, Sand, Pavement
 		BlocksProjectilesHeight: 640
-	-SpawnActorOnDeath:
 
 ^Gate_A:
 	Inherits: ^Gate

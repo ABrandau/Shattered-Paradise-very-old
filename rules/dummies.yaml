@@ -61,30 +61,6 @@ DROPPODPLANE:
 	-WithVoxelBody:
 	-RenderVoxels:
 
-CABALMONEYDUMMY:
-	Inherits: ^DUMMYSTRUCTURE
-	SelfHealing:
-		Step: -10
-		HealIfBelow: 200
-	Health:
-		HP: 5
-		NotifyAppliedDamage: False
-	CashTrickler:
-		Amount: 10
-		Period: 999
-
-CABALMONEYDUMMY1:
-	Inherits: ^DUMMYSTRUCTURE
-	SelfHealing:
-		Step: -5
-		HealIfBelow: 110
-	Health:
-		HP: 5
-		NotifyAppliedDamage: False
-	CashTrickler:
-		Amount: 250
-		Period: 999
-
 KILLEDACTOR:
 	Inherits: ^DUMMYSTRUCTURE
 	SelfHealing:

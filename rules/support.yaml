@@ -1056,7 +1056,7 @@ MUVENTI:
 		Range: 12c0
 		Type: cloakgenerator
 	UpgradeActorsNear@lobo:
-		Upgrades: firepower, selfheal, damage, speed
+		Upgrades: firepower, selfheal, damage, speed, forgbullbuff
 		Range: 12c0
 	UpgradeActorsNear@qlo:
 		Upgrades: speeddebuff, reloaddebuff, damagedebuff
