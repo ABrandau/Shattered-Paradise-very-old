@@ -235,6 +235,8 @@ explosion:
 	destroexp: destroexp
 	cabexplo: cabexplo
 	#Scrin
+	colossiglow: glow
+		Tick: 750
 	viscexplo: viscexplo
 	alienpiff3: alienpiff3
 	alienpiff4: alienpiff4

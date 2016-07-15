@@ -48,7 +48,7 @@ BugRail:
 	Range: 4c0
 	Inaccuracy: 0c512
 	Report: rketinf1.aud
-	Projectile: Missile
+	Projectile: Bullet
 		Speed: 250
 		Blockable: false
 		Shadow: true
@@ -59,13 +59,32 @@ BugRail:
 		RateOfTurn: 8
 		RangeLimit: 15c0
 	Warhead@1Dam: SpreadDamage
-		Spread: 125
-		Damage: 7
+		Spread: 64
+		Damage: 10
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: alienpiff3, alienpiff4, alienpiff5 
 		ExplosionPalette: apred
 		ImpactSound: expnew12.aud
+
+BugBlast:
+	Inherits: ^MeleeWarhead
+	ReloadDelay: 25
+	Range: 8c0
+	Projectile: InstantExplode
+	Warhead@1Dam: SpreadDamage
+		Spread: 1000
+		Damage: 30
+		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+		InvalidTargets: Colossi
+	Warhead@2Eff: CreateEffect
+		Explosions: colossiglow
+		ExplosionPalette: colossiglow
+		ImpactSound: expnew12.aud
+	Warhead@emp: GrantUpgrade
+		Range: 8
+		Duration: 75
+		Upgrades: speeddebuff, speeddebuff, reloaddebuff, reloaddebuff
 
 FloatTesla:
 	Inherits: ^RifleWarhead

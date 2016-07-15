@@ -411,7 +411,7 @@ MARAUDER:
 		UpgradeTypes: undeployed
 		UpgradeMaxEnabledLevel: 0
 	Turreted:
-		TurnSpeed: 6
+		TurnSpeed: 50
 		InitialFacing: 160
 	AttackFrontal:
 		Armaments: OnFoot
@@ -834,32 +834,25 @@ COLOSSI:
 		Cost: 600
 	Tooltip:
 		Name: Colossus
-		Description: Heavy duty alien.\nCan take lots of punishment.\n  Strong vs Ground units.\n  Weak vs Aircraft.
+		Description: Heavy duty alien that\ncan take lots of punishment\nand create an aura effect that harms\nand slows nearby units.\n  Strong vs Ground units.\n  Weak vs Aircraft.
 	Targetable:
-		TargetTypes: Ground, Infantry, Razorshark
+		TargetTypes: Ground, Infantry, Razorshark, Colossi
 	Selectable:
 		Bounds: 26,30,0,-10
 	Health:
 		HP: 440
 	SelfHealing@colos:
-		Step: 3
+		Step: 8
 		Delay: 100
-		DamageCooldown: 125
+		DamageCooldown: 50
+		UpgradeTypes: undeployed
+		UpgradeMinEnabledLevel: 1
 	Mobile:
 		Speed: 60
 		SharesCell: False
+		UpgradeTypes: notmobile
+		UpgradeMaxEnabledLevel: 0
 	-SpawnActorOnDeath@FLAMEGUY:
-	-SpawnActorOnDeath@tiberium:
-	-SpawnActorOnDeath@tiberium2:
-	-SpawnActorOnDeath@tiberium3:
-	-SpawnActorOnDeath@tiberium4:
-	-SpawnActorOnDeath@blackhand:
-	SpawnActorOnDeath:
-		Actor: colossi
-		Probability: 5
-		OwnerType: Victim
-		DeathType:
-		RequiresLobbyCreeps: false
 	SpawnActorOnDeath@conversion:
 		Actor: cybdog
 		Probability: 100
@@ -871,13 +864,51 @@ COLOSSI:
 	Armament:
 		Weapon: BugRail
 		LocalOffset: 300,0,1000
+		UpgradeTypes: undeployed
+		UpgradeMinEnabledLevel: 1
+	Armament@deployed:
+		Weapon: BugBlast
+		UpgradeTypes: deployed
+		UpgradeMinEnabledLevel: 1
+		TargetStances: Ally, Enemy, Neutral
 	AttackFrontal:
 		Voice: Attack
-	WithInfantryBody:
-		AttackSequence: throw
 	-TakeCover:
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
+	DeployToUpgrade:
+		DeployedUpgrades: deployed, notmobile
+		UndeployedUpgrades: undeployed
+		DeployAnimation: make
+		Facing: 160
+		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
+		DeploySound:
+		UndeploySound:
+	WithInfantryBody:
+		AttackSequence: throw
+		UpgradeTypes: undeployed
+		UpgradeMinEnabledLevel: 1
+	WithSpriteBody@deployed:
+		StandSequences: dummy
+		Sequence: dummy
+		UpgradeTypes: undeployed
+		UpgradeMaxEnabledLevel: 0
+	WithIdleOverlay@anim:
+		Sequence: deployed
+		UpgradeTypes: undeployed
+		UpgradeMaxEnabledLevel: 0
+	Turreted:
+		TurnSpeed: 50
+		InitialFacing: 160
+	AttackFrontal:
+		Voice: Attack
+		UpgradeTypes: undeployed
+		UpgradeMinEnabledLevel: 1
+		UpgradeMaxAcceptedLevel: 1
+	AttackTurreted@deployed:
+		Voice: Attack
+		UpgradeTypes: deployed
+		UpgradeMinEnabledLevel: 1
 
 STALKER:
 	Inherits: ^ScrinSoldier

@@ -171,6 +171,10 @@
 		Name: tibcrystalpal
 		BasePalette: apblue
 		Alpha: 0.17
+	PaletteFromPaletteWithAlpha@colossiglow:
+		Name: colossiglow
+		BasePalette: apcyan
+		Alpha: 0.17
 	VoxelNormalsPalette@ra2normals:
 		Name: ra2normals
 		Type: RedAlert2

@@ -1,4 +1,4 @@
-﻿YuEAR - MONTH - DAY
+﻿YEAR - MONTH - DAY
 
 [2016 - xx - xx]
 General Changes:
@@ -13,6 +13,10 @@ Mutant Changes:
 	teamed up with some self healing, this process is reversible once the unit heals back up.
 	Corrected MRLS offset.
 	Improved bull buff effect, cost: 800 -> 1300
+	Clean some pixels of the mutant stable.
+Scrin Changes:
+	Updated Colossi, now it can deploy, and when it does so it creates an aura like a ra2 desolator
+	that damages nearby units and also reduces their attack speed and movement speed.
 
 [2016 - 07 - 09]
 General Changes:

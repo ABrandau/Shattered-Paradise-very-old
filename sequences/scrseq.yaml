@@ -368,33 +368,45 @@ colossi:
 		Tick: 80
 	stand:
 		Facings: 8
-		ShadowStart: 225
+		ShadowStart: 247
 	run:
 		Start: 8
 		Length: 8
 		Facings: 8
-		ShadowStart: 233
+		ShadowStart: 255
 	idle1:
 		Start: 136
 		Length: 44
-		ShadowStart: 361
+		ShadowStart: 383
 	idle2:
 		Start: 180
 		Length: 27
-		ShadowStart: 406
+		ShadowStart: 429
 	die1:
 		Start: 209
 		Length: 9
-		ShadowStart: 433
+		ShadowStart: 455
 	die2:
 		Start: 218
 		Length: 6
-		ShadowStart: 443
+		ShadowStart: 465
 	throw:
 		Start: 72
 		Length: 8
 		Facings: 8
-		ShadowStart: 297
+		ShadowStart: 319
+	dummy: dot
+	light: ulpha
+		UseTilesetExtension: false
+		BlendMode: Additive
+	make:
+		Start: 226
+		Length: 4
+		ShadowStart: 473
+	deployed:
+		Start: 230
+		Length: 17
+		ShadowStart: 477
 	icon: colossiicon
 ##########################################################
 # Vehicles
