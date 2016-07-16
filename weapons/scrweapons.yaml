@@ -69,12 +69,12 @@ BugRail:
 
 BugBlast:
 	Inherits: ^MeleeWarhead
-	ReloadDelay: 25
+	ReloadDelay: 2
 	Range: 8c0
 	Projectile: InstantExplode
 	Warhead@1Dam: SpreadDamage
 		Spread: 1000
-		Damage: 30
+		Damage: 8
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 		InvalidTargets: Colossi
 	Warhead@2Eff: CreateEffect
