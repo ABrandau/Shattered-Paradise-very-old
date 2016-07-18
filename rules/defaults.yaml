@@ -70,14 +70,15 @@
 		UpgradeMinEnabledLevel: 1
 
 ^RejectsOrdersBerkserk:
-	RejectsOrders:
+	RejectsOrders@berserk:
 		UpgradeTypes: berserk
 		UpgradeMinEnabledLevel: 1
 
 ^CabalBounty:
 	GivesBounty@Cabal:
+		Percentage: 20
 		ValidStances: Enemy
-		DeathTypes: cabaldeathcrate
+		DeathTypes: CabalDeathCrate
 
 ^EmpDisable:
 	UpgradeOverlay@EMPDISABLE:
@@ -149,7 +150,7 @@
 ^BurstRecovery:
 	SelfHealing@NanomachineBurst:
 		Step: 10
-		Delay: 75
+		Delay: 25
 		HealIfBelow: 100
 		UpgradeTypes: nanomachineburst
 		UpgradeMinEnabledLevel: 1
@@ -158,27 +159,6 @@
 		Probability: 100
 		OwnerType: Killer
 		RequiresLobbyCreeps: false
-
-^ForgBullBuff:
-	ReloadDelayMultiplier@ForgBullBuff:
-		Modifier: 80
-		UpgradeTypes: forgbullbuff
-	SpeedMultiplier@ForgBullBuff:
-		Modifier: 110
-		UpgradeTypes: forgbullbuff
-	SelfHealing@ForgBullBuff:
-		Step: 1
-		Delay: 50
-		UpgradeTypes: forgbullbuff
-		UpgradeMinEnabledLevel: 1
-	WithDecoration@tibicon:
-		Image: tibicon
-		Sequence: idle
-		ReferencePoint: Bottom, Left
-		Palette: mouse
-		ShowToEnemies: true
-		UpgradeTypes: forgbullbuff
-		UpgradeMinEnabledLevel: 1
 
 ^NodToxindebuff:
 	ReloadDelayMultiplier@NodToxindebuff:
@@ -570,7 +550,6 @@
 
 ^Mutant:
 	Inherits: ^Infantry
-	Inherits@1: ^ForgBullBuff
 	MustBeDestroyed:
 	TakeCover:
 		DamageModifiers:
@@ -625,11 +604,10 @@
 	-DamagedByTerrain:
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
-		
 
 ^Cyborg:
 	Inherits@1: ^Infantry
-	Inherits@2: ^EmpDisableMobile
+	Inherits@3:	^CyborgSelfHeal
 	-SpawnActorOnDeath@conversion:
 	ExplosionOnDamageTransition:
 		Weapon: CyborgExplode
@@ -642,14 +620,10 @@
 	RevealsShroud:
 		Range: 4c0
 	MustBeDestroyed:
-	# PoisonedByTiberium:
-		# Weapon: TiberiumHeal
 	WithPermanentInjury:
 	WithInfantryBody:
 		AttackSequence: shoot
 		IdleSequences: idle1, idle2
-	RepairableNear:
-		Buildings: gadept, scrdepot
 	UpgradeOnDamage@CRITICAL:
 		Upgrades: criticalspeed
 		ValidDamageStates: Critical
@@ -660,14 +634,13 @@
 
 ^CabalDroneInfantry:
 	Inherits@1: ^Infantry
+	Inherits@2:	^CyborgSelfHeal
 	-WithDeathAnimation@normal:
 	-WithDeathAnimation@explosion:
 	-WithDeathAnimation@energy:
 	-SpawnActorOnDeath@conversion:
 	-SpawnActorOnDeath@FLAMEGUY:
 	-DamagedByTerrain:
-	RepairableNear:
-		Buildings: gadept, scrdepot
 	Voiced:
 		VoiceSet: Limpet
 	-Crushable:
@@ -1318,7 +1291,6 @@
 ^TowerStealthDetection:
 	DetectCloaked:
 		Range: 5c0
-	# RenderDetectionCircle:
 
 ^NodVehicleRepair:
 	SelfHealing@NodVehicleRepair:
@@ -1330,9 +1302,17 @@
 
 ^CyborgSelfHeal:
 	SelfHealing@Scrin:
-		Step: 3
-		Delay: 75
-		DamageCooldown: 70
+		Step: 2
+		Delay: 100
+		DamageCooldown: 100
+		HealIfBelow: 60
+
+^CabVehicleSelfHeal:
+	SelfHealing@Scrin:
+		Step: 4
+		Delay: 100
+		DamageCooldown: 200
+		HealIfBelow: 75
 
 ^AircraftSelfHeal:
 	SelfHealing@Cabal:

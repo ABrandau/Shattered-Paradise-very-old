@@ -3,12 +3,25 @@ MineExplode:
 		Spread: 256
 		Damage: 150
 		AffectsParent: true
-		DamageTypes: Prone50Percent, TriggerProne, DefaultDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 		InvalidTargets: Mine
 	Warhead@2Eff: CreateEffect
 		Explosions: large_twlt
 		ImpactSound: expnew09.aud
-		
+
+ReactorExplode:
+	Warhead@1Dam: SpreadDamage
+		Spread: 3c0
+		Damage: 500
+		AffectsParent: true
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		Versus:
+			None: 200
+			Wood: 150
+			Light: 100
+			Heavy: 75
+			Concrete: 40
+
 CyborgExplode:
 	Warhead@1Eff: CreateEffect
 		Explosions: medium_bang

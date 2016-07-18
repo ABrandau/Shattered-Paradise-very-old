@@ -759,10 +759,6 @@ SCRPOD:
 		Cost: 700
 	Tooltip:
 		Name: Transport Shuttle
-	# Buildable:
-		# Queue: Air
-		# BuildPaletteOrder: 20
-		# Prerequisites: ~scrair
 	-Targetable@GROUND:
 	-Targetable@AIRBORNE:
 	-SelectionDecorations:
@@ -779,10 +775,6 @@ SCRPOD:
 		LandingSound: dropdwn1.aud
 	Health:
 		HP: 300
-	# SelfHealing:
-		# Step: -5
-		# Ticks: 75
-		# HealIfBelow: 1
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -797,6 +789,7 @@ SCRPOD:
 	WithFacingSpriteBody:
 	WithShadow:
 	FlyAwayOnIdle:
+	-RejectsOrders@berserk:
 	RejectsOrders:
 
 STORMRIDER:
@@ -1208,9 +1201,6 @@ MOTHERSHIP:
 	Armament@2:
 		Weapon: BattleshipCannon
 		LocalOffset:0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
-	Armament@3:
-		Weapon: BattleshipCannon
-		LocalOffset:0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
 	ProduceActorPower@as:
 		Description: Energy Assimilator
 		LongDesc: Disables hostile powerplants\nmapwide.
@@ -1219,6 +1209,7 @@ MOTHERSHIP:
 		Type: HunterSeeker
 		IconPalette: chromescrin
 		ChargeTime: 180
+	-GainsExperience:
 	Exit@1:
 	Production:
 		Produces: HunterSeeker
@@ -1270,7 +1261,7 @@ WASP:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 120
+		HP: 130
 	Armor:
 		Type: Wood
 	Voiced:

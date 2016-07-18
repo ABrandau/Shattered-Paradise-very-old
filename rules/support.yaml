@@ -1411,6 +1411,11 @@ MOTHERSHIPDEP:
 		LocalOffset:0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
 	SelectionDecorations:
 		VisualBounds: 88, 72, 0, -12
+	SelfHealing@Scrin:
+		Step: 10
+		Delay: 100
+		DamageCooldown: 200
+		HealIfBelow: 110
 
 SCRSHIELD:
 	Inherits: ^Building

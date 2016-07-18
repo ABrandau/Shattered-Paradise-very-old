@@ -1304,9 +1304,9 @@ SCRPOWR:
 		BuildPaletteOrder: 0
 		Prerequisites: ~structures.scr
 	Valued:
-		Cost: 650
+		Cost: 600
 	Tooltip:
-		Name: Scrin Leech
+		Name: Scrin Generator
 		Description: Provides power for other structures.
 	ProvidesPrerequisite:
 		Prerequisite: scrpowr
@@ -1317,7 +1317,7 @@ SCRPOWR:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
 	Health:
-		HP: 750
+		HP: 600
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -1327,16 +1327,61 @@ SCRPOWR:
 	Selectable:
 		Bounds: 90, 48, 0, -6
 	Power:
-		Amount: 150
+		Amount: 120
 	InfiltrateForPowerOutage:
 	AffectedByPowerOutage:
 	Targetable:
 		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate, Powerplant
 	ScalePowerWithHealth:
 	DisabledOverlay:
-	# ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 90, 84, 0, -12
+	StoresResources:
+		PipCount: 6
+		Capacity: 2000
+
+SCRADVPOWR:
+	Inherits: ^Building
+	Inherits@2: ^ScrinRender
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 2
+		Prerequisites: scrweap, ~structures.scr
+	Valued:
+		Cost: 1200
+	Tooltip:
+		Name: Tiberium Reactior
+		Description: Provides power for other structures\nand also stores resources, explodes\nviolently when destroyed.
+	ProvidesPrerequisite:
+		Prerequisite: scrpowr
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3,3
+	WithBuildingExplosion:
+		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
+		Palette: apolbluealpha
+	Health:
+		HP: 1100
+	Armor:
+		Type: Wood
+	RevealsShroud:
+		Range: 4c0
+	WithIdleOverlay@LIGHTS:
+		Sequence: idle-lights
+	Selectable:
+		Bounds: 90, 48, 0, -6
+	Power:
+		Amount: 400
+	InfiltrateForPowerOutage:
+	AffectedByPowerOutage:
+	Targetable:
+		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate, Powerplant
+	ScalePowerWithHealth:
+	DisabledOverlay:
+	SelectionDecorations:
+		VisualBounds: 90, 84, 0, -12
+	Explodes:
+		Weapon: ReactorExplode
 
 SCRRAX:
 	Inherits: ^Building
@@ -1391,7 +1436,7 @@ SCRRAX:
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
 
-scrproc:
+SCRPROC:
 	Inherits: ^Building
 	Inherits@2: ^ScrinRender
 	Valued:
@@ -1423,7 +1468,7 @@ scrproc:
 	StoresResources:
 		PipColor: Green
 		PipCount: 15
-		Capacity: 2500
+		Capacity: 1500
 	CustomSellValue:
 		Value: 600
 	FreeActor:
@@ -1455,8 +1500,8 @@ SCRWEAP:
 		BuildPaletteOrder: 50
 		Prerequisites: scrproc, ~structures.scr
 	Building:
-		Footprint: xxx xx= xxx
-		Dimensions: 3,3
+		Footprint: xxx= xxx= xxx=
+		Dimensions: 4,3
 	Selectable:
 		Bounds: 154, 96, -2, -12
 	Health:
@@ -1470,8 +1515,8 @@ SCRWEAP:
 	RevealsShroud:
 		Range: 6c0
 	Exit@1:
-		SpawnOffset: 0,0,0 #-384,-384,0
-		ExitCell: 1,1
+		SpawnOffset: -384,-384,0
+		ExitCell: 3,1
 		ExitDelay: 5
 	Production:
 		Produces: Vehicle

@@ -293,6 +293,7 @@ CenturionVulcan:
 		ValidImpactTypes: Water				
 		
 TermitaGrinder:
+	Inherits: ^APWarhead
 	ReloadDelay: 30
 	Range: 1c512
 	Report: repair11.aud
@@ -302,11 +303,6 @@ TermitaGrinder:
 		Spread: 42
 		Damage: 35
 		Versus:
-			None: 50
-			Wood: 150
-			Light: 100
-			Heavy: 75
-			Concrete: 5
 		DamageTypes: Prone100Percent, TriggerProne, CabalDeathCrate
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
@@ -387,7 +383,7 @@ ecmwave:
 			Concrete: 0			
 
 PalaLazor:
-	Inherits: ^RifleWarhead
+	Inherits: ^MeleeWarhead
 	ReloadDelay: 90
 	Range: 6c0
 	Report: obelray1.aud
@@ -622,8 +618,9 @@ BlasterProton:
 		InvalidTargets: Vehicle, Building, Wall
 
 AARail:
+	Inherits: ^FullDamage
 	ReloadDelay: 150
-	Range: 13c0
+	Range: 10c0
 	Report: biggun1.aud
 	ValidTargets: Air
 	MinRange: 3c0
@@ -638,29 +635,8 @@ AARail:
 	Warhead@1Dam: SpreadDamage
 		Range: 0, 32
 		Falloff: 100, 100
-		Damage: 25
+		Damage: 20
 		InfDeath: 6
 		ValidTargets: Air
 		AffectsParent: false
-		# ValidStances: Neutral, Enemy
-		Versus:
-			None: 100
-			Wood: 130
-			Light: 150
-			Heavy: 110
-			Concrete: 5
-		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Dam: SpreadDamage
-		Range: 0, 32
-		Falloff: 50, 50 # Only does half damage to friendly units
-		Damage: 150
-		InfDeath: 6
-		AffectsParent: false
-		ValidStances: Ally
-		Versus:
-			None: 100
-			Wood: 130
-			Light: 150
-			Heavy: 110
-			Concrete: 5
 		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath

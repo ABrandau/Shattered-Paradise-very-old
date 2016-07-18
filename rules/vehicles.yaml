@@ -698,6 +698,11 @@ WOLF:
 		SharesCell: false
 	WithInfantryBody:
 		AttackSequence: shoot
+	-FirepowerMultiplier@EXPERIENCE:
+	-DamageMultiplier@EXPERIENCE:
+	-SpeedMultiplier@EXPERIENCE:
+	-ReloadDelayMultiplier@EXPERIENCE:
+	-WithDecoration@tibicon:
 
 DEATHCLAW:
 	Inherits: ^Beast
@@ -1224,10 +1229,10 @@ TRIPOD:
 	AutoTarget:
 	Armament:
 		Weapon: TripodLaser
-		LocalOffset: 100,200,2500
+		LocalOffset: 100,225,2400
 	Armament@2:
 		Weapon: TripodLaser
-		LocalOffset: 100,-200,2500
+		LocalOffset: 100,-225,2400
 	WithInfantryBody:
 		AttackSequence: shoot
 	QuantizeFacingsFromSequence:
@@ -1291,6 +1296,7 @@ SCRDRONEC:
 ################################################
 JENN:
 	Inherits: ^Tank
+	Inherits@2:	^CyborgSelfHeal
 	Inherits@3: ^BasicStealthDetection
 	Valued:
 		Cost: 700
@@ -1326,6 +1332,7 @@ JENN:
 
 CENTURION:
 	Inherits: ^Tank
+	Inherits@2:	^CabVehicleSelfHeal
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -1388,9 +1395,10 @@ CENTURION:
 
 GRINDER:
 	Inherits: ^VoxelVehicle
+	Inherits@2:	^CyborgSelfHeal
 	Inherits@1: ^Ra2vxl
 	Valued:
-		Cost: 850
+		Cost: 800
 	Tooltip:
 		Name: Grinder
 		Description: Heavy vehicle designed for\nsalvaging enemy bases.\n  Strong vs Light armored targers.\n  Weak vs Aircraft\nDestroying structures with this\nunit Awards the player with money.
@@ -1399,8 +1407,8 @@ GRINDER:
 		BuildPaletteOrder: 20
 		Prerequisites: ~cabweap, cabradr
 	Mobile:
-		TurnSpeed: 6
-		Speed: 90
+		TurnSpeed: 8
+		Speed: 100
 	Health:
 		HP: 350
 	Armor:
@@ -1425,6 +1433,7 @@ GRINDER:
 
 ECM:
 	Inherits: ^VoxelVehicle
+	Inherits@2:	^CyborgSelfHeal
 	Inherits@1: ^Ra2vxl
 	Valued:
 		Cost: 1500
@@ -1471,6 +1480,7 @@ ECM:
 
 CABAPC:
 	Inherits: ^VoxelVehicle
+	Inherits@2:	^CyborgSelfHeal
 	Inherits@1: ^Ra2vxl
 	Valued:
 		Cost: 750
@@ -1489,7 +1499,7 @@ CABAPC:
 	Voiced:
 		VoiceSet: Limpet
 	Health:
-		HP: 200
+		HP: 400
 	Hovers:
 	Armor:
 		Type: Wood
@@ -1555,7 +1565,6 @@ BLASTER:
 
 PALADIN:
 	Inherits: ^Tank
-	Inherits@2: ^CyborgSelfHeal
 	Inherits@5: ^CabRender
 	Valued:
 		Cost: 2000
@@ -1568,10 +1577,10 @@ PALADIN:
 		Prerequisites: ~cabweap, cabtech
 	Mobile:
 		TurnSpeed: 6
-		Speed: 50
+		Speed: 60
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 700
+		HP: 1000
 	Voiced:
 		VoiceSet: Cyborg
 	Armor:
@@ -1583,17 +1592,17 @@ PALADIN:
 	AttackFrontal:
 		Voice: Attack
 	RenderSprites:
-		# Scale: 0.7
 	Armament@primary:
 		Weapon: PalaLazor
-		Recoil: 127
-		RecoilRecovery: 26
 		LocalOffset: 475,300,1050
 	Armament@secondary:
 		Weapon: PalaLazor
-		Recoil: 127
-		RecoilRecovery: 26
 		LocalOffset:  475,-300,1050
 	AutoTarget:
 	Selectable:
 		Bounds: 30, 42, 0, -8
+	SelfHealing@Scrin:
+		Step: 10
+		Delay: 100
+		DamageCooldown: 200
+		HealIfBelow: 110

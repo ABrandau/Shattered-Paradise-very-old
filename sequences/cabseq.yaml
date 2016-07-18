@@ -385,7 +385,7 @@ glad:
 		Tick: 60
 		Length: 10
 		Facings: 8
-		ShadowStart: 794		
+		ShadowStart: 794
 	idle1:
 		Start: 104
 		Length: 28
@@ -409,7 +409,9 @@ glad:
 	die4:
 		Start: 161
 		Length: 13
-		ShadowStart: 646		
+		ShadowStart: 646
+	muzzle: gunfire
+		Length: *
 	shoot:
 		Tick: 60
 		Start: 229
@@ -433,7 +435,7 @@ glad:
 		Offset: 0, 0
 		UseTilesetCode: false
 		ZOffset: 512
-		BlendMode: Additive		
+		BlendMode: Additive
 	icon: gladicon
 	
 cyc2:

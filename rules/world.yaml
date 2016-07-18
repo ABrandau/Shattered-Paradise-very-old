@@ -26,7 +26,7 @@
 	Faction@3:
 		Name: C.A.B.A.L.
 		InternalName: cab
-		Description: C.A.B.A.L.\nController Faction.\n + Has crowd control.\n + Can convert enemies and process them for money.\n + Advanced units constantly self repair.\n -  Not immune to tiberium radiation.\n -  Expensive units.\n -  Slow.
+		Description: C.A.B.A.L.\nController Faction.\n + Has crowd control.\n + Can convert enemies and process them for money.\n + All units self repair.\n -  Not immune to tiberium radiation.\n -  Expensive units.\n -  Slow.
 	Faction@4:
 		Name: Scrin
 		InternalName: scr

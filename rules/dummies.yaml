@@ -92,6 +92,8 @@ NANOMACHINEBURSTSPAWNER:
 	SelfHealing:
 		Step: -10
 		HealIfBelow: 200
+	Tooltip:
+		Name: Nanomachine Swarm
 	Health:
 		HP: 5
 		NotifyAppliedDamage: False

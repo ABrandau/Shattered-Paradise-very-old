@@ -43,7 +43,7 @@ LegioNeedler:
 		InvalidTargets: Vehicle, Building, Wall
 		
 BugRail:
-	Inherits: ^FullDamage
+	Inherits: ^GrenadeWarhead
 	ReloadDelay: 100
 	Range: 4c0
 	Inaccuracy: 0c512
@@ -60,7 +60,7 @@ BugRail:
 		RangeLimit: 15c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
-		Damage: 10
+		Damage: 30
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: alienpiff3, alienpiff4, alienpiff5 
@@ -68,13 +68,18 @@ BugRail:
 		ImpactSound: expnew12.aud
 
 BugBlast:
-	Inherits: ^MeleeWarhead
 	ReloadDelay: 2
 	Range: 8c0
 	Projectile: InstantExplode
 	Warhead@1Dam: SpreadDamage
-		Spread: 1000
-		Damage: 8
+		Spread: 2000
+		Damage: 15
+		Versus:
+			None: 100
+			Wood: 30
+			Light: 2
+			Heavy: 2
+			Concrete: 2 
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 		InvalidTargets: Colossi
 	Warhead@2Eff: CreateEffect
@@ -84,7 +89,7 @@ BugBlast:
 	Warhead@emp: GrantUpgrade
 		Range: 8
 		Duration: 75
-		Upgrades: speeddebuff, speeddebuff, reloaddebuff, reloaddebuff
+		Upgrades: speeddebuff, reloaddebuff
 
 FloatTesla:
 	Inherits: ^RifleWarhead
@@ -142,7 +147,7 @@ ScorpAcid:
 		Palette: apolredalpha
 	BurstDelay: 4
 	Warhead@1Dam: SpreadDamage
-		Spread: 80
+		Spread: 128
 		Damage: 13
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, TiberiumDeath
 	Warhead@2Smu: LeaveSmudge
@@ -219,7 +224,7 @@ Glyder2Cannon:
 		InvalidTargets: Vehicle, Building, Wall
 
 TripodLaser:
-	Inherits: ^FullDamage
+	Inherits: ^MeleeWarhead
 	ReloadDelay: 80
 	Range: 6c0
 	Report: lastur1.aud
@@ -227,7 +232,7 @@ TripodLaser:
 		Width: 60
 		BeamDuration: 5
 		ZOffset: 2047
-		Color: b300b3
+		Color: FFFFFF#b300b3
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 40
@@ -372,7 +377,7 @@ DestroyerCannon:
 		Shadow: false
 		Angle: 62
 	Warhead@1Dam: SpreadDamage
-		Spread: 300
+		Spread: 400
 		Damage: 110
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -442,7 +447,7 @@ NeedlerAcid:
 TractorBeam:
 	Inherits: ^FullDamage
 	ReloadDelay: 25
-	Range: 6c768
+	Range: 6c0
 	Report:
 	ValidTargets: Air
 	Projectile: Bullet
@@ -457,7 +462,7 @@ TractorBeam:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@emp: GrantUpgrade
 		Range: 1c0
-		Duration: 30
+		Duration: 35
 		Upgrades: tractorstop
 		ValidTargets: Air
 

@@ -307,7 +307,7 @@ StealthRocket:
 	Inherits: ^RocketWarhead
 	ReloadDelay: 125
 	Range: 6c0
-	Burst: 6
+	Burst: 5
 	Report: misl1.aud
 	ValidTargets: Ground, Air
 	Projectile: Missile
@@ -482,7 +482,7 @@ TurretLaserFire:
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 30
-		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath		
+		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 		
 ObeliskLaserFire:
 	Inherits: ^FullDamage

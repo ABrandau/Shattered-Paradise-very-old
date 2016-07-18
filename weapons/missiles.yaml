@@ -43,7 +43,7 @@ Bazooka:
 
 RedEye2:
 	ReloadDelay: 100
-	Range: 10c0
+	Range: 8c0
 	Report: samshot1.aud
 	ValidTargets: Air
 	Projectile: Missile

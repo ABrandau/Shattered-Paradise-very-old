@@ -36,7 +36,7 @@
 	Warhead@1Dam: SpreadDamage
 		Versus:
 			None: 25
-			Wood: 65
+			Wood: 50
 			Light: 100
 			Heavy: 150
 			Concrete: 60

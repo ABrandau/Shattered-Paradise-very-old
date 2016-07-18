@@ -174,7 +174,7 @@
 	PaletteFromPaletteWithAlpha@colossiglow:
 		Name: colossiglow
 		BasePalette: apcyan
-		Alpha: 0.17
+		Alpha: 0.08
 	VoxelNormalsPalette@ra2normals:
 		Name: ra2normals
 		Type: RedAlert2

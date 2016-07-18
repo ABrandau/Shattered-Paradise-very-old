@@ -733,7 +733,7 @@ FalconPunch:
 FlakFire:
 	Inherits: ^FullDamage
 	ReloadDelay: 75
-	Range: 6c0
+	Range: 5c0
 	Report: cygun1.aud
 	MinRange: 1c0
 	ValidTargets: Air

@@ -747,7 +747,43 @@ scrpowr:
 		UseTilesetCode: false
 		ZOffset: 512
 		BlendMode: Additive
-	icon:scrpowricon
+	icon: scrpowricon
+		Offset: 0, 0
+		UseTilesetCode: false
+
+scradvpowr:
+	Defaults:
+		Offset: 0, -36
+		UseTilesetCode: true
+	idle:
+		Start: 29
+		ShadowStart: 82
+	damaged-idle:
+		Start: 39
+		ShadowStart: 92
+	dead:
+		Start: 40
+		ShadowStart: 92
+		Tick: 400
+	idle-lights:
+		Start: 31
+		Length: 10
+		Tick: 200
+		ZOffset: 512
+	damaged-idle-lights:
+		Start: 41
+		Length: 10
+		Tick: 200
+	make:
+		Length: 30
+		ShadowStart: 52
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: scradvpowricon
 		Offset: 0, 0
 		UseTilesetCode: false	
 
@@ -807,7 +843,7 @@ scrproc:
 		
 scrweap:
 	Defaults:
-		Offset: 0, -36
+		Offset: -12, -42
 		ZOffset: -2048
 		UseTilesetCode: true
 	idle:

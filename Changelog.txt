@@ -17,6 +17,7 @@ Mutant Changes:
 Scrin Changes:
 	Updated Colossi, now it can deploy, and when it does so it creates an aura like a ra2 desolator
 	that damages nearby units and also reduces their attack speed and movement speed.
+	Added Scrin Tiberium reactor, it works similar to the soviet advanced reactor from ra3
 
 [2016 - 07 - 09]
 General Changes:

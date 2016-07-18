@@ -749,14 +749,14 @@ LEGIO:
 	Selectable:
 		Class: Legio
 	Valued:
-		Cost: 450
+		Cost: 600
 	GivesExperience:
-		Experience: 150
+		Experience: 200
 	Tooltip:
 		Name: Legionnaire
 		Description: Scrin Frontile trooper. Resistant\nto damage. Cannot be crushed.\nIts weapon damage spreads to nearby cells.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry
 	Health:
-		HP: 140
+		HP: 150
 	-Crushable:
 	FreeActor@1:
 		Actor: legioclone
@@ -834,7 +834,7 @@ COLOSSI:
 		Cost: 600
 	Tooltip:
 		Name: Colossus
-		Description: Heavy duty alien that\ncan take lots of punishment\nand create an aura effect that harms\nand slows nearby units.\n  Strong vs Ground units.\n  Weak vs Aircraft.
+		Description: Heavy duty alien that\ncan take lots of punishment\nand create an aura effect that harms\nand slows nearby units.\n  Strong vs Unarmored ground units.\n  Weak vs Aircraft.
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark, Colossi
 	Selectable:
@@ -877,7 +877,7 @@ COLOSSI:
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	DeployToUpgrade:
-		DeployedUpgrades: deployed, notmobile
+		DeployedUpgrades: deployed, notmobile, damage, damage
 		UndeployedUpgrades: undeployed
 		DeployAnimation: make
 		Facing: 160
@@ -996,8 +996,8 @@ BUG:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Mind Leech
-		Description: Special Alien. Can\ntake over enemies for brief moments.\n  Strong vs Ground units.\n  Weak vs Aircraft.
+		Name: Overtaker
+		Description: Support alien, it can mind\ncontrol enemies for brief moments.\n  Strong vs Ground units.\n  Weak vs Aircraft.
 	FreeActor@1:
 		Actor: bugclone
 	Targetable:
@@ -1129,7 +1129,7 @@ CYBORG:
 	Armor:
 		Type: Wood
 	Valued:
-		Cost: 350
+		Cost: 400
 	Tooltip:
 		Name: Cyborg Infantry
 		Description: Heavy armored unit.\n  Strong vs Infantry, Light armor\n  Weak vs Anti Armor weapons, Aircraft
@@ -1327,6 +1327,7 @@ GLAD:
 		VoiceSet: CyborgCommando
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark
+	WithMuzzleOverlay:
 	Mobile:
 		Speed: 56
 	Health:
@@ -1334,13 +1335,12 @@ GLAD:
 	Passenger:
 	Armament@primary:
 		Weapon: GLAD120mm
-		LocalOffset: 170,85,683
+		MuzzleSequence: muzzle
+		LocalOffset: 170,250,500
 	Armament@secondary:
 		Weapon: GLAD120mm
-		LocalOffset: 170,85,683
-	Armament@secondary:
-		Weapon: CyborgVulcan
-		LocalOffset: 170,85,683
+		MuzzleSequence: muzzle
+		LocalOffset: 170,-250,500
 	AttackFrontal:
 		Voice: Attack
 
@@ -1393,6 +1393,7 @@ CYC2:
 
 WORKER:
 	Inherits: ^Soldier
+	Inherits@2: ^CyborgSelfHeal
 	Valued:
 		Cost: 120
 	Tooltip:
