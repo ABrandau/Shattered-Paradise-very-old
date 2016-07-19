@@ -38,29 +38,20 @@ GAPOWR:
 	ScalePowerWithHealth:
 	DisabledOverlay:
 	Pluggable@pluga:
-		Offset: 0,1
 		Upgrades:
 			powrup: powrup.a
 	Power@pluga:
 		UpgradeTypes: powrup.a
 		UpgradeMinEnabledLevel: 1
-		Amount: 50
+		Amount: 100
 	WithIdleOverlay@pluga:
 		UpgradeTypes: powrup.a
 		UpgradeMinEnabledLevel: 1
 		Sequence: idle-powrupa
-	Pluggable@plugb:
-		Offset: 1,1
-		Upgrades:
-			powrup: powrup.b
 	WithIdleOverlay@plugb:
-		UpgradeTypes: powrup.b
+		UpgradeTypes: powrup.a
 		UpgradeMinEnabledLevel: 1
 		Sequence: idle-powrupb
-	Power@plugb:
-		UpgradeTypes: powrup.b
-		UpgradeMinEnabledLevel: 1
-		Amount: 50
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 90, 84, 0, -12
@@ -363,7 +354,7 @@ GAPLUG:
 		DisplayTimer: True
 		DisplayBeacon: True
 		Description: Drop Pods
-		LongDesc: Deploys reinforcements at any place.
+		LongDesc: Deploys shock troopers at the targetted location.
 		UpgradeTypes: plug.hunterseeker
 		UpgradeMinEnabledLevel: 1
 		ChargeTime: 180
@@ -440,54 +431,6 @@ GAWALL:
 		CrushClasses: heavywall
 	LineBuild:
 		NodeTypes: wall, turret
-
-GAPOWRUP:
-	Inherits: ^BuildingPlug
-	Valued:
-		Cost: 150
-	Tooltip:
-		Name: Power Turbine
-		Description: Provides extra power generation.
-	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 10
-		Prerequisites: gapowr, ~structures.gdi
-	Plug:
-		Type: powrup
-	Power:
-		Amount: 50
-
-GAPLUG2:
-	Inherits: ^BuildingPlug
-	Valued:
-		Cost: 1000
-	Tooltip:
-		Name: Seeker Control
-		Description: Enables use of the hunter-seeker droid.
-	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 1000
-		Prerequisites: gaplug, gatech, gaweap, ~structures.gdi, ~sw
-	Plug:
-		Type: plug.hunterseeker
-	Power:
-		Amount: -50
-
-GAPLUG3:
-	Inherits: ^BuildingPlug
-	Valued:
-		Cost: 1500
-	Tooltip:
-		Name: Ion Cannon Uplink
-		Description: Enables use of the Ion Cannon.
-	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 1000
-		Prerequisites: gaplug, gatech, ~structures.gdi, ~sw
-	Plug:
-		Type: plug.ioncannon
-	Power:
-		Amount: -100
 
 GAFIRE:
 	Inherits: ^Building

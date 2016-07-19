@@ -274,17 +274,18 @@ SonicZap:
 		Versus:
 			Heavy: 80
 			Concrete: 60
+			Disruptor: 30
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Dam: SpreadDamage
 		Range: 0, 32
 		Falloff: 50, 50
 		Damage: 12
-		InvalidTargets: Disruptor # Does not affect friendly disruptors at all
 		AffectsParent: false
 		ValidStances: Ally
 		Versus:
 			Heavy: 80
 			Concrete: 60
+			Disruptor: 30
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 
 MechRailgun:

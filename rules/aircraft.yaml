@@ -187,7 +187,7 @@ ORCA:
 		Cost: 900
 	Tooltip:
 		Name: Orca Fighter
-		Description: Rapid Assault Gunship with\ndual missile launchers.\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
+		Description: Rapid Assault Gunship with\ndual missile launchers.\n  Strong vs Armored Targets.\n  Weak vs Infantry, Aircraft.
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 20
@@ -229,7 +229,7 @@ ORCAB:
 		Cost: 1300
 	Tooltip:
 		Name: Orca Bomber
-		Description: Heavy carpet Bomber. Blasts units\nin a line to the target.\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
+		Description: Heavy carpet Bomber. Blasts units\nin a line to the target. Warning: this\nunit requires some skill to use pro-\nperly.\n  Strong vs Ground Units.\n  Weak vs Anti Air, Aircraft
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 20
@@ -239,7 +239,7 @@ ORCAB:
 	Aircraft:
 		CruiseAltitude: 3072
 		MaximumPitch: 120
-		TurnSpeed: 3
+		TurnSpeed: 4
 		Speed: 120
 		AirborneUpgrades: airborne
 		MoveIntoShroud: true
@@ -300,10 +300,10 @@ GUARDIAN:
 	Inherits: ^Helicopter
 	Inherits@3: ^BasicStealthDetection
 	Valued:
-		Cost: 2000
+		Cost: 2500
 	Tooltip:
 		Name: Guardian Platform
-		Description: Frigate.\n  Does not need to rearm.
+		Description: Medium frigate, great for spotting target.\n  Does not need to rearm.
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 20
@@ -318,7 +318,7 @@ GUARDIAN:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 725
+		HP: 650
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -1057,7 +1057,7 @@ SCRBATTLESHIP:
 	Inherits@3: ^SelfReloads
 	Inherits@4: ^BasicStealthDetection
 	Valued:
-		Cost: 2000
+		Cost: 3000
 	Tooltip:
 		Name: Battlecruiser
 		Description: Scrin spacecraft designed for frontline combat.\nEquipped with blaster turrets.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft.
@@ -1077,7 +1077,7 @@ SCRBATTLESHIP:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 600
+		HP: 800
 	Armor:
 		Type: Heavy
 	SelfHealing:
@@ -1165,7 +1165,7 @@ MOTHERSHIP:
 	Inherits@3: ^SelfReloads
 	Inherits@4: ^BasicStealthDetection
 	Valued:
-		Cost: 2000
+		Cost: 3000
 	Tooltip:
 		Name: Scrin Council
 		Description: Scrin Flagship, disables nearby power plants.
@@ -1360,10 +1360,10 @@ BASILISK:
 	Inherits@1: ^Ra2vxl
 	Inherits@3: ^SelfReloads
 	Valued:
-		Cost: 1700
+		Cost: 1800
 	Tooltip:
 		Name: Basilisk
-		Description: Assault frigate\n  Strong vs Infantry, Light Vehicles, Buildings.\n  Weak vs Aircraft.
+		Description: Light frigate\n  Strong vs Infantry, Light Vehicles, Buildings.\n  Weak vs Aircraft.
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 20
@@ -1379,7 +1379,7 @@ BASILISK:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 300
+		HP: 500
 	Armor:
 		Type: Light
 	SelfHealing:

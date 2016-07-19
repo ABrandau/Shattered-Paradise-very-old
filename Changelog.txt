@@ -6,6 +6,9 @@ General Changes:
 	Made some adjustments to the smudges so they hopefully don't spam all around the map.
 	Visceroids hive spawn 3 visceroids per hit.
 	Scrin Visceroid hp -> 200 -> 100, damage 75 -> 60.
+GDI Changes:
+	Merged GDI power turbines (1 upgrade will enable both).
+	Buffed disruptor (Increased hp and zap speed).
 Nod Changes:
 	Nod Toxin missile will make units uncontrollable for a short period. damage reduced by 25%.
 Mutant Changes:
@@ -13,6 +16,7 @@ Mutant Changes:
 	Corrected MRLS offset.
 	Improved bull buff effect, cost: 800 -> 1300
 	Clean some pixels of the mutant stable.
+	The Forgotten Falcon now spawns gas clouds.
 CABAL Changes:
 	Removed a Vulcan cannon from CABAL's Gladiator, added some muzzle animations to it.
 	All CABAL units now self heal up to 60%.
@@ -21,6 +25,8 @@ Scrin Changes:
 	Added Scrin Tiberium reactor, it works similar to the soviet advanced reactor from ra3
 	Increased Scrin Factory Cell Size.
 	Tweaked Scrin mothership, now it gains more damage and self heal capability when deployed.
+Bug Fixes:
+	Fixed but that made some mutant vehicles immune to sonic damage.
 
 [2016 - 07 - 09]
 General Changes:

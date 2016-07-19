@@ -291,7 +291,7 @@ GACSAM:
 GAPOWRUP:
 	Inherits: ^BuildingPlug
 	Valued:
-		Cost: 150
+		Cost: 300
 	Tooltip:
 		Name: Power Turbine
 		Description: Provides extra power generation.
@@ -302,7 +302,7 @@ GAPOWRUP:
 	Plug:
 		Type: powrup
 	Power:
-		Amount: 50
+		Amount: 100
 
 GAPLUG2:
 	Inherits: ^BuildingPlug
