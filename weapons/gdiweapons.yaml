@@ -219,6 +219,8 @@ JuggCannon:
 		Shadow: true
 		Inaccuracy: 2c0
 		Blockable: false
+		ContrailLength: 10
+		ContrailUsePlayerColor: true
 		Palette: ra
 	MinRange: 5c0
 	Warhead@1Dam: SpreadDamage
@@ -254,8 +256,8 @@ SonicZap:
 	Range: 4c0
 	Report: sonic4.aud
 	Projectile: AreaBeam
-		Speed: 0c128
-		Duration: 80
+		Speed: 0c200
+		Duration: 60
 		DamageInterval: 4 # Roughly 18 impacts.
 		Width: 384
 		Shape: Flat
@@ -431,8 +433,8 @@ OBBomb:
 		Shadow: true
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 400
-		Damage: 140
+		Spread: 500
+		Damage: 280
 		ValidTargets: Ground, Building, Infantry, Vehicle
 		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect

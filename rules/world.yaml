@@ -14,15 +14,15 @@
 	Faction@0:
 		Name: GDI
 		InternalName: gdi
-		Description: GDI\nBalanced Faction.\n + Has means to keep units alive.\n + Good Armour.\n + Good Range.\n -  Slow.\n -  Low Rate of fire.\n -  Lacks anti air power.
+		Description: GDI\nBalanced Faction.\n + Has the means to keep units alive.\n + Good Armour.\n + Good Range.\n -  Slow.\n -  Low Rate of fire.\n -  Lacks anti air power.
 	Faction@1:
 		Name: Nod
 		InternalName: nod
-		Description: NOD\n Hit and Run Faction.\n + Good Speed.\n + Good Damage.\n -  Low Health.\n -  Doesn't have many aerial units.
+		Description: NOD\n Hit and run Faction.\n + Good Speed.\n + Good Damage.\n -  Low Health.\n -  Doesn't have many aerial units.
 	Faction@2:
 		Name: Mutants
 		InternalName: mut
-		Description: Mutants\nSwarmer Oponent.\n + Cheaper units thanks to tiberium immunity.\n + Infantry heals on tiberium.\n -  Can mutate enemies or allies when something dies.\n -  Average overall stats.
+		Description: Mutants\nSwarmer Oponent.\n + Cheaper units thanks to tiberium immunity.\n + Infantry heals on tiberium.\n + Defences don't require power.\n -  Low powerplant output.\n -  Can mutate enemies or allies when something dies.\n -  Average overall stats.
 	Faction@3:
 		Name: C.A.B.A.L.
 		InternalName: cab
@@ -30,7 +30,7 @@
 	Faction@4:
 		Name: Scrin
 		InternalName: scr
-		Description: Scrin\nAerial Faction.\n + Versatile.\n + Infantry immune to tiberium radiation.\n + Strong air power.\n + Scrin Battleships slowly repair.\n + High Damage.\n -  Low health.
+		Description: Scrin\nAerial Faction.\n + Versatile.\n + Infantry are immune to tiberium radiation.\n + Strong air power.\n + Air units slowly repair.\n + High Damage.\n -  Low health.
 	Faction@Random:
 		Name: Random
 		InternalName: Random

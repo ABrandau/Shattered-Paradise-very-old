@@ -427,11 +427,11 @@ GADEPT:
 		HP: 1100
 	RevealsShroud:
 		Range: 5c0
-	# Reservable:
-	# RepairsUnits:
-	# RallyPoint:
-		# Palette: mouse
-		# IsPlayerPalette: false
+	Reservable:
+	RepairsUnits:
+	RallyPoint:
+		Palette: mouse
+		IsPlayerPalette: false
 	RevealsShroud:
 		Range: 6c0
 	RepairsUnits:

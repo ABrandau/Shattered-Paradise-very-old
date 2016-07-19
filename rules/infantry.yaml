@@ -107,6 +107,8 @@ MEDIC:
 		HP: 70
 	Crushable:
 		CrushSound: squishy2.aud
+	AutoTarget:
+		ScanRadius: 8
 	Armament:
 		TargetStances: Ally
 		Weapon: Heal
@@ -255,7 +257,7 @@ MHIJACK:
 		Cost: 600
 	Tooltip:
 		Name: Hijacker
-		Description: NOD Agent.\nCan steal enemy vehicles\nand infiltrate powerplants.\nCloaks when idle.\n  Unarmed
+		Description: NOD Agent, can steal enemy vehicles\nand infiltrate powerplants.\nCloaks when idle.\n  Unarmed
 	Voiced:
 		VoiceSet: Spy
 	-Crushable:
@@ -520,39 +522,6 @@ E2:
 		Probability: 6
 		DeathType:
 
-SEER:
-	Inherits: ^Mutant
-	Inherits@3: ^BasicStealthDetection
-	Buildable:
-		Queue: Infantry
-		BuildPaletteOrder: 21
-		Prerequisites: ~murax, muradr
-	Valued:
-		Cost: 550
-	Tooltip:
-		Name: Seer
-		Description: Psychic mutant that works as a reconnaissance unit.\nCan deploy sentry wards and Detects cloaked units.\n  Unnarmed.
-	Voiced:
-		VoiceSet: Umagon
-	Health:
-		HP: 110
-	Mobile:
-		Speed: 75
-	-AutoTarget:
-	RevealsShroud:
-		Range: 11c0
-	Minelayer:
-		Mine: muward
-		RearmBuildings:
-	AmmoPool:
-		Ammo: 2
-		PipCount: 2
-		PipType: Ammo
-		SelfReloadDelay: 500
-		SelfReloads: true
-		PipTypeEmpty: AmmoEmpty
-	RenderSprites:	
-
 MUTFIEND:
 	Inherits: ^Beast
 	Tooltip:
@@ -560,7 +529,7 @@ MUTFIEND:
 		Description: Tiberian Beast, fires tiberium shards at enemies.\nCannot be crushed.\n  Strong vs Ground units.\n  Weak vs Aircraft.
 	Buildable:
 		Queue: Infantry
-		BuildPaletteOrder: 22
+		BuildPaletteOrder: 21
 		Prerequisites: ~murax, mustable
 	SpawnActorOnDeath@conversion:
 		Actor: cybdog
@@ -607,6 +576,39 @@ MUTFIEND:
 	AttackFrontal:
 		Voice: Attack
 		Armaments: OnFoot
+
+SEER:
+	Inherits: ^Mutant
+	Inherits@3: ^BasicStealthDetection
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 22
+		Prerequisites: ~murax, muradr
+	Valued:
+		Cost: 550
+	Tooltip:
+		Name: Seer
+		Description: Psychic mutant that works as a reconnaissance unit.\nCan deploy sentry wards and Detects cloaked units.\n  Unnarmed.
+	Voiced:
+		VoiceSet: Umagon
+	Health:
+		HP: 110
+	Mobile:
+		Speed: 75
+	-AutoTarget:
+	RevealsShroud:
+		Range: 11c0
+	Minelayer:
+		Mine: muward
+		RearmBuildings:
+	AmmoPool:
+		Ammo: 2
+		PipCount: 2
+		PipType: Ammo
+		SelfReloadDelay: 500
+		SelfReloads: true
+		PipTypeEmpty: AmmoEmpty
+	RenderSprites:
 
 AWARRIOR:
 	Inherits: ^Mutant
@@ -1293,10 +1295,10 @@ REAPERCAB:
 		Type: Wood
 	Armament@primary:
 		Weapon: ReaperMortar
-		LocalOffset: 0,0,500
+		LocalOffset: 0,0,500, 0,-200,500, 0,200,500
 	Armament@secondary:
 		Weapon: ReaperRail
-		LocalOffset: 0,0,2000
+		LocalOffset: 0,0,1500
 	AttackFrontal:
 		Voice: Attack
 	-UpgradeOverlay@WebDisable:

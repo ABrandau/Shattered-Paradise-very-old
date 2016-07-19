@@ -60,6 +60,8 @@ ReaperMortar:
 		Image: 120mm
 		Shadow: true
 		Inaccuracy: 2c0
+		ContrailLength: 10
+		ContrailUsePlayerColor: true
 		Angle: 130
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
@@ -327,6 +329,7 @@ DevourerShell:
 		Image: DRAGON
 		Inaccuracy: 1c0
 		ContrailLength: 10
+		ContrailUsePlayerColor: true
 		Angle: 150
 		RangeLimit: 35
 	Warhead@1Dam: SpreadDamage

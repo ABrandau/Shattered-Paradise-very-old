@@ -510,12 +510,11 @@ TiberianRocket:
 	Inherits: ArtilleryWarhead
 	ReloadDelay: 250
 	Range: 12c0
-	Burst: 7
+	Burst: 8
 	Report: rketinf1.aud
 	ValidTargets: Ground
 	MinRange: 3c0
 	Projectile: Bullet
-		MaximumLaunchSpeed: 213
 		Speed: 350
 		Blockable: false
 		Shadow: true
@@ -547,8 +546,10 @@ TiberianRocket:
 
 TiberianRocket2:
 	Inherits: TiberianRocket
-	Burst: 3
+	Burst: 2
 	Delay: 10
+	Projectile: Bullet
+		Inaccuracy: 20
 	Warhead@5Actor: SpawnActor
 		Actors: cloud1
 		FallRate: 5000
@@ -710,14 +711,14 @@ FalconPunch:
 	ValidTargets: Ground, Water
 	ReloadDelay: 1
 	Range: 4c0
-	Burst: 20
+	Burst: 6
 	Projectile: Bullet
 		Speed: 200
 		Image: 120mm
 		Inaccuracy: 1c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
-		Damage: 4 
+		Damage: 5
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
@@ -727,6 +728,14 @@ FalconPunch:
 	Warhead@3Eff: CreateEffect
 		Explosions: small_clsn
 		ImpactSounds: expnew12.aud
+
+FalconPunch2:
+	Inherits: FalconPunch
+	Delay: 5
+	Warhead@5Actor: SpawnActor
+		Actors: cloud1
+		FallRate: 5000
+		Range: 3
 #################################################################
 # Structures
 #################################################################

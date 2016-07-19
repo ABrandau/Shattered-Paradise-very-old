@@ -257,6 +257,13 @@
 		CloakSound: cloak5.aud
 		UncloakSound: cloak5.aud
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+	SpawnActorOnDeath@tiberium2:
+		Actor: visc_lrg
+		Probability: 10
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		DeathType: TiberiumDeath
+		RequiresLobbyCreeps: true
 
 ^Building:
 	Inherits@1: ^BasicBuilding
@@ -696,7 +703,7 @@
 	RevealsShroud:
 		Range: 9c0
 	RepairableNear:
-		Buildings: gadept, scrdepot
+		Buildings: scrdepot
 	Selectable:
 		Bounds: 40,30
 	SelectionDecorations:
@@ -842,7 +849,7 @@
 		UncloakSound: cloak5.aud
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
 	RepairableNear:
-		Buildings: gadept, scrdepot
+		Buildings: scrdepot
 	AppearsOnRadar:
 		UseLocation: yes
 	Targetable@GROUND:

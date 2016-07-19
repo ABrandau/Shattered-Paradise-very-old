@@ -198,6 +198,7 @@ JUGGER:
 	AutoTarget:
 	Armament:
 		Weapon: JuggCannon
+		LocalOffset: 700, 0, 800, 700, 150, 800, 700, -150, 800
 	Voiced:
 		VoiceSet: Mech
 	QuantizeFacingsFromSequence:
@@ -227,7 +228,7 @@ SONIC:
 		Speed: 56
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 350
+		HP: 500
 	Armor:
 		Type: Heavy
 	Armament:

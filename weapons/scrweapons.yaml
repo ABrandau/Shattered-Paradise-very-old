@@ -106,13 +106,13 @@ FloatTesla:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 
 StalkerSteal:
-	ReloadDelay: 150
+	ReloadDelay: 200
 	Range: 8c0
 	Report:
 	ValidTargets: Infantry, Vehicle
 	InvalidTargets: MindControlInmune
 	Projectile: Bullet
-		Speed: 800
+		Speed: 100c0
 		Image: 120mm
 		ValidTargets: Infantry, Vehicle
 		Palette: ra

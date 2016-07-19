@@ -58,7 +58,7 @@ UnitExplode:
 		ImpactSound: expnew09.aud
 
 GasCloudDeathWeapon:
-	Inherits: ^RifleWarhead
+	Inherits: ^MeleeWarhead
 	Warhead@1Dam: SpreadDamage
 		Spread: 200
 		Damage: 50

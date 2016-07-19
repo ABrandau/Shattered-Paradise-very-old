@@ -229,7 +229,7 @@ ORCAB:
 		Cost: 1300
 	Tooltip:
 		Name: Orca Bomber
-		Description: Heavy Bomber.\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
+		Description: Heavy carpet Bomber. Blasts units\nin a line to the target.\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 20
@@ -689,7 +689,7 @@ WETP:
 		Cost: 1200
 	Tooltip:
 		Name: Falcon
-		Description: Light Bomber.\n  Strong vs Light armored targets.\n  Weak vs Aircraft, Anti air units.
+		Description: Light Bomber, it deals damage on a\nsmall area, also spawns gas clouds.\n  Strong vs Ground units.\n  Weak vs Aircraft, Anti air units.
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 20
@@ -713,14 +713,16 @@ WETP:
 		Weapon: FalconPunch
 	Armament@1:
 		Weapon: FalconPunch
+	Armament@1:
+		Weapon: FalconPunch2
 	RenderVoxels:
-		Scale: 1# 0.7
+		Scale: 1
 	AttackPlane:
 		Voice: Attack
 		FacingTolerance: 20
 	AmmoPool:
-		Ammo: 16
-		PipCount: 1
+		Ammo: 18
+		PipCount: 2
 		ReloadCount: 20
 		ReloadTicks: 150
 		PipType: Ammo
