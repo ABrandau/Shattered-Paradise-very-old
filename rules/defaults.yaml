@@ -645,8 +645,12 @@
 	-WithDeathAnimation@normal:
 	-WithDeathAnimation@explosion:
 	-WithDeathAnimation@energy:
-	-SpawnActorOnDeath@conversion:
 	-SpawnActorOnDeath@FLAMEGUY:
+	-SpawnActorOnDeath@tiberium:
+	-SpawnActorOnDeath@tiberium2:
+	-SpawnActorOnDeath@tiberium3:
+	-SpawnActorOnDeath@tiberium4:
+	-SpawnActorOnDeath@conversion:
 	-DamagedByTerrain:
 	Voiced:
 		VoiceSet: Limpet

@@ -242,7 +242,9 @@ explosion:
 	alienpiff4: alienpiff4
 	alienpiff5: alienpiff5
 	scrinpulse2: scrinpulse2
+		Offset: -5,-12
 	scrinpulse3: scrinpulse3
+		Offset: -5,-12
 	scrinenergyeff: scrinenergyeff
 		Tick: 25
 	firestormexplo: firestormexplo

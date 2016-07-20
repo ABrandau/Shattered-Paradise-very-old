@@ -26,11 +26,9 @@ MilitantFireball:
 
 CrusaderBazooka:
 	Inherits: ^RocketWarhead
-	ReloadDelay: 50
-	Range: 6c0
-	MinRange: 1c0
+	ReloadDelay: 25
+	Range: 6c600
 	Report: rketinf1.aud
-	Burst: 2
 	ValidTargets: Vehicle, Air, Building
 	Projectile: Missile
 		Speed: 233
@@ -45,7 +43,7 @@ CrusaderBazooka:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 7
+		Damage: 8
 		ValidTargets: Vehicle, Air, Building
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -58,37 +56,12 @@ CrusaderBazooka:
 		ValidImpactTypes: Water
 
 CrusaderBazookaInf:
-	Inherits: ^RocketWarhead
-	ReloadDelay: 150
-	Range: 8c0
-	MinRange: 1c0
-	Report: rketinf1.aud
-	Burst: 6
+	Inherits: CrusaderBazooka
 	ValidTargets: Infantry
 	Projectile: Missile
-		Speed: 233
-		Blockable: false
-		Shadow: true
 		Inaccuracy: 2c0
-		Image: DRAGON
-		Angle: 90
-		TrailImage: small_smoke_trail
-		RateOfTurn: 8
-		RangeLimit: 15c0
-		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 7
 		ValidTargets: Infantry
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: small_clsn
-		ImpactSound: expnew12.aud
-		InvalidImpactTypes: Water, Air, AirHit
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
 
 TemplarLasor:
 	Inherits: ^FullDamage
@@ -287,7 +260,7 @@ BCLazor:
 		BeamWidth: 2
 		BeamDuration: 20
 	Warhead@1Dam: SpreadDamage
-		Spread: 42
+		Spread: 50
 		Damage: 100
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 	Warhead@2Eff: CreateEffect

@@ -37,7 +37,7 @@ SkirmisherRocket:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 25
+		Damage: 20
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -166,153 +166,25 @@ PsykerRay:
 # GARRISON
 ################################################
 GMarauderShotgun:
-	Inherits: ^RifleWarhead
-	ReloadDelay: 40
+	Inherits: MarauderShotgun
 	Range: 6c768
-	Report: gun18.aud
-	Projectile: Bullet
-		Speed: 1c682
-		Image: 120mm
-		Inaccuracy: 0c512
-		Palette: ra
-	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 8
-		DamageTypes: Prone70Percent, TriggerProne, TiberiumDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: piff
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: water_piff
-		ValidImpactTypes: Water
 
 GSkirmisherRocket:
-	Inherits: ^RocketWarhead
-	ReloadDelay: 65
+	Inherits: SkirmisherRocket
 	Range: 6c768
-	MinRange: 0c512
-	Report: rketinf1.aud
-	ValidTargets: Ground
-	Projectile: Missile
-		MaximumLaunchSpeed: 213
-		Blockable: false
-		Shadow: true
-		Inaccuracy: 128
-		Image: DRAGON
-		TrailImage: small_smoke_trail
-		HorizontalRateOfTurn: 8
-		RangeLimit: 7c204
-		Palette: ra
-	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 25
-		ValidTargets: Ground
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: small_clsn
-		ImpactSound: expnew12.aud
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
-	Warhead@4EffAir: CreateEffect
-		ValidImpactTypes: Air
-		Explosion: tiny_twlt
-		ImpactSound: expnew05.aud
-	Warhead@5Smu: LeaveSmudge
-		SmudgeType: SmallCrater
-		InvalidTargets: Vehicle, Building, Wall
 
 GFiendShard2:
-	Inherits: ^FullDamage
-	ReloadDelay: 50
-	Burst: 2
+	Inherits: FiendShard2
 	Range: 6c768
-	Report: fiend2.aud
-	Projectile: Bullet
-		Speed: 213
-		Image: CRYSTAL4
-		Inaccuracy: 512
-		Shadow: true
-		Angle: 60
-		Palette: greentiberium
-	Warhead@1Dam: SpreadDamage
-		Damage: 10
-		DamageTypes: Prone100Percent, TriggerProne, BulletDeath, TiberiumDeath
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water		
-		
-GRangerRifle:
-	Inherits: ^RifleWarhead
-	ReloadDelay: 75
-	Range: 6c768
-	Report: gun18.aud
-	Projectile: Bullet
-		Speed: 1c682
-	Warhead@1Dam: SpreadDamage
-		Spread: 10
-		Damage: 10
-		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, TiberiumDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: piff
-		InvalidImpactTypes: Water		
-	Warhead@3EffWater: CreateEffect
-		Explosions: water_piff
-		ValidImpactTypes: Water
 		
 GKnightGun:
-	Inherits: ^GrenadeWarhead
-	ReloadDelay: 60
+	Inherits: KnightGun
 	Range: 6c768
-	Report: rketinf1.aud
-	ValidTargets: Ground
-	Projectile: Bullet
-		Speed: 300
-		Shadow: true
-		Inaccuracy: 200
-		Image: DISCUS
-		# Palette: apgreen
-	Warhead@1Dam: SpreadDamage
-		Spread: 125
-		Damage: 30
-		ValidTargets: Ground
-		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeathStrong
-	Warhead@2Eff: CreateEffect
-		Explosions: tib_expsmall
-		ImpactSound: expnew12.aud
-	Warhead@5Smu: LeaveSmudge
-		SmudgeType: SmallCrater
-		InvalidTargets: Vehicle, Building, Wall
 
 GPsykerRay:
-	Inherits: ^FullDamage
-	ReloadDelay: 150
+	Inherits: PsykerRay
 	Range: 12c0
-	Burst: 3
-	Projectile: Bullet
-		Speed: 4c6824
-		Inaccuracy: 3c0
-	Warhead@1Dam: SpreadDamage
-		Spread: 298
-		Damage: 100
-		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: large_explosion
-		ImpactSound: expnew09.aud
-	Warhead@3Eff: CreateEffect
-		Explosions: ion_ray1, ion_ray2, ion_ray3, ion_ray4
-		ImpactSound: expnew09.aud
-	Warhead@3EffWater: CreateEffect
-		Explosions: large_explosion
-		ImpactSound: expnew09.aud
-	Warhead@4: LeaveSmudge
-		SmudgeType: SmallCrater
-		InvalidTargets: Vehicle, Building, Wall
+
 ###############################################################		
 # Beast
 ###############################################################		
@@ -717,9 +589,8 @@ FalconPunch:
 		Image: 120mm
 		Inaccuracy: 1c0
 	Warhead@1Dam: SpreadDamage
-		Spread: 341
+		Spread: 200
 		Damage: 5
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
@@ -731,7 +602,6 @@ FalconPunch:
 
 FalconPunch2:
 	Inherits: FalconPunch
-	Delay: 5
 	Warhead@5Actor: SpawnActor
 		Actors: cloud1
 		FallRate: 5000

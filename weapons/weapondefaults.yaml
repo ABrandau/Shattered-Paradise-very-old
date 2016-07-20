@@ -61,11 +61,12 @@ ArtilleryWarhead: #Inherits: ArtilleryWarhead
 			
 ^BombWarhead: #Inherits: ^BombWarhead
 	Warhead@1Dam: SpreadDamage
+		Falloff: 300, 150, 100, 50, 0
 		Versus:
-			None: 200
+			None: 150
 			Wood: 100
 			Light: 75
-			Heavy: 32
+			Heavy: 45
 			Concrete: 100
 
 ^FlameWarhead:	#Inherits: ^FlameWarhead
@@ -96,6 +97,7 @@ ArtilleryWarhead: #Inherits: ArtilleryWarhead
 
 ^FullDamage:	#Inherits: ^FullDamage
 	Warhead@1Dam: SpreadDamage
+		Falloff: 100, 100, 100, 100, 100
 		Versus:
 			None: 100
 			Wood: 100

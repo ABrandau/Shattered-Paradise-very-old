@@ -29,7 +29,7 @@ GDIE1:
 JUMPJET:
 	Inherits: ^Soldier
 	Valued:
-		Cost: 200
+		Cost: 250
 	Tooltip:
 		Name: Jumpjet Infantry
 		Description: Airborne Soldier, equipped with an AP rifle.\n Can target helicopters and battleships.\n  Strong vs Heavy Vehicles, Helicopters.\n  Weak vs Infantry, Light Vehicles, Structures.
@@ -173,9 +173,6 @@ ALTNODE1:
 		HP: 100
 	Mobile:
 		Speed: 70
-	# Armament@PRIMARY:
-		# Weapon: MilitantRifle
-		# LocalOffset: 0,0,200
 	Armament@SECONDARY:
 		Weapon: MilitantFireball
 		LocalOffset: 0,0,200
@@ -197,7 +194,7 @@ CRUSADER:
 		Cost: 210
 	Tooltip:
 		Name: Crusader
-		Description: Anti Armour Infantry, equiped with a Rocket launcher\nbackpack, fires many rockets per turn but has a big\nreload time.\nCannot lock on infantry.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry.
+		Description: Anti Armour Infantry, equiped with a Rocket\nlauncher backpack, can fire while moving.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry.
 	Health:
 		HP: 110
 	Mobile:
@@ -208,8 +205,9 @@ CRUSADER:
 	Armament@Secondary:
 		Weapon: CrusaderBazookaInf
 		LocalOffset: 0,0,600
-	AttackFrontal:
+	AttackTurreted:
 		Voice: Attack
+	Turreted:
 	WithInfantryBody:
 		AttackSequence: shoot
 	ProducibleWithLevel:
@@ -449,7 +447,7 @@ E3:
 		BuildPaletteOrder: 19
 		Prerequisites: ~murax
 	Valued:
-		Cost: 170
+		Cost: 160
 	Tooltip:
 		Name: Skirmisher
 		Description: Anti-tank Militia.\n  Strong vs Vehicles, Aircraft, Buildings\n  Weak vs Infantry
@@ -1071,10 +1069,10 @@ CABSENTRY:
 	Armor:
 		Type: None
 	Valued:
-		Cost: 200
+		Cost: 90
 	Tooltip:
-		Name: Sentry
-		Description: Hover Drone armed with armor piercing weaponry.\nCan hide itself but cannot attack aircraft.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
+		Name: Sentry Drone
+		Description: Hover Drone armed with armor piercing weaponry.\nVery fragile, it can hide and cannot attack aircraft.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 12
@@ -1083,19 +1081,21 @@ CABSENTRY:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
 	SupplyTruck
-		Payload: 100
+		Payload: 35
 		Voice: Move
 	Voiced:
 		VoiceSet: Cyborg
 	Mobile:
-		Speed: 65
+		Speed: 70
 		UpgradeTypes: notmobile
 		UpgradeMaxEnabledLevel: 0
 	Health:
-		HP: 125
+		HP: 90
 	Passenger:
 	Armament@primary:
 		Weapon: SentryGun
+	RenderSprites:
+		Scale: 0.7
 	AttackFrontal:
 		Voice: Attack
 	SelectionDecorations:

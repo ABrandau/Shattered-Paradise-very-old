@@ -198,7 +198,7 @@ JUGGER:
 	AutoTarget:
 	Armament:
 		Weapon: JuggCannon
-		LocalOffset: 700, 0, 800, 700, 150, 800, 700, -150, 800
+		LocalOffset: 600, 0, 750, 600, 150, 750, 600, -150, 750
 	Voiced:
 		VoiceSet: Mech
 	QuantizeFacingsFromSequence:
@@ -678,10 +678,10 @@ WOLF:
 		BuildPaletteOrder: 27
 		Prerequisites: ~muweap, mustable, muradr
 	Valued:
-		Cost: 1300
+		Cost: 1000
 	Tooltip:
 		Name: Tiberian Bull
-		Description: Support Beast, expels tiberium toxins\nthat affect nearby infantry. Can also\nplace mines.\n  Unarmed.
+		Description: Support Beast, expels tiberium toxins\nthat affect nearby units. .\n  Strong vs Ground Units.\n  Weak vs Aircraft.
 	Voiced:
 		VoiceSet: Fiend
 	SpawnActorOnDeath@conversion:
@@ -701,12 +701,16 @@ WOLF:
 	Armament@PRIMARY:
 		Weapon: BullAcid
 		LocalOffset: 128,0,400
+	Passenger:
+		CargoType: Vehicle
+		Voice: Move
+		Weight: 3
 	Health:
 		HP: 300
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 70
+		Speed: 80
 		SharesCell: false
 	WithInfantryBody:
 		AttackSequence: shoot
@@ -724,7 +728,7 @@ DEATHCLAW:
 		BuildPaletteOrder: 31
 		Prerequisites: ~muweap, mustable, muhall
 	Valued:
-		Cost: 1100
+		Cost: 1200
 	Tooltip:
 		Name: Ravager
 		Description: Tiberium Beast.\n  Strong vs Ground Units\n  Weak vs Aircraft.\n  Can only target base defences.
@@ -736,6 +740,10 @@ DEATHCLAW:
 		OwnerType: Killer
 		DeathType: CabalDeathInfantry
 		RequiresLobbyCreeps: true
+	Passenger:
+		CargoType: Vehicle
+		Voice: Move
+		Weight: 3
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark
 	AutoTarget:
@@ -781,7 +789,7 @@ MUTAPC:
 		Type: Light
 	Armament:
 		Weapon: IFVulcan
-		LocalOffset: 300,0,500
+		LocalOffset: 350,0,500
 		MuzzleSequence: muzzle
 		MuzzleSplitFacings: 8
 	WithMuzzleOverlay:

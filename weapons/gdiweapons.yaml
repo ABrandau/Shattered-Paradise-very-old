@@ -19,7 +19,7 @@ MarineRifle:
 
 JJCannon:
 	Inherits: ^APWarhead
-	ReloadDelay: 55
+	ReloadDelay: 50
 	Range: 4c0
 	Report: 120mmf.aud
 	ValidTargets: Ground, Helicopter
@@ -84,7 +84,7 @@ Grenade:
 
 Heal:
 	ReloadDelay: 150
-	Range: 4c0
+	Range: 3c0
 	Report: healer1.aud
 	ValidTargets: Infantry
 	Projectile: Bullet
@@ -425,7 +425,7 @@ OBBomb:
 	Inherits: ^BombWarhead
 	ReloadDelay: 60
 	Burst: 5
-	BurstDelay: 7
+	BurstDelay: 6
 	ValidTargets: Ground, Building, Infantry, Vehicle
 	Range: 3c512
 	Projectile: GravityBomb
@@ -434,8 +434,9 @@ OBBomb:
 		Shadow: true
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 500
-		Damage: 280
+		Falloff: 100, 80, 70, 60, 50
+		Spread: 400
+		Damage: 70
 		ValidTargets: Ground, Building, Infantry, Vehicle
 		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect

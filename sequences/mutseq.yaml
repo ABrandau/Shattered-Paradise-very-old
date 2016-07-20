@@ -839,7 +839,7 @@ muweap:
 		Start: 1
 		ShadowStart: 3
 		ZOffset: 512
-	dead: ntweap
+	dead: mtweap_2
 		Start: 2
 		ShadowStart: 5
 		Tick: 400

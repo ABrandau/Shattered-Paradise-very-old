@@ -23,7 +23,7 @@ CyborgVulcan:
 
 SentryGun:
 	Inherits: ^APWarhead
-	ReloadDelay: 45
+	ReloadDelay: 60
 	Range: 4c0
 	Report: 120mmf.aud
 	Projectile: Bullet
@@ -32,8 +32,8 @@ SentryGun:
 		Shadow: true
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 18
+		Spread: 60
+		Damage: 10
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn

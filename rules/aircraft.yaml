@@ -226,10 +226,10 @@ ORCA:
 ORCAB:
 	Inherits: ^Plane
 	Valued:
-		Cost: 1300
+		Cost: 1500
 	Tooltip:
 		Name: Orca Bomber
-		Description: Heavy carpet Bomber. Blasts units\nin a line to the target. Warning: this\nunit requires some skill to use pro-\nperly.\n  Strong vs Ground Units.\n  Weak vs Anti Air, Aircraft
+		Description: Heavy carpet Bomber.\nPro tip: Aim a few cells behind the target.\n  Strong vs Ground Units.\n  Weak vs Anti Air, Aircraft
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 20
@@ -246,7 +246,7 @@ ORCAB:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 160
+		HP: 250
 	Armor:
 		Type: Heavy
 	Armament:
@@ -686,7 +686,7 @@ WETP:
 	Inherits: ^Plane
 	Inherits@1:	^Ra2vxl
 	Valued:
-		Cost: 1200
+		Cost: 1300
 	Tooltip:
 		Name: Falcon
 		Description: Light Bomber, it deals damage on a\nsmall area, also spawns gas clouds.\n  Strong vs Ground units.\n  Weak vs Aircraft, Anti air units.

@@ -15,24 +15,19 @@ LegioNeedler:
 	Inherits: ^RocketWarhead
 	ReloadDelay: 100
 	Range: 5c0
-	MinRange: 0c512
 	Report: rketinf1.aud
-	Burst: 1
-	BurstDelay: 1
 	ValidTargets: Ground, Air
 	Projectile: Missile
 		Speed: 250
 		Blockable: false
 		Shadow: true
-		Inaccuracy: 128
 		palette: apolblue
 		Image: blueballminitrail
-		# Angle: 90
 		RateOfTurn: 8
 		RangeLimit: 15c0
 	Warhead@1Dam: SpreadDamage
-		Spread: 60
-		Damage: 18
+		Spread: 300
+		Damage: 20
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
