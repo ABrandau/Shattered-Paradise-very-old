@@ -233,7 +233,7 @@ TEMPLAR:
 		TargetTypes: Ground, Infantry, Razorshark
 	Armament@PRIMARY:
 		Weapon: TemplarLasor
-		LocalOffset: 200,-50,320
+		LocalOffset: 200,50,320
 	DamagedByTerrain:
 		Weapon: TiberiumHeal
 		Terrain: Tiberium, BlueTiberium
@@ -949,7 +949,7 @@ FLOAT:
 	Selectable:
 		Class: FLoat
 	Valued:
-		Cost: 1000
+		Cost: 780
 	GivesExperience:
 		Experience: 550
 	-Crushable:
@@ -985,10 +985,10 @@ FLOAT:
 		
 BUG:
 	Inherits: ^ScrinSoldier
-	Buildable:
-		Queue: Infantry
-		BuildPaletteOrder: 30
-		Prerequisites: ~scrrax, scrtech
+	# Buildable:
+		# Queue: Infantry
+		# BuildPaletteOrder: 30
+		# Prerequisites: ~scrrax, scrtech
 	Selectable:
 		Class: bug
 	GivesExperience:
@@ -1033,12 +1033,16 @@ LEGIOCLONE:
 	Inherits: LEGIO
 	RenderSprites:
 		Image: legio
+	Valued:
+		Cost: 200
 	-Buildable:
 	-FreeActor@1:
 	-FreeActor@2:
 
 FLOATCLONE:
 	Inherits: FLOAT
+	Valued:
+		Cost: 260
 	RenderSprites:
 		Image: float
 	-Buildable:
@@ -1047,6 +1051,8 @@ FLOATCLONE:
 
 SHAPESHIFTERCLONE:
 	Inherits: SHAPESHIFTER
+	Valued:
+		Cost: 250
 	RenderSprites:
 		Image: shapeshifter
 	-Buildable:
@@ -1055,6 +1061,8 @@ SHAPESHIFTERCLONE:
 
 BUGCLONE:
 	Inherits: BUG
+	Valued:
+		Cost: 500
 	RenderSprites:
 		Image: bug
 	-Buildable:
@@ -1078,8 +1086,8 @@ CABSENTRY:
 		BuildPaletteOrder: 12
 		Prerequisites: ~cabclaw
 	Explodes:
-		Weapon: UnitExplodeSmall
-		EmptyWeapon: UnitExplodeSmall
+		Weapon: DroneExplode
+		EmptyWeapon: DroneExplode
 	SupplyTruck
 		Payload: 35
 		Voice: Move

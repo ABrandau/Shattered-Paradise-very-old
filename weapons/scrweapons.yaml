@@ -101,7 +101,7 @@ FloatTesla:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 
 StalkerSteal:
-	ReloadDelay: 200
+	ReloadDelay: 150
 	Range: 8c0
 	Report:
 	ValidTargets: Infantry, Vehicle
@@ -122,7 +122,7 @@ StalkerSteal:
 		Duration: 50
 		InvalidTargets: C4, MindControlInmune
 	Warhead@emp: GrantUpgrade
-		Range: 100
+		Range: 250
 		Duration: 60
 		Upgrades: MindControlTargetting
 
@@ -373,7 +373,7 @@ DestroyerCannon:
 		Angle: 62
 	Warhead@1Dam: SpreadDamage
 		Spread: 400
-		Damage: 110
+		Damage: 150
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: scrinpulse2

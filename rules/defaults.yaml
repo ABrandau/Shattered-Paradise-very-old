@@ -22,28 +22,28 @@
 			800: rank, firepower, damage, speed, reload, selfheal, MindControlInmune
 	FirepowerMultiplier@EXPERIENCE:
 		UpgradeTypes: firepower
-		Modifier: 110, 120, 130, 140
+		Modifier: 105, 110, 115, 120, 125
 	DamageMultiplier@EXPERIENCE:
 		UpgradeTypes: damage
-		Modifier: 90, 80, 70, 60
+		Modifier: 95, 90, 85, 80, 75
 	SpeedMultiplier@EXPERIENCE:
 		UpgradeTypes: speed
-		Modifier: 115, 130, 145, 160
+		Modifier: 105, 110, 115, 120, 125
 	ReloadDelayMultiplier@EXPERIENCE:
 		UpgradeTypes: reload
-		Modifier: 90, 80, 70, 60
+		Modifier: 95, 90, 85, 80, 75
 	FirepowerMultiplier@debuff:
 		UpgradeTypes: firepowerdebuff
-		Modifier: 90, 80, 70, 60
+		Modifier: 95, 90, 85, 80, 75
 	DamageMultiplier@debuff:
 		UpgradeTypes: damagedebuff
-		Modifier: 110, 120, 130, 140
+		Modifier: 105, 110, 115, 120, 125
 	SpeedMultiplier@debuff:
 		UpgradeTypes: speeddebuff
-		Modifier: 85, 80, 75, 70
+		Modifier: 95, 90, 85, 80, 75
 	ReloadDelayMultiplier@debuff:
 		UpgradeTypes: reloaddebuff
-		Modifier: 90, 80, 70, 60
+		Modifier: 95, 90, 85, 80, 75
 	SelfHealing@ELITE:
 		Step: 3
 		Delay: 100
@@ -289,7 +289,7 @@
 		ActorTypes: marauder
 		Factions: mut
 	EmitInfantryOnSell@scr:
-		ActorTypes: legio
+		ActorTypes: legioclone
 		Factions: scr
 	MustBeDestroyed:
 		RequiredForShortGame: true

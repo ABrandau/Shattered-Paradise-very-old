@@ -1041,7 +1041,7 @@ MUVENTI:
 		BuildPaletteOrder: 95
 		Prerequisites: ~structures.mut, muhall
 	Valued:
-		Cost: 1300
+		Cost: 1500
 	Tooltip:
 		Name: Tiberium Ventilator
 		Description: Provides an area buff and debuff for nearby units.
@@ -1052,14 +1052,15 @@ MUVENTI:
 		HP: 750
 	Armor:
 		Type: Wood
+	RequiresPower:
 	WithRangeCircle:
 		Range: 12c0
 		Type: cloakgenerator
 	UpgradeActorsNear@lobo:
-		Upgrades: firepower, selfheal, damage, speed, forgbullbuff
+		Upgrades: firepower, selfheal, damage, speed, forgbullbuff, MindControlTargetting
 		Range: 12c0
 	UpgradeActorsNear@qlo:
-		Upgrades: speeddebuff, reloaddebuff, damagedebuff
+		Upgrades: speeddebuff, reloaddebuff, damagedebuff, MindControlTargetting
 		Range: 12c0
 		ValidStances: Enemy
 	RevealsShroud:
@@ -1779,7 +1780,7 @@ cabobelisk:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Selectable:
-		Bounds: 40, 30, -3, -8
+		Bounds: 75,48
 	RequiresPower:
 	DisabledOverlay:
 	Health:
@@ -1791,9 +1792,9 @@ cabobelisk:
 	-AutoTarget:
 	-RenderRangeCircle:
 	Power:
-		Amount: -60
+		Amount: -100
 	SelectionDecorations:
-		VisualBounds: 40, 30, -3, -8
+		VisualBounds: 75,48
 	IonCannonPower@nanomachinesson:
 		Cursor: ioncannon
 		Icon: nanomachineswarm

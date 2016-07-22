@@ -172,6 +172,7 @@ GMarauderShotgun:
 GSkirmisherRocket:
 	Inherits: SkirmisherRocket
 	Range: 6c768
+	InvalidTargets: Air
 
 GFiendShard2:
 	Inherits: FiendShard2
@@ -261,12 +262,7 @@ BullAcid:
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 		InvalidTargets: Vehicle, Building, Wall
-	Warhead@4emp: GrantUpgrade
-		Range: 300
-		Duration: 20
-		Upgrades: forgbulldebuff
-		
-		
+
 DeathclawBlow:
 	Inherits: ^MeleeWarhead
 	ReloadDelay: 60

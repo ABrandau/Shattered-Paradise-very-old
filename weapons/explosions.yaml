@@ -42,6 +42,11 @@ SmallPlaneExplode:
 		Explosions: large_twlt
 		ImpactSound: expnew09.aud
 
+DroneExplode:
+	Warhead@2Eff: CreateEffect
+		Explosions: large_twlt
+		ImpactSound: expnew09.aud
+
 UnitExplode:
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
