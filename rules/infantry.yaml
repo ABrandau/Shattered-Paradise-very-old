@@ -1340,6 +1340,7 @@ GLAD:
 	WithMuzzleOverlay:
 	Mobile:
 		Speed: 56
+		SharesCell: False
 	Health:
 		HP: 550
 	Passenger:

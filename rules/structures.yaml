@@ -1732,6 +1732,8 @@ CABCLAW:
 		ExitCell: 2,2
 	Production:
 		Produces: Infantry
+	WithProductionOverlay@WHITELIGHTS:
+		Sequence: idle-camera
 	PrimaryBuilding:
 	ProductionBar:
 	Power:
@@ -1806,7 +1808,7 @@ CABAIR:
 		Cost: 1000
 	Tooltip:
 		Name: Air Factory
-		Description: Produces, aircraft, does not rearm\n or repair any aerial unit.
+		Description: Produces aircraft, does not rearm\n or repair aerial units.
 	Buildable:
 		BuildPaletteOrder: 60
 		Queue: Building
@@ -1823,6 +1825,8 @@ CABAIR:
 	RallyPoint:
 		Palette: mouse
 		IsPlayerPalette: false
+	WithProductionOverlay@WHITELIGHTS:
+		Sequence: lights
 	Production:
 		Produces: Air
 	PrimaryBuilding:

@@ -692,24 +692,34 @@ cabclaw:
 		Offset: 8, -32
 		UseTilesetCode: true
 	idle:
-		Start: 30
-		ShadowStart: 62
+		Start: 29
+		ShadowStart: 80
 	damaged-idle:
-		Start: 31
-		ShadowStart: 63
+		Start: 40
+		ShadowStart: 91
 	dead:
-		Start: 31
-		ShadowStart: 63
+		Start: 40
+		ShadowStart: 91
 		Tick: 400
 	emp-overlay: emp_fx01
 		Length: *
 		Offset: 0, 0
 		UseTilesetCode: false
 		ZOffset: 512
-		BlendMode: Additive		
+		BlendMode: Additive
 	make:
 		Length: 30
-		ShadowStart: 32
+		ShadowStart: 51
+	idle-camera:
+		Start: 30
+		Length: 10
+		ShadowStart: 81
+		Tick: 150
+	damaged-idle-camera:
+		Start: 41
+		Length: 10
+		ShadowStart: 92
+		Tick: 150
 	icon: cabclawicon
 		Offset: 0, 0
 		UseTilesetCode: false		
@@ -744,15 +754,18 @@ cabobelisk:
 	Defaults: 
 		Offset: 0, -24
 		UseTilesetCode: true
-	idle: ctbelisk
-		Start: 25
-		ShadowStart: 52
-	damaged-idle: ctbelisk
-		Start: 26
-		ShadowStart: 53
-	dead: ctbelisk
-		Start: 26
-		ShadowStart: 53
+	idle:
+		Start: 30
+		Length: 5
+		ShadowStart: 83
+	damaged-idle:
+		Start: 42
+		Length: 6
+		ShadowStart: 92
+	dead:
+		Start: 42
+		Length: 6
+		ShadowStart: 92
 		Tick: 400
 	emp-overlay: emp_fx01
 		Length: *
@@ -760,9 +773,9 @@ cabobelisk:
 		UseTilesetCode: false
 		ZOffset: 512
 		BlendMode: Additive		
-	make: ctbelisk
+	make:
 		Length: 24
-		ShadowStart: 27
+		ShadowStart: 49
 	icon: cabobeliskicon
 		Offset: 0, 0
 		UseTilesetCode: false
@@ -862,26 +875,24 @@ cabair:
 		UseTilesetCode: true
 	idle:
 		Start: 20
-		ShadowStart: 42
+		ShadowStart: 43
 	damaged-idle:
-		Start: 21
-		ShadowStart: 43
+		Start: 37
+		ShadowStart: 80
 	dead:
+		Start: 37
+		ShadowStart: 80
+		Tick: 400
+	lights:
 		Start: 21
-		ShadowStart: 43
-		Tick: 400
-	ground: gtdeptbb
-		ShadowStart: 3
-		ZOffset: -1c611
-	damaged-ground: gtdeptbb
-		Start: 1
-		ShadowStart: 4
-		ZOffset: -1c611
-	dead-ground: gtdeptbb
-		Start: 2
-		ShadowStart: 5
-		ZOffset: -1c611
-		Tick: 400
+		Length: 11
+		ShadowStart: 64
+		Tick: 100
+	damaged-lights:
+		Start: 32
+		Length: 11
+		ShadowStart: 75
+		Tick: 100
 	emp-overlay: emp_fx01
 		Length: *
 		Offset: 0, 0
@@ -891,7 +902,7 @@ cabair:
 	make:
 		Length: 20
 		Tick: 60
-		ShadowStart: 22
+		ShadowStart: 43
 	icon: cabairicon
 		Offset: 0, 0
 		UseTilesetCode: false
@@ -901,14 +912,18 @@ cabtech:
 		Offset: -12, -30
 		UseTilesetCode: true
 	idle:
-		Start: 30
-		ShadowStart: 62
+		Start: 31
+		Length: 18
+		ShadowStart: 101
+		Tick: 100
 	damaged-idle:
-		Start: 31
-		ShadowStart: 63
+		Start: 51
+		Length: 18
+		ShadowStart: 121
+		Tick: 100
 	dead:	
-		Start: 31
-		ShadowStart: 63
+		Start: 51
+		ShadowStart: 121
 		Tick: 400
 	emp-overlay: emp_fx01
 		Length: *
@@ -918,6 +933,7 @@ cabtech:
 		BlendMode: Additive		
 	make:
 		Length: 30
+		ShadowStart: 70
 	icon: cabtechicon
 		Offset: 0, 0
 		UseTilesetCode: false		
