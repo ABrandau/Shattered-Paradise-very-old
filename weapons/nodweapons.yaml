@@ -65,16 +65,17 @@ CrusaderBazookaInf:
 
 TemplarLasor:
 	Inherits: ^FullDamage
-	ReloadDelay: 40
+	Burst: 4
+	ReloadDelay: 50
 	Range: 4c512
 	Report: lastur1.aud
 	Projectile: LaserZap
 		BeamWidth: 2
-		BeamDuration: 5
-		Inaccuracy: 1
+		BeamDuration: 2
+		Inaccuracy: 150
 	Warhead@1Dam: SpreadDamage
 		Spread: 125
-		Damage: 15
+		Damage: 5
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 		
 BHRifle:

@@ -771,6 +771,8 @@ ABAN05:
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3, 2
+	Selectable:
+		Bounds: 110, 60, 3, -4
 	Armor:
 		Type: wood
 	Health:
@@ -785,6 +787,8 @@ ABAN06:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 48, 0, -6
 	Armor:
 		Type: wood
 	Health:
@@ -799,6 +803,8 @@ ABAN07:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 48, 0, -6
 	Armor:
 		Type: heavy
 	Health:
@@ -813,6 +819,8 @@ ABAN08:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 48, 0, -6
 	Armor:
 		Type: heavy
 	Health:
@@ -827,6 +835,8 @@ ABAN09:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 48, 0, -6
 	Armor:
 		Type: heavy
 	Health:
@@ -841,6 +851,8 @@ ABAN10:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 48, 0, -6
 	Armor:
 		Type: wood
 	Health:
@@ -855,6 +867,8 @@ ABAN11:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 48, 0, -6
 	Armor:
 		Type: wood
 	Health:
@@ -869,6 +883,8 @@ ABAN12:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 48, 0, -6
 	Armor:
 		Type: wood
 	Health:
@@ -925,6 +941,8 @@ ABAN16:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 48, 0, -6
 	Armor:
 		Type: wood
 	Health:
@@ -1079,6 +1097,8 @@ CA0001:
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3, 3
+	Selectable:
+		Bounds: 96, 60, 0, -18
 	Armor:
 		Type: heavy
 	Health:
@@ -1091,6 +1111,8 @@ CA0002:
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3, 3
+	Selectable:
+		Bounds: 96, 48, 0, -6
 	Armor:
 		Type: heavy
 	Health:
@@ -1103,6 +1125,11 @@ CA0003:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	Selectable:
+		Bounds: 90, 48, 0, -6
 	Armor:
 		Type: light
 	Health:
@@ -1115,6 +1142,8 @@ CA0004:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 48, 0, -6
 	Armor:
 		Type: light
 	Health:
@@ -1163,6 +1192,8 @@ CA0008:
 	Building:
 		Footprint: xx xx xx
 		Dimensions: 2, 3
+	Selectable:
+		Bounds: 110, 60, -12, -4
 	Armor:
 		Type: heavy
 	Health:
@@ -1175,6 +1206,8 @@ CA0009:
 	Building:
 		Footprint: xx xx xx
 		Dimensions: 2, 3
+	Selectable:
+		Bounds: 110, 60, -12, -4
 	Armor:
 		Type: heavy
 	Health:
@@ -1187,6 +1220,8 @@ CA0010:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 48, 0, -6
 	Armor:
 		Type: heavy
 	Health:
@@ -1211,6 +1246,8 @@ CA0012:
 	Building:
 		Footprint: x x
 		Dimensions: 1, 2
+	Selectable:
+		Bounds: 60, 54, 0, -12
 	Armor:
 		Type: light
 	Health:
@@ -1223,6 +1260,8 @@ CA0013:
 	Building:
 		Footprint: xx
 		Dimensions: 2, 1
+	Selectable:
+		Bounds: 60, 54, 0, -12
 	Armor:
 		Type: heavy
 	Health:
@@ -1235,6 +1274,8 @@ CA0014:
 	Building:
 		Footprint: x
 		Dimensions: 1, 1
+	Selectable:
+		Bounds: 60, 54, 0, -12
 	Armor:
 		Type: heavy
 	Health:
@@ -1247,6 +1288,8 @@ CA0015:
 	Building:
 		Footprint: x
 		Dimensions: 1, 1
+	Selectable:
+		Bounds: 60, 48, 0, -12
 	Armor:
 		Type: light
 	Health:
@@ -1259,6 +1302,8 @@ CA0016:
 	Building:
 		Footprint: x
 		Dimensions: 1, 1
+	Selectable:
+		Bounds: 60, 68, 0, -16
 	Armor:
 		Type: light
 	Health:
@@ -1271,6 +1316,8 @@ CA0017:
 	Building:
 		Footprint: x
 		Dimensions: 1, 1
+	Selectable:
+		Bounds: 60, 60, 0, -6
 	Armor:
 		Type: heavy
 	Health:
@@ -1283,6 +1330,8 @@ CA0018:
 	Building:
 		Footprint: x x
 		Dimensions: 1, 2
+	Selectable:
+		Bounds: 80, 60, 0, -18
 	Armor:
 		Type: light
 	Health:
@@ -1295,6 +1344,8 @@ CA0019:
 	Building:
 		Footprint: x x
 		Dimensions: 1, 2
+	Selectable:
+		Bounds: 80, 60, 0, -18
 	Armor:
 		Type: light
 	Health:
@@ -1307,6 +1358,8 @@ CA0020:
 	Building:
 		Footprint: x x
 		Dimensions: 1, 2
+	Selectable:
+		Bounds: 80, 60, 0, -18
 	Armor:
 		Type: light
 	Health:
@@ -1319,6 +1372,8 @@ CA0021:
 	Building:
 		Footprint: x x
 		Dimensions: 1, 2
+	Selectable:
+		Bounds: 80, 60, 0, -18
 	Armor:
 		Type: light
 	Health:
@@ -1331,6 +1386,8 @@ CAARAY:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 84, 0, -18
 	Armor:
 		Type: concrete
 	Health:
@@ -1435,6 +1492,8 @@ CAHOSP:
 	Building:
 		Footprint: xxx xxx xxx xxx
 		Dimensions: 3, 4
+	Selectable:
+		Bounds: 148, 96, 0, -10
 	Armor:
 		Type: concrete
 	Health:
@@ -1449,6 +1508,8 @@ CAPYR01:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 48, 0, -6
 	Armor:
 		Type: concrete
 	Health:
@@ -1491,6 +1552,8 @@ CITY01:
 	Building:
 		Footprint: xxxx xxxx
 		Dimensions: 4, 2
+	Selectable:
+		Bounds: 110, 108, 0, -27
 	Armor:
 		Type: wood
 	Health:
@@ -1505,6 +1568,8 @@ CITY02:
 	Building:
 		Footprint: xx xx xx
 		Dimensions: 2, 3
+	Selectable:
+		Bounds: 110, 108, 0, -27
 	Armor:
 		Type: heavy
 	Health:
@@ -1519,6 +1584,8 @@ CITY03:
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3, 2
+	Selectable:
+		Bounds: 110, 108, 0, -27
 	Armor:
 		Type: heavy
 	Health:
@@ -1533,6 +1600,8 @@ CITY04:
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3, 2
+	Selectable:
+		Bounds: 110, 120, 3, -48
 	Armor:
 		Type: heavy
 	Health:
@@ -1547,6 +1616,8 @@ CITY05:
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3, 2
+	Selectable:
+		Bounds: 110, 120, 0, -56
 	Armor:
 		Type: heavy
 	Health:
@@ -1561,6 +1632,8 @@ CITY06:
 	Building:
 		Footprint: xxxx xxxx
 		Dimensions: 4, 2
+	Selectable:
+		Bounds: 164, 96, 0, -36
 	Armor:
 		Type: concrete
 	Health:
@@ -1575,6 +1648,8 @@ CITY07:
 	Building:
 		Footprint: xxxx xxxx
 		Dimensions: 4, 2
+	Selectable:
+		Bounds: 128, 108, 0, -36
 	Armor:
 		Type: wood
 	Health:
@@ -1589,6 +1664,8 @@ CITY08:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 48, 0, -6
 	Armor:
 		Type: heavy
 	Health:
@@ -1603,6 +1680,8 @@ CITY09:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 80, 72, 0, -24
 	Armor:
 		Type: wood
 	Health:
@@ -1617,6 +1696,8 @@ CITY10:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 100, 90, 0, -18
 	Armor:
 		Type: heavy
 	Health:
@@ -1631,6 +1712,8 @@ CITY11:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 96, 0, -30
 	Armor:
 		Type: heavy
 	Health:
@@ -1645,6 +1728,8 @@ CITY12:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 85, 108, 0, -36
 	Armor:
 		Type: concrete
 	Health:
@@ -1659,6 +1744,8 @@ CITY13:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 102, 0, -39
 	Armor:
 		Type: wood
 	Health:
@@ -1673,6 +1760,8 @@ CITY14:
 	Building:
 		Footprint: x
 		Dimensions: 1, 1
+	Selectable:
+		Bounds: 50, 102, 0, -39
 	Armor:
 		Type: heavy
 	Health:
@@ -1687,6 +1776,8 @@ CITY15:
 	Building:
 		Footprint: xxxx xxxx
 		Dimensions: 4, 2
+	Selectable:
+		Bounds: 132, 72, 0, -18
 	Armor:
 		Type: heavy
 	Health:
@@ -1701,6 +1792,8 @@ CITY16:
 	Building:
 		Footprint: xxxx xxxx
 		Dimensions: 4, 2
+	Selectable:
+		Bounds: 108, 120, 0, -40
 	Armor:
 		Type: wood
 	Health:
@@ -1715,6 +1808,8 @@ CITY17:
 	Building:
 		Footprint: xxxx xxxx xxxx
 		Dimensions: 4, 3
+	Selectable:
+		Bounds: 164, 132, 0, -50
 	Armor:
 		Type: wood
 	Health:
@@ -1729,6 +1824,8 @@ CITY18:
 	Building:
 		Footprint: xxx xxx xxx xxx xxx
 		Dimensions: 3, 5
+	Selectable:
+		Bounds: 164, 150, 0, -40
 	Armor:
 		Type: concrete
 	Health:
@@ -1743,6 +1840,8 @@ CITY19:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 48, 0, -6
 	Armor:
 		Type: wood
 	Health:
@@ -1785,6 +1884,8 @@ CITY22:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 96, 0, -18
 	Armor:
 		Type: none
 	Health:
@@ -1856,6 +1957,8 @@ GAOLDCC1:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 48, 0, -6
 	Armor:
 		Type: heavy
 	Health:
@@ -1870,6 +1973,8 @@ GAOLDCC2:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 48, 0, -6
 	Armor:
 		Type: heavy
 	Health:
@@ -1884,6 +1989,8 @@ GAOLDCC3:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 48, 0, -6
 	Armor:
 		Type: heavy
 	Health:
@@ -1898,6 +2005,8 @@ GAOLDCC4:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 48, 0, -6
 	Armor:
 		Type: heavy
 	Health:
@@ -1912,6 +2021,8 @@ GAOLDCC5:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 48, 0, -6
 	Armor:
 		Type: heavy
 	Health:
@@ -1926,6 +2037,8 @@ GAOLDCC6:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2, 2
+	Selectable:
+		Bounds: 90, 60, 0, -12
 	Armor:
 		Type: heavy
 	Health:

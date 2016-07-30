@@ -949,27 +949,27 @@ scrradr:
 		UseTilesetCode: true
 	idle:
 		Start: 30
-		ShadowStart: 72
+		ShadowStart: 78
 	damaged-idle:
-		Start: 41
-		ShadowStart: 83
+		Start: 47
+		ShadowStart: 95
 	dead:
-		Start: 41
-		ShadowStart: 83
+		Start: 47
+		ShadowStart: 95
 		Tick: 400
 	idle-dish:
 		Start: 31
-		Length: 10
+		Length: 16
 		Reverses: false
 		Tick: 200
 	damaged-idle-dish: 
 		Start: 31
-		Length: 10
+		Length: 16
 		Reverses: false
 		Tick: 300
 	make:
 		Length: 29
-		ShadowStart: 42
+		ShadowStart: 48
 	emp-overlay: emp_fx01
 		Length: *
 		Offset: 0, 0

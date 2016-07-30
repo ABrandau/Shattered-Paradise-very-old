@@ -884,6 +884,7 @@ MUBUNKR:
 		MaxWeight: 6
 		PipCount: 6
 		Types: Infantry
+		EjectOnDeath: true
 	AttackGarrisoned:
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
 		PortYaws: 0, 176, 341, 512, 682, 853

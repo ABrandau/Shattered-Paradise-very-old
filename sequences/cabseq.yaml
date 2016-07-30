@@ -730,10 +730,14 @@ cabgrinder:
 		UseTilesetCode: true
 	idle:
 		Start: 30
-		ShadowStart: 62
+		Length: 20
+		ShadowStart: 99
+		Tick: 75
 	damaged-idle:
-		Start: 31
-		ShadowStart: 63
+		Start: 50
+		Length: 20
+		ShadowStart: 120
+		Tick: 75
 	dead:
 		Start: 31
 		ShadowStart: 63
@@ -1074,12 +1078,12 @@ cabeye:
 		Start: 30
 		Length: 17
 		ShadowStart: 96
-		Tick: 70
+		Tick: 90
 	damaged-idle:
 		Start: 48
 		Length: 17
 		ShadowStart: 114
-		Tick: 70
+		Tick: 90
 	dead:
 	make:
 		Length: 29

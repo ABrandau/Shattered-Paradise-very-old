@@ -321,6 +321,8 @@
 	Building:
 		Footprint: x
 		Dimensions: 1, 1
+	Selectable:
+		Bounds: 60, 60, 0, -18
 	Armor:
 		Type: heavy
 	Health:

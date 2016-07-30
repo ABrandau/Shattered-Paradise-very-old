@@ -175,7 +175,7 @@ ALTNODE1:
 		Speed: 70
 	Armament@SECONDARY:
 		Weapon: MilitantFireball
-		LocalOffset: 0,0,200
+		LocalOffset: 200,0,500
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:
@@ -272,7 +272,7 @@ MHIJACK:
 		Types: SpyInfiltrate
 	Captures:
 		CaptureTypes: Vehicle
-	Captures:
+		Sabotage: false
 	Cloak@CLOAKGENERATOR:
 		UpgradeMinEnabledLevel: 0
 		InitialDelay: 50

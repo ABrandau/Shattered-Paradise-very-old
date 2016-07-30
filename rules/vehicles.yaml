@@ -465,6 +465,7 @@ SAPC:
 		PipCount: 5
 		UnloadVoice: Unload
 		LoadingUpgrades: notmobile
+		EjectOnDeath: true
 
 REPAIR:
 	Inherits: ^VoxelTank
@@ -548,7 +549,7 @@ ARMH:
 		Scale: 0.7
 	Armament:
 		Weapon: BCLazor
-		LocalOffset: 300,0,450
+		LocalOffset: 350,0,450
 	AttackFrontal:
 		Voice: Attack
 	AutoTarget:
@@ -803,6 +804,7 @@ MUTAPC:
 		PipCount: 2
 		UnloadVoice: Unload
 		LoadingUpgrades: notmobile
+		EjectOnDeath: true
 	AttackTurreted:
 		Voice: Attack
 	RenderVoxels:
@@ -1535,6 +1537,7 @@ CABAPC:
 		PipCount: 8
 		UnloadVoice: Unload
 		LoadingUpgrades: notmobile
+		EjectOnDeath: true
 	WithVoxelBody:
 	RenderVoxels:
 		Scale: 5
