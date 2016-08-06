@@ -2,6 +2,7 @@
 # Infantry
 ##########################################################	
 worker:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -39,14 +40,6 @@ worker:
 		Length: 13
 		ShadowStart: 689
 		Tick: 80
-	die3: # TODO: copy-paste of die2
-		Start: 149
-		Length: 15
-		ShadowStart: 441
-	die4: # TODO: copy-paste of die2
-		Start: 149
-		Length: 15
-		ShadowStart: 441		
 	die-crushed:
 		Start: 267
 		Length: 5
@@ -68,15 +61,11 @@ worker:
 		Length: 2
 		Facings: 8
 		ShadowStart: 552
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: workericon
 
 paladin2:
+	Inherits@1: ^InfantryDeathAnims
+	Inherits@2: ^EmpOverlay
 	stand:
 		Facings: 8
 		ShadowStart: 41
@@ -92,6 +81,7 @@ paladin2:
 	icon: sentinelicon	
 
 cybdog:
+	Inherits@1: ^InfantryDeathAnims
 	Inherits: ^EmpOverlay
 	Defaults:
 		Tick: 80
@@ -126,18 +116,6 @@ cybdog:
 		Length: 10
 		Facings: 8
 		ShadowStart: 460
-	die5: # TODO: unused running frame 322 and following
-		Start: 254
-		Length: 12
-		ShadowStart: 504
-	die4: s_bang34
-		Length: *	
-	die3:
-		Start: 254
-		Length: 12
-		ShadowStart: 504
-	die6: electro
-		Length: *
 	icon: dogicon
 
 cabsentry:
@@ -163,6 +141,7 @@ cabsentry:
 	icon: cabsentryicon		
 	
 cyborg:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -199,12 +178,6 @@ cyborg:
 		Start: 149
 		Length: 15
 		ShadowStart: 519
-	die3:
-		Start: 307
-		Length: 14
-		ShadowStart: 677
-	die4: s_bang34
-		Length: *
 	shoot:
 		Start: 164
 		Length: 6
@@ -215,12 +188,6 @@ cyborg:
 		Length: 6
 		Facings: 8
 		ShadowStart: 582
-	die5: # TODO: unused running frame 322 and following
-		Start: 292
-		Length: 14
-		ShadowStart: 662
-	die6: electro
-		Length: *
 	emp-overlay: emp_fx01
 		Length: *
 		ZOffset: 512
@@ -228,6 +195,7 @@ cyborg:
 	icon: cybiicon
 
 pdrone:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -260,20 +228,12 @@ pdrone:
 		Start: 126
 		Length: 10
 		ShadowStart: 336
-	die3:
-		Start: 126
-		Length: 10
-		ShadowStart: 336
-	die4: s_bang34
-		Length: *	
 	die-crushed:
 		Start: 132
 		Length: 1
 		ShadowStart: 336
 		Tick: 800
 		ZOffset: -511
-	die6: electro
-		Length: *
 	emp-overlay: emp_fx01
 		Length: *
 		Offset: 0, 0
@@ -283,6 +243,7 @@ pdrone:
 	icon: processingicon
 	
 swarmling:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -302,27 +263,13 @@ swarmling:
 		Start: 287
 		Length: 13
 		ShadowStart: 689
-		Tick: 80
-	die3: worker # TODO: copy-paste of die2
-		Start: 287
-		Length: 13
-		ShadowStart: 689
-	die4: worker # TODO: copy-paste of die2
-		Start: 287
-		Length: 13
-		ShadowStart: 689		
+		Tick: 80		
 	die-crushed: worker
 		Start: 159
 		Length: 5
 		ShadowStart: 451
 		Tick: 800
 		ZOffset: -511
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: swarmlingicon	
 	
 reapercab:
@@ -363,8 +310,35 @@ reapercab:
 	die6: electro
 		Length: *
 	icon: reapercabicon
+
+moth:
+	Inherits@1: ^InfantryDeathAnims
+	stand:
+		Facings: -32
+		ShadowStart: 55
+	run:
+		Facings: -32
+		ShadowStart: 55
+	make:
+		Start: 32
+		Length: 12
+		ShadowStart: 87
+	idle:
+		Start: 45
+		Length: 10
+		Tick: 75
+	dot: dot
+		ZOffset: -999
+	muzzle: gunfire
+		Length: *
+	emp-overlay: emp_fx01
+		Length: *
+		ZOffset: 512
+		BlendMode: Additive		
+	icon: mothicon		
 	
 glad:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -402,14 +376,6 @@ glad:
 		Start: 161
 		Length: 12
 		ShadowStart: 646
-	die3:
-		Start: 161
-		Length: 12
-		ShadowStart: 646
-	die4:
-		Start: 161
-		Length: 13
-		ShadowStart: 646
 	muzzle: gunfire
 		Length: *
 	shoot:
@@ -424,12 +390,6 @@ glad:
 		Length: 7
 		Facings: 8
 		ShadowStart: 874
-	die5: # TODO: unused running frame 322 and following
-		Start: 161
-		Length: 12
-		ShadowStart: 646
-	die6: electro
-		Length: *
 	emp-overlay: emp_fx01
 		Length: *
 		Offset: 0, 0
@@ -439,6 +399,7 @@ glad:
 	icon: gladicon
 	
 cyc2:
+	Inherits@1: ^InfantryDeathAnims
 	stand:
 		Facings: 8
 		ShadowStart: 308
@@ -473,10 +434,6 @@ cyc2:
 		Start: 197
 		Length: 15
 		ShadowStart: 505
-	die3: infexpl
-		Length: *
-	die4: s_bang34
-		Length: *
 	shoot:
 		Start: 212
 		Length: 6
@@ -487,12 +444,6 @@ cyc2:
 		Length: 6
 		Facings: 8
 		ShadowStart: 568
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	emp-overlay: emp_fx01
 		Length: *
 		ZOffset: 512
@@ -525,6 +476,33 @@ jenn:
 		ZOffset: 512
 		BlendMode: Additive
 	icon: jennicon
+
+dino:
+	Defaults:
+		Offset: 0, -8
+	shoot:
+		Facings: 8
+		ShadowStart: 72
+	idle:
+		Facings: 8
+		ShadowStart: 72
+	stand:
+		Facings: 8
+		ShadowStart: 72
+	run:
+		Start: 8
+		Length: 8
+		Facings: 8
+		Tick: 70
+		ShadowStart: 80
+	muzzle: gunfire
+		Length: *
+	emp-overlay: emp_fx01
+		Length: *
+		ZOffset: 512
+		BlendMode: Additive
+	icon: dinoicon
+		Offset: 0, 0
 
 centurion:
 	Inherits: ^BasicTankMuzzle

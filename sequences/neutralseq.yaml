@@ -28,6 +28,7 @@ cloud1:
 		Length: *
 
 zombie:
+	Inherits: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -54,10 +55,6 @@ zombie:
 		Start: 230
 		Length: 9
 		ShadowStart: 451
-	die3: infdie
-		Length: *
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 204
 		Length: 10
@@ -67,15 +64,10 @@ zombie:
 		Length: 9
 		Facings: 8
 		ShadowStart: 378
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: sidebar-nod|e1icon
 	
 berserker:
+	Inherits: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -107,10 +99,6 @@ berserker:
 		Start: 308
 		Length: 17
 		ShadowStart: 633
-	die3: infdie
-		Length: *
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 297
 		Length: 11
@@ -122,15 +110,10 @@ berserker:
 		Length: 20
 		Facings: -8
 		ShadowStart: 462
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: sidebar-gdi|e1icon
 
 crab:
+	Inherits: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -157,14 +140,6 @@ crab:
 		Start: 150
 		Length: 6
 		ShadowStart: 306
-	die3:
-		Start: 150
-		Length: 6
-		ShadowStart: 306
-	die4:
-		Start: 150
-		Length: 6
-		ShadowStart: 306
 	die-crushed:
 		Start: 150
 		Length: 6
@@ -175,17 +150,10 @@ crab:
 		Length: 5
 		Facings: -8
 		ShadowStart: 259
-	die5:
-		Start: 150
-		Length: 6
-		ShadowStart: 306
-	die6:
-		Start: 143
-		Length: 7
-		ShadowStart: 299
 	icon: sidebar-gdi|e1icon	
 	
 weedguy:
+	Inherits: ^InfantryDeathAnims
 	Defaults: weed
 		Tick: 80
 	stand:
@@ -235,20 +203,6 @@ weedguy:
 		Start: 160
 		Length: 6
 		ShadowStart: 362
-	die3:
-		Start: 166
-		Length: 11
-		ShadowStart: 368
-	die4:
-		Start: 197
-		Length: 5
-		ShadowStart: 399
-	die5:
-		Start: 177
-		Length: 20
-		ShadowStart: 379
-	die6: electro
-		Length: *
 	die-crushed:
 		Start: 174
 		Length: 3
@@ -256,6 +210,7 @@ weedguy:
 		Tick: 1000	
 		
 umagon:
+	Inherits: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -292,12 +247,6 @@ umagon:
 		Start: 149
 		Length: 15
 		ShadowStart: 441
-	die3: # TODO: copy-paste of die2
-		Start: 149
-		Length: 15
-		ShadowStart: 441
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -319,15 +268,10 @@ umagon:
 		Length: 2
 		Facings: 8
 		ShadowStart: 552
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: umagicon
 
 ghost:
+	Inherits: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -364,12 +308,6 @@ ghost:
 		Start: 149
 		Length: 15
 		ShadowStart: 441
-	die3: # TODO: copy-paste of die2
-		Start: 149
-		Length: 15
-		ShadowStart: 441
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -391,15 +329,10 @@ ghost:
 		Length: 2
 		Facings: 8
 		ShadowStart: 552
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: gosticon		
 
 mhijack:
+	Inherits: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -436,12 +369,6 @@ mhijack:
 		Start: 149
 		Length: 15
 		ShadowStart: 441
-	die3: # TODO: copy-paste of die2
-		Start: 149
-		Length: 15
-		ShadowStart: 441
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -463,15 +390,10 @@ mhijack:
 		Length: 2
 		Facings: 8
 		ShadowStart: 552
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: chamicon
 
 mutant:
+	Inherits: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -508,12 +430,6 @@ mutant:
 		Start: 149
 		Length: 15
 		ShadowStart: 441
-	die3: # TODO: copy-paste of die2
-		Start: 149
-		Length: 15
-		ShadowStart: 441
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -535,15 +451,10 @@ mutant:
 		Length: 2
 		Facings: 8
 		ShadowStart: 552
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: mutcicon
 
 mwmn:
+	Inherits: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -581,12 +492,6 @@ mwmn:
 		Length: 15
 		ShadowStart: 441
 		Tick: 80
-	die3: # TODO: copy-paste of die2
-		Start: 149
-		Length: 15
-		ShadowStart: 441
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -608,15 +513,10 @@ mwmn:
 		Length: 2
 		Facings: 8
 		ShadowStart: 552
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: mutcicon
 
 mutant3:
+	Inherits: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -654,12 +554,6 @@ mutant3:
 		Length: 15
 		ShadowStart: 441
 		Tick: 80
-	die3: # TODO: copy-paste of die2
-		Start: 149
-		Length: 15
-		ShadowStart: 441
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -681,15 +575,10 @@ mutant3:
 		Length: 2
 		Facings: 8
 		ShadowStart: 552
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: mutcicon
 
 tratos:
+	Inherits: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -727,12 +616,6 @@ tratos:
 		Length: 15
 		ShadowStart: 441
 		Tick: 80
-	die3: # TODO: copy-paste of die2
-		Start: 149
-		Length: 15
-		ShadowStart: 441
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -754,15 +637,10 @@ tratos:
 		Length: 2
 		Facings: 8
 		ShadowStart: 552
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: mutcicon
 
 oxanna:
+	Inherits: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -800,12 +678,6 @@ oxanna:
 		Length: 15
 		ShadowStart: 441
 		Tick: 80
-	die3: # TODO: copy-paste of die2
-		Start: 149
-		Length: 15
-		ShadowStart: 441
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -827,14 +699,9 @@ oxanna:
 		Length: 2
 		Facings: 8
 		ShadowStart: 552
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 
 slav:
+	Inherits: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -872,12 +739,6 @@ slav:
 		Length: 15
 		ShadowStart: 441
 		Tick: 80
-	die3: # TODO: copy-paste of die2
-		Start: 149
-		Length: 15
-		ShadowStart: 441
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -899,20 +760,16 @@ slav:
 		Length: 2
 		Facings: 8
 		ShadowStart: 552
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 
 vissml:
+	Inherits: ^InfantryDeathAnims
 	idle:
 		Length: 90
 		ShadowStart: 90
 		Tick: 80
 
 vislrg:
+	Inherits: ^InfantryDeathAnims
 	idle:
 		Length: 90
 		ShadowStart: 90

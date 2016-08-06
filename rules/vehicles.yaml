@@ -527,7 +527,7 @@ ARMH:
 	Inherits: ^VoxelTank
 	Inherits@2:	^Ra2vxl
 	Valued:
-		Cost: 1100
+		Cost: 1000
 	Tooltip:
 		Name: Beam Cannon
 		Description: Core unit, artillery, fires a beam of\nenergy through long distances.\n  Strong vs Ground units\n  Weak vs Aircraft
@@ -550,6 +550,15 @@ ARMH:
 	Armament:
 		Weapon: BCLazor
 		LocalOffset: 350,0,450
+	AmmoPool:
+		Ammo: 10
+		PipCount: 5
+		PipType: Ammo
+		SelfReloadsTicks: 50
+		SelfReloads: true
+		ReloadCount: 1
+		ReloadTicks: 50
+		PipTypeEmpty: AmmoEmpty
 	AttackFrontal:
 		Voice: Attack
 	AutoTarget:
@@ -1234,7 +1243,7 @@ TRIPOD:
 		Cost: 1400
 	Tooltip:
 		Name: Anhilator Tripod
-		Description: Combat walker.\nCan crush vehicles and infantry.\nHas great damage but slow firing rate.\n  Strong vs Ground units in general.\n  Weak vs Aircraft.
+		Description: Combat walker. Nearby\n enemy units ignore orders.\n  Strong vs Ground units.\n  Weak vs Aircraft.
 	Selectable:
 		Bounds: 50,100, 0, -30
 	Buildable:
@@ -1242,10 +1251,14 @@ TRIPOD:
 		BuildPaletteOrder: 35
 		Prerequisites: ~scrweap, scrtech
 		IconPalette: chromescrin
+	UpgradeActorsNear@qlo:
+		Upgrades: berserk
+		Range: 3c0
+		ValidStances: Enemy
 	Mobile:
 		TurnSpeed: 8
 		Speed: 80
-		Crushes: crate, Infantry, Vehicle
+		Crushes: crate
 	Health:
 		HP: 400
 	Armor:
@@ -1329,10 +1342,10 @@ JENN:
 	Tooltip:
 		Name: Seeker
 		Description: Basic Walker, equiped with long range missiles.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 18
-		Prerequisites: ~cabweap
+	# Buildable:
+		# Queue: Vehicle
+		# BuildPaletteOrder: 18
+		# Prerequisites: ~cabweap
 	Mobile:
 		TurnSpeed: 8
 		Speed: 95
@@ -1355,6 +1368,50 @@ JENN:
 	AutoTarget:
 	Selectable:
 		Bounds: 30, 42, 0, -8
+
+DINO:
+	Inherits: ^Tank
+	Inherits@2:	^CyborgSelfHeal
+	Inherits@5: ^CabRender
+	Inherits@3: ^BasicStealthDetection
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Seeker
+		Description: Basic Walker, equiped with long range missiles.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 18
+		Prerequisites: ~cabweap
+	Mobile:
+		TurnSpeed: 12
+		Speed: 130
+		Crushes: crate
+		TerrainSpeeds:
+			Clear: 85
+			Road: 100
+			Rail: 100
+			DirtRoad: 90
+			Rough: 85
+			Tiberium: 85
+			BlueTiberium: 85
+			Veins: 85
+	Voiced:
+		VoiceSet: Limpet
+	Health:
+		HP: 175
+	Armor:
+		Type: wood
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithInfantryBody:
+	AttackFrontal:
+	Armament:
+		Weapon: SeekerBazooka
+		LocalOffset: 200,0,1000
+	AutoTarget:
+	Selectable:
+		Bounds: 40, 36, 0, -16
 
 CENTURION:
 	Inherits: ^Tank

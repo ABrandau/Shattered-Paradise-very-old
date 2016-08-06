@@ -234,6 +234,9 @@ explosion:
 	#CABAL
 	destroexp: destroexp
 	cabexplo: cabexplo
+	lurkertentacle: lurkertentacle
+		Offset: 0, -12
+		Tick: 15
 	#Scrin
 	colossiglow: glow
 		Tick: 100
@@ -326,6 +329,13 @@ small_smoke_trail:
 	idle: smokey2
 		Length: *
 		ZOffset: 1023
+
+lurkertrail:
+	idle:
+		Offset: 0,-12
+		Length: *
+		ZOffset: 1023
+		Tick: 30
 
 viscproj:
 	idle:

@@ -378,7 +378,7 @@ TiberianRocket:
 	Inherits: ArtilleryWarhead
 	ReloadDelay: 250
 	Range: 12c0
-	Burst: 8
+	Burst: 3
 	Report: rketinf1.aud
 	ValidTargets: Ground
 	MinRange: 3c0
@@ -395,7 +395,7 @@ TiberianRocket:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 200
-		Damage: 40
+		Damage: 20
 		ValidTargets: Ground
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, TiberiumDeathStrong
@@ -414,7 +414,7 @@ TiberianRocket:
 
 TiberianRocket2:
 	Inherits: TiberianRocket
-	Burst: 2
+	Burst: 6
 	Delay: 10
 	Projectile: Bullet
 		Inaccuracy: 20

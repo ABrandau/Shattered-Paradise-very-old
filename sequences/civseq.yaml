@@ -2,6 +2,7 @@
 # Infantry
 ##########################################################	
 civ1:
+	Inherits: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -39,12 +40,6 @@ civ1:
 		Length: 15
 		ShadowStart: 441
 		Tick: 80
-	die3: # TODO: copy-paste of die2
-		Start: 149
-		Length: 15
-		ShadowStart: 441
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -56,14 +51,9 @@ civ1:
 		Length: 6
 		Facings: 8
 		ShadowStart: 456
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 
 civ2:
+	Inherits: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -101,26 +91,15 @@ civ2:
 		Length: 15
 		ShadowStart: 441
 		Tick: 80
-	die3: # TODO: copy-paste of die2
-		Start: 149
-		Length: 15
-		ShadowStart: 441
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
 		ShadowStart: 451
 		Tick: 800
 		ZOffset: -511
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 
 civ3:
+	Inherits: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -158,12 +137,6 @@ civ3:
 		Length: 15
 		ShadowStart: 441
 		Tick: 80
-	die3: # TODO: copy-paste of die2
-		Start: 149
-		Length: 15
-		ShadowStart: 441
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -175,12 +148,6 @@ civ3:
 		Length: 6
 		Facings: 8
 		ShadowStart: 456
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 
 ##########################################################
 # Vehicles

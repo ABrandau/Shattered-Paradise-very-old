@@ -386,7 +386,7 @@ ZOMBIE:
 		EmptyWeapon: ZombieExplosion
 		Chance: 80
 	Mobile:
-		Speed: 113
+		Speed: 65
 		Crushes: nada
 	-SpawnActorOnDeath@conversion:	
 	-TakeCover:

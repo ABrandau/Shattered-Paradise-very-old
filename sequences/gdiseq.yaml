@@ -2,6 +2,7 @@
 # Infantry
 ##########################################################	
 gdie1:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -38,10 +39,6 @@ gdie1:
 		Start: 149
 		Length: 15
 		ShadowStart: 441
-	die3: infdie
-		Length: *
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -63,15 +60,10 @@ gdie1:
 		Length: 2
 		Facings: 8
 		ShadowStart: 552
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: sidebar-gdi|e1icon
 
 grenadier:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -110,12 +102,6 @@ grenadier:
 		Start: 270
 		Length: 15
 		ShadowStart: 700
-	die3: # TODO: copy-paste of die2
-		Start: 255
-		Length: 14
-		ShadowStart: 685
-	die4: s_bang34
-		Length: *		
 	die-crushed:
 		Start: 255
 		Length: 14
@@ -137,15 +123,10 @@ grenadier:
 		Length: 2
 		Facings: 8
 		ShadowStart: 844
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: grenadiericon
 	
 jumpjet:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -180,12 +161,6 @@ jumpjet:
 		Start: 445
 		Length: 6
 		ShadowStart: 896
-	die3: # TODO: animation for falling from sky starts at 436
-		Start: 445
-		Length: 6
-		ShadowStart: 896
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 450
 		ShadowStart: 901
@@ -206,15 +181,10 @@ jumpjet:
 		Length: 2
 		Facings: 8
 		ShadowStart: 711
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: jjeticon	
 	
 medic:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -251,12 +221,6 @@ medic:
 		Start: 149
 		Length: 15
 		ShadowStart: 455
-	die3: # TODO: copy-paste of die2
-		Start: 149
-		Length: 15
-		ShadowStart: 455
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -272,15 +236,10 @@ medic:
 		Start: 292
 		Length: 14
 		ShadowStart: 599
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: mediicon	
 	
 eagleguard:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -321,13 +280,7 @@ eagleguard:
 	die2:
 		Start: 311
 		Length: 11
-		ShadowStart: 743
-	die3: # TODO: copy-paste of die2
-		Start: 311
-		Length: 11
-		ShadowStart: 743
-	die4: s_bang34
-		Length: *		
+		ShadowStart: 743	
 	die-crushed:
 		Start: 309
 		Length: 2
@@ -349,12 +302,6 @@ eagleguard:
 		Length: 2
 		Facings: 8
 		ShadowStart: 868
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: eagleguardicon		
 ##########################################################
 # Vehicles

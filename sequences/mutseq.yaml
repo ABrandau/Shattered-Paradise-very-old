@@ -2,6 +2,7 @@
 # Infantry
 ##########################################################	
 marauder:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -38,12 +39,6 @@ marauder:
 		Start: 158
 		Length: 8
 		ShadowStart: 607
-	die3: # TODO: copy-paste of die2
-		Start: 158
-		Length: 8
-		ShadowStart: 607
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 148
 		Length: 2
@@ -65,12 +60,6 @@ marauder:
 		Length: 2
 		Facings: 8
 		ShadowStart: 552
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	make:
 		Start: 367
 		Length: 9
@@ -118,6 +107,7 @@ marauder:
 	icon: maraudericon	
 	
 e3:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -154,12 +144,6 @@ e3:
 		Start: 149
 		Length: 15
 		ShadowStart: 441
-	die3: infdie
-		Length: *
-		Tick: 80
-	die4: s_bang34
-		Length: *
-		Tick: 80
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -181,15 +165,10 @@ e3:
 		Length: 2
 		Facings: 8
 		ShadowStart: 552
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: skirmishericon
 
 e2:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -226,10 +205,6 @@ e2:
 		Start: 149
 		Length: 15
 		ShadowStart: 441
-	die3: infdie
-		Length: *
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -252,12 +227,6 @@ e2:
 		Length: 2
 		Facings: 8
 		ShadowStart: 552
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: e2icon
 
 seer:
@@ -313,6 +282,7 @@ seer:
 	icon: seericon
 	
 doggie:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 		Offset: 0, -6		
@@ -348,30 +318,17 @@ doggie:
 		Start: 99
 		Length: 10
 		ShadowStart: 218
-	die3:
-		Start: 99
-		Length: 10
-		ShadowStart: 218
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 105
 		Length: 4
 		ShadowStart: 224
 		Tick: 800
 		ZOffset: -511
-	die5:
-		Start: 109
-		Length: 10
-		ShadowStart: 228
-	die6:
-		Start: 109
-		Length: 10
-		ShadowStart: 228
 	icon: fiendicon
 		Offset: 0, 0	
 	
 awarrior:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -399,13 +356,6 @@ awarrior:
 		Length: 10
 		ShadowStart: 635
 		Tick: 80
-	die3: # TODO: copy-paste of die2
-		Start: 244
-		Length: 10
-		ShadowStart: 635
-		Tick: 80
-	die4: s_bang34
-		Length: *		
 	die-crushed:
 		Start: 300
 		Length: 3
@@ -436,15 +386,10 @@ awarrior:
 	standup-0:
 		Facings: -8
 		ShadowStart: 652
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: awarrioricon	
 
 psyker:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -487,13 +432,6 @@ psyker:
 		Length: 21
 		Facings: 8
 		ShadowStart: 1014
-	die3: # TODO: copy-paste of die2
-		Start: 279
-		Length: 15
-		ShadowStart: 441
-		Tick: 80
-	die4: s_bang34
-		Length: *	
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -515,15 +453,10 @@ psyker:
 		Length: 2
 		Facings: 8
 		ShadowStart: 999
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: psykericon
 
 wolf:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -565,27 +498,14 @@ wolf:
 		Start: 381
 		Length: 9
 		ShadowStart: 771
-	die3:
-		Start: 381
-		Length: 9
-		ShadowStart: 771
-	die4: s_bang34
-		Length: *		
 	die-crushed:
-		Start: 381
-		Length: 9
-		ShadowStart: 771
-	die5:
-		Start: 381
-		Length: 9
-		ShadowStart: 771
-	die6:
 		Start: 381
 		Length: 9
 		ShadowStart: 771
 	icon: wolficon
 
 deathclaw:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -623,23 +543,7 @@ deathclaw:
 		Start: 243
 		Length: 5
 		ShadowStart: 523
-	die3:
-		Start: 243
-		Length: 5
-		ShadowStart: 523
-	die4:
-		Start: 243
-		Length: 5
-		ShadowStart: 523
 	die-crushed:
-		Start: 243
-		Length: 5
-		ShadowStart: 523
-	die5:
-		Start: 243
-		Length: 5
-		ShadowStart: 523
-	die6:
 		Start: 243
 		Length: 5
 		ShadowStart: 523

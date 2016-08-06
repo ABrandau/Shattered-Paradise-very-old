@@ -66,7 +66,7 @@ ReaperMortar:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 10
+		Damage: 5
 		ValidTargets: Ground, Infantry, Vehicle
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -79,26 +79,49 @@ ReaperMortar:
 		ImpactSound: ssplash3.aud
 		ValidImpactTypes: Water
 	Warhead@emp: GrantUpgrade
-		Range: 2c0
+		Range: 1c0
 		Duration: 35
 		ValidTargets: Infantry
 		Upgrades: WebDisable	
 	
-ReaperRail:
-	Inherits: ^FullDamage
-	ReloadDelay: 80
-	Range: 6c0
-	Report: biggun1.aud
-	ValidTargets: Air
-	Projectile: LaserZap
-		BeamWidth: 1
-		BeamDuration: 5
-		Color: 0dc7b8#0080FFC8				
+ReaperScythe:
+	Inherits: ^RocketWarhead
+	ReloadDelay: 125
+	Range: 5c0
+	Burst: 4
+	MinRange: 3c0
+	Report: rketinf1.aud
+	ValidTargets: Ground, Air
+	Projectile: Missile
+		Speed: 213
+		Blockable: false
+		Shadow: true
+		Inaccuracy: 1c0
+		Image: DRAGON
+		TrailImage: small_smoke_trail
+		RateOfTurn: 10
+		RangeLimit: 15c0
+		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 125
-		Damage: 40
-		ValidTargets: Air
-		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath
+		Spread: 128
+		Damage: 70
+		ValidTargets: Ground, Air
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: small_clsn
+		ImpactSound: expnew12.aud
+		InvalidImpactTypes: Water, Air, AirHit
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4EffAir: CreateEffect
+		Explosions: small_twlt
+		ImpactSound: expnew12.aud
+		ValidImpactTypes: Air, AirHit
+	Warhead@5Smu: LeaveSmudge
+		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 		
 ProcessingHuman:
 	Inherits: ^RifleWarhead
@@ -124,6 +147,7 @@ GLAD120mm:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 40
+
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_clsn
@@ -136,6 +160,30 @@ GLAD120mm:
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
 		InvalidTargets: Vehicle, Building, Wall
+
+LurkerHit:
+	Inherits: ^MeleeWarhead
+	ReloadDelay: 80
+	Range: 7c0
+	Burst: 2
+	BurstDelay: 15
+	Report: 120mmf.aud
+	Projectile: Bullet
+		Speed: 70
+		TrailImage: lurkertrail
+		TrailPalette: playercab
+		Inaccuracy: 1c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 90
+		Damage: 25
+		Versus:
+			Worker: 25
+		DamageTypes: Prone50Percent, TriggerProne, CabalDeath
+	Warhead@2Eff: CreateEffect
+		ExplosionPalette: playercab
+		Explosions: lurkertentacle
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
 
 CyCannon:
 	ReloadDelay: 100
@@ -240,7 +288,6 @@ SeekerBazooka:
 	Range: 8c0
 	MinRange: 3c0
 	Report: rketinf1.aud
-	Burst: 2
 	ValidTargets: Ground, Air
 	Projectile: Missile
 		Speed: 213
@@ -254,7 +301,7 @@ SeekerBazooka:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 25
+		Damage: 40
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect

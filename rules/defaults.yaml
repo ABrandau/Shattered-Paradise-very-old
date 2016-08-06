@@ -146,6 +146,14 @@
 	Mobile:
 		UpgradeTypes: WebDisable
 		UpgradeMaxEnabledLevel: 0
+	WithInfantryBody:
+		UpgradeTypes: WebDisable
+		UpgradeMaxEnabledLevel: 0
+	WithIdleOverlay@web:
+		Sequence: webguy
+		Palette: player
+		UpgradeTypes: WebDisable
+		UpgradeMinEnabledLevel: 1
 
 ^BurstRecovery:
 	SelfHealing@NanomachineBurst:
@@ -453,14 +461,14 @@
 		Sequence: stand
 	WithInfantryBody:
 	WithDeathAnimation@normal:
-		DeathTypes:
+		DeathTypes: #1 2 normals, 3 headshot, 4 explosion
 			BulletDeath: 1
-			SmallExplosionDeath: 2
-			HeadshotDeath: 3
+			TiberiumDeath: 2
 			CabalDeath: 2
 			CabalDeathCrate: 2
-			TiberiumDeath: 3
-			BlackHandRfle: 2
+			BlackHandRfle: 3
+			HeadshotDeath: 3
+			SmallExplosionDeath: 4
 	WithDeathAnimation@explosion:
 		DeathSequencePalette: effect
 		DeathPaletteIsPlayerPalette: False

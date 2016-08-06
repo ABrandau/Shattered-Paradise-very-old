@@ -2,6 +2,7 @@
 # Infantry
 ##########################################################
 e1.gdi:
+	Inherits: ^InfantryDeathAnims
 	Defaults: e1
 		Tick: 80
 	stand:
@@ -38,10 +39,6 @@ e1.gdi:
 		Start: 149
 		Length: 15
 		ShadowStart: 441
-	die3: infdie
-		Length: *
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -67,11 +64,10 @@ e1.gdi:
 		Start: 42
 		Length: 104
 		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: sidebar-gdi|e1icon
 
 e1.nod:
+	Inherits: ^InfantryDeathAnims
 	Defaults: e1
 		Tick: 80
 	stand:
@@ -108,10 +104,6 @@ e1.nod:
 		Start: 149
 		Length: 15
 		ShadowStart: 441
-	die3: infdie
-		Length: *
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -133,15 +125,10 @@ e1.nod:
 		Length: 2
 		Facings: 8
 		ShadowStart: 552
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: sidebar-nod|e1icon
 	
 engineer.gdi:
+	Inherits: ^InfantryDeathAnims
 	Defaults: engineer
 		Tick: 80
 	stand:
@@ -178,12 +165,6 @@ engineer.gdi:
 		Start: 149
 		Length: 15
 		ShadowStart: 441
-	die3: # TODO: copy-paste of die2
-		Start: 149
-		Length: 15
-		ShadowStart: 441
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -195,15 +176,10 @@ engineer.gdi:
 		Length: 2
 		Facings: 8
 		ShadowStart: 552
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: sidebar-gdi|engnicon
 
 engineer.nod:
+	Inherits: ^InfantryDeathAnims
 	Defaults: engineer
 		Tick: 80
 	stand:
@@ -240,12 +216,6 @@ engineer.nod:
 		Start: 149
 		Length: 15
 		ShadowStart: 441
-	die3: # TODO: copy-paste of die2
-		Start: 149
-		Length: 15
-		ShadowStart: 441
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -257,12 +227,6 @@ engineer.nod:
 		Length: 2
 		Facings: 8
 		ShadowStart: 552
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: sidebar-nod|engnicon	
 ##########################################################
 # Vehicles

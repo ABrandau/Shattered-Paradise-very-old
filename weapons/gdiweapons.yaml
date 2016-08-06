@@ -115,7 +115,7 @@ TrooperRail:
 			Concrete: 5
 	Warhead@emp: GrantUpgrade
 		Range: 1c0
-		Duration: 40
+		Duration: 30
 		Upgrades: empdisable, notmobile
 
 #############################################

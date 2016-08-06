@@ -401,14 +401,14 @@ MARAUDER:
 		DeploySound:
 		UndeploySound:
 	WithInfantryBody:
-		UpgradeTypes: undeployed
-		UpgradeMinEnabledLevel: 1
+		UpgradeTypes: deployed, WebDisable
+		UpgradeMaxEnabledLevel: 0
 	WithInfantryBody@deployed:
 		StandSequences: turret
-		UpgradeTypes: undeployed
+		UpgradeTypes: undeployed, WebDisable
 		UpgradeMaxEnabledLevel: 0
 	WithMuzzleOverlay:
-		UpgradeTypes: undeployed
+		UpgradeTypes: undeployed, WebDisable
 		UpgradeMaxEnabledLevel: 0
 	Turreted:
 		TurnSpeed: 50
@@ -1081,10 +1081,10 @@ CABSENTRY:
 	Tooltip:
 		Name: Sentry Drone
 		Description: Hover Drone armed with armor piercing weaponry.\nVery fragile, it can hide and cannot attack aircraft.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
-	Buildable:
-		Queue: Infantry
-		BuildPaletteOrder: 12
-		Prerequisites: ~cabclaw
+	# Buildable:
+		# Queue: Infantry
+		# BuildPaletteOrder: 12
+		# Prerequisites: ~cabclaw
 	Explodes:
 		Weapon: DroneExplode
 		EmptyWeapon: DroneExplode
@@ -1168,45 +1168,6 @@ CYBORG:
 	SelectionDecorations:
 		VisualBounds: 16,31,0,-10
 
-SWARMLING:
-	Inherits: ^CabalDroneInfantry
-	Valued:
-		Cost: 550
-	Tooltip:
-		Name: Swarmling
-		Description: Infiltrates, captures enemy structures\nand also places mines.\n  Unarmed
-	MineImmune:
-	Minelayer:
-		Mine: mumine
-		RearmBuildings:
-	AmmoPool:
-		Ammo: 3
-		PipCount: 3
-		PipType: Ammo
-		SelfReloadDelay: 500
-		SelfReloads: true
-		PipTypeEmpty: AmmoEmpty	
-	Buildable:
-		Queue: Infantry
-		BuildPaletteOrder: 13
-		Prerequisites: ~cabclaw
-	SupplyTruck
-		Payload: 275
-		Voice: Move
-	Voiced:
-		VoiceSet: Engineer
-	Mobile:
-		Speed: 60
-	Health:
-		HP: 80
-	Passenger:
-		PipType: Yellow
-	EngineerRepair:
-	RepairsBridges:
-	Captures:
-		CaptureTypes: building
-	-AutoTarget:
-
 PDRONE:
 	Inherits: ^CabalDroneInfantry
 	Armor:
@@ -1221,7 +1182,7 @@ PDRONE:
 		Description: Utility drone, soldiers killed by this unit will be turned into workers.\nCan only target infantry.\n  Strong vs Infantry\n  Weak vs Everything else.
 	Buildable:
 		Queue: Infantry
-		BuildPaletteOrder: 14
+		BuildPaletteOrder: 12
 		Prerequisites: ~cabclaw, cabgrinder
 	Selectable:
 		Bounds: 22,32,0,0
@@ -1267,19 +1228,128 @@ PDRONE:
 		DeathTypes:
 			EnergyDeath: 6
 
+SWARMLING:
+	Inherits: ^CabalDroneInfantry
+	Valued:
+		Cost: 550
+	Tooltip:
+		Name: Swarmling
+		Description: Infiltrates, captures enemy structures\nand also places mines.\n  Unarmed
+	MineImmune:
+	Minelayer:
+		Mine: mumine
+		RearmBuildings:
+	AmmoPool:
+		Ammo: 3
+		PipCount: 3
+		PipType: Ammo
+		SelfReloadDelay: 500
+		SelfReloads: true
+		PipTypeEmpty: AmmoEmpty	
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 13
+		Prerequisites: ~cabclaw
+	SupplyTruck
+		Payload: 275
+		Voice: Move
+	Voiced:
+		VoiceSet: Engineer
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 80
+	Passenger:
+		PipType: Yellow
+	EngineerRepair:
+	RepairsBridges:
+	Captures:
+		CaptureTypes: building
+	-AutoTarget:
+
+MOTH:
+	Inherits: ^CabalDroneInfantry
+	Inherits@1: ^CabRender
+	Armor:
+		Type: None
+	Valued:
+		Cost: 700
+	Tooltip:
+		Name: Abductor
+		Description: Ambush drone that needs to deploy to attack.\nWhen deployed it burrows underground and fires spike\nat nearby enemies.\nEnemy units are converted into cyborgs.\n  Strong vs Infantry, Light Vehicles.\n  Weak vs Aircraft, Detectors.
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 15
+		Prerequisites: ~cabclaw, cabradr
+	Explodes:
+		Weapon: DroneExplode
+		EmptyWeapon: DroneExplode
+	SupplyTruck
+		Payload: 250
+		Voice: Move
+	Voiced:
+		VoiceSet: Limpet
+	Mobile:
+		Speed: 70
+		UpgradeTypes: notmobile
+		UpgradeMaxEnabledLevel: 0
+	Health:
+		HP: 200
+	Passenger:
+	SelectionDecorations:
+		VisualBounds: 22,32,-1,-9
+	DeployToUpgrade:
+		DeployedUpgrades: deployed, notmobile
+		UndeployedUpgrades: undeployed
+		DeployAnimation: make
+		Facing: 160
+		AllowedTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green
+		DeploySound: place2.aud
+		UndeploySound: clicky1.aud
+	Hovers:
+		UpgradeTypes: undeployed
+		UpgradeMinEnabledLevel: 1
+	WithInfantryBody:
+		UpgradeTypes: undeployed
+		UpgradeMinEnabledLevel: 1
+		UpgradeMaxEnabledLevel: 2
+	WithSpriteBody@deployed:
+		StartSequence: dot
+		Sequence: dot
+		UpgradeTypes: undeployed
+		UpgradeMaxEnabledLevel: 0
+	Cloak@asd:
+		Palette: cloakcab
+		IsPlayerPalette: true
+		UpgradeTypes: deployed
+		UpgradeMinEnabledLevel: 1
+		UncloakOn: Demolish
+	-WithIdleOverlay@web:
+	WithIdleOverlay:
+		Sequence: idle
+		UpgradeTypes: deployed
+		UpgradeMinEnabledLevel: 1
+	Armament@primary:
+		Weapon: LurkerHit
+		UpgradeTypes: deployed
+		UpgradeMinEnabledLevel: 1
+	AttackOmni:
+		UpgradeTypes: deployed
+		UpgradeMinEnabledLevel: 1
+
 REAPERCAB:
 	Inherits: ^CabalDroneInfantry
 	Inherits@2: ^CyborgSelfHeal
 	Valued:
-		Cost: 600
+		Cost: 1100
 	Tooltip:
 		Name: Cyborg Reaper
-		Description: Cyborg, has mortar shells that can stop infantry.\nAnd a railgun turret to deal with aircraft.\n  Strong vs Aircraft\n  Weak vs Vehicles, Buildings.
+		Description: Cyborg construct, equipped with multi missiles\nand web launchers that can ensrane infantry.\n Strong vs Vehicles, Aircraft\n Weak vs Infantry.
 	Buildable:
 		Queue: Infantry
 		SharesCell: false
-		BuildPaletteOrder: 15
-		Prerequisites: ~cabclaw, cabradr
+		BuildPaletteOrder: 16
+		Prerequisites: ~cabclaw, cabtech
 	Selectable:
 		Bounds: 40,40,0,-10
 	SupplyTruck
@@ -1295,7 +1365,7 @@ REAPERCAB:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
 	Health:
-		HP: 400
+		HP: 300
 	Voiced:
 		VoiceSet: CyborgReap
 	Passenger:
@@ -1303,15 +1373,18 @@ REAPERCAB:
 		Type: Wood
 	Armament@primary:
 		Weapon: ReaperMortar
-		LocalOffset: 0,0,500, 0,-200,500, 0,200,500
+		LocalOffset: 0,0,200
 	Armament@secondary:
-		Weapon: ReaperRail
-		LocalOffset: 0,0,1500
+		Weapon: ReaperScythe
+		LocalOffset: 0,-200,500, 0,200,500
 	AttackFrontal:
 		Voice: Attack
 	-UpgradeOverlay@WebDisable:
 	-DisableOnUpgrade@WebDisable:
 	-TimedUpgradeBar@WebDisable:
+	WithInfantryBody:
+		UpgradeMaxEnabledLevel: 50	
+	-WithIdleOverlay@web:
 
 GLAD:
 	Inherits: ^Cyborg
@@ -1329,12 +1402,12 @@ GLAD:
 		Description: Advanced cyborg construct, extremely resilient\nand capable of piercing enemy armor.\n  Detects cloaked units.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft.
 	Buildable:
 		Queue: Infantry
-		BuildPaletteOrder: 16
-		Prerequisites: ~cabclaw, cabtech
+		BuildPaletteOrder: 14
+		Prerequisites: ~cabclaw, cabradr
 	Selectable:
 		Bounds: 35,30,0,-10
 	Voiced:
-		VoiceSet: CyborgCommando
+		VoiceSet: Cyborg
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark
 	WithMuzzleOverlay:
@@ -1417,6 +1490,8 @@ WORKER:
 	SupplyTruck
 		Payload: 45
 		Voice: Move
+	Armor@worker:
+		Type: Worker
 	Armament@PRIMARY:
 		Weapon: Minigun
 	AttackFrontal:
@@ -1441,6 +1516,10 @@ PALADIN2:
 		HP: 100
 	Armor:
 		Type: Heavy
+	Voiced:
+		VoiceSet: Limpet
+	Armor@worker:
+		Type: Worker
 	RevealsShroud:
 		Range: 8c0
 	SupplyTruck
@@ -1456,7 +1535,7 @@ PALADIN2:
 	WithSpriteTurret:
 		Recoils: no
 	RenderSprites:
-		Scale: 1.5
+		Scale: 1
 	Armament:
 		Weapon: SentryGun
 		Recoil: 127
@@ -1477,7 +1556,7 @@ cybdog:
 	Selectable:
 		Bounds: 16,31,0,-10
 	Voiced:
-		VoiceSet: Cyborg
+		VoiceSet: Limpet
 	SupplyTruck
 		Payload: 100
 		Voice: Move
@@ -1488,6 +1567,8 @@ cybdog:
 	Passenger:
 	RevealsShroud:
 		Range: 5c0
+	Armor@worker:
+		Type: Worker
 	Armament:
 		Weapon: Dogzooka
 		LocalOffset: 0,-100,300

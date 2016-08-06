@@ -2,6 +2,7 @@
 # Infantry
 ##########################################################	
 altnode1:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -39,12 +40,6 @@ altnode1:
 		Length: 15
 		ShadowStart: 441
 		Tick: 80
-	die3: # TODO: copy-paste of die2
-		Start: 149
-		Length: 15
-		ShadowStart: 441
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -68,15 +63,10 @@ altnode1:
 		Length: 2
 		Facings: 8
 		ShadowStart: 552
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: sidebar-nod|e1icon
 	
 crusader:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -113,12 +103,6 @@ crusader:
 		Length: 8
 		ShadowStart: 532
 		Tick: 80
-	die3: # TODO: copy-paste of die2
-		Start: 149
-		Length: 15
-		ShadowStart: 441
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -139,15 +123,10 @@ crusader:
 		Start: 142
 		Facings: 8
 		ShadowStart: 480
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: crusadericon
 	
 templar:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 60
 	stand:
@@ -184,10 +163,6 @@ templar:
 		Start: 273
 		Length: 11
 		ShadowStart: 670
-	die3: infdie
-		Length: *
-	die4: s_bang34
-		Length: *		
 	die-crushed:
 		Start: 281
 		Length: 3
@@ -209,15 +184,10 @@ templar:
 		Length: 2
 		Facings: 8
 		ShadowStart: 776
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: templaricon
 	
 bhs:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -255,12 +225,6 @@ bhs:
 		Length: 15
 		ShadowStart: 441
 		Tick: 80
-	die3: # TODO: copy-paste of die2
-		Start: 149
-		Length: 15
-		ShadowStart: 441
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -282,15 +246,10 @@ bhs:
 		Length: 2
 		Facings: 8
 		ShadowStart: 552
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: weaticon
 	
 chamspy:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -327,12 +286,6 @@ chamspy:
 		Start: 149
 		Length: 15
 		ShadowStart: 441
-	die3: # TODO: copy-paste of die2
-		Start: 149
-		Length: 15
-		ShadowStart: 441
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 159
 		Length: 5
@@ -354,16 +307,7 @@ chamspy:
 		Length: 2
 		Facings: 8
 		ShadowStart: 552
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
-	icon: chamicon	
-	
-
-	 	
+	icon: chamicon	 	
 
 ##########################################################
 # Vehicles

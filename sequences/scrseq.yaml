@@ -2,9 +2,9 @@
 # Infantry
 ##########################################################	
 shark:
+	Inherits@1: ^InfantryDeathAnims
 	defaults:
 		Tick:120
-		
 	stand:
 		Facings: 8
 		ShadowStart: 1204
@@ -38,10 +38,6 @@ shark:
 		Start: 1198
 		Length: 7
 		ShadowStart: 2401
-	die3: infdie
-		Length: *
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 1176
 		Length: 8
@@ -49,16 +45,11 @@ shark:
 		ZOffset: -511
 	shoot: 
 		Tick: 300
-		Facings: 8
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *		
+		Facings: 8	
 	icon: sharkicon
 
 legio:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -94,10 +85,6 @@ legio:
 		Start: 96
 		Length: 7
 		ShadowStart: 434
-	die3: infdie
-		Length: *
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 96
 		Length: 7
@@ -118,15 +105,10 @@ legio:
 		Start: 218
 		Facings: 8
 		ShadowStart: 556
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: scrlegio
 
 shapeshifter:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults: e1.nod
 		Tick: 80
 	stand: civ1
@@ -172,12 +154,6 @@ shapeshifter:
 		Start: 149
 		Length: 15
 		ShadowStart: 441
-	die3: weed
-		Start: 166
-		Length: 11
-		ShadowStart: 368
-	die4: s_bang34
-		Length: *
 	die-crushed: ghost
 		Start: 159
 		Length: 5
@@ -199,15 +175,10 @@ shapeshifter:
 		Length: 2
 		Facings: 8
 		ShadowStart: 552
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: gosticon
 
 bug:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -234,10 +205,6 @@ bug:
 		Start: 206
 		Length: 6
 		ShadowStart: 418
-	die3: infdie
-		Length: *
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 206
 		Length: 6
@@ -248,15 +215,10 @@ bug:
 		Length: 6
 		Facings: 8
 		ShadowStart: 346
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: bugicon
 
 float:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -283,10 +245,6 @@ float:
 		Start: 180
 		Length: 11
 		ShadowStart: 372
-	die3: infdie
-		Length: *
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 180
 		Length: 11
@@ -297,15 +255,10 @@ float:
 		Length: 9
 		Facings: 8
 		ShadowStart: 300
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *
 	icon: scrfloater
 
 stalker:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -345,21 +298,11 @@ stalker:
 		Start: 183
 		Length: 8
 		ShadowStart: 374
-	die3: infdie
-		Length: *
-	die4: s_bang34
-		Length: *
 	die-crushed:
 		Start: 183
 		Length: 8
 		ShadowStart: 374
 		ZOffset: -511
-	die5: flameguy # TODO: walking animation unused
-		Start: 42
-		Length: 104
-		ShadowStart: 190
-	die6: electro
-		Length: *		
 	icon: stalkericon
 
 colossi:
