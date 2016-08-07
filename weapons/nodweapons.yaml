@@ -261,7 +261,7 @@ BCLazor:
 		BeamDuration: 20
 	Warhead@1Dam: SpreadDamage
 		Spread: 96
-		Damage: 25
+		Damage: 35
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_explosion

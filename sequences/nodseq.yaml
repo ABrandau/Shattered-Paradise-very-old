@@ -1142,6 +1142,7 @@ apache:
 ##########################################################		
 		
 blackhanddummy:
+	Inherits@1: ^InfantryDeathAnims
 	Inherits: ^EmpOverlay
 	idle: dot
 		UseTilesetCode: false

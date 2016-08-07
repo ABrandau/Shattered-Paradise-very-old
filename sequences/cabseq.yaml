@@ -119,6 +119,7 @@ cybdog:
 	icon: dogicon
 
 cabsentry:
+	Inherits@1: ^InfantryDeathAnims
 	stand:
 		Facings: -32
 		ShadowStart: 40
@@ -479,7 +480,7 @@ jenn:
 
 dino:
 	Defaults:
-		Offset: 0, -8
+		# Offset: 0, -8
 	shoot:
 		Facings: 8
 		ShadowStart: 72
@@ -560,7 +561,37 @@ ecm:
 		Length: *
 		ZOffset: 512
 		BlendMode: Additive	
-	
+
+spiderarty:
+	Defaults:
+		# Offset: 0, -8
+	idle:
+		Facings: -8
+		ShadowStart: 120
+	shoot:
+		Start: 80
+		Length: 5
+		Facings: 8
+		Tick: 150
+		ShadowStart: 200
+	stand:
+		Facings: -8
+		ShadowStart: 120
+	run:
+		Start: 16
+		Length: 8
+		Facings: 8
+		Tick: 90
+		ShadowStart: 136
+	muzzle: gunfire
+		Length: *
+	emp-overlay: emp_fx01
+		Length: *
+		ZOffset: 512
+		BlendMode: Additive
+	icon: spiderartyicon
+		Offset: 0, 0
+
 blaster:	
 	icon: blastericon
 	emp-overlay: emp_fx01
@@ -740,10 +771,12 @@ cabobelisk:
 		Start: 30
 		Length: 5
 		ShadowStart: 83
+		Tick: 65
 	damaged-idle:
 		Start: 42
 		Length: 6
 		ShadowStart: 92
+		Tick: 65
 	dead:
 		Start: 42
 		Length: 6

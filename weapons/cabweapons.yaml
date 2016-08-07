@@ -22,7 +22,7 @@ CyborgVulcan:
 		ValidImpactTypes: Water		
 
 SentryGun:
-	Inherits: ^APWarhead
+	Inherits: ^FullDamage
 	ReloadDelay: 60
 	Range: 4c0
 	Report: 120mmf.aud
@@ -33,8 +33,8 @@ SentryGun:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 60
-		Damage: 10
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		Damage: 6
+		DamageTypes: Prone50Percent, TriggerProne, CabalDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn
 		ImpactSound: expnew14.aud
@@ -54,7 +54,7 @@ ReaperMortar:
 	Range: 9c0
 	Burst: 3
 	Report: 120mmf.aud
-	ValidTargets: Ground, Infantry, Vehicle
+	ValidTargets: Ground, Infantry
 	Projectile: Bullet
 		Speed: 150
 		Image: 120mm
@@ -67,7 +67,7 @@ ReaperMortar:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 5
-		ValidTargets: Ground, Infantry, Vehicle
+		ValidTargets: Ground, Infantry
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
@@ -168,13 +168,16 @@ LurkerHit:
 	Burst: 2
 	BurstDelay: 15
 	Report: 120mmf.aud
-	Projectile: Bullet
-		Speed: 70
+	Projectile: Missile
+		Speed: 100
 		TrailImage: lurkertrail
 		TrailPalette: playercab
+		HorizontalRateOfTurn: 8
+		RangeLimit: 7c204
+		MaximumLaunchSpeed: 213
 		Inaccuracy: 1c0
 	Warhead@1Dam: SpreadDamage
-		Spread: 90
+		Spread: 120
 		Damage: 25
 		Versus:
 			Worker: 25
@@ -362,9 +365,9 @@ TermitaGrinder:
 
 DevourerShell:
 	Inherits: ArtilleryWarhead
-	ReloadDelay: 125
-	Burst: 2
+	ReloadDelay: 150
 	Range: 15c0
+	Burst: 2
 	BurstDelay: 15
 	MinRange: 4c0
 	Report: hovrmis1.aud
@@ -380,8 +383,10 @@ DevourerShell:
 		Angle: 150
 		RangeLimit: 35
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 40
+		Spread: 256
+		Damage: 30
+		Versus:
+			Worker: 25
 		ValidTargets: Ground, Vehicle, Infantry, water
 		DamageTypes: Prone50Percent, TriggerProne, CabalDeath
 	Warhead@2Eff: CreateEffect
@@ -396,13 +401,14 @@ DevourerShell:
 	Warhead@5: LeaveSmudge
 		SmudgeType: SmallCrater
 		InvalidTargets: Vehicle, Building, Wall
-	Warhead@nomnomnom: GrantUpgrade
-		Range: 1c512
-		Duration: 400
-		Upgrades: nomnomnom
-		ValidTargets: Ground
-		ValidStances: Enemy
-	
+
+DevourerShellSpawner:
+	Inherits: DevourerShell
+	Warhead@5Actor: SpawnActor
+		Actors: CABSENTRY
+		FallRate: 5000
+		Range: 3
+
 ecmwave:
 	ReloadDelay: 125
 	Range: 7c0

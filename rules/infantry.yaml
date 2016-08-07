@@ -1076,15 +1076,13 @@ CABSENTRY:
 	Inherits@1: ^CabRender
 	Armor:
 		Type: None
+	Armor@worker:
+		Type: Worker
 	Valued:
 		Cost: 90
 	Tooltip:
 		Name: Sentry Drone
 		Description: Hover Drone armed with armor piercing weaponry.\nVery fragile, it can hide and cannot attack aircraft.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
-	# Buildable:
-		# Queue: Infantry
-		# BuildPaletteOrder: 12
-		# Prerequisites: ~cabclaw
 	Explodes:
 		Weapon: DroneExplode
 		EmptyWeapon: DroneExplode
@@ -1092,47 +1090,32 @@ CABSENTRY:
 		Payload: 35
 		Voice: Move
 	Voiced:
-		VoiceSet: Cyborg
+		VoiceSet: Limpet
+	-ActorLostNotification:
+	-UpdatesPlayerStatistics:
 	Mobile:
 		Speed: 70
-		UpgradeTypes: notmobile
-		UpgradeMaxEnabledLevel: 0
+	SelfHealing:
+		Step: -5
+		Delay: 25
+		HealIfBelow: 200
+	-SelfHealing@Scrin:
 	Health:
-		HP: 90
+		HP: 50
 	Passenger:
 	Armament@primary:
 		Weapon: SentryGun
+	AutoTarget:
+		ScanRadius: 8
+		InitialStance: AttackAnything
 	RenderSprites:
 		Scale: 0.7
 	AttackFrontal:
 		Voice: Attack
 	SelectionDecorations:
 		VisualBounds: 22,32,-1,-9
-	DeployToUpgrade:
-		DeployedUpgrades: deployed, notmobile
-		UndeployedUpgrades: undeployed
-		DeployAnimation: make
-		Facing: 160
-		AllowedTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green
-		DeploySound: place2.aud
-		UndeploySound: clicky1.aud
 	Hovers:
-		UpgradeTypes: undeployed
-		UpgradeMinEnabledLevel: 1
 	WithInfantryBody:
-		UpgradeTypes: undeployed
-		UpgradeMinEnabledLevel: 1
-	WithSpriteBody@deployed:
-		UpgradeTypes: undeployed
-		UpgradeMaxEnabledLevel: 0
-	RangeMultiplier:
-		UpgradeTypes: deployed
-		Modifier: 1
-	Cloak@asd:
-		Palette: cloakcab
-		IsPlayerPalette: true
-		UpgradeTypes: deployed
-		UpgradeMinEnabledLevel: 1
 
 CYBORG:
 	Inherits: ^Cyborg
@@ -1290,7 +1273,7 @@ MOTH:
 	Voiced:
 		VoiceSet: Limpet
 	Mobile:
-		Speed: 70
+		Speed: 60
 		UpgradeTypes: notmobile
 		UpgradeMaxEnabledLevel: 0
 	Health:
@@ -1487,6 +1470,8 @@ WORKER:
 		HP: 90
 	Mobile:
 		Speed: 56
+	Voiced:
+		VoiceSet: Cyborg
 	SupplyTruck
 		Payload: 45
 		Voice: Move
@@ -1523,7 +1508,7 @@ PALADIN2:
 	RevealsShroud:
 		Range: 8c0
 	SupplyTruck
-		Payload: 150
+		Payload: 350
 		Voice: Move
 	BodyOrientation:
 		QuantizedFacings: 32
@@ -1558,7 +1543,7 @@ cybdog:
 	Voiced:
 		VoiceSet: Limpet
 	SupplyTruck
-		Payload: 100
+		Payload: 150
 		Voice: Move
 	Mobile:
 		Speed: 65

@@ -1406,9 +1406,11 @@ DINO:
 		QuantizedFacings: 32
 	WithInfantryBody:
 	AttackFrontal:
+	WithMuzzleOverlay:
 	Armament:
 		Weapon: SeekerBazooka
 		LocalOffset: 200,0,1000
+		MuzzleSequence: muzzle
 	AutoTarget:
 	Selectable:
 		Bounds: 40, 36, 0, -16
@@ -1605,6 +1607,48 @@ CABAPC:
 		StationaryInterval: 18
 		MovingInterval: 6
 
+SPIDERARTY:
+	Inherits: ^Tank
+	Inherits@2:	^CyborgSelfHeal
+	Inherits@5: ^CabRender
+	Valued:
+		Cost: 1300
+	Tooltip:
+		Name: Devourer
+		Description: Heavy Artillery.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 23
+		Prerequisites: ~cabweap, cabtech
+	Mobile:
+		TurnSpeed: 12
+		Speed: 70
+		Crushes: crate
+		TerrainSpeeds:
+	Voiced:
+		VoiceSet: Limpet
+	Health:
+		HP: 350
+	Armor:
+		Type: wood
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithMuzzleOverlay:
+	WithInfantryBody:
+		AttackSequence: shoot
+	AttackFrontal:
+	Armament:
+		Weapon: DevourerShell
+		LocalOffset: -500,-150,900, -300,150,1200
+		MuzzleSequence: muzzle
+	Armament@2:
+		Weapon: DevourerShellSpawner
+		LocalOffset: -500,150,900, -300,-150,1200
+		MuzzleSequence: muzzle
+	AutoTarget:
+	Selectable:
+		Bounds: 40, 36, 0, -16
+
 BLASTER:
 	Inherits: ^VoxelVehicle
 	Inherits@1: ^Ra2vxl
@@ -1614,10 +1658,6 @@ BLASTER:
 	Tooltip:
 		Name: Devourer
 		Description: Hover Artillery.\nHis weapon slowly dissasembles enemies.\nThat effect bypasses armor.\nCan move on water.\n Special Ability: Vehicles killed by this unit will spawn Drones.
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 23
-		Prerequisites: ~cabweap, cabtech
 	Mobile:
 		TurnSpeed: 6
 		Speed: 113
