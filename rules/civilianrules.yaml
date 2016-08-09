@@ -706,6 +706,21 @@ CARGOCAR:
 		# PipCount: 5
 
 ##############################################
+# Gate
+##############################################
+
+NAGATE_A:
+	Inherits: ^Gate_A
+	Buildable:
+		Queue: Defense
+		BuildPaletteOrder: 100
+		Prerequisites: ~sharedwall
+	Tooltip:
+		Name: Gate
+	RenderSprites:
+		Image: gate_a.nod
+
+##############################################
 # Structures
 ##############################################
 ABAN01:

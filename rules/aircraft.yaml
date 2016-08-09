@@ -1270,11 +1270,11 @@ WASP:
 		VoiceSet: Limpet
 	Armament@Primary:
 		Weapon: WaspLasor
-		LocalOffset: 200,0,-100
+		LocalOffset: 200,350,-100
 	Armament@Secondary:
-		Weapon: WaspBazooka
+		Weapon: WaspLasor
 		AmmoPoolName: Rocket
-		LocalOffset: 200,-350,-100, 200,350,-100
+		LocalOffset: 200,-350,-100
 	AttackHeli:
 		FacingTolerance: 20
 		Voice: Attack
@@ -1282,14 +1282,6 @@ WASP:
 		PipCount: 0
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-	AmmoPool@Rocket:
-		Ammo: 2
-		PipCount: 0
-		SelfReloads: true
-		SelfReloadDelay: 250
-		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty
-		Name: Rocket
 	AutoTarget:
 	-RenderVoxels:
 	-WithVoxelBody:

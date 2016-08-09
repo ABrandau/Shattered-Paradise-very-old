@@ -160,7 +160,7 @@ PsykerRay:
 		ImpactSound: expnew09.aud
 	Warhead@4: LeaveSmudge
 		SmudgeType: SmallCrater
-	InvalidTargets: Vehicle, Building, Wall		
+		InvalidTargets: Vehicle, Building, Wall		
 		
 ################################################
 # GARRISON
@@ -378,7 +378,7 @@ TiberianRocket:
 	Inherits: ArtilleryWarhead
 	ReloadDelay: 250
 	Range: 12c0
-	Burst: 3
+	Burst: 5
 	Report: rketinf1.aud
 	ValidTargets: Ground
 	MinRange: 3c0
@@ -414,7 +414,7 @@ TiberianRocket:
 
 TiberianRocket2:
 	Inherits: TiberianRocket
-	Burst: 6
+	Burst: 4
 	Delay: 10
 	Projectile: Bullet
 		Inaccuracy: 20

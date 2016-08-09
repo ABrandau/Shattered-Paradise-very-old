@@ -554,7 +554,7 @@ ARMH:
 		Ammo: 10
 		PipCount: 5
 		PipType: Ammo
-		SelfReloadsTicks: 50
+		SelfReloadsTicks: 60
 		SelfReloads: true
 		ReloadCount: 1
 		ReloadTicks: 50
@@ -942,6 +942,7 @@ MLRS:
 		TurnSpeed: 5
 		Offset: -200,0,0
 	AutoTarget:
+		InitialStanceAI: Defend
 	WithVoxelTurret:
 
 HVRTRUK3:
@@ -1409,7 +1410,7 @@ DINO:
 	WithMuzzleOverlay:
 	Armament:
 		Weapon: SeekerBazooka
-		LocalOffset: 200,0,1000
+		LocalOffset: 200,0,750
 		MuzzleSequence: muzzle
 	AutoTarget:
 	Selectable:
@@ -1570,7 +1571,7 @@ CABAPC:
 	Valued:
 		Cost: 750
 	Tooltip:
-		Name: Amphibious APC
+		Name: Hover APC
 		Description: Armored infantry transport.\nCan move on water.\n  Unarmed
 	Buildable:
 		Queue: Vehicle
@@ -1612,10 +1613,10 @@ SPIDERARTY:
 	Inherits@2:	^CyborgSelfHeal
 	Inherits@5: ^CabRender
 	Valued:
-		Cost: 1300
+		Cost: 1500
 	Tooltip:
 		Name: Devourer
-		Description: Heavy Artillery.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+		Description: Heavy Artillery.\nSpawns drones at the target area.\nConverts what it kills into cyborgs.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 23

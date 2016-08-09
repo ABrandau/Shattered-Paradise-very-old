@@ -274,6 +274,7 @@ swarmling:
 	icon: swarmlingicon	
 	
 reapercab:
+	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
 	stand:
@@ -296,20 +297,6 @@ reapercab:
 	shoot:
 		Facings: -8
 		ShadowStart: 117
-	die5: # TODO: unused running frame 322 and following
-		Start: 104
-		Length: 13
-		ShadowStart: 221
-	die4:
-		Start: 104
-		Length: 13
-		ShadowStart: 221	
-	die3:
-		Start: 104
-		Length: 13
-		ShadowStart: 221
-	die6: electro
-		Length: *
 	icon: reapercabicon
 
 moth:

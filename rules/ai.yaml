@@ -199,11 +199,10 @@ Player:
 			float: 7
 			bug: 4
 #T1 Vehicle#
-
 			smech: 7
 			bggy: 7
 			mutapc: 7
-			jenn: 7
+			dino: 7
 			mmch: 7
 			muttank: 10
 			centurion: 10
@@ -227,7 +226,7 @@ Player:
 			hmec: 1
 			armh: 5
 			jugger: 5
-			blaster: 5
+			spiderarty: 5
 			mrls: 5
 #T1 Air#
 			wasp: 10
@@ -277,7 +276,7 @@ Player:
 			bggy: 5%
 			mutapc: 5%
 			muttank: 7%
-			jenn: 5%
+			dino: 5%
 			centurion: 7%
 			scrscorpion: 5%
 			scrglyder1: 7%
@@ -298,7 +297,7 @@ Player:
 			stnk: 12%
 			mrls: 12%
 			deathclaw: 12%
-			blaster: 12%
+			spiderarty: 12%
 			paladin: 12%
 			tripod: 12%
 #T1 Air#
@@ -516,7 +515,7 @@ Player:
 			smech: 7
 			bggy: 7
 			mutapc: 7
-			jenn: 7
+			dino: 7
 			mmch: 7
 			muttank: 10
 			centurion: 10
@@ -540,7 +539,7 @@ Player:
 			hmec: 1
 			armh: 5
 			jugger: 5
-			blaster: 5
+			spiderarty: 5
 			mrls: 5
 #T1 Air#
 			wasp: 10
@@ -590,7 +589,7 @@ Player:
 			bggy: 5%
 			mutapc: 5%
 			muttank: 7%
-			jenn: 5%
+			dino: 5%
 			centurion: 7%
 			scrscorpion: 5%
 			scrglyder1: 7%
@@ -611,7 +610,7 @@ Player:
 			stnk: 12%
 			mrls: 12%
 			deathclaw: 12%
-			blaster: 12%
+			spiderarty: 12%
 			paladin: 12%
 			tripod: 12%
 #T1 Air#
@@ -848,10 +847,10 @@ Player:
 			pdrone: 2
 			glad: 2
 			cyc2: 1
-			jenn: 18
+			dino: 18
 			centurion: 16
 			grinder: 16
-			blaster: 15
+			spiderarty: 15
 			paladin: 15
 			wasp: 0
 			basilisk: 0
@@ -916,10 +915,10 @@ Player:
 			pdrone: 1%
 			glad: 1%
 			cyc2: 5%
-			jenn: 7.5%
+			dino: 7.5%
 			centurion: 25%
 			grinder: 25%
-			blaster: 20.5%
+			spiderarty: 20.5%
 			paladin: 30%
 #SCRIN#
 			shark: 1%
@@ -1149,10 +1148,10 @@ Player:
 			pdrone: 20
 			glad: 20
 			cyc2: 1
-			jenn: 20
+			dino: 20
 			centurion: 6
 			grinder: 6
-			blaster: 5
+			spiderarty: 5
 			paladin: 5
 #SCRIN#
 			shark: 15
@@ -1202,7 +1201,7 @@ Player:
 			reapercab: 0.5%
 			pdrone: 1%
 			glad: 1%
-			jenn: 1.5%
+			dino: 1.5%
 			centurion: 1%
 			grinder: 5%
 #SCRIN#
@@ -1441,10 +1440,10 @@ Player:
 			pdrone: 1
 			glad: 15
 			cyc2: 1
-			jenn: 0
+			dino: 0
 			centurion: 15
 			grinder: 2
-			blaster: 15
+			spiderarty: 15
 			paladin: 15
 			wasp: 0
 			basilisk: 10
@@ -1505,7 +1504,7 @@ Player:
 			cyc2: 35%
 			centurion: 35%
 			grinder: 35%
-			blaster: 73.5%
+			spiderarty: 73.5%
 			paladin: 35.5%
 			basilisk: 32.5%
 #SCRIN#

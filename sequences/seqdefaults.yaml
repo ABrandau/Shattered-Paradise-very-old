@@ -19,6 +19,9 @@
 		Length: *
 	die6: electro
 		Length: *
+	diebody: death_a
+		Length: *
+		Tick: 800
 	webguy: webguy
 		Length: 6
 		ShadowStart: 6

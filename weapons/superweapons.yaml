@@ -276,6 +276,7 @@ MeteorRain:
 	Inherits: ^BombWarhead
 	ReloadDelay: 8
 	Range: 1c0
+	Report: Meteor1.aud #meteor2.aud
 	ValidTargets: Ground, Vehicle, Building, Infantry, Water
 	Projectile: Bullet
 		Speed: 300
@@ -379,6 +380,7 @@ IonRay:
 	ReloadDelay: 6
 	Range: 12c0
 	Inaccuracy: 30c0
+	Report: expnew08.aud
 	Projectile: Bullet
 		Speed: 100c0
 		Inaccuracy: 30c0

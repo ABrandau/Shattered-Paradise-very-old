@@ -287,6 +287,11 @@ dragon:
 		Facings: 32
 		ZOffset: 1023
 
+web:
+	idle:
+		Length: *
+		ZOffset: 1023
+
 crystal4:
 	idle:
 		Length: 15

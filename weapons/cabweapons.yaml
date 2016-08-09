@@ -53,15 +53,15 @@ ReaperMortar:
 	ReloadDelay: 75
 	Range: 9c0
 	Burst: 3
-	Report: 120mmf.aud
+	Report: fireweb1.aud
 	ValidTargets: Ground, Infantry
 	Projectile: Bullet
 		Speed: 150
-		Image: 120mm
+		Image: web
 		Shadow: true
 		Inaccuracy: 2c0
-		ContrailLength: 10
-		ContrailUsePlayerColor: true
+		# ContrailLength: 10
+		# ContrailUsePlayerColor: true
 		Angle: 130
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
@@ -459,14 +459,16 @@ WaspLasor:
 	ReloadDelay: 50
 	Range: 6c0
 	Report: lastur1.aud
+	ValidTargets: Ground, Air
 	Projectile: LaserZap
 		BeamWidth: 1
 		BeamDuration: 5
 		Color: 0dc7b8#0080FFC8				
 	Warhead@1Dam: SpreadDamage
 		Spread: 125
-		Damage: 12
-		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath		
+		Damage: 6
+		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+		ValidTargets: Ground, Air
 		
 WaspBazooka:
 	Inherits: ^RocketWarhead
@@ -686,6 +688,7 @@ AARail:
 		DamageInterval: 2
 		Width: 0c100
 		BeyondTargetRange: 0c64
+		BeamDuration: 3
 		Blockable: true
 		Color: 0080FFC8
 	Warhead@1Dam: SpreadDamage

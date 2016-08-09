@@ -479,6 +479,20 @@
 		DeathPaletteIsPlayerPalette: False
 		DeathTypes:
 			EnergyDeath: 6
+	WithDeathAnimation@body:
+		DeathSequencePalette: effect
+		DeathPaletteIsPlayerPalette: False
+		DeathTypes: #1 2 normals, 3 headshot, 4 explosion
+			BulletDeath: body
+			TiberiumDeath: body
+			CabalDeath: body
+			CabalDeathCrate: body
+			BlackHandRfle: body
+			HeadshotDeath: body
+			SmallExplosionDeath: body
+			EnergyDeath: body
+			ExplosionDeath: body
+			FireDeath: body
 	AutoTarget:
 	AttackMove:
 		Voice: Move
