@@ -370,7 +370,7 @@ DevourerShell:
 	Burst: 2
 	BurstDelay: 15
 	MinRange: 4c0
-	Report: hovrmis1.aud
+	Report: 120mmf.aud
 	ValidTargets: Ground, Vehicle, Infantry, water
 	Projectile: Bullet
 		Speed: 150
@@ -381,7 +381,7 @@ DevourerShell:
 		ContrailLength: 10
 		ContrailUsePlayerColor: true
 		Angle: 150
-		RangeLimit: 35
+		RangeLimit: 25
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
 		Damage: 30

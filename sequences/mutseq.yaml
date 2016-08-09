@@ -552,14 +552,9 @@ deathclaw:
 # Vehicles
 ##########################################################		
 mutapc:
+	Inherits: ^EmpOverlay
 	Defaults:
 		Length: *
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
 	muzzle0: mgun-n
 	muzzle1: mgun-nw
 	muzzle2: mgun-w
@@ -571,53 +566,26 @@ mutapc:
 	icon: mutapcicon	
 
 muttank:
-	Inherits: ^BasicTankMuzzle
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: mutankicon	
 
 	
 mutquad:
-	Inherits: ^BasicTankMuzzle
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	muzzle: flakmuzzle
 		Length: *
 	icon: quadicon
 
 mlrs:
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: mutmrlsicon
 
 hvrtruk3:
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: hvrtrkicon
 	
 fortress:
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: fortressicon
 ##########################################################
 # Aircraft
@@ -635,21 +603,11 @@ mutbird:
 	icon: mutbirdicon		
 	
 wetp:
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: jeticon
 	
 mutheli:
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: kamovicon
 	rotor: lrotor
 		Length: 4

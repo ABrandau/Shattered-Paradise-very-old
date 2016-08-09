@@ -355,6 +355,7 @@ colossi:
 # Vehicles
 ##########################################################	
 drache:
+	Inherits: ^EmpOverlay
 	Defaults:
 		Tick: 150
 		Offset: 0, 0
@@ -377,27 +378,17 @@ drache:
 	make:
 		Start: 22
 		Length: 13
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive	
 
 drache.falling:
+	Inherits: ^EmpOverlay
 	Defaults: drache
 		Tick: 150
 		Offset: 0, 0
 	idle: drache
-		Start: 35
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive			
+		Start: 35		
 		
 scrharv:
+	Inherits: ^EmpOverlay
 	idle:
 		Facings: -32
 		ShadowStart: 33
@@ -407,14 +398,12 @@ scrharv:
 	dock-loop:
 		Start: 12
 		ShadowStart: 45
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
 	harvest: harvestr
 		Length: *
 	icon: scrharvicon
 
 scrscorpion:
+	Inherits: ^EmpOverlay
 	stand:
 		Stride: 16
 		Facings: 8
@@ -429,13 +418,11 @@ scrscorpion:
 		Stride: 16
 		Facings: 8
 		Tick: 100
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
 	icon: scrscorpionicon
 
 	
 scrmbt:
+	Inherits: ^EmpOverlay
 	idle:
 		Facings: 32
 		ShadowStart: 64
@@ -444,12 +431,10 @@ scrmbt:
 		Facings: 32
 	# muzzle: gunfire2
 		# Length: 2
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive		
 	icon: scrmbticon
 
 scrrecharger:
+	Inherits: ^EmpOverlay
 	stand:
 		Facings: -8
 		ShadowStart: 96
@@ -458,31 +443,25 @@ scrrecharger:
 		Facings: -8
 		Length: 11
 		ShadowStart: 104
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
 	icon: scrrechargericon
 	
 	
 scrdronec:
+	Inherits: ^EmpOverlay
 	idle:
-		Facings: 32
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive		
+		Facings: 32	
 	icon: scrdronecicon
 
 scrglyder2:
+	Inherits: ^EmpOverlay
 	idle: scrglyder
 		Start: 32
 		ShadowStart: 96
-		Facings: -32
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive		
+		Facings: -32	
 	icon: glider2icon
 	
 tripod:
+	Inherits: ^EmpOverlay
 	stand:
 		Start: 192
 		Facings: -8
@@ -497,62 +476,48 @@ tripod:
 		Facings: -8
 		ShadowStart: 527
 		Tick: 100
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
 	icon: tripodicon	
 ##########################################################
 # Aircraft
 ##########################################################
 scrpod:
+	Inherits: ^EmpOverlay
 	idle:
-		Facings: 32
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive		
+		Facings: 32	
 	icon: scrdestroyericon
 
 
 stormrider:
+	Inherits: ^EmpOverlay
 	idle:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive	
 	icon: stormridericon
 
 scrglyder1:
+	Inherits: ^EmpOverlay
 	idle: scrglyder
 		Facings: -32
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive		
 	icon: glider1icon
 
 scrdestroyer:
+	Inherits: ^EmpOverlay
 	idle:
 		Facings: 32
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive		
 	icon: scrdestroyericon	
 	
 scrtrans:
+	Inherits: ^EmpOverlay
 	idle:
 		Facings: -32
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive		
 	icon: scrtransporticon	
 	
 scrbattleship:
+	Inherits: ^EmpOverlay
 	idle:
 		Facings: 32
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive		
 	icon: scrbattleshipicon
 
 mothership:
+	Inherits: ^EmpOverlay
 	stand:
 		Start: 50
 		Facings: -8
@@ -565,12 +530,10 @@ mothership:
 		Start: 50
 		Length: 8
 		Facings: -8
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
 	icon: mothershipicon
 
 mothershipdep:
+	Inherits: ^EmpOverlay
 	Defaults: mothership
 		# Offset: 0, -36
 		ZOffset: -2048
@@ -592,15 +555,10 @@ mothershipdep:
 		Start: 50
 		Length: -9
 		ShadowStart: 154
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
 	icon: mothershipicon
 
 scrincouncil:
+	Inherits: ^EmpOverlay
 	Defaults:
 		Tick: 80
 		Offset: 0, 0
@@ -616,9 +574,6 @@ scrincouncil:
 		Length: 7
 		Facings: 1
 		Tick: 100
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive		
 	icon: councilicon
 	
 ##########################################################

@@ -313,12 +313,11 @@ chamspy:
 # Vehicles
 ##########################################################
 bike:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: cyclicon
 
 bggy:
+	Inherits: ^EmpOverlay
 	Defaults:
 		Length: *
 	muzzle0: mgun-n
@@ -329,11 +328,10 @@ bggy:
 	muzzle5: mgun-se
 	muzzle6: mgun-e
 	muzzle7: mgun-ne
-	emp-overlay: emp_fx01
-		BlendMode: Additive
 	icon: bggyicon
 
 ttnk:
+	Inherits: ^EmpOverlay
 	idle: gatick
 		ShadowStart: 3
 		Offset: 0, -12
@@ -345,50 +343,34 @@ ttnk:
 		Length: 24
 		ShadowStart: 24
 		Offset: 0, -12
-	muzzle: gunfire
-		Length: *
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
 	icon: tickicon
 
 sapc:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: sapcicon
 
 subtank:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: subticon	
 
 stnk:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: stnkicon	
 
 sgen:
+	Inherits: ^EmpOverlay
 	icon: mstlicon
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive	
 
 repair:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: rboticon
 
 armh:
-	icon: beamcannonicon	
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive	
+	Inherits: ^EmpOverlay
+	icon: beamcannonicon
 
 limped:
+	Inherits: ^EmpOverlay
 	stand:
 		Facings: 1
 		ShadowStart: 10
@@ -401,13 +383,11 @@ limped:
 		ShadowStart: 10	
 	make: dlimpmk
 		Length: 41
-		ShadowStart: 42
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive		
+		ShadowStart: 42	
 	icon: limpicon
 
 dlimpet:
+	Inherits: ^EmpOverlay
 	stand:
 		Facings: 1
 		ShadowStart: 3
@@ -416,17 +396,11 @@ dlimpet:
 		ShadowStart: 3	
 	make: dlimpmk
 		Length: 41
-		ShadowStart: 42
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive		
+		ShadowStart: 42	
 	icon: limpicon
 
 icbm:
-	emp-overlay: emp_fx01
-		Length: *
-		ZOffset: 512
-		BlendMode: Additive	
+	Inherits: ^EmpOverlay
 ##########################################################
 # Structures
 ##########################################################	

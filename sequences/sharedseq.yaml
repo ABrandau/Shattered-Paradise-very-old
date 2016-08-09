@@ -232,62 +232,47 @@ engineer.nod:
 # Vehicles
 ##########################################################
 mcv.gdi:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: sidebar-gdi|mcvicon
 	
 mcv.nod:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: sidebar-nod|mcvicon
 
 mcv.mut:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: mutmcvicon
 
 mcv.cab:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: cabmcvicon
 	
 harv.gdi:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	harvest: harvestr
 		Length: *
 	icon: sidebar-gdi|harvicon	
 	
 harv.nod:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	harvest: harvestr
 		Length: *
 	icon: sidebar-nod|harvicon	
 
 harv.mut:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	harvest: harvestr
 		Length: *
 	icon: mutharvicon
 
 harv.cab:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	harvest: harvestr
 		Length: *
 	icon: cabharvicon
 
 lpst.gdi:
+	Inherits: ^EmpOverlay
 	idle: gadpsa
 		Offset: 0, -12
 		ShadowStart: 3
@@ -295,12 +280,10 @@ lpst.gdi:
 		Offset: 0, -12
 		Length: 36
 		ShadowStart: 36
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
 	icon: sidebar-gdi|lpsticon
 
 lpst.nod:
+	Inherits: ^EmpOverlay
 	idle: gadpsa
 		Offset: 0, -12
 		ShadowStart: 3
@@ -308,9 +291,6 @@ lpst.nod:
 		Offset: 0, -12
 		Length: 36
 		ShadowStart: 36
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
 	icon: sidebar-nod|lpsticon	
 ##########################################################
 # Structures

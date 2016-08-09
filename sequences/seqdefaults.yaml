@@ -1,9 +1,3 @@
-^BasicTankMuzzle:
-	Defaults:
-		Length: *
-	muzzle: gunfire
-		Length: *
-
 ^EmpOverlay:
 	emp-overlay: emp_fx01
 		Length: *
@@ -11,6 +5,13 @@
 		UseTilesetCode: false
 		ZOffset: 512
 		BlendMode: Additive
+	veins: veinatac
+		Length: 12
+		UseTilesetExtension: true
+		ZOffset: 1023
+		Offset: 0, -12
+	muzzle: gunfire
+		Length: *
 		
 ^InfantryDeathAnims:
 	die3: infdie

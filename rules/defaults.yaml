@@ -504,8 +504,9 @@
 	Crushable:
 		CrushSound: squish6.aud
 	DamagedByTerrain:
+		Damage: 2
+		DamageInterval: 25
 		Terrain: Tiberium, BlueTiberium
-		Weapon: Tiberium
 	SpawnActorOnDeath@FLAMEGUY:
 		Actor: FLAMEGUY
 		DeathType: FireDeath
@@ -591,8 +592,9 @@
 			Prone350Percent: 350
 		DamageTriggers: TriggerProne
 	DamagedByTerrain:
+		Damage: -2
+		DamageInterval: 16
 		Terrain: Tiberium, BlueTiberium
-		Weapon: TiberiumHeal
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
 		AttackSequence: shoot
@@ -736,9 +738,17 @@
 		Bounds: 40,30
 	SelectionDecorations:
 		Palette: pips
-	DamagedByTerrain:
-		Weapon: Veins
+	DamagedByTerrain@veins:
+		Damage: 6
+		DamageInterval: 12
 		Terrain: Veins
+	UpgradeOnTerrain@VEINS:
+		TerrainTypes: Veins
+		Upgrades: veins
+	WithIdleOverlay@VEINS:
+		Sequence: veins
+		UpgradeTypes: veins
+		UpgradeMinEnabledLevel: 1
 	SpawnActorOnDeath@conversion:
 		Actor: PALADIN2
 		Probability: 100
@@ -970,7 +980,7 @@
 		Moves: true
 		Velocity: 86
 
-^Viceroid:
+^Visceroid:
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	DrawLineToTarget:
@@ -1002,7 +1012,8 @@
 	AttackMove:
 	HiddenUnderFog:
 	DamagedByTerrain:
-		Weapon: TiberiumHeal
+		Damage: -2
+		DamageInterval: 16
 		Terrain: Tiberium, BlueTiberium
 	Guardable:
 	WithSpriteBody:

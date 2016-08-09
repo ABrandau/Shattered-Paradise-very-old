@@ -307,6 +307,7 @@ eagleguard:
 # Vehicles
 ##########################################################
 smech:
+	Inherits: ^EmpOverlay
 	stand:
 		Start: 96
 		Facings: -8
@@ -321,25 +322,19 @@ smech:
 		Facings: -8
 		ShadowStart: 240
 		Tick: 100
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
+
 	icon: smchicon
 
 hmec:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: hmecicon
 
 sonic:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: soniicon
 
 mmch:
-	Inherits: ^BasicTankMuzzle
+	Inherits: ^EmpOverlay
 	stand:
 		Facings: -8
 		Length: 1
@@ -353,24 +348,18 @@ mmch:
 		Start: 120
 		Length: 1
 		Facings: -32
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
 	icon: mmchicon
 
 apc:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: apcicon
 
 hvr:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: hovricon
 
 jugger:
+	Inherits: ^EmpOverlay
 	stand:
 		Facings: -8
 		Stride: 15
@@ -379,26 +368,24 @@ jugger:
 		Length: 15
 		Facings: -8
 		ShadowStart: 120
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive		
 	icon: juggicon
 ##########################################################
 # Aircraft
 ##########################################################
 orca:
+	Inherits: ^EmpOverlay
 	icon: orcaicon
 
 orcab:
+	Inherits: ^EmpOverlay
 	icon: obmbicon
 	
 orcatran:
+	Inherits: ^EmpOverlay
 	icon: crryicon		
 
 guardian:
+	Inherits: ^EmpOverlay
 	stand:
 		Facings: 32
 	idle:
@@ -406,8 +393,6 @@ guardian:
 	run:
 		Tick: 90
 		Facings: 32
-	muzzle: gunfire
-		Length: *
 	icon: guardianicon
 ##########################################################
 # Structures

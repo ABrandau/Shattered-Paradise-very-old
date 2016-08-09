@@ -153,58 +153,31 @@ civ3:
 # Vehicles
 ##########################################################	
 trucka:
-	emp-overlay: emp_fx01
-		Length: *
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 
 truckb:
-	emp-overlay: emp_fx01
-		Length: *
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 
 bus:
-	emp-overlay: emp_fx01
-		Length: *
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 
 pick:
-	emp-overlay: emp_fx01
-		Length: *
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 
 car:
-	emp-overlay: emp_fx01
-		Length: *
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 
 wini:
-	emp-overlay: emp_fx01
-		Length: *
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 
 locomotive:
-	emp-overlay: emp_fx01
-		Length: *
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 
 traincar:
-	emp-overlay: emp_fx01
-		Length: *
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 
 cargocar:
-	emp-overlay: emp_fx01
-		Length: *
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 ##########################################################
 # Structures
 ##########################################################			

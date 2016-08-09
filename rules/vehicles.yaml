@@ -1106,9 +1106,8 @@ SCRSCORPION:
 		Type: Light
 	AttackFrontal:
 		Voice: Attack
-	DamagedByTerrain@buff:
-		Weapon: ScorpBuffer
-		Terrain: Tiberium, BlueTiberium
+	UpgradeOnTerrain@buff:
+		Upgrades: ScorpBuffer
 	AutoTarget:
 	Armament@PRIMARY:
 		Weapon: ScorpAcid

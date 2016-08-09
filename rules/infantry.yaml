@@ -215,7 +215,7 @@ CRUSADER:
 	RenderSprites:
 
 TEMPLAR:
-	Inherits: ^Soldier
+	Inherits: ^Mutant
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 8
@@ -234,9 +234,6 @@ TEMPLAR:
 	Armament@PRIMARY:
 		Weapon: TemplarLasor
 		LocalOffset: 200,50,320
-	DamagedByTerrain:
-		Weapon: TiberiumHeal
-		Terrain: Tiberium, BlueTiberium
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:
@@ -246,7 +243,7 @@ TEMPLAR:
 	RenderSprites:
 
 MHIJACK:
-	Inherits: ^Soldier
+	Inherits: ^Mutant
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 9
@@ -261,9 +258,6 @@ MHIJACK:
 	-Crushable:
 	Health:
 		HP: 110
-	DamagedByTerrain:
-		Weapon: TiberiumHeal
-		Terrain: Tiberium, BlueTiberium
 	Targetable:
 		TargetTypes: Ground, Infantry, MindControlInmune
 	Mobile:
@@ -286,7 +280,7 @@ MHIJACK:
 		AttackSequence: shoot
 
 BHS:
-	Inherits: ^Soldier
+	Inherits: ^Mutant
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 10
@@ -305,9 +299,6 @@ BHS:
 		HP: 190
 	Mobile:
 		Speed: 80
-	DamagedByTerrain:
-		Weapon: TiberiumHeal
-		Terrain: Tiberium, BlueTiberium
 	Voiced:
 		VoiceSet: Oxanna
 	Armament@PRIMARY:
@@ -559,9 +550,8 @@ MUTFIEND:
 		Name: OnFoot
 	Armament@Garrison:
 		Weapon: GFiendShard2
-	DamagedByTerrain@buff:
-		Weapon: FiendBuffer
-		Terrain: Tiberium, BlueTiberium
+	UpgradeOnTerrain@buff:
+		Upgrades: FiendCloak
 	Cloak@CLOAKGENERATOR:
 		UpgradeTypes: FiendCloak, cloakgenerator
 		UpgradeMinEnabledLevel: 1

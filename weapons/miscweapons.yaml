@@ -68,35 +68,22 @@ Tiberium:
 		Spread: 42
 		Damage: 2
 		DamageTypes: TiberiumDeath
-		
-ScorpBuffer:
-	ReloadDelay: 125
-	Warhead@1Dam: SpreadDamage
-		Spread: 42
-		Damage: 1
-			None: 1
-			Wood: 1
-			Light: 1
-			Heavy: 1
-			Concrete: 10		
-		DamageTypes: EnergyDeath # TODO: FIX ME!		
-	Warhead@Buff: GrantUpgrade
-		Range: 1c0
-		Duration: 125
-		Upgrades: ScorpBuffer
 
-FiendBuffer:
-	ReloadDelay: 125
+Repair:
+	ReloadDelay: 80
+	Range: 1c819
+	Report: REPAIR11.AUD
+	ValidTargets: Repair
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		DebugOverlayColor: 00FF00
+		Spread: 213
+		Damage: -50
+		ValidTargets: Repair
+
+TiberiumHeal:
+	ReloadDelay: 16
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 1
-			None: 1
-			Wood: 1
-			Light: 1
-			Heavy: 1
-			Concrete: 10		
-		DamageTypes: EnergyDeath # TODO: FIX ME!		
-	Warhead@Buff: GrantUpgrade
-		Range: 1c0
-		Duration: 125
-		Upgrades: FiendCloak			
+		Damage: -2

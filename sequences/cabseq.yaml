@@ -441,6 +441,7 @@ cyc2:
 # Vehicles
 ##########################################################	
 jenn:
+	Inherits: ^EmpOverlay
 	shoot:
 		Start: 96
 		Facings: -8
@@ -466,6 +467,7 @@ jenn:
 	icon: jennicon
 
 dino:
+	Inherits: ^EmpOverlay
 	Defaults:
 		# Offset: 0, -8
 	shoot:
@@ -493,7 +495,7 @@ dino:
 		Offset: 0, 0
 
 centurion:
-	Inherits: ^BasicTankMuzzle
+	Inherits: ^EmpOverlay
 	stand:
 		Facings: -8
 		Length: 1
@@ -527,31 +529,21 @@ centurion:
 		Length: 1
 		ShadowStart:  278
 		Offset: 0, 12
-	emp-overlay: emp_fx01
-		Length: *
-		ZOffset: 512
-		BlendMode: Additive
 	icon: centurionicon
 	
 cabapc:
+	Inherits: ^EmpOverlay
 	icon: cabapcicon
 	idle:	
-	emp-overlay: emp_fx01
-		Length: *
-		ZOffset: 512
-		BlendMode: Additive	
 
 ecm:
+Inherits: ^EmpOverlay
 	icon: ecmicon
 	idle:
-	emp-overlay: emp_fx01
-		Length: *
-		ZOffset: 512
-		BlendMode: Additive	
 
 spiderarty:
+	Inherits: ^EmpOverlay
 	Defaults:
-		# Offset: 0, -8
 	idle:
 		Facings: -8
 		ShadowStart: 120
@@ -570,30 +562,19 @@ spiderarty:
 		Facings: 8
 		Tick: 90
 		ShadowStart: 136
-	muzzle: gunfire
-		Length: *
-	emp-overlay: emp_fx01
-		Length: *
-		ZOffset: 512
-		BlendMode: Additive
 	icon: spiderartyicon
 		Offset: 0, 0
 
-blaster:	
+blaster:
+	Inherits: ^EmpOverlay
 	icon: blastericon
-	emp-overlay: emp_fx01
-		Length: *
-		ZOffset: 512
-		BlendMode: Additive	
 	
 grinder:
+	Inherits: ^EmpOverlay
 	icon: grindericon
-	emp-overlay: emp_fx01
-		Length: *
-		ZOffset: 512
-		BlendMode: Additive	
-	
+
 paladin:
+	Inherits: ^EmpOverlay
 	stand:
 		Facings: -8
 		ShadowStart: 137
@@ -610,16 +591,13 @@ paladin:
 		Start: 73
 		Length: 8
 		Facings: -8
-		ShadowStart: 210
-	emp-overlay: emp_fx01
-		Length: *
-		ZOffset: 512
-		BlendMode: Additive		
+		ShadowStart: 210	
 	icon: paladinicon	
 ##########################################################
 # Aircraft
 ##########################################################	
 wasp:
+	Inherits: ^EmpOverlay
 	idle:
 		Facings: -32
 	stand:
@@ -627,11 +605,10 @@ wasp:
 	run:
 		Tick: 90
 		Facings: -32
-	muzzle: gunfire
-		Length: *
 	icon: waspicon	
 	
 firefly:
+	Inherits: ^EmpOverlay
 	idle:
 		Facings: -32
 	stand:
@@ -639,11 +616,10 @@ firefly:
 	run:
 		Tick: 90
 		Facings: -32
-	muzzle: gunfire
-		Length: *
 	icon: fireflyicon		
 	
 basilisk:
+	Inherits: ^EmpOverlay
 	icon: basiliskicon		
 ##########################################################
 # Structures

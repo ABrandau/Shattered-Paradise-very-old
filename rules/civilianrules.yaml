@@ -2,7 +2,7 @@
 # Infantry
 ##############################################
 GHOST:
-	Inherits: ^Soldier
+	Inherits: ^Mutant
 	Valued:
 		Cost: 1750
 	Tooltip:
@@ -14,9 +14,6 @@ GHOST:
 		Speed: 56
 	Health:
 		HP: 200
-	DamagedByTerrain:
-		Weapon: TiberiumHeal
-		Terrain: Tiberium, BlueTiberium
 	Passenger:
 	RevealsShroud:
 		Range: 6c0
@@ -57,7 +54,7 @@ WEEDGUY:
 		Voice: Attack
 
 UMAGON:
-	Inherits: ^Soldier
+	Inherits: ^Mutant
 	Valued:
 		Cost: 400
 	Tooltip:
@@ -68,9 +65,6 @@ UMAGON:
 		Speed: 71
 	Health:
 		HP: 150
-	DamagedByTerrain:
-		Weapon: TiberiumHeal
-		Terrain: Tiberium, BlueTiberium
 	Passenger:
 	RevealsShroud:
 		Range: 7c0
@@ -115,7 +109,7 @@ CHAMSPY:
 		IdleSequences: idle1,idle2
 
 MUTANT:
-	Inherits: ^Soldier
+	Inherits: ^Mutant
 	Valued:
 		Cost: 100
 	Tooltip:
@@ -124,9 +118,6 @@ MUTANT:
 		VoiceSet: Mutant
 	Health:
 		HP: 50
-	DamagedByTerrain:
-		Weapon: TiberiumHeal
-		Terrain: Tiberium, BlueTiberium
 	Mobile:
 		Speed: 56
 	RevealsShroud:
@@ -270,7 +261,7 @@ DOGGIE:
 		MaxMoveDelayInTicks: 45
 
 VISC_SML:
-	Inherits: ^Viceroid
+	Inherits: ^Visceroid
 	Tooltip:
 		Name: Baby Visceroid
 		Description: infantry transmorgifies into this
@@ -296,7 +287,7 @@ VISC_SML:
 		Voice: Attack		
 
 VISC_LRG:
-	Inherits: ^Viceroid
+	Inherits: ^Visceroid
 	Tooltip:
 		Name: Adult Visceroid
 		Description: 2 small visceroids combine into this
@@ -329,7 +320,7 @@ VISC_LRG:
 		Image: vislrg
 
 VISC_LRG_SCRIN:
-	Inherits: ^Viceroid
+	Inherits: ^Visceroid
 	Tooltip:
 		Name: Adult Visceroid
 		Description: 2 small visceroids combine into this
