@@ -464,6 +464,7 @@
 		DeathTypes: #1 2 normals, 3 headshot, 4 explosion
 			BulletDeath: 1
 			TiberiumDeath: 2
+			TiberiumDeathStrong: 2
 			CabalDeath: 2
 			CabalDeathCrate: 2
 			BlackHandRfle: 3
@@ -602,7 +603,7 @@
 		CrushedSequence: die-crushed
 		CrushedSequencePalette: player
 		CrushedPaletteIsPlayerPalette: true
-		
+
 ^Beast:
 	Inherits: ^Mutant
 	-TakeCover:
@@ -611,9 +612,9 @@
 		ValidDamageStates: Heavy, Critical
 	SelfHealing@BerserkBeast:
 		Step: 10
-		Delay: 150
-		Upgrade: berserk
-		UpgradeMinEnabledLevel: 1
+		Delay: 30
+		DamageCooldown: 200
+		HealIfBelow: 60
 
 ^ScrinSoldier:
 	Inherits: ^Infantry
@@ -702,7 +703,7 @@
 	Inherits@5: ^ROTreduction
 	Inherits@6: ^BurstRecovery
 	Inherits@7: ^firestormgen
-	Inherits@8: ^RejectsOrdersBerkserk	
+	Inherits@8: ^RejectsOrdersBerkserk
 	Inherits@9: ^NodToxindebuff
 	Inherits@10:^NodVehicleRepair
 	Inherits@11: ^nomnomnom

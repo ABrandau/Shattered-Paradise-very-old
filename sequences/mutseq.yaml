@@ -331,6 +331,7 @@ awarrior:
 	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
+		Zoffset: 5
 	stand:
 		Facings: 8
 		ShadowStart: 331
@@ -361,13 +362,48 @@ awarrior:
 		Length: 3
 		ShadowStart: 629
 		Tick: 800
-		ZOffset: -511
+		ZOffset: -200
 	shoot:
 		Ticks: 20
 		Start: 72
 		Length: 8
 		Facings: 8
 		ShadowStart: 402
+	muzzle0: flamebro
+		Start: 0
+		Length: 17
+		Tick: 30
+		ZOffset: -512
+	muzzle1: flamebro
+		Start: 17
+		Length: 17
+		Tick: 30
+		ZOffset: -512
+	muzzle2: flamebro
+		Start: 34
+		Length: 17
+		Tick: 30
+	muzzle3: flamebro
+		Start: 51
+		Length: 17
+		Tick: 30
+	muzzle4: flamebro
+		Start: 68
+		Length: 17
+		Tick: 30
+	muzzle5: flamebro
+		Start: 85
+		Length: 17
+		Tick: 30
+	muzzle6: flamebro
+		Start: 102
+		Length: 17
+		Tick: 30
+	muzzle7: flamebro
+		Start: 119
+		Length: 17
+		Tick: 30
+		ZOffset: -512
 	prone-run:
 		Start: 182
 		Length: 8

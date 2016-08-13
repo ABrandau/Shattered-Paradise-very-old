@@ -1169,7 +1169,7 @@ MUSTABLE:
 	Valued:
 		Cost: 500
 	Tooltip:
-		Name: Mutant Stable
+		Name: Training Grounds.
 		Description: Allows beast herding. Beasts\nbecome stronger when hurt,\ngain regenerative capabilities but they can't\nbe ordered while in  this state.
 	ProvidesPrerequisite:
 		Prerequisite: tech
@@ -1279,9 +1279,6 @@ SCRPOWR:
 	DisabledOverlay:
 	SelectionDecorations:
 		VisualBounds: 90, 84, 0, -12
-	StoresResources:
-		PipCount: 6
-		Capacity: 2000
 
 SCRADVPOWR:
 	Inherits: ^Building
@@ -1314,7 +1311,7 @@ SCRADVPOWR:
 	Selectable:
 		Bounds: 90, 48, 0, -6
 	Power:
-		Amount: 400
+		Amount: 300
 	InfiltrateForPowerOutage:
 	AffectedByPowerOutage:
 	Targetable:
@@ -1325,6 +1322,9 @@ SCRADVPOWR:
 		VisualBounds: 90, 84, 0, -12
 	Explodes:
 		Weapon: ReactorExplode
+	StoresResources:
+		PipCount: 6
+		Capacity: 2000
 
 SCRRAX:
 	Inherits: ^Building

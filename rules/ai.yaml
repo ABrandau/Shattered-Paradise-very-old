@@ -35,8 +35,8 @@ Player:
 		NewProductionCashThreshold: 90000
 		BuildingLimits:
 #PRODUCTION#
-			proc: 4
-			scrproc: 4
+			proc: 2
+			scrproc: 2
 			gasilo: 0
 #POWER#
 			napowr: 9
@@ -168,8 +168,8 @@ Player:
 			cabair: 5%
 		UnitLimits:
 #Harvesters#
-			harv: 5
-			scrharv: 5
+			harv: 4
+			scrharv: 4
 #T1 Inf#
 			gdie1: 18
 			marauder: 18

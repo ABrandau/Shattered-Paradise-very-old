@@ -291,14 +291,14 @@ SonicZap:
 MechRailgun:
 	ReloadDelay: 80
 	Range: 8c0
-	Burst: 1 # for alternating muzzle offsets, dmg/s identical to original
-	BurstDelay: 60
+	Burst: 2 # for alternating muzzle offsets, dmg/s identical to original
+	BurstDelay: 80
 	Report: railuse5.aud
 	Projectile: AreaBeam
 		Speed: 20c0
 		Duration: 3
 		DamageInterval: 2
-		Width: 0c128
+		Width: 150
 		BeyondTargetRange: 0c64
 		Blockable: true
 		Color: 00FFFFC8

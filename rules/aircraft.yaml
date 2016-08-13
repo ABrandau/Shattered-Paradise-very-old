@@ -1057,7 +1057,7 @@ SCRBATTLESHIP:
 	Inherits@3: ^SelfReloads
 	Inherits@4: ^BasicStealthDetection
 	Valued:
-		Cost: 3000
+		Cost: 2500
 	Tooltip:
 		Name: Battlecruiser
 		Description: Scrin spacecraft designed for frontline combat.\nEquipped with blaster turrets.\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft.
@@ -1090,6 +1090,9 @@ SCRBATTLESHIP:
 	Armament:
 		Weapon: BattleshipCannon
 		LocalOffset:0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
+	Armament@2:
+		Weapon: BattleshipRocketDummy
+		LocalOffset:0,0,0
 	AttackTurreted:
 	Turreted:
 	AmmoPool:
@@ -1198,10 +1201,7 @@ MOTHERSHIP:
 		Range: 14c0
 		Type: CenterPosition
 	Armament@1:
-		Weapon: BattleshipCannon
-		LocalOffset:0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
-	Armament@2:
-		Weapon: BattleshipCannon
+		Weapon: MothershipRocketDummy
 		LocalOffset:0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
 	ProduceActorPower@as:
 		Description: Energy Assimilator

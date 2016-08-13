@@ -537,9 +537,9 @@ cabapc:
 	idle:	
 
 ecm:
-Inherits: ^EmpOverlay
-	icon: ecmicon
+	Inherits: ^EmpOverlay
 	idle:
+	icon: ecmicon
 
 spiderarty:
 	Inherits: ^EmpOverlay

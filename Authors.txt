@@ -15,6 +15,7 @@ FiveAces		: Streaming and testing.
 SchismNavigator		: Worked on SP for some time.
 4XS			: For his help with concept art.
 Murto The Ray		: Testing and Balancing.
+ComradeCrimson		: For his help with some scrin weapon ideas.
 
 #Images and Others.
 

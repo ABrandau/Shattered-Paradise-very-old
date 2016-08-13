@@ -137,6 +137,29 @@ KnightGun:
 		SmudgeType: SmallCrater
 		InvalidTargets: Vehicle, Building, Wall
 
+KnightAcid:
+	Inherits: ^AcidWarhead
+	ReloadDelay: 75
+	Range: 2c0
+	Report: flamtnk1.aud
+	ValidTargets: Ground
+	Projectile: Bullet
+		Speed: 100c0
+		Inaccuracy: 384
+		Palette: apolgreenalpha
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 20
+		ValidTargets: Ground	
+		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: SmallScorch
+		InvalidTargets: Vehicle, Building, Wall
+	Warhead@emp: GrantUpgrade
+		Range: 300
+		Duration: 20
+		Upgrades: speeddebuff, reloaddebuff, damagedebuff, forgbullbuff
+
 PsykerRay:
 	Inherits: ^FullDamage
 	ReloadDelay: 150
@@ -194,7 +217,6 @@ BerserkerBlow:
 	ReloadDelay: 50
 	Range: 1c512
 	Report: fiend2.aud
-	InvalidTargets: Knight
 	Projectile: Bullet
 		Speed: 5c682
 		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath, TiberiumDeath

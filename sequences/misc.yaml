@@ -809,6 +809,10 @@ blueball:
 blueplasma:
 	idle:
 		Facings: -32
+
+greenplasma:
+	idle:
+		Facings: -32
 		
 blueballmini:
 	idle:

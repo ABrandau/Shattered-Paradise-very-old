@@ -960,7 +960,15 @@ HVRTRUK3:
 		TurnSpeed: 5
 		Speed: 100
 		TerrainSpeeds:
-			Water: 60
+			Clear: 100
+			Road: 100
+			Rail: 100
+			DirtRoad: 100
+			Rough: 100
+			Water: 100
+			Tiberium: 100
+			BlueTiberium: 100
+			Veins: 100
 	Health:
 		HP: 125
 	Hovers:
@@ -1062,7 +1070,15 @@ SCRHARV:
 		Speed: 74
 		Crushes: wall, crate
 		TerrainSpeeds:
-			Water: 74
+			Clear: 100
+			Road: 100
+			Rail: 100
+			DirtRoad: 100
+			Rough: 100
+			Water: 100
+			Tiberium: 100
+			BlueTiberium: 100
+			Veins: 100
 	Health:
 		HP: 1000
 	SelfHealing:
@@ -1143,18 +1159,24 @@ SCRMBT:
 	Armor:
 		Type: Heavy
 	Mobile:
-		Speed: 120
+		Speed: 100
 		Crushes: crate
 		TerrainSpeeds:
-			Water: 120
+			Clear: 100
+			Road: 100
+			Rail: 100
+			DirtRoad: 100
+			Rough: 100
+			Water: 100
+			Tiberium: 100
+			BlueTiberium: 100
+			Veins: 100
 	Hovers:
 	Turreted:
 		TurnSpeed: 7
 	Armament:
 		Weapon: ScrMbtCannon
-		Recoil: 85
-		RecoilRecovery: 25
-		LocalOffset: 768,0,600
+		LocalOffset: 250,0,900
 		MuzzleSequence: muzzle
 	AttackTurreted:
 	# WithMuzzleOverlay:
@@ -1185,7 +1207,15 @@ SCRGLYDER2:
 		Speed: 91
 		Crushes: crate
 		TerrainSpeeds:
-			Water: 91
+			Clear: 100
+			Road: 100
+			Rail: 100
+			DirtRoad: 100
+			Rough: 100
+			Water: 100
+			Tiberium: 100
+			BlueTiberium: 100
+			Veins: 100
 	Transforms:
 		IntoActor: scrglyder1
 	Hovers:
@@ -1580,7 +1610,15 @@ CABAPC:
 		TurnSpeed: 8
 		Speed: 110
 		TerrainSpeeds:
-			Water: 110
+			Clear: 100
+			Road: 100
+			Rail: 100
+			DirtRoad: 100
+			Rough: 100
+			Water: 100
+			Tiberium: 100
+			BlueTiberium: 100
+			Veins: 100
 	Voiced:
 		VoiceSet: Limpet
 	Health:

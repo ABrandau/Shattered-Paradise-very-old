@@ -590,8 +590,8 @@ SEER:
 		Mine: muward
 		RearmBuildings:
 	AmmoPool:
-		Ammo: 2
-		PipCount: 2
+		Ammo: 1
+		PipCount: 1
 		PipType: Ammo
 		SelfReloadDelay: 500
 		SelfReloads: true
@@ -618,7 +618,7 @@ AWARRIOR:
 	Mobile:
 		Speed: 68
 	Targetable:
-		TargetTypes: Ground, Infantry, Razorshark, Knight
+		TargetTypes: Ground, Infantry, Razorshark
 	-SpawnActorOnDeath@conversion:
 	-SpawnActorOnDeath@FLAMEGUY:
 	-SpawnActorOnDeath@tiberium:
@@ -629,19 +629,25 @@ AWARRIOR:
 	-WithDeathAnimation@explosion:
 	-WithDeathAnimation@energy:
 	Armament@PRIMARY:
-		Weapon: KnightGun
+		Weapon: KnightAcid
 		Name: OnFoot
-		LocalOffset: 128,0,400
+		Muzzle: flamebro
+		LocalOffset: 250,75,500
+		MuzzleSequence: muzzle
+		MuzzlePalette: apolgreenalpha
+		MuzzleSplitFacings: 8
 	Armament@GARRISON:
 		Weapon: GKnightGun
-		LocalOffset: 128,0,400
+		MuzzlePalette: apolgreenalpha
+		LocalOffset: 250,0,400
 	AttackFrontal:
 		Voice: Attack
-	SpawnActorOnDeath:
-		Actor: berserker
-		probability: 100
-		OwnerType: InternalName
-		InternalOwner: Creeps
+		Armaments: OnFoot
+	SpawnActorOnDeath@deathclaw:
+		Actor: deathclaw
+		Probability: 20
+		InternalOwner: Victim
+	WithMuzzleOverlay:
 
 PSYKER:
 	Inherits: ^Mutant
@@ -694,7 +700,7 @@ shark:
 	GivesExperience:
 		Experience: 165
 	Health:
-		HP: 75
+		HP: 85
 	Mobile:
 		Speed: 78
 		Voice: Move
@@ -704,6 +710,10 @@ shark:
 		OwnerType: Killer
 		DeathType: CabalDeath
 		RequiresLobbyCreeps: true
+	SelfHealing@colos:
+		Step: 3
+		Delay: 100
+		DamageCooldown: 50
 	Guard:
 		Voice: Move
 	Passenger:
@@ -718,7 +728,7 @@ shark:
 		Voice: Move
 	AutoTarget:
 		ScanRadius: 8
-		InitialStance: AttackAnything
+		InitialStance: Defend
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark
 	WithInfantryBody:
@@ -850,7 +860,7 @@ COLOSSI:
 		DeathType: CabalDeath
 		RequiresLobbyCreeps: true
 	Armor:
-		Type: light
+		Type: wood
 	Armament:
 		Weapon: BugRail
 		LocalOffset: 300,0,1000
@@ -876,8 +886,9 @@ COLOSSI:
 		UndeploySound:
 	WithInfantryBody:
 		AttackSequence: throw
-		UpgradeTypes: undeployed
-		UpgradeMinEnabledLevel: 1
+		UpgradeTypes: undeployed, WebDisable
+		# UpgradeMinEnabledLevel: 1
+		UpgradeMaxEnabledLevel: 1
 	WithSpriteBody@deployed:
 		StandSequences: dummy
 		Sequence: dummy
@@ -955,6 +966,14 @@ FLOAT:
 	Mobile:
 		Speed: 100
 		TerrainSpeeds:
+			Clear: 100
+			Road: 100
+			Rail: 100
+			DirtRoad: 100
+			Rough: 100
+			Tiberium: 100
+			BlueTiberium: 100
+			Veins: 100
 			Cliff: 80
 			Water: 80
 	Armament@prim:
@@ -1163,8 +1182,17 @@ PDRONE:
 	Mobile:
 		Speed: 75
 		-UpgradeTypes: WebDisable
-		TerrainTypes:
-			Water: 70
+		TerrainSpeeds:
+			Clear: 100
+			Road: 100
+			Rail: 100
+			DirtRoad: 100
+			Rough: 100
+			Tiberium: 100
+			BlueTiberium: 100
+			Veins: 100
+			Cliff: 80
+			Water: 80
 	Health:
 		HP: 110
 	Passenger:
@@ -1264,8 +1292,17 @@ MOTH:
 		VoiceSet: Limpet
 	Mobile:
 		Speed: 60
-		UpgradeTypes: notmobile
-		UpgradeMaxEnabledLevel: 0
+		TerrainSpeeds:
+			Clear: 100
+			Road: 100
+			Rail: 100
+			DirtRoad: 100
+			Rough: 100
+			Tiberium: 100
+			BlueTiberium: 100
+			Veins: 100
+			Cliff: 80
+			Water: 80
 	Health:
 		HP: 200
 	Passenger:

@@ -67,8 +67,9 @@ BugBlast:
 	Range: 8c0
 	Projectile: InstantExplode
 	Warhead@1Dam: SpreadDamage
-		Spread: 2000
-		Damage: 15
+		Falloff: 100, 100, 100, 100
+		Spread: 1500
+		Damage: 8
 		Versus:
 			None: 100
 			Wood: 30
@@ -96,7 +97,7 @@ FloatTesla:
 	palette: apolblue
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 35
+		Damage: 28
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 
@@ -136,7 +137,7 @@ ScorpAcid:
 	Burst: 12
 	Report: flamtnk1.aud
 	Projectile: Bullet
-		Speed: 120
+		Speed: 160
 		Image: acidall32
 		Inaccuracy: 1c0
 		Palette: apolredalpha
@@ -156,35 +157,31 @@ ScorpAcid:
 
 ScrMbtCannon:
 	Inherits: ^APWarhead
-	ReloadDelay: 90
-	Range: 6c0
-	Report: 120mmf.aud
-	Burst: 1
-	BurstDelay: 5
-	Projectile: Bullet
-		Speed: 550
-		Image: blueball
-		# Angle: 90
-		TrailImage: blueballminitrail
-		Shadow: true
-		Angle: 62
-		Palette: pips
+	ReloadDelay: 50
+	Range: 5c0
+	Report: sonic4.aud
+	Projectile: AreaBeam
+		Speed: 450
+		Duration: 60
+		DamageInterval: 5
+		Width: 60
+		Shape: Cylindrical
+		ZOffset: 2047
+		BeyondTargetRange: 0c256
+		Blockable: true
+		UsePlayerColor: true
 	Warhead@1Dam: SpreadDamage
-		Spread: 150
-		Damage: 90
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: scrinpulse2
-		ImpactSound: expnew14.aud
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: scrinpulse2
-		ExplosionPalette: player
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
-	Warhead@4Smu: LeaveSmudge
-		SmudgeType: MediumCrater
-		InvalidTargets: Vehicle, Building, Wall
+		Range: 0, 32
+		Falloff: 100, 100
+		Damage: 15
+		AffectsParent: false
+		Versus:
+			None: 25
+			Wood: 65
+			Light: 75
+			Heavy: 100
+			Concrete: 60
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 
 Glyder2Cannon:
 	Inherits: ^FullDamage
@@ -222,16 +219,50 @@ TripodLaser:
 	Inherits: ^MeleeWarhead
 	ReloadDelay: 80
 	Range: 6c0
-	Report: lastur1.aud
-	Projectile: LaserZap
-		Width: 60
-		BeamDuration: 5
-		ZOffset: 2047
-		Color: FFFFFF#b300b3
+	Report: scrin5b.aud
+	Projectile: Bullet
+		Speed: 300
+		Image: greenplasma
+		Shadow: true
+		Angle: 62
+		Palette: apolgreenalpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 40
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+	Warhead@op: FireShrapnel
+		Weapon: TripodProton
+		Amount: 30
+		# AimChance: 50
+		AllowDirectHit: false
+
+TripodProton:
+	Inherits: ^RifleWarhead
+	ReloadDelay: 50
+	Range: 1c0
+	Report: scrin5b.aud
+	ValidTargets: Ground
+	Projectile: Bullet
+		Speed: 150
+		Blockable: false
+		Shadow: true
+		Inaccuracy: 128
+		Image: TORPEDO
+		RangeLimit: 35
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 17
+		ValidTargets: Ground
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: small_bang
+		ImpactSound: expnew12.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
 
 #################################################
 # Aircraft
@@ -320,13 +351,13 @@ Glyder1Cannon:
 		InvalidTargets: Vehicle, Building, Wall
 
 BattleshipCannon:
-	Inherits: ^BombWarhead
+	Inherits: ^GrenadeWarhead
 	ReloadDelay: 45
 	Range: 5c768
 	Report: 120mmf.aud
-	Burst: 6
+	Burst: 3
 	BurstDelay: 5
-	ValidTargets: Ground, Infantry, Vehicle, Air, water
+	ValidTargets: Ground, Infantry, Vehicle, water
 	Projectile: Bullet
 		Speed: 500
 		Image: purpBullet
@@ -338,7 +369,7 @@ BattleshipCannon:
 		Angle: 15
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 30
+		Damage: 20
 		ValidTargets: Ground, Infantry, Vehicle, Air, water
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -355,10 +386,65 @@ BattleshipCannon:
 		SmudgeType: MediumCrater
 		InvalidTargets: Vehicle, Building, Wall
 
+BattleshipRocketDummy:
+	ReloadDelay: 45
+	Range: 5c768
+	Report: 120mmf.aud
+	ValidTargets: Ground, Infantry, Vehicle, Air, water
+	Projectile: Missile
+		RangeLimit: 1
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 1
+		ValidTargets: Ground, Infantry, Vehicle, Air, water
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@op: FireShrapnel
+		Weapon: BattleshipRocket
+		Amount: 2
+		AimChance: 100
+		AllowDirectHit: true
+		AimTargetStances: Neutral, Enemy
+		ValidTargets: Air, Ground, Water
+
+BattleshipRocket:
+	Inherits: ^RocketWarhead
+	ReloadDelay: 45
+	Range: 5c768
+	Report: 120mmf.aud
+	ValidTargets: Ground, Infantry, Vehicle, Air, water
+	Projectile: Missile
+		Speed: 250
+		Blockable: false
+		Shadow: true
+		RateOfTurn: 8
+		RangeLimit: 5c0
+		Image: purpBullet
+		ContrailLength: 6
+		Palette: playerscrin
+		ContrailColor: 0B124D
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 15
+		ValidTargets: Ground, Infantry, Vehicle, Air, water
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: scrinexplo1
+		ExplosionPalette: apolbluealpha
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: small_watersplash
+		ExplosionPalette: player
+		ImpactSound: ssplash3.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: MediumCrater
+		InvalidTargets: Vehicle, Building, Wall
+		
 DestroyerCannon:
 	Inherits: ArtilleryWarhead
 	ReloadDelay: 150
-	Range: 16c0
+	Range: 14c0
 	MinRange: 4c0
 	Report: 120mmf.aud
 	Burst: 1
@@ -380,13 +466,29 @@ DestroyerCannon:
 		ImpactSound: expnew14.aud
 		InvalidImpactTypes: Water
 	Warhead@3EffWater: CreateEffect
-		Explosions: destroexp
-		ExplosionPalette: player
+		Explosions: scrinpulse2
 		ImpactSound: ssplash3.aud
 		ValidImpactTypes: Water
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
 		InvalidTargets: Vehicle, Building, Wall
+
+DestroyerCannonOP:
+	Range: 10c0
+	Inherits: DestroyerCannon
+	Warhead@op: FireCluster
+		Weapon: DestroyerCannon
+		Range: 2
+
+MothershipRocketDummy:
+	Inherits: BattleshipRocketDummy
+	Warhead@op: FireShrapnel
+		Weapon: BattleshipRocket
+		Amount: 12
+		AimChance: 100
+		AllowDirectHit: true
+		AimTargetStances: Neutral, Enemy
+		ValidTargets: Air, Ground, Water
 
 CouncilSteal:
 	ReloadDelay: 150
@@ -421,14 +523,14 @@ NeedlerAcid:
 	Burst: 10
 	Report: flamtnk1.aud
 	Projectile: Bullet
-		Speed: 150
+		Speed: 250
 		Image: acidall32
 		Inaccuracy: 1c0
 		Palette: apolredalpha
 	BurstDelay: 4
 	Warhead@1Dam: SpreadDamage
 		Spread: 80
-		Damage: 8
+		Damage: 12
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, TiberiumDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
