@@ -103,14 +103,14 @@ TrooperRail:
 	Range: 5c0
 	Report: biggun1.aud
 	Projectile: LaserZap
-		BeamWidth: 2
+		BeamWidth: 1
 		BeamDuration: 20
 		Blockable: true
 		Color: 0080FFC8		
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 40
-		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath		
+		DamageTypes: Prone60Percent, TriggerProne, BulletDeath		
 		Versus:
 			Concrete: 5
 	Warhead@emp: GrantUpgrade
@@ -298,7 +298,7 @@ MechRailgun:
 		Speed: 20c0
 		Duration: 3
 		DamageInterval: 2
-		Width: 150
+		Width: 75
 		BeyondTargetRange: 0c64
 		Blockable: true
 		Color: 00FFFFC8
@@ -311,7 +311,7 @@ MechRailgun:
 			Light: 160
 			Heavy: 100
 			Concrete: 25
-		DamageTypes: Prone100Percent, TriggerProne, FireDeath
+		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
 	
 MammothTusk:
 	ReloadDelay: 80
@@ -459,66 +459,51 @@ GuardianRail:
 	Report: biggun1.aud
 	Projectile: LaserZap
 		BeamWidth: 2
-		BeamDuration: 20
+		BeamDuration: 3
 		Blockable: true
 		Color: 0080FFC8		
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 75
-		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath		
+		DamageTypes: Prone60Percent, TriggerProne, BulletDeath		
 		Versus:
 			None: 150
 			Concrete: 5
 
-GuardianTusk:
-	ReloadDelay: 150
-	Range: 8c0
-	Report: misl1.aud
+GuardianClaw:
+	Inherits: ^RifleWarhead
+	ReloadDelay: 50
+	Range: 7c0
+	Report: cygun1.aud
 	ValidTargets: Air
-	Burst: 3
-	BurstDelay: 10
-	Projectile: Missile
-		Blockable: false
-		Shadow: true
-		Image: DRAGON
-		Inaccuracy: 1c0
-		Speed: 600
-		TrailImage: small_smoke_trail
-		HorizontalRateOfTurn: 10
-		MaximumLaunchSpeed: 213
-		RangeLimit: 15c0
-		Palette: ra
-	Warhead@1Dam: SpreadDamage
-		Spread: 600
-		Damage: 30
+	Projectile: Bullet
+		Speed: 2c682
 		ValidTargets: Air
-		Versus:
-		DamageTypes: Explosion
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 60
+		ValidTargets: Ground, Vehicle, Building, Infantry, Air
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
-		Explosions: medium_twlt
-		ImpactSound: expnew07.aud
+		Explosions: piffs
 		InvalidImpactTypes: Water
 	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSound: ssplash3.aud
+		Explosions: water_piffs
+		ExplosionPalette: ra
 		ValidImpactTypes: Water
-		
+
 GuardianRepair:
-	ReloadDelay: 300
-	Range: 8c0
+	Inherits: ^FullDamage
+	ReloadDelay: 100
+	Range: 5c0
 	Report: repair11.aud
-	ValidTargets: Repair
-	Projectile: Missile
-		Speed: 150
-		HorizontalRateOfTurn: 10		
-		Image: projwyverm
-		Palette: playerscrin		
-		ContrailLength: 30
+	ValidTargets: Vehicle
+	Projectile: Bullet
+		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
-		Damage: -100
-		ValidTargets: Repair		
+		Damage: -50
+		ValidTargets: Vehicle
 
 #############################################
 # Defences

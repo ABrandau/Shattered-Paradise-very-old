@@ -349,7 +349,8 @@ VISC_LRG_SCRIN:
 		MinMoveDelayInTicks: 200
 		MaxMoveDelayInTicks: 360
 	SelfHealing:
-		Step: -20
+		PercentageStep: -1
+		Step: 0
 		Delay: 25
 		HealIfBelow: 200
 	Mobile:
@@ -384,7 +385,7 @@ ZOMBIE:
 	Voiced:
 		VoiceSet: Fiend
 	Targetable:
-		TargetTypes: Ground
+		TargetTypes: Ground, NeutralTibCritter
 	Armament:
 		Weapon: SlimeAttack
 	WithInfantryBody:
@@ -419,18 +420,21 @@ CRAB:
 	Voiced:
 		VoiceSet: Fiend
 	Targetable:
-		TargetTypes: Infantry, Ground
+		TargetTypes: Infantry, Ground, NeutralTibCritter
 	Armament:
-		Weapon: WolfAcid
+		Weapon: CrabAcid
 	WithInfantryBody:
 		AttackSequence: shoot
 		IdleSequences: Idle1, Idle2
+	AutoTarget:
+		ScanRadius: 6
 	AttackFrontal:
 		Voice: Attack
 	AttackWander:
-		WanderMoveRadius: 2
-		MinMoveDelayInTicks: 25
-		MaxMoveDelayInTicks: 45	
+		WanderMoveRadius: 1
+		ReduceMoveRadiusDelay: 5
+		MinMoveDelayInTicks: 100
+		MaxMoveDelayInTicks: 200
 		
 BERSERKER:
 	Inherits: ^Mutant
@@ -454,7 +458,8 @@ BERSERKER:
 		EmptyWeapon: ZombieExplosion
 		Chance: 40
 	SelfHealing:
-		Step: 10
+		PercentageStep: 1
+		Step: 0
 		Delay: 200
 	Mobile:
 		Speed: 90
@@ -463,7 +468,7 @@ BERSERKER:
 		VoiceSet: Fiend
 	-TakeCover:
 	Targetable:
-		TargetTypes: Infantry, Ground
+		TargetTypes: Infantry, Ground, NeutralTibCritter
 	Armament:
 		Weapon: BerserkerBlow
 	AutoTarget:
@@ -527,7 +532,8 @@ CIV3:
 		Voice: Attack
 	AutoTarget:
 	SelfHealing:
-		Delay: 10
+		PercentageStep: 1
+		Step: 0
 		HealIfBelow: 50
 		DamageCooldown: 200
 	WithVoxelTurret:
@@ -2228,32 +2234,52 @@ EGGS:
 		Dimensions: 1, 1
 	Armor:
 		Type: wood
+	RevealsShroud:
+		Range: 10c0
 	Health:
-		HP: 250
+		HP: 750
 	RenderSprites:
 		Palette: playermut
-	SpawnActorOnDeath:
-		Actor: Crab
-		Probability: 60
+	Targetable:
+		TargetTypes: Building, Ground, C4, DetonateAttack, NeutralTibCritter
+	SelfHealing@crab:
+		PercentageStep: -50
+		Step: 0
+		Delay: 500
+		HealIfBelow: 150
+		DamageTypes: SpawnCrabs
+	SpawnActorOnDeath@crab1:
+		Actor: crab
+		Probability: 100
 		OwnerType: InternalName
 		InternalOwner: Creeps
+		DeathType: SpawnCrabs
 		RequiresLobbyCreeps: true
-		# DeathType: BulletDeath, SmallExplosionDeath, TiberiumDeath
-	SpawnActorOnDeath@dos:
-		Actor: Crab
-		Probability: 20
+	SpawnActorOnDeath@crab2:
+		Actor: crab
+		Probability: 50
 		OwnerType: InternalName
 		InternalOwner: Creeps
+		DeathType: SpawnCrabs
 		RequiresLobbyCreeps: true
-		# DeathType: BulletDeath, SmallExplosionDeath, TiberiumDeath
-	SpawnActorOnDeath@tres:
-		Actor: Crab
-		Probability: 20
-		OnwerType: InternalName
+	SpawnActorOnDeath@crab3:
+		Actor: crab
+		Probability: 10
+		OwnerType: InternalName
 		InternalOwner: Creeps
+		DeathType: SpawnCrabs
 		RequiresLobbyCreeps: true
-		# DeathType: BulletDeath, SmallExplosionDeath, TiberiumDeath
-	SelfHealing@bird:
-		Step: -10
-		Delay: 50
-		HealIfBelow: 110
+	SpawnActorOnDeath@crab4:
+		Actor: crab
+		Probability: 10
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		DeathType: SpawnCrabs
+		RequiresLobbyCreeps: true
+	SpawnActorOnDeath@crab5:
+		Actor: crab
+		Probability: 10
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		DeathType: SpawnCrabs
+		RequiresLobbyCreeps: true

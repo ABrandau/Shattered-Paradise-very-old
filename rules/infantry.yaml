@@ -609,7 +609,7 @@ AWARRIOR:
 		Cost: 350
 	Tooltip:
 		Name: Forgotten Knight
-		Description: Suicide Infantry armed\nwith autocannons, they turn\n into berserkers when killed.\n  Strong vs Infantry, Buildings.\n  Weak vs Aircraft, Vehicles.
+		Description: Elite Infantry armed with gas throwers, they have\na small change of turning into Ravagers when killed.\n  Strong vs Infantry, Buildings.\n  Weak vs Aircraft, Vehicles.
 	Voiced:
 		VoiceSet: Rocket
 	-UpdatesPlayerStatistics:
@@ -619,15 +619,8 @@ AWARRIOR:
 		Speed: 68
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark
-	-SpawnActorOnDeath@conversion:
-	-SpawnActorOnDeath@FLAMEGUY:
-	-SpawnActorOnDeath@tiberium:
-	-SpawnActorOnDeath@tiberium2:
-	-SpawnActorOnDeath@tiberium3:
-	-SpawnActorOnDeath@tiberium4:
-	-WithDeathAnimation@normal:
-	-WithDeathAnimation@explosion:
-	-WithDeathAnimation@energy:
+	AutoTarget:
+		ScanRadius: 6
 	Armament@PRIMARY:
 		Weapon: KnightAcid
 		Name: OnFoot
@@ -645,7 +638,7 @@ AWARRIOR:
 		Armaments: OnFoot
 	SpawnActorOnDeath@deathclaw:
 		Actor: deathclaw
-		Probability: 20
+		Probability: 10
 		InternalOwner: Victim
 	WithMuzzleOverlay:
 
@@ -686,6 +679,7 @@ PSYKER:
 ############################################
 shark:
 	Inherits: ^ScrinSoldier
+	Inherits@2: ^PermanentSelfHeal
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 24
@@ -710,10 +704,6 @@ shark:
 		OwnerType: Killer
 		DeathType: CabalDeath
 		RequiresLobbyCreeps: true
-	SelfHealing@colos:
-		Step: 3
-		Delay: 100
-		DamageCooldown: 50
 	Guard:
 		Voice: Move
 	Passenger:
@@ -826,6 +816,7 @@ SHAPESHIFTER:
 
 COLOSSI:
 	Inherits: ^ScrinSoldier
+	Inherits@2: ^PermanentSelfHeal
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 27
@@ -841,18 +832,12 @@ COLOSSI:
 		Bounds: 26,30,0,-10
 	Health:
 		HP: 440
-	SelfHealing@colos:
-		Step: 8
-		Delay: 100
-		DamageCooldown: 50
-		UpgradeTypes: undeployed
-		UpgradeMinEnabledLevel: 1
 	Mobile:
 		Speed: 60
 		SharesCell: False
 		UpgradeTypes: notmobile
 		UpgradeMaxEnabledLevel: 0
-	-SpawnActorOnDeath@FLAMEGUY:
+	SpawnActorOnDeath@FLAMEGUY:
 	SpawnActorOnDeath@conversion:
 		Actor: cybdog
 		Probability: 100
@@ -866,13 +851,6 @@ COLOSSI:
 		LocalOffset: 300,0,1000
 		UpgradeTypes: undeployed
 		UpgradeMinEnabledLevel: 1
-	Armament@deployed:
-		Weapon: BugBlast
-		UpgradeTypes: deployed
-		UpgradeMinEnabledLevel: 1
-		TargetStances: Ally, Enemy, Neutral
-	AttackFrontal:
-		Voice: Attack
 	-TakeCover:
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -887,7 +865,6 @@ COLOSSI:
 	WithInfantryBody:
 		AttackSequence: throw
 		UpgradeTypes: undeployed, WebDisable
-		# UpgradeMinEnabledLevel: 1
 		UpgradeMaxEnabledLevel: 1
 	WithSpriteBody@deployed:
 		StandSequences: dummy
@@ -898,16 +875,13 @@ COLOSSI:
 		Sequence: deployed
 		UpgradeTypes: undeployed
 		UpgradeMaxEnabledLevel: 0
-	Turreted:
-		TurnSpeed: 50
-		InitialFacing: 160
 	AttackFrontal:
 		Voice: Attack
 		UpgradeTypes: undeployed
 		UpgradeMinEnabledLevel: 1
 		UpgradeMaxAcceptedLevel: 1
-	AttackTurreted@deployed:
-		Voice: Attack
+	ExplodeWeapon:
+		Weapon: BugBlast
 		UpgradeTypes: deployed
 		UpgradeMinEnabledLevel: 1
 
@@ -1105,7 +1079,8 @@ CABSENTRY:
 	Mobile:
 		Speed: 70
 	SelfHealing:
-		Step: -5
+		PercentageStep: -1
+		Step: 0
 		Delay: 25
 		HealIfBelow: 200
 	-SelfHealing@Scrin:
@@ -1191,8 +1166,6 @@ PDRONE:
 			Tiberium: 100
 			BlueTiberium: 100
 			Veins: 100
-			Cliff: 80
-			Water: 80
 	Health:
 		HP: 110
 	Passenger:
@@ -1349,7 +1322,7 @@ MOTH:
 
 REAPERCAB:
 	Inherits: ^CabalDroneInfantry
-	Inherits@2: ^CyborgSelfHeal
+	Inherits@2: ^IncompleteSelfHeal
 	Valued:
 		Cost: 1100
 	Tooltip:
@@ -1398,7 +1371,7 @@ REAPERCAB:
 
 GLAD:
 	Inherits: ^Cyborg
-	Inherits@2: ^CyborgSelfHeal
+	Inherits@2: ^IncompleteSelfHeal
 	Inherits@3: ^BasicStealthDetection
 	Armor:
 		Type: Heavy
@@ -1440,7 +1413,7 @@ GLAD:
 
 CYC2:
 	Inherits: ^Cyborg
-	Inherits@2: ^CyborgSelfHeal
+	Inherits@2: ^IncompleteSelfHeal
 	Armor:
 		Type: Heavy
 	Valued:
@@ -1487,7 +1460,7 @@ CYC2:
 
 WORKER:
 	Inherits: ^Soldier
-	Inherits@2: ^CyborgSelfHeal
+	Inherits@2: ^IncompleteSelfHeal
 	Valued:
 		Cost: 120
 	Tooltip:
@@ -1617,7 +1590,8 @@ FLAMEGUY:
 	Health:
 		HP: 160
 	SelfHealing:
-		Step: -10
+		PercentageStep: -5
+		Step: 0
 		HealIfBelow: 101
 	ScaredyCat:
 	WithDeathAnimation:

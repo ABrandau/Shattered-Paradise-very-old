@@ -3,7 +3,6 @@
 #######################################################
 CLOUD1:
 	Inherits: ^Helicopter
-	Inherits@3: ^SelfReloads
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -19,39 +18,42 @@ CLOUD1:
 		TurnSpeed: 6
 		Repulsable: false
 		AltitudeVelocity: 400#0c43
-		Speed: 60
+		Speed: 40
 		MoveIntoShroud: true
 	-Targetable@GROUND:
 	-Targetable@AIRBORNE:
+	-RevealsShroud:
+	-Voiced:
 	Health:
-		HP: 2
+		HP: 50
 	SelfHealing:
 		Step: -1
 		Delay: 15
 		HealIfBelow: 200
 	Armor:
 		Type: Wood
-	Voiced:
-		VoiceSet: Limpet
+	# UpgradeActorsNear:
+		# Upgrades: Posion
+		# Range: 1c420
+		# ValidStances: Ally, Enemy, Neutral
 	AttackHeli:
 		FacingTolerance: 20
 		Voice: Attack
-	AmmoPool@Rocket:
-		Ammo: 2
-		PipCount: 0
-		SelfReloads: true
-		SelfReloadDelay: 250
-		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty
-		Name: Rocket
-	Explodes:
-		Weapon: GasCloudDeathWeapon
-		LoadedChance: 100
+	# AmmoPool@Rocket:
+		# Ammo: 2
+		# PipCount: 0
+		# SelfReloads: true
+		# SelfReloadDelay: 250
+		# PipType: Ammo
+		# PipTypeEmpty: AmmoEmpty
+		# Name: Rocket
 	-RenderVoxels:
 	-WithVoxelBody:
 	WithDeathAnimation:
 		DeathSequencePalette: effectalpha
 		DeathPaletteIsPlayerPalette: false
+	RejectsOrders@berserk:
+		UpgradeMinEnabledLevel: 0
 	RenderSprites:
 		Image: cloud1
 		Palette: effectalpha
@@ -59,124 +61,12 @@ CLOUD1:
 	BodyOrientation:
 		QuantizedFacings: 32
 	AttackWander:
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD2
-		Probability: 100
-		OwnerType: InternalName
-		InternalOwner: Creeps
-		RequiresLobbyCreeps: true
-
-CLOUD2:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD3
-
-CLOUD3:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD4
-
-CLOUD4:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD5
-
-CLOUD5:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD6
-
-CLOUD6:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD7
-
-CLOUD7:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD8
-
-CLOUD8:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD9
-
-CLOUD9:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD10
-
-CLOUD10:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD11
-
-CLOUD11:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD12
-
-CLOUD12:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD13
-
-CLOUD13:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD14
-
-CLOUD14:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD15
-
-CLOUD15:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD16
-
-CLOUD16:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD17
-
-CLOUD17:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD18
-
-CLOUD18:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD19
-
-CLOUD19:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD20
-
-CLOUD20:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD21
-		
-CLOUD21:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD22
-
-CLOUD22:
-	Inherits: CLOUD1
-	SpawnActorOnDeath@cloud:
-		Actor: CLOUD23
-
-CLOUD23:
-	Inherits: CLOUD1
-	-SpawnActorOnDeath@cloud:
 	Explodes:
-		Weapon: GasCloudDeathWeapon2
+		Weapon: GasCloudDeathWeapon
+		LoadedChance: 5
 		EmptyWeapon: GasCloudDeathWeapon2
+	ExplodeWeapon:
+		Weapon: GasCloudDeathWeapon
 
 #######################################################
 #GDI
@@ -281,7 +171,6 @@ TRNSPORT:
 		TurnSpeed: 5
 		Speed: 149
 		InitialFacing: 0
-		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green
 		TakeoffSound: dropup1.aud
 		LandingSound: dropdwn1.aud
 		AltitudeVelocity: 64
@@ -299,11 +188,12 @@ TRNSPORT:
 GUARDIAN:
 	Inherits: ^Helicopter
 	Inherits@3: ^BasicStealthDetection
+	Inherits@4: ^PermanentSelfHeal
 	Valued:
 		Cost: 2500
 	Tooltip:
 		Name: Guardian Platform
-		Description: Medium frigate, great for spotting target.\n  Does not need to rearm.
+		Description: Medium frigate, great for spotting targets.\nIt can land to repair nearby vehicles.\nStrong vs Vehicles, Aircraft\nWeak vs Infantry, Heavy vehicles.\nDoes not need to rearm.
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 20
@@ -324,14 +214,10 @@ GUARDIAN:
 	RevealsShroud:
 		Range: 15c0
 		Type: CenterPosition
-	SelfHealing:
-		Step: 10
-		Delay: 300
-		HealIfBelow: 110
 	Armament@primary:
 		Weapon: GuardianRail
 	Armament@secondary:
-		Weapon: GuardianTusk
+		Weapon: GuardianClaw
 	AttackHeli:
 		FacingTolerance: 240
 		Voice: Attack
@@ -363,6 +249,9 @@ GUARDIAN:
 		Voice: Kill
 		Interval: 1000
 		OnlyToOwner: True
+	Transforms:
+		IntoActor: guardiandep
+		Voice: Action1
 
 #######################################################
 #Campaign Aircraft
@@ -378,7 +267,6 @@ DPOD:
 		TurnSpeed: 5
 		Speed: 149
 		InitialFacing: 0
-		LandableTerrainTypes: Clear
 	Health:
 		HP: 60
 	Armor:
@@ -413,7 +301,6 @@ DSHP:
 		TurnSpeed: 5
 		Speed: 168
 		InitialFacing: 0
-		LandableTerrainTypes: Clear
 		TakeoffSound: dropup1.aud
 		LandingSound: dropdwn1.aud
 	Health:
@@ -447,7 +334,6 @@ ORCATRAN:
 		TurnSpeed: 5
 		Speed: 84
 		InitialFacing: 0
-		LandableTerrainTypes: Clear
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
@@ -592,6 +478,8 @@ MUTBIRD:
 		Prerequisites: ~muair, mustable
 	Selectable:
 		Bounds: 30,24
+	Voiced:
+		VoiceSet: Fiend
 	Aircraft:
 		TurnSpeed: 6
 		Speed: 100
@@ -606,12 +494,11 @@ MUTBIRD:
 		Type: Wood
 	Minelayer:
 		Mine: eggs
-		# RearmBuildings: muair
 	AmmoPool:
-		Ammo: 3
-		PipCount: 3
+		Ammo: 2
+		PipCount: 2
 		PipType: Ammo
-		SelfReloadDelay: 600
+		SelfReloadDelay: 300
 		SelfReloads: false
 		PipTypeEmpty: AmmoEmpty
 	-RenderVoxels:
@@ -620,6 +507,7 @@ MUTBIRD:
 	RenderSprites:
 	WithInfantryBody:
 		IdleSequences: run
+		StandSequences: run
 	BodyOrientation:
 		QuantizedFacings: 8
 
@@ -868,7 +756,6 @@ drache:
 	Aircraft:
 		TurnSpeed: 5
 		Speed: 50
-		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green
 		MoveIntoShroud: true
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
@@ -923,7 +810,6 @@ SCRGLYDER1:
 		MoveIntoShroud: true
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
-		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green
 	Health:
 		HP: 150
 	Armor:
@@ -954,6 +840,7 @@ SCRDESTROYER:
 	Inherits: ^Helicopter
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^SelfReloads
+	Inherits@4: ^IncompleteSelfHeal
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -978,10 +865,6 @@ SCRDESTROYER:
 		HP: 300
 	Armor:
 		Type: Light
-	SelfHealing:
-		Step: 4
-		Delay: 75
-		HealIfBelow: 100
 	Armament:
 		Weapon: DestroyerCannon
 		LocalOffset: 300,0,0
@@ -1029,7 +912,6 @@ SCRTRANS:
 		TurnSpeed: 5
 		Speed: 120
 		LandWhenIdle: true
-		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green
 		Repulsable: true
 		MoveIntoShroud: true
 		TakeoffSound: orcaup1.aud
@@ -1056,6 +938,7 @@ SCRBATTLESHIP:
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^SelfReloads
 	Inherits@4: ^BasicStealthDetection
+	Inherits@5:	^PermanentSelfHeal
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -1080,10 +963,6 @@ SCRBATTLESHIP:
 		HP: 800
 	Armor:
 		Type: Heavy
-	SelfHealing:
-		Step: 4
-		Delay: 75
-		HealIfBelow: 100
 	RevealsShroud:
 		Range: 14c0
 		Type: CenterPosition
@@ -1136,7 +1015,6 @@ SCRINCOUNCIL:
 	Aircraft:
 		TurnSpeed: 5
 		Speed: 60
-		LandableTerrainTypes: Clear, rough, Road, DirtRoad
 		MoveIntoShroud: true
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
@@ -1167,6 +1045,7 @@ MOTHERSHIP:
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^SelfReloads
 	Inherits@4: ^BasicStealthDetection
+	Inherits@5:	^PermanentSelfHeal
 	Valued:
 		Cost: 3000
 	Tooltip:
@@ -1188,20 +1067,18 @@ MOTHERSHIP:
 		MoveIntoShroud: true
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
-		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green
 	Health:
 		HP: 1500
 	Armor:
 		Type: Heavy
-	SelfHealing:
-		Step: 4
-		Delay: 75
-		HealIfBelow: 100
 	RevealsShroud:
 		Range: 14c0
 		Type: CenterPosition
 	Armament@1:
-		Weapon: MothershipRocketDummy
+		Weapon: BattleshipCannon
+		LocalOffset:0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
+	Armament@2:
+		Weapon: BattleshipCannon
 		LocalOffset:0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
 	ProduceActorPower@as:
 		Description: Energy Assimilator
@@ -1351,6 +1228,7 @@ BASILISK:
 	Inherits: ^Helicopter
 	Inherits@1: ^Ra2vxl
 	Inherits@3: ^SelfReloads
+	Inherits@5:	^PermanentSelfHeal
 	Valued:
 		Cost: 1800
 	Tooltip:
@@ -1374,10 +1252,6 @@ BASILISK:
 		HP: 500
 	Armor:
 		Type: Light
-	SelfHealing:
-		Step: 4
-		Delay: 75
-		HealIfBelow: 110
 	Armament:
 		Weapon: BasiliskProton
 		LocalOffset: 128,-300,0, 128,300,0

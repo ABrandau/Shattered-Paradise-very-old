@@ -212,6 +212,7 @@ JUGGER:
 
 SONIC:
 	Inherits: ^VoxelTank
+	Inherits@2: ^IncompleteSelfHeal
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -255,6 +256,7 @@ SONIC:
 
 HMEC:
 	Inherits: ^VoxelTank
+	Inherits@2: ^PermanentSelfHeal
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -271,9 +273,6 @@ HMEC:
 		Crushes: wall, crate, infantry
 	Health:
 		HP: 800
-	SelfHealing:
-		Delay: 10
-		HealIfBelow: 110
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -627,7 +626,7 @@ Limped:
 		Cost: 450
 	Tooltip:
 		Name: Toxin Drone
-		Description: Hover Drone, cloaks when deployed.\nSpreads invisible gas around\n slowing and weaking whoever passes through.\nUnnarmed.
+		Description: Hover Drone, cloaks when deployed.\nSpreads unsmellable gas around weakening\nnearby units.\nUnnarmed.
 	Health:
 		HP: 220
 	Armor:
@@ -691,7 +690,7 @@ WOLF:
 		Cost: 1300
 	Tooltip:
 		Name: Tiberian Bull
-		Description: Support Beast, expels tiberium toxins\nthat affect nearby units. .\n  Strong vs Ground Units.\n  Weak vs Aircraft.
+		Description: Support Beast, when attacking it expels tiberium\nthat damage nearby units but increase their\nfighting capabilities.\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
 	Voiced:
 		VoiceSet: Fiend
 	SpawnActorOnDeath@conversion:
@@ -702,19 +701,15 @@ WOLF:
 		RequiresLobbyCreeps: true
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark
-	UpgradeActorsNear@lobo:
-		Upgrades: firepower, selfheal, damage, speed, forgbullbuff, MindControlTargetting
-		Range: 2c0
-	UpgradeActorsNear@qlo:
-		Upgrades: speeddebuff, reloaddebuff, damagedebuff, MindControlTargetting
-		Range: 6c0
-		ValidStances: Enemy
 	-Crushable:
+	-SelfHealing@VentilatorPoison:
 	AttackFrontal:
 	AutoTarget:
 	Armament@PRIMARY:
 		Weapon: BullAcid
 		LocalOffset: 128,0,400
+	Armament@Secondary:
+		Weapon: BullBuff
 	Passenger:
 		CargoType: Vehicle
 		Voice: Move
@@ -809,8 +804,8 @@ MUTAPC:
 	WithMuzzleOverlay:
 	Cargo:
 		Types: Infantry
-		MaxWeight: 2
-		PipCount: 2
+		MaxWeight: 3
+		PipCount: 3
 		UnloadVoice: Unload
 		LoadingUpgrades: notmobile
 		EjectOnDeath: true
@@ -948,7 +943,7 @@ MLRS:
 HVRTRUK3:
 	Inherits: ^VoxelVehicle
 	Valued:
-		Cost: 1500
+		Cost: 1300
 	Tooltip:
 		Name: Demo Truck
 		Description: Hovering demolitions truck.\nDetonates its warhead when destroyed.\nCan move across water.\n  Unarmed
@@ -1039,6 +1034,7 @@ FORTRESS:
 
 SCRHARV:
 	Inherits: ^ScrinTank
+	Inherits@2: ^IncompleteSelfHeal
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -1081,10 +1077,6 @@ SCRHARV:
 			Veins: 100
 	Health:
 		HP: 1000
-	SelfHealing:
-		Delay: 10
-		HealIfBelow: 50
-		DamageCooldown: 200
 	Armor:
 		Type: Heavy
 	-GainsExperience:
@@ -1107,7 +1099,7 @@ SCRSCORPION:
 		Cost: 550
 	Tooltip:
 		Name: Ichor Walker
-		Description: Anti-personnel walker. Deals more\ndamange when standing on tiberium fields.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
+		Description: Anti-personnel walker. Deals more reduces the damage\nof targetted units depending on how damaged they are.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 31
@@ -1117,26 +1109,15 @@ SCRSCORPION:
 		Speed: 91
 		Crushes: crate
 	Health:
-		HP: 200
+		HP: 250
 	Armor:
 		Type: Light
 	AttackFrontal:
 		Voice: Attack
-	UpgradeOnTerrain@buff:
-		Upgrades: ScorpBuffer
 	AutoTarget:
 	Armament@PRIMARY:
 		Weapon: ScorpAcid
 		LocalOffset: 100,0,200
-	FirepowerMultiplier@rar:
-		Modifier: 1
-		UpgradeTypes: ScorpBuffer
-		UpgradeMaxEnabledLevel: 0
-		UpgradeMaxAcceptedLevel: 1
-	FirepowerMultiplier@rer:
-		Modifier: 1,5
-		UpgradeTypes: ScorpBuffer
-		UpgradeMinEnabledLevel: 1
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	WithInfantryBody:
@@ -1365,7 +1346,7 @@ SCRDRONEC:
 ################################################
 JENN:
 	Inherits: ^Tank
-	Inherits@2:	^CyborgSelfHeal
+	Inherits@2:	^IncompleteSelfHeal
 	Inherits@3: ^BasicStealthDetection
 	Valued:
 		Cost: 700
@@ -1401,7 +1382,7 @@ JENN:
 
 DINO:
 	Inherits: ^Tank
-	Inherits@2:	^CyborgSelfHeal
+	Inherits@2:	^IncompleteSelfHeal
 	Inherits@5: ^CabRender
 	Inherits@3: ^BasicStealthDetection
 	Valued:
@@ -1447,7 +1428,7 @@ DINO:
 
 CENTURION:
 	Inherits: ^Tank
-	Inherits@2:	^CabVehicleSelfHeal
+	Inherits@2:	^PermanentSelfHeal
 	Valued:
 		Cost: 1200
 	Tooltip:
@@ -1510,7 +1491,7 @@ CENTURION:
 
 GRINDER:
 	Inherits: ^VoxelVehicle
-	Inherits@2:	^CyborgSelfHeal
+	Inherits@2:	^IncompleteSelfHeal
 	Inherits@1: ^Ra2vxl
 	Valued:
 		Cost: 800
@@ -1548,7 +1529,7 @@ GRINDER:
 
 ECM:
 	Inherits: ^VoxelVehicle
-	Inherits@2:	^CyborgSelfHeal
+	Inherits@2:	^IncompleteSelfHeal
 	Inherits@1: ^Ra2vxl
 	Valued:
 		Cost: 1500
@@ -1595,7 +1576,7 @@ ECM:
 
 CABAPC:
 	Inherits: ^VoxelVehicle
-	Inherits@2:	^CyborgSelfHeal
+	Inherits@2:	^IncompleteSelfHeal
 	Inherits@1: ^Ra2vxl
 	Valued:
 		Cost: 750
@@ -1647,7 +1628,7 @@ CABAPC:
 
 SPIDERARTY:
 	Inherits: ^Tank
-	Inherits@2:	^CyborgSelfHeal
+	Inherits@2:	^IncompleteSelfHeal
 	Inherits@5: ^CabRender
 	Valued:
 		Cost: 1500
@@ -1690,7 +1671,7 @@ SPIDERARTY:
 BLASTER:
 	Inherits: ^VoxelVehicle
 	Inherits@1: ^Ra2vxl
-	Inherits@2: ^CyborgSelfHeal
+	Inherits@2: ^IncompleteSelfHeal
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -1728,6 +1709,7 @@ BLASTER:
 PALADIN:
 	Inherits: ^Tank
 	Inherits@5: ^CabRender
+	Inherits@2: ^PermanentSelfHeal
 	Valued:
 		Cost: 2000
 	Tooltip:
@@ -1763,8 +1745,3 @@ PALADIN:
 	AutoTarget:
 	Selectable:
 		Bounds: 30, 42, 0, -8
-	SelfHealing@Scrin:
-		Step: 10
-		Delay: 100
-		DamageCooldown: 200
-		HealIfBelow: 110

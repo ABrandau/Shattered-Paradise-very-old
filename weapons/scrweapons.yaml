@@ -76,16 +76,29 @@ BugBlast:
 			Light: 2
 			Heavy: 2
 			Concrete: 2 
-		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+		DamageTypes: EnergyDeath
 		InvalidTargets: Colossi
 	Warhead@2Eff: CreateEffect
 		Explosions: colossiglow
 		ExplosionPalette: colossiglow
 		ImpactSound: expnew12.aud
-	Warhead@emp: GrantUpgrade
-		Range: 8
-		Duration: 75
-		Upgrades: speeddebuff, reloaddebuff
+	Warhead@op: FireShrapnel
+		Weapon: ColossiTesla
+		Amount: 8
+		AllowDirectHit: false
+
+ColossiTesla:
+	Inherits: ^NoDamage		
+	Inherits: ^RifleWarhead
+	ReloadDelay: 80
+	Range: 4c0
+	Projectile: TeslaZap
+		palette: apolblue
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 1
+		Versus:
+		DamageTypes: FireDeath
 
 FloatTesla:
 	Inherits: ^RifleWarhead
@@ -94,7 +107,7 @@ FloatTesla:
 	Report: TESLA1.AUD
 	Charges: yes
 	Projectile: TeslaZap
-	palette: apolblue
+		palette: apolblue
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 28
@@ -122,7 +135,7 @@ StalkerSteal:
 		Range: 64
 		Duration: 50
 		InvalidTargets: C4, MindControlInmune
-	Warhead@emp: GrantUpgrade
+	Warhead@MCRetarget: GrantUpgrade
 		Range: 250
 		Duration: 60
 		Upgrades: MindControlTargetting
@@ -154,6 +167,11 @@ ScorpAcid:
 		ExplosionPalette: apolredalpha
 		ImpactSound: expnew14.aud
 		InvalidImpactTypes: Water
+	Warhead@AcidScaleDmg: GrantUpgrade
+		Range: 300
+		Duration: 150
+		Upgrades: AcidScaleDmg
+		ValidTargets: Ground, Vehicle, Infantry, Building
 
 ScrMbtCannon:
 	Inherits: ^APWarhead
@@ -221,7 +239,7 @@ TripodLaser:
 	Range: 6c0
 	Report: scrin5b.aud
 	Projectile: Bullet
-		Speed: 300
+		Speed: 400
 		Image: greenplasma
 		Shadow: true
 		Angle: 62
@@ -355,7 +373,7 @@ BattleshipCannon:
 	ReloadDelay: 45
 	Range: 5c768
 	Report: 120mmf.aud
-	Burst: 3
+	Burst: 4
 	BurstDelay: 5
 	ValidTargets: Ground, Infantry, Vehicle, water
 	Projectile: Bullet
@@ -369,7 +387,7 @@ BattleshipCannon:
 		Angle: 15
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 20
+		Damage: 25
 		ValidTargets: Ground, Infantry, Vehicle, Air, water
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -482,6 +500,7 @@ DestroyerCannonOP:
 
 MothershipRocketDummy:
 	Inherits: BattleshipRocketDummy
+	Range: 3c0
 	Warhead@op: FireShrapnel
 		Weapon: BattleshipRocket
 		Amount: 12
@@ -557,7 +576,7 @@ TractorBeam:
 		Damage: 6
 		ValidTargets: Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@emp: GrantUpgrade
+	Warhead@TractorStop: GrantUpgrade
 		Range: 1c0
 		Duration: 35
 		Upgrades: tractorstop

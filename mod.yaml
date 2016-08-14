@@ -119,7 +119,6 @@ Weapons:
 	sp|weapons/weapondefaults.yaml
 	sp|weapons/neutralweapons.yaml
 	sp|weapons/explosions.yaml
-	sp|weapons/healweapons.yaml
 	sp|weapons/largeguns.yaml
 	sp|weapons/missiles.yaml
 	sp|weapons/smallguns.yaml

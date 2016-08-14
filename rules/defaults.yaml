@@ -16,36 +16,26 @@
 	RenderSprites:
 
 ^GainsExperience:
+#EXPERIENCE
 	GainsExperience:
 		Upgrades:
-			400: rank, firepower, damage, speed, reload
-			800: rank, firepower, damage, speed, reload, selfheal, MindControlInmune
+			400: rank, firepowerexp, damageexp, speedexp, reloadexp
+			800: rank, firepowerexp, damageexp, speedexp, reload, selfheal, MindControlInmune
 	FirepowerMultiplier@EXPERIENCE:
-		UpgradeTypes: firepower
-		Modifier: 105, 110, 115, 120, 125
+		UpgradeTypes: firepowerexp
+		Modifier: 105, 110
 	DamageMultiplier@EXPERIENCE:
-		UpgradeTypes: damage
-		Modifier: 95, 90, 85, 80, 75
+		UpgradeTypes: damageexp
+		Modifier: 95, 90
 	SpeedMultiplier@EXPERIENCE:
-		UpgradeTypes: speed
-		Modifier: 105, 110, 115, 120, 125
+		UpgradeTypes: speedexp
+		Modifier: 105, 110
 	ReloadDelayMultiplier@EXPERIENCE:
-		UpgradeTypes: reload
-		Modifier: 95, 90, 85, 80, 75
-	FirepowerMultiplier@debuff:
-		UpgradeTypes: firepowerdebuff
-		Modifier: 95, 90, 85, 80, 75
-	DamageMultiplier@debuff:
-		UpgradeTypes: damagedebuff
-		Modifier: 105, 110, 115, 120, 125
-	SpeedMultiplier@debuff:
-		UpgradeTypes: speeddebuff
-		Modifier: 95, 90, 85, 80, 75
-	ReloadDelayMultiplier@debuff:
-		UpgradeTypes: reloaddebuff
-		Modifier: 95, 90, 85, 80, 75
+		UpgradeTypes: reloadexp
+		Modifier: 95, 90
 	SelfHealing@ELITE:
-		Step: 3
+		PercentageStep: 1
+		Step: 0
 		Delay: 100
 		HealIfBelow: 100
 		DamageCooldown: 125
@@ -60,25 +50,148 @@
 		ZOffset: 256
 		UpgradeMinEnabledLevel: 1
 		UpgradeMaxAcceptedLevel: 2
+
+^GenericBuffsDebuffs:
+#BUFFS / DEBUFFS
+#FIREFLY
+	SpeedMultiplier@firefly:
+		UpgradeTypes: fireflystop
+		Modifier: 25
+		BaseLevel: 1
+		UpgradeMinEnabledLevel: 1
+	ReloadDelayMultiplier@firefly:
+		UpgradeTypes: fireflystop
+		Modifier: 150
+		BaseLevel: 1
+		UpgradeMinEnabledLevel: 1
+	UpgradeOverlay@firefly:
+		UpgradeTypes: fireflystop
+		UpgradeMinEnabledLevel: 1
+		Palette: disabled
+	TimedUpgradeBar@firefly:
+		Upgrade: fireflystop
+		Color: FFFFFF
+#FIRESTORM GEN
+	DamageMultiplier@firestorm:
+		Modifier: 90, 85
+		UpgradeTypes: FirestormGen
+		BaseLevel: 1
+#SCRIN BATTERY
+	FirepowerMultiplier@batteryboost:
+		UpgradeTypes: batteryboost
+		Modifier: 110, 115
+		BaseLevel: 1
+		UpgradeMinEnabledLevel: 1
+	SelfHealing@batteryboost:
+		PercentageStep: 1
+		Step: 0
+		Delay: 100
+		HealIfBelow: 101
+		UpgradeTypes: batteryboost
+		UpgradeMinEnabledLevel: 1
+#HEALTH PERCENTAGE FIREPOWER MULTIPLIER
+	HealthPercentageFirepowerMultiplier:
+		UpgradeTypes: AcidScaleDmg
+		UpgradeMinEnabledLevel: 1
+#GENERIC POISON EFFECT
+	SelfHealing@poisoncloud:
+		PercentageStep: -1
+		Step: -1
+		Delay: 75
+		UpgradeTypes: Poison
+		HealIfBelow: 200
+		DamageTypes: TiberiumDeath
+		UpgradeMinEnabledLevel: 1
+#BOUNTY
+	GivesBounty@Cabal:
+		Percentage: 20
+		ValidStances: Enemy
+		DeathTypes: CabalDeathCrate
+#VENTILATOR BUFF AND DEBUFF
+	ReloadDelayMultiplier@VentilatorBuff:
+		UpgradeTypes: VentilatorBuff
+		Modifier: 90, 85
+	ReloadDelayMultiplier@VentilatorPoison:
+		UpgradeTypes: VentilatorPoison
+		Modifier: 110, 115
+#WOLF BUFFS AND DEBUFFS
+	SpeedMultiplier@WolfBuff:
+		UpgradeTypes: WolfBuff
+		Modifier: 120, 130
+	ReloadDelayMultiplier@WolfBuff:
+		UpgradeTypes: WolfBuff
+		Modifier: 80, 70
+	DamageMultiplier@WolfBuff:
+		Modifier: 110, 115
+		UpgradeTypes: WolfBuff
+		BaseLevel: 1
+#DECORATIONS
 	WithDecoration@tibicon:
 		Image: tibicon
 		Sequence: idle
 		ReferencePoint: Bottom, Left
 		Palette: mouse
 		ShowToEnemies: true
-		UpgradeTypes: forgbullbuff
+		UpgradeTypes: WolfBuff, VentilatorBuff, VentilatorPoison, ShowTibIcon
+		UpgradeMinEnabledLevel: 1
+
+^IncompleteSelfHeal:
+	SelfHealing@Scrin:
+		PercentageStep: 1
+		Step: 0
+		Delay: 100
+		DamageCooldown: 100
+		HealIfBelow: 60
+
+^PermanentSelfHeal:
+	SelfHealing@Scrin:
+		PercentageStep: 1
+		Step: 0
+		Delay: 100
+		DamageCooldown: 200
+		HealIfBelow: 105
+
+^NodVehicleRepair:
+	SelfHealing@NodVehicleRepair:
+		PercentageStep: 1
+		Step: 0
+		Delay: 10
+		HealIfBelow: 101
+		UpgradeTypes: NodVehicleRepair
+		UpgradeMinEnabledLevel: 1
+
+^VentilatorBuff: #Only affects infantry.
+	SelfHealing@VentilatorBuff:
+		PercentageStep: 1
+		Step: 1
+		Delay: 100
+		UpgradeTypes: VentilatorBuff
+		HealIfBelow: 200
+		DamageTypes: TiberiumDeath
+		UpgradeMinEnabledLevel: 1
+
+^VentilatorPoison: #Only affects infantry.
+	SelfHealing@VentilatorPoison:
+		PercentageStep: -3
+		Step: 0
+		Delay: 75
+		UpgradeTypes: VentilatorPoison, WolfBuff
+		HealIfBelow: 200
+		DamageTypes: TiberiumDeath
+		UpgradeMinEnabledLevel: 1
+	SelfHealing@VentilatorPoisonCounter:
+		PercentageStep: 3
+		Step: 0
+		Delay: 75
+		UpgradeTypes: WolfBuff
+		HealIfBelow: 30
+		DamageTypes: TiberiumDeath
 		UpgradeMinEnabledLevel: 1
 
 ^RejectsOrdersBerkserk:
 	RejectsOrders@berserk:
 		UpgradeTypes: berserk
 		UpgradeMinEnabledLevel: 1
-
-^CabalBounty:
-	GivesBounty@Cabal:
-		Percentage: 20
-		ValidStances: Enemy
-		DeathTypes: CabalDeathCrate
 
 ^EmpDisable:
 	UpgradeOverlay@EMPDISABLE:
@@ -94,43 +207,13 @@
 	WithIdleOverlay@EMPDISABLE:
 		Sequence: emp-overlay
 		Palette: effect
-		UpgradeTypes: empdisable
+		UpgradeTypes: empdisable, fireflystop
 		ShowToEnemies: true
 		ZOffset: 512
 		UpgradeMinEnabledLevel: 1
 	PowerMultiplier@EMPDISABLE:
 		UpgradeTypes: empdisable
 		Modifier: 0
-
-^ROTreduction:
-	UpgradeOverlay@ROTreduction:
-		UpgradeTypes: ROTreduction
-		UpgradeMinEnabledLevel: 1
-		Palette: disabled
-	DisableOnUpgrade@ROTreduction:
-		UpgradeTypes: ROTreduction
-		UpgradeMinEnabledLevel: 1
-	TimedUpgradeBar@ROTreduction:
-		Upgrade: ROTreduction
-		Color: FFFFFF
-	WithIdleOverlay@ROTreduction:
-		Sequence: emp-overlay
-		Palette: effect
-		UpgradeTypes: ROTreduction
-		ShowToEnemies: true
-		ZOffset: 512
-		UpgradeMinEnabledLevel: 1
-	ReloadDelayMultiplier:
-		UpgradeTypes: ROTreduction
-		Modifier: 200, 300, 400, 500, 600, 700
-		BaseLevel: 1
-		UpgradeMinEnabledLevel: 1
-
-^firestormgen:
-	DamageMultiplier@firestorm:
-		Modifier: 80
-		UpgradeTypes: FirestormGen
-		BaseLevel: 1
 
 ^WebDisable:
 	UpgradeOverlay@WebDisable:
@@ -157,7 +240,8 @@
 
 ^BurstRecovery:
 	SelfHealing@NanomachineBurst:
-		Step: 10
+		PercentageStep: 2
+		Step: 0
 		Delay: 25
 		HealIfBelow: 100
 		UpgradeTypes: nanomachineburst
@@ -167,17 +251,6 @@
 		Probability: 100
 		OwnerType: Killer
 		RequiresLobbyCreeps: false
-
-^NodToxindebuff:
-	ReloadDelayMultiplier@NodToxindebuff:
-		Modifier: 200
-		UpgradeTypes: NodToxindebuff
-	DamageMultiplier@NodToxindebuff:
-		Modifier: 150
-		UpgradeTypes: NodToxindebuff
-	SpeedMultiplier@NodToxindebuff:
-		Modifier: 30
-		UpgradeTypes: NodToxindebuff
 
 ^EmpDisableMobile:
 	Inherits: ^EmpDisable
@@ -197,41 +270,10 @@
 		BaseLevel: 1
 		UpgradeMinEnabledLevel: 1
 
-^batteryboost:
-	FirepowerMultiplier:
-		UpgradeTypes: batteryboost
-		Modifier: 130
-		BaseLevel: 1
-		UpgradeMinEnabledLevel: 1
-	SelfHealing@batteryboost
-		Step: 3
-		Delay: 100
-		HealIfBelow: 100
-		UpgradeTypes: batteryboost
-		UpgradeMinEnabledLevel: 1
-
-^nomnomnom:
-	DamageMultiplier@nomnomnom:
-		Modifier: 110
-		UpgradeTypes: nomnomnom
-	SelfHealing@nomnomnom:
-		Step: -10
-		Delay: 75
-		HealIfBelow: 110
-		UpgradeTypes: nomnomnom
-		UpgradeMinEnabledLevel: 1
-	SelfHealing@nomnomnom1:
-		Step: 10
-		Delay: 75
-		HealIfBelow: 20
-		UpgradeTypes: nomnomnom
-		UpgradeMinEnabledLevel: 1
-
 ^BasicBuilding:
+	Inherits@1: ^GenericBuffsDebuffs
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
-	Inherits@3: ^nomnomnom
-	Inherits@4: ^firestormgen
 	SelectionDecorations:
 		Palette: pips
 	Selectable:
@@ -276,7 +318,6 @@
 ^Building:
 	Inherits@1: ^BasicBuilding
 	Inherits@2: ^EmpDisable
-	Inherits@3: ^CabalBounty
 	GivesBuildableArea:
 	Capturable:
 	RepairableBuilding:
@@ -299,6 +340,13 @@
 	EmitInfantryOnSell@scr:
 		ActorTypes: legioclone
 		Factions: scr
+	SpawnActorOnDeath@tiberium2:
+		Actor: visc_lrg
+		Probability: 5
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		DeathType: TiberiumDeath
+		RequiresLobbyCreeps: true
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	CaptureNotification:
@@ -396,16 +444,15 @@
 	RenderSprites:
 
 ^Infantry:
-	Inherits@1: ^GainsExperience
+	Inherits@0: ^GainsExperience
+	Inherits@1: ^GenericBuffsDebuffs
 	Inherits@2: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
-	Inherits@5: ^WebDisable
-	Inherits@6: ^BurstRecovery
-	Inherits@7: ^firestormgen
-	Inherits@8: ^RejectsOrdersBerkserk
-	Inherits@9: ^CabalBounty
-	Inherits@10: ^NodToxindebuff
-	Inherits@12: ^nomnomnom
+	Inherits@4: ^WebDisable
+	Inherits@5: ^BurstRecovery
+	Inherits@6: ^RejectsOrdersBerkserk
+	Inherits@7:^VentilatorPoison
+	Inherits@8:^VentilatorBuff
 	DrawLineToTarget:
 	TemporaryOwnerManager:
 	Cloak@CLOAKGENERATOR:
@@ -462,18 +509,18 @@
 	WithInfantryBody:
 	WithDeathAnimation@normal:
 		DeathTypes: #1 2 normals, 3 headshot, 4 explosion
-			BulletDeath: 1
-			TiberiumDeath: 2
-			TiberiumDeathStrong: 2
-			CabalDeath: 2
-			CabalDeathCrate: 2
+			BulletDeath: 1, 2
+			TiberiumDeath: 1, 2
+			TiberiumDeathStrong: 1, 2
+			CabalDeath: 1, 2
+			CabalDeathCrate: 1, 2
 			BlackHandRfle: 3
 			HeadshotDeath: 3
-			SmallExplosionDeath: 4
 	WithDeathAnimation@explosion:
 		DeathSequencePalette: effect
 		DeathPaletteIsPlayerPalette: False
 		DeathTypes:
+			SmallExplosionDeath: 4
 			ExplosionDeath: 4
 	WithDeathAnimation@energy:
 		DeathSequencePalette: ra
@@ -484,16 +531,16 @@
 		DeathSequencePalette: effect
 		DeathPaletteIsPlayerPalette: False
 		DeathTypes: #1 2 normals, 3 headshot, 4 explosion
-			BulletDeath: body
-			TiberiumDeath: body
-			CabalDeath: body
-			CabalDeathCrate: body
-			BlackHandRfle: body
-			HeadshotDeath: body
-			SmallExplosionDeath: body
-			EnergyDeath: body
-			ExplosionDeath: body
-			FireDeath: body
+			BulletDeath: body1, body2, body3, body4, body5
+			TiberiumDeath: body1, body2, body3, body4, body5
+			CabalDeath: body1, body2, body3, body4, body5
+			CabalDeathCrate: body1, body2, body3, body4, body5
+			BlackHandRfle: body1, body2, body3, body4, body5
+			HeadshotDeath: body1, body2, body3, body4, body5
+			SmallExplosionDeath: body1, body2, body3, body4, body5
+			EnergyDeath: body1, body2, body3, body4, body5
+			ExplosionDeath: body1, body2, body3, body4, body5
+			FireDeath: body1, body2, body3, body4, body5
 	AutoTarget:
 	AttackMove:
 		Voice: Move
@@ -608,10 +655,21 @@
 	Inherits: ^Mutant
 	-TakeCover:
 	UpgradeOnDamage@beastberserk:
-		Upgrades: firepower, speed, reload, berserk
+		Upgrades: beastdamaged, berserk
 		ValidDamageStates: Heavy, Critical
+	SpeedMultiplier@beastberserk:
+		UpgradeTypes: beastdamaged
+		Modifier: 120
+	ReloadDelayMultiplier@beastberserk:
+		UpgradeTypes: beastdamaged
+		Modifier: 80
+	DamageMultiplier@beastberserk:
+		Modifier: 120
+		UpgradeTypes: beastdamaged
+		BaseLevel: 1
 	SelfHealing@BerserkBeast:
-		Step: 10
+		PercentageStep: 1
+		Step: 0
 		Delay: 30
 		DamageCooldown: 200
 		HealIfBelow: 60
@@ -619,7 +677,6 @@
 ^ScrinSoldier:
 	Inherits: ^Infantry
 	Inherits@2: ^ScrinRender
-	Inherits@3: ^batteryboost
 	Voiced:
 		VoiceSet: Limpet
 	MustBeDestroyed:
@@ -641,7 +698,7 @@
 
 ^Cyborg:
 	Inherits@1: ^Infantry
-	Inherits@3:	^CyborgSelfHeal
+	Inherits@3:	^IncompleteSelfHeal
 	-SpawnActorOnDeath@conversion:
 	ExplosionOnDamageTransition:
 		Weapon: CyborgExplode
@@ -668,7 +725,7 @@
 
 ^CabalDroneInfantry:
 	Inherits@1: ^Infantry
-	Inherits@2:	^CyborgSelfHeal
+	Inherits@2:	^IncompleteSelfHeal
 	-WithDeathAnimation@normal:
 	-WithDeathAnimation@explosion:
 	-WithDeathAnimation@energy:
@@ -696,17 +753,13 @@
 		CrushedPaletteIsPlayerPalette: true
 
 ^Vehicle:
-	Inherits@1: ^GainsExperience
+	Inherits@0: ^GainsExperience
+	Inherits@1: ^GenericBuffsDebuffs
 	Inherits@2: ^ExistsInWorld
 	Inherits@3: ^EmpDisableMobile
-	Inherits@4: ^CabalBounty
-	Inherits@5: ^ROTreduction
 	Inherits@6: ^BurstRecovery
-	Inherits@7: ^firestormgen
 	Inherits@8: ^RejectsOrdersBerkserk
-	Inherits@9: ^NodToxindebuff
 	Inherits@10:^NodVehicleRepair
-	Inherits@11: ^nomnomnom
 	DrawLineToTarget:
 	TemporaryOwnerManager:
 	Mobile:
@@ -815,7 +868,7 @@
 	ThrowsShrapnel:
 		Weapons: SmallDebris
 		Pieces: 3, 7
-		Range: 2c0, 5c0
+		Range: 2c0, 5c0	
 
 ^Tank:
 	Inherits: ^Vehicle
@@ -834,7 +887,6 @@
 ^ScrinTank:
 	Inherits: ^Vehicle
 	Inherits@2: ^ScrinRender
-	Inherits@3: ^batteryboost
 	Explodes:
 		Weapon: ScrinUnitExplode
 		EmptyWeapon: ScrinUnitExplode
@@ -870,12 +922,22 @@
 	Inherits: ^VoxelVehicle
 	-MustBeDestroyed:
 
+# ^SpriteAircraft:
+	# WithShadow@Airborne:
+		# UpgradeTypes: airborne
+		# UpgradeMinEnabledLevel: 1
+	# WithShadow@Grounded:
+		# UpgradeTypes: airborne
+		# UpgradeMaxEnabledLevel: 0
+		# Offset: -1000, -1000, -1000
+
 ^Aircraft:
-	Inherits@1: ^GainsExperience
+	Inherits@0: ^GainsExperience
+	Inherits@1: ^GenericBuffsDebuffs
 	Inherits@2: ^ExistsInWorld
 	Inherits@3: ^RejectsOrdersBerkserk
 	Inherits@4: ^tractorstop
-	Inherits@5: ^AircraftSelfHeal
+	Inherits@5: ^PermanentSelfHeal
 	DrawLineToTarget:
 	TemporaryOwnerManager:
 	Cloak@CLOAKGENERATOR:
@@ -938,6 +1000,7 @@
 		LandWhenIdle: no
 		CruiseAltitude: 2048
 		CanHover: True
+		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
 	Targetable@AIRBORNE:
 		TargetTypes: Air, Helicopter
 		UpgradeTypes: airborne
@@ -1009,7 +1072,7 @@
 	Selectable:
 		Bounds: 26,26,0,-3
 	Targetable:
-		TargetTypes: Ground
+		TargetTypes: Ground, NeutralTibCritter
 	AttackMove:
 	HiddenUnderFog:
 	DamagedByTerrain:
@@ -1115,7 +1178,7 @@
 		Range: 5c0
 
 ^DeployedVehicle:
-	Inherits@1: ^GainsExperience
+	Inherits@1: ^GenericBuffsDebuffs
 	Inherits@2: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
 	Cloak@CLOAKGENERATOR:
@@ -1338,32 +1401,3 @@
 ^TowerStealthDetection:
 	DetectCloaked:
 		Range: 5c0
-
-^NodVehicleRepair:
-	SelfHealing@NodVehicleRepair:
-		Step: 30
-		Delay: 20
-		HealIfBelow: 100
-		UpgradeTypes: NodVehicleRepair
-		UpgradeMinEnabledLevel: 1
-
-^CyborgSelfHeal:
-	SelfHealing@Scrin:
-		Step: 2
-		Delay: 100
-		DamageCooldown: 100
-		HealIfBelow: 60
-
-^CabVehicleSelfHeal:
-	SelfHealing@Scrin:
-		Step: 4
-		Delay: 100
-		DamageCooldown: 200
-		HealIfBelow: 75
-
-^AircraftSelfHeal:
-	SelfHealing@Cabal:
-		Step: 4
-		Delay: 100
-		HealIfBelow: 75
-		DamageCooldown: 100

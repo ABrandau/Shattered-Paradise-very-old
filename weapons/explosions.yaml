@@ -62,14 +62,35 @@ UnitExplode:
 		Explosions: large_twlt
 		ImpactSound: expnew09.aud
 
+BlackHandExplode:
+	Warhead@1Dam: SpreadDamage
+		Spread: 426
+		Damage: 80
+		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Versus:
+			None: 90
+			Wood: 75
+			Light: 60
+			Heavy: 25
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: large_twlt
+		ImpactSound: expnew09.aud
+	Warhead@AcidScaleDmg: GrantUpgrade
+		Range: 300
+		Duration: 150
+		Upgrades: AcidScaleDmg
+		ValidTargets: Ground, Vehicle, Infantry, Building
+
 GasCloudDeathWeapon:
+	ReloadDelay: 10
 	Inherits: ^MeleeWarhead
 	Warhead@1Dam: SpreadDamage
 		Spread: 200
-		Damage: 50
+		Damage: 40
 		InvalidTargets: Veinhole
 		Versus:
-		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeathStrong
+		DamageTypes: TiberiumDeathStrong
 
 GasCloudDeathWeapon2:
 	Inherits: GasCloudDeathWeapon

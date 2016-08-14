@@ -229,6 +229,7 @@ explosion:
 		Tick: 45
 	tibexp: tibexp
 	tibexp2: tibexp2
+	bullparticle: bullparticle
 	tibexp2mini: tibexp2mini
 	tib_expsmall: tibexpsmall	
 	#CABAL

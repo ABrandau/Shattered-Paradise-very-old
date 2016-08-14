@@ -415,28 +415,20 @@ ecmwave:
 	Report: sonic4.aud
 	ValidTargets: Vehicle
 	Projectile: Bullet
-		Speed: 1c682
+		Speed: 100c0
 		Blockable: false
-		Shadow: true
-		Angle: 62
-		Image: TORPEDO
-	# Warhead@1Eff: CreateEffect
-		# Explosion: pulse_explosion
-	Warhead@emp: GrantUpgrade
+		# Shadow: true
+		# Angle: 62
+		# Image: TORPEDO
+	Warhead@movestop: GrantUpgrade
 		Range: 2c0
 		Duration: 100
-		Upgrades: ROTreduction
+		Upgrades: fireflystop
 		ValidTargets: Vehicle
 	Warhead@3Dam: SpreadDamage
 		Spread: 128
 		Damage: 1
 		ValidTargets: Vehicle
-		Versus:
-			None: 0
-			Wood: 4		
-			Light: 3
-			Heavy: 3
-			Concrete: 0			
 
 PalaLazor:
 	Inherits: ^MeleeWarhead

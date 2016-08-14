@@ -134,6 +134,32 @@ NANOMACHINEBURSTDUMMY:
 		TargetStances: Ally, Enemy, Neutral
 	AutoTarget:
 
+EGGSPAWNER:
+	Inherits: ^Infantry
+	-Targetable:
+	-UpdatesPlayerStatistics:
+	-AutoSelectionSize:
+	-SelectionDecorations:
+	-Selectable:
+	-AutoTarget:
+	RenderSprites:
+		Image: blackhanddummy
+	-ActorLostNotification:
+	SelfHealing:
+		Step: -10
+		HealIfBelow: 200
+	Tooltip:
+		Name: Nanomachine Swarm
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+	SpawnActorOnDeath@workerspawn:
+		Actor: EGGS
+		Probability: 100
+		OwnerType: InternalName
+		InternalOwner: Creeps
+	-SpawnActorOnDeath@nanomachineburst:
+
 IONSTORMGENERATOR:
 	Inherits: ^DUMMYSTRUCTURE
 	SelfHealing:
@@ -198,8 +224,8 @@ BLACKHANDDUMMY:
 		HP: 5
 		NotifyAppliedDamage: False
 	Explodes:
-		Weapon: UnitExplodeSmall
-		EmptyWeapon: UnitExplodeSmall
+		Weapon: BlackHandExplode
+		EmptyWeapon: BlackHandExplode
 
 METEORPLANE:
 	Inherits: WETP

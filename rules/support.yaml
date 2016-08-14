@@ -412,6 +412,49 @@ GAFIRE:
 	SelectionDecorations:
 		VisualBounds: 110, 60, 3, -4
 
+GUARDIANDEP:
+	Inherits: ^Building
+	Valued:
+		Cost: 2000
+	Tooltip:
+		Name: Landed Guardian Platform
+		Description: Makes the nearby units and\nstructures more resistant to\ndamage.
+	Selectable:
+		Bounds: 110,90
+	Building:
+		Footprint: xx xx
+		Dimensions: 2,2
+	WithRangeCircle:
+		Range: 5c0
+		Type: cloakgenerator
+	UpgradeActorsNear@firestorm:
+		Upgrades: FirestormGen
+		Range: 5c0
+		AffectsParent: true
+	Selectable:
+		Bounds: 110, 60, 3, -4
+	Health:
+		HP: 650
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 15c0
+	Voiced:
+		VoiceSet: GuardianVO
+		Volume: 3
+	Armament:
+		Weapon: GuardianRepair
+		Cursor: repair
+		OutsideRangeCursor: repair
+		TargetStances: Ally
+		ForceTargetStances: None
+	AttackOmni:
+	AutoTarget:
+	Transforms:
+		IntoActor: guardian
+		Voice: Action2
+
+
 ##############################################
 # NOD
 ##############################################
@@ -625,7 +668,7 @@ DLIMPET:
 		Range: 5c0
 		Type: cloakgenerator
 	UpgradeActorsNear@toxin:
-		Upgrades: NodToxindebuff
+		Upgrades: AcidScaleDmg
 		ValidStances: Enemy
 		Range: 8c0
 
@@ -1058,10 +1101,10 @@ MUVENTI:
 		Range: 12c0
 		Type: cloakgenerator
 	UpgradeActorsNear@lobo:
-		Upgrades: firepower, selfheal, damage, speed, forgbullbuff, MindControlTargetting
+		Upgrades: VentilatorBuff, MindControlTargetting
 		Range: 12c0
 	UpgradeActorsNear@qlo:
-		Upgrades: speeddebuff, reloaddebuff, damagedebuff, MindControlTargetting
+		Upgrades: VentilatorPoison, MindControlTargetting
 		Range: 12c0
 		ValidStances: Enemy
 	RevealsShroud:
@@ -1543,6 +1586,7 @@ CABSENTRYTURRET:
 CABCANNON:
 	Inherits: ^Defense
 	Inherits@1: ^CabRender
+	Inherits@2:	^PermanentSelfHeal
 	Inherits@3: ^TowerStealthDetection
 	Valued:
 		Cost: 500
@@ -1583,7 +1627,7 @@ CABCANNON:
 CABRAIL:
 	Inherits: ^Defense
 	Inherits@1: ^CabRender
-	Inherits@2: ^CyborgSelfHeal
+	Inherits@2:	^PermanentSelfHeal
 	Inherits@3: ^TowerStealthDetection
 	Valued:
 		Cost: 800
@@ -1627,7 +1671,7 @@ CABRAIL:
 CABBLAST:
 	Inherits: ^Defense
 	Inherits@1: ^CabRender
-	Inherits@2: ^CyborgSelfHeal
+	Inherits@2:	^PermanentSelfHeal
 	Inherits@3: ^TowerStealthDetection
 	Valued:
 		Cost: 1200

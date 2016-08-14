@@ -104,3 +104,14 @@ ArtilleryWarhead: #Inherits: ArtilleryWarhead
 			Light: 100
 			Heavy: 100
 			Concrete: 25
+
+^NoDamage:	#Inherits: ^NoDamage
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 1
+		Versus:
+			None: 1
+			Wood: 1
+			Light: 1
+			Heavy: 1
+			Concrete: 1	

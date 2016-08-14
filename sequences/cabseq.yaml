@@ -576,22 +576,22 @@ grinder:
 paladin:
 	Inherits: ^EmpOverlay
 	stand:
-		Facings: -8
-		ShadowStart: 137
+		Facings: 8
+		ShadowStart: 120
 	idle:
-		Facings: -8
-		ShadowStart: 145		
+		Facings: 8
+		ShadowStart: 120		
 	run:
 		Tick: 125
 		Start: 8
 		Length: 8
-		Facings: -8
-		ShadowStart: 145
+		Facings: 8
+		ShadowStart: 128
 	shoot:
-		Start: 73
-		Length: 8
-		Facings: -8
-		ShadowStart: 210	
+		Start: 72
+		Length: 6
+		Facings: 8
+		ShadowStart: 192	
 	icon: paladinicon	
 ##########################################################
 # Aircraft
@@ -827,7 +827,7 @@ cabweap:
 	make:
 		Start: 4
 		Length: 30
-		Tick: 80
+		# Tick: 50
 		ShadowStart: 46
 	bib:
 		Start: 2

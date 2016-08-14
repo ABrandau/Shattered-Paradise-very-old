@@ -113,30 +113,6 @@ RangerRifle:
 		Explosions: water_piff
 		ValidImpactTypes: Water
 
-KnightGun:
-	Inherits: ^GrenadeWarhead
-	ReloadDelay: 60
-	Range: 4c0
-	Report: rketinf1.aud
-	ValidTargets: Ground
-	Projectile: Bullet
-		Speed: 300
-		Shadow: true
-		Inaccuracy: 200
-		Image: DISCUS
-		# Palette: apgreen
-	Warhead@1Dam: SpreadDamage
-		Spread: 125
-		Damage: 30
-		ValidTargets: Ground
-		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeathStrong
-	Warhead@2Eff: CreateEffect
-		Explosions: tib_expsmall
-		ImpactSound: expnew12.aud
-	Warhead@5Smu: LeaveSmudge
-		SmudgeType: SmallCrater
-		InvalidTargets: Vehicle, Building, Wall
-
 KnightAcid:
 	Inherits: ^AcidWarhead
 	ReloadDelay: 75
@@ -155,10 +131,6 @@ KnightAcid:
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 		InvalidTargets: Vehicle, Building, Wall
-	Warhead@emp: GrantUpgrade
-		Range: 300
-		Duration: 20
-		Upgrades: speeddebuff, reloaddebuff, damagedebuff, forgbullbuff
 
 PsykerRay:
 	Inherits: ^FullDamage
@@ -202,8 +174,29 @@ GFiendShard2:
 	Range: 6c768
 		
 GKnightGun:
-	Inherits: KnightGun
+	Inherits: ^GrenadeWarhead
+	ReloadDelay: 60
 	Range: 6c768
+	Report: rketinf1.aud
+	ValidTargets: Ground
+	Projectile: Bullet
+		Speed: 300
+		Shadow: true
+		Inaccuracy: 200
+		Image: DISCUS
+		# Palette: apgreen
+	Warhead@1Dam: SpreadDamage
+		Spread: 125
+		Damage: 30
+		ValidTargets: Ground
+		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeathStrong
+	Warhead@2Eff: CreateEffect
+		Explosions: tib_expsmall
+		ImpactSound: expnew12.aud
+	Warhead@5Smu: LeaveSmudge
+		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
+
 
 GPsykerRay:
 	Inherits: PsykerRay
@@ -232,32 +225,6 @@ BerserkerBlow:
 		SmudgeType: SmallCrater
 		InvalidTargets: Vehicle, Building, Wall
 
-WolfAcid:
-	Inherits: ^AcidWarhead
-	ReloadDelay: 75
-	Range: 4c0
-	Report: flamtnk1.aud
-	ValidTargets: Ground
-	Projectile: Bullet
-		Speed: 100
-		Image: acidall32mini #flamebro 
-		Inaccuracy: 384
-		Palette: apolgreenalpha
-	Burst: 5
-	BurstDelay: 5
-	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 14
-		ValidTargets: Ground	
-		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong
-	Warhead@2Smu: LeaveSmudge
-		SmudgeType: SmallScorch
-		InvalidTargets: Vehicle, Building, Wall
-	Warhead@emp: GrantUpgrade
-		Range: 300
-		Duration: 20
-		Upgrades: speeddebuff, reloaddebuff, damagedebuff, forgbullbuff
-
 BullAcid:
 	Inherits: ^AcidWarhead
 	ReloadDelay: 75
@@ -284,6 +251,23 @@ BullAcid:
 	Warhead@3Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 		InvalidTargets: Vehicle, Building, Wall
+	Warhead@Acid: GrantUpgrade
+		Range: 1c0
+		Duration: 200
+		Upgrades: VentilatorPoison
+
+BullBuff:
+	Inherits: ^NoDamage
+	ReloadDelay: 75
+	Range: 4c0
+	Projectile: InstantExplode
+	Warhead@2Eff: CreateEffect
+		Explosions: bullparticle
+		ExplosionPalette: apolgreenalpha
+	Warhead@Acid: GrantUpgrade
+		Range: 4c0
+		Duration: 200
+		Upgrades: WolfBuff
 
 DeathclawBlow:
 	Inherits: ^MeleeWarhead
@@ -297,7 +281,7 @@ DeathclawBlow:
 		Spread: 42
 		Damage: 60
 		InvalidTargets: Building
-		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath, TiberiumDeath			
+		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath			
 
 ###############################################################		
 # Vehicle
@@ -403,6 +387,7 @@ TiberianRocket:
 	Burst: 5
 	Report: rketinf1.aud
 	ValidTargets: Ground
+	InvalidTargets: NeutralTibCritter
 	MinRange: 3c0
 	Projectile: Bullet
 		Speed: 350
@@ -436,8 +421,8 @@ TiberianRocket:
 
 TiberianRocket2:
 	Inherits: TiberianRocket
-	Burst: 4
-	Delay: 10
+	Burst: 2
+	Delay: 20
 	Projectile: Bullet
 		Inaccuracy: 20
 	Warhead@5Actor: SpawnActor
@@ -455,7 +440,7 @@ MiniNuke:
 		Versus:
 			Concrete: 25
 		AffectsParent: true
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeath
 	Warhead@4Dam_areanuke1: SpreadDamage
 		Spread: 2c0
 		Damage: 30
@@ -465,29 +450,9 @@ MiniNuke:
 		Versus:
 			Concrete: 25
 		AffectsParent: true
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath
-	Warhead@7Dam_areanuke2: SpreadDamage
-		Spread: 3c0
-		Damage: 30
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 10
-		ValidTargets: Ground, Water, Air
-		Versus:
-			Concrete: 25
-		AffectsParent: true
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath
-	Warhead@9Dam_areanuke3: SpreadDamage
-		Spread: 4c0
-		Damage: 30
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 15
-		ValidTargets: Ground, Water, Air
-		Versus:
-			Concrete: 25
-		AffectsParent: true
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeath
 	Warhead@2Eff: CreateEffect
-		Explosions: large_explosion
+		Explosions: tibexp
 		ImpactSound: expnew09.aud
 		InvalidImpactTypes: Water
 	Warhead@3EffWater: CreateEffect
@@ -498,6 +463,11 @@ MiniNuke:
 	Warhead@10Smu: LeaveSmudge
 		SmudgeType: MediumCrater
 		InvalidTargets: Vehicle, Building, Wall
+	Warhead@5Actor: SpawnActor
+		Actors: VISC_LRG, VISC_LRG, VISC_LRG, VISC_LRG
+		FallRate: 5000
+		Range: 3
+		Delay: 15
 #################################################################
 # Aircraft
 #################################################################

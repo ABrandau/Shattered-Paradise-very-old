@@ -20,9 +20,21 @@
 		Length: *
 	die6: electro
 		Length: *
-	diebody: death_a
+	diebody1: death_a
 		Length: *
-		Tick: 800
+		Tick: 1000
+	diebody2: death_b
+		Length: *
+		Tick: 1000
+	diebody3: death_c
+		Length: *
+		Tick: 1000
+	diebody4: death_d
+		Length: *
+		Tick: 1000
+	diebody5: death_f
+		Length: *
+		Tick: 1000
 	webguy: webguy
 		Length: 6
 		ShadowStart: 6
