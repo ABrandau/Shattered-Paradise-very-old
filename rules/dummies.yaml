@@ -309,7 +309,6 @@ SCRINENERGYDUMMY:
 		TerrainSpeeds:
 			Cliff: 80
 			Water: 80
-	-UpdatesPlayerStatistics:
 	Armor:
 		Type: light
 	RenderSprites:
