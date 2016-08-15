@@ -962,7 +962,7 @@ MUTSW1:
 	SelectionDecorations:
 		VisualBounds: 116, 78, 3, -8
 	SpawnActorPower@ionstorm:
-		Actor: ionstormspawner
+		Actor: ionstormgenerator
 		Icon: ionstorm
 		ChargeTime: 240
 		OrderName: IonStorm

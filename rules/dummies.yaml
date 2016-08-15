@@ -169,26 +169,8 @@ IONSTORMGENERATOR:
 	Health:
 		HP: 40
 		NotifyAppliedDamage: False
-	AttackOmni:
-		IngoresVisibility: True
-	Armament:
-		Weapon: IonRay
-		TargetStances: Ally, Enemy, Neutral
-	AutoTarget:
-
-IONSTORMSPAWNER:
-	Inherits: ^DUMMYSTRUCTURE
-	SelfHealing:
-		Step: -10
-		HealIfBelow: 200
-	SpawnActorOnDeath@cabalcrate:
-		Actor: IONSTORMGENERATOR
-		Probability: 100
-		OwnerType: Victim
-		RequiresLobbyCreeps: false
-	Health:
-		HP: 5
-		NotifyAppliedDamage: False
+	ExplodeWeapon:
+		Weapon: IonRaySpawner
 
 VEINHOLESPAWNERDUMMY:
 	Inherits: ^Infantry
@@ -314,6 +296,8 @@ METEORSHRNAPEL:
 
 SCRINENERGYDUMMY:
 	Inherits: ^Tank
+	-ActorLostNotification:
+	-UpdatesPlayerStatistics:
 	Valued:
 		Cost: 500
 	Tooltip:

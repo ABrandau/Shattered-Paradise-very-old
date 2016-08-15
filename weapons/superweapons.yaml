@@ -276,14 +276,13 @@ MeteorRain:
 	Inherits: ^BombWarhead
 	ReloadDelay: 8
 	Range: 1c0
-	Report: Meteor1.aud #meteor2.aud
 	ValidTargets: Ground, Vehicle, Building, Infantry, Water
 	Projectile: Bullet
 		Speed: 300
 		Image: meteor2
 		Palette: effect
 		Shadow: true
-		Inaccuracy: 800
+		Inaccuracy: 500
 		TrailImage: meteortrail #metstral
 		TrailPalette: effectalpha
 		TrailInterval: 1
@@ -374,6 +373,15 @@ RecoveryGun:
 ##########################################################
 # Mutants
 ##########################################################
+
+IonRaySpawner:
+	ReloadDelay: 6
+	Range: 12c0
+	Projectile: InstantExplode
+	Warhead@op: FireShrapnel
+		Weapon: IonRay
+		Amount: 3
+		AllowDirectHit: false
 
 IonRay:
 	Inherits: ^FullDamage

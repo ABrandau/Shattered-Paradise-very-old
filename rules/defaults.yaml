@@ -793,7 +793,7 @@
 	SelectionDecorations:
 		Palette: pips
 	DamagedByTerrain@veins:
-		Damage: 6
+		Damage: 12
 		DamageInterval: 12
 		Terrain: Veins
 	UpgradeOnTerrain@VEINS:
