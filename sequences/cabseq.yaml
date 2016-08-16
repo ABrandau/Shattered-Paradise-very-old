@@ -827,7 +827,7 @@ cabweap:
 	make:
 		Start: 4
 		Length: 30
-		# Tick: 50
+		Tick: 40
 		ShadowStart: 46
 	bib:
 		Start: 2

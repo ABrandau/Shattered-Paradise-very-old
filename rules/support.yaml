@@ -1355,7 +1355,7 @@ SCREXTRACTOR:
 	RevealsShroud:
 		Range: 4c0
 	Power:
-		Amount: -150
+		Amount: -125
 	SelectionDecorations:
 		VisualBounds: 40, 36, -3, -8
 
@@ -1371,7 +1371,7 @@ SCRSW1:
 		Cost: 2500
 	Tooltip:
 		Name: Signal Transmiter
-		Description: Allows the player to generate Ion Storms.
+		Description: Allows the player to call in meteor storm strikes.
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
@@ -1388,15 +1388,14 @@ SCRSW1:
 		Amount: -150
 	SelectionDecorations:
 		VisualBounds: 116, 78, 3, -8
-	AirstrikePower@meteor:
-		UnitType: meteorplane
+	DetonateWeaponPower:
 		Icon: meteor
-		SquadSize: 3
-		Description: Meteor Storm
+		Description: Meteor Storm2
 		DisplayTimer: True
 		DisplayBeacon: True
 		LongDesc: Drags meteors from orbit dealing moderate \ndamage over a wide area.
 		ChargeTime: 360
+		Weapon: MeteorSpawner
 
 MOTHERSHIPDEP:
 	Inherits: ^Defense
@@ -1586,7 +1585,7 @@ CABSENTRYTURRET:
 CABCANNON:
 	Inherits: ^Defense
 	Inherits@1: ^CabRender
-	Inherits@2:	^PermanentSelfHeal
+	Inherits@2:	^IncompleteSelfHeal
 	Inherits@3: ^TowerStealthDetection
 	Valued:
 		Cost: 500
@@ -1627,7 +1626,7 @@ CABCANNON:
 CABRAIL:
 	Inherits: ^Defense
 	Inherits@1: ^CabRender
-	Inherits@2:	^PermanentSelfHeal
+	Inherits@2:	^IncompleteSelfHeal
 	Inherits@3: ^TowerStealthDetection
 	Valued:
 		Cost: 800
@@ -1664,14 +1663,14 @@ CABRAIL:
 		Weapon: AARail
 		LocalOffset: 550,-400,700
 	Power:
-		Amount: -60
+		Amount: -50
 	SelectionDecorations:
 		VisualBounds: 40, 36, -3, -8
 
 CABBLAST:
 	Inherits: ^Defense
 	Inherits@1: ^CabRender
-	Inherits@2:	^PermanentSelfHeal
+	Inherits@2:	^IncompleteSelfHeal
 	Inherits@3: ^TowerStealthDetection
 	Valued:
 		Cost: 1200
@@ -1710,6 +1709,7 @@ CABBLAST:
 CABEYE:
 	Inherits: ^Building
 	Inherits@1: ^CabRender
+	Inherits@2:	^IncompleteSelfHeal
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 95

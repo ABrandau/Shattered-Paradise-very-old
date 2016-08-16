@@ -209,90 +209,92 @@ BLACKHANDDUMMY:
 		Weapon: BlackHandExplode
 		EmptyWeapon: BlackHandExplode
 
-METEORPLANE:
-	Inherits: WETP
-	-Buildable:
-	-Selectable:
-	Cargo:
-		MaxWeight: 10
-		Types: Infantry, Vehicle, Aircraft
-	-AppearsOnRadar:
-	Aircraft:
-		Speed: 500
-	AttackBomber:
-		Guns: primary
-		# Bombs: primary
-	Health:
-		HP: 150
-	Armor:
-		Type: Light
-	-AttackPlane:
-	Armament:
-		Weapon: MeteorRain
-		LocalOffset: 3000, 3000,6000
-	Armament@1:
-		Weapon: MeteorRain
-		LocalOffset: -3000, 3000,6000
-	Armament@2:
-		Weapon: MeteorRain
-		LocalOffset: -3000, -3000,6000
-	Armament@3:
-		Weapon: MeteorRain
-		LocalOffset: 3000, -3000,6000
-	Armament@4:
-		Weapon: MeteorRain
-		LocalOffset: 0, 0,10000
-	Armament@5:
-		Weapon: MeteorRain
-		LocalOffset: 3000, 4000,6000
-	Armament@6:
-		Weapon: MeteorRain
-		LocalOffset: -3000, 4000,6000
-	Armament@7:
-		Weapon: MeteorRain
-		LocalOffset: -3000, -4000,6000
-	Armament@8:
-		Weapon: MeteorRain
-		LocalOffset: -3000, -4000,6000
-	Armament@9:
-		Weapon: MeteorRain
-	AmmoPool:
-		Ammo: 9
-		PipCount: 1
-		ReloadCount: 20
-		ReloadTicks: 150
-		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty
-		RearmBuildings: muair, gahpad, nahpad
-	ParaDrop:
-	-RevealsShroud:
-	-Targetable@GROUND:
-	-Targetable@AIRBORNE:
-	-WithVoxelBody:
-	-RenderVoxels:
+# METEORPLANE:
+	# Inherits: WETP
+	# -Buildable:
+	# -Selectable:
+	# Cargo:
+		# MaxWeight: 10
+		# Types: Infantry, Vehicle, Aircraft
+	# -AppearsOnRadar:
+	# Aircraft:
+		# Speed: 500
+	# AttackBomber:
+		# Guns: primary
+		Bombs: primary
+	# Health:
+		# HP: 150
+	# Armor:
+		# Type: Light
+	# -AttackPlane:
+	# Armament:
+		# Weapon: MeteorRain
+		# LocalOffset: 3000, 3000,6000
+	# Armament@1:
+		# Weapon: MeteorRain
+		# LocalOffset: -3000, 3000,6000
+	# Armament@2:
+		# Weapon: MeteorRain
+		# LocalOffset: -3000, -3000,6000
+	# Armament@3:
+		# Weapon: MeteorRain
+		# LocalOffset: 3000, -3000,6000
+	# Armament@4:
+		# Weapon: MeteorRain
+		# LocalOffset: 0, 0,10000
+	# Armament@5:
+		# Weapon: MeteorRain
+		# LocalOffset: 3000, 4000,6000
+	# Armament@6:
+		# Weapon: MeteorRain
+		# LocalOffset: -3000, 4000,6000
+	# Armament@7:
+		# Weapon: MeteorRain
+		# LocalOffset: -3000, -4000,6000
+	# Armament@8:
+		# Weapon: MeteorRain
+		# LocalOffset: -3000, -4000,6000
+	# Armament@9:
+		# Weapon: MeteorRain
+	# AmmoPool:
+		# Ammo: 9
+		# PipCount: 1
+		# ReloadCount: 20
+		# ReloadTicks: 150
+		# PipType: Ammo
+		# PipTypeEmpty: AmmoEmpty
+		# RearmBuildings: muair, gahpad, nahpad
+	# ParaDrop:
+	# -RevealsShroud:
+	# -Targetable@GROUND:
+	# -Targetable@AIRBORNE:
+	# -WithVoxelBody:
+	# -RenderVoxels:
 
-METEORSHRNAPEL:
-	Inherits: ^Infantry
-	-Targetable:
-	-UpdatesPlayerStatistics:
-	-AutoSelectionSize:
-	-SelectionDecorations:
-	-ActorLostNotification:
-	-Selectable:
-	-AutoTarget:
-	RenderSprites:
-		Image: blackhanddummy
-	SelfHealing:
-		Step: -10
-		HealIfBelow: 200
-	Health:
-		HP: 5
-		NotifyAppliedDamage: False
-	ThrowsShrapnel:
-		Weapons: LargeDebris
-		Pieces: 3, 7
-		Range: 2c0, 5c0
-	-SpawnActorOnDeath@nanomachineburst:
+# METEORSHRNAPEL:
+	# Inherits: ^Infantry
+	# -Targetable:
+	# -UpdatesPlayerStatistics:
+	# -AutoSelectionSize:
+	# -SelectionDecorations:
+	# -ActorLostNotification:
+	# -Selectable:
+	# -AutoTarget:
+	# RenderSprites:
+		# Image: blackhanddummy
+	# SelfHealing:
+		# Step: -10
+		# HealIfBelow: 200
+	# Health:
+		# HP: 5
+		# NotifyAppliedDamage: False
+	# ThrowsShrapnel:
+		# Weapons: LargeDebris
+		# Pieces: 3, 7
+		# Range: 2c0, 5c0
+	# -SpawnActorOnDeath@nanomachineburst:
+	# ExplodeWeapon:
+		# Weapon: MeteorExplo
 
 SCRINENERGYDUMMY:
 	Inherits: ^Tank

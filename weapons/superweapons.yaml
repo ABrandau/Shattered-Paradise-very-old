@@ -97,6 +97,11 @@ IonCannon:
 		SmudgeType: SmallScorch
 		Size: 2,1
 		InvalidTargets: Vehicle, Building, Wall
+	Warhead@op: FireShrapnel
+		Weapon: LargeDebris
+		Amount: 3
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 
 droppod1:
 	Inherits: ^BombWarhead
@@ -212,6 +217,11 @@ ClusterMissile:
 		Size: 5
 		InvalidTargets: Vehicle, Building, Wall
 		Delay: 20
+	Warhead@op: FireShrapnel
+		Weapon: LargeDebris
+		Amount: 3
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 		
 ToxinMissile:
 	ValidTargets: Ground, Water, Air
@@ -272,24 +282,44 @@ EnergyAssimilator:
 		ValidStances: Enemy, Neutral
 		Delay: 15
 
+MeteorSpawner:
+	ReloadDelay: 6
+	Range: 12c0
+	Projectile: InstantExplode
+	Warhead@op: FireShrapnel
+		Weapon: MeteorElevator
+		Amount: 50
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+		
+MeteorElevator:
+	ReloadDelay: 6
+	Range: 5c0
+	MinRange: 1c0
+	Projectile: AthenaProjectile
+		Altitude: 8000
+	Warhead@op: FireShrapnel
+		Weapon: MeteorRain
+		Range: 1
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+
 MeteorRain:
 	Inherits: ^BombWarhead
 	ReloadDelay: 8
 	Range: 1c0
 	ValidTargets: Ground, Vehicle, Building, Infantry, Water
 	Projectile: Bullet
-		Speed: 300
+		Speed: 350
 		Image: meteor2
 		Palette: effect
 		Shadow: true
-		Inaccuracy: 500
+		Inaccuracy: 550
 		TrailImage: meteortrail #metstral
 		TrailPalette: effectalpha
 		TrailInterval: 1
 	Warhead@1Dam: SpreadDamage
-		Spread: 500
-		Damage: 180
-		Falloff: 1000, 500, 250, 125, 75, 50, 25, 12, 0
+		Spread: 350
+		Damage: 50
 		ValidTargets: Ground, Vehicle, Building, Infantry, Water
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
@@ -298,13 +328,16 @@ MeteorRain:
 	Warhead@3Eff: CreateEffect
 		Explosions: small_clsn, large_twlt, medium_brnl
 		ImpactSounds: expnew12.aud
-	Warhead@4resource: CreateResource
-		AddsResourceType: Tiberium
-		Size: 1,1
-	Warhead@5Actor: SpawnActor
-		Actors: METEORSHRNAPEL
-		FallRate: 5000
-		Range: 3
+	Warhead@op: FireShrapnel
+		Weapon: SmallDebris
+		Amount: 3
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+	Warhead@op: FireShrapnel
+		Weapon: LargeDebris
+		Amount: 1
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 
 ##########################################################
 # CABAL
@@ -412,6 +445,11 @@ IonRay:
 		SmudgeType: SmallCrater
 		Delay: 5
 		InvalidTargets: Vehicle, Building, Wall
+	Warhead@op: FireShrapnel
+		Weapon: SmallDebris
+		Amount: 2
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 
 VeinholeSummonerWeapon:
 	Inherits: ^BombWarhead

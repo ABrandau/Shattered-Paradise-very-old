@@ -25,17 +25,17 @@ CLOUD1:
 	-RevealsShroud:
 	-Voiced:
 	Health:
-		HP: 50
+		HP: 75
 	SelfHealing:
 		Step: -1
 		Delay: 15
 		HealIfBelow: 200
 	Armor:
 		Type: Wood
-	# UpgradeActorsNear:
-		# Upgrades: Posion
-		# Range: 1c420
-		# ValidStances: Ally, Enemy, Neutral
+	UpgradeActorsNear:
+		Upgrades: Poison
+		Range: 2c0
+		ValidStances: Ally, Enemy, Neutral
 	AttackHeli:
 		FacingTolerance: 20
 		Voice: Attack
@@ -65,8 +65,8 @@ CLOUD1:
 		Weapon: GasCloudDeathWeapon
 		LoadedChance: 5
 		EmptyWeapon: GasCloudDeathWeapon2
-	ExplodeWeapon:
-		Weapon: GasCloudDeathWeapon
+	# ExplodeWeapon:
+		# Weapon: GasCloudDeathWeapon
 
 #######################################################
 #GDI

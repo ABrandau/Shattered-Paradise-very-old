@@ -1178,6 +1178,8 @@ scrsw1:
 		Start: 41
 		ShadowStart: 93
 		Tick: 400
+	active:
+		ShadowStart: 82
 	make:
 		Length: 29
 		ShadowStart: 52

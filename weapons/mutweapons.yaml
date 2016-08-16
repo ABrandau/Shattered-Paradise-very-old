@@ -38,6 +38,7 @@ SkirmisherRocket:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 20
+		AffectsParent: true
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect

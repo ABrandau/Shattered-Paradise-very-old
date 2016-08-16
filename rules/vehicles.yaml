@@ -1649,7 +1649,7 @@ SPIDERARTY:
 	Health:
 		HP: 350
 	Armor:
-		Type: wood
+		Type: Light
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithMuzzleOverlay:

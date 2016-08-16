@@ -1079,13 +1079,13 @@ CABSENTRY:
 	Mobile:
 		Speed: 70
 	SelfHealing:
-		PercentageStep: -1
+		PercentageStep: -10
 		Step: 0
 		Delay: 25
 		HealIfBelow: 200
 	-SelfHealing@Scrin:
 	Health:
-		HP: 50
+		HP: 150
 	Passenger:
 	Armament@primary:
 		Weapon: SentryGun
@@ -1374,7 +1374,7 @@ GLAD:
 	Inherits@2: ^IncompleteSelfHeal
 	Inherits@3: ^BasicStealthDetection
 	Armor:
-		Type: Heavy
+		Type: wood
 	Valued:
 		Cost: 750
 	SupplyTruck
