@@ -97,7 +97,7 @@
 	SelfHealing@poisoncloud:
 		PercentageStep: -1
 		Step: -6
-		Delay: 10
+		Delay: 15
 		UpgradeTypes: Poison
 		HealIfBelow: 200
 		DamageTypes: TiberiumDeath
@@ -184,13 +184,39 @@
 		Step: 0
 		Delay: 75
 		UpgradeTypes: WolfBuff
-		HealIfBelow: 30
+		HealIfBelow: 60
 		DamageTypes: TiberiumDeath
 		UpgradeMinEnabledLevel: 1
 
 ^RejectsOrdersBerkserk:
 	RejectsOrders@berserk:
 		UpgradeTypes: berserk
+		UpgradeMinEnabledLevel: 1
+
+#EMP ON CYBORGS
+	SpeedMultiplier@cyborgemp:
+		UpgradeTypes: empdisable
+		Modifier: 75
+		BaseLevel: 1
+		UpgradeMinEnabledLevel: 1
+	ReloadDelayMultiplier@cyborgemp:
+		UpgradeTypes: empdisable
+		Modifier: 125
+		BaseLevel: 1
+		UpgradeMinEnabledLevel: 1
+	UpgradeOverlay@cyborgemp:
+		UpgradeTypes: empdisable
+		UpgradeMinEnabledLevel: 1
+		Palette: disabled
+	TimedUpgradeBar@cyborgemp:
+		Upgrade: empdisable
+		Color: FFFFFF
+	WithIdleOverlay@cyborgemp:
+		Sequence: emp-overlay
+		Palette: effect
+		UpgradeTypes: empdisable
+		ShowToEnemies: true
+		ZOffset: 512
 		UpgradeMinEnabledLevel: 1
 
 ^EmpDisable:

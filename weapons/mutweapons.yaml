@@ -385,7 +385,7 @@ TiberianRocket:
 	Inherits: ArtilleryWarhead
 	ReloadDelay: 250
 	Range: 12c0
-	Burst: 5
+	Burst: 4
 	Report: rketinf1.aud
 	ValidTargets: Ground
 	InvalidTargets: NeutralTibCritter
@@ -424,8 +424,6 @@ TiberianRocket2:
 	Inherits: TiberianRocket
 	Burst: 2
 	Delay: 20
-	Projectile: Bullet
-		Inaccuracy: 20
 	Warhead@5Actor: SpawnActor
 		Actors: cloud1
 		FallRate: 5000

@@ -560,7 +560,7 @@ spiderarty:
 		Start: 16
 		Length: 8
 		Facings: 8
-		Tick: 90
+		Tick: 110
 		ShadowStart: 136
 	icon: spiderartyicon
 		Offset: 0, 0
@@ -763,25 +763,19 @@ cabradr:
 		Offset: 0, -36
 		UseTilesetCode: true
 	idle:
-		Start: 30
-		ShadowStart: 91
-	damaged-idle:
-		Start: 45
-		ShadowStart: 106
-	dead:
-		Start: 45
-		ShadowStart: 106
-		Tick: 400
-	idle-lights:
 		Start: 31
 		Length: 14
 		Tick: 100
 		ShadowStart: 92
-	damaged-idle-lights:
+	damaged-idle:
 		Start: 46
 		Length: 14
 		Tick: 400
 		ShadowStart: 107
+	dead:
+		Start: 45
+		ShadowStart: 106
+		Tick: 400
 	emp-overlay: emp_fx01
 		Length: *
 		Offset: 0, 0

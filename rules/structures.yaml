@@ -1883,9 +1883,6 @@ CABRADR:
 	RenderDetectionCircle:
 	RevealsShroud:
 		Range: 10c0
-	WithIdleOverlay@DISH:
-		Sequence: idle-lights
-		PauseOnLowPower: yes
 	Targetable:
 		TargetTypes: Building, Ground, C4, SpyInfiltrate
 	Power:

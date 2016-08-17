@@ -38,3 +38,9 @@
 	webguy: webguy
 		Length: 6
 		ShadowStart: 6
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive

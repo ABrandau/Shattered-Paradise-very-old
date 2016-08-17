@@ -705,6 +705,9 @@ WOLF:
 	-SelfHealing@VentilatorPoison:
 	AttackFrontal:
 	AutoTarget:
+	WithRangeCircle:
+		Range: 4c0
+		Type: cloakgenerator
 	Armament@PRIMARY:
 		Weapon: BullAcid
 		LocalOffset: 128,0,400
@@ -903,7 +906,7 @@ MUTQUAD:
 MLRS:
 	Inherits: ^VoxelTank
 	Valued:
-		Cost: 700
+		Cost: 900
 	Tooltip:
 		Name: Forgotten MRLS
 		Description: Light artillery outfitted with \nTiberium fueled rockets, deals damage\non a wide area.\n  Strong vs Infantry, Buildings\n  Weak vs Armored Targets.

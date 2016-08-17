@@ -137,12 +137,12 @@ EAGLEGUARD:
 	Mobile:
 		Speed: 46
 	Health:
-		HP: 250
+		HP: 275
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark
 	-DamagedByTerrain:
 	Armor:
-		Type: Light
+		Type: Wood
 	Passenger:
 	Armament:
 		Weapon: TrooperRail
@@ -1069,9 +1069,6 @@ CABSENTRY:
 	Explodes:
 		Weapon: DroneExplode
 		EmptyWeapon: DroneExplode
-	SupplyTruck
-		Payload: 35
-		Voice: Move
 	Voiced:
 		VoiceSet: Limpet
 	-ActorLostNotification:
@@ -1274,8 +1271,9 @@ MOTH:
 			Tiberium: 100
 			BlueTiberium: 100
 			Veins: 100
-			Cliff: 80
 			Water: 80
+		UpgradeTypes: notmobile
+		UpgradeMaxEnabledLevel: 0
 	Health:
 		HP: 200
 	Passenger:
@@ -1333,6 +1331,9 @@ REAPERCAB:
 		SharesCell: false
 		BuildPaletteOrder: 16
 		Prerequisites: ~cabclaw, cabtech
+	Repairable:
+		RepairBuildings: gadept
+		Voice: Move
 	Selectable:
 		Bounds: 40,40,0,-10
 	SupplyTruck
@@ -1387,6 +1388,9 @@ GLAD:
 		Queue: Infantry
 		BuildPaletteOrder: 14
 		Prerequisites: ~cabclaw, cabradr
+	Repairable:
+		RepairBuildings: gadept
+		Voice: Move
 	Selectable:
 		Bounds: 35,30,0,-10
 	Voiced:
@@ -1426,6 +1430,9 @@ CYC2:
 		BuildPaletteOrder: 17
 		Prerequisites: ~cabclaw, cabtech
 		BuildLimit: 1
+	Repairable:
+		RepairBuildings: gadept
+		Voice: Move
 	SupplyTruck
 		Payload: 600
 		Voice: Move

@@ -34,7 +34,7 @@ CLOUD1:
 		Type: Wood
 	UpgradeActorsNear:
 		Upgrades: Poison
-		Range: 2c0
+		Range: 1c512
 		ValidStances: Ally, Enemy, Neutral
 	AttackHeli:
 		FacingTolerance: 20
@@ -488,6 +488,8 @@ MUTBIRD:
 		MoveIntoShroud: true
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
+	RevealsShroud:
+		Range: 6c0
 	Health:
 		HP: 150
 	Armor:

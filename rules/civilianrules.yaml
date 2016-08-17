@@ -2235,7 +2235,7 @@ EGGS:
 	Armor:
 		Type: wood
 	RevealsShroud:
-		Range: 10c0
+		Range: 4c0
 	Health:
 		HP: 750
 	RenderSprites:

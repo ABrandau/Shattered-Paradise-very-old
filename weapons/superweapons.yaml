@@ -319,7 +319,7 @@ MeteorRain:
 		TrailInterval: 1
 	Warhead@1Dam: SpreadDamage
 		Spread: 350
-		Damage: 50
+		Damage: 100
 		ValidTargets: Ground, Vehicle, Building, Infantry, Water
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
