@@ -41,11 +41,10 @@ The_Dementor	: cyborg commando cameo, Wrench and Tiberium Icons.
 Gangster	: His template.
 Zoidzilla	: His template.	
 Zero18		: Gargoil vxl,	Quad Cannon vxl, Basilisk vxl,	Leonid tank vxl.	
-CalChillin	: Ion Storm SHPS				
 ApolloTD	: Gradient Colored Palettes.				
 Moder.U		: Falcon vxl, Battle Fortress vxl, Beam Cannon vxl.
 Super Joe	: Marine shp, Militant shp.			
-Lin Kuei Ominae	: Seeker shp, Tripod shp (Unit and Cameo).
+Lin Kuei Ominae	: Tripod shp (Unit and Cameo).
 wirecase.com	: Guardian Platform model.				
 Hassan_2030	: Grinder vxl.
 Jah		: Storm Rider vxl.				

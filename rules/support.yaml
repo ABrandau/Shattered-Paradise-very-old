@@ -448,7 +448,8 @@ GUARDIANDEP:
 		OutsideRangeCursor: repair
 		TargetStances: Ally
 		ForceTargetStances: None
-	AttackOmni:
+	AttackTurreted:
+	Turreted:
 	AutoTarget:
 	Transforms:
 		IntoActor: guardian

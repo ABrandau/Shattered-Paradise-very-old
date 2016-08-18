@@ -124,6 +124,9 @@
 	PaletteFromFile@apblue:
 		Name: apblue
 		Filename: apolblue.pal
+	PaletteFromFile@apcybl:
+		Name: apcybl
+		Filename: apolcybl.pal
 	PaletteFromFile@apyel:
 		Name: apyel
 		Filename: apolyell.pal
@@ -140,6 +143,10 @@
 	PaletteFromPaletteWithAlpha@apolbluealpha:
 		Name: apolbluealpha
 		BasePalette: apblue
+		Alpha: 0.8
+	PaletteFromPaletteWithAlpha@apcyblalhpa:
+		Name: apollightbluealpha
+		BasePalette: apcybl
 		Alpha: 0.8
 	PaletteFromPaletteWithAlpha@apolredalpha:
 		Name: apolredalpha

@@ -833,6 +833,30 @@
 		Sequence: veins
 		UpgradeTypes: veins
 		UpgradeMinEnabledLevel: 1
+	# UpgradeOnDamage@smoke:
+		# Upgrades: smoketrail
+		# ValidDamageStates: Critical
+	# LeavesTrails@smoke:
+		# Type: CenterPosition
+		# TrailWhileStationary: true
+		# StationaryInterval: 5
+		# Palette: apolgreyalpha
+		# Image: smoketrailsmall
+		# TerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium, veins, Cliff, Water
+		# MovingInterval: 5
+		# UpgradeTypes: smoketrail
+		# UpgradeMinEnabledLevel: 1
+	# UpgradeOnDamage@sparks:
+		# Upgrades: sparks
+		# ValidDamageStates: Heavy, Critical
+	# LeavesTrails@sparks:
+		# Type: CenterPosition
+		# Image: sparks
+		# TerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium, veins, Cliff, Water
+		# MovingInterval: 10
+		# Palette: effect
+		# UpgradeTypes: sparks
+		# UpgradeMinEnabledLevel: 1
 	SpawnActorOnDeath@conversion:
 		Actor: PALADIN2
 		Probability: 100

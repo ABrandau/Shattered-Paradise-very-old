@@ -10,6 +10,10 @@
 		UseTilesetExtension: true
 		ZOffset: 1023
 		Offset: 0, -12
+	smoketrailsmall: smoketrailsmall
+		Length: *
+	sparks: sparks3
+		Length: *
 	muzzle: gunfire
 		Length: *
 		

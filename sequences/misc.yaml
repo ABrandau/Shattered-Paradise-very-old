@@ -82,6 +82,18 @@ meteor:
 	idle:
 		Length: 8
 		Facings: 8
+
+smoketrailsmall:
+	idle:
+		Length: *
+		Offset: 0,-18
+		# Tick: 25
+		ZOffset: 512
+
+sparks: sparks3
+	idle:
+		Length: *
+		Tick: 25
 		
 meteor2:
 	Inherits: meteor
@@ -205,6 +217,9 @@ explosion:
 	fire2: fire2
 	fire3: fire3
 	fire4: fire4
+	sparks: sparks
+	sparks2: sparks2
+	sparks3: sparks3
 	gasclouddeath: cloud1d
 		Offset: 0,-12
 		ZOffset: 4096
@@ -219,14 +234,35 @@ explosion:
 	smokebomb3: smokebomb3
 	smokebomb4: smokebomb4
 	#Mutants
-	ion_ray1: lbolt1
-		# Tick: 35
-	ion_ray2: lbolt2
-		# Tick: 35
-	ion_ray3: lbolt3
-		# Tick: 35
-	ion_ray4: lbolt4
-		# Tick: 35
+	bolt1: lightningbolts
+		Length: 1
+	bolt2: lightningbolts
+		Start: 1
+		Length: 1
+	bolt3: lightningbolts
+		Start: 2
+		Length: 1
+	bolt4: lightningbolts
+		Start: 3
+		Length: 1
+	bolt5: lightningbolts
+		Start: 4
+		Length: 1
+	bolt6: lightningbolts
+		Start: 5
+		Length: 1
+	bolt7: lightningbolts
+		Start: 6
+		Length: 1
+	bolt8: lightningbolts
+		Start: 7
+		Length: 1
+	bolt9: lightningbolts
+		Start: 8
+		Length: 1
+	bolt10: lightningbolts
+		Start: 9
+		Length: 1
 	tibexp: tibexp
 	tibexp2: tibexp2
 	bullparticle: bullparticle
@@ -239,6 +275,8 @@ explosion:
 		Offset: 0, -12
 		Tick: 15
 	#Scrin
+	lightningexplo: lightningexplo
+		Tick: 10
 	colossiglow: glow
 		Tick: 100
 	viscexplo: viscexplo
@@ -795,6 +833,13 @@ flamebro:
 		# Tick: 160
 		
 litning:
+	bright:
+		Length: 4
+	dim:
+		Start: 4
+		Length: 4
+
+lightest:
 	bright:
 		Length: 4
 	dim:

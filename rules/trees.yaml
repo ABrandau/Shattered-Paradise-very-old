@@ -131,6 +131,8 @@ VEINHOLE:
 		Weapon: VeinholeAttack
 		TargetStances: Enemy, Ally, Neutral
 		LocalOffset: 500, 0, 0
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
 	AutoTarget:
 	Selectable:
 		Priority: 3

@@ -147,17 +147,19 @@ PsykerRay:
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_explosion
-		ImpactSound: expnew09.aud
+		ImpactSound: expnew08.aud
 	Warhead@3Eff: CreateEffect
-		Explosions: ion_ray1, ion_ray2, ion_ray3, ion_ray4
-		ImpactSound: expnew09.aud
-	Warhead@3EffWater: CreateEffect
-		Explosions: large_explosion
+		Explosions: bolt1, bolt2, bolt3, bolt4, bolt5, bolt6, bolt7, bolt8, bolt9, bolt10
 		ImpactSound: expnew09.aud
 	Warhead@4: LeaveSmudge
 		SmudgeType: SmallCrater
-		InvalidTargets: Vehicle, Building, Wall		
-		
+		InvalidTargets: Vehicle, Building, Wall
+	Warhead@op: FireShrapnel
+		Weapon: SmallDebris
+		Amount: 2
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+
 ################################################
 # GARRISON
 ################################################

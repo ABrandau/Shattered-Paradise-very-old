@@ -76,7 +76,7 @@ BugBlast:
 			Light: 2
 			Heavy: 2
 			Concrete: 2 
-		DamageTypes: EnergyDeath
+		DamageTypes: FireDeath #EnergyDeath
 		InvalidTargets: Colossi
 	Warhead@2Eff: CreateEffect
 		Explosions: colossiglow
@@ -91,14 +91,25 @@ ColossiTesla:
 	Inherits: ^NoDamage		
 	Inherits: ^RifleWarhead
 	ReloadDelay: 80
-	Range: 4c0
+	Range: 3c0
 	Projectile: TeslaZap
-		palette: apolblue
+		# Image: lightest
+		BrightZaps: 1
+		DimZaps: 1
+		Palette: apolbluealpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 1
 		Versus:
 		DamageTypes: FireDeath
+	Warhead@op: FireShrapnel
+		Weapon: DummySparks
+		Amount: 2
+		AllowDirectHit: false
+	Warhead@2Eff: CreateEffect
+		Explosions: lightningexplo
+		ExplosionPalette: apollightbluealpha
+		InvalidImpactTypes: Water
 
 FloatTesla:
 	Inherits: ^RifleWarhead
@@ -107,12 +118,21 @@ FloatTesla:
 	Report: TESLA1.AUD
 	Charges: yes
 	Projectile: TeslaZap
-		palette: apolblue
+		Palette: apolbluealpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 28
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+	Warhead@op: FireShrapnel
+		Weapon: DummySparks
+		Amount: 2
+		AllowDirectHit: false
+
+DummySparks:
+	Inherits: ColossiTesla
+	Range: 1c0
+	-Warhead@op: FireShrapnel
 
 StalkerSteal:
 	ReloadDelay: 150

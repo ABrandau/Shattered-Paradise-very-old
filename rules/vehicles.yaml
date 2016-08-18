@@ -1669,7 +1669,7 @@ SPIDERARTY:
 		MuzzleSequence: muzzle
 	AutoTarget:
 	Selectable:
-		Bounds: 40, 36, 0, -16
+		Bounds: 60, 65, 0, -14
 
 BLASTER:
 	Inherits: ^VoxelVehicle
@@ -1747,4 +1747,4 @@ PALADIN:
 		LocalOffset:  475,-300,1050
 	AutoTarget:
 	Selectable:
-		Bounds: 30, 42, 0, -8
+		Bounds: 40, 60, 0, -20

@@ -221,6 +221,8 @@ veinhole:
 		Length: 23
 		Offset: 0,-60
 		Tick: 50
+	muzzle: gaslrgmk
+		Length: *
 
 veinholeforg:
 	Defaults: veinhole

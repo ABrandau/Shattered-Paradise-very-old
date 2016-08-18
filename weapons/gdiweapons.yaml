@@ -504,6 +504,10 @@ GuardianRepair:
 		Spread: 213
 		Damage: -50
 		ValidTargets: Vehicle
+	Warhead@2Eff: CreateEffect
+		Explosions: sparks, sparks2, sparks3
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
 
 #############################################
 # Defences

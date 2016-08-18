@@ -114,4 +114,11 @@ ArtilleryWarhead: #Inherits: ArtilleryWarhead
 			Wood: 1
 			Light: 1
 			Heavy: 1
-			Concrete: 1	
+			Concrete: 1
+
+^ExploDefaults:	#Inherits: ^ExploDefaults
+	Warhead@op: FireShrapnel
+		Weapon: SmallDebris
+		Amount: 2
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit

@@ -288,7 +288,19 @@ MeteorSpawner:
 	Projectile: InstantExplode
 	Warhead@op: FireShrapnel
 		Weapon: MeteorElevator
-		Amount: 50
+		Amount: 15
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+	Warhead@op2: FireShrapnel
+		Weapon: MeteorElevator2
+		Amount: 15
+		Delay: 10
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+	Warhead@op3: FireShrapnel
+		Weapon: MeteorElevator3
+		Amount: 15
+		Delay: 15
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 		
@@ -299,11 +311,21 @@ MeteorElevator:
 	Projectile: AthenaProjectile
 		Altitude: 8000
 	Warhead@op: FireShrapnel
-		Weapon: MeteorRain
-		Range: 1
+		Weapon: MeteorRainSlow
+		AimChance: 25
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 
-MeteorRain:
+MeteorElevator2:
+	Inherits: MeteorElevator
+	Warhead@op: FireShrapnel
+		Weapon: MeteorRainNormal
+
+MeteorElevator3:
+	Inherits: MeteorElevator
+	Warhead@op: FireShrapnel
+		Weapon: MeteorRainFast
+
+MeteorRainNormal:
 	Inherits: ^BombWarhead
 	ReloadDelay: 8
 	Range: 1c0
@@ -313,7 +335,7 @@ MeteorRain:
 		Image: meteor2
 		Palette: effect
 		Shadow: true
-		Inaccuracy: 550
+		Inaccuracy: 600
 		TrailImage: meteortrail #metstral
 		TrailPalette: effectalpha
 		TrailInterval: 1
@@ -338,6 +360,17 @@ MeteorRain:
 		Amount: 1
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+
+MeteorRainSlow:
+	Inherits: MeteorRainNormal
+	Projectile: Bullet
+		Speed: 200
+
+MeteorRainFast:
+	Inherits: MeteorRainNormal
+	Projectile: Bullet
+		Speed: 550
+
 
 ##########################################################
 # CABAL
@@ -429,21 +462,14 @@ IonRay:
 		Spread: 200
 		Damage: 200
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
-		Delay: 5
 	Warhead@2Eff: CreateEffect
 		Explosions: large_explosion
 		ImpactSound: expnew09.aud
-		Delay: 5
 	Warhead@3Eff: CreateEffect
-		Explosions: ion_ray1, ion_ray2, ion_ray3, ion_ray4
-		ImpactSound: expnew09.aud
-	Warhead@3EffWater: CreateEffect
-		Explosions: large_explosion
-		Delay: 5
+		Explosions: bolt1, bolt2, bolt3, bolt4, bolt5, bolt6, bolt7, bolt8, bolt9, bolt10, bolt11, bolt12, bolt13, bolt14, bolt15, bolt16
 		ImpactSound: expnew09.aud
 	Warhead@4: LeaveSmudge
 		SmudgeType: SmallCrater
-		Delay: 5
 		InvalidTargets: Vehicle, Building, Wall
 	Warhead@op: FireShrapnel
 		Weapon: SmallDebris
