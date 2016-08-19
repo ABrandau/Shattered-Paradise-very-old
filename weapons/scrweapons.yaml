@@ -531,9 +531,8 @@ MothershipRocketDummy:
 		
 FighterSpawn:
 	Inherits: ArtilleryWarhead
-	ReloadDelay: 50
+	ReloadDelay: 100
 	Range: 9c0
-	MinRange: 4c0
 	Report: 120mmf.aud
 	Projectile: InstantExplode
 	ValidTargets: Infantry, Air, Vehicle, Building, Wall

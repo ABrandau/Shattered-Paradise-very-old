@@ -527,44 +527,14 @@ scrbattleship:
 mothership:
 	Inherits: ^EmpOverlay
 	stand:
-		Start: 50
 		Length: 8
-		Facings: -8
-		Stride: 8
+		Facings: -16
 	idle:
-		Start: 50
 		Length: 8
-		Facings: -8
-		Stride: 8
+		Facings: -16
 	run:
-		Start: 50
 		Length: 8
-		Facings: -8
-	icon: mothershipicon
-
-mothershipdep:
-	Inherits: ^EmpOverlay
-	Defaults: mothership
-		# Offset: 0, -36
-		ZOffset: -2048
-		UseTilesetCode: false
-	idle: mothership
-		Start: 30
-		Length: 9
-		ShadowStart: 145
-		ZOffset: -1024
-	dead: mothership
-		Start: 30
-		ShadowStart: 145
-		ZOffset: -1024
-	make: mothership
-		Length: 29
-		Tick: 40
-		ShadowStart: 114
-	make2: mothership
-		Start: 50
-		Length: -9
-		ShadowStart: 154
+		Facings: -16
 	icon: mothershipicon
 
 scrincouncil:

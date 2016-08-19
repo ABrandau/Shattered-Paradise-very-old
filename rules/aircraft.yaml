@@ -1078,15 +1078,6 @@ MOTHERSHIP:
 		TargetTypes: Vehicle, MindControlInmune, Mothership
 	Targetable@AIRBORNE:
 		TargetTypes: Air, MindControlInmune, Mothership
-	AmmoPool:
-		Ammo: 15
-		PipCount: 5
-		SelfReloads: true
-		ReloadCount: 3
-		SelfReloadDelay: 200
-		ResetOnFire: false
-		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty
 	Armament:
 		Weapon: FighterSpawn
 		ForceTargetStances: Enemy
@@ -1094,9 +1085,22 @@ MOTHERSHIP:
 		Range: 3c0
 		Upgrades: Return
 		ValidStances: Ally
+	UpgradeActorsNear@asd:
+		Range: 30c0
+		Upgrades: ForceReturn
+		ValidStances: Ally
+	AmmoPool:
+		Ammo: 4
+		PipCount: 4
+		SelfReloads: true
+		ReloadCount: 1
+		SelfReloadDelay: 200
+		ResetOnFire: false
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
 	ProduceActorPower@as:
 		Description: Energy Assimilator
-		LongDesc: Disables hostile powerplants\nmapwide.
+		LongDesc: Disables hostile powerplants map wide\nTo avoid bugs try to place the Mothership\non clear terrain before activating this.
 		Icon: mothershipicon
 		Actors: scrinenergydummy
 		Type: HunterSeeker
@@ -1108,15 +1112,6 @@ MOTHERSHIP:
 		Produces: HunterSeeker
 	AttackTurreted:
 	Turreted:
-	AmmoPool:
-		Ammo: 15
-		PipCount: 5
-		SelfReloads: true
-		ReloadCount: 3
-		SelfReloadDelay: 300
-		ResetOnFire: false
-		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty
 	AutoTarget:
 	-RenderVoxels:
 	-WithVoxelBody:
@@ -1135,6 +1130,7 @@ STORMRIDERSPAWN:
 		Name: Wyverm
 	-AttackTurreted:
 	-Buildable:
+	-DeathSounds:
 	Selectable:
 		Bounds: 30,24, 0, -75
 		Class: Stormrider
@@ -1143,17 +1139,29 @@ STORMRIDERSPAWN:
 		FacingTolerance: 20
 	Aircraft:
 		Repulsable: false
-		CruiseAltitude: 1c0
+		CruiseAltitude: 1c07
+	Armament:
+		LocalOffset: 0,0,4000
+	Armament@aa:
+		LocalOffset: 0,0,4000
 	-WithVoxelBody:
 	WithFacingSpriteBody:
 	WithShadow:
 	BodyOrientation:
 		QuantizedFacings: 32
+	Health:
+		HP: 180
 	SelfHealing:
-		PercentageStep: -10
+		PercentageStep: -50
 		Step: 0
-		Delay: 25
+		Delay: 300
 		HealIfBelow: 200
+	SelfHealing@ForceReturn:
+		PercentageStep: -100
+		Delay: 1
+		HealIfBelow: 101
+		UpgradeTypes: ForceReturn
+		UpgradeMaxEnabledLevel: 0
 	-UpdatesPlayerStatistics:
 	-ActorLostNotification:
 	-AppearsOnRadar:
@@ -1193,6 +1201,7 @@ STORMRIDERRETURN:
 		TargetStances: Ally
 		ForceTargetStances: Ally
 	-SelfHealing:
+	-SelfHealing@ForceReturn:
 	SelfHealing@Return:
 		PercentageStep: -100
 		Delay: 1
@@ -1202,7 +1211,9 @@ STORMRIDERRETURN:
 	AutoTarget:
 		ScanRadius: 99
 		InitialStance: AttackAnything
-	-SpawnActorOnDeath:
+	SpawnActorOnDeath:
+		Actor: WYVERM2.Husk
+		DeathType: 	BulletDeath, TiberiumDeath,	CabalDeath, CabalDeathCrate, BlackHandRfle,	HeadshotDeath, SmallExplosionDeath, EnergyDeath, ExplosionDeath, FireDeath
 
 ##########################################################
 # CABAL

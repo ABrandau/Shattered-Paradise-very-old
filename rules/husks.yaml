@@ -248,7 +248,31 @@ STORMRIDER.Husk:
 		Spins: false
 	FallsToEarth:
 		Explosion: SmallPlaneExplode
-		
+
+WYVERM2.Husk:		
+	Inherits: ^AircraftHusk
+	Inherits@2: ^ScrinRender	
+	-Cloak@CLOAKGENERATOR:
+	Tooltip:
+		Name: Destroyer
+	Selectable:
+		Bounds: 1,1
+	WithShadow:
+	WithFacingSpriteBody:
+	FallsToEarth:
+		Explosion: ScrinUnitExplode2
+	BodyOrientation:
+		QuantizedFacings: 32			
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 149
+	RenderSprites:
+		Image: wyverm2
+	-RenderVoxels:
+	-WithVoxelBody:
+	FallsToEarth:
+		Explosion: SmallPlaneExplode
+
 GLYDER1.Husk:		
 	Inherits: ^AircraftHusk
 	Inherits@2: ^ScrinRender	
