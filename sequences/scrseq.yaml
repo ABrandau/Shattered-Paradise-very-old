@@ -509,7 +509,15 @@ scrtrans:
 	idle:
 		Facings: -32
 	icon: scrtransporticon	
-	
+
+wyverm2:
+	Inherits: ^EmpOverlay
+	Defaults:
+		Offset: 0,-75
+	idle:
+		Facings: -32
+	icon: scrbattleshipicon
+
 scrbattleship:
 	Inherits: ^EmpOverlay
 	idle:
@@ -520,10 +528,12 @@ mothership:
 	Inherits: ^EmpOverlay
 	stand:
 		Start: 50
+		Length: 8
 		Facings: -8
 		Stride: 8
 	idle:
 		Start: 50
+		Length: 8
 		Facings: -8
 		Stride: 8
 	run:

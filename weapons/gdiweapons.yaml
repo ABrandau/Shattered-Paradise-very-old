@@ -425,7 +425,7 @@ OBBomb:
 	Inherits: ^BombWarhead
 	ReloadDelay: 60
 	Burst: 5
-	BurstDelay: 6
+	BurstDelay: 8
 	ValidTargets: Ground, Building, Infantry, Vehicle
 	Range: 3c512
 	Projectile: GravityBomb
@@ -451,6 +451,15 @@ OBBomb:
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
 		InvalidTargets: Vehicle, Building, Wall
+
+OBBomb2:
+	Inherits: OBBomb
+	ReloadDelay: 50
+	Projectile: Bullet
+		Speed: 170
+		Image: 120mm
+		Shadow: true
+
 
 GuardianRail:
 	Inherits: ^FullDamage

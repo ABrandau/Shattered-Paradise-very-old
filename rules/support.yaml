@@ -1405,8 +1405,8 @@ MOTHERSHIPDEP:
 	Valued:
 		Cost: 2000
 	Tooltip:
-		Name: Deployed Mothership
-		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs All
+		Name: Mothership
+		Description: Scrin Flagship, it sends fighters at enemies.\nCan disable all powerplants on the map.\n Strong vs Ground Units.\n Weak vs Air units.
 	WithBuildingExplosion:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
@@ -1445,12 +1445,25 @@ MOTHERSHIPDEP:
 	AttackOmni:
 	RevealsShroud:
 		Range: 12c0
-	Armament@1:
-		Weapon: DestroyerCannonOP
-		LocalOffset:0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
-	Armament@2:
-		Weapon: BattleshipRocketDummy
-		LocalOffset:0,0,0
+	Targetable:
+		TargetTypes: Building, Ground, C4, Mothership
+	AmmoPool:
+		Ammo: 15
+		InitialAmmo: 0
+		PipCount: 5
+		SelfReloads: true
+		ReloadCount: 3
+		SelfReloadDelay: 200
+		ResetOnFire: false
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+	Armament:
+		Weapon: FighterSpawn
+		ForceTargetStances: Enemy
+	UpgradeActorsNear:
+		Range: 3c0
+		Upgrades: Return
+		ValidStances: Ally
 	SelectionDecorations:
 		VisualBounds: 88, 72, 0, -12
 	SelfHealing@Scrin:

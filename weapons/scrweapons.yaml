@@ -528,6 +528,38 @@ MothershipRocketDummy:
 		AllowDirectHit: true
 		AimTargetStances: Neutral, Enemy
 		ValidTargets: Air, Ground, Water
+		
+FighterSpawn:
+	Inherits: ArtilleryWarhead
+	ReloadDelay: 50
+	Range: 9c0
+	MinRange: 4c0
+	Report: 120mmf.aud
+	Projectile: InstantExplode
+	ValidTargets: Infantry, Vehicle, Building, Wall
+	Warhead@1Dam: SpreadDamage
+		Spread: 400
+		Damage: 1
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@5Actor: SpawnActor
+		Actors: STORMRIDERSPAWN, STORMRIDERSPAWN2, STORMRIDERSPAWN3
+		FallRate: 5000
+		Range: 3
+		ValidTargets: Infantry, Vehicle, Building, Wall
+
+Return:
+	ReloadDelay: 25
+	Range: 1c0
+	Report: orcamis1.aud
+	Burst: 2
+	ValidTargets: Mothership
+	Projectile: Missile
+	Warhead@1Dam: SpreadDamage
+		Spread: 110
+		Damage: 1
+		ValidTargets: Mothership
+		Versus:
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 
 CouncilSteal:
 	ReloadDelay: 150

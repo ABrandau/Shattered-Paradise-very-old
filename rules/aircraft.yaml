@@ -85,6 +85,7 @@ ORCA:
 	Selectable:
 		Bounds: 30,24
 	Aircraft:
+		LandAltitude: 2c0
 		TurnSpeed: 5
 		Speed: 186
 		MoveIntoShroud: true
@@ -141,6 +142,8 @@ ORCAB:
 		Type: Heavy
 	Armament:
 		Weapon: OBBomb
+	Armament@1:
+		Weapon: OBBomb2
 	AttackPlane:
 		Voice: Attack
 		FacingTolerance: 20
@@ -1029,10 +1032,6 @@ SCRINCOUNCIL:
 	RevealsShroud:
 		Range: 12c0
 		Type: CenterPosition
-	MustBeDestroyed:
-		RequiredForShortGame: true
-	Targetable:
-		TargetTypes: Air, MindControlInmune
 	RenderSprites:
 	Hovers:
 	WithInfantryBody:
@@ -1045,19 +1044,13 @@ SCRINCOUNCIL:
 MOTHERSHIP:
 	Inherits: ^Helicopter
 	Inherits@2: ^ScrinRender
-	Inherits@3: ^SelfReloads
 	Inherits@4: ^BasicStealthDetection
 	Inherits@5:	^PermanentSelfHeal
 	Valued:
 		Cost: 3000
 	Tooltip:
-		Name: Scrin Council
-		Description: Scrin Flagship, disables nearby power plants.
-	Buildable:
-		Queue: Air
-		BuildPaletteOrder: 21
-		Prerequisites: ~scrair, scrtech, ~!mothershipdep
-		BuildLimit: 1
+		Name: Mothership
+		Description: Scrin Flagship, it sends fighters at enemies.\nCan disable all powerplants on the map.\n Strong vs Ground Units.\n Weak vs Air units.
 	Voiced:
 		VoiceSet: Limpet
 	Selectable:
@@ -1076,12 +1069,27 @@ MOTHERSHIP:
 	RevealsShroud:
 		Range: 14c0
 		Type: CenterPosition
-	Armament@1:
-		Weapon: BattleshipCannon
-		LocalOffset:0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
-	Armament@2:
-		Weapon: BattleshipCannon
-		LocalOffset:0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
+	Targetable@GROUND:
+		TargetTypes: Vehicle, MindControlInmune, Mothership
+	Targetable@AIRBORNE:
+		TargetTypes: Air, MindControlInmune, Mothership
+	AmmoPool:
+		Ammo: 15
+		InitialAmmo: 0
+		PipCount: 5
+		SelfReloads: true
+		ReloadCount: 3
+		SelfReloadDelay: 200
+		ResetOnFire: false
+		PipType: Ammo
+		PipTypeEmpty: AmmoEmpty
+	Armament:
+		Weapon: FighterSpawn
+		ForceTargetStances: Enemy
+	UpgradeActorsNear:
+		Range: 3c0
+		Upgrades: Return
+		ValidStances: Ally
 	ProduceActorPower@as:
 		Description: Energy Assimilator
 		LongDesc: Disables hostile powerplants\nmapwide.
@@ -1114,6 +1122,82 @@ MOTHERSHIP:
 		QuantizedFacings: 32
 	SpawnActorOnDeath:
 		Actor: MOTHERSHIP.Husk
+
+STORMRIDERSPAWN:
+	Inherits: STORMRIDER
+	Inherits@2: ^ScrinRender
+	Tooltip:
+		Name: Wyverm
+	-AttackTurreted:
+	-Buildable:
+	Selectable:
+		Bounds: 30,24, 0, -75
+		Class: Stormrider
+	AttackPlane:
+		Voice: Attack
+		FacingTolerance: 20
+	Aircraft:
+		Repulsable: false
+		CruiseAltitude: 1c0
+	-WithVoxelBody:
+	WithFacingSpriteBody:
+	WithShadow:
+	BodyOrientation:
+		QuantizedFacings: 32
+	SelfHealing:
+		PercentageStep: -10
+		Step: 0
+		Delay: 25
+		HealIfBelow: 200
+	-UpdatesPlayerStatistics:
+	-ActorLostNotification:
+	-AppearsOnRadar:
+	-RenderVoxels:
+	SpawnActorOnDeath:
+		Actor: STORMRIDERRETURN
+	RenderSprites:
+		Image: wyverm2
+	AutoTarget:
+		ScanRadius: 20
+		InitialStance: AttackAnything
+
+STORMRIDERSPAWN2:
+	Inherits: STORMRIDERSPAWN
+	Aircraft:
+		InitialFacing: 120
+
+STORMRIDERSPAWN3:
+	Inherits: STORMRIDERSPAWN
+	Aircraft:
+		InitialFacing: 360
+
+STORMRIDERRETURN:
+	Inherits: STORMRIDERSPAWN
+	Aircraft:
+		InitialFacing: 360
+		# CanHover: true
+	SelfHealing:
+		PercentageStep: -5
+	-RejectsOrders@berserk:
+	RejectsOrders:
+	Armament:
+		Weapon: Return
+		TargetStances: Ally
+	Armament@aa:
+		Weapon: Return
+		TargetStances: Ally
+		ForceTargetStances: Ally
+	-SelfHealing:
+	SelfHealing@Return:
+		PercentageStep: -100
+		Delay: 1
+		HealIfBelow: 101
+		UpgradeTypes: Return
+		UpgradeMinEnabledLevel: 1
+	AutoTarget:
+		ScanRadius: 99
+		InitialStance: AttackAnything
+	-SpawnActorOnDeath:
 
 ##########################################################
 # CABAL

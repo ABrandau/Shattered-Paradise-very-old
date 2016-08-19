@@ -1347,42 +1347,6 @@ SCRDRONEC:
 ################################################
 # CABAL
 ################################################
-JENN:
-	Inherits: ^Tank
-	Inherits@2:	^IncompleteSelfHeal
-	Inherits@3: ^BasicStealthDetection
-	Valued:
-		Cost: 700
-	Tooltip:
-		Name: Seeker
-		Description: Basic Walker, equiped with long range missiles.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
-	# Buildable:
-		# Queue: Vehicle
-		# BuildPaletteOrder: 18
-		# Prerequisites: ~cabweap
-	Mobile:
-		TurnSpeed: 8
-		Speed: 95
-		Crushes: crate
-	Voiced:
-		VoiceSet: Limpet
-	Health:
-		HP: 200
-	Armor:
-		Type: wood
-	BodyOrientation:
-		QuantizedFacings: 32
-	WithInfantryBody:
-	AttackFrontal:
-	Armament:
-		Weapon: SeekerBazooka
-		Recoil: 127
-		RecoilRecovery: 26
-		LocalOffset: 300,250,500, 300,-250,500
-	AutoTarget:
-	Selectable:
-		Bounds: 30, 42, 0, -8
-
 DINO:
 	Inherits: ^Tank
 	Inherits@2:	^IncompleteSelfHeal
