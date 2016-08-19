@@ -742,6 +742,7 @@ gaplug:
 		Start: 20
 		Length: 20
 		Tick: 120
+	active: dot
 	idle-strip: gaplug_c
 		Length: 8
 		Tick: 120

@@ -1391,7 +1391,7 @@ SCRSW1:
 		VisualBounds: 116, 78, 3, -8
 	DetonateWeaponPower:
 		Icon: meteor
-		Description: Meteor Storm2
+		Description: Meteor Storm
 		DisplayTimer: True
 		DisplayBeacon: True
 		LongDesc: Drags meteors from orbit dealing moderate \ndamage over a wide area.

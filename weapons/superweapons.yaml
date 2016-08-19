@@ -103,6 +103,71 @@ IonCannon:
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 
+DroppodSpawner: # 1 = MARINE, 2 = JUMPJET, 3 = MEDIC, 4 = EAGLEGUARD
+	ReloadDelay: 6
+	Range: 12c0
+	Projectile: InstantExplode
+	Warhead@op: FireShrapnel
+		Weapon: DroppodElevator
+		Amount: 6
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+	Warhead@op2: FireShrapnel
+		Weapon: DroppodElevator2
+		Amount: 4
+		Delay: 1
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+	Warhead@op3: FireShrapnel
+		Weapon: DroppodElevator3
+		Amount: 3
+		Delay: 1
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+	Warhead@op4: FireShrapnel
+		Weapon: DroppodElevator4
+		Amount: 2
+		Delay: 1
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+	Warhead@op5: FireShrapnel
+		Weapon: DroppodElevator5
+		Amount: 1
+		Delay: 1
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+		
+DroppodElevator:
+	ReloadDelay: 6
+	Range: 3c0
+	MinRange: 1c0
+	Projectile: AthenaProjectile
+		Altitude: 8000
+	Warhead@op: FireShrapnel
+		Weapon: droppod1
+		AimChance: 25
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+
+DroppodElevator2:
+	Inherits: DroppodElevator
+	Warhead@op: FireShrapnel
+		Weapon: droppod2
+
+DroppodElevator3:
+	Inherits: DroppodElevator
+	Warhead@op: FireShrapnel
+		Weapon: droppod3
+
+DroppodElevator4:
+	Inherits: DroppodElevator
+	Warhead@op: FireShrapnel
+		Weapon: droppod4
+
+DroppodElevator5:
+	Inherits: DroppodElevator
+	Warhead@op: FireShrapnel
+		Weapon: droppod5
+
 droppod1:
 	Inherits: ^BombWarhead
 	ReloadDelay: 3
@@ -113,6 +178,8 @@ droppod1:
 		Image: gdidroppod
 		Palette: player
 		Shadow: true
+		TrailImage: meteortrail
+		TrailPalette: effectalpha
 		Inaccuracy: 600
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallCrater
@@ -121,49 +188,35 @@ droppod1:
 		ImpactSounds: expnew12.aud
 		InvalidTargets: Vehicle, Building, Wall
 	Warhead@5Actor: SpawnActor
-		Actors: gdie1, gdie1, jumpjet
+		Actors: gdie1
 		Range: 3
 
 droppod2:
+	Inherits: droppod1
 	Inherits: ^BombWarhead
-	ReloadDelay: 3
-	Range: 3c0
-	ValidTargets: Ground, Vehicle, Building, Infantry, Water
-	Projectile: Bullet
-		Speed: 350
-		Image: gdidroppod
-		Palette: player
-		Shadow: true
-		Inaccuracy: 600
-	Warhead@2Smu: LeaveSmudge
-		SmudgeType: SmallCrater
-		InvalidTargets: Vehicle, Building, Wall
-	Warhead@3Eff: CreateEffect
-		Explosions: small_clsn, large_twlt, medium_brnl
-		ImpactSounds: expnew12.aud
 	Warhead@5Actor: SpawnActor
-		Actors: medic, medic, medic
+		Actors: jumpjet
 		Range: 3
 
 droppod3:
+	Inherits: droppod1
 	Inherits: ^BombWarhead
-	ReloadDelay: 3
-	Range: 3c0
-	ValidTargets: Ground, Vehicle, Building, Infantry, Water
-	Projectile: Bullet
-		Speed: 350
-		Image: gdidroppod
-		Palette: player
-		Shadow: true
-		Inaccuracy: 600
-	Warhead@2Smu: LeaveSmudge
-		SmudgeType: SmallCrater
-		InvalidTargets: Vehicle, Building, Wall
-	Warhead@3Eff: CreateEffect
-		Explosions: small_clsn, large_twlt, medium_brnl
-		ImpactSounds: expnew12.aud
 	Warhead@5Actor: SpawnActor
-		Actors: eagleguard, eagleguard
+		Actors: medic
+		Range: 3
+
+droppod4:
+	Inherits: droppod1
+	Inherits: ^BombWarhead
+	Warhead@5Actor: SpawnActor
+		Actors: eagleguard
+		Range: 3
+
+droppod5:
+	Inherits: droppod1
+	Inherits: ^BombWarhead
+	Warhead@5Actor: SpawnActor
+		Actors: grenadier
 		Range: 3
 
 ########################################################

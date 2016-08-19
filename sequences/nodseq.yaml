@@ -1102,9 +1102,11 @@ nastlh:
 # Aircraft
 ##########################################################
 scrin:
+	Inherits: ^EmpOverlay
 	icon: proicon
 
 apache:
+	Inherits: ^EmpOverlay
 	icon: apchicon
 	rotor: lrotor
 		Length: 4

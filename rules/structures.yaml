@@ -347,18 +347,17 @@ GAPLUG:
 		InsufficientPowerSound:
 		DisplayRadarPing: True
 		CameraActor: camera
-	AirstrikePower@meteor:
-		UnitType: droppodplane
-		Icon: droppods
-		SquadSize: 1
+	DetonateWeaponPower@pods:
+		Icon: meteor
 		DisplayTimer: True
 		DisplayBeacon: True
 		Description: Drop Pods
 		LongDesc: Deploys shock troopers at the targetted location.
+		OrderName: Droppod
+		Weapon: DroppodSpawner
 		UpgradeTypes: plug.hunterseeker
 		UpgradeMinEnabledLevel: 1
 		ChargeTime: 180
-		OrderName: Droppod
 	SupportPowerChargeBar:
 	Power:
 		Amount: -150

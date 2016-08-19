@@ -627,6 +627,7 @@ fortress:
 # Aircraft
 ##########################################################		
 mutbird:
+	Inherits: ^EmpOverlay
 	idle:
 		Facings: -8
 	stand:
