@@ -348,7 +348,7 @@ GAPLUG:
 		DisplayRadarPing: True
 		CameraActor: camera
 	DetonateWeaponPower@pods:
-		Icon: meteor
+		Icon: droppods
 		DisplayTimer: True
 		DisplayBeacon: True
 		Description: Drop Pods

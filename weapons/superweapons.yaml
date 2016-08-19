@@ -187,6 +187,17 @@ droppod1:
 		Explosions: small_clsn, large_twlt, medium_brnl
 		ImpactSounds: expnew12.aud
 		InvalidTargets: Vehicle, Building, Wall
+	Warhead@4Eff: CreateEffect
+		Explosions: podring
+		ImpactSounds: expnew12.aud
+		InvalidTargets: Vehicle, Building, Wall
+	Warhead@5Eff: CreateEffect
+		Explosions: droppod, droppod2
+		ImpactSounds: expnew12.aud
+		InvalidTargets: Vehicle, Building, Wall
+	Warhead@5Smu: LeaveSmudge
+		SmudgeType: SmallCrater
+		InvalidTargets: Vehicle, Building, Wall
 	Warhead@5Actor: SpawnActor
 		Actors: gdie1
 		Range: 3
@@ -209,14 +220,14 @@ droppod4:
 	Inherits: droppod1
 	Inherits: ^BombWarhead
 	Warhead@5Actor: SpawnActor
-		Actors: eagleguard
+		Actors: grenadier
 		Range: 3
 
 droppod5:
 	Inherits: droppod1
 	Inherits: ^BombWarhead
 	Warhead@5Actor: SpawnActor
-		Actors: grenadier
+		Actors: eagleguard 
 		Range: 3
 
 ########################################################
@@ -519,7 +530,7 @@ IonRay:
 		Explosions: large_explosion
 		ImpactSound: expnew09.aud
 	Warhead@3Eff: CreateEffect
-		Explosions: bolt1, bolt2, bolt3, bolt4, bolt5, bolt6, bolt7, bolt8, bolt9, bolt10, bolt11, bolt12, bolt13, bolt14, bolt15, bolt16
+		Explosions: bolt1, bolt2, bolt3, bolt4, bolt5, bolt6, bolt7, bolt8, bolt9, bolt10
 		ImpactSound: expnew09.aud
 	Warhead@4: LeaveSmudge
 		SmudgeType: SmallCrater

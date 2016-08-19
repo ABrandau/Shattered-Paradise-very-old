@@ -17,6 +17,7 @@ flameguy:
 		ShadowStart: 192
 	
 cloud1:
+	Inherits: ^EmpOverlay
 	Defaults:
 		Offset: 0,-6
 		ZOffset: 4096

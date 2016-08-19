@@ -228,6 +228,12 @@ explosion:
 		Length: 12
 		UseTilesetExtension: true
 		ZOffset: 1023
+	#GDI
+	podring: podring
+	droppod: droppod
+		Tick: 400
+	droppod2: droppod2
+		Tick: 400
 	#Nod
 	smokebomb1: smokebomb1
 	smokebomb2: smokebomb2
