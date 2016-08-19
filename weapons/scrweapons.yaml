@@ -536,7 +536,7 @@ FighterSpawn:
 	MinRange: 4c0
 	Report: 120mmf.aud
 	Projectile: InstantExplode
-	ValidTargets: Infantry, Vehicle, Building, Wall
+	ValidTargets: Infantry, Air, Vehicle, Building, Wall
 	Warhead@1Dam: SpreadDamage
 		Spread: 400
 		Damage: 1
@@ -545,7 +545,7 @@ FighterSpawn:
 		Actors: STORMRIDERSPAWN, STORMRIDERSPAWN2, STORMRIDERSPAWN3
 		FallRate: 5000
 		Range: 3
-		ValidTargets: Infantry, Vehicle, Building, Wall
+		ValidTargets: Infantry, Air, Vehicle, Building, Wall
 
 Return:
 	ReloadDelay: 25

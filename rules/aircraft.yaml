@@ -1051,6 +1051,11 @@ MOTHERSHIP:
 	Tooltip:
 		Name: Mothership
 		Description: Scrin Flagship, it sends fighters at enemies.\nCan disable all powerplants on the map.\n Strong vs Ground Units.\n Weak vs Air units.
+	Buildable:
+		Queue: Air
+		BuildPaletteOrder: 21
+		Prerequisites: ~scrair, scrtech, ~!mothershipdep
+		BuildLimit: 1
 	Voiced:
 		VoiceSet: Limpet
 	Selectable:
@@ -1075,7 +1080,6 @@ MOTHERSHIP:
 		TargetTypes: Air, MindControlInmune, Mothership
 	AmmoPool:
 		Ammo: 15
-		InitialAmmo: 0
 		PipCount: 5
 		SelfReloads: true
 		ReloadCount: 3
@@ -1104,12 +1108,13 @@ MOTHERSHIP:
 		Produces: HunterSeeker
 	AttackTurreted:
 	Turreted:
-	Transforms:
-		IntoActor: mothershipdep
 	AmmoPool:
-		Ammo: 25
-		PipCount: 0
-		ReloadTicks: 5
+		Ammo: 15
+		PipCount: 5
+		SelfReloads: true
+		ReloadCount: 3
+		SelfReloadDelay: 300
+		ResetOnFire: false
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
 	AutoTarget:
