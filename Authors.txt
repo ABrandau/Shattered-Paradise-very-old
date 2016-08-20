@@ -27,15 +27,7 @@ If an asset doesn't have credit, then either it was made by WW or we missed it, 
 
 #Game Art
 
-Nolt: The following exclude the shared units (Harvester, MCV, conyards, etc).
-	GDI	: Grenadier, Eagle Guard sprites and cameo.
-	NOD	: Crusader and templar sprites and cameo.
- 	Scrin	: Every unit, cameo and structure except the tripod and shapeshifter.
-	CABAL	: Every unit, cameo and structure except the cyborg, cyborg reaper, Cyborg Commando,
-		  Seeker, Grinder and Bassilisk.
-	Forgotten: Every unit, cameo and structure except the Rocket trooper, Mechanic,
-		  Tiberian Fiend, IFV, Leonid Tank, MRLS, Quad Cannon, Gargoyle and Falcon.
-
+Nolt		: Everything that is not listed here or belongs to westwood.
 The_Dementor	: Cameos: Skirmisher, EMP pulse Icons, Harvester and MCV (mut and cab), 
 The_Dementor	: cyborg commando cameo, Wrench and Tiberium Icons.
 Gangster	: His template.
@@ -53,6 +45,10 @@ GameMaster0000	: Tiberian Fiend Icon.
 CyborgCommandoKerem: Black Hand Sniper shp.				
 DonutArnold	: Basilisk torpedo explosion effect, scrin structure and aircraft crash explosion
 		  effects.
+Audiomicro.com	: Legio and Glyder sound effect.
+Introspectral	: Destroyer weapon sound effect.
+FXhome.com	: Battleship Sound effect.
+soundpacks.com	: Various sound effects.
 #Maps
 
 Abc013		: Scrin mission 01

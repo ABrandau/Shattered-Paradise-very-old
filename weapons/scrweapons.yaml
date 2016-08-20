@@ -15,7 +15,7 @@ LegioNeedler:
 	Inherits: ^RocketWarhead
 	ReloadDelay: 100
 	Range: 5c0
-	Report: rketinf1.aud
+	Report: photon1.wav
 	ValidTargets: Ground, Air
 	Projectile: Missile
 		Speed: 250
@@ -92,8 +92,8 @@ ColossiTesla:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 80
 	Range: 3c0
+	Report: voltautofire.wav
 	Projectile: TeslaZap
-		# Image: lightest
 		BrightZaps: 1
 		DimZaps: 1
 		Palette: apolbluealpha
@@ -226,7 +226,7 @@ Glyder2Cannon:
 	ReloadDelay: 100
 	Range: 6c0
 	Burst: 4
-	Report: 120mmf.aud
+	Report: photon1.wav
 	ValidTargets: Air
 	Projectile: Missile
 		Speed: 350
@@ -240,9 +240,8 @@ Glyder2Cannon:
 		ValidTargets: Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
-		Explosions: scrinexplo1
-		ExplosionPalette: apolbluealpha
-		ImpactSound: expnew14.aud
+		Explosions: scrinpulse3
+		ImpactSound: expnew12.aud
 		InvalidImpactTypes: Water
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
@@ -309,6 +308,7 @@ StormRiderBlast:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 75
 	Range: 6c512
+	Report: laserpistol.wav
 	ValidTargets: Ground
 	Projectile: Bullet # TODO: Add bounce effect
 		Speed: 600
@@ -334,6 +334,7 @@ StormRiderBlast:
 StormRiderBlastAA:
 	Inherits: ^FullDamage
 	ReloadDelay: 75
+	Report: laserpistol.wav
 	Range: 6c512
 	ValidTargets: Air
 	Projectile: Bullet # TODO: Add bounce effect
@@ -362,7 +363,7 @@ Glyder1Cannon:
 	ReloadDelay: 100
 	Range: 6c0
 	Burst: 3
-	Report: 120mmf.aud
+	Report: photon1.wav
 	ValidTargets: Ground
 	Projectile: Bullet
 		Speed: 350
@@ -392,7 +393,7 @@ BattleshipCannon:
 	Inherits: ^GrenadeWarhead
 	ReloadDelay: 45
 	Range: 5c768
-	Report: 120mmf.aud
+	Report: battleshipgun1.wav
 	Burst: 4
 	BurstDelay: 5
 	ValidTargets: Ground, Infantry, Vehicle, water
@@ -427,7 +428,7 @@ BattleshipCannon:
 BattleshipRocketDummy:
 	ReloadDelay: 45
 	Range: 5c768
-	Report: 120mmf.aud
+	Report: battleshipgun1.wav
 	ValidTargets: Ground, Infantry, Vehicle, Air, water
 	Projectile: Missile
 		RangeLimit: 1
@@ -440,6 +441,7 @@ BattleshipRocketDummy:
 		Weapon: BattleshipRocket
 		Amount: 2
 		AimChance: 100
+		ThrowWithoutTarget: false
 		AllowDirectHit: true
 		AimTargetStances: Neutral, Enemy
 		ValidTargets: Air, Ground, Water
@@ -448,7 +450,7 @@ BattleshipRocket:
 	Inherits: ^RocketWarhead
 	ReloadDelay: 45
 	Range: 5c768
-	Report: 120mmf.aud
+	Report: battleshipgun1.wav
 	ValidTargets: Ground, Infantry, Vehicle, Air, water
 	Projectile: Missile
 		Speed: 250
@@ -484,7 +486,7 @@ DestroyerCannon:
 	ReloadDelay: 150
 	Range: 14c0
 	MinRange: 4c0
-	Report: 120mmf.aud
+	Report: oneshot04.wav
 	Burst: 1
 	Inaccuracy: 2c0
 	BurstDelay: 5
@@ -517,23 +519,12 @@ DestroyerCannonOP:
 	Warhead@op: FireCluster
 		Weapon: DestroyerCannon
 		Range: 2
-
-MothershipRocketDummy:
-	Inherits: BattleshipRocketDummy
-	Range: 3c0
-	Warhead@op: FireShrapnel
-		Weapon: BattleshipRocket
-		Amount: 12
-		AimChance: 100
-		AllowDirectHit: true
-		AimTargetStances: Neutral, Enemy
-		ValidTargets: Air, Ground, Water
 		
 FighterSpawn:
 	Inherits: ArtilleryWarhead
 	ReloadDelay: 100
 	Range: 10c0
-	Report: 120mmf.aud
+	Report: dropup1.aud
 	Projectile: InstantExplode
 	ValidTargets: Infantry, Air, Vehicle, Building, Wall
 	Warhead@1Dam: SpreadDamage
@@ -550,6 +541,7 @@ WyvermBlast:
 	Inherits: ^MeleeWarhead
 	ReloadDelay: 75
 	Range: 6c512
+	Report: laserpistol.wav
 	ValidTargets: Ground, Air
 	Projectile: Bullet # TODO: Add bounce effect
 		Speed: 600

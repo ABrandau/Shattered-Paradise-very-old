@@ -62,6 +62,11 @@ Packages:
 	sp|bits/audio/shared
 	sp|bits/audio/gdi
 	sp|bits/audio/weapons
+	sp|bits/audio/weapons/gdi
+	sp|bits/audio/weapons/nod
+	sp|bits/audio/weapons/mut
+	sp|bits/audio/weapons/cab
+	sp|bits/audio/weapons/scrin
 	sp|bits/pal
 	sp|bits/anims/icon
 	sp|bits/anims/muzzle

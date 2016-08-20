@@ -56,6 +56,7 @@ Grenade:
 	ReloadDelay: 80
 	Range: 7c0
 	MinRange: 2c0
+	Report: grenadelauncherfire.wav
 	ValidTargets: Ground
 	Projectile: Bullet # TODO: Add bounce effect
 		Speed: 320
@@ -101,7 +102,7 @@ TrooperRail:
 	Inherits: ^FullDamage
 	ReloadDelay: 125
 	Range: 5c0
-	Report: biggun1.aud
+	Report: railgunfire.wav
 	Projectile: LaserZap
 		BeamWidth: 1
 		BeamDuration: 20

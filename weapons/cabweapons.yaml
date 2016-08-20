@@ -140,14 +140,13 @@ ProcessingHuman:
 GLAD120mm:
 	Inherits: ^APWarhead
 	ReloadDelay: 120
-	Range: 4c768
-	Report: 120mmf.aud
+	Range: 5c0
+	Report: tankmediumfire.wav
 	Projectile: Bullet
 		Speed: 1c512
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 40
-
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_clsn
@@ -167,7 +166,7 @@ LurkerHit:
 	Range: 7c0
 	Burst: 2
 	BurstDelay: 15
-	Report: 120mmf.aud
+	Report: lasershotgun.wav
 	Projectile: Missile
 		Speed: 100
 		TrailImage: lurkertrail
@@ -185,7 +184,7 @@ LurkerHit:
 	Warhead@2Eff: CreateEffect
 		ExplosionPalette: playercab
 		Explosions: lurkertentacle
-		ImpactSound: expnew14.aud
+		ImpactSound: expdirt1.aud #expnew14.aud
 		InvalidImpactTypes: Water
 
 CyCannon:
@@ -325,7 +324,7 @@ SeekerBazooka:
 
 CenturionVulcan:
 	Inherits: ^RifleWarhead
-	ReloadDelay: 40
+	ReloadDelay: 35
 	Burst: 2
 	Range: 6c0
 	Report: cygun1.aud

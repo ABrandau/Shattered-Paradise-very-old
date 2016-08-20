@@ -2,7 +2,7 @@ MarauderShotgun:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 40
 	Range: 4c0
-	Report: gun18.aud
+	Report: shotfire.wav
 	Projectile: Bullet
 		Speed: 1c682
 		Image: 120mm
@@ -118,7 +118,7 @@ KnightAcid:
 	Inherits: ^AcidWarhead
 	ReloadDelay: 75
 	Range: 2c0
-	Report: flamtnk1.aud
+	Report: chemweaponfire.wav#flamtnk1.aud
 	ValidTargets: Ground
 	Projectile: Bullet
 		Speed: 100c0

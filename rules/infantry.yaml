@@ -847,7 +847,7 @@ COLOSSI:
 	Armor:
 		Type: wood
 	Armament:
-		Weapon: BugRail
+		Weapon: FloatTesla
 		LocalOffset: 300,0,1000
 		UpgradeTypes: undeployed
 		UpgradeMinEnabledLevel: 1

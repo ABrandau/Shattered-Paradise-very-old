@@ -28,7 +28,7 @@ CrusaderBazooka:
 	Inherits: ^RocketWarhead
 	ReloadDelay: 25
 	Range: 6c600
-	Report: rketinf1.aud
+	Report: scifiexplo.wav
 	ValidTargets: Vehicle, Air, Building
 	Projectile: Missile
 		Speed: 233
@@ -68,7 +68,7 @@ TemplarLasor:
 	Burst: 4
 	ReloadDelay: 50
 	Range: 4c512
-	Report: lastur1.aud
+	Report: laserriflefire01.wav
 	Projectile: LaserZap
 		BeamWidth: 2
 		BeamDuration: 2
@@ -81,7 +81,7 @@ TemplarLasor:
 BHRifle:
 	ReloadDelay: 150
 	Range: 7c0
-	Report: silencer.aud
+	Report: ramjetfire.wav#silencer.aud
 	ValidTargets: Infantry
 	Projectile: Bullet
 		Speed: 1c682
@@ -253,7 +253,7 @@ BCLazor:
 	Inherits: ArtilleryWarhead
 	ReloadDelay: 10
 	Range: 12c0
-	Report: lastur1.aud
+	Report: laserchaingunfire.wav
 	MinRange: 3c0
 	Inaccuracy: 512
 	Projectile: LaserZap

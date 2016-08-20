@@ -269,10 +269,10 @@ eagleguard:
 		Facings: 8
 		ShadowStart: 658
 	prone-stand:
-		Start: 216
+		Start: 426
 		Facings: 8
-		Stride: 7
-		ShadowStart: 658
+		Stride: 2
+		ShadowStart: 868
 	die1:
 		Start: 280
 		Length: 9
