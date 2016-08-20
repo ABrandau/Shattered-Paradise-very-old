@@ -249,6 +249,7 @@ GuardianVO:
 		Select: guardian0001, guardian0002, guardian0003, guardian0004, guardian0005, guardian0006, guardian0007
 		Move: guardian0008, guardian0009, guardian0010, guardian0011, guardian0012, guardian0013, guardian0014
 		Attack: guardian0015, guardian0016, guardian0017, guardian0017, guardian0018, guardian0019, guardian0020, guardian0021
+		Action: guardian0006
 		Action1: guardian0029
 		Action2: guardian0030
 		Die: guardian0035, guardian0036, guardian0037

@@ -61,6 +61,7 @@ Packages:
 	sp|bits/audio/nod
 	sp|bits/audio/shared
 	sp|bits/audio/gdi
+	sp|bits/audio/weapons
 	sp|bits/pal
 	sp|bits/anims/icon
 	sp|bits/anims/muzzle
@@ -80,13 +81,13 @@ Packages:
 	sp|bits/gdi/structures
 	sp|bits/nod/structures
 	sp|bits/mutant/structures
-	sp|bits/mutant/structures/Temperate
-	sp|bits/mutant/structures/Snow
+	sp|bits/mutant/structures/temperate
+	sp|bits/mutant/structures/snow
 	sp|bits/cabal/structures
-	sp|bits/cabal/structures/Temperate
-	sp|bits/cabal/structures/Snow
-	sp|bits/scrin/structures/Temperate
-	sp|bits/scrin/structures/Snow
+	sp|bits/cabal/structures/temperate
+	sp|bits/cabal/structures/snow
+	sp|bits/scrin/structures/temperate
+	sp|bits/scrin/structures/snow
 	sp|bits/scrin/structures
 	sp|bits/scrin/air
 	sp|bits/neutral

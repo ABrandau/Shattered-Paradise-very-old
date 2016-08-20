@@ -1112,7 +1112,7 @@ SCRSCORPION:
 		Speed: 91
 		Crushes: crate
 	Health:
-		HP: 250
+		HP: 300
 	Armor:
 		Type: Light
 	AttackFrontal:
@@ -1353,7 +1353,7 @@ DINO:
 	Inherits@5: ^CabRender
 	Inherits@3: ^BasicStealthDetection
 	Valued:
-		Cost: 700
+		Cost: 650
 	Tooltip:
 		Name: Seeker
 		Description: Basic Walker, equiped with long range missiles.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
@@ -1377,7 +1377,7 @@ DINO:
 	Voiced:
 		VoiceSet: Limpet
 	Health:
-		HP: 175
+		HP: 225
 	Armor:
 		Type: wood
 	BodyOrientation:
@@ -1410,7 +1410,7 @@ CENTURION:
 		Speed: 65
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 600
+		HP: 700
 	Voiced:
 		VoiceSet: Cyborg
 	Armor:

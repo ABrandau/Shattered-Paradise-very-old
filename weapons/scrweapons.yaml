@@ -115,7 +115,7 @@ FloatTesla:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 80
 	Range: 4c0
-	Report: TESLA1.AUD
+	Report: voltautofire.wav
 	Charges: yes
 	Projectile: TeslaZap
 		Palette: apolbluealpha
@@ -532,7 +532,7 @@ MothershipRocketDummy:
 FighterSpawn:
 	Inherits: ArtilleryWarhead
 	ReloadDelay: 100
-	Range: 9c0
+	Range: 10c0
 	Report: 120mmf.aud
 	Projectile: InstantExplode
 	ValidTargets: Infantry, Air, Vehicle, Building, Wall
@@ -545,6 +545,32 @@ FighterSpawn:
 		FallRate: 5000
 		Range: 3
 		ValidTargets: Infantry, Air, Vehicle, Building, Wall
+
+WyvermBlast:
+	Inherits: ^MeleeWarhead
+	ReloadDelay: 75
+	Range: 6c512
+	ValidTargets: Ground, Air
+	Projectile: Bullet # TODO: Add bounce effect
+		Speed: 600
+		Blockable: false
+		Shadow: true
+		Angle: 45
+		Palette: pips
+		TrailImage: blueballminitrail
+		ContrailLength: 5
+		Inaccuracy: 384
+		Image: blueplasma
+	Warhead@1Dam: SpreadDamage
+		Spread: 171
+		Damage: 30
+		ValidTargets: Ground, Air
+		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: scrinexplo1
+		ExplosionPalette: apolbluealpha
+		ImpactSound: expnew13.aud
+		InvalidImpactTypes: Water
 
 Return:
 	ReloadDelay: 25

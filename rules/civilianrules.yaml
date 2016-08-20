@@ -2053,10 +2053,19 @@ GAOLDCC6:
 		Bounds: 90, 60, 0, -12
 	Armor:
 		Type: heavy
-	Health:
-		HP: 400
 	RenderSprites:
 		Palette: player
+	Capturable:
+	CashTrickler:
+		Period: 375
+		Amount: 100
+		CaptureAmount: 500
+	Health:
+		HP: 1000
+	RenderSprites:
+		-Palette: player
+	Explodes:
+		Weapon: TiberiumExplosion
 
 GASAND:
 	Inherits: ^Wall

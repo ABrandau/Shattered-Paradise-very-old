@@ -315,7 +315,7 @@ MechRailgun:
 	
 MammothTusk:
 	ReloadDelay: 80
-	Range: 6c0
+	Range: 7c0
 	Report: misl1.aud
 	ValidTargets: Air
 	Burst: 2
@@ -330,8 +330,8 @@ MammothTusk:
 		RangeLimit: 15c0
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 171
-		Damage: 40
+		Spread: 200
+		Damage: 45
 		ValidTargets: Air
 		Versus:
 		DamageTypes: Explosion

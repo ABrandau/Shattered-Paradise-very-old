@@ -11,7 +11,7 @@ CyborgVulcan:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 10
+		Damage: 12
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -325,7 +325,7 @@ SeekerBazooka:
 
 CenturionVulcan:
 	Inherits: ^RifleWarhead
-	ReloadDelay: 50
+	ReloadDelay: 40
 	Burst: 2
 	Range: 6c0
 	Report: cygun1.aud
@@ -447,13 +447,13 @@ PalaLazor:
 # Aircraft
 ########################################################################
 WaspLasor:
-	Inherits: ^FullDamage
+	Inherits: ^APWarhead
 	ReloadDelay: 50
 	Range: 6c0
 	Report: lastur1.aud
 	ValidTargets: Ground, Air
 	Projectile: LaserZap
-		BeamWidth: 1
+		BeamWidth: 0.5
 		BeamDuration: 5
 		Color: 0dc7b8#0080FFC8				
 	Warhead@1Dam: SpreadDamage

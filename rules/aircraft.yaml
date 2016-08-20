@@ -474,7 +474,7 @@ MUTBIRD:
 		Cost: 600
 	Tooltip:
 		Name: Seeder Bird
-		Description: Scout Bird, places crab eggs. Tiberian\n Crabs are hostile tiberian lifeforms\n  Unnarmed.
+		Description: Scout Bird, places crab eggs. Tiberian\nCrabs are hostile to ANYONE.\n  Unnarmed.
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 20
@@ -691,7 +691,7 @@ STORMRIDER:
 	Inherits: ^Plane
 	Inherits@2: ^SelfReloads
 	Valued:
-		Cost: 450
+		Cost: 550
 	Tooltip:
 		Name: Storm Rider
 		Description: Scrin fighter equiped with a blaster turret\nCan fire while moving.\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles, Anti Air weapons.
@@ -705,8 +705,9 @@ STORMRIDER:
 		VoiceSet: Limpet
 	Aircraft:
 		MaximumPitch: 90
+		IdealSeparation: 1c0
 		TurnSpeed: 8
-		Speed: 170
+		Speed: 155
 		AirborneUpgrades: airborne
 		MoveIntoShroud: true
 		TakeoffSound: dropup1.aud
@@ -742,7 +743,7 @@ drache:
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 110
-		Prerequisites: ~scrair
+		Prerequisites: ~scrair, scrradr
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -862,6 +863,7 @@ SCRDESTROYER:
 	Aircraft:
 		TurnSpeed: 5
 		Speed: 90
+		IdealSeparation: 3c0
 		Repulsable: true
 		MoveIntoShroud: true
 		TakeoffSound: orcaup1.aud
@@ -959,6 +961,7 @@ SCRBATTLESHIP:
 		Bounds: 175,125
 	Aircraft:
 		TurnSpeed: 5
+		IdealSeparation: 4c0
 		Speed: 80
 		Repulsable: true
 		MoveIntoShroud: true
@@ -1002,13 +1005,13 @@ SCRINCOUNCIL:
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 22
-		Prerequisites: ~scrair, scrweap
+		Prerequisites: ~scrair, scrtech
 		BuildLimit: 1
 	Valued:
-		Cost: 2500
+		Cost: 3000
 	Tooltip:
 		Name: Creation engine
-		Description: Scrin mobile forge, constructs vehicles.\n  Unarmed.
+		Description: Mobile Support Superweapon, it can constructs vehicles.\nAnd also disable hostile powerplants map wide.\n  Unarmed.
 	Selectable:
 		Bounds: 100,90
 	Voiced:
@@ -1023,6 +1026,15 @@ SCRINCOUNCIL:
 		MoveIntoShroud: true
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
+	ProduceActorPower@as:
+		Description: Energy Assimilator
+		LongDesc: Disables hostile powerplants map wide\nTo avoid bugs try to place the Mothership\non clear terrain before activating this.
+		Icon: mothershipicon
+		Actors: scrinenergydummy
+		Type: HunterSeeker
+		IconPalette: chromescrin
+	Production:
+		Produces: HunterSeeker
 	Exit@1:
 		SpawnOffset: 0,0,-50
 	Production:
@@ -1050,7 +1062,7 @@ MOTHERSHIP:
 		Cost: 3000
 	Tooltip:
 		Name: Mothership
-		Description: Scrin Flagship, it sends fighters at enemies.\nCan disable all powerplants on the map.\n Strong vs Ground Units.\n Weak vs Air units.
+		Description: Scrin Flagship, it sends fighters at enemies.\n Strong vs Ground Units.\n Weak vs Air units.
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 21
@@ -1063,6 +1075,7 @@ MOTHERSHIP:
 	Aircraft:
 		TurnSpeed: 5
 		Speed: 80
+		IdealSeparation: 4c0
 		Repulsable: true
 		MoveIntoShroud: true
 		TakeoffSound: orcaup1.aud
@@ -1072,7 +1085,7 @@ MOTHERSHIP:
 	Armor:
 		Type: Heavy
 	RevealsShroud:
-		Range: 14c0
+		Range: 16c0
 		Type: CenterPosition
 	Targetable@GROUND:
 		TargetTypes: Vehicle, MindControlInmune, Mothership
@@ -1098,18 +1111,7 @@ MOTHERSHIP:
 		ResetOnFire: false
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty
-	ProduceActorPower@as:
-		Description: Energy Assimilator
-		LongDesc: Disables hostile powerplants map wide\nTo avoid bugs try to place the Mothership\non clear terrain before activating this.
-		Icon: mothershipicon
-		Actors: scrinenergydummy
-		Type: HunterSeeker
-		IconPalette: chromescrin
 		ChargeTime: 180
-	-GainsExperience:
-	Exit@1:
-	Production:
-		Produces: HunterSeeker
 	AttackTurreted:
 	Turreted:
 	AutoTarget:
@@ -1141,9 +1143,9 @@ STORMRIDERSPAWN:
 		Repulsable: false
 		CruiseAltitude: 1c07
 	Armament:
+		Weapon: WyvermBlast
 		LocalOffset: 0,0,4000
-	Armament@aa:
-		LocalOffset: 0,0,4000
+	-Armament@aa:
 	-WithVoxelBody:
 	WithFacingSpriteBody:
 	WithShadow:
@@ -1227,7 +1229,7 @@ WASP:
 		Cost: 900
 	Tooltip:
 		Name: Wasp
-		Description: Aerial drone equiped with dual\rocket launchers.\n  Strong vs Infantry, Light Vehicles\n  Weak vs Aircraft, Anti air units.
+		Description: Aerial drone equiped with dual\rocket launchers.\n  Strong vs Vehicles, Aircraft\n  Weak vs Anti air units, Infantry, Light Vehicles.
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 20

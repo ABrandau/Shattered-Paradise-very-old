@@ -224,6 +224,7 @@ veinhole:
 	muzzle: gaslrgmk
 		UseTilesetExtension: false
 		Length: *
+		Offset: 0,-60
 
 veinholeforg:
 	Defaults: veinhole
@@ -236,3 +237,6 @@ veinholeforg:
 	shoot:
 		Length: 23
 		Tick: 50
+	muzzle: gaslrgmk
+		UseTilesetExtension: false
+		Length: *

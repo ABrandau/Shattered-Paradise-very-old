@@ -416,10 +416,10 @@ MARAUDER:
 		UpgradeTypes: deployed
 		UpgradeMinEnabledLevel: 1
 	SpawnActorOnDeath@tiberium:
-		Probability: 7
+		Probability: 10
 		DeathType:
 	SpawnActorOnDeath@tiberium2:
-		Probability: 7
+		Probability: 10
 		DeathType:
 	RangeMultiplier@deployed:
 		Modifier: 120
@@ -459,10 +459,10 @@ E3:
 		Voice: Attack
 		Armaments: OnFoot
 	SpawnActorOnDeath@tiberium:
-		Probability: 7
+		Probability: 10
 		DeathType:
 	SpawnActorOnDeath@tiberium2:
-		Probability: 7
+		Probability: 10
 		DeathType:
 
 E2:
@@ -1103,7 +1103,7 @@ CYBORG:
 	Armor:
 		Type: Wood
 	Valued:
-		Cost: 400
+		Cost: 450
 	Tooltip:
 		Name: Cyborg Infantry
 		Description: Heavy armored unit.\n  Strong vs Infantry, Light armor\n  Weak vs Anti Armor weapons, Aircraft
@@ -1377,9 +1377,9 @@ GLAD:
 	Armor:
 		Type: wood
 	Valued:
-		Cost: 750
+		Cost: 600
 	SupplyTruck
-		Payload: 375
+		Payload: 300
 		Voice: Move
 	Tooltip:
 		Name: Gladiator

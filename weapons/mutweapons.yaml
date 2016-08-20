@@ -33,7 +33,7 @@ SkirmisherRocket:
 		Image: DRAGON
 		TrailImage: small_smoke_trail
 		HorizontalRateOfTurn: 8
-		RangeLimit: 7c204
+		RangeLimit: 12c0
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128

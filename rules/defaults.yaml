@@ -730,6 +730,7 @@
 	Inherits@1: ^Infantry
 	Inherits@3:	^IncompleteSelfHeal
 	-SpawnActorOnDeath@conversion:
+	-Crushable:
 	ExplosionOnDamageTransition:
 		Weapon: CyborgExplode
 		DamageState: Critical

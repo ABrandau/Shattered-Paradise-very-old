@@ -784,56 +784,48 @@ vislrg:
 # Vehicles
 ########################################################################
 art2:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: artyicon
 
 weed:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: weedicon
 
 gghunt:
+	Inherits: ^EmpOverlay
 	idle:
 		Facings: 1
 		Length: 8
 		ShadowStart: 8
-	emp-overlay: emp_fx01
-		Length: *
+
 		BlendMode: Additive
 
 4tnk:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
-	muzzle: gunfire
+	Inherits: ^EmpOverlay
 		Length: *
 		
 repair:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: rboticon		
 
 cube:
-	emp-overlay: emp_fx01
-		Length: *
-		BlendMode: Additive
+	Inherits: ^EmpOverlay
 	icon: rboticon		
 	
 mwarv:
+	Inherits: ^EmpOverlay
 	icon: mwaricon
 ##########################################################
 # Aircraft
 ##########################################################
 trnsport:
+	Inherits: ^EmpOverlay
 	icon: otrnicon	
 ########################################################################
 # Structures
 ########################################################################	
 eggs:
+	Inherits: ^EmpOverlay
 	Defaults:
 		Offset: 0, -12
 		UseTilesetCode: true
