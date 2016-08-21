@@ -1246,7 +1246,7 @@ SCRPOWR:
 		BuildPaletteOrder: 0
 		Prerequisites: ~structures.scr
 	Valued:
-		Cost: 600
+		Cost: 400
 	Tooltip:
 		Name: Scrin Generator
 		Description: Provides power for other structures.
@@ -1259,7 +1259,7 @@ SCRPOWR:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
 	Health:
-		HP: 600
+		HP: 1000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -1269,7 +1269,7 @@ SCRPOWR:
 	Selectable:
 		Bounds: 90, 48, 0, -6
 	Power:
-		Amount: 120
+		Amount: 150
 	InfiltrateForPowerOutage:
 	AffectedByPowerOutage:
 	Targetable:
@@ -1660,7 +1660,7 @@ CABPOWR:
 		BuildPaletteOrder: 0
 		Prerequisites: ~structures.cab
 	Valued:
-		Cost: 550
+		Cost: 750
 	CustomBuildTimeValue:
 		Value: 300
 	Tooltip:
@@ -1672,7 +1672,7 @@ CABPOWR:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
-		HP: 450
+		HP: 1200
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -1682,7 +1682,7 @@ CABPOWR:
 	Selectable:
 		Bounds: 90, 48, 0, -6
 	Power:
-		Amount: 140
+		Amount: 200
 	InfiltrateForPowerOutage:
 	AffectedByPowerOutage:
 	Targetable:

@@ -108,6 +108,7 @@ VEINHOLE:
 		QuantizedFacings: 1
 	Tooltip:
 		Name: Veinhole Monster
+	-SelfHealing@poisoncloud:
 	SeedsResource:
 		Interval: 10
 		ResourceType: Veins
