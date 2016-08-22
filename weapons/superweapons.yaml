@@ -85,24 +85,34 @@ IonCannon:
 		Falloff: 500, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Air
 		DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
-	Warhead@2Eff_impact: CreateEffect
-		Explosions: ionring
-		ImpactSound: ion1.aud
-	Warhead@3Dam_area: SpreadDamage
+	Warhead@2Dam_area: SpreadDamage
 		Spread: 1c0
 		Damage: 200
 		Falloff: 100, 50, 25, 0
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, EnergyDeath
-	Warhead@4Smu_area: LeaveSmudge
+	Warhead@3Smu_area: LeaveSmudge
 		SmudgeType: SmallScorch
 		Size: 2,1
 		InvalidTargets: Vehicle, Building, Wall
-	Warhead@op: FireShrapnel
+	Warhead@4Sharpnel: FireShrapnel
 		Weapon: LargeDebris
 		Amount: 3
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+	Warhead@5Effect: CreateEffect
+		Explosions: ionbeam
+		ImpactSound: ion1.aud
+	Warhead@6Effect: CreateEffect
+		Explosions: ionbeam2
+	Warhead@7Effect: CreateEffect
+		Explosions: ionbeam3
+	Warhead@8Effect: CreateEffect
+		Explosions: ionbeam4
+	Warhead@9Effect: CreateEffect
+		Explosions: ionbeam5
+	Warhead@10Effect: CreateEffect
+		Explosions: ionbeam6
 
 IonCannonSpawner:
 	ReloadDelay: 6
@@ -148,11 +158,15 @@ IonScorch:
 		Explosions: ionscorch
 		ExplosionPalette: effectalpha
 		ImpactSound: ion1.aud
+	Warhead@op: FireShrapnel
+		Weapon: SmallDebris
+		Amount: 1
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 
 IonDrag:
-	ReloadDelay: 25
+	ReloadDelay: 5
 	Range: 10
-	Report: orcamis1.aud
 	ValidTargets: IonSpawner
 	Projectile: Missile
 	Warhead@1Dam: SpreadDamage

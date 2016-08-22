@@ -681,19 +681,66 @@ LOCOMOTIVE:
 	# Cargo:
 		# MaxWeight: 2
 		# PipCount: 2
+	Targetable@1:
+		TargetTypes: Locomotive
 
 TRAINCAR:
-	Inherits: ^Train
+	Inherits: LOCOMOTIVE
 	Valued:
 		Cost: 800
 	Tooltip:
 		Name: Passenger Car
-	# Cargo:
-		# MaxWeight: 10
-		# PipCount: 5
+	Targetable@1:
+		TargetTypes: Traincar
+	RenderVoxels:
+		Image: traincar
+	RenderSprites:
+		Image: traincar
+	# RejectsOrders:
+	Armament:
+		Weapon: LocoDrag
+		TargetStances: Ally
+	AutoTarget:
+		ScanRadius: 99
+	AttackFrontal:
+
+TRAINCAR2:
+	Inherits: TRAINCAR
+	Targetable@1:
+		TargetTypes: Traincar2
+	Armament:
+		Weapon: LocoDrag2
+
+TRAINCAR3:
+	Inherits: TRAINCAR
+	Targetable@1:
+		TargetTypes: Traincar3
+	Armament:
+		Weapon: LocoDrag3
+		
+TRAINCAR4:
+	Inherits: TRAINCAR
+	Targetable@1:
+		TargetTypes: Traincar4
+	Armament:
+		Weapon: LocoDrag4
+
+TRAINCAR5:
+	Inherits: TRAINCAR
+	Targetable@1:
+		TargetTypes: Traincar5
+	Armament:
+		Weapon: LocoDrag5
+
+TRAINCAR6:
+	Inherits: TRAINCAR
+	Targetable@1:
+		TargetTypes: Traincar6
+	Armament:
+		Weapon: LocoDrag6
 
 CARGOCAR:
-	Inherits: ^Train
+	Inherits: LOCOMOTIVE
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -701,6 +748,12 @@ CARGOCAR:
 	# Cargo:
 		# MaxWeight: 10
 		# PipCount: 5
+	Armament:
+		Weapon: LocoDrag7
+		TargetStances: Ally
+	AutoTarget:
+		ScanRadius: 99
+	AttackFrontal:
 
 ##############################################
 # Gate

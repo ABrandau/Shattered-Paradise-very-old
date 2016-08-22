@@ -29,16 +29,18 @@ SmokeShrapnel:
 	Warhead@op: FireShrapnel
 		Weapon: ThrowSmoke
 		Amount: 1
-		AllowDirectHit: false
+		AllowDirectHit: True
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 
 ThrowSmoke:
 	Inherits: ^RocketWarhead
-	Range: 1c0
-	MinRange: 1c0
+	Range: 30
+	MinRange: 30
 	ValidTargets: Ground, Air
 	Projectile: Missile
 		MaximumLaunchSpeed: 50
+		MaximumLaunchAngle: 255
+		Arm: 100
 		Speed: 50
 		Blockable: false
 		Image: sgrysmk1
@@ -52,6 +54,54 @@ ThrowSmoke:
 		AffectsParent: true
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+
+LocoDrag:
+	Inherits: ^NoDamage
+	ReloadDelay: 1
+	Range: 1c0
+	ValidTargets: Locomotive
+	Projectile: Missile
+	Warhead@1Dam: SpreadDamage
+		Spread: 110
+		Damage: 10
+		ValidTargets: Locomotive
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+
+LocoDrag2:
+	Inherits: LocoDrag
+	ValidTargets: Traincar
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Traincar
+
+LocoDrag3:
+	Inherits: LocoDrag
+	ValidTargets: Traincar2
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Traincar2
+
+LocoDrag4:
+	Inherits: LocoDrag
+	ValidTargets: Traincar3
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Traincar3
+
+LocoDrag5:
+	Inherits: LocoDrag
+	ValidTargets: Traincar4
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Traincar4
+
+LocoDrag6:
+	Inherits: LocoDrag
+	ValidTargets: Traincar5
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Traincar5
+
+LocoDrag7:
+	Inherits: LocoDrag
+	ValidTargets: Traincar6
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Traincar6
 
 SlimeAttack:
 	ReloadDelay: 80

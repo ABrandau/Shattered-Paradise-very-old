@@ -97,7 +97,7 @@
 	SelfHealing@poisoncloud:
 		PercentageStep: -1
 		Step: -6
-		Delay: 15
+		Delay: 20
 		UpgradeTypes: Poison
 		HealIfBelow: 200
 		DamageTypes: TiberiumDeath
@@ -1284,12 +1284,19 @@
 	DrawLineToTarget:
 	Mobile:
 		TerrainSpeeds:
-			Rail: 100
+			Clear: 90
+			Road: 100
+			Rail: 90
+			DirtRoad: 100
+			Rough: 80
+			Tiberium: 90
+			BlueTiberium: 90
+			Veins: 50
 		TurnSpeed: 5
 		Voice: Move
 		Speed: 113
 	Cargo:
-		Types: Infantry
+		Types: Vehicle
 		UnloadVoice: Unload
 		LoadingUpgrades: notmobile
 	Health:
