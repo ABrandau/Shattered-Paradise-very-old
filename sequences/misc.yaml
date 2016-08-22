@@ -74,6 +74,7 @@ rank:
 		Length: 2
 
 dot:
+	Inherits: ^EmpOverlay
 	idle:
 		UseTilesetExtension: false
 		Length: *
@@ -234,6 +235,9 @@ explosion:
 		Tick: 400
 	droppod2: droppod2
 		Tick: 400
+	ionscorch: ionscorch
+		Tick: 400
+		ZOffset: -512
 	#Nod
 	smokebomb1: smokebomb1
 	smokebomb2: smokebomb2

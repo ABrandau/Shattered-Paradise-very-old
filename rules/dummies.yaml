@@ -14,52 +14,185 @@
 	RenderSprites:
 		Image: blackhanddummy
 
-DROPPODPLANE:
-	Inherits: WETP
-	-Buildable:
+##################################################################
+# GDI
+##################################################################
+
+IONBEAMTARGET:
+	Inherits: ^Helicopter
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Target
 	-Selectable:
-	Cargo:
-		MaxWeight: 10
-		Types: Infantry, Vehicle, Aircraft
+	SelectionDecorations:
+	AutoSelectionSize:
+	-UpdatesPlayerStatistics:
+	-ActorLostNotification:
 	-AppearsOnRadar:
 	Aircraft:
-		Speed: 1000
-	AttackBomber:
-		Bombs: primary
-	Health:
-		HP: 150
-	Armor:
-		Type: Light
-	-AttackPlane:
-	Armament:
-		Weapon: droppod1
-		LocalOffset: 3000, 3000,4000
-	Armament@1:
-		Weapon: droppod1
-		LocalOffset: -3000, -3000,4000
-	Armament@2:
-		Weapon: droppod1
-		LocalOffset: 3000, -3000,4000
-	Armament@3:
-		Weapon: droppod2
-		LocalOffset: -3000, 3000,4000
-	Armament@4:
-		Weapon: droppod3
-		LocalOffset: 0, 0,4000
-	AmmoPool:
-		Ammo: 5
-		PipCount: 1
-		ReloadCount: 20
-		ReloadTicks: 150
-		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty
-		RearmBuildings: muair, gahpad, nahpad
-	ParaDrop:
-	-RevealsShroud:
+		Speed: 0
+	Targetable:
+		TargetTypes: IonSpawner
 	-Targetable@GROUND:
 	-Targetable@AIRBORNE:
-	-WithVoxelBody:
+	-RevealsShroud:
+	-Voiced:
+	Health:
+		HP: 500
+	Armor:
+		Type: Wood
 	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		Image: dot
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32
+	Explodes:
+		Weapon: IonCannon
+		EmptyWeapon: IonCannon
+
+IONBEAM:
+	Inherits: ^Helicopter
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Ion Beam
+		Description: yeeeeeeeeeeee
+	-Selectable:
+	SelectionDecorations:
+	AutoSelectionSize:
+	-UpdatesPlayerStatistics:
+	-ActorLostNotification:
+	-AppearsOnRadar:
+	Aircraft:
+		CruiseAltitude: 0
+		TurnSpeed: 6
+		Repulsable: false
+		AltitudeVelocity: 400
+		Speed: 40
+		MoveIntoShroud: true
+	Targetable:
+		TargetTypes: IonBeam
+	-Targetable@GROUND:
+	-Targetable@AIRBORNE:
+	-RevealsShroud:
+	-Voiced:
+	Health:
+		HP: 60
+	SelfHealing:
+		Step: -10
+		Delay: 23
+		HealIfBelow: 200
+	Armor:
+		Type: Wood
+	AttackHeli:
+		FacingTolerance: 20
+		Voice: Attack
+	AutoTarget:
+		ScanRadius: 99
+		InitialStance: AttackAnything
+		ForceTargetStances: Ally
+	-RenderVoxels:
+	-WithVoxelBody:
+	Armament:
+		Weapon: IonDrag
+		TargetStances: Ally
+	WithDeathAnimation:
+		DeathSequencePalette: effectalpha
+		DeathPaletteIsPlayerPalette: false
+	RejectsOrders@berserk:
+		UpgradeMinEnabledLevel: 0
+	RenderSprites:
+		Palette: effectalpha
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithIdleOverlay:
+		Sequence: beamsky
+	WithIdleOverlay@1:
+		Sequence: beamsky2
+	WithIdleOverlay@2:
+		Sequence: beamsky3
+	WithIdleOverlay@3:
+		Sequence: beamsky4
+	WithIdleOverlay@4:
+		Sequence: beamsky5
+	WithIdleOverlay@5:
+		Sequence: muzzle
+	WithIdleOverlay@6:
+		Sequence: muzzle2
+	ExplodeWeapon:
+		Weapon: IonScorch
+
+IONBEAMROAMER:
+	Inherits: ^Helicopter
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Ion Beam
+		Description: yeeeeeeeeeeee
+	-Selectable:
+	SelectionDecorations:
+	AutoSelectionSize:
+	-UpdatesPlayerStatistics:
+	-ActorLostNotification:
+	-AppearsOnRadar:
+	Aircraft:
+		CruiseAltitude: 0
+		TurnSpeed: 20
+		Repulsable: false
+		AltitudeVelocity: 400#0c43
+		Speed: 25
+		MoveIntoShroud: true
+	Targetable:
+		TargetTypes: IonBeam
+	-Targetable@GROUND:
+	-Targetable@AIRBORNE:
+	-RevealsShroud:
+	-Voiced:
+	Health:
+		HP: 75
+	SelfHealing:
+		Step: -1
+		Delay: 15
+		HealIfBelow: 200
+	Armor:
+		Type: Wood
+	AttackHeli:
+		FacingTolerance: 20
+		Voice: Attack
+	AttackWander:
+	-RenderVoxels:
+	-WithVoxelBody:
+	WithDeathAnimation:
+		DeathSequencePalette: effectalpha
+		DeathPaletteIsPlayerPalette: false
+	RejectsOrders@berserk:
+		UpgradeMinEnabledLevel: 0
+	RenderSprites:
+		Image: ionbeam
+		Palette: effectalpha
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32
+	WithIdleOverlay:
+		Sequence: beamsky
+	WithIdleOverlay@1:
+		Sequence: beamsky2
+	WithIdleOverlay@2:
+		Sequence: beamsky3
+	WithIdleOverlay@3:
+		Sequence: beamsky4
+	WithIdleOverlay@4:
+		Sequence: beamsky5
+	WithIdleOverlay@5:
+		Sequence: muzzle
+	WithIdleOverlay@6:
+		Sequence: muzzle2
+	ExplodeWeapon:
+		Weapon: IonScorch
 
 KILLEDACTOR:
 	Inherits: ^DUMMYSTRUCTURE
@@ -230,8 +363,7 @@ SCRINENERGYDUMMY:
 		Image: blackhanddummy
 	QuantizeFacingsFromSequence:
 		Sequence: stand
-	Selectable:
-		Bounds: 20, 32, 0, -8
+	-Selectable:
 	SelfHealing:
 		Step: -1
 		Delay: 25

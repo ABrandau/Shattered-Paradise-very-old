@@ -1107,4 +1107,41 @@ gafire:
 		Offset: 0, 0
 		UseTilesetCode: false
 
-		
+########################################################
+#	MISC
+########################################################
+
+ionbeam:
+	Inherits: ^EmpOverlay
+	defaults:
+		UseTilesetCode: false
+	idle:
+		Offset: 0,-60
+		Length: *
+	stand:
+		Offset: 0,-60
+		Length: *
+	beamsky:
+		Offset: 0,-180
+		Length: *
+	beamsky2:
+		Offset: 0,-300
+		Length: *
+	beamsky3:
+		Offset: 0,-420
+		Length: *
+	beamsky4:
+		Offset: 0,-540
+		Length: *
+	beamsky5:
+		Offset: 0,-660
+		Length: *
+	muzzle: ring1
+		Offset: 0,-12
+		Length: *
+		Tick: 5
+	muzzle2: ring1
+		Offset: 0,-12
+		Length: *
+		Tick: 10
+	scorch:

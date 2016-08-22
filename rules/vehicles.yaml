@@ -658,7 +658,7 @@ SGEN:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 19
-		Prerequisites: ~naweap, nastlh
+		Prerequisites: ~naweap, naradr
 	Mobile:
 		TurnSpeed: 6
 		Speed: 80

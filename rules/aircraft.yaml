@@ -8,8 +8,9 @@ CLOUD1:
 	Tooltip:
 		Name: Gas Cloud
 		Description: yeeeeeeeeeeee
-	Selectable:
-		Bounds: 40,30
+	-Selectable:
+	SelectionDecorations:
+	AutoSelectionSize:
 	-UpdatesPlayerStatistics:
 	-ActorLostNotification:
 	-AppearsOnRadar:
@@ -39,14 +40,6 @@ CLOUD1:
 	AttackHeli:
 		FacingTolerance: 20
 		Voice: Attack
-	# AmmoPool@Rocket:
-		# Ammo: 2
-		# PipCount: 0
-		# SelfReloads: true
-		# SelfReloadDelay: 250
-		# PipType: Ammo
-		# PipTypeEmpty: AmmoEmpty
-		# Name: Rocket
 	-RenderVoxels:
 	-WithVoxelBody:
 	WithDeathAnimation:
@@ -65,8 +58,6 @@ CLOUD1:
 		Weapon: GasCloudDeathWeapon
 		LoadedChance: 5
 		EmptyWeapon: GasCloudDeathWeapon2
-	# ExplodeWeapon:
-		# Weapon: GasCloudDeathWeapon
 
 #######################################################
 #GDI
@@ -1034,11 +1025,9 @@ SCRINCOUNCIL:
 		Type: HunterSeeker
 		IconPalette: chromescrin
 	Production:
-		Produces: HunterSeeker
+		Produces: Vehicle, HunterSeeker
 	Exit@1:
 		SpawnOffset: 0,0,-50
-	Production:
-		Produces: Vehicle
 	ProductionQueue:
 		Type: Vehicle
 	RevealsShroud:

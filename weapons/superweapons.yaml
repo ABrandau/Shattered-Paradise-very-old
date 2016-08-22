@@ -77,7 +77,8 @@ EMPulseCannon:
 ########################################################
 
 IonCannon:
-	ValidTargets: Ground, Air
+	ValidTargets: Ground, Air, IonBeam
+	Projectile: InstantExplode
 	Warhead@1Dam_impact: SpreadDamage
 		Spread: 1c0
 		Damage: 100
@@ -102,6 +103,64 @@ IonCannon:
 		Amount: 3
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+
+IonCannonSpawner:
+	ReloadDelay: 6
+	Range: 12c0
+	Projectile: InstantExplode
+	Warhead@3Dam_area: SpreadDamage
+		Spread: 1
+		Damage: 1
+		ValidTargets: Ground
+	Warhead@op: FireShrapnel
+		Weapon: IonBeamCreator
+		Amount: 15
+		AllowDirectHit: false
+	Warhead@Spawn: SpawnActor
+		Actors: ionbeamtarget
+		Range: 3
+
+IonBeamCreator:
+	ReloadDelay: 6
+	Range: 5c0
+	MinRange: 5c0
+	Projectile: Bullet
+		Speed: 100c0
+	Warhead@3Dam_area: SpreadDamage
+		Spread: 1
+		Damage: 1
+		ValidTargets: Ground
+	Warhead@Spawn: SpawnActor
+		Actors: ionbeam
+		Range: 12
+
+IonScorch:
+	ReloadDelay: 1
+	Projectile: InstantExplode
+	ValidTargets: Ground, Air, IonSpawner
+	Warhead@3Dam_area: SpreadDamage
+		Spread: 400
+		Damage: 15
+		Falloff: 100, 50, 25, 0
+		ValidTargets: Ground, Air, IonSpawner
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2Eff_impact: CreateEffect
+		Explosions: ionscorch
+		ExplosionPalette: effectalpha
+		ImpactSound: ion1.aud
+
+IonDrag:
+	ReloadDelay: 25
+	Range: 10
+	Report: orcamis1.aud
+	ValidTargets: IonSpawner
+	Projectile: Missile
+	Warhead@1Dam: SpreadDamage
+		Spread: 110
+		Damage: 1
+		ValidTargets: IonSpawner
+		Versus:
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 
 DroppodSpawner: # 1 = MARINE, 2 = JUMPJET, 3 = MEDIC, 4 = EAGLEGUARD
 	ReloadDelay: 6

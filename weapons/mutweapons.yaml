@@ -427,7 +427,7 @@ TiberianRocket2:
 	Burst: 2
 	Delay: 20
 	Warhead@5Actor: SpawnActor
-		Actors: cloud1
+		Actors: ionbeam
 		FallRate: 5000
 		Range: 3
 

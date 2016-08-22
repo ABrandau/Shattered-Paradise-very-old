@@ -37,32 +37,34 @@ LegioNeedler:
 		SmudgeType: SmallCrater
 		InvalidTargets: Vehicle, Building, Wall
 		
-BugRail:
-	Inherits: ^GrenadeWarhead
-	ReloadDelay: 100
+ColossiTesla:
+	Inherits: ^RifleWarhead
+	ReloadDelay: 80
 	Range: 4c0
-	Inaccuracy: 0c512
-	Report: rketinf1.aud
-	Projectile: Bullet
-		Speed: 250
-		Blockable: false
-		Shadow: true
-		Angle: 270
-		Inaccuracy: 0c512
-		palette: apred
-		Image: purpBullet
-		RateOfTurn: 8
-		RangeLimit: 15c0
+	Report: voltautofire.wav
+	Charges: yes
+	Projectile: TeslaZap
+		Palette: apolbluealpha
 	Warhead@1Dam: SpreadDamage
-		Spread: 64
-		Damage: 30
-		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: alienpiff3, alienpiff4, alienpiff5 
-		ExplosionPalette: apred
-		ImpactSound: expnew12.aud
+		Spread: 42
+		Damage: 28
+		Versus:
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+	Warhead@op: FireShrapnel
+		Weapon: ColossiTeslaSplash
+		Amount: 2
+		AllowDirectHit: false
 
-BugBlast:
+ColossiTeslaSplash:
+	Inherits: ColossiTesla
+	Range: 2c0
+	Projectile: TeslaZap
+		Palette: apolbluealpha
+	Warhead@1Dam: SpreadDamage
+		Damage: 14
+	-Warhead@op: FireShrapnel
+
+ColossiBlast:
 	ReloadDelay: 2
 	Range: 8c0
 	Projectile: InstantExplode
@@ -83,11 +85,11 @@ BugBlast:
 		ExplosionPalette: colossiglow
 		ImpactSound: expnew12.aud
 	Warhead@op: FireShrapnel
-		Weapon: ColossiTesla
+		Weapon: ColossiBlastTesla
 		Amount: 8
 		AllowDirectHit: false
 
-ColossiTesla:
+ColossiBlastTesla:
 	Inherits: ^NoDamage		
 	Inherits: ^RifleWarhead
 	ReloadDelay: 80
@@ -394,8 +396,8 @@ BattleshipCannon:
 	ReloadDelay: 45
 	Range: 5c768
 	Report: battleshipgun1.wav
-	Burst: 4
-	BurstDelay: 5
+	Burst: 6
+	BurstDelay: 4
 	ValidTargets: Ground, Infantry, Vehicle, water
 	Projectile: Bullet
 		Speed: 500
@@ -464,7 +466,7 @@ BattleshipRocket:
 		ContrailColor: 0B124D
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 15
+		Damage: 40
 		ValidTargets: Ground, Infantry, Vehicle, Air, water
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -568,7 +570,6 @@ Return:
 	ReloadDelay: 25
 	Range: 1c0
 	Report: orcamis1.aud
-	Burst: 2
 	ValidTargets: Mothership
 	Projectile: Missile
 	Warhead@1Dam: SpreadDamage

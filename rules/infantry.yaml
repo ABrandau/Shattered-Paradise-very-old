@@ -847,7 +847,7 @@ COLOSSI:
 	Armor:
 		Type: wood
 	Armament:
-		Weapon: FloatTesla
+		Weapon: ColossiTesla
 		LocalOffset: 300,0,1000
 		UpgradeTypes: undeployed
 		UpgradeMinEnabledLevel: 1
@@ -881,7 +881,7 @@ COLOSSI:
 		UpgradeMinEnabledLevel: 1
 		UpgradeMaxAcceptedLevel: 1
 	ExplodeWeapon:
-		Weapon: BugBlast
+		Weapon: ColossiBlast
 		UpgradeTypes: deployed
 		UpgradeMinEnabledLevel: 1
 
