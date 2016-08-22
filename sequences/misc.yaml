@@ -78,7 +78,17 @@ dot:
 	idle:
 		UseTilesetExtension: false
 		Length: *
-		
+
+lgrysmk1:
+	defaults:
+	idle:
+		Length: *
+		Tick: 25
+
+sgrysmk1:
+	idle:
+		Length: *
+
 meteor:
 	idle:
 		Length: 8

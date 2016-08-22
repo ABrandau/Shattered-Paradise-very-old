@@ -383,6 +383,13 @@
 		Weapons: LargeDebris
 		Pieces: 3, 7
 		Range: 2c0, 5c0
+	UpgradeOnDamage@smoke:
+		Upgrades: smoketrail
+		ValidDamageStates: Critical, Heavy
+	ExplodeWeapon@smoke:
+		Weapon: SmokeShrapnel
+		UpgradeTypes: smoketrail
+		UpgradeMinEnabledLevel: 1
 
 ^CivBuilding:
 	Inherits: ^BasicBuilding
@@ -834,19 +841,13 @@
 		Sequence: veins
 		UpgradeTypes: veins
 		UpgradeMinEnabledLevel: 1
-	# UpgradeOnDamage@smoke:
-		# Upgrades: smoketrail
-		# ValidDamageStates: Critical
-	# LeavesTrails@smoke:
-		# Type: CenterPosition
-		# TrailWhileStationary: true
-		# StationaryInterval: 5
-		# Palette: apolgreyalpha
-		# Image: smoketrailsmall
-		# TerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium, veins, Cliff, Water
-		# MovingInterval: 5
-		# UpgradeTypes: smoketrail
-		# UpgradeMinEnabledLevel: 1
+	UpgradeOnDamage@smoke:
+		Upgrades: smoketrail
+		ValidDamageStates: Critical
+	ExplodeWeapon@smoke:
+		Weapon: SmokeShrapnel
+		UpgradeTypes: smoketrail
+		UpgradeMinEnabledLevel: 1
 	# UpgradeOnDamage@sparks:
 		# Upgrades: sparks
 		# ValidDamageStates: Heavy, Critical
@@ -995,6 +996,13 @@
 	Inherits@5: ^PermanentSelfHeal
 	DrawLineToTarget:
 	TemporaryOwnerManager:
+	UpgradeOnDamage@smoke:
+		Upgrades: smoketrail
+		ValidDamageStates: Critical
+	ExplodeWeapon@smoke:
+		Weapon: SmokeShrapnel
+		UpgradeTypes: smoketrail
+		UpgradeMinEnabledLevel: 1
 	Cloak@CLOAKGENERATOR:
 		UpgradeTypes: cloakgenerator
 		UpgradeMinEnabledLevel: 1

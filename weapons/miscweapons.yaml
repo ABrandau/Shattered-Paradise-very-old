@@ -23,6 +23,36 @@ FiendShard:
 		ImpactSound: ssplash3.aud
 		ValidImpactTypes: Water
 
+SmokeShrapnel:
+	ReloadDelay: 10
+	Projectile: InstantExplode
+	Warhead@op: FireShrapnel
+		Weapon: ThrowSmoke
+		Amount: 1
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+
+ThrowSmoke:
+	Inherits: ^RocketWarhead
+	Range: 1c0
+	MinRange: 1c0
+	ValidTargets: Ground, Air
+	Projectile: Missile
+		MaximumLaunchSpeed: 50
+		Speed: 50
+		Blockable: false
+		Image: sgrysmk1
+		HorizontalRateOfTurn: 8
+		RangeLimit: 12c0
+		AirburstAltitude: 5000
+		Palette: effectalpha
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 1
+		AffectsParent: true
+		ValidTargets: Ground, Air
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+
 SlimeAttack:
 	ReloadDelay: 80
 	Range: 1c512
