@@ -1709,7 +1709,7 @@ CABSW1:
 	Health:
 		HP: 350
 	RejectsOrders:
-		Except: Stop, Sell
+		Except: Sell, Repair, PowerDown
 	Armor:
 		Type: Light
 	BodyOrientation:
