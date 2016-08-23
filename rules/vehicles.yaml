@@ -1464,7 +1464,7 @@ GRINDER:
 		Cost: 800
 	Tooltip:
 		Name: Grinder
-		Description: Heavy vehicle designed for\nsalvaging enemy bases.\n  Strong vs Light armored targers.\n  Weak vs Aircraft\nDestroying structures with this\nunit Awards the player with money.
+		Description: Heavy vehicle designed for salvaging Hostiles.\nEnemies killed with this unit reward the player\nwith money.\n  Strong vs Light armored targers.\n  Weak vs Aircraft.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 20

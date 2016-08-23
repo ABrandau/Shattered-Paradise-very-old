@@ -1709,7 +1709,7 @@ CABSW1:
 	Health:
 		HP: 350
 	RejectsOrders:
-		Except: Sell, Repair, PowerDown
+		Except: Stop, Sell, Repair, PowerDown
 	Armor:
 		Type: Light
 	BodyOrientation:
@@ -1777,19 +1777,18 @@ cabobelisk:
 		Amount: -100
 	SelectionDecorations:
 		VisualBounds: 75,48
-	IonCannonPower@nanomachinesson:
+	DetonateWeaponPower@nanomachinesson:
 		Cursor: ioncannon
 		Icon: nanomachineswarm
-		Effect: dot
-		ChargeTime: 180
-		Weapon: NanoMachineBurst
 		Description: Nanomachine Swarm
 		LongDesc: Fills an area with nanomachines\nhealing friendly units and turning\nany fallen units into workers.
+		OrderName: NanomachineSwarm
 		BeginChargeSound:
 		EndChargeSound: 00-i156.aud
-		LaunchSound:
-		SelectTargetSound:
-		InsufficientPowerSound:
-		OrderName: Nanomachine swarm
+		DisplayTimer: True
+		DisplayBeacon: True
+		ChargeTime: 180
+		Weapon: NanoMachineBurst
 		DisplayRadarPing: True
 		CameraActor: camera
+

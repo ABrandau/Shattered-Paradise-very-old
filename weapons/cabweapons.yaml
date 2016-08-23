@@ -48,26 +48,23 @@ SentryGun:
 		SmudgeType: SmallCrater
 		InvalidTargets: Vehicle, Building, Wall
 	
-ReaperMortar:
+ReaperWeb:
 	Inherits: ^GrenadeWarhead
 	ReloadDelay: 75
-	Range: 9c0
-	Burst: 3
+	Range: 7c0
+	Burst: 1
 	Report: fireweb1.aud
-	ValidTargets: Ground, Infantry
+	ValidTargets: Infantry
 	Projectile: Bullet
 		Speed: 150
 		Image: web
 		Shadow: true
-		Inaccuracy: 2c0
-		# ContrailLength: 10
-		# ContrailUsePlayerColor: true
 		Angle: 130
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 5
-		ValidTargets: Ground, Infantry
+		ValidTargets: Infantry
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
@@ -87,10 +84,10 @@ ReaperMortar:
 ReaperScythe:
 	Inherits: ^RocketWarhead
 	ReloadDelay: 125
-	Range: 5c0
+	Range: 7c0
 	Burst: 4
 	MinRange: 3c0
-	Report: rketinf1.aud
+	Report: samshot1.aud
 	ValidTargets: Ground, Air
 	Projectile: Missile
 		Speed: 213
@@ -99,6 +96,34 @@ ReaperScythe:
 		Inaccuracy: 1c0
 		Image: DRAGON
 		TrailImage: small_smoke_trail
+		VerticalRateOfTurn: 40
+		AirburstAltitude: 5000000
+		CruiseAltitude: 5000000
+		CloseEnough: 2c0
+		RateOfTurn: 10
+		RangeLimit: 15c0
+		Palette: ra
+	Warhead@op: FireShrapnel
+		Weapon: ReaperScytheFalling
+		Amount: 1
+		AimChance: 100
+		AllowDirectHit: true
+		AimTargetStances: Enemy
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+
+ReaperScytheFalling:
+	Inherits: ^RocketWarhead
+	ReloadDelay: 125
+	Range: 6c0
+	MinRange: 3c0
+	ValidTargets: Ground, Air
+	Projectile: Missile
+		Speed: 213
+		Blockable: false
+		Shadow: true
+		Image: DRAGON
+		TrailImage: small_smoke_trail
+		VerticalRateOfTurn: 20
 		RateOfTurn: 10
 		RangeLimit: 15c0
 		Palette: ra
@@ -177,7 +202,7 @@ LurkerHit:
 		Inaccuracy: 1c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 120
-		Damage: 25
+		Damage: 35
 		Versus:
 			Worker: 25
 		DamageTypes: Prone50Percent, TriggerProne, CabalDeath

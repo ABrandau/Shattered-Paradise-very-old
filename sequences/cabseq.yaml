@@ -750,7 +750,9 @@ cabobelisk:
 		Offset: 0, 0
 		UseTilesetCode: false
 		ZOffset: 512
-		BlendMode: Additive		
+		BlendMode: Additive
+	active:
+		ShadowStart: 49
 	make:
 		Length: 24
 		ShadowStart: 49

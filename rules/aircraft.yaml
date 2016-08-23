@@ -424,6 +424,16 @@ SCRIN:
 		Bounds: 30,24
 	Voiced:
 		VoiceSet: Scrin
+	Contrail:
+		TrailLength: 50
+		TrailWidth: 0c10
+		Offset: -300,-100,0
+		ZOffset: 512
+	Contrail@2:
+		TrailLength: 50
+		TrailWidth: 0c10
+		Offset: -300,100,0
+		ZOffset: 512
 	Aircraft:
 		MaximumPitch: 90
 		TurnSpeed: 3

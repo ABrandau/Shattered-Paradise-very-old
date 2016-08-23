@@ -1356,7 +1356,7 @@ REAPERCAB:
 	Armor:
 		Type: Wood
 	Armament@primary:
-		Weapon: ReaperMortar
+		Weapon: ReaperWeb
 		LocalOffset: 0,0,200
 	Armament@secondary:
 		Weapon: ReaperScythe
@@ -1491,6 +1491,7 @@ WORKER:
 	WithInfantryBody:
 		AttackSequence: shoot
 	RenderSprites:
+	-SpawnActorOnDeath@nanomachineburst:
 	-SpawnActorOnDeath@conversion:
 
 PALADIN2:
@@ -1535,6 +1536,7 @@ PALADIN2:
 	AutoTarget:
 	Selectable:
 		Bounds: 30, 42, 0, -8
+	-SpawnActorOnDeath@nanomachineburst:
 
 cybdog:
 	Inherits: ^Cyborg
@@ -1571,6 +1573,7 @@ cybdog:
 		Voice: Attack
 	SelectionDecorations:
 		VisualBounds: 16,31,0,-10
+	-SpawnActorOnDeath@nanomachineburst:
 
 ######################################################
 # Neutral Stuff
