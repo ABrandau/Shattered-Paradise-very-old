@@ -237,6 +237,18 @@ explosion:
 		UseTilesetExtension: true
 		ZOffset: 1023
 	#GDI
+	fsidlewall: fsidle
+		Offset: 0,-90
+		Tick: 35
+	fsgrndwall: fsgrnd
+		Offset: 0,-48
+		Tick: 35
+	fsidle: fsidle
+		Offset: 0,-78
+		Tick: 35
+	fsgrnd: fsgrnd
+		Offset: 0,-36
+		Tick: 35
 	podring: podring
 	droppod: droppod
 		Tick: 400

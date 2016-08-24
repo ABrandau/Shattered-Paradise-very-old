@@ -432,44 +432,6 @@ GAWALL:
 	LineBuild:
 		NodeTypes: wall, turret
 
-GAFIRE:
-	Inherits: ^Building
-	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 100
-		Prerequisites: gatech, ~structures.gdi
-	Valued:
-		Cost: 2000
-	Tooltip:
-		Name: Firestorm Generator
-		Description: Makes the nearby structures\nmore resistant to damage.
-	Building:
-		Footprint: xxx xxx
-		Dimensions: 3,2
-	WithRangeCircle:
-		Range: 12c0
-		Type: cloakgenerator
-	UpgradeActorsNear@firestorm:
-		Upgrades: FirestormGen
-		Range: 12c0
-	Selectable:
-		Bounds: 110, 60, 3, -4
-	Health:
-		HP: 500
-	Armor:
-		Type: Wood
-	RevealsShroud:
-		Range: 4c0
-	WithIdleOverlay@1:
-		Sequence: idle1 #gtfire_a, gtfire_b, gtfire_c
-	WithIdleOverlay@2:
-		Sequence: idle2
-	Power:
-		Amount: -150
-	ProvidesPrerequisite@buildingname:
-	SelectionDecorations:
-		VisualBounds: 110, 60, 3, -4
-
 ##########################################################
 # NOD
 ##########################################################
@@ -1662,8 +1624,6 @@ CABPOWR:
 		Prerequisites: ~structures.cab
 	Valued:
 		Cost: 750
-	CustomBuildTimeValue:
-		Value: 300
 	Tooltip:
 		Name: Firestorm Power Plant
 		Description: Provides power for other structures.\nPower output does not decrease with damage.\nDamages itself when on critical health.

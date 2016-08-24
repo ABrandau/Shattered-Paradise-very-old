@@ -384,16 +384,31 @@ GAFIRE:
 		Cost: 2000
 	Tooltip:
 		Name: Firestorm Generator
-		Description: Makes the nearby units and\nstructures more resistant to\ndamage.
+		Description: Support structure that generates a barrier around it when activated,\nit makes friendly units inside it harder to kill, deals damage\nto enemies in the border and consumes power when active.
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
 	WithRangeCircle:
 		Range: 12c0
 		Type: cloakgenerator
-	UpgradeActorsNear@firestorm:
-		Upgrades: FirestormGen
-		Range: 12c0
+	PowerMultiplier:
+		UpgradeTypes: FirestormGen
+		Modifier: -600
+	DeployToTimedUpgrade:
+		DeployedUpgrades: FirestormGen
+		CooldownTicks: 3000
+		StartsFullyCharged: true
+		DeployedTicks: 300
+	ExplodeWeapon:
+		Weapon: FirestormWallUpgrade
+		UpgradeTypes: FirestormGen
+		UpgradeMinEnabledLevel: 1
+		ResetReloadWhenEnabled: false
+	ExplodeWeapon:
+		Weapon: FirestormSpawner
+		UpgradeTypes: FirestormGen
+		UpgradeMinEnabledLevel: 1
+		ResetReloadWhenEnabled: false
 	Selectable:
 		Bounds: 110, 60, 3, -4
 	Health:
@@ -1191,7 +1206,7 @@ SCRNEEDLER:
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^TowerStealthDetection
 	Valued:
-		Cost: 700
+		Cost: 500
 	Tooltip:
 		Name: Ichor Waste Turret
 		Description: Basic defense, cloaks when idle.\nRequires power to operate.\n  Strong vs Ground\n  Weak vs Air.
@@ -1234,7 +1249,7 @@ SCRNEEDLER:
 		Weapon: NeedlerAcid
 		LocalOffset: 512,0,400
 	Power:
-		Amount: -40
+		Amount: -30
 	SelectionDecorations:
 		VisualBounds: 40, 36, -3, -8
 

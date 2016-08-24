@@ -580,6 +580,11 @@ SHAWALL:
 		FactionImages:
 			gdi: wall.gdi
 			nod: wall.nod
+	ExplodeWeapon@1:
+		Weapon: FirestormExploWalls
+		UpgradeTypes: FirestormWallUpgrade
+		UpgradeMinEnabledLevel: 1
+		ResetReloadWhenEnabled: false
 
 NAPULS:
 	Inherits: ^Defense

@@ -851,6 +851,7 @@ COLOSSI:
 		LocalOffset: 300,0,1000
 		UpgradeTypes: undeployed
 		UpgradeMinEnabledLevel: 1
+	-Crushable:
 	-TakeCover:
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded

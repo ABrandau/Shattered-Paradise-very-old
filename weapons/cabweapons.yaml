@@ -482,7 +482,7 @@ WaspLasor:
 		Color: 0dc7b8#0080FFC8				
 	Warhead@1Dam: SpreadDamage
 		Spread: 125
-		Damage: 10
+		Damage: 12
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 		ValidTargets: Ground, Air
 		

@@ -411,12 +411,19 @@ EnergyAssimilator:
 		Explosions: scrinenergyeff
 		ExplosionPalette: scrinenergystuffsalpha
 		ImpactSound: ion1.aud
-	Warhead@emp: GrantUpgrade
+	Warhead@energy: GrantUpgrade
 		Range: 999c0
-		Duration: 200
+		Duration: 400
 		Upgrades: empdisable
 		ValidTargets: Powerplant
 		ValidStances: Enemy, Neutral
+		Delay: 15
+	Warhead@trolling: GrantUpgrade
+		Range: 999c0
+		Duration: 200
+		Upgrades: TimeLineTrolling
+		ValidTargets: Ground, Air, Infantry, Vehicle, Aircraft
+		ValidStances: Ally, Enemy, Neutral
 		Delay: 15
 
 MeteorSpawner:

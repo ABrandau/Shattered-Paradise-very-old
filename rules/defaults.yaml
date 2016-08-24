@@ -89,6 +89,13 @@
 		HealIfBelow: 101
 		UpgradeTypes: batteryboost
 		UpgradeMinEnabledLevel: 1
+# TIMELINE TROLLING
+	SpeedMultiplier@ScrinTimeline:
+		UpgradeTypes: TimeLineTrolling
+		Modifier: -25, -50
+	ReloadDelayMultiplier@ScrinTimeline:
+		UpgradeTypes: TimeLineTrolling
+		Modifier: 1000, 1250
 #HEALTH PERCENTAGE FIREPOWER MULTIPLIER
 	HealthPercentageFirepowerMultiplier:
 		UpgradeTypes: AcidScaleDmg
@@ -300,6 +307,7 @@
 	Inherits@1: ^GenericBuffsDebuffs
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
+	WithTextControlGroupDecoration:
 	SelectionDecorations:
 		Palette: pips
 	Selectable:
@@ -383,7 +391,7 @@
 		Weapons: LargeDebris
 		Pieces: 3, 7
 		Range: 2c0, 5c0
-	UpgradeOnDamage@smoke:
+	UpgradeOnDamageState@smoke:
 		Upgrades: smoketrail
 		ValidDamageStates: Critical, Heavy
 	ExplodeWeapon@smoke:
@@ -440,7 +448,7 @@
 ^Wall:
 	Inherits@1: ^SpriteActor
 	CombatDebugOverlay:
-	HiddenUnderShroud:
+	FrozenUnderFog:
 	AppearsOnRadar:
 	Building:
 		Dimensions: 1,1
@@ -491,6 +499,7 @@
 	Inherits@7:^VentilatorPoison
 	Inherits@8:^VentilatorBuff
 	DrawLineToTarget:
+	WithTextControlGroupDecoration:
 	TemporaryOwnerManager:
 	Cloak@CLOAKGENERATOR:
 		UpgradeTypes: cloakgenerator
@@ -691,7 +700,7 @@
 ^Beast:
 	Inherits: ^Mutant
 	-TakeCover:
-	UpgradeOnDamage@beastberserk:
+	UpgradeOnDamageState@beastberserk:
 		Upgrades: beastdamaged, berserk
 		ValidDamageStates: Heavy, Critical
 	SpeedMultiplier@beastberserk:
@@ -753,7 +762,7 @@
 	WithInfantryBody:
 		AttackSequence: shoot
 		IdleSequences: idle1, idle2
-	UpgradeOnDamage@CRITICAL:
+	UpgradeOnDamageState@CRITICAL:
 		Upgrades: criticalspeed
 		ValidDamageStates: Critical
 		GrantPermanently: true
@@ -800,6 +809,7 @@
 	Inherits@10:^NodVehicleRepair
 	DrawLineToTarget:
 	TemporaryOwnerManager:
+	WithTextControlGroupDecoration:
 	Mobile:
 		Crushes: crate
 		TerrainSpeeds:
@@ -841,14 +851,14 @@
 		Sequence: veins
 		UpgradeTypes: veins
 		UpgradeMinEnabledLevel: 1
-	UpgradeOnDamage@smoke:
+	UpgradeOnDamageState@smoke:
 		Upgrades: smoketrail
 		ValidDamageStates: Critical
 	ExplodeWeapon@smoke:
 		Weapon: SmokeShrapnel
 		UpgradeTypes: smoketrail
 		UpgradeMinEnabledLevel: 1
-	# UpgradeOnDamage@sparks:
+	# UpgradeOnDamageState@sparks:
 		# Upgrades: sparks
 		# ValidDamageStates: Heavy, Critical
 	# LeavesTrails@sparks:
@@ -996,7 +1006,8 @@
 	Inherits@5: ^PermanentSelfHeal
 	DrawLineToTarget:
 	TemporaryOwnerManager:
-	UpgradeOnDamage@smoke:
+	WithTextControlGroupDecoration:
+	UpgradeOnDamageState@smoke:
 		Upgrades: smoketrail
 		ValidDamageStates: Critical
 	ExplodeWeapon@smoke:
@@ -1352,6 +1363,7 @@
 	EditorOnlyTooltip:
 		Name: Railway
 	Inherits: ^TerrainOverlay
+	RenderSprites:
 
 ^Tunnel:
 	Inherits: ^TerrainOverlay
