@@ -2108,6 +2108,30 @@ GAOLDCC6:
 		Type: heavy
 	RenderSprites:
 		Palette: player
+	Health:
+		HP: 1000
+	RenderSprites:
+		-Palette: player
+	Explodes:
+		Weapon: TiberiumExplosion
+
+WELL:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Tiberium Well
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3, 3
+	# Buildable:
+		# Queue: Building
+		# BuildPaletteOrder: 0
+		# Prerequisites: ~structures.gdi
+	Selectable:
+		Bounds: 90, 60, 0, -12
+	Armor:
+		Type: heavy
+	RenderSprites:
+		Palette: player
 	Capturable:
 	CashTrickler:
 		Period: 375

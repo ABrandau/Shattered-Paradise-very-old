@@ -23,7 +23,6 @@ Player:
 		LowPowerSlowdown: 3
 		QueuedAudio: Building
 		BuildDurationModifier: 120
-		ReadyAudio: ConstructionComplete
 		SpeedUp: True
 		BuildTimeSpeedReduction: 100, 85, 75, 65, 55, 45, 37, 30
 	ClassicProductionQueue@Infantry:
@@ -31,15 +30,13 @@ Player:
 		LowPowerSlowdown: 3
 		QueuedAudio: Building
 		BuildDurationModifier: 120
-		ReadyAudio: ConstructionComplete
 		SpeedUp: True
 		BuildTimeSpeedReduction: 100, 92, 88, 84, 80, 76, 72, 68, 64, 60, 56, 52, 48, 44, 40, 36, 30
 	ClassicProductionQueue@Air:
-		Type: Aircraft
+		Type: Air
 		BuildDurationModifier: 120
 		LowPowerSlowdown: 3
 		QueuedAudio: Building
-		ReadyAudio: ConstructionComplete
 		SpeedUp: True
 	PlaceBuilding:
 		Palette: placebuilding

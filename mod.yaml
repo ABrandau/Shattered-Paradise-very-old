@@ -96,6 +96,7 @@ Packages:
 	sp|bits/scrin/structures
 	sp|bits/scrin/air
 	sp|bits/neutral
+	sp|bits/neutral/structures
 	sp|uibits
 
 MapFolders:

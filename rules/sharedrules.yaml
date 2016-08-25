@@ -664,7 +664,7 @@ GATE_A:
 			# cab: gate_a.cab
 			# scr: gate_a.scr
 
-NAGATE_B:
+GATE_B:
 	Inherits: ^Gate_B
 	Buildable:
 		Queue: Defense
@@ -680,3 +680,43 @@ NAGATE_B:
 			# mut: gate_b.mut
 			# cab: gate_b.cab
 			# scr: gate_b.scr
+
+GAGATE_A:
+	Inherits: ^Gate_A
+	Tooltip:
+		Name: Gate
+	RenderSprites:
+		Image: gate_a.gdi
+		FactionImages:
+			gdi: gate_b.gdi
+			nod: gate_b.nod
+
+GAGATE_B:
+	Inherits: ^Gate_B
+	Tooltip:
+		Name: Gate
+	RenderSprites:
+		Image: gate_b.gdi
+		FactionImages:
+			gdi: gate_b.gdi
+			nod: gate_b.nod
+
+NAGATE_A:
+	Inherits: ^Gate_A
+	Tooltip:
+		Name: Gate
+	RenderSprites:
+		Image: gate_a.gdi
+		FactionImages:
+			gdi: gate_a.gdi
+			nod: gate_a.nod
+
+NAGATE_B:
+	Inherits: ^Gate_B
+	Tooltip:
+		Name: Gate
+	RenderSprites:
+		Image: gate_b.gdi
+		FactionImages:
+			gdi: gate_b.gdi
+			nod: gate_b.nod

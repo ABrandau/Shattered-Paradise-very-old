@@ -73,8 +73,8 @@
 		Color: FFFFFF
 #FIRESTORM GEN
 	DamageMultiplier@firestorm:
-		Modifier: 90, 85
-		UpgradeTypes: FirestormGen
+		Modifier: 95, 90
+		UpgradeTypes: FirestormWallUpgrade
 		BaseLevel: 1
 #SCRIN BATTERY
 	FirepowerMultiplier@batteryboost:
@@ -312,6 +312,8 @@
 		Palette: pips
 	Selectable:
 		Priority: 3
+	Valued:
+		Cost: 300
 	Targetable:
 		TargetTypes: Building, Ground, C4, DetonateAttack
 	Building:
@@ -821,7 +823,7 @@
 			Tiberium: 50
 			BlueTiberium: 50
 			Veins: 50
-		TurnSpeed: 5
+		TurnSpeed: 7
 		Voice: Move
 	Cloak@CLOAKGENERATOR:
 		UpgradeTypes: cloakgenerator

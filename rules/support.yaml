@@ -152,7 +152,7 @@ GAVULC:
 	DisabledOverlay:
 	RequiresPower:
 	Health:
-		HP: 400
+		HP: 300
 	Armor:
 		Type: Light
 	BlocksProjectiles:
@@ -260,7 +260,7 @@ GACSAM:
 	Selectable:
 		Bounds: 48, 36, 0, -6
 	Health:
-		HP: 500
+		HP: 450
 	Armor:
 		Type: Light
 	BlocksProjectiles:

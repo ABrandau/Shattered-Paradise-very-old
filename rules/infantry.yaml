@@ -173,6 +173,7 @@ ALTNODE1:
 		HP: 100
 	Mobile:
 		Speed: 70
+		Crushes: infantry
 	Armament@SECONDARY:
 		Weapon: MilitantFireball
 		LocalOffset: 200,0,500

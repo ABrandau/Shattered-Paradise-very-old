@@ -76,7 +76,6 @@ ORCA:
 	Selectable:
 		Bounds: 30,24
 	Aircraft:
-		LandAltitude: 2c0
 		TurnSpeed: 5
 		Speed: 186
 		MoveIntoShroud: true
@@ -111,7 +110,7 @@ ORCAB:
 		Cost: 1500
 	Tooltip:
 		Name: Orca Bomber
-		Description: Heavy carpet Bomber.\nPro tip: Aim a few cells behind the target.\n  Strong vs Ground Units.\n  Weak vs Anti Air, Aircraft
+		Description: Heavy carpet Bomber.\nSlow but highly armored.\n  Strong vs Ground Units.\n  Weak vs Anti Air, Aircraft
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 20
@@ -128,7 +127,7 @@ ORCAB:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 250
+		HP: 225
 	Armor:
 		Type: Heavy
 	Armament:

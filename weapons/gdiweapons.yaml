@@ -424,11 +424,11 @@ AAFighterHellfire:
 
 OBBomb:
 	Inherits: ^BombWarhead
-	ReloadDelay: 60
-	Burst: 5
-	BurstDelay: 8
+	ReloadDelay: 30
+	Burst: 4
+	BurstDelay: 7
 	ValidTargets: Ground, Building, Infantry, Vehicle
-	Range: 3c512
+	Range: 3c0
 	Projectile: GravityBomb
 		Speed: 170
 		Image: 120mm
@@ -455,7 +455,8 @@ OBBomb:
 
 OBBomb2:
 	Inherits: OBBomb
-	ReloadDelay: 50
+	Range: 1c0
+	Burst: 1
 	Projectile: Bullet
 		Speed: 170
 		Image: 120mm
@@ -616,7 +617,7 @@ FirestormWallUpgrade:
 		Damage: 1
 		ValidTargets: Ground
 	Warhead@Wall: GrantUpgrade
-		Range: 15c0
+		Range: 12c0
 		Duration: 50
 		Upgrades: FirestormWallUpgrade
 
@@ -648,7 +649,7 @@ FirestormExploWalls:
 		Explosions: fsidlewall, fsgrndwall
 
 FirestormExplo:
-	ReloadDelay: 25
+	ReloadDelay: 5
 	Range: 12c0
 	MinRange: 12c0
 	Projectile: Bullet
