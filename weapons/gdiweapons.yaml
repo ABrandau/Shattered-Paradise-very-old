@@ -632,7 +632,7 @@ FirestormSpawner:
 		ValidTargets: Ground
 	Warhead@op: FireShrapnel
 		Weapon: FirestormExplo
-		Amount: 7
+		Amount: 12
 
 FirestormExploWalls:
 	ReloadDelay: 25

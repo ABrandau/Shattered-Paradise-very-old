@@ -1484,6 +1484,9 @@
 		LightDiffuseColor: 0.7,0.7,0.7
 		NormalsPalette: ra2normals
 
+# ^VisionWhenKilled:
+	# SpawnActorOnDeath@vision:
+
 ^SelfReloads:
 	AmmoPool:
 		Ammo: 999
