@@ -206,6 +206,7 @@ CRUSADER:
 	Armament@Secondary:
 		Weapon: CrusaderBazookaInf
 		LocalOffset: 0,0,600
+	-TakeCover:
 	AttackTurreted:
 		Voice: Attack
 	Turreted:
@@ -334,7 +335,7 @@ MARAUDER:
 		BuildPaletteOrder: 18
 		Prerequisites: ~murax
 	Valued:
-		Cost: 110
+		Cost: 125
 	Tooltip:
 		Name: Marauder
 		Description: Mutant Militia, equipped with shotguns.\nThey can generate tiberium fortifications for themselves.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft, Base Defences.

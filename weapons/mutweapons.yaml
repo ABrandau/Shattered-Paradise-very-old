@@ -1,6 +1,6 @@
 MarauderShotgun:
 	Inherits: ^RifleWarhead
-	ReloadDelay: 40
+	ReloadDelay: 55
 	Range: 4c0
 	Report: shotfire.wav
 	Projectile: Bullet
@@ -427,7 +427,7 @@ TiberianRocket2:
 	Burst: 2
 	Delay: 20
 	Warhead@5Actor: SpawnActor
-		Actors: ionbeam
+		Actors: cloud1
 		FallRate: 5000
 		Range: 3
 

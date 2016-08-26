@@ -1,3 +1,5 @@
+Ideas
+Randomize forg hp when created
 
 juggernaut barrel
 Veterancy Chevrons
@@ -6,6 +8,11 @@ Tiberium death effect for infantry
 place anti light for alien weapons.
 Improve the hover tank lazor
 grenadier sequence bug
+
+Fixes
+Ion storm bolts
+Nod SW.
+
 
 Civ stuff
 flags

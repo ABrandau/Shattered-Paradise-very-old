@@ -331,23 +331,36 @@ GAPLUG:
 		Type: Wood
 	RevealsShroud:
 		Range: 6c0
-	IonCannonPower:
+	DetonateWeaponPower@ioncannon:
+		Icon: ioncannon
+		Description: Ion Cannon Alpha Strike
+		DisplayTimer: True
+		DisplayBeacon: True
+		LongDesc: Fires many ion cannons on the targetted area.
+		ChargeTime: 360
+		ActivationSequence: idle
+		Weapon: IonCannonSpawner
+		OrderName: IonCannon2
 		Cursor: ioncannon
 		UpgradeTypes: plug.ioncannon
 		UpgradeMinEnabledLevel: 1
-		Icon: ioncannon
-		Effect: ionring
-		ChargeTime: 300
-		Description: Ion Cannon
-		LongDesc: Initiate an Ion Cannon strike.\nApplies instant damage to a small area.
-		BeginChargeSound:
-		EndChargeSound: 00-i156.aud
-		LaunchSound:
-		WeaponDelay: 0
-		SelectTargetSound:
-		InsufficientPowerSound:
-		DisplayRadarPing: True
-		CameraActor: camera
+	# IonCannonPower:
+		# Cursor: ioncannon
+		# UpgradeTypes: plug.ioncannon
+		# UpgradeMinEnabledLevel: 1
+		# Icon: ioncannon
+		# Effect: ionring
+		# ChargeTime: 300
+		# Description: Ion Cannon
+		# LongDesc: Initiate an Ion Cannon strike.\nApplies instant damage to a small area.
+		# BeginChargeSound:
+		# EndChargeSound: 00-i156.aud
+		# LaunchSound:
+		# WeaponDelay: 0
+		# SelectTargetSound:
+		# InsufficientPowerSound:
+		# DisplayRadarPing: True
+		# CameraActor: camera
 	DetonateWeaponPower@pods:
 		Icon: droppods
 		DisplayTimer: True

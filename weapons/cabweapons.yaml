@@ -189,8 +189,6 @@ LurkerHit:
 	Inherits: ^MeleeWarhead
 	ReloadDelay: 80
 	Range: 7c0
-	Burst: 2
-	BurstDelay: 15
 	Report: lasershotgun.wav
 	Projectile: Missile
 		Speed: 100
@@ -199,10 +197,9 @@ LurkerHit:
 		HorizontalRateOfTurn: 8
 		RangeLimit: 7c204
 		MaximumLaunchSpeed: 213
-		Inaccuracy: 1c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 120
-		Damage: 35
+		Damage: 40
 		Versus:
 			Worker: 25
 		DamageTypes: Prone50Percent, TriggerProne, CabalDeath

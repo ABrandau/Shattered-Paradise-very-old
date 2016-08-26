@@ -541,12 +541,12 @@ FighterSpawn:
 
 WyvermBlast:
 	Inherits: ^MeleeWarhead
-	ReloadDelay: 75
+	ReloadDelay: 65
 	Range: 6c512
 	Report: laserpistol.wav
 	ValidTargets: Ground, Air
 	Projectile: Bullet # TODO: Add bounce effect
-		Speed: 600
+		Speed: 700
 		Blockable: false
 		Shadow: true
 		Angle: 45
@@ -557,7 +557,7 @@ WyvermBlast:
 		Image: blueplasma
 	Warhead@1Dam: SpreadDamage
 		Spread: 171
-		Damage: 30
+		Damage: 40
 		ValidTargets: Ground, Air
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect

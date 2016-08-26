@@ -37,9 +37,14 @@ IONBEAMTARGET:
 	-Targetable@GROUND:
 	-Targetable@AIRBORNE:
 	-RevealsShroud:
+	ShakeOnDeath:
 	-Voiced:
 	Health:
-		HP: 500
+		HP: 160
+	SelfHealing:
+		Step: -10
+		Delay: 10
+		HealIfBelow: 200
 	Armor:
 		Type: Wood
 	-RenderVoxels:
@@ -53,7 +58,7 @@ IONBEAMTARGET:
 		Weapon: IonCannon
 		EmptyWeapon: IonCannon
 
-IONBEAM:
+IONBEAMMINI:
 	Inherits: ^Helicopter
 	Valued:
 		Cost: 900
@@ -71,7 +76,7 @@ IONBEAM:
 		TurnSpeed: 6
 		Repulsable: false
 		AltitudeVelocity: 400
-		Speed: 40
+		Speed: 30
 		MoveIntoShroud: true
 	Targetable:
 		TargetTypes: IonBeam
@@ -80,10 +85,10 @@ IONBEAM:
 	-RevealsShroud:
 	-Voiced:
 	Health:
-		HP: 60
+		HP: 150
 	SelfHealing:
 		Step: -10
-		Delay: 23
+		Delay: 10
 		HealIfBelow: 200
 	Armor:
 		Type: Wood
@@ -120,8 +125,40 @@ IONBEAM:
 	WithIdleOverlay@4:
 		Sequence: beamsky5
 	WithIdleOverlay@5:
-		Sequence: muzzle
+		Sequence: beamsky6
 	WithIdleOverlay@6:
+		Sequence: beamsky7
+	WithIdleOverlay@7:
+		Sequence: beamsky8
+	WithIdleOverlay@8:
+		Sequence: beamsky9
+	WithIdleOverlay@9:
+		Sequence: beamsky10
+	WithIdleOverlay@10:
+		Sequence: beamsky10
+	WithIdleOverlay@12:
+		Sequence: beamsky11
+	WithIdleOverlay@13:
+		Sequence: beamsky12
+	WithIdleOverlay@14:
+		Sequence: beamsky13
+	WithIdleOverlay@15:
+		Sequence: beamsky14
+	WithIdleOverlay@16:
+		Sequence: beamsky15
+	WithIdleOverlay@17:
+		Sequence: beamsky16
+	WithIdleOverlay@18:
+		Sequence: beamsky17
+	WithIdleOverlay@19:
+		Sequence: beamsky18
+	WithIdleOverlay@20:
+		Sequence: beamsky19
+	WithIdleOverlay@21:
+		Sequence: beamsky20
+	WithIdleOverlay@11:
+		Sequence: muzzle
+	WithIdleOverlay@12:
 		Sequence: muzzle2
 	ExplodeWeapon:
 		Weapon: IonScorch

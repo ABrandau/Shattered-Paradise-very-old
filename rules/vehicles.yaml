@@ -2,7 +2,7 @@
 # GDI
 #######################################################
 SMECH:
-	Inherits: ^Tank
+	Inherits: ^Walker
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -38,7 +38,7 @@ SMECH:
 		Bounds: 20, 32, 0, -8
 
 MMCH:
-	Inherits: ^Tank
+	Inherits: ^Walker
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -129,6 +129,7 @@ APC:
 
 HVR:
 	Inherits: ^VoxelVehicle
+	Inherits@2: ^HoverVehicle
 	Inherits@3: ^BasicStealthDetection
 	Valued:
 		Cost: 700
@@ -166,17 +167,9 @@ HVR:
 		Voice: Attack
 	AutoTarget:
 	WithVoxelTurret:
-	Hovers:
-	LeavesTrails:
-		Image: wake
-		Palette: effect
-		TerrainTypes: Water
-		TrailWhileStationary: True
-		StationaryInterval: 18
-		MovingInterval: 6
 
 JUGGER:
-	Inherits: ^Tank
+	Inherits: ^Walker
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -256,7 +249,7 @@ SONIC:
 
 HMEC:
 	Inherits: ^VoxelTank
-	Inherits@2: ^PermanentSelfHeal
+	Inherits@1: ^PermanentSelfHeal
 	Valued:
 		Cost: 2500
 	Tooltip:
@@ -616,8 +609,8 @@ STNK:
 		Volume: 7
 
 Limped:
-	Inherits: ^Vehicle
 	Inherits@2: ^ScrinRender
+	Inherits@3: ^HoverVehicle
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 18
@@ -726,10 +719,6 @@ WOLF:
 		SharesCell: false
 	WithInfantryBody:
 		AttackSequence: shoot
-	-FirepowerMultiplier@EXPERIENCE:
-	-DamageMultiplier@EXPERIENCE:
-	-SpeedMultiplier@EXPERIENCE:
-	-ReloadDelayMultiplier@EXPERIENCE:
 	-WithDecoration@tibicon:
 
 DEATHCLAW:
@@ -840,8 +829,6 @@ MUTTANK:
 		TurnSpeed: 8
 		Speed: 110
 		Crushes: wall, crate, infantry
-	# WithTurret:
-		# Recoils: True
 	Health:
 		HP: 250
 	Armor:
@@ -857,7 +844,6 @@ MUTTANK:
 		Scale: 1 #Scale: 0.75
 	Turreted:
 		TurnSpeed: 10
-		# Offset: -170,0,0
 	AutoTarget:
 	WithVoxelTurret:
 
@@ -945,6 +931,7 @@ MLRS:
 
 HVRTRUK3:
 	Inherits: ^VoxelVehicle
+	Inherits: ^HoverVehicle
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -957,19 +944,8 @@ HVRTRUK3:
 	Mobile:
 		TurnSpeed: 5
 		Speed: 100
-		TerrainSpeeds:
-			Clear: 100
-			Road: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Water: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			Veins: 100
 	Health:
 		HP: 125
-	Hovers:
 	Armor:
 		Type: Wood
 	Explodes:
@@ -979,12 +955,6 @@ HVRTRUK3:
 	RenderVoxels:
 		Scale: 1
 	WithVoxelBody:
-	LeavesTrails:
-		Image: wake
-		Palette: effect
-		TerrainTypes: Water
-		StationaryInterval: 18
-		MovingInterval: 6
 
 FORTRESS:
 	Inherits: ^VoxelVehicle
@@ -1036,8 +1006,9 @@ FORTRESS:
 ################################################
 
 SCRHARV:
-	Inherits: ^ScrinTank
+	Inherits: ^ScrinVehicle
 	Inherits@2: ^IncompleteSelfHeal
+	Inherits@3: ^HoverVehicle
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -1064,20 +1035,8 @@ SCRHARV:
 		SearchFromOrderRadius: 18
 		HarvestVoice: Attack
 		DeliverVoice: Move
-	Hovers:
 	Mobile:
 		Speed: 74
-		Crushes: wall, crate
-		TerrainSpeeds:
-			Clear: 100
-			Road: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Water: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			Veins: 100
 	Health:
 		HP: 1000
 	Armor:
@@ -1097,7 +1056,8 @@ SCRHARV:
 		QuantizedFacings: 32
 
 SCRSCORPION:
-	Inherits: ^ScrinTank
+	Inherits: ^ScrinVehicle
+	Inherits@1: ^Walker
 	Valued:
 		Cost: 550
 	Tooltip:
@@ -1128,7 +1088,8 @@ SCRSCORPION:
 		Bounds: 50, 32, 0, -8
 
 SCRMBT:
-	Inherits: ^ScrinTank
+	Inherits: ^ScrinVehicle
+	Inherits@1: ^HoverVehicle
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 32
@@ -1144,18 +1105,6 @@ SCRMBT:
 		Type: Heavy
 	Mobile:
 		Speed: 100
-		Crushes: crate
-		TerrainSpeeds:
-			Clear: 100
-			Road: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Water: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			Veins: 100
-	Hovers:
 	Turreted:
 		TurnSpeed: 7
 	Armament:
@@ -1172,7 +1121,8 @@ SCRMBT:
 		QuantizedFacings: 32
 
 SCRGLYDER2:
-	Inherits: ^ScrinTank
+	Inherits: ^ScrinVehicle
+	Inherits@1: ^HoverVehicle
 	Inherits@3: ^BasicStealthDetection
 	Buildable:
 		Queue: Vehicle
@@ -1189,27 +1139,13 @@ SCRGLYDER2:
 		Type: Wood
 	Mobile:
 		Speed: 91
-		Crushes: crate
-		TerrainSpeeds:
-			Clear: 100
-			Road: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Water: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			Veins: 100
 	Transforms:
 		IntoActor: scrglyder1
-	Hovers:
 	Armament:
 		Weapon: Glyder2Cannon
 		Recoil: 85
 		RecoilRecovery: 25
 		LocalOffset: 768,0,90
-		# MuzzleSequence: muzzle
-	# WithMuzzleOverlay:
 	AutoTarget:
 	AttackFrontal:
 	RenderSprites:
@@ -1218,7 +1154,8 @@ SCRGLYDER2:
 		QuantizedFacings: 32
 
 SCRRECHARGER:
-	Inherits: ^ScrinTank
+	Inherits: ^ScrinVehicle
+	Inherits@1: ^Walker
 	Valued:
 		Cost: 1100
 	Tooltip:
@@ -1252,7 +1189,8 @@ SCRRECHARGER:
 		MoveSequence: run
 
 TRIPOD:
-	Inherits: ^ScrinTank
+	Inherits: ^ScrinVehicle
+	Inherits@1: ^Walker
 	Valued:
 		Cost: 1400
 	Tooltip:
@@ -1294,7 +1232,7 @@ TRIPOD:
 # Unused
 ##########################################################
 SCRDRONEC:
-	Inherits: ^ScrinTank
+	Inherits: ^ScrinVehicle
 	# Buildable:
 		# Queue: Vehicle
 		# BuildPaletteOrder: 34
@@ -1348,7 +1286,7 @@ SCRDRONEC:
 # CABAL
 ################################################
 DINO:
-	Inherits: ^Tank
+	Inherits: ^Walker
 	Inherits@2:	^IncompleteSelfHeal
 	Inherits@5: ^CabRender
 	Inherits@3: ^BasicStealthDetection
@@ -1394,7 +1332,7 @@ DINO:
 		Bounds: 40, 36, 0, -16
 
 CENTURION:
-	Inherits: ^Tank
+	Inherits: ^Walker
 	Inherits@2:	^PermanentSelfHeal
 	Valued:
 		Cost: 1200
@@ -1487,12 +1425,6 @@ GRINDER:
 	RenderVoxels:
 		Scale: 1
 	WithVoxelBody:
-	LeavesTrails:
-		Image: wake
-		Palette: effect
-		TerrainTypes: Water
-		StationaryInterval: 18
-		MovingInterval: 6
 
 ECM:
 	Inherits: ^VoxelVehicle
@@ -1534,12 +1466,6 @@ ECM:
 		LightAmbientColor: 0.4,0.4,0.4
 		LightDiffuseColor: 0.5,0.5,0.5
 		Scale: 4
-	LeavesTrails:
-		Image: wake
-		Palette: effect
-		TerrainTypes: Water
-		StationaryInterval: 18
-		MovingInterval: 6
 
 CABAPC:
 	Inherits: ^VoxelVehicle
@@ -1557,21 +1483,10 @@ CABAPC:
 	Mobile:
 		TurnSpeed: 8
 		Speed: 110
-		TerrainSpeeds:
-			Clear: 100
-			Road: 100
-			Rail: 100
-			DirtRoad: 100
-			Rough: 100
-			Water: 100
-			Tiberium: 100
-			BlueTiberium: 100
-			Veins: 100
 	Voiced:
 		VoiceSet: Limpet
 	Health:
 		HP: 400
-	Hovers:
 	Armor:
 		Type: Wood
 	Turreted:
@@ -1586,15 +1501,9 @@ CABAPC:
 	WithVoxelBody:
 	RenderVoxels:
 		Scale: 5
-	LeavesTrails:
-		Image: wake
-		Palette: effect
-		TerrainTypes: Water
-		StationaryInterval: 18
-		MovingInterval: 6
 
 SPIDERARTY:
-	Inherits: ^Tank
+	Inherits: ^Walker
 	Inherits@2:	^IncompleteSelfHeal
 	Inherits@5: ^CabRender
 	Valued:
@@ -1635,46 +1544,8 @@ SPIDERARTY:
 	Selectable:
 		Bounds: 60, 65, 0, -14
 
-BLASTER:
-	Inherits: ^VoxelVehicle
-	Inherits@1: ^Ra2vxl
-	Inherits@2: ^IncompleteSelfHeal
-	Valued:
-		Cost: 900
-	Tooltip:
-		Name: Devourer
-		Description: Hover Artillery.\nHis weapon slowly dissasembles enemies.\nThat effect bypasses armor.\nCan move on water.\n Special Ability: Vehicles killed by this unit will spawn Drones.
-	Mobile:
-		TurnSpeed: 6
-		Speed: 113
-		TerrainSpeeds:
-			Water: 113
-	Voiced:
-		VoiceSet: Limpet
-	Health:
-		HP: 200
-	Armor:
-		Type: Wood
-	Turreted:
-		TurnSpeed: 10
-	Hovers:
-	RenderVoxels:
-		Scale: 5
-	AutoTarget:
-	Armament:
-		Weapon: DevourerShell
-		LocalOffset: -300,-150,400, -300,150,400
-	AttackFrontal:
-	WithVoxelBody:
-	LeavesTrails:
-		Image: wake
-		Palette: effect
-		TerrainTypes: Water
-		StationaryInterval: 18
-		MovingInterval: 6
-
 PALADIN:
-	Inherits: ^Tank
+	Inherits: ^Walker
 	Inherits@5: ^CabRender
 	Inherits@2: ^PermanentSelfHeal
 	Valued:
@@ -1696,11 +1567,11 @@ PALADIN:
 		VoiceSet: Cyborg
 	Armor:
 		Type: Heavy
-	DeployToTimedUpgrade:
-		DeployedUpgrades: Trolling
-		CooldownTicks: 3000
-		StartsFullyCharged: true
-		DeployedTicks: 300
+	# DeployToTimedUpgrade:
+		# DeployedUpgrades: Trolling
+		# CooldownTicks: 3000
+		# StartsFullyCharged: true
+		# DeployedTicks: 300
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithInfantryBody:
