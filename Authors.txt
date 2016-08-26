@@ -43,17 +43,20 @@ Jah		: Storm Rider vxl.
 Sane Disruption	: Forgotten MRLS vxl.				
 GameMaster0000	: Tiberian Fiend Icon.
 CyborgCommandoKerem: Black Hand Sniper shp.				
-DonutArnold	: Basilisk torpedo explosion effect, scrin structure and aircraft crash explosion
-		  effects.
+DonutArnold	: Basilisk torpedo explosion effect, scrin structure, scrin aircraft crash
+		 explosion effects and NOD nuke explosion effect.
+
+#Sounds
 Audiomicro.com	: Legio and Glyder sound effect.
 Introspectral	: Destroyer weapon sound effect.
 FXhome.com	: Battleship Sound effect.
 soundpacks.com	: Various sound effects.
-#Maps
+
+#Maps This spot is only used for missions as you can't see who made each of them
+#where as you can see who made each map on the map selection menu.
 
 Abc013		: Scrin mission 01
 abcdefg30	: Scrin mission 01
-Marn:		: Maps: Riverside, The Pit, Islotropolis, Sidestep TS.	
 
 #Voice Cast
 

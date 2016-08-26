@@ -95,6 +95,7 @@ Packages:
 	sp|bits/scrin/structures/snow
 	sp|bits/scrin/structures
 	sp|bits/scrin/air
+	sp|bits/nod/effects
 	sp|bits/neutral
 	sp|bits/neutral/structures
 	sp|uibits

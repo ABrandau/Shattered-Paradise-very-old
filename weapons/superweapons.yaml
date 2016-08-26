@@ -323,7 +323,8 @@ ClusterMissile:
 			Concrete: 25
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@SoundEffect0: CreateEffect
-		Explosions: large_explosion
+		Explosions: nuke1, nuke2, nuke3
+		ExplosionPalette: effect
 		ImpactSound: expnew19.aud
 	Warhead@ClusterSmudges0: LeaveSmudge
 		SmudgeType: LargeCrater
@@ -335,19 +336,14 @@ ClusterMissile:
 		Delay: 5
 		InvalidTargets: Vehicle, Building, Wall
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
-	Warhead@ClusterSmudges2: LeaveSmudge
-		SmudgeType: LargeScorch
-		Size: 3
-		Delay: 10
-		InvalidTargets: Vehicle, Building, Wall
 	Warhead@ClusterSmudges3: LeaveSmudge
 		SmudgeType: MediumScorch
-		Size: 4
+		Size: 10
 		InvalidTargets: Vehicle, Building, Wall
 		Delay: 15
 	Warhead@ClusterSmudges4: LeaveSmudge
 		SmudgeType: SmallScorch
-		Size: 5
+		Size: 10
 		InvalidTargets: Vehicle, Building, Wall
 		Delay: 20
 	Warhead@op: FireShrapnel
@@ -356,10 +352,41 @@ ClusterMissile:
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 	Warhead@4Sharpnel: FireShrapnel
-		Weapon: DevilsFlame
+		Weapon: NukeFlame
 		Amount: 120
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+	Warhead@5Sharpnel: FireShrapnel
+		Weapon: NukeFlame2
+		Amount: 90
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+
+NukeFlame:
+	Inherits: ^FlameWarhead
+	Range: 5c0
+	MinRange: 3c0
+	Report: flamtnk1.aud
+	Projectile: Bullet
+		Speed: 100
+		Image: FLAMEALL
+		Inaccuracy: 1c0
+		Palette: effectalpha
+	Warhead@1Dam: SpreadDamage
+		Spread: 341
+		Damage: 4
+		DamageTypes: Prone100Percent, TriggerProne, FireDeath
+	Warhead@2Smu: LeaveSmudge
+		SmudgeType: SmallScorch
+		InvalidTargets: Vehicle, Building, Wall
+	Warhead@3Eff: CreateEffect
+		Explosions: fire1, fire2
+		InvalidImpactTypes: Water, Air, AirHit
+
+NukeFlame2:
+	Inherits: NukeFlame
+	Range: 3c0
+	-MinRange:
 		
 ToxinMissile:
 	ValidTargets: Ground, Water, Air

@@ -117,6 +117,10 @@
 		Name: effectalpha
 		BasePalette: effect
 		Alpha: 0.6
+	PaletteFromPaletteWithAlpha@effectalphaweak:
+		Name: effectalphaweak
+		BasePalette: effect
+		Alpha: 0.8
 	PaletteFromFile@chromescrin:
 		Name: chromescrin
 		Filename: cameoscrin.pal

@@ -284,10 +284,15 @@ explosion:
 		Tick: 400
 		ZOffset: -512
 	#Nod
-	smokebomb1: smokebomb1
-	smokebomb2: smokebomb2
-	smokebomb3: smokebomb3
-	smokebomb4: smokebomb4
+	nuke1: nuke1
+		ZOffset: 1024
+		BlendMode: Additive
+	nuke2: nuke2
+		ZOffset: 1024
+		BlendMode: Additive
+	nuke3: nuke3
+		ZOffset: 1024
+		BlendMode: Additive
 	#Mutants
 	bolt1: lightningbolts
 		Length: 1
@@ -324,12 +329,16 @@ explosion:
 	tibexp2mini: tibexp2mini
 	tib_expsmall: tibexpsmall	
 	#CABAL
-	destroexp: destroexp
+	smokebomb1: smokebomb1
+	smokebomb2: smokebomb2
+	smokebomb3: smokebomb3
+	smokebomb4: smokebomb4
 	cabexplo: cabexplo
 	lurkertentacle: lurkertentacle
 		Offset: 0, -12
 		Tick: 15
 	#Scrin
+	destroexp: destroexp
 	lightningexplo: lightningexplo
 		Tick: 10
 	colossiglow: glow
@@ -614,11 +623,13 @@ icon:
 	mothershipicon: councilicon
 	
 clustermissile:
-	up: atnuke
+	up: atnukemini
 		ZOffset: 1023
-	down: atnuke
+		Offset: 0,-45
+	down: atnukemini
 		Start: 1
 		ZOffset: 1023
+		# Offset: 0,45
 
 toxinmissile:
 	up: atnuke

@@ -649,6 +649,7 @@ FirestormExploWalls:
 		Explosions: fsidlewall, fsgrndwall
 
 FirestormExplo:
+	Inherits: ^FullDamage
 	ReloadDelay: 5
 	Range: 12c0
 	MinRange: 12c0
@@ -658,7 +659,7 @@ FirestormExplo:
 		Spread: 300
 		Damage: 50
 		ValidTargets: Ground, Air
-		ValidStances: Enemy, Neutral
+		# ValidStances: Enemy, Neutral
 	Warhead@2Eff: CreateEffect
 		Explosions: fsidle, fsgrnd
 	Warhead@2Smu: LeaveSmudge
