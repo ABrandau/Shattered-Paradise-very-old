@@ -64,31 +64,6 @@ Actors:
 		Owner: Neutral
 		Health: 20
 		Facing: 160
-	Actor5: city19
-		Location: 138,-32
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor6: city20
-		Location: 138,-30
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor7: city20
-		Location: 138,-29
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor8: city21
-		Location: 140,-32
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor9: ca0011
-		Location: 141,-33
-		Owner: Neutral
-		Health: 20
-		Facing: 160
 	Actor10: ca0021
 		Location: 137,-37
 		Owner: Neutral
@@ -155,11 +130,6 @@ Actors:
 		Health: 100
 		Facing: 160
 		DeployState: Deployed
-	Actor23: ca0001
-		Location: 78,-17
-		Owner: Neutral
-		Health: 100
-		Facing: 160
 	Actor24: ca0002
 		Location: 68,-34
 		Owner: Neutral
@@ -172,11 +142,6 @@ Actors:
 		Facing: 160
 	Actor26: ca0004
 		Location: 70,-13
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor27: ca0005
-		Location: 78,-13
 		Owner: Neutral
 		Health: 100
 		Facing: 160
@@ -335,11 +300,6 @@ Actors:
 		Owner: Neutral
 		Health: 100
 		Facing: 160
-	Actor59: ca0005
-		Location: 76,-13
-		Owner: Neutral
-		Health: 100
-		Facing: 160
 	Actor60: ca0003
 		Location: 70,-19
 		Owner: Neutral
@@ -455,11 +415,6 @@ Actors:
 		Owner: Neutral
 		Health: 100
 		Facing: 160
-	Actor83: tstlamp
-		Location: 139,-31
-		Owner: Neutral
-		Health: 100
-		Facing: 160
 	Actor84: gasand
 		Location: 125,-50
 		Owner: Neutral
@@ -467,11 +422,6 @@ Actors:
 		Facing: 160
 	Actor85: gasand
 		Location: 119,-48
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor86: cacrsh02
-		Location: 142,-31
 		Owner: Neutral
 		Health: 100
 		Facing: 160
@@ -1057,46 +1007,6 @@ Actors:
 		Facing: 160
 	Actor210: gasand
 		Location: 119,-47
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor211: gasand
-		Location: 132,-27
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor212: gasand
-		Location: 131,-27
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor213: gasand
-		Location: 131,-28
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor214: gasand
-		Location: 130,-28
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor215: gasand
-		Location: 130,-29
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor216: gasand
-		Location: 130,-30
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor217: gasand
-		Location: 129,-30
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor218: gasand
-		Location: 128,-30
 		Owner: Neutral
 		Health: 100
 		Facing: 160
@@ -2360,11 +2270,6 @@ Actors:
 		Owner: Neutral
 		Health: 100
 		Facing: 160
-	Actor471: gapile
-		Location: 72,36
-		Owner: Neutral
-		Health: 26
-		Facing: 160
 	Actor472: cacrsh01
 		Location: 71,4
 		Owner: Neutral
@@ -2484,11 +2389,6 @@ Actors:
 		Location: 76,48
 		Owner: Neutral
 		Health: 40
-		Facing: 160
-	Actor496: gadept
-		Location: 67,52
-		Owner: Neutral
-		Health: 20
 		Facing: 160
 	Actor497: ca0004
 		Location: 71,54
@@ -2850,11 +2750,6 @@ Actors:
 		Owner: Neutral
 		Health: 100
 		Facing: 160
-	Actor569: gapowr
-		Location: 54,49
-		Owner: Neutral
-		Health: 20
-		Facing: 160
 	Actor570: gactwr
 		Location: 57,34
 		Owner: Neutral
@@ -2909,11 +2804,6 @@ Actors:
 		Location: 77,-36
 		Owner: Neutral
 		Health: 100
-		Facing: 160
-	Actor581: proc
-		Location: 57,42
-		Owner: Neutral
-		Health: 20
 		Facing: 160
 	Actor582: gagate_a
 		Location: 64,-37
@@ -3000,26 +2890,6 @@ Actors:
 		Owner: Neutral
 		Health: 100
 		Facing: 160
-	Actor599: gactwr
-		Location: 83,-28
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor600: gactwr
-		Location: 83,-23
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor601: gactwr
-		Location: 86,-34
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor602: gactwr
-		Location: 85,-15
-		Owner: Neutral
-		Health: 100
-		Facing: 160
 	Actor603: gactwr
 		Location: 85,-8
 		Owner: Neutral
@@ -3032,26 +2902,6 @@ Actors:
 		Facing: 160
 	Actor605: gactwr
 		Location: 75,2
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor606: gactwr
-		Location: 69,2
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor607: gactwr
-		Location: 59,2
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor608: gactwr
-		Location: 55,2
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor609: gactwr
-		Location: 55,-3
 		Owner: Neutral
 		Health: 100
 		Facing: 160
@@ -3077,16 +2927,6 @@ Actors:
 		Facing: 160
 	Actor614: gactwr
 		Location: 33,-18
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor615: garock
-		Location: 86,-34
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor616: garock
-		Location: 83,-28
 		Owner: Neutral
 		Health: 100
 		Facing: 160
@@ -3975,38 +3815,8 @@ Actors:
 		Owner: Neutral
 		Health: 100
 		Facing: 160
-	Actor797: garock
-		Location: 85,-15
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor798: garock
-		Location: 83,-23
-		Owner: Neutral
-		Health: 100
-		Facing: 160
 	Actor799: gavulc
 		Location: 85,-8
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor800: garock
-		Location: 69,2
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor801: garock
-		Location: 59,2
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor802: garock
-		Location: 55,2
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor803: garock
-		Location: 55,-3
 		Owner: Neutral
 		Health: 100
 		Facing: 160
@@ -4320,21 +4130,6 @@ Actors:
 		Owner: Neutral
 		Health: 100
 		Facing: 160
-	Actor869: car
-		Location: 141,-31
-		Owner: Neutral
-		Health: 100
-		Facing: 224
-	Actor870: trucka
-		Location: 139,-28
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor871: wini
-		Location: 139,-30
-		Owner: Neutral
-		Health: 100
-		Facing: 160
 	Actor872: truckb
 		Location: 77,-30
 		Owner: Neutral
@@ -4595,21 +4390,6 @@ Actors:
 		Owner: Neutral
 		Health: 100
 		Facing: 160
-	Actor925: visc_sml
-		Location: 89,33
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor926: visc_sml
-		Location: 76,23
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor927: visc_sml
-		Location: 82,12
-		Owner: Neutral
-		Health: 100
-		Facing: 160
 	Actor928: visc_sml
 		Location: 76,13
 		Owner: Neutral
@@ -4710,38 +4490,13 @@ Actors:
 		Owner: Neutral
 		Health: 100
 		Facing: 160
-	Actor948: visc_sml
-		Location: 91,35
-		Owner: Neutral
-		Health: 100
-		Facing: 160
 	Actor949: visc_sml
 		Location: 84,36
 		Owner: Neutral
 		Health: 100
 		Facing: 160
-	Actor950: visc_sml
-		Location: 80,24
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor951: visc_sml
-		Location: 83,26
-		Owner: Neutral
-		Health: 100
-		Facing: 160
 	Actor952: visc_lrg
 		Location: 86,25
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor953: visc_lrg
-		Location: 86,18
-		Owner: Neutral
-		Health: 100
-		Facing: 160
-	Actor954: visc_lrg
-		Location: 75,23
 		Owner: Neutral
 		Health: 100
 		Facing: 160
@@ -5433,9 +5188,6 @@ Actors:
 	Actor1126: tree19
 		Location: 64,-34
 		Owner: Neutral
-	Actor1127: tree22
-		Location: 87,-34
-		Owner: Neutral
 	Actor1128: tree25
 		Location: 103,-34
 		Owner: Neutral
@@ -5474,9 +5226,6 @@ Actors:
 		Owner: Neutral
 	Actor1140: tree21
 		Location: 124,-31
-		Owner: Neutral
-	Actor1141: tree25
-		Location: 137,-31
 		Owner: Neutral
 	Actor1142: tree23
 		Location: 157,-30
@@ -5525,9 +5274,6 @@ Actors:
 		Owner: Neutral
 	Actor1157: tree23
 		Location: 113,-24
-		Owner: Neutral
-	Actor1158: tree25
-		Location: 137,-24
 		Owner: Neutral
 	Actor1159: tree15
 		Location: 47,-23
@@ -5639,12 +5385,6 @@ Actors:
 		Owner: Neutral
 	Actor1195: tree23
 		Location: 29,-13
-		Owner: Neutral
-	Actor1196: tree12
-		Location: 77,-13
-		Owner: Neutral
-	Actor1197: tree09
-		Location: 79,-13
 		Owner: Neutral
 	Actor1198: tree25
 		Location: 89,-13
@@ -7107,9 +6847,6 @@ Actors:
 	Actor1685: srock03
 		Location: 52,0
 		Owner: Neutral
-	Actor1686: veinhole
-		Location: 40,13
-		Owner: Neutral
 	Actor1687: trock05
 		Location: 125,-70
 		Owner: Neutral
@@ -7653,12 +7390,6 @@ Actors:
 	Actor1868: srock05
 		Location: 152,-37
 		Owner: Neutral
-	Actor1869: srock05
-		Location: 138,-23
-		Owner: Neutral
-	Actor1870: srock01
-		Location: 137,-23
-		Owner: Neutral
 	Actor1871: trock03
 		Location: 107,7
 		Owner: Neutral
@@ -7983,6 +7714,27 @@ Actors:
 	Actor1978: srock05
 		Location: 84,50
 		Owner: Neutral
+	Actor1979: tibtre03
+		Owner: Neutral
+		Location: 139,-11
+	Actor1980: tibtre03
+		Owner: Neutral
+		Location: 90,10
+	Actor1981: bigblue
+		Owner: Neutral
+		Location: 126,-61
+	Actor1982: bigblue
+		Owner: Neutral
+		Location: 43,13
+	Actor1983: well
+		Owner: Neutral
+		Location: 68,-43
+	Actor1984: well
+		Owner: Neutral
+		Location: 77,-18
+	Actor1985: cabeye
+		Owner: Neutral
+		Location: 64,-43
 
 Rules:
 	World:
