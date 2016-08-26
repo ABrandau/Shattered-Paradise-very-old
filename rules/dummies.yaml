@@ -40,7 +40,7 @@ IONBEAMTARGET:
 	ShakeOnDeath:
 	-Voiced:
 	Health:
-		HP: 160
+		HP: 150
 	SelfHealing:
 		Step: -10
 		Delay: 10
