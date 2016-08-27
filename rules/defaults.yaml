@@ -307,6 +307,7 @@
 	Inherits@1: ^GenericBuffsDebuffs
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
+	Inherits@3: ^VisionWhenKilled
 	WithTextControlGroupDecoration:
 	SelectionDecorations:
 		Palette: pips
@@ -500,6 +501,7 @@
 	Inherits@6: ^RejectsOrdersBerkserk
 	Inherits@7:^VentilatorPoison
 	Inherits@8:^VentilatorBuff
+	Inherits@9: ^VisionWhenKilled
 	DrawLineToTarget:
 	WithTextControlGroupDecoration:
 	TemporaryOwnerManager:
@@ -806,9 +808,10 @@
 	Inherits@1: ^GenericBuffsDebuffs
 	Inherits@2: ^ExistsInWorld
 	Inherits@3: ^EmpDisableMobile
-	Inherits@6: ^BurstRecovery
-	Inherits@8: ^RejectsOrdersBerkserk
-	Inherits@10:^NodVehicleRepair
+	Inherits@4: ^BurstRecovery
+	Inherits@5: ^RejectsOrdersBerkserk
+	Inherits@6: ^VisionWhenKilled
+	Inherits@7:^NodVehicleRepair
 	DrawLineToTarget:
 	TemporaryOwnerManager:
 	WithTextControlGroupDecoration:
@@ -1022,6 +1025,7 @@
 	Inherits@3: ^RejectsOrdersBerkserk
 	Inherits@4: ^tractorstop
 	Inherits@5: ^PermanentSelfHeal
+	Inherits@6: ^VisionWhenKilled
 	DrawLineToTarget:
 	TemporaryOwnerManager:
 	WithTextControlGroupDecoration:
@@ -1484,8 +1488,12 @@
 		LightDiffuseColor: 0.7,0.7,0.7
 		NormalsPalette: ra2normals
 
-# ^VisionWhenKilled:
-	# SpawnActorOnDeath@vision:
+^VisionWhenKilled:
+	SpawnActorOnDeath@vision:
+		Actor: VISIONACTOR
+		Probability: 100
+		OwnerType: victim
+		RequiresLobbyCreeps: false
 
 ^SelfReloads:
 	AmmoPool:

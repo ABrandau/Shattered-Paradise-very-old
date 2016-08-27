@@ -7,12 +7,50 @@
 	-UpdatesPlayerStatistics:
 	-SoundOnDamageTransition:
 	-AutoSelectionSize:
+	RevealsShroud:
+		Range: 3c0
 	-SelectionDecorations:
 	-Selectable:
 	AlwaysVisible:
 	-FrozenUnderFog:
 	RenderSprites:
 		Image: blackhanddummy
+
+VISIONACTOR:
+	Inherits: ^Helicopter
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Target
+	-Selectable:
+	SelectionDecorations:
+	AutoSelectionSize:
+	-UpdatesPlayerStatistics:
+	-ActorLostNotification:
+	-SpawnActorOnDeath@vision:
+	-AppearsOnRadar:
+	Aircraft:
+		Speed: 0
+	-Targetable@GROUND:
+	-Targetable@AIRBORNE:
+	RevealsShroud:
+		Range: 3c0
+	-Voiced:
+	Health:
+		HP: 50
+	SelfHealing:
+		Step: -10
+		Delay: 10
+		HealIfBelow: 200
+	Armor:
+		Type: Wood
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		Image: dot
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32
 
 ##################################################################
 # GDI
@@ -36,6 +74,8 @@ SHAKYSHAKY:
 	-Targetable@AIRBORNE:
 	-RevealsShroud:
 	ShakeOnDeath:
+	RevealsShroud:
+		Range: 3c0
 	-Voiced:
 	Health:
 		HP: 10
@@ -65,13 +105,14 @@ IONBEAMTARGET:
 	-UpdatesPlayerStatistics:
 	-ActorLostNotification:
 	-AppearsOnRadar:
+	RevealsShroud:
+		Range: 3c0
 	Aircraft:
 		Speed: 0
 	Targetable:
 		TargetTypes: IonSpawner
 	-Targetable@GROUND:
 	-Targetable@AIRBORNE:
-	-RevealsShroud:
 	ShakeOnDeath:
 	-Voiced:
 	Health:
@@ -106,6 +147,8 @@ IONBEAMMINI:
 	-UpdatesPlayerStatistics:
 	-ActorLostNotification:
 	-AppearsOnRadar:
+	RevealsShroud:
+		Range: 3c0
 	Aircraft:
 		CruiseAltitude: 0
 		TurnSpeed: 6
@@ -117,7 +160,6 @@ IONBEAMMINI:
 		TargetTypes: IonBeam
 	-Targetable@GROUND:
 	-Targetable@AIRBORNE:
-	-RevealsShroud:
 	-Voiced:
 	Health:
 		HP: 150
@@ -222,7 +264,8 @@ IONBEAMROAMER:
 		TargetTypes: IonBeam
 	-Targetable@GROUND:
 	-Targetable@AIRBORNE:
-	-RevealsShroud:
+	RevealsShroud:
+		Range: 3c0
 	-Voiced:
 	Health:
 		HP: 75
@@ -371,6 +414,8 @@ IONSTORMGENERATOR:
 		Step: -1
 		Delay: 25
 		HealIfBelow: 200
+	RevealsShroud:
+		Range: 5c0
 	Health:
 		HP: 40
 		NotifyAppliedDamage: False

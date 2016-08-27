@@ -14,6 +14,7 @@ figure a way to make visceroids combine.
 
 Fixes
 Ion storm bolts
+missing shadow fron nod missile silo
 
 Civ stuff
 flags
