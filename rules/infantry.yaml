@@ -1105,7 +1105,7 @@ CYBORG:
 	Armor:
 		Type: Wood
 	Valued:
-		Cost: 450
+		Cost: 350
 	Tooltip:
 		Name: Cyborg Infantry
 		Description: Heavy armored unit.\n  Strong vs Infantry, Light armor\n  Weak vs Anti Armor weapons, Aircraft
