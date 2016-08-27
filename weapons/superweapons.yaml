@@ -36,6 +36,7 @@ MultiCluster:
 		SmudgeType: MediumCrater
 		InvalidTargets: Vehicle, Building, Wall
 
+
 SuicideBomb:
 	ReloadDelay: 1
 	Range: 0c512
@@ -338,14 +339,14 @@ ClusterMissile:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@ClusterSmudges3: LeaveSmudge
 		SmudgeType: MediumScorch
-		Size: 10
+		Size: 6
 		InvalidTargets: Vehicle, Building, Wall
-		Delay: 15
+		Delay: 25
 	Warhead@ClusterSmudges4: LeaveSmudge
 		SmudgeType: SmallScorch
-		Size: 10
+		Size: 6
 		InvalidTargets: Vehicle, Building, Wall
-		Delay: 20
+		Delay: 25
 	Warhead@op: FireShrapnel
 		Weapon: LargeDebris
 		Amount: 3
@@ -361,14 +362,17 @@ ClusterMissile:
 		Amount: 90
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+	Warhead@5Spawn: SpawnActor
+		Actors: shakyshaky
+		Range: 3
 
 NukeFlame:
 	Inherits: ^FlameWarhead
 	Range: 5c0
 	MinRange: 3c0
-	Report: flamtnk1.aud
 	Projectile: Bullet
 		Speed: 100
+		Blockable: true
 		Image: FLAMEALL
 		Inaccuracy: 1c0
 		Palette: effectalpha
@@ -387,6 +391,13 @@ NukeFlame2:
 	Inherits: NukeFlame
 	Range: 3c0
 	-MinRange:
+	
+MeteorFlame:
+	Inherits: NukeFlame
+	Range: 1c0
+	-MinRange:
+	Projectile: Bullet
+		Speed: 400
 		
 ToxinMissile:
 	ValidTargets: Ground, Water, Air
@@ -475,6 +486,10 @@ MeteorSpawner:
 		Delay: 15
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+	Warhead@5Spawn: SpawnActor
+		Actors: shakyshaky
+		Range: 3
+		Delay: 30
 		
 MeteorElevator:
 	ReloadDelay: 6
@@ -532,16 +547,21 @@ MeteorRainNormal:
 		Amount: 1
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+	Warhead@5Sharpnel: FireShrapnel
+		Weapon: MeteorFlame
+		Amount: 3
+		AllowDirectHit: false
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 
 MeteorRainSlow:
 	Inherits: MeteorRainNormal
 	Projectile: Bullet
-		Speed: 200
+		Speed: 250
 
 MeteorRainFast:
 	Inherits: MeteorRainNormal
 	Projectile: Bullet
-		Speed: 550
+		Speed: 450
 
 
 ##########################################################
@@ -551,16 +571,16 @@ MeteorRainFast:
 CabalCannon:
 	Inherits: ^FullDamage
 	ReloadDelay: 200
-	Range: 999c0
-	Burst: 3
-	BurstDelay: 25
+	Range: 300c0
+	Burst: 8
+	BurstDelay: 20
 	MinRange: 6c0
 	Inaccuracy: 100c0
 	Report: MISL1.AUD
 	ValidTargets: Vehicle, Infantry, Building, Ground, Water
 	Projectile: Bullet
 		Speed: 300
-		Inaccuracy: 100c0
+		Inaccuracy: 40c0
 		Image: cabswproj
 		Angle: 90
 		Shadow: true
@@ -568,8 +588,8 @@ CabalCannon:
 		TrailImage: cabswproj2
 		TrailPalette: apolcyanalpha
 	Warhead@1Dam: SpreadDamage
-		Spread: 600
-		Damage: 350
+		Spread: 700
+		Damage: 150
 		ValidTargets: Vehicle, Infantry, Building, Ground, Water
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
@@ -578,9 +598,17 @@ CabalCannon:
 		ExplosionPalette: apolcyanalpha
 		ImpactSound: expnew09.aud
 	Warhead@4Smu: LeaveSmudge
-		SmudgeType: MediumCrater
+		SmudgeType: LargeCrater
 		InvalidImpactTypes: Water
 		InvalidTargets: Vehicle, Building, Wall
+	Warhead@5Spawn: SpawnActor
+		Actors: shakyshaky
+		Range: 3
+	Warhead@6ClusterSmudges: LeaveSmudge
+		SmudgeType: SmallScorch
+		Size: 2
+		InvalidTargets: Vehicle, Building, Wall
+		Delay: 15
 
 NanoMachineBurst:
 	ValidTargets: Ground, Air
@@ -614,25 +642,24 @@ RecoveryGun:
 
 IonRaySpawner:
 	ReloadDelay: 6
-	Range: 12c0
 	Projectile: InstantExplode
 	Warhead@op: FireShrapnel
 		Weapon: IonRay
-		Amount: 3
+		Amount: 5
 		AllowDirectHit: false
 
 IonRay:
-	Inherits: ^FullDamage
+	Inherits: ^MeleeWarhead
 	ReloadDelay: 6
 	Range: 10c0
-	Inaccuracy: 25c0
+	Inaccuracy: 10
 	Report: expnew08.aud
 	Projectile: Bullet
 		Speed: 100c0
 		Inaccuracy: 30c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 200
-		Damage: 200
+		Damage: 150
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_explosion
@@ -643,11 +670,15 @@ IonRay:
 	Warhead@4: LeaveSmudge
 		SmudgeType: SmallCrater
 		InvalidTargets: Vehicle, Building, Wall
-	Warhead@op: FireShrapnel
+	Warhead@5op: FireShrapnel
 		Weapon: SmallDebris
 		Amount: 2
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+	Warhead@6Eff: CreateEffect
+		Explosions: fire1, fire2, fire3, fire4
+		ImpactSound: expnew09.aud
+		Delay: 10
 
 VeinholeSummonerWeapon:
 	Inherits: ^BombWarhead

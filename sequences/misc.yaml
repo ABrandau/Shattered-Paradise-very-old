@@ -323,6 +323,12 @@ explosion:
 	bolt10: lightningbolts
 		Start: 9
 		Length: 1
+	mininuke1: nuke1
+		ZOffset: 1024
+		BlendMode: Additive
+	mininuke2: nuke2
+		ZOffset: 1024
+		BlendMode: Additive
 	tibexp: tibexp
 	tibexp2: tibexp2
 	bullparticle: bullparticle
@@ -629,7 +635,7 @@ clustermissile:
 	down: atnukemini
 		Start: 1
 		ZOffset: 1023
-		# Offset: 0,45
+		Offset: 0,-50
 
 toxinmissile:
 	up: atnuke

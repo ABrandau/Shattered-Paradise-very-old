@@ -18,6 +18,41 @@
 # GDI
 ##################################################################
 
+SHAKYSHAKY:
+	Inherits: ^Helicopter
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Target
+	-Selectable:
+	SelectionDecorations:
+	AutoSelectionSize:
+	-UpdatesPlayerStatistics:
+	-ActorLostNotification:
+	-AppearsOnRadar:
+	Aircraft:
+		Speed: 0
+	-Targetable@GROUND:
+	-Targetable@AIRBORNE:
+	-RevealsShroud:
+	ShakeOnDeath:
+	-Voiced:
+	Health:
+		HP: 10
+	SelfHealing:
+		Step: -10
+		Delay: 10
+		HealIfBelow: 200
+	Armor:
+		Type: Wood
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		Image: dot
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32
+
 IONBEAMTARGET:
 	Inherits: ^Helicopter
 	Valued:

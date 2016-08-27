@@ -1,6 +1,8 @@
 Ideas
 Randomize forg hp when created
+add some deception stuff for nod.
 
+todo
 juggernaut barrel
 Veterancy Chevrons
 Status Icons
@@ -8,11 +10,10 @@ Tiberium death effect for infantry
 place anti light for alien weapons.
 Improve the hover tank lazor
 grenadier sequence bug
+figure a way to make visceroids combine.
 
 Fixes
 Ion storm bolts
-Nod SW.
-
 
 Civ stuff
 flags

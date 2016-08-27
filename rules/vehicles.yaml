@@ -625,7 +625,7 @@ Limped:
 	Armor:
 		Type: Wood
 	Mobile:
-		Speed: 140
+		Speed: 95
 		Crushes: wall, mine, crate, infantry
 	Transforms:
 		IntoActor: dlimpet
@@ -765,6 +765,8 @@ DEATHCLAW:
 		LocalOffset: 128,0,500
 	AttackFrontal:
 		Voice: Attack
+	SelectionDecorations:
+		VisualBounds: 30,50,0,-20
 
 MUTAPC:
 	Inherits: ^VoxelTank
@@ -841,7 +843,7 @@ MUTTANK:
 	AttackTurreted:
 		Voice: Attack
 	RenderVoxels:
-		Scale: 1 #Scale: 0.75
+		Scale: 1
 	Turreted:
 		TurnSpeed: 10
 	AutoTarget:
@@ -913,7 +915,7 @@ MLRS:
 	RenderVoxels:
 		LightAmbientColor: 0.5,0.5,0.5
 		LightDiffuseColor: 0.7,0.7,0.7
-		Scale: 1 # 0.95
+		Scale: 1
 	Armament:
 		Weapon: tiberianrocket
 		LocalOffset: 400,100,900, 400,-100,900
@@ -1469,8 +1471,9 @@ ECM:
 
 CABAPC:
 	Inherits: ^VoxelVehicle
-	Inherits@2:	^IncompleteSelfHeal
-	Inherits@1: ^Ra2vxl
+	Inherits@1:	^IncompleteSelfHeal
+	Inherits@2: ^Ra2vxl	
+	Inherits@3: ^HoverVehicle
 	Valued:
 		Cost: 750
 	Tooltip:
@@ -1498,6 +1501,8 @@ CABAPC:
 		UnloadVoice: Unload
 		LoadingUpgrades: notmobile
 		EjectOnDeath: true
+	SelectionDecorations:
+		VisualBounds: 75, 45 , 0, -6
 	WithVoxelBody:
 	RenderVoxels:
 		Scale: 5

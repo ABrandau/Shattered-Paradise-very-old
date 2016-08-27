@@ -634,20 +634,6 @@ FirestormSpawner:
 		Weapon: FirestormExplo
 		Amount: 12
 
-FirestormExploWalls:
-	ReloadDelay: 25
-	Range: 12c0
-	MinRange: 12c0
-	Projectile: Bullet
-		Speed: 100c0
-	Warhead@3Dam_area: SpreadDamage
-		Spread: 300
-		Damage: 50
-		ValidTargets: Ground, Air
-		ValidStances: Enemy, Neutral
-	Warhead@2Eff: CreateEffect
-		Explosions: fsidlewall, fsgrndwall
-
 FirestormExplo:
 	Inherits: ^FullDamage
 	ReloadDelay: 5
@@ -655,11 +641,12 @@ FirestormExplo:
 	MinRange: 12c0
 	Projectile: Bullet
 		Speed: 100c0
+		Blockable: false
 	Warhead@3Dam_area: SpreadDamage
 		Spread: 300
-		Damage: 50
+		Damage: 75
 		ValidTargets: Ground, Air
-		# ValidStances: Enemy, Neutral
+		ValidStances: Enemy, Neutral
 	Warhead@2Eff: CreateEffect
 		Explosions: fsidle, fsgrnd
 	Warhead@2Smu: LeaveSmudge
@@ -668,4 +655,12 @@ FirestormExplo:
 	Warhead@3Eff: CreateEffect
 		Explosions: fire3, fire4
 		InvalidImpactTypes: Water, Air, AirHit
+
+FirestormExploWalls:
+	Inherits: FirestormExplo
+	ReloadDelay: 25
+	Warhead@3Dam_area: SpreadDamage
+		ValidStances: Enemy, Neutral
+	Warhead@2Eff: CreateEffect
+		Explosions: fsidlewall, fsgrndwall
 

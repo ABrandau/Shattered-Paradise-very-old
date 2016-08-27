@@ -1078,7 +1078,7 @@ MURADR:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Selectable:
-		Bounds: 96, 48, 0, -6
+		Bounds: 96, 66, 0, -10
 	Health:
 		HP: 1000
 	Armor:
@@ -1101,7 +1101,7 @@ MURADR:
 		Amount: -50
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
-		VisualBounds: 96, 118, 0, -38
+		VisualBounds: 96, 66, 0, -13
 
 MUHALL:
 	Inherits: ^Building
@@ -1463,7 +1463,7 @@ SCRAIR:
 		Cost: 1500
 	Tooltip:
 		Name: Stargate
-		Description: Warps in fleet ships.
+		Description: Warps in warships from the fleet.
 	Buildable:
 		BuildPaletteOrder: 60
 		Queue: Building
@@ -1496,10 +1496,10 @@ SCRAIR:
 	Power:
 		Amount: -60
 	Selectable:
-		Bounds: 88, 66, 0, -5
+		Bounds: 120, 130, 0, -40
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
-		VisualBounds: 88, 66, 0, -5
+		VisualBounds: 120, 130, 0, -40
 	WithTextDecoration@primary:
 		Text: PRIMARY
 		ReferencePoint: Top
@@ -1563,7 +1563,7 @@ SCRRADR:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 	Selectable:
-		Bounds: 96, 48, 0, -6
+		Bounds: 120, 90, 0, -20
 	Health:
 		HP: 1000
 	Armor:
@@ -1589,7 +1589,7 @@ SCRRADR:
 		Amount: -50
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
-		VisualBounds: 96, 118, 0, -38
+		VisualBounds: 120, 90, 0, -20
 
 SCRTECH:
 	Inherits: ^Building
@@ -1689,7 +1689,7 @@ CABCLAW:
 		Footprint: xx xx xx
 		Dimensions: 2,3
 	Selectable:
-		Bounds: 88, 48, 0, -8
+		Bounds: 96, 70, 0, -24
 	Health:
 		HP: 800
 	Armor:
@@ -1712,7 +1712,7 @@ CABCLAW:
 	Power:
 		Amount: -20
 	SelectionDecorations:
-		VisualBounds: 88, 56, 0, -8
+		VisualBounds: 102, 70, 0, -24
 	WithTextDecoration@primary:
 		Text: PRIMARY
 		ReferencePoint: Top
@@ -1839,7 +1839,7 @@ CABRADR:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 	Selectable:
-		Bounds: 96, 48, 0, -6
+		Bounds: 102, 118, 0, -38
 	Health:
 		HP: 1000
 	Armor:
@@ -1862,7 +1862,7 @@ CABRADR:
 		Amount: -50
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
-		VisualBounds: 96, 118, 0, -38
+		VisualBounds: 102, 118, 0, -38
 
 CABGRINDER:
 	Inherits: ^Building
@@ -1883,7 +1883,7 @@ CABGRINDER:
 		Footprint: xx xx xx
 		Dimensions: 2,3
 	Selectable:
-		Bounds: 110, 60, 3, -4
+		Bounds: 120, 72, 0, -10
 	Health:
 		HP: 250
 	Armor:
@@ -1894,7 +1894,7 @@ CABGRINDER:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
-		VisualBounds: 110, 60, 3, -4
+		VisualBounds: 120, 72, 0, -10
 
 CABTECH:
 	Inherits: ^Building

@@ -1,7 +1,7 @@
 MarauderShotgun:
 	Inherits: ^RifleWarhead
-	ReloadDelay: 55
-	Range: 3c0
+	ReloadDelay: 60
+	Range: 3c512
 	Report: shotfire.wav
 	Projectile: Bullet
 		Speed: 1c682
@@ -199,7 +199,6 @@ GKnightGun:
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater
 		InvalidTargets: Vehicle, Building, Wall
-
 
 GPsykerRay:
 	Inherits: PsykerRay
@@ -433,27 +432,16 @@ TiberianRocket2:
 
 MiniNuke:
 	ValidTargets: Ground, Water, Air
-	Warhead@1Dam_impact: SpreadDamage
-		Spread: 1c0
-		Damage: 400
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		ValidTargets: Ground, Water, Air
-		Versus:
-			Concrete: 25
-		AffectsParent: true
-		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeath
 	Warhead@4Dam_areanuke1: SpreadDamage
 		Spread: 2c0
-		Damage: 30
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Delay: 5
+		Damage: 900
 		ValidTargets: Ground, Water, Air
 		Versus:
 			Concrete: 25
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeath
 	Warhead@2Eff: CreateEffect
-		Explosions: tibexp
+		Explosions: mininuke1, mininuke2
 		ImpactSound: expnew09.aud
 		InvalidImpactTypes: Water
 	Warhead@3EffWater: CreateEffect
@@ -464,11 +452,10 @@ MiniNuke:
 	Warhead@10Smu: LeaveSmudge
 		SmudgeType: MediumCrater
 		InvalidTargets: Vehicle, Building, Wall
-	# Warhead@5Actor: SpawnActor
-		# Actors: VISC_LRG, VISC_LRG, VISC_LRG, VISC_LRG
-		# FallRate: 5000
-		# Range: 3
-		# Delay: 15
+	Warhead@ClusterSmudges4: LeaveSmudge
+		SmudgeType: SmallScorch
+		Size: 4
+		InvalidTargets: Vehicle, Building, Wall
 #################################################################
 # Aircraft
 #################################################################

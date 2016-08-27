@@ -1718,13 +1718,11 @@ CABSW1:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 	Selectable:
-		Bounds: 110, 60, 3, -4
+		Bounds: 110, 70, 3, -20
 	RequiresPower:
 	DisabledOverlay:
 	Health:
 		HP: 350
-	RejectsOrders:
-		Except: Stop, Sell, Repair, PowerDown
 	Armor:
 		Type: Light
 	BodyOrientation:
@@ -1740,19 +1738,20 @@ CABSW1:
 	Armament:
 		Weapon: CabalCannon
 		LocalOffset: 1000,0,1500
+		Name: superweapon
 	-AutoTarget:
 	Power:
 		Amount: -200
 	SelectionDecorations:
-		VisualBounds: 110, 60, 3, -4
+		VisualBounds: 110, 70, 3, -20
 	ProvidesPrerequisite@singularity:
 		Prerequisite: singularity
 		Factions: gdi, mut, nod, cab, scr
 		ResetOnOwnerChange: true
-	AttackOrderPower@singularity:
+	FireArmamentPower:
 		Cursor: emp
 		Icon: cabcannon
-		ChargeTime: 240
+		ChargeTime: 180
 		Description: Iron Savior
 		LongDesc: Fires a volley of bullets\nat the target location.
 		EndChargeSound: speech-nod|00-i158.aud

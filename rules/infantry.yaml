@@ -1118,6 +1118,8 @@ CYBORG:
 	SupplyTruck
 		Payload: 175
 		Voice: Move
+	RevealsShroud:
+		Range: 8c0
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark
 	Voiced:
@@ -1253,7 +1255,7 @@ MOTH:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 15
-		Prerequisites: ~cabclaw, cabradr
+		Prerequisites: ~cabclaw, cabradr, cabgrinder
 	Explodes:
 		Weapon: DroneExplode
 		EmptyWeapon: DroneExplode

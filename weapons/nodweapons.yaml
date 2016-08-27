@@ -223,7 +223,7 @@ DevilsFlame:
 	Burst: 10
 	BurstDelay: 3
 	Warhead@1Dam: SpreadDamage
-		Spread: 341
+		Spread: 200
 		Damage: 4
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
