@@ -58,21 +58,7 @@ Packages:
 	~e01vox02.mix
 	~ecache01.mix
 	sp|bits
-	sp|bits/audio/nod
-	sp|bits/audio/shared
-	sp|bits/audio/gdi
-	sp|bits/audio/weapons
-	sp|bits/audio/weapons/gdi
-	sp|bits/audio/weapons/nod
-	sp|bits/audio/weapons/mut
-	sp|bits/audio/weapons/cab
-	sp|bits/audio/weapons/scrin
 	sp|bits/pal
-	sp|bits/anims/icon
-	sp|bits/anims/muzzle
-	sp|bits/anims/explosions
-	sp|bits/anims/proyectiles
-	sp|bits/anims/trail
 	sp|bits/gdi/infantry
 	sp|bits/nod/infantry
 	sp|bits/mutant/infantry
@@ -94,6 +80,24 @@ Packages:
 	sp|bits/scrin/structures/temperate
 	sp|bits/scrin/structures/snow
 	sp|bits/scrin/structures
+	sp|bits/gdi/anims
+	sp|bits/nod/anims
+	sp|bits/mutant/anims
+	sp|bits/cabal/anims
+	sp|bits/scrin/anims
+	sp|bits/neutral/anims
+	sp|bits/gdi/audio
+	sp|bits/nod/audio
+	sp|bits/mutant/audio
+	sp|bits/cabal/audio
+	sp|bits/scrin/audio
+	sp|bits/neutral/audio
+	sp|bits/gdi/audio/voice
+	sp|bits/nod/audio/voice
+	sp|bits/mutant/audio/voice
+	sp|bits/cabal/audio/voice
+	sp|bits/scrin/audio/voice
+	sp|bits/scrin/neutral/voice
 	sp|bits/scrin/air
 	sp|bits/nod/effects
 	sp|bits/neutral

@@ -1,7 +1,7 @@
 MarauderShotgun:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 55
-	Range: 4c0
+	Range: 3c0
 	Report: shotfire.wav
 	Projectile: Bullet
 		Speed: 1c682
