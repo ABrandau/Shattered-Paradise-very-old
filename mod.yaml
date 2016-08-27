@@ -97,7 +97,7 @@ Packages:
 	sp|bits/mutant/audio/voice
 	sp|bits/cabal/audio/voice
 	sp|bits/scrin/audio/voice
-	sp|bits/neutral/voice
+	sp|bits/neutral/audio/voice
 	sp|bits/scrin/air
 	sp|bits/nod/effects
 	sp|bits/neutral
