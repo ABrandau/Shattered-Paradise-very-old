@@ -16,7 +16,7 @@ Bazooka:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 25
+		Damage: 2500
 		ValidTargets: Ground, Air
 		Versus:
 			None: 25
@@ -59,7 +59,7 @@ RedEye2:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 40
+		Damage: 4000
 		ValidTargets: Air
 		DamageTypes: SmallExplosionDeath
 	Warhead@2Eff: CreateEffect

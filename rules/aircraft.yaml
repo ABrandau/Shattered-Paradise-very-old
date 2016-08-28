@@ -82,7 +82,7 @@ ORCA:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 120
+		HP: 12000
 	Armor:
 		Type: Wood
 	Armament:
@@ -127,7 +127,7 @@ ORCAB:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 225
+		HP: 22500
 	Armor:
 		Type: Heavy
 	Armament:
@@ -169,7 +169,7 @@ TRNSPORT:
 		AltitudeVelocity: 64
 		MoveIntoShroud: false
 	Health:
-		HP: 175
+		HP: 17500
 	Armor:
 		Type: Wood
 	RenderSprites:
@@ -201,7 +201,7 @@ GUARDIAN:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 650
+		HP: 65000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -261,7 +261,7 @@ DPOD:
 		Speed: 149
 		InitialFacing: 0
 	Health:
-		HP: 60
+		HP: 6000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -297,7 +297,7 @@ DSHP:
 		TakeoffSound: dropup1.aud
 		LandingSound: dropdwn1.aud
 	Health:
-		HP: 200
+		HP: 20000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -330,7 +330,7 @@ ORCATRAN:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 200
+		HP: 20000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -366,7 +366,7 @@ APACHE:
 		Speed: 130
 		MoveIntoShroud: true
 	Health:
-		HP: 100
+		HP: 10000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -442,7 +442,7 @@ SCRIN:
 		TakeoffSound: dropup1.aud
 		LandingSound: dropdwn1.aud
 	Health:
-		HP: 200
+		HP: 20000
 	Armor:
 		Type: Wood
 	Armament:
@@ -494,7 +494,7 @@ MUTBIRD:
 	RevealsShroud:
 		Range: 6c0
 	Health:
-		HP: 150
+		HP: 15000
 	Armor:
 		Type: Wood
 	Minelayer:
@@ -539,7 +539,7 @@ MUTHELI:
 		LandingSound: orcadwn1.aud
 		RearmBuildings: muair, gahpad, nahpad
 	Health:
-		HP: 180
+		HP: 18000
 	RenderVoxels:
 		Scale: 9
 	Armor:
@@ -599,7 +599,7 @@ WETP:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 150
+		HP: 15000
 	Armor:
 		Type: Light
 	Armament:
@@ -661,7 +661,8 @@ SCRPOD:
 	Selectable:
 		Bounds: 1,1
 	Aircraft:
-		MaximumPitch: 90
+		MaximumPitch: 300
+		CruiseAltitude: 3000
 		TurnSpeed: 5
 		Speed: 500
 		AirborneUpgrades: airborne
@@ -669,7 +670,7 @@ SCRPOD:
 		TakeoffSound: dropup1.aud
 		LandingSound: dropdwn1.aud
 	Health:
-		HP: 300
+		HP: 30000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -713,7 +714,7 @@ STORMRIDER:
 		TakeoffSound: dropup1.aud
 		LandingSound: dropdwn1.aud
 	Health:
-		HP: 80
+		HP: 8000
 	Armor:
 		Type: Wood
 	Armament:
@@ -752,7 +753,7 @@ drache:
 	Selectable:
 		Bounds: 144, 60, 0, -6
 	Health:
-		HP: 600
+		HP: 60000
 	Voiced:
 		VoiceSet: Limpet
 	Armor:
@@ -817,7 +818,7 @@ SCRGLYDER1:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 150
+		HP: 15000
 	Armor:
 		Type: Light
 	Armament:
@@ -869,7 +870,7 @@ SCRDESTROYER:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 300
+		HP: 30000
 	Armor:
 		Type: Light
 	Armament:
@@ -924,7 +925,7 @@ SCRTRANS:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 500
+		HP: 50000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -968,7 +969,7 @@ SCRBATTLESHIP:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 800
+		HP: 80000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -1017,7 +1018,7 @@ SCRINCOUNCIL:
 	Voiced:
 		VoiceSet: Limpet
 	Health:
-		HP: 700
+		HP: 70000
 	Armor:
 		Type: Light
 	Aircraft:
@@ -1080,7 +1081,7 @@ MOTHERSHIP:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 1500
+		HP: 150000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -1151,7 +1152,7 @@ STORMRIDERSPAWN:
 	BodyOrientation:
 		QuantizedFacings: 32
 	Health:
-		HP: 180
+		HP: 18000
 	SelfHealing:
 		PercentageStep: -50
 		Step: 0
@@ -1243,7 +1244,7 @@ WASP:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 130
+		HP: 13000
 	Armor:
 		Type: Wood
 	Voiced:
@@ -1300,7 +1301,7 @@ FIREFLY:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 100
+		HP: 10000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -1352,7 +1353,7 @@ BASILISK:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 500
+		HP: 50000
 	Armor:
 		Type: Light
 	Armament:

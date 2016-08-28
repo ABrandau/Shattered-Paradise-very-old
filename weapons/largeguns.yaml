@@ -6,7 +6,7 @@
 		Speed: 1c512
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 50
+		Damage: 5000
 		Versus:
 			None: 25
 			Wood: 65
@@ -41,7 +41,7 @@
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 50
+		Damage: 5000
 		Versus:
 			None: 25
 			Wood: 65
@@ -76,7 +76,7 @@
 	MinRange: 5c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 298
-		Damage: 150
+		Damage: 15000
 		Versus:
 			None: 100
 			Wood: 85

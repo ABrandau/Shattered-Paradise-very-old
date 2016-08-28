@@ -9,7 +9,7 @@ E1:
 		Name: Light Infantry
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Health:
-		HP: 125
+		HP: 12500
 	Mobile:
 		Speed: 71
 	Armament@PRIMARY:
@@ -42,7 +42,7 @@ ENGINEER:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 100
+		HP: 10000
 	MineImmune:
 	Minelayer:
 		Mine: mumine
@@ -85,7 +85,7 @@ MCV:
 	Selectable:
 		Priority: 3
 	Health:
-		HP: 600
+		HP: 60000
 	Armor:
 		Type: Light
 	Mobile:
@@ -153,7 +153,7 @@ HARV:
 			BlueTiberium: 80
 			Veins: 80
 	Health:
-		HP: 1000
+		HP: 100000
 	Targetable:
 		TargetTypes: Ground, Vehicle, Repair, MindControlInmune
 	SelfHealing:
@@ -198,7 +198,7 @@ LPST:
 		Name: Mobile Sensor Array
 		Description: Can detect cloaked and subterranean\nunits when deployed.\n  Unarmed
 	Health:
-		HP: 600
+		HP: 60000
 	Armor:
 		Type: Wood
 	Mobile:
@@ -244,7 +244,7 @@ HUNTER:
 	Tooltip:
 		Name: Hunter-Seeker Droid
 	Health:
-		HP: 500
+		HP: 50000
 	Armor:
 		Type: Light
 	AttackSuicides:
@@ -293,7 +293,7 @@ GACNST:
 		BuildPaletteOrder: 1000
 		Prerequisites: ~disabled
 	Health:
-		HP: 1500
+		HP: 150000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -380,7 +380,7 @@ PROC:
 	Selectable:
 		Bounds: 134, 96, 0, -12
 	Health:
-		HP: 1200
+		HP: 120000
 	RevealsShroud:
 		Range: 6c0
 	TiberianSunRefinery:
@@ -434,7 +434,7 @@ GADEPT:
 	Selectable:
 		Bounds: 96, 64, -6, -6
 	Health:
-		HP: 1100
+		HP: 110000
 	RevealsShroud:
 		Range: 5c0
 	Reservable:
@@ -490,7 +490,7 @@ GASILO:
 		Bounds: 80, 48, -5, 0
 	-GivesBuildableArea:
 	Health:
-		HP: 300
+		HP: 30000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -566,7 +566,7 @@ SHAWALL:
 		Name: Wall
 		Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks\nMay make you sell your conyard\nIf you're not careful.
 	Health:
-		HP: 300
+		HP: 30000
 	Armor:
 		Type: Concrete
 	BlocksProjectiles:
@@ -605,7 +605,7 @@ NAPULS:
 	RequiresPower:
 	DisabledOverlay:
 	Health:
-		HP: 500
+		HP: 50000
 	Armor:
 		Type: Heavy
 	-AutoTarget:

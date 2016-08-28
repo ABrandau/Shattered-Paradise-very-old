@@ -11,7 +11,7 @@ FiendShard:
 		Angle: 60
 		Palette: greentiberium
 	Warhead@1Dam: SpreadDamage
-		Damage: 35
+		Damage: 3500
 		Versus:
 			Light: 60
 			Heavy: 40
@@ -63,7 +63,7 @@ LocoDrag:
 	Projectile: Missile
 	Warhead@1Dam: SpreadDamage
 		Spread: 110
-		Damage: 10
+		Damage: 1
 		ValidTargets: Locomotive
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 
@@ -110,7 +110,7 @@ SlimeAttack:
 	Projectile: Bullet
 		Speed: 426
 	Warhead@1Dam: SpreadDamage
-		Damage: 60
+		Damage: 6000
 		Versus:
 			Light: 60
 			Heavy: 40
@@ -159,7 +159,7 @@ Repair:
 	Warhead@1Dam: SpreadDamage
 		DebugOverlayColor: 00FF00
 		Spread: 213
-		Damage: -50
+		Damage: -5000
 		ValidTargets: Repair
 
 TiberiumHeal:

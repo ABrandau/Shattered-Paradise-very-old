@@ -15,7 +15,7 @@ MilitantFireball:
 		TrailImage: small_smoke_trail
 	Warhead@1Dam: SpreadDamage
 		Spread: 300
-		Damage: 5
+		Damage: 500
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
@@ -43,7 +43,7 @@ CrusaderBazooka:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 8
+		Damage: 800
 		ValidTargets: Vehicle, Air, Building
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -75,7 +75,7 @@ TemplarLasor:
 		Inaccuracy: 150
 	Warhead@1Dam: SpreadDamage
 		Spread: 125
-		Damage: 5
+		Damage: 500
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 		
 BHRifle:
@@ -87,7 +87,7 @@ BHRifle:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 75
+		Damage: 7500
 		ValidTargets: Infantry
 		Versus:
 			None: 200
@@ -108,7 +108,7 @@ BuggyCannon:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 20
+		Damage: 2000
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -138,7 +138,7 @@ BikeMissile:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 40
+		Damage: 4000
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -159,7 +159,7 @@ BikeExplo:
 	ValidTargets: Ground, Water, Air
 	Warhead@1Dam_impact: SpreadDamage
 		Spread: 0c512
-		Damage: 300
+		Damage: 30000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water, Air
 		AffectsParent: true
@@ -190,7 +190,7 @@ Tick90mm:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 40
+		Damage: 4000
 		Versus:
 			None: 25
 			Wood: 65
@@ -217,14 +217,14 @@ DevilsFlame:
 	Range: 4c256
 	Report: flamtnk1.aud
 	Projectile: Bullet
-		Speed: 100
+		Speed: 130
 		Image: FLAMEALL
-		Inaccuracy: 1c0
+		Inaccuracy: 1c3
 	Burst: 10
 	BurstDelay: 3
 	Warhead@1Dam: SpreadDamage
 		Spread: 200
-		Damage: 4
+		Damage: 400
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
@@ -261,7 +261,7 @@ BCLazor:
 		BeamDuration: 20
 	Warhead@1Dam: SpreadDamage
 		Spread: 96
-		Damage: 35
+		Damage: 3500
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_explosion
@@ -296,7 +296,7 @@ StealthRocket:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 35
+		Damage: 3500
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -335,7 +335,7 @@ StealthRocketAA:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 10
+		Damage: 1000
 		ValidTargets: Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -369,7 +369,7 @@ HarpyClaw:
 		ValidTargets: Ground, Vehicle, Building, Infantry, Air
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 40
+		Damage: 4000
 		ValidTargets: Ground, Vehicle, Building, Infantry, Air
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
@@ -398,7 +398,7 @@ Proton:
 		ValidTargets: Ground, water, Infantry, Vehicle, Building, Air
 	Warhead@1Dam: SpreadDamage
 		Spread: 250
-		Damage: 50
+		Damage: 5000
 		ValidTargets: Ground, water, Infantry, Vehicle, Building, Air
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -427,7 +427,7 @@ ProtonAA:
 		RangeLimit: 15c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 30
+		Damage: 3000
 		ValidTargets: Air
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -454,7 +454,7 @@ TurretLaserFire:
 		ZOffset: 2047
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 30
+		Damage: 3000
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 		
 ObeliskLaserFire:
@@ -467,7 +467,7 @@ ObeliskLaserFire:
 		ZOffset: 2047
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 125
+		Damage: 12500
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 
 		

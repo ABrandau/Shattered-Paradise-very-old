@@ -10,7 +10,7 @@ MarauderShotgun:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 8
+		Damage: 800
 		DamageTypes: Prone70Percent, TriggerProne, TiberiumDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
@@ -37,7 +37,7 @@ SkirmisherRocket:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 20
+		Damage: 2000
 		AffectsParent: true
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
@@ -57,19 +57,6 @@ SkirmisherRocket:
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater
 		InvalidTargets: Vehicle, Building, Wall
-
-MechanicRepair:
-	ReloadDelay: 100
-	Range: 1c819
-	Report: repair11.aud
-	ValidTargets: Repair
-	Projectile: Bullet
-		Speed: 1c682
-	Warhead@1Dam: SpreadDamage
-		DebugOverlayColor: 00FF00
-		Spread: 213
-		Damage: -20
-		ValidTargets: Repair		
 		
 FiendShard2:
 	Inherits: ^FullDamage
@@ -87,7 +74,7 @@ FiendShard2:
 		Palette: greentiberium
 	Warhead@1Dam: SpreadDamage
 		Spread: 60
-		Damage: 10
+		Damage: 1000
 		ValidTargets: Ground
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath
 	Warhead@3EffWater: CreateEffect
@@ -105,7 +92,7 @@ RangerRifle:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 22
-		Damage: 35
+		Damage: 3500
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, TiberiumDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piff
@@ -126,7 +113,7 @@ KnightAcid:
 		Palette: apolgreenalpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 20
+		Damage: 2000
 		ValidTargets: Ground	
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong
 	Warhead@2Smu: LeaveSmudge
@@ -143,7 +130,7 @@ PsykerRay:
 		Inaccuracy: 3c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 298
-		Damage: 100
+		Damage: 5000
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_explosion
@@ -190,7 +177,7 @@ GKnightGun:
 		# Palette: apgreen
 	Warhead@1Dam: SpreadDamage
 		Spread: 125
-		Damage: 30
+		Damage: 3000
 		ValidTargets: Ground
 		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeathStrong
 	Warhead@2Eff: CreateEffect
@@ -217,7 +204,7 @@ BerserkerBlow:
 		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath, TiberiumDeath
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 40
+		Damage: 4000
 		ValidTargets: Ground	
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong
 	Warhead@2Eff: CreateEffect
@@ -242,7 +229,7 @@ BullAcid:
 	BurstDelay: 5
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 5
+		Damage: 500
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong
 		ValidTargets: Vehicle, Infantry, Building, Ground, Water
 	Warhead@2Eff: CreateEffect
@@ -281,7 +268,7 @@ DeathclawBlow:
 		Speed: 5c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 60
+		Damage: 6000
 		InvalidTargets: Building
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath			
 
@@ -298,7 +285,7 @@ IFVulcan:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 25
+		Damage: 2500
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, TiberiumDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -318,7 +305,7 @@ LeonidCannon:
 		Innacuracy: 1c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 40
+		Damage: 4000
 		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_clsn
@@ -352,7 +339,7 @@ QuadFire:
 		Spread: 128
 		ValidTargets: Ground
 		InvalidTargets: Air
-		Damage: 35
+		Damage: 3500
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, TiberiumDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -377,7 +364,7 @@ QuadFireAA:
 	Warhead@1Dam: SpreadDamage
 		Spread: 192
 		ValidTargets: Air
-		Damage: 30
+		Damage: 3000
 		Versus:
 			Concrete: 5
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, TiberiumDeath
@@ -404,7 +391,7 @@ TiberianRocket:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 200
-		Damage: 20
+		Damage: 2000
 		ValidTargets: Ground
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, TiberiumDeathStrong
@@ -434,7 +421,7 @@ MiniNuke:
 	ValidTargets: Ground, Water, Air
 	Warhead@4Dam_areanuke1: SpreadDamage
 		Spread: 2c0
-		Damage: 900
+		Damage: 90000
 		ValidTargets: Ground, Water, Air
 		Versus:
 			Concrete: 25
@@ -471,7 +458,7 @@ GargoylVulcan:
 		Innacuracy: 0c512
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 30
+		Damage: 3000
 		ValidTargets: Infantry
 		Versus:
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, TiberiumDeath
@@ -502,7 +489,7 @@ GargoylRocket:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 85
-		Damage: 50
+		Damage: 5000
 		ValidTargets: Ground, Vehicle, Building
 		InvalidTargets: Infantry	
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
@@ -542,7 +529,7 @@ GargoylRocketAA:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 110
-		Damage: 10
+		Damage: 1000
 		ValidTargets: Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -566,7 +553,7 @@ FalconPunch:
 		Inaccuracy: 1c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 200
-		Damage: 5
+		Damage: 500
 		ValidTargets: Ground, Water
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
@@ -599,7 +586,7 @@ FlakFire:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		ValidTargets: Air
-		Damage: 30
+		Damage: 3000
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, TiberiumDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs

@@ -7,7 +7,7 @@ MarineRifle:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 20
+		Damage: 2000
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -30,7 +30,7 @@ JJCannon:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 30
+		Damage: 3000
 		ValidTargets: Ground, Helicopter
 			None: 25
 			Wood: 35
@@ -67,7 +67,7 @@ Grenade:
 		Image: DISCUS
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 50
+		Damage: 5000
 		ValidTargets: Ground
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -93,7 +93,7 @@ Heal:
 	Warhead@1Dam: SpreadDamage
 		DebugOverlayColor: 00FF00
 		Spread: 213
-		Damage: -40
+		Damage: -4000
 		Versus:
 			Light: 60
 		ValidTargets: Infantry
@@ -110,7 +110,7 @@ TrooperRail:
 		Color: 0080FFC8		
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 40
+		Damage: 4000
 		DamageTypes: Prone60Percent, TriggerProne, BulletDeath		
 		Versus:
 			Concrete: 5
@@ -131,7 +131,7 @@ WolverineVulcan:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 25
+		Damage: 2500
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -150,7 +150,7 @@ Titan120mm:
 		Speed: 1c512
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 70
+		Damage: 7000
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_clsn
@@ -185,7 +185,7 @@ HoverMissile:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 30
+		Damage: 3000
 		ValidTargets: Ground, Air
 		Versus:
 			None: 25
@@ -226,7 +226,7 @@ JuggCannon:
 	MinRange: 5c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 350
-		Damage: 40
+		Damage: 4000
 		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
@@ -269,7 +269,7 @@ SonicZap:
 	Warhead@1Dam: SpreadDamage
 		Range: 0, 32
 		Falloff: 100, 100
-		Damage: 20
+		Damage: 2000
 		AffectsParent: false
 		ValidStances: Neutral, Enemy
 		Versus:
@@ -305,7 +305,7 @@ MechRailgun:
 		Color: 00FFFFC8
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 150
+		Damage: 15000
 		Versus:
 			None: 200
 			Wood: 175
@@ -332,7 +332,7 @@ MammothTusk:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 200
-		Damage: 45
+		Damage: 4500
 		ValidTargets: Air
 		Versus:
 		DamageTypes: Explosion
@@ -368,7 +368,7 @@ FighterHellfire:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 85
-		Damage: 40
+		Damage: 4000
 		ValidTargets: Ground, Vehicle, Building, Infantry
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -401,7 +401,7 @@ AAFighterHellfire:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 110
-		Damage: 25
+		Damage: 2500
 		ValidTargets: Air
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
@@ -437,7 +437,7 @@ OBBomb:
 	Warhead@1Dam: SpreadDamage
 		Falloff: 100, 80, 70, 60, 50
 		Spread: 400
-		Damage: 70
+		Damage: 7000
 		ValidTargets: Ground, Building, Infantry, Vehicle
 		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -475,7 +475,7 @@ GuardianRail:
 		Color: 0080FFC8		
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 75
+		Damage: 7500
 		DamageTypes: Prone60Percent, TriggerProne, BulletDeath		
 		Versus:
 			None: 150
@@ -492,7 +492,7 @@ GuardianClaw:
 		ValidTargets: Air
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 60
+		Damage: 6000
 		ValidTargets: Ground, Vehicle, Building, Infantry, Air
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
@@ -513,7 +513,7 @@ GuardianRepair:
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
-		Damage: -50
+		Damage: -5000
 		ValidTargets: Vehicle
 	Warhead@2Eff: CreateEffect
 		Explosions: sparks, sparks2, sparks3
@@ -532,7 +532,7 @@ VulcanTower:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 15
+		Damage: 1500
 		DamageTypes: Prone50Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -560,7 +560,7 @@ GdiRedEye:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 40
+		Damage: 4000
 		ValidTargets: Air
 		DamageTypes: SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -581,7 +581,7 @@ RPGTower:
 		Palette: player
 	Warhead@1Dam: SpreadDamage
 		Spread: 1C0
-		Damage: 60
+		Damage: 6000
 		DamageTypes: Prone70Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_clsn
@@ -605,7 +605,7 @@ RepairGun:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
-		Damage: -50
+		Damage: -5000
 		ValidTargets: Repair
 
 FirestormWallUpgrade:
@@ -644,7 +644,7 @@ FirestormExplo:
 		Blockable: false
 	Warhead@3Dam_area: SpreadDamage
 		Spread: 300
-		Damage: 75
+		Damage: 7500
 		ValidTargets: Ground, Air
 		ValidStances: Enemy, Neutral
 	Warhead@2Eff: CreateEffect

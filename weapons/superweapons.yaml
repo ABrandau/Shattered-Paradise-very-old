@@ -14,7 +14,7 @@ MultiCluster:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 65
+		Damage: 6500
 		ValidTargets: Ground
 		Versus:
 			None: 25
@@ -43,7 +43,7 @@ SuicideBomb:
 	Report: HUNTER2.AUD
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 110
+		Damage: 11000
 		Falloff: 10000, 3680, 1350, 500, 180, 70, 0
 		Versus:
 			None: 90
@@ -82,7 +82,7 @@ IonCannon:
 	Projectile: InstantExplode
 	Warhead@1Dam_area: SpreadDamage
 		Spread: 1c0
-		Damage: 450
+		Damage: 45000
 		Falloff: 100, 50, 25, 0
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, EnergyDeath
@@ -147,7 +147,7 @@ IonScorch:
 	ValidTargets: Ground, Air, IonSpawner
 	Warhead@3Dam_area: SpreadDamage
 		Spread: 250
-		Damage: 12
+		Damage: 1200
 		Falloff: 100, 50, 25, 0
 		ValidTargets: Ground, Air
 		DamageTypes: SmallExplosionDeath
@@ -308,7 +308,7 @@ ClusterMissile:
 	ValidTargets: Ground, Water, Air
 	Warhead@ImpactDamage0: SpreadDamage
 		Spread: 1c0
-		Damage: 120
+		Damage: 12000
 		Falloff: 500, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water, Air
 		Versus:
@@ -316,7 +316,7 @@ ClusterMissile:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@ClusterDamage3: SpreadDamage
 		Spread: 4c0
-		Damage: 70
+		Damage: 7000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 15
 		ValidTargets: Ground, Water, Air
@@ -378,7 +378,7 @@ NukeFlame:
 		Palette: effectalpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
-		Damage: 4
+		Damage: 400
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
@@ -403,7 +403,7 @@ ToxinMissile:
 	ValidTargets: Ground, Water, Air
 	Warhead@ImpactDamage0: SpreadDamage
 		Spread: 1c0
-		Damage: 30
+		Damage: 3000
 		Falloff: 500, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Water, Air
 		Versus:
@@ -441,7 +441,7 @@ EnergyAssimilator:
 	ValidTargets: Ground, Air, Building
 	Warhead@1Dam_impact: SpreadDamage
 		Spread: 250
-		Damage: 50
+		Damage: 5000
 		Falloff: 500, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Air
 		DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
@@ -528,7 +528,7 @@ MeteorRainNormal:
 		TrailInterval: 1
 	Warhead@1Dam: SpreadDamage
 		Spread: 350
-		Damage: 100
+		Damage: 10000
 		ValidTargets: Ground, Vehicle, Building, Infantry, Water
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
@@ -589,7 +589,7 @@ CabalCannon:
 		TrailPalette: apolcyanalpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 700
-		Damage: 150
+		Damage: 15000
 		ValidTargets: Vehicle, Infantry, Building, Ground, Water
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
@@ -614,7 +614,7 @@ NanoMachineBurst:
 	ValidTargets: Ground, Air
 	Warhead@1Dam_impact: SpreadDamage
 		Spread: 1c0
-		Damage: 5
+		Damage: 500
 		Falloff: 500, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Air
 		DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
@@ -632,7 +632,7 @@ RecoveryGun:
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 200
-		Damage: 200
+		Damage: 20000
 		DamageTypes: Prone70Percent, TriggerProne, WorkerSummon
 		ValidTargets: KilledUnit
 
@@ -659,7 +659,7 @@ IonRay:
 		Inaccuracy: 30c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 200
-		Damage: 150
+		Damage: 15000
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_explosion

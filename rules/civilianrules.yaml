@@ -13,7 +13,7 @@ GHOST:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 200
+		HP: 20000
 	Passenger:
 	RevealsShroud:
 		Range: 6c0
@@ -44,7 +44,7 @@ WEEDGUY:
 	Mobile:
 		Speed: 42
 	Health:
-		HP: 130
+		HP: 13000
 	Crushable:
 		CrushSound: squishy2.aud
 	Armament:
@@ -64,7 +64,7 @@ UMAGON:
 	Mobile:
 		Speed: 71
 	Health:
-		HP: 150
+		HP: 15000
 	Passenger:
 	RevealsShroud:
 		Range: 7c0
@@ -86,7 +86,7 @@ CHAMSPY:
 	Voiced:
 		VoiceSet: Spy
 	Health:
-		HP: 120
+		HP: 12000
 	Mobile:
 		Speed: 85
 	RevealsShroud:
@@ -117,7 +117,7 @@ MUTANT:
 	Voiced:
 		VoiceSet: Mutant
 	Health:
-		HP: 50
+		HP: 5000
 	Mobile:
 		Speed: 56
 	RevealsShroud:
@@ -140,7 +140,7 @@ MWMN:
 	Voiced:
 		VoiceSet: CivilianFemale
 	Health:
-		HP: 50
+		HP: 5000
 	Mobile:
 		Speed: 56
 	RevealsShroud:
@@ -163,7 +163,7 @@ MUTANT3:
 	Voiced:
 		VoiceSet: Mutant
 	Health:
-		HP: 50
+		HP: 5000
 	Mobile:
 		Speed: 56
 	RevealsShroud:
@@ -186,7 +186,7 @@ TRATOS:
 	Voiced:
 		VoiceSet: Tratos
 	Health:
-		HP: 200
+		HP: 20000
 	Mobile:
 		Speed: 71
 	RevealsShroud:
@@ -204,7 +204,7 @@ OXANNA:
 	Voiced:
 		VoiceSet: Oxanna
 	Health:
-		HP: 50
+		HP: 5000
 	Mobile:
 		Speed: 56
 	RevealsShroud:
@@ -222,7 +222,7 @@ SLAV:
 	Voiced:
 		VoiceSet: Slavick
 	Health:
-		HP: 300
+		HP: 30000
 	Mobile:
 		Speed: 56
 	RevealsShroud:
@@ -240,7 +240,7 @@ DOGGIE:
 		Shape: Circle
 			Radius: 213
 	Valued:
-		Cost: 100
+		Cost: 10000
 	Armor:
 		Type: Light
 	-RevealsShroud:
@@ -266,7 +266,7 @@ VISC_SML:
 		Name: Baby Visceroid
 		Description: infantry transmorgifies into this
 	Health:
-		HP: 150
+		HP: 15000
 	Armor:
 		Type: none
 	AttackWander:
@@ -292,7 +292,7 @@ VISC_LRG:
 		Name: Adult Visceroid
 		Description: 2 small visceroids combine into this
 	Health:
-		HP: 200
+		HP: 20000
 	Armor:
 		Type: wood
 	Armament:
@@ -325,7 +325,7 @@ VISC_LRG_SCRIN:
 		Name: Adult Visceroid
 		Description: 2 small visceroids combine into this
 	Health:
-		HP: 150
+		HP: 15000
 	Armor:
 		Type: wood
 	Armament:
@@ -364,7 +364,7 @@ ZOMBIE:
 		Name: Zombie
 	-GainsExperience:		
 	Health:
-		HP: 75
+		HP: 7500
 		Shape: Circle
 			Radius: 213
 	Valued:
@@ -404,7 +404,7 @@ CRAB:
 		Name: Crab
 	-GainsExperience:		
 	Health:
-		HP: 200
+		HP: 20000
 		Shape: Circle
 			Radius: 213
 	Valued:
@@ -443,7 +443,7 @@ BERSERKER:
 		Name: Berserker
 	-GainsExperience:		
 	Health:
-		HP: 200
+		HP: 20000
 		Shape: Circle
 			Radius: 213
 	Valued:
@@ -514,7 +514,7 @@ CIV3:
 		TurnSpeed: 5
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 600
+		HP: 60000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -547,7 +547,7 @@ CIV3:
 	Tooltip:
 		Name: Truck
 	Health:
-		HP: 200
+		HP: 20000
 	Armor:
 		Type: Light
 	Mobile:
@@ -568,7 +568,7 @@ ICBM:
 	Tooltip:
 		Name: Ballistic Missile Launcher
 	Health:
-		HP: 500
+		HP: 50000
 	Armor:
 		Type: Light
 	Mobile:
@@ -594,7 +594,7 @@ BUS:
 		TurnSpeed: 5
 		Speed: 113
 	Health:
-		HP: 100
+		HP: 10000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -616,7 +616,7 @@ PICK:
 		TurnSpeed: 5
 		Speed: 113
 	Health:
-		HP: 100
+		HP: 10000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -638,7 +638,7 @@ CAR:
 		TurnSpeed: 5
 		Speed: 113
 	Health:
-		HP: 100
+		HP: 10000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -660,7 +660,7 @@ WINI:
 		TurnSpeed: 5
 		Speed: 113
 	Health:
-		HP: 200
+		HP: 20000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -797,7 +797,7 @@ ABAN02:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 600
+		HP: 60000
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE
 
@@ -811,7 +811,7 @@ ABAN03:
 	Armor:
 		Type: wood
 	Health:
-		HP: 500
+		HP: 50000
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE
 
@@ -825,7 +825,7 @@ ABAN04:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 400
+		HP: 40000
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE
 
@@ -841,7 +841,7 @@ ABAN05:
 	Armor:
 		Type: wood
 	Health:
-		HP: 500
+		HP: 50000
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE
 
@@ -857,7 +857,7 @@ ABAN06:
 	Armor:
 		Type: wood
 	Health:
-		HP: 500
+		HP: 50000
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE
 
@@ -873,7 +873,7 @@ ABAN07:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 350
+		HP: 35000
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE
 
@@ -889,7 +889,7 @@ ABAN08:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 500
+		HP: 50000
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE
 
@@ -905,7 +905,7 @@ ABAN09:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 350
+		HP: 35000
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE
 
@@ -921,7 +921,7 @@ ABAN10:
 	Armor:
 		Type: wood
 	Health:
-		HP: 500
+		HP: 50000
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE
 
@@ -937,7 +937,7 @@ ABAN11:
 	Armor:
 		Type: wood
 	Health:
-		HP: 400
+		HP: 40000
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE
 
@@ -953,7 +953,7 @@ ABAN12:
 	Armor:
 		Type: wood
 	Health:
-		HP: 400
+		HP: 40000
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE
 
@@ -967,7 +967,7 @@ ABAN13:
 	Armor:
 		Type: wood
 	Health:
-		HP: 400
+		HP: 40000
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE
 
@@ -981,7 +981,7 @@ ABAN14:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 300
+		HP: 30000
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE
 
@@ -995,7 +995,7 @@ ABAN15:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 400
+		HP: 40000
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE
 
@@ -1011,7 +1011,7 @@ ABAN16:
 	Armor:
 		Type: wood
 	Health:
-		HP: 400
+		HP: 40000
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE
 
@@ -1025,7 +1025,7 @@ ABAN17:
 	Armor:
 		Type: wood
 	Health:
-		HP: 400
+		HP: 40000
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE
 
@@ -1039,7 +1039,7 @@ ABAN18:
 	Armor:
 		Type: wood
 	Health:
-		HP: 400
+		HP: 40000
 	EditorTilesetFilter:
 		ExcludeTilesets: TEMPERATE
 
@@ -1167,7 +1167,7 @@ CA0001:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 400
+		HP: 40000
 
 CA0002:
 	Inherits: ^CivBuilding
@@ -1181,7 +1181,7 @@ CA0002:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 400
+		HP: 40000
 
 CA0003:
 	Inherits: ^CivBuilding
@@ -1198,7 +1198,7 @@ CA0003:
 	Armor:
 		Type: light
 	Health:
-		HP: 300
+		HP: 30000
 
 CA0004:
 	Inherits: ^CivBuilding
@@ -1212,7 +1212,7 @@ CA0004:
 	Armor:
 		Type: light
 	Health:
-		HP: 300
+		HP: 30000
 
 CA0005:
 	Inherits: ^CivBuilding
@@ -1224,7 +1224,7 @@ CA0005:
 	Armor:
 		Type: light
 	Health:
-		HP: 300
+		HP: 30000
 
 CA0006:
 	Inherits: ^CivBuilding
@@ -1236,7 +1236,7 @@ CA0006:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 300
+		HP: 30000
 
 CA0007:
 	Inherits: ^CivBuilding
@@ -1248,7 +1248,7 @@ CA0007:
 	Armor:
 		Type: light
 	Health:
-		HP: 400
+		HP: 40000
 
 CA0008:
 	Inherits: ^CivBuilding
@@ -1262,7 +1262,7 @@ CA0008:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 400
+		HP: 40000
 
 CA0009:
 	Inherits: ^CivBuilding
@@ -1276,7 +1276,7 @@ CA0009:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 400
+		HP: 40000
 
 CA0010:
 	Inherits: ^CivBuilding
@@ -1290,7 +1290,7 @@ CA0010:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 300
+		HP: 30000
 
 CA0011:
 	Inherits: ^CivBuilding
@@ -1302,7 +1302,7 @@ CA0011:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 200
+		HP: 20000
 
 CA0012:
 	Inherits: ^CivBuilding
@@ -1316,7 +1316,7 @@ CA0012:
 	Armor:
 		Type: light
 	Health:
-		HP: 100
+		HP: 10000
 
 CA0013:
 	Inherits: ^CivBuilding
@@ -1330,7 +1330,7 @@ CA0013:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 300
+		HP: 30000
 
 CA0014:
 	Inherits: ^CivBuilding
@@ -1344,7 +1344,7 @@ CA0014:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 300
+		HP: 30000
 
 CA0015:
 	Inherits: ^CivBuilding
@@ -1358,7 +1358,7 @@ CA0015:
 	Armor:
 		Type: light
 	Health:
-		HP: 300
+		HP: 30000
 
 CA0016:
 	Inherits: ^CivBuilding
@@ -1372,7 +1372,7 @@ CA0016:
 	Armor:
 		Type: light
 	Health:
-		HP: 300
+		HP: 30000
 
 CA0017:
 	Inherits: ^CivBuilding
@@ -1386,7 +1386,7 @@ CA0017:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 300
+		HP: 30000
 
 CA0018:
 	Inherits: ^CivBuilding
@@ -1400,7 +1400,7 @@ CA0018:
 	Armor:
 		Type: light
 	Health:
-		HP: 200
+		HP: 20000
 
 CA0019:
 	Inherits: ^CivBuilding
@@ -1414,7 +1414,7 @@ CA0019:
 	Armor:
 		Type: light
 	Health:
-		HP: 200
+		HP: 20000
 
 CA0020:
 	Inherits: ^CivBuilding
@@ -1428,7 +1428,7 @@ CA0020:
 	Armor:
 		Type: light
 	Health:
-		HP: 200
+		HP: 20000
 
 CA0021:
 	Inherits: ^CivBuilding
@@ -1442,7 +1442,7 @@ CA0021:
 	Armor:
 		Type: light
 	Health:
-		HP: 200
+		HP: 20000
 
 CAARAY:
 	Inherits: ^CivBuilding
@@ -1456,7 +1456,7 @@ CAARAY:
 	Armor:
 		Type: concrete
 	Health:
-		HP: 400
+		HP: 40000
 	RenderSprites:
 		Palette: player
 
@@ -1470,7 +1470,7 @@ CAARMR:
 	Armor:
 		Type: concrete
 	Health:
-		HP: 800
+		HP: 80000
 	RenderSprites:
 		Palette: player
 	ProvidesPrerequisite:
@@ -1486,7 +1486,7 @@ CABHUT:
 		Footprint: x
 		Dimensions: 1, 1
 	Health:
-		HP: 2000
+		HP: 200000
 	RenderSprites:
 		Palette: player
 
@@ -1500,7 +1500,7 @@ CACRSH01:
 	Armor:
 		Type: concrete
 	Health:
-		HP: 400
+		HP: 40000
 
 CACRSH02:
 	Inherits: ^CivBuilding
@@ -1512,7 +1512,7 @@ CACRSH02:
 	Armor:
 		Type: concrete
 	Health:
-		HP: 400
+		HP: 40000
 
 CACRSH03:
 	Inherits: ^CivBuilding
@@ -1524,7 +1524,7 @@ CACRSH03:
 	Armor:
 		Type: concrete
 	Health:
-		HP: 400
+		HP: 40000
 
 CACRSH04:
 	Inherits: ^CivBuilding
@@ -1536,7 +1536,7 @@ CACRSH04:
 	Armor:
 		Type: concrete
 	Health:
-		HP: 400
+		HP: 40000
 
 CACRSH05:
 	Inherits: ^CivBuilding
@@ -1548,7 +1548,7 @@ CACRSH05:
 	Armor:
 		Type: concrete
 	Health:
-		HP: 400
+		HP: 40000
 
 CAHOSP:
 	Inherits: ^CivBuilding
@@ -1562,7 +1562,7 @@ CAHOSP:
 	Armor:
 		Type: concrete
 	Health:
-		HP: 800
+		HP: 80000
 	RenderSprites:
 		Palette: player
 
@@ -1578,7 +1578,7 @@ CAPYR01:
 	Armor:
 		Type: concrete
 	Health:
-		HP: 400
+		HP: 40000
 	EditorTilesetFilter:
 		ExcludeTilesets: SNOW
 
@@ -1592,7 +1592,7 @@ CAPYR02:
 	Armor:
 		Type: concrete
 	Health:
-		HP: 400
+		HP: 40000
 	EditorTilesetFilter:
 		ExcludeTilesets: SNOW
 
@@ -1606,7 +1606,7 @@ CAPYR03:
 	Armor:
 		Type: concrete
 	Health:
-		HP: 400
+		HP: 40000
 	EditorTilesetFilter:
 		ExcludeTilesets: SNOW
 
@@ -1622,7 +1622,7 @@ CITY01:
 	Armor:
 		Type: wood
 	Health:
-		HP: 400
+		HP: 40000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -1638,7 +1638,7 @@ CITY02:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 700
+		HP: 70000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -1654,7 +1654,7 @@ CITY03:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 500
+		HP: 50000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -1670,7 +1670,7 @@ CITY04:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 600
+		HP: 60000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -1686,7 +1686,7 @@ CITY05:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 600
+		HP: 60000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -1702,7 +1702,7 @@ CITY06:
 	Armor:
 		Type: concrete
 	Health:
-		HP: 500
+		HP: 50000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -1718,7 +1718,7 @@ CITY07:
 	Armor:
 		Type: wood
 	Health:
-		HP: 400
+		HP: 40000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -1734,7 +1734,7 @@ CITY08:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 300
+		HP: 30000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -1750,7 +1750,7 @@ CITY09:
 	Armor:
 		Type: wood
 	Health:
-		HP: 400
+		HP: 40000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -1766,7 +1766,7 @@ CITY10:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 300
+		HP: 30000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -1782,7 +1782,7 @@ CITY11:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 500
+		HP: 50000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -1798,7 +1798,7 @@ CITY12:
 	Armor:
 		Type: concrete
 	Health:
-		HP: 600
+		HP: 60000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -1814,7 +1814,7 @@ CITY13:
 	Armor:
 		Type: wood
 	Health:
-		HP: 500
+		HP: 50000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -1830,7 +1830,7 @@ CITY14:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 600
+		HP: 60000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -1846,7 +1846,7 @@ CITY15:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 500
+		HP: 50000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -1862,7 +1862,7 @@ CITY16:
 	Armor:
 		Type: wood
 	Health:
-		HP: 500
+		HP: 50000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -1878,7 +1878,7 @@ CITY17:
 	Armor:
 		Type: wood
 	Health:
-		HP: 300
+		HP: 30000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -1894,7 +1894,7 @@ CITY18:
 	Armor:
 		Type: concrete
 	Health:
-		HP: 600
+		HP: 60000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -1910,7 +1910,7 @@ CITY19:
 	Armor:
 		Type: wood
 	Health:
-		HP: 500
+		HP: 50000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -1924,7 +1924,7 @@ CITY20:
 	Armor:
 		Type: wood
 	Health:
-		HP: 250
+		HP: 25000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -1938,7 +1938,7 @@ CITY21:
 	Armor:
 		Type: none
 	Health:
-		HP: 100
+		HP: 10000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -1954,7 +1954,7 @@ CITY22:
 	Armor:
 		Type: none
 	Health:
-		HP: 100
+		HP: 10000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -1971,7 +1971,7 @@ CTDAM:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 1000
+		HP: 100000
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	EditorTilesetFilter:
@@ -1991,7 +1991,7 @@ CTVEGA:
 	Armor:
 		Type: none
 	Health:
-		HP: 100
+		HP: 10000
 	EditorTilesetFilter:
 		ExcludeTilesets: SNOW
 
@@ -2005,7 +2005,7 @@ GAKODK:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 1500
+		HP: 150000
 	RenderSprites:
 		Palette: player
 	WithIdleOverlay@LARGELIGHTS:
@@ -2027,7 +2027,7 @@ GAOLDCC1:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 400
+		HP: 40000
 	RenderSprites:
 		Palette: player
 
@@ -2043,7 +2043,7 @@ GAOLDCC2:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 400
+		HP: 40000
 	RenderSprites:
 		Palette: player
 
@@ -2059,7 +2059,7 @@ GAOLDCC3:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 400
+		HP: 40000
 	RenderSprites:
 		Palette: player
 
@@ -2075,7 +2075,7 @@ GAOLDCC4:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 400
+		HP: 40000
 	RenderSprites:
 		Palette: player
 
@@ -2091,7 +2091,7 @@ GAOLDCC5:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 400
+		HP: 40000
 	RenderSprites:
 		Palette: player
 
@@ -2109,7 +2109,7 @@ GAOLDCC6:
 	RenderSprites:
 		Palette: player
 	Health:
-		HP: 1000
+		HP: 100000
 	RenderSprites:
 		-Palette: player
 	Explodes:
@@ -2138,7 +2138,7 @@ WELL:
 		Amount: 100
 		CaptureAmount: 500
 	Health:
-		HP: 1000
+		HP: 100000
 	RenderSprites:
 		-Palette: player
 	Explodes:
@@ -2161,7 +2161,7 @@ GASAND:
 		Name: Sandbags
 		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
 	Health:
-		HP: 250
+		HP: 25000
 	Armor:
 		Type: Light
 	LineBuild:
@@ -2190,7 +2190,7 @@ GASPOT:
 	Armor:
 		Type: wood
 	Health:
-		HP: 400
+		HP: 40000
 	RevealsShroud:
 		Range: 6c0
 	WithIdleOverlay@LIGHTS:
@@ -2209,7 +2209,7 @@ GALITE:
 	-WithMakeAnimation:
 	-WithDeathAnimation:
 	Health:
-		HP: 600
+		HP: 60000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -2244,7 +2244,7 @@ GAICBM:
 		Name: Deployed ICBM
 	-GivesBuildableArea:
 	Health:
-		HP: 400
+		HP: 40000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -2267,7 +2267,7 @@ NAMNTK:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 1500
+		HP: 150000
 	RenderSprites:
 		Palette: player
 	WithIdleOverlay@LIGHTS:
@@ -2285,7 +2285,7 @@ NTPYRA:
 	Armor:
 		Type: heavy
 	Health:
-		HP: 1500
+		HP: 150000
 	RenderSprites:
 		Palette: player
 	WithIdleOverlay@LIGHTS:
@@ -2303,7 +2303,7 @@ UFO:
 	Tooltip:
 		Name: Scrin Ship
 	Health:
-		HP: 1000
+		HP: 100000
 	Armor:
 		Type: Heavy
 	EditorTilesetFilter:
@@ -2323,7 +2323,7 @@ EGGS:
 	RevealsShroud:
 		Range: 4c0
 	Health:
-		HP: 750
+		HP: 75000
 	RenderSprites:
 		Palette: playermut
 	Targetable:

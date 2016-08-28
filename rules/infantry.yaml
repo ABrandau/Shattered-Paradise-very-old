@@ -13,7 +13,7 @@ GDIE1:
 		Name: Marine
 		Description: General-Purpose Infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Health:
-		HP: 120
+		HP: 12000
 	Mobile:
 		Speed: 60
 	Armament@PRIMARY:
@@ -42,7 +42,7 @@ JUMPJET:
 	Mobile:
 		Speed: 50
 	Health:
-		HP: 160
+		HP: 16000
 	Armor:
 		Type: none
 	Passenger:
@@ -70,7 +70,7 @@ GRENADIER:
 		Name: Grenadier
 		Description: Support Infantry armed with grenade launchers.\nCan explode violently when killed.\n  Strong vs Buildings, Infantry, Light Vehicles.\n  Weak vs Vehicles, Aircraft
 	Health:
-		HP: 90
+		HP: 9000
 	Mobile:
 		Speed: 50
 	Explodes:
@@ -91,7 +91,7 @@ GRENADIER:
 MEDIC:
 	Inherits: ^Soldier
 	Valued:
-		Cost: 400
+		Cost: 300
 	Tooltip:
 		Name: Medic
 		Description: Heals nearby infantry.\n  Unarmed
@@ -102,9 +102,9 @@ MEDIC:
 	Voiced:
 		VoiceSet: Medic
 	Mobile:
-		Speed: 56
+		Speed: 60
 	Health:
-		HP: 70
+		HP: 7000
 	Crushable:
 		CrushSound: squishy2.aud
 	AutoTarget:
@@ -137,7 +137,7 @@ EAGLEGUARD:
 	Mobile:
 		Speed: 46
 	Health:
-		HP: 275
+		HP: 27500
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark
 	-DamagedByTerrain:
@@ -170,7 +170,7 @@ ALTNODE1:
 		Name: Flame Warrior
 		Description: Light infantry variant.\nCarries a Flamethrower.\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft
 	Health:
-		HP: 100
+		HP: 10000
 	Mobile:
 		Speed: 70
 	Armament@SECONDARY:
@@ -196,7 +196,7 @@ CRUSADER:
 		Name: Crusader
 		Description: Anti Armour Infantry, equiped with a Rocket\nlauncher backpack, can fire while moving.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry.
 	Health:
-		HP: 110
+		HP: 11000
 	Mobile:
 		Speed: 65
 	Armament@PRIMARY:
@@ -227,7 +227,7 @@ TEMPLAR:
 		Name: Templar
 		Description: Heavy weapons Infantry.\nHeals on Tiberium.\nDeals full damage to all units.\n  Weak vs Anti infantry weapons, Aircraft.
 	Health:
-		HP: 200
+		HP: 20000
 	Mobile:
 		Speed: 55
 	Targetable:
@@ -258,7 +258,7 @@ MHIJACK:
 		VoiceSet: Spy
 	-Crushable:
 	Health:
-		HP: 110
+		HP: 11000
 	Targetable:
 		TargetTypes: Ground, Infantry, MindControlInmune
 	Mobile:
@@ -297,7 +297,7 @@ BHS:
 	Targetable:
 		TargetTypes: Ground, Infantry, MindControlInmune
 	Health:
-		HP: 190
+		HP: 19000
 	Mobile:
 		Speed: 80
 	Voiced:
@@ -341,7 +341,7 @@ MARAUDER:
 	Voiced:
 		VoiceSet: Rocket
 	Health:
-		HP: 90
+		HP: 9000
 	AutoTarget:
 		ScanRadius: 8
 	Mobile:
@@ -446,7 +446,7 @@ E3:
 	Voiced:
 		VoiceSet: Rocket
 	Health:
-		HP: 95
+		HP: 9500
 	Mobile:
 		Speed: 50
 	Armament@PRIMARY:
@@ -493,7 +493,7 @@ E2:
 	Mobile:
 		Speed: 56
 	Health:
-		HP: 80
+		HP: 8000
 	-AutoTarget:
 	Passenger:
 		PipType: Yellow
@@ -530,7 +530,7 @@ MUTFIEND:
 	Valued:
 		Cost: 400
 	Health:
-		HP: 280
+		HP: 28000
 		Shape: Circle
 			Radius: 213
 	-Crushable:
@@ -581,7 +581,7 @@ SEER:
 	Voiced:
 		VoiceSet: Umagon
 	Health:
-		HP: 110
+		HP: 11000
 	Mobile:
 		Speed: 75
 	-AutoTarget:
@@ -615,7 +615,7 @@ AWARRIOR:
 		VoiceSet: Rocket
 	-UpdatesPlayerStatistics:
 	Health:
-		HP: 150
+		HP: 15000
 	Mobile:
 		Speed: 68
 	Targetable:
@@ -659,7 +659,7 @@ PSYKER:
 	Voiced:
 		VoiceSet: Umagon
 	Health:
-		HP: 150
+		HP: 15000
 	Mobile:
 		Speed: 75
 	Targetable:
@@ -695,7 +695,7 @@ shark:
 	GivesExperience:
 		Experience: 165
 	Health:
-		HP: 85
+		HP: 8500
 	Mobile:
 		Speed: 78
 		Voice: Move
@@ -747,7 +747,7 @@ LEGIO:
 		Name: Legionnaire
 		Description: Scrin Frontile trooper. Resistant\nto damage. Cannot be crushed.\nIts weapon damage spreads to nearby cells.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry
 	Health:
-		HP: 150
+		HP: 15000
 	-Crushable:
 	FreeActor@1:
 		Actor: legioclone
@@ -802,7 +802,7 @@ SHAPESHIFTER:
 	Mobile:
 		Speed: 65
 	Health:
-		HP: 80
+		HP: 8000
 	Passenger:
 		PipType: Yellow
 	EngineerRepair:
@@ -832,7 +832,7 @@ COLOSSI:
 	Selectable:
 		Bounds: 26,30,0,-10
 	Health:
-		HP: 440
+		HP: 44000
 	Mobile:
 		Speed: 60
 		SharesCell: False
@@ -899,7 +899,7 @@ STALKER:
 		Name: Stalker
 		Description: Disruption infantry\nConfuses enemies for shorter periods of time.\nchanging their alegiance.\nCan move through water.\n  Unarmed.
 	Health:
-		HP: 130
+		HP: 13000
 	Mobile:
 		Speed: 80
 		TerrainSpeeds:
@@ -934,7 +934,7 @@ FLOAT:
 		Name: Purifier
 		Description: Recon unit, suited for harassment.\nCan move through water and Cliffs.\n  Strong vs Infantry, Buildings\n  Weak vs Tanks, Aircraft
 	Health:
-		HP: 180
+		HP: 18000
 	FreeActor@1:
 		Actor: floatclone
 	FreeActor@2:
@@ -990,7 +990,7 @@ BUG:
 	Selectable:
 		Bounds: 26,30,0,-10
 	Health:
-		HP: 220
+		HP: 22000
 	Mobile:
 		Speed: 60
 	SpawnActorOnDeath@conversion:
@@ -1084,7 +1084,7 @@ CABSENTRY:
 		HealIfBelow: 200
 	-SelfHealing@Scrin:
 	Health:
-		HP: 150
+		HP: 15000
 	Passenger:
 	Armament@primary:
 		Weapon: SentryGun
@@ -1127,7 +1127,7 @@ CYBORG:
 	Mobile:
 		Speed: 45
 	Health:
-		HP: 250
+		HP: 25000
 	Passenger:
 	Armament:
 		Weapon: CyborgVulcan
@@ -1168,7 +1168,7 @@ PDRONE:
 			BlueTiberium: 100
 			Veins: 100
 	Health:
-		HP: 110
+		HP: 11000
 	Passenger:
 	WithInfantryBody:
 		AttackSequence: shoot
@@ -1233,7 +1233,7 @@ SWARMLING:
 	Mobile:
 		Speed: 60
 	Health:
-		HP: 80
+		HP: 8000
 	Passenger:
 		PipType: Yellow
 	EngineerRepair:
@@ -1279,7 +1279,7 @@ MOTH:
 		UpgradeTypes: notmobile
 		UpgradeMaxEnabledLevel: 0
 	Health:
-		HP: 200
+		HP: 20000
 	Passenger:
 	SelectionDecorations:
 		VisualBounds: 22,32,-1,-9
@@ -1353,7 +1353,7 @@ REAPERCAB:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
 	Health:
-		HP: 300
+		HP: 30000
 	Voiced:
 		VoiceSet: CyborgReap
 	Passenger:
@@ -1406,7 +1406,7 @@ GLAD:
 		Speed: 56
 		SharesCell: False
 	Health:
-		HP: 550
+		HP: 55000
 	Passenger:
 	Armament@primary:
 		Weapon: GLAD120mm
@@ -1453,7 +1453,7 @@ CYC2:
 		UncloakSound: cloak5.aud
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
 	Health:
-		HP: 300
+		HP: 30000
 	Passenger:
 	Targetable:
 		TargetTypes: Ground, Infantry, MindControlInmune
@@ -1478,7 +1478,7 @@ WORKER:
 		Name: Worker Unit
 		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Health:
-		HP: 90
+		HP: 9000
 	Mobile:
 		Speed: 56
 	Voiced:
@@ -1510,7 +1510,7 @@ PALADIN2:
 		TurnSpeed: 5
 		Speed: 56
 	Health:
-		HP: 100
+		HP: 10000
 	Armor:
 		Type: Heavy
 	Voiced:
@@ -1561,7 +1561,7 @@ cybdog:
 	Mobile:
 		Speed: 65
 	Health:
-		HP: 300
+		HP: 15000
 	Passenger:
 	RevealsShroud:
 		Range: 5c0

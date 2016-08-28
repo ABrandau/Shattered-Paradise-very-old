@@ -2,7 +2,7 @@ MineExplode:
 	Inherits: ^ExploDefaults
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 150
+		Damage: 15000
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 		InvalidTargets: Mine
@@ -14,7 +14,7 @@ ReactorExplode:
 	Inherits: ^ExploDefaults
 	Warhead@1Dam: SpreadDamage
 		Spread: 3c0
-		Damage: 500
+		Damage: 50000
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 		Versus:
@@ -34,7 +34,7 @@ SmallPlaneExplode:
 	Inherits: ^ExploDefaults
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
-		Damage: 25
+		Damage: 2500
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			None: 90
@@ -61,7 +61,7 @@ UnitExplode:
 	Inherits: ^ExploDefaults
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
-		Damage: 80
+		Damage: 8000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			None: 90
@@ -77,7 +77,7 @@ BlackHandExplode:
 	Inherits: ^ExploDefaults
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
-		Damage: 80
+		Damage: 8000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			None: 90
@@ -99,7 +99,7 @@ GasCloudDeathWeapon:
 	Inherits: ^MeleeWarhead
 	Warhead@1Dam: SpreadDamage
 		Spread: 200
-		Damage: 40
+		Damage: 4000
 		InvalidTargets: Veinhole
 		Versus:
 		DamageTypes: TiberiumDeathStrong
@@ -112,7 +112,7 @@ GasCloudDeathWeapon2:
 VeinholeExplosion:
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
-		Damage: 50
+		Damage: 5000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			None: 90
@@ -130,7 +130,7 @@ ScrinUnitExplode:
 	Inherits: ^ExploDefaults
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
-		Damage: 40
+		Damage: 4000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			None: 90
@@ -147,7 +147,7 @@ ScrinUnitExplode2:
 	Inherits: ^ExploDefaults
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
-		Damage: 50
+		Damage: 5000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:
 			None: 90
@@ -163,7 +163,7 @@ ScrinUnitExplode2:
 UnitExplodeSmall:
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
-		Damage: 40
+		Damage: 4000
 		Versus:
 			None: 90
 			Wood: 75
@@ -177,7 +177,7 @@ UnitExplodeSmall:
 TiberiumExplosion:
 	Warhead@1Dam: SpreadDamage
 		Spread: 9
-		Damage: 10
+		Damage: 1000
 		Versus:
 			None: 90
 			Wood: 75
@@ -194,7 +194,7 @@ TiberiumExplosion:
 ZombieExplosion:
 	Warhead@1Dam: SpreadDamage
 		Spread: 9
-		Damage: 10
+		Damage: 1000
 		Versus:
 			None: 90
 			Wood: 75

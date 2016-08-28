@@ -10,7 +10,7 @@ FireballLauncher:
 	BurstDelay: 5
 	Warhead@1Dam: SpreadDamage
 		Spread: 341
-		Damage: 25
+		Damage: 2500
 		Versus:
 			None: 600
 			Wood: 148
@@ -41,7 +41,7 @@ Hellfire:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 85
-		Damage: 30
+		Damage: 3000
 		ValidTargets: Ground
 		Versus:
 			None: 30
@@ -83,7 +83,7 @@ CrabAcid:
 	BurstDelay: 5
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 10
+		Damage: 1000
 		ValidTargets: Ground, Vehicle, Infantry, Building
 		InvalidTargets: NeutralTibCritter
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong
@@ -127,7 +127,7 @@ LTrail:
 	Warhead@1Dam: SpreadDamage
 		Range: 0, 32
 		Falloff: 100, 100
-		Damage: 150
+		Damage: 15000
 		InfDeath: 6
 		AffectsParent: false
 		ValidStances: Neutral, Enemy
@@ -141,7 +141,7 @@ LTrail:
 	Warhead@2Dam: SpreadDamage
 		Range: 0, 32
 		Falloff: 50, 50 # Only does half damage to friendly units
-		Damage: 150
+		Damage: 15000
 		InfDeath: 6
 		AffectsParent: false
 		ValidStances: Ally

@@ -16,7 +16,7 @@ SMECH:
 		TurnSpeed: 5
 		Speed: 99
 	Health:
-		HP: 175
+		HP: 17500
 	Armor:
 		Type: light
 	AttackFrontal:
@@ -53,7 +53,7 @@ MMCH:
 		Speed: 56
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 400
+		HP: 40000
 	Armor:
 		Type: Heavy
 	BodyOrientation:
@@ -96,7 +96,7 @@ APC:
 		TerrainSpeeds:
 			Water: 80
 	Health:
-		HP: 200
+		HP: 20000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -154,7 +154,7 @@ HVR:
 			BlueTiberium: 100
 			Veins: 100
 	Health:
-		HP: 270
+		HP: 27000
 	Armor:
 		Type: Wood
 	Armament:
@@ -183,7 +183,7 @@ JUGGER:
 		TurnSpeed: 6
 		Speed: 65
 	Health:
-		HP: 210
+		HP: 21000
 	Armor:
 		Type: Light
 	AttackFrontal:
@@ -231,7 +231,7 @@ SONIC:
 			Veins: 56
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 450
+		HP: 45000
 	Armor:
 		Type: Heavy
 	Armor@disruptor:
@@ -265,7 +265,7 @@ HMEC:
 		Speed: 42
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 800
+		HP: 80000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -307,7 +307,7 @@ BGGY:
 		Speed: 142
 		Crushes: crate
 	Health:
-		HP: 200
+		HP: 20000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -343,7 +343,7 @@ TTNK:
 		Speed: 85
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 350
+		HP: 35000
 	Armor:
 		Type: Light
 		UpgradeTypes: undeployed
@@ -423,7 +423,7 @@ BIKE:
 		Speed: 180
 		Crushes: crate
 	Health:
-		HP: 70
+		HP: 7000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -448,7 +448,7 @@ SAPC:
 		TurnSpeed: 7
 		Speed: 100
 	Health:
-		HP: 175
+		HP: 17500
 	Armor:
 		Type: Light
 	Cargo:
@@ -471,7 +471,7 @@ REPAIR:
 		Name: Mobile Repair Vehicle
 		Description: Repairs nearby vehicles.\n  Unarmed
 	Health:
-		HP: 200
+		HP: 20000
 	Mobile:
 		Speed: 85
 		TurnSpeed: 5
@@ -502,7 +502,7 @@ SUBTANK:
 		Speed: 81
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 300
+		HP: 30000
 	Armor:
 		Type: Heavy
 	Armament:
@@ -528,7 +528,7 @@ ARMH:
 		BuildPaletteOrder: 16
 		Prerequisites: ~naweap, natech
 	Health:
-		HP: 160
+		HP: 16000
 	Armor:
 		Type: Wood
 	Mobile:
@@ -581,7 +581,7 @@ STNK:
 		Speed: 100
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 310
+		HP: 31000
 	Armor:
 		Type: Light
 	Cloak@cloakgenerator:
@@ -621,7 +621,7 @@ Limped:
 		Name: Toxin Drone
 		Description: Hover Drone, cloaks when deployed.\nSpreads unsmellable gas around weakening\nnearby units.\nUnnarmed.
 	Health:
-		HP: 220
+		HP: 22000
 	Armor:
 		Type: Wood
 	Mobile:
@@ -656,7 +656,7 @@ SGEN:
 		TurnSpeed: 6
 		Speed: 80
 	Health:
-		HP: 200
+		HP: 20000
 	Armor:
 		Type: Wood
 	Transforms:
@@ -711,7 +711,7 @@ WOLF:
 		Voice: Move
 		Weight: 3
 	Health:
-		HP: 300
+		HP: 30000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -751,7 +751,7 @@ DEATHCLAW:
 		ScanRadius: 8
 		InitialStance: AttackAnything
 	Health:
-		HP: 600
+		HP: 60000
 	Armor:
 		Type: Wood
 	WithInfantryBody:
@@ -787,7 +787,7 @@ MUTAPC:
 		Speed: 150
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 190
+		HP: 19000
 	Armor:
 		Type: Light
 	Armament:
@@ -832,7 +832,7 @@ MUTTANK:
 		Speed: 110
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 250
+		HP: 25000
 	Armor:
 		Type: Heavy
 	Armament:
@@ -868,7 +868,7 @@ MUTQUAD:
 		Speed: 75
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 300
+		HP: 30000
 	Armor:
 		Type: Light
 	RenderVoxels:
@@ -909,7 +909,7 @@ MLRS:
 		Speed: 90
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 150
+		HP: 15000
 	Armor:
 		Type: Wood
 	RenderVoxels:
@@ -947,7 +947,7 @@ HVRTRUK3:
 		TurnSpeed: 5
 		Speed: 100
 	Health:
-		HP: 125
+		HP: 12500
 	Armor:
 		Type: Wood
 	Explodes:
@@ -978,7 +978,7 @@ FORTRESS:
 		TerrainSpeeds:
 			Water: 60
 	Health:
-		HP: 500
+		HP: 50000
 	Armor:
 		Type: Heavy
 	RenderVoxels:
@@ -1040,7 +1040,7 @@ SCRHARV:
 	Mobile:
 		Speed: 74
 	Health:
-		HP: 1000
+		HP: 100000
 	Armor:
 		Type: Heavy
 	-GainsExperience:
@@ -1074,7 +1074,7 @@ SCRSCORPION:
 		Speed: 91
 		Crushes: crate
 	Health:
-		HP: 300
+		HP: 30000
 	Armor:
 		Type: Light
 	AttackFrontal:
@@ -1102,7 +1102,7 @@ SCRMBT:
 		Name: Hover Tank
 		Description: Light Tank, good for scouting, deals damage\nover an area.\n Strong vs Light, heavy armor\n  Weak vs Infantry, Aircraft
 	Health:
-		HP: 300
+		HP: 30000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -1114,7 +1114,6 @@ SCRMBT:
 		LocalOffset: 250,0,900
 		MuzzleSequence: muzzle
 	AttackTurreted:
-	# WithMuzzleOverlay:
 	WithSpriteTurret:
 	AutoTarget:
 	RenderSprites:
@@ -1136,7 +1135,7 @@ SCRGLYDER2:
 		Name: Glider
 		Description: Specialized weapons platform.\nCan vary from a ground version and aerial version.\nThe aerial version attacks ground units and vice versa.\n Strong vs Armor.\n  Weak vs Light units.
 	Health:
-		HP: 150
+		HP: 15000
 	Armor:
 		Type: Wood
 	Mobile:
@@ -1172,7 +1171,7 @@ SCRRECHARGER:
 		Speed: 91
 		Crushes: crate
 	Health:
-		HP: 300
+		HP: 30000
 	Armor:
 		Type: Wood
 	WithRangeCircle:
@@ -1214,7 +1213,7 @@ TRIPOD:
 		Speed: 80
 		Crushes: crate
 	Health:
-		HP: 400
+		HP: 40000
 	Armor:
 		Type: Light
 	AttackFrontal:
@@ -1245,7 +1244,7 @@ SCRDRONEC:
 		Name: Drone Carrier
 		Description: Hover vehicle designed for scouting and harassment.\nCloaked, doesn't uncloak when attacking.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Health:
-		HP: 240
+		HP: 24000
 	Armor:
 		Type: Light
 	Mobile:
@@ -1305,19 +1304,10 @@ DINO:
 		TurnSpeed: 12
 		Speed: 130
 		Crushes: crate
-		TerrainSpeeds:
-			Clear: 85
-			Road: 100
-			Rail: 100
-			DirtRoad: 90
-			Rough: 85
-			Tiberium: 85
-			BlueTiberium: 85
-			Veins: 85
 	Voiced:
 		VoiceSet: Limpet
 	Health:
-		HP: 225
+		HP: 22500
 	Armor:
 		Type: wood
 	BodyOrientation:
@@ -1350,7 +1340,7 @@ CENTURION:
 		Speed: 65
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 700
+		HP: 70000
 	Voiced:
 		VoiceSet: Cyborg
 	Armor:
@@ -1413,7 +1403,7 @@ GRINDER:
 		TurnSpeed: 8
 		Speed: 100
 	Health:
-		HP: 350
+		HP: 35000
 	Armor:
 		Type: Light
 	Voiced:
@@ -1447,7 +1437,7 @@ ECM:
 	Voiced:
 		VoiceSet: Limpet
 	Health:
-		HP: 250
+		HP: 25000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -1489,7 +1479,7 @@ CABAPC:
 	Voiced:
 		VoiceSet: Limpet
 	Health:
-		HP: 400
+		HP: 40000
 	Armor:
 		Type: Wood
 	Turreted:
@@ -1528,7 +1518,7 @@ SPIDERARTY:
 	Voiced:
 		VoiceSet: Limpet
 	Health:
-		HP: 350
+		HP: 35000
 	Armor:
 		Type: Light
 	BodyOrientation:
@@ -1567,7 +1557,7 @@ PALADIN:
 		Speed: 60
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 1000
+		HP: 100000
 	Voiced:
 		VoiceSet: Cyborg
 	Armor:

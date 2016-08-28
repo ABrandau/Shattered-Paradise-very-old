@@ -6,7 +6,7 @@ SharkJump:
 	InvalidTargets: Razorshark
 	Warhead@1Dam: SpreadDamage
 		Spread: 50
-		Damage: 20
+		Damage: 2000
 		ValidTargets: Infantry
 		InvalidTargets: Razorshark
 		DamageTypes: BulletDeath
@@ -27,7 +27,7 @@ LegioNeedler:
 		RangeLimit: 15c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 300
-		Damage: 20
+		Damage: 2000
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -47,7 +47,7 @@ ColossiTesla:
 		Palette: apolbluealpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 28
+		Damage: 2800
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@op: FireShrapnel
@@ -61,7 +61,7 @@ ColossiTeslaSplash:
 	Projectile: TeslaZap
 		Palette: apolbluealpha
 	Warhead@1Dam: SpreadDamage
-		Damage: 14
+		Damage: 1400
 	-Warhead@op: FireShrapnel
 
 ColossiBlast:
@@ -71,7 +71,7 @@ ColossiBlast:
 	Warhead@1Dam: SpreadDamage
 		Falloff: 100, 100, 100, 100
 		Spread: 1500
-		Damage: 8
+		Damage: 800
 		Versus:
 			None: 100
 			Wood: 30
@@ -101,7 +101,7 @@ ColossiBlastTesla:
 		Palette: apolbluealpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 1
+		Damage: 100
 		Versus:
 		DamageTypes: FireDeath
 	Warhead@op: FireShrapnel
@@ -123,7 +123,7 @@ FloatTesla:
 		Palette: apolbluealpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 28
+		Damage: 2800
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@op: FireShrapnel
@@ -149,7 +149,7 @@ StalkerSteal:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
-		Damage: 1
+		Damage: 100
 		ValidTargets: Infantry, Vehicle
 		Versus:
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
@@ -179,7 +179,7 @@ ScorpAcid:
 	BurstDelay: 4
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 13
+		Damage: 1300
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, TiberiumDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
@@ -213,7 +213,7 @@ ScrMbtCannon:
 	Warhead@1Dam: SpreadDamage
 		Range: 0, 32
 		Falloff: 100, 100
-		Damage: 15
+		Damage: 1500
 		AffectsParent: false
 		Versus:
 			None: 25
@@ -238,7 +238,7 @@ Glyder2Cannon:
 		Palette: apblue
 	Warhead@1Dam: SpreadDamage
 		Spread: 350
-		Damage: 20
+		Damage: 2000
 		ValidTargets: Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -267,7 +267,7 @@ TripodLaser:
 		Palette: apolgreenalpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 40
+		Damage: 4000
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 	Warhead@op: FireShrapnel
 		Weapon: TripodProton
@@ -290,7 +290,7 @@ TripodProton:
 		RangeLimit: 35
 	Warhead@1Dam: SpreadDamage
 		Spread: 90
-		Damage: 17
+		Damage: 1700
 		ValidTargets: Ground
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -324,7 +324,7 @@ StormRiderBlast:
 		Image: blueplasma
 	Warhead@1Dam: SpreadDamage
 		Spread: 171
-		Damage: 30
+		Damage: 3000
 		ValidTargets: Ground
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -351,7 +351,7 @@ StormRiderBlastAA:
 		Image: blueplasma
 	Warhead@1Dam: SpreadDamage
 		Spread: 171
-		Damage: 25
+		Damage: 2500
 		ValidTargets: Air
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -375,7 +375,7 @@ Glyder1Cannon:
 		Palette: apblue
 	Warhead@1Dam: SpreadDamage
 		Spread: 100
-		Damage: 18
+		Damage: 1800
 		ValidTargets: Ground
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -410,7 +410,7 @@ BattleshipCannon:
 		Angle: 15
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 25
+		Damage: 2500
 		ValidTargets: Ground, Infantry, Vehicle, Air, water
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -466,7 +466,7 @@ BattleshipRocket:
 		ContrailColor: 0B124D
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 40
+		Damage: 4000
 		ValidTargets: Ground, Infantry, Vehicle, Air, water
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -501,7 +501,7 @@ DestroyerCannon:
 		Angle: 62
 	Warhead@1Dam: SpreadDamage
 		Spread: 400
-		Damage: 150
+		Damage: 15000
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: scrinpulse2
@@ -557,7 +557,7 @@ WyvermBlast:
 		Image: blueplasma
 	Warhead@1Dam: SpreadDamage
 		Spread: 171
-		Damage: 40
+		Damage: 4000
 		ValidTargets: Ground, Air
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -619,7 +619,7 @@ NeedlerAcid:
 	BurstDelay: 4
 	Warhead@1Dam: SpreadDamage
 		Spread: 80
-		Damage: 12
+		Damage: 1200
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath, TiberiumDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
@@ -643,7 +643,7 @@ TractorBeam:
 		Palette: pips
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 6
+		Damage: 600
 		ValidTargets: Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@TractorStop: GrantUpgrade
@@ -667,7 +667,7 @@ DronePlane:
 		Angle: 50
 	Warhead@1Dam: SpreadDamage
 		Spread: 150
-		Damage: 30
+		Damage: 3000
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect

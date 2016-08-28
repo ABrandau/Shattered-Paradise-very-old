@@ -3,6 +3,7 @@
 	UpdatesPlayerStatistics:
 	CombatDebugOverlay:
 	GivesExperience:
+		PlayerExperienceModifier: 1
 	ScriptTriggers:
 	UpgradeManager:
 	Huntable:
@@ -170,7 +171,7 @@
 ^VentilatorBuff: #Only affects infantry.
 	SelfHealing@VentilatorBuff:
 		PercentageStep: 1
-		Step: 1
+		Step: 0
 		Delay: 100
 		UpgradeTypes: VentilatorBuff
 		HealIfBelow: 200
@@ -406,7 +407,7 @@
 	Inherits: ^BasicBuilding
 	-UpdatesPlayerStatistics:
 	Health:
-		HP: 900
+		HP: 90000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -430,7 +431,7 @@
 	Armor:
 		Type: heavy
 	Health:
-		HP: 400
+		HP: 40000
 	EditorTilesetFilter:
 		RequireTilesets: TEMPERATE
 
@@ -515,7 +516,7 @@
 		UncloakSound: cloak5.aud
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
 	Health:
-		HP: 50
+		HP: 5000
 		Shape: Circle
 			Radius: 128
 	Armor:
@@ -1067,7 +1068,8 @@
 		RearmBuildings: gahpad, nahpad, muair
 		LandWhenIdle: no
 		Voice: Move
-		AltitudeVelocity: 250
+		CruiseAltitude: 2560
+		# AltitudeVelocity: 250
 	Passenger:
 		CargoType: Aircraft
 	Voiced:
@@ -1126,7 +1128,7 @@
 		AirborneUpgrades: airborne
 		CruisingUpgrades: cruising
 	Health:
-		HP: 280
+		HP: 28000
 	Armor:
 		Type: Heavy
 	HiddenUnderFog:
@@ -1333,7 +1335,7 @@
 		UnloadVoice: Unload
 		LoadingUpgrades: notmobile
 	Health:
-		HP: 100
+		HP: 10000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -1397,7 +1399,7 @@
 	Valued:
 		Cost: 250
 	Health:
-		HP: 350
+		HP: 35000
 	Armor:
 		Type: Heavy
 	LineBuildNode:

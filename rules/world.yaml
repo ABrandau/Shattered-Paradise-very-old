@@ -111,7 +111,6 @@ World:
 	ResourceLayer:
 	CustomTerrainDebugOverlay:
 	ResourceClaimLayer:
-	PathfinderDebugOverlay:
 	WarheadDebugOverlay:
 	MapCreeps:
 	SpawnMapActors:

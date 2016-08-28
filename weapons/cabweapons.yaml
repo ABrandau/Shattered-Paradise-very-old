@@ -11,7 +11,7 @@ CyborgVulcan:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 12
+		Damage: 1200
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -33,7 +33,7 @@ SentryGun:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 60
-		Damage: 6
+		Damage: 600
 		DamageTypes: Prone50Percent, TriggerProne, CabalDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn
@@ -63,7 +63,7 @@ ReaperWeb:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 5
+		Damage: 500
 		ValidTargets: Infantry
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -129,7 +129,7 @@ ReaperScytheFalling:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 70
+		Damage: 7000
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -150,7 +150,7 @@ ReaperScytheFalling:
 		
 ProcessingHuman:
 	Inherits: ^RifleWarhead
-	ReloadDelay: 50
+	ReloadDelay: 75
 	Range: 1c512
 	Report: biggun1.aud
 	ValidTargets: Infantry
@@ -158,7 +158,7 @@ ProcessingHuman:
 		Speed: 5c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 60
+		Damage: 6000
 		ValidTargets: Infantry
 		DamageTypes: Prone50Percent, TriggerProne, CabalDeath
 		
@@ -199,7 +199,7 @@ LurkerHit:
 		MaximumLaunchSpeed: 213
 	Warhead@1Dam: SpreadDamage
 		Spread: 120
-		Damage: 40
+		Damage: 4000
 		Versus:
 			Worker: 25
 		DamageTypes: Prone50Percent, TriggerProne, CabalDeath
@@ -223,7 +223,7 @@ CyCannon:
 		Image: TORPEDO
 	Warhead@1Dam: SpreadDamage
 		Spread: 43
-		Damage: 120
+		Damage: 12000
 		ValidTargets: Ground
 		Versus:
 			None: 350
@@ -249,14 +249,14 @@ CyCannon:
 ########################################################################				
 WorkerMinigun:
 	Inherits: ^RifleWarhead
-	ReloadDelay: 17
+	ReloadDelay: 50
 	Range: 4c0
 	Report: infgun3.aud, gostgun1.aud, slvkgun1.aud
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 5
+		Damage: 500
 		DamageTypes: Prone70Percent, TriggerProne
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -268,7 +268,7 @@ WorkerMinigun:
 
 Dogzooka:
 	Inherits: ^RocketWarhead
-	ReloadDelay: 50
+	ReloadDelay: 75
 	Range: 6c0
 	MinRange: 0c512
 	Report: rketinf1.aud
@@ -285,7 +285,7 @@ Dogzooka:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 10
+		Damage: 1000
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -325,7 +325,7 @@ SeekerBazooka:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 40
+		Damage: 4000
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -355,7 +355,7 @@ CenturionVulcan:
 		Inaccuracy: 0c512
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 20
+		Damage: 2000
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -374,7 +374,7 @@ TermitaGrinder:
 		Speed: 5c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 35
+		Damage: 3500
 		Versus:
 		DamageTypes: Prone100Percent, TriggerProne, CabalDeathCrate
 	Warhead@2Eff: CreateEffect
@@ -405,7 +405,7 @@ DevourerShell:
 		RangeLimit: 25
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 30
+		Damage: 3000
 		Versus:
 			Worker: 25
 		ValidTargets: Ground, Vehicle, Infantry, water
@@ -461,7 +461,7 @@ PalaLazor:
 		BeamDuration: 7
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 60
+		Damage: 6000
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 
 ########################################################################
@@ -479,7 +479,7 @@ WaspLasor:
 		Color: 0dc7b8#0080FFC8				
 	Warhead@1Dam: SpreadDamage
 		Spread: 125
-		Damage: 12
+		Damage: 1200
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 		ValidTargets: Ground, Air
 		
@@ -504,7 +504,7 @@ WaspBazooka:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 20
+		Damage: 2000
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -540,7 +540,7 @@ BasiliskProton:
 		RangeLimit: 35
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 25
+		Damage: 2500
 		ValidTargets: Ground
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -573,7 +573,7 @@ BasiliskBomb:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 0c400
-		Damage: 180
+		Damage: 18000
 		ValidTargets: Ground
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
@@ -608,7 +608,7 @@ SentryTurretGun:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 5
+		Damage: 500
 		Versus:
 			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
@@ -640,7 +640,7 @@ CTurretCannon:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 25
+		Damage: 2500
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: medium_clsn
@@ -671,7 +671,7 @@ BlasterProton:
 		RangeLimit: 35
 	Warhead@1Dam: SpreadDamage
 		Spread: 300
-		Damage: 25
+		Damage: 2500
 		ValidTargets: Ground, Vehicle, Infantry, water
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
@@ -707,7 +707,7 @@ AARail:
 	Warhead@1Dam: SpreadDamage
 		Range: 0, 32
 		Falloff: 100, 100
-		Damage: 20
+		Damage: 2000
 		InfDeath: 6
 		ValidTargets: Air
 		AffectsParent: false

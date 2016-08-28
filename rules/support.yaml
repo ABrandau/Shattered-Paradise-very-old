@@ -14,7 +14,7 @@ GAWALL:
 		Name: Concrete Wall
 		Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
 	Health:
-		HP: 300
+		HP: 30000
 	Armor:
 		Type: Concrete
 	RenderSprites:
@@ -36,16 +36,12 @@ GACTWR:
 	Tooltip:
 		Name: Component Tower
 		Description: Modular tower for base defenses.
-	# Buildable:
-		# Queue: Defense
-		# BuildPaletteOrder: 30
-		# Prerequisites: gapile, ~structures.gdi
 	Building:
 	Selectable:
 		Bounds: 48, 36, 0, -6
 	DisabledOverlay:
 	Health:
-		HP: 500
+		HP: 50000
 	Armor:
 		Type: Light
 	BlocksProjectiles:
@@ -152,7 +148,7 @@ GAVULC:
 	DisabledOverlay:
 	RequiresPower:
 	Health:
-		HP: 300
+		HP: 30000
 	Armor:
 		Type: Light
 	BlocksProjectiles:
@@ -208,7 +204,7 @@ GAROCK:
 	Selectable:
 		Bounds: 48, 36, 0, -6
 	Health:
-		HP: 500
+		HP: 50000
 	Armor:
 		Type: Light
 	BlocksProjectiles:
@@ -260,7 +256,7 @@ GACSAM:
 	Selectable:
 		Bounds: 48, 36, 0, -6
 	Health:
-		HP: 450
+		HP: 45000
 	Armor:
 		Type: Light
 	BlocksProjectiles:
@@ -351,7 +347,7 @@ REPAIRTUR:
 	RequiresPower:
 	DisabledOverlay:
 	Health:
-		HP: 500
+		HP: 50000
 	Armor:
 		Type: Light
 	BodyOrientation:
@@ -412,7 +408,7 @@ GAFIRE:
 	Selectable:
 		Bounds: 110, 60, 3, -4
 	Health:
-		HP: 500
+		HP: 50000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -449,7 +445,7 @@ GUARDIANDEP:
 	Selectable:
 		Bounds: 110, 60, 3, -4
 	Health:
-		HP: 650
+		HP: 65000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -488,7 +484,7 @@ NAWALL:
 		Name: NOD Wall
 		Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
 	Health:
-		HP: 300
+		HP: 30000
 	Armor:
 		Type: Concrete
 	RenderSprites:
@@ -518,7 +514,7 @@ NALASR:
 	RequiresPower:
 	DisabledOverlay:
 	Health:
-		HP: 300
+		HP: 30000
 	Armor:
 		Type: Heavy
 	Turreted:
@@ -556,7 +552,7 @@ NAOBEL:
 	RequiresPower:
 	DisabledOverlay:
 	Health:
-		HP: 600
+		HP: 60000
 	Armor:
 		Type: Heavy
 	WithMuzzleOverlay:
@@ -598,7 +594,7 @@ NASAM:
 	RequiresPower:
 	DisabledOverlay:
 	Health:
-		HP: 500
+		HP: 50000
 	Armor:
 		Type: Light
 	BodyOrientation:
@@ -626,7 +622,7 @@ MASTL:
 	Tooltip:
 		Name: Deployed Stealth Generator
 	Health:
-		HP: 250
+		HP: 25000
 	-AttackTurreted:
 	-AutoTarget:
 	-RenderRangeCircle:
@@ -659,7 +655,7 @@ DLIMPET:
 	Tooltip:
 		Name: Deployed Toxin Mine
 	Health:
-		HP: 250
+		HP: 25000
 	-AttackTurreted:
 	-AutoTarget:
 	-RenderRangeCircle:
@@ -695,7 +691,7 @@ GAARTY:
 	Tooltip:
 		Name: Deployed Artillery
 	Health:
-		HP: 300
+		HP: 30000
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -737,7 +733,7 @@ NAMISL:
 	Selectable:
 		Bounds: 75,48
 	Health:
-		HP: 1000
+		HP: 100000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -828,7 +824,7 @@ MUTWALL:
 		Name: Forgotten Wall
 		Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks\nMay make you sell your conyard\nIf you're not careful.
 	Health:
-		HP: 300
+		HP: 30000
 	-Cloak@CLOAKGENERATOR:
 	Armor:
 		Type: Concrete
@@ -883,7 +879,7 @@ MUFLAK:
 		Bounds: 40, 30, -3, -8
 	DisabledOverlay:
 	Health:
-		HP: 350
+		HP: 35000
 	Armor:
 		Type: Light
 	BodyOrientation:
@@ -932,7 +928,7 @@ MUBUNKR:
 	-EmitInfantryOnSell@cab:
 	-EmitInfantryOnSell@scr:
 	Health:
-		HP: 800
+		HP: 80000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -970,7 +966,7 @@ MUTSW1:
 	Selectable:
 		Bounds: 116, 60, 3, -6
 	Health:
-		HP: 800
+		HP: 80000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -1006,7 +1002,7 @@ MUTSW2:
 	Selectable:
 		Bounds: 42,42
 	Health:
-		HP: 800
+		HP: 80000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -1033,7 +1029,7 @@ MUWARD:
 	Tooltip:
 		Name: Forgotten Ward
 	Health:
-		HP: 50
+		HP: 5000
 	-AttackTurreted:
 	-AutoTarget:
 	-RenderRangeCircle:
@@ -1064,7 +1060,7 @@ MUMINE:
 	Selectable:
 		Priority: 1
 	Health:
-		HP: 50
+		HP: 5000
 	-AttackTurreted:
 	-AutoTarget:
 	-RenderRangeCircle:
@@ -1109,7 +1105,7 @@ MUVENTI:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
-		HP: 750
+		HP: 75000
 	Armor:
 		Type: Wood
 	RequiresPower:
@@ -1161,7 +1157,7 @@ SCRWALL:
 		Name: Energy Wall
 		Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.\nMay make you sell your conyard\nIf you're not careful.
 	Health:
-		HP: 300
+		HP: 30000
 	Armor:
 		Type: Concrete
 	BlocksProjectiles:
@@ -1223,7 +1219,7 @@ SCRNEEDLER:
 		Palette: apolbluealpha
 	DisabledOverlay:
 	Health:
-		HP: 400
+		HP: 40000
 	Armor:
 		Type: Heavy
 	BodyOrientation:
@@ -1275,7 +1271,7 @@ SCRTRACTOR:
 	RequiresPower:
 	DisabledOverlay:
 	Health:
-		HP: 350
+		HP: 35000
 	Armor:
 		Type: Light
 	BodyOrientation:
@@ -1320,7 +1316,7 @@ SCRDRONE:
 	RequiresPower:
 	DisabledOverlay:
 	Health:
-		HP: 600
+		HP: 60000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -1365,7 +1361,7 @@ SCREXTRACTOR:
 	DisabledOverlay:
 	-AutoTarget:
 	Health:
-		HP: 600
+		HP: 60000
 	Armor:
 		Type: wood
 	RevealsShroud:
@@ -1395,7 +1391,7 @@ SCRSW1:
 	Selectable:
 		Bounds: 116, 60, 3, -6
 	Health:
-		HP: 800
+		HP: 80000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -1443,7 +1439,7 @@ SCRSHIELD:
 		Weapon: EMPulseCannon
 		LocalOffset: 0,0,1800
 	Health:
-		HP: 400
+		HP: 40000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -1474,7 +1470,7 @@ SCRMINE:
 	Tooltip:
 		Name: Scrin Mine
 	Health:
-		HP: 50
+		HP: 5000
 	-AttackTurreted:
 	-AutoTarget:
 	-RenderRangeCircle:
@@ -1517,7 +1513,7 @@ CABSENTRYTURRET:
 	RequiresPower:
 	DisabledOverlay:
 	Health:
-		HP: 75
+		HP: 7500
 	-Sellable:
 	Armor:
 		Type: Wood
@@ -1557,7 +1553,7 @@ CABCANNON:
 	RequiresPower:
 	DisabledOverlay:
 	Health:
-		HP: 450
+		HP: 45000
 	Armor:
 		Type: Light
 	BodyOrientation:
@@ -1598,7 +1594,7 @@ CABRAIL:
 	RequiresPower:
 	DisabledOverlay:
 	Health:
-		HP: 350
+		HP: 35000
 	Armor:
 		Type: Light
 	BodyOrientation:
@@ -1642,7 +1638,7 @@ CABBLAST:
 	RequiresPower:
 	DisabledOverlay:
 	Health:
-		HP: 600
+		HP: 60000
 	Armor:
 		Type: Light
 	BodyOrientation:
@@ -1678,7 +1674,7 @@ CABEYE:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
-		HP: 750
+		HP: 75000
 	Armor:
 		Type: Wood
 	DetectCloaked:
@@ -1722,7 +1718,7 @@ CABSW1:
 	RequiresPower:
 	DisabledOverlay:
 	Health:
-		HP: 350
+		HP: 35000
 	Armor:
 		Type: Light
 	BodyOrientation:
@@ -1780,7 +1776,7 @@ cabobelisk:
 	RequiresPower:
 	DisabledOverlay:
 	Health:
-		HP: 350
+		HP: 35000
 	Armor:
 		Type: Light
 	BodyOrientation:

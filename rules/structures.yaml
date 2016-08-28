@@ -18,7 +18,7 @@ GAPOWR:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
-		HP: 750
+		HP: 75000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -75,7 +75,7 @@ GAPILE:
 	Selectable:
 		Bounds: 88, 48, 0, -8
 	Health:
-		HP: 800
+		HP: 80000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -129,7 +129,7 @@ GAWEAP:
 	Selectable:
 		Bounds: 154, 96, -2, -12
 	Health:
-		HP: 1300
+		HP: 130000
 	RallyPoint:
 		Offset: 4,1
 		Palette: mouse
@@ -183,7 +183,7 @@ GAHPAD:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
-		HP: 600
+		HP: 60000
 	RevealsShroud:
 		Range: 5c0
 	Exit@1:
@@ -239,7 +239,7 @@ GARADR:
 	Selectable:
 		Bounds: 96, 48, 0, -6
 	Health:
-		HP: 1000
+		HP: 100000
 	Armor:
 		Type: Wood
 	RequiresPower:
@@ -275,7 +275,7 @@ GATECH:
 		Cost: 2000
 	Tooltip:
 		Name: GDI Tech Center
-		Description: Provides access to advanced GDI technologies.
+		Description: Provides access to advanced cyborg technologies.
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	Building:
@@ -284,7 +284,7 @@ GATECH:
 	Selectable:
 		Bounds: 110, 60, 3, -4
 	Health:
-		HP: 500
+		HP: 50000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -326,7 +326,7 @@ GAPLUG:
 	WithIdleOverlay@STRIP:
 		Sequence: idle-strip
 	Health:
-		HP: 1000
+		HP: 100000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -433,7 +433,7 @@ GAWALL:
 		Name: Concrete Wall
 		Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
 	Health:
-		HP: 300
+		HP: 30000
 	Armor:
 		Type: Concrete
 	RenderSprites:
@@ -468,7 +468,7 @@ NAPOWR:
 	Selectable:
 		Bounds: 88, 48, 2, -6
 	Health:
-		HP: 750
+		HP: 75000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -505,7 +505,7 @@ NAAPWR:
 	Selectable:
 		Bounds: 100, 54, 0, -4
 	Health:
-		HP: 900
+		HP: 90000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -542,7 +542,7 @@ NAHAND:
 	Selectable:
 		Bounds: 116, 60, 3, -6
 	Health:
-		HP: 800
+		HP: 80000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -594,7 +594,7 @@ NAWEAP:
 	Selectable:
 		Bounds: 149, 80, -3, -10
 	Health:
-		HP: 1300
+		HP: 130000
 	RevealsShroud:
 		Range: 6c0
 	RallyPoint:
@@ -644,7 +644,7 @@ NAHPAD:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
-		HP: 600
+		HP: 60000
 	RevealsShroud:
 		Range: 5c0
 	Exit@1:
@@ -700,7 +700,7 @@ NARADR:
 	Selectable:
 		Bounds: 96, 48, 0, -6
 	Health:
-		HP: 1000
+		HP: 100000
 	Armor:
 		Type: Wood
 	RequiresPower:
@@ -745,7 +745,7 @@ NATECH:
 	Selectable:
 		Bounds: 86, 48, 0, -4
 	Health:
-		HP: 500
+		HP: 50000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -778,7 +778,7 @@ NATMPL:
 	Selectable:
 		Bounds: 134, 120, 12, -12
 	Health:
-		HP: 1000
+		HP: 100000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -806,7 +806,7 @@ NASTLH:
 		Footprint: xxx xxx
 		Dimensions: 3,2
 	Health:
-		HP: 600
+		HP: 60000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -848,7 +848,7 @@ NAWAST:
 	Selectable:
 		Bounds: 100, 60, 5, -5
 	Health:
-		HP: 400
+		HP: 40000
 	RevealsShroud:
 		Range: 6c0
 	TiberianSunRefinery:
@@ -891,7 +891,7 @@ MUPOWR:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
-		HP: 500
+		HP: 50000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -932,7 +932,7 @@ MURAX:
 	Selectable:
 		Bounds: 88, 48, 0, -8
 	Health:
-		HP: 800
+		HP: 80000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -980,7 +980,7 @@ MUWEAP:
 	Selectable:
 		Bounds: 154, 96, -2, -12
 	Health:
-		HP: 1300
+		HP: 130000
 	RevealsShroud:
 		Range: 6c0
 	RallyPoint:
@@ -1031,7 +1031,7 @@ MUAIR:
 		Footprint: xxxx xxxx
 		Dimensions: 2,4
 	Health:
-		HP: 600
+		HP: 60000
 	RevealsShroud:
 		Range: 5c0
 	Exit@1:
@@ -1080,7 +1080,7 @@ MURADR:
 	Selectable:
 		Bounds: 96, 66, 0, -10
 	Health:
-		HP: 1000
+		HP: 100000
 	Armor:
 		Type: Wood
 	RequiresPower:
@@ -1123,7 +1123,7 @@ MUHALL:
 	Selectable:
 		Bounds: 110, 60, 3, -4
 	Health:
-		HP: 500
+		HP: 50000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -1154,7 +1154,7 @@ MUSTABLE:
 	Selectable:
 		Bounds: 110, 60, 3, -4
 	Health:
-		HP: 230
+		HP: 23000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -1176,7 +1176,7 @@ drached:
 		BuildSounds: facbld1.aud
 		Dimensions: 3,3
 	Health:
-		HP: 1500
+		HP: 150000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -1191,8 +1191,6 @@ drached:
 	WithBuildingExplosion:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
-	CustomSellValue:
-		Value: 2500
 	BaseBuilding:
 	Transforms:
 		IntoActor: drache
@@ -1235,7 +1233,7 @@ SCRPOWR:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
 	Health:
-		HP: 1000
+		HP: 100000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -1276,7 +1274,7 @@ SCRADVPOWR:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
 	Health:
-		HP: 1100
+		HP: 110000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -1324,7 +1322,7 @@ SCRRAX:
 	Selectable:
 		Bounds: 88, 48, 0, -8
 	Health:
-		HP: 800
+		HP: 80000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -1336,6 +1334,8 @@ SCRRAX:
 	Exit@1:
 		SpawnOffset: -256,1024,0
 		ExitCell: 2,2
+	# Production:
+		# Produces: Infantry
 	ProductionAirdrop:
 		Produces: Infantry
 		ActorType: scrpod
@@ -1377,7 +1377,7 @@ SCRPROC:
 	Selectable:
 		Bounds: 134, 96, 0, -12
 	Health:
-		HP: 1200
+		HP: 120000
 	RevealsShroud:
 		Range: 6c0
 	Refinery:
@@ -1423,7 +1423,7 @@ SCRWEAP:
 	Selectable:
 		Bounds: 154, 96, -2, -12
 	Health:
-		HP: 1300
+		HP: 130000
 	Armor:
 		Type: Heavy
 	RallyPoint:
@@ -1475,7 +1475,7 @@ SCRAIR:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 	Health:
-		HP: 600
+		HP: 60000
 	RevealsShroud:
 		Range: 5c0
 	Exit@1:
@@ -1529,7 +1529,7 @@ SCRDEPOT:
 	Selectable:
 		Bounds: 110, 60, 3, -4
 	Health:
-		HP: 500
+		HP: 50000
 	Armor:
 		Type: Wood
 	RepairsUnits:
@@ -1565,7 +1565,7 @@ SCRRADR:
 	Selectable:
 		Bounds: 120, 90, 0, -20
 	Health:
-		HP: 1000
+		HP: 100000
 	Armor:
 		Type: Wood
 	RequiresPower:
@@ -1614,7 +1614,7 @@ SCRTECH:
 	Selectable:
 		Bounds: 110, 60, 3, -4
 	Health:
-		HP: 500
+		HP: 50000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -1646,7 +1646,7 @@ CABPOWR:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
-		HP: 1200
+		HP: 120000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -1691,7 +1691,7 @@ CABCLAW:
 	Selectable:
 		Bounds: 96, 70, 0, -24
 	Health:
-		HP: 800
+		HP: 80000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -1741,7 +1741,7 @@ CABWEAP:
 	Selectable:
 		Bounds: 154, 96, -2, -12
 	Health:
-		HP: 1300
+		HP: 130000
 	RallyPoint:
 		Offset: 4,1
 		Palette: mouse
@@ -1790,7 +1790,7 @@ CABAIR:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 	Health:
-		HP: 600
+		HP: 60000
 	RevealsShroud:
 		Range: 5c0
 	Exit@1:
@@ -1841,7 +1841,7 @@ CABRADR:
 	Selectable:
 		Bounds: 102, 118, 0, -38
 	Health:
-		HP: 1000
+		HP: 100000
 	Armor:
 		Type: Wood
 	RequiresPower:
@@ -1885,7 +1885,7 @@ CABGRINDER:
 	Selectable:
 		Bounds: 120, 72, 0, -10
 	Health:
-		HP: 250
+		HP: 25000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -1916,7 +1916,7 @@ CABTECH:
 	Selectable:
 		Bounds: 110, 60, 3, -4
 	Health:
-		HP: 500
+		HP: 50000
 	Armor:
 		Type: Wood
 	RevealsShroud:
