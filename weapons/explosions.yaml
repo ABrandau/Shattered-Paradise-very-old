@@ -76,7 +76,7 @@ UnitExplode:
 BlackHandExplode:
 	Inherits: ^ExploDefaults
 	Warhead@1Dam: SpreadDamage
-		Spread: 426
+		Spread: 300
 		Damage: 8000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Versus:

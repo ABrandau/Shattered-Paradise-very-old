@@ -57,6 +57,7 @@
 	PaletteFromFile@alpha:
 		Name: alpha
 		Filename: alpha.pal
+		AllowModifiers: false
 	PaletteFromRGBA@shadow:
 		Name: shadow
 		R: 0
@@ -127,6 +128,7 @@
 		AllowModifiers: false
 	PaletteFromFile@apblue:
 		Name: apblue
+		AllowModifiers: false
 		Filename: apolblue.pal
 	PaletteFromFile@apcybl:
 		Name: apcybl
@@ -162,6 +164,7 @@
 		Alpha: 0.6
 	PaletteFromFile@apgreen:
 		Name: apgreen
+		AllowModifiers: false
 		Filename: apolgren.pal
 	PaletteFromPaletteWithAlpha@apolgreenalpha:
 		Name: apolgreenalpha

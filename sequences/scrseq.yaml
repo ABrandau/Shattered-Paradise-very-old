@@ -682,6 +682,9 @@ scrrax:
 	make:
 		Length: 38
 		ShadowStart: 42
+	ship: scrpodanim
+		UseTilesetCode: false
+		Length: *
 	emp-overlay: emp_fx01
 		Length: *
 		Offset: 0, 0

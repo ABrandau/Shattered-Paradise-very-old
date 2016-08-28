@@ -130,7 +130,7 @@ PsykerRay:
 		Inaccuracy: 3c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 298
-		Damage: 5000
+		Damage: 3000
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_explosion

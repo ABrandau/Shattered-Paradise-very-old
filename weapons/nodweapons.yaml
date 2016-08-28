@@ -1,27 +1,41 @@
 ##########################################
 # Infantry
 ##########################################
-MilitantFireball:
-	Inherits: ^AcidWarhead
-	ReloadDelay: 90
-	Range: 3c0
-	Report: flamtnk1.aud
-	Burst: 4
-	BurstDelay: 3
+MilitantRifle:
+	Inherits: ^RifleWarhead
+	ReloadDelay: 40
+	Range: 4c0
+	Report: infgun3.aud, gostgun1.aud, slvkgun1.aud
 	Projectile: Bullet
-		Speed: 120
-		Image: FLAMEALL
-		Inaccuracy: 384
-		TrailImage: small_smoke_trail
+		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
-		Spread: 300
-		Damage: 500
-		DamageTypes: Prone100Percent, TriggerProne, FireDeath
-	Warhead@2Smu: LeaveSmudge
-		SmudgeType: SmallScorch
-		InvalidTargets: Vehicle, Building, Wall
+		Spread: 128
+		Damage: 1200
+		DamageTypes: Prone70Percent, TriggerProne, MilitantFireDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: piffs
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: water_piffs
+		ExplosionPalette: ra
+		ValidImpactTypes: Water
 	Warhead@3Eff: CreateEffect
 		Explosions: fire3, fire4
+		InvalidImpactTypes: Water, Air, AirHit
+
+MillitantFire:
+	Inherits: ^FlameWarhead
+	ReloadDelay: 15
+	Projectile: InstantExplode
+	ValidTargets: Ground
+	Warhead@3Dam_area: SpreadDamage
+		Spread: 250
+		Damage: 3000
+		Falloff: 100, 50, 25, 0
+		ValidTargets: Ground
+		DamageTypes: FireDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: fire1, fire2
 		InvalidImpactTypes: Water, Air, AirHit
 
 CrusaderBazooka:
@@ -79,8 +93,8 @@ TemplarLasor:
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 		
 BHRifle:
-	ReloadDelay: 150
-	Range: 7c0
+	ReloadDelay: 200
+	Range: 8c0
 	Report: ramjetfire.wav#silencer.aud
 	ValidTargets: Infantry
 	Projectile: Bullet

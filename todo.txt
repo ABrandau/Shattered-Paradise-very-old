@@ -1,24 +1,58 @@
 Ideas
 Randomize forg hp when created
-add some deception stuff for nod.
+
+Add some deception stuff for nod.
+add the EMP tank for GDI.
+
+
+
+Balance
+Possible basilisk buff needed
+
+
 
 todo
+
 juggernaut barrel
+
 Veterancy Chevrons
+
 Status Icons
+
 Tiberium death effect for infantry
+
 place anti light for alien weapons.
+
 Improve the hover tank lazor
+
 grenadier sequence bug
+
 figure a way to make visceroids combine.
+
 
 Fixes
 Ion storm bolts
+
 missing shadow fron nod missile silo
 
+emp on infantry
+
+gaurdian platform aoe heal
+scrin buff overall
+
+nod inf burn infantry instead of flame throwers
+harvester harvest anim uses the wrong pal
+
+tick tank strong
+
+
 Civ stuff
-flags
+f
+
 boxes
+
 traffic lights
+
 trees
+
 Forgotten civ structures

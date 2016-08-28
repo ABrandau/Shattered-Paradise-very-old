@@ -104,8 +104,7 @@
 #GENERIC POISON EFFECT
 	SelfHealing@poisoncloud:
 		PercentageStep: -1
-		Step: -6
-		Delay: 20
+		Delay: 15
 		UpgradeTypes: Poison
 		HealIfBelow: 200
 		DamageTypes: TiberiumDeath
@@ -158,6 +157,15 @@
 		Delay: 100
 		DamageCooldown: 200
 		HealIfBelow: 105
+
+#RIFLEMAN BURN
+^BurnsGirl:
+	SpawnActorOnDeath@burns:
+		Actor: fireactor
+		Probability: 100
+		OwnerType: Killer
+		DeathType: MilitantFireDeath
+		RequiresLobbyCreeps: false
 
 ^NodVehicleRepair:
 	SelfHealing@NodVehicleRepair:
@@ -503,6 +511,7 @@
 	Inherits@7:^VentilatorPoison
 	Inherits@8:^VentilatorBuff
 	Inherits@9: ^VisionWhenKilled
+	Inherits@10: ^BurnsGirl
 	DrawLineToTarget:
 	WithTextControlGroupDecoration:
 	TemporaryOwnerManager:
@@ -853,6 +862,8 @@
 	UpgradeOnTerrain@VEINS:
 		TerrainTypes: Veins
 		Upgrades: veins
+	Armor:
+		Type: Light
 	WithIdleOverlay@VEINS:
 		Sequence: veins
 		UpgradeTypes: veins
@@ -929,7 +940,8 @@
 	ThrowsShrapnel:
 		Weapons: SmallDebris
 		Pieces: 3, 7
-		Range: 2c0, 5c0	
+		Range: 2c0, 5c0
+	Carryable:
 
 ^Tank:
 	Inherits: ^Vehicle
@@ -983,6 +995,8 @@
 			Tiberium: 50
 			BlueTiberium: 50
 			Veins: 50
+	Carryable:
+		LocalOffset: 0,0,600
 
 ^ScrinVehicle:
 	Inherits@2: ^ScrinRender

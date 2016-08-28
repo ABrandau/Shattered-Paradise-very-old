@@ -1310,7 +1310,7 @@ SCRRAX:
 		Cost: 300
 	Tooltip:
 		Name: Landing Zone
-		Description: Infantry deployment.\nDeploys 3 soldiers per order.
+		Description: Allows the player to call in Scrin Infantry.
 	ProvidesPrerequisite:
 		Prerequisite: scrrax
 	WithBuildingExplosion:
@@ -1334,12 +1334,14 @@ SCRRAX:
 	Exit@1:
 		SpawnOffset: -256,1024,0
 		ExitCell: 2,2
-	# Production:
-		# Produces: Infantry
-	ProductionAirdrop:
+	Production:
 		Produces: Infantry
-		ActorType: scrpod
-		ReadyAudio: UnitReady
+	WithIdleOverlay@ship:
+		Sequence: ship
+	# ProductionAirdrop:
+		# Produces: Infantry
+		# ActorType: scrpod
+		# ReadyAudio: UnitReady
 	PrimaryBuilding:
 	ProductionBar:
 	Power:

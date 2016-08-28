@@ -2,6 +2,32 @@
 
 [2016 - xx - xx]
 General Changes:
+	Switched the armor of many vehicles that were wood into light.
+	Fixed clouds and other no-actors giving vision when dissapearing.
+GDI Changes:
+	Carryalls are now working ingame.
+	Medic: cost 400 -> 300.
+	Wolverine cost: 500 -> 400.
+	RPG Tower: Cost 800 -> 700.
+	SAM Tower: Cost: 800 -> 600.
+Mutant Changes:
+	Mind walker damage: 500 -> 300.
+CABAL Changes:
+	Cyberdog hp: 300 -> 100.
+	Reclaimer: Cost 150 -> 175, hp: 110 -> 95.
+Nod Changes:
+	Flame Warriors flamethrowers changed for stardard rifles that generate fire once they kill infantry, the fire harms nearby units
+	Hand of Kane: Attack speed: 6 seconds -> 8, range: 7 -> 8, explosion spread: 426 -> 300.
+	Devil's Tongue: Flame speed: 100 -> 130.
+	Buggy: cost 500 -> 600.
+	Stealth Tank: hp: 310 -> 275.
+Scrin Changes:
+	The barracks now uses the standard production system, units come out one by one.
+
+
+
+[2016 - 06 - 13]
+General Changes:
 	Updated bleed engine to the version of 13th of july
 	Made some adjustments to the smudges so they hopefully don't spam all around the map.
 	Visceroids hive spawn 3 visceroids per hit.

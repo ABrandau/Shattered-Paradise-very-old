@@ -326,6 +326,10 @@ KILLEDACTOR:
 		DeathType: WorkerSummon
 		RequiresLobbyCreeps: true
 
+###################################################################
+# CABAL
+###################################################################
+
 NANOMACHINEBURSTSPAWNER:
 	Inherits: ^Infantry
 	-Targetable:
@@ -381,6 +385,10 @@ NANOMACHINEBURSTDUMMY:
 		Weapon: RecoveryGun
 		TargetStances: Ally, Enemy, Neutral
 	AutoTarget:
+
+############################################################################
+# FORGOTTEN
+############################################################################
 
 EGGSPAWNER:
 	Inherits: ^Infantry
@@ -446,6 +454,46 @@ VEINHOLESPAWNERDUMMY:
 		InternalOwner: Creeps
 		RequiresLobbyCreeps: true
 	-SpawnActorOnDeath@nanomachineburst:
+
+##########################################################
+#
+##########################################################
+
+FIREACTOR:
+	Inherits: ^Helicopter
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Target
+	-Selectable:
+	SelectionDecorations:
+	AutoSelectionSize:
+	-UpdatesPlayerStatistics:
+	-ActorLostNotification:
+	-SpawnActorOnDeath@vision:
+	-AppearsOnRadar:
+	Aircraft:
+		Speed: 0
+	-Targetable@GROUND:
+	-Targetable@AIRBORNE:
+	-Voiced:
+	Health:
+		HP: 40
+	SelfHealing:
+		Step: -10
+		Delay: 25
+		HealIfBelow: 200
+	Armor:
+		Type: Wood
+	-RenderVoxels:
+	-WithVoxelBody:
+	RenderSprites:
+		Image: dot
+	ExplodeWeapon:
+		Weapon: MillitantFire
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32
 
 BLACKHANDDUMMY:
 	Inherits: ^DUMMYSTRUCTURE

@@ -40,7 +40,7 @@ JUMPJET:
 	Voiced:
 		VoiceSet: JumpJet
 	Mobile:
-		Speed: 50
+		Speed: 55
 	Health:
 		HP: 16000
 	Armor:
@@ -72,7 +72,7 @@ GRENADIER:
 	Health:
 		HP: 9000
 	Mobile:
-		Speed: 50
+		Speed: 55
 	Explodes:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
@@ -165,17 +165,17 @@ ALTNODE1:
 		BuildPaletteOrder: 6
 		Prerequisites: ~nahand
 	Valued:
-		Cost: 190
+		Cost: 150
 	Tooltip:
 		Name: Flame Warrior
-		Description: Light infantry variant.\nCarries a Flamethrower.\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft
+		Description: Light infantry variant. Fires inflamable bullets that\nincinerate infantry, the fire harms neavy units.\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft
 	Health:
 		HP: 10000
 	Mobile:
 		Speed: 70
-	Armament@SECONDARY:
-		Weapon: MilitantFireball
-		LocalOffset: 200,0,500
+	-TakeCover:
+	Armament:
+		Weapon: MilitantRifle
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:
@@ -737,22 +737,14 @@ LEGIO:
 		Queue: Infantry
 		BuildPaletteOrder: 25
 		Prerequisites: ~scrrax
-	Selectable:
-		Class: Legio
 	Valued:
-		Cost: 600
-	GivesExperience:
-		Experience: 200
+		Cost: 180
 	Tooltip:
 		Name: Legionnaire
 		Description: Scrin Frontile trooper. Resistant\nto damage. Cannot be crushed.\nIts weapon damage spreads to nearby cells.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry
 	Health:
 		HP: 15000
 	-Crushable:
-	FreeActor@1:
-		Actor: legioclone
-	FreeActor@2:
-		Actor: legioclone
 	Mobile:
 		Speed: 60
 	Armament:
@@ -769,11 +761,7 @@ LEGIO:
 SHAPESHIFTER:
 	Inherits: ^Soldier
 	Valued:
-		Cost: 750
-	Selectable:
-		Class: Shapeshifter
-	GivesExperience:
-		Experience: 250
+		Cost: 500
 	Tooltip:
 		Name: Shapeshifter
 		Description: Infiltrates, captures enemy structures\nand also places mines.\n  Unarmed
@@ -794,10 +782,6 @@ SHAPESHIFTER:
 		Prerequisites: ~scrrax
 	Voiced:
 		VoiceSet: Hijacker
-	FreeActor@1:
-		Actor: shapeshifterclone
-	FreeActor@2:
-		Actor: shapeshifterclone
 	-DamagedByTerrain:
 	Mobile:
 		Speed: 65
@@ -892,9 +876,7 @@ STALKER:
 	Selectable:
 		Class: Stalker
 	Valued:
-		Cost: 1000
-	GivesExperience:
-		Experience: 333
+		Cost: 350
 	Tooltip:
 		Name: Stalker
 		Description: Disruption infantry\nConfuses enemies for shorter periods of time.\nchanging their alegiance.\nCan move through water.\n  Unarmed.
@@ -927,18 +909,12 @@ FLOAT:
 		Class: FLoat
 	Valued:
 		Cost: 780
-	GivesExperience:
-		Experience: 550
 	-Crushable:
 	Tooltip:
 		Name: Purifier
 		Description: Recon unit, suited for harassment.\nCan move through water and Cliffs.\n  Strong vs Infantry, Buildings\n  Weak vs Tanks, Aircraft
 	Health:
 		HP: 18000
-	FreeActor@1:
-		Actor: floatclone
-	FreeActor@2:
-		Actor: floatclone
 	Mobile:
 		Speed: 100
 		TerrainSpeeds:
@@ -974,17 +950,11 @@ BUG:
 		# Queue: Infantry
 		# BuildPaletteOrder: 30
 		# Prerequisites: ~scrrax, scrtech
-	Selectable:
-		Class: bug
-	GivesExperience:
-		Experience: 500
 	Valued:
 		Cost: 1000
 	Tooltip:
 		Name: Overtaker
 		Description: Support alien, it can mind\ncontrol enemies for brief moments.\n  Strong vs Ground units.\n  Weak vs Aircraft.
-	FreeActor@1:
-		Actor: bugclone
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark, MindControlInmune
 	Selectable:
@@ -1011,51 +981,11 @@ BUG:
 	-TakeCover:
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
-##########################################################
-# Clones
-##########################################################
-LEGIOCLONE:
-	Inherits: LEGIO
-	RenderSprites:
-		Image: legio
-	Valued:
-		Cost: 200
-	-Buildable:
-	-FreeActor@1:
-	-FreeActor@2:
-
-FLOATCLONE:
-	Inherits: FLOAT
-	Valued:
-		Cost: 260
-	RenderSprites:
-		Image: float
-	-Buildable:
-	-FreeActor@1:
-	-FreeActor@2:
-
-SHAPESHIFTERCLONE:
-	Inherits: SHAPESHIFTER
-	Valued:
-		Cost: 250
-	RenderSprites:
-		Image: shapeshifter
-	-Buildable:
-	-FreeActor@1:
-	-FreeActor@2:
-
-BUGCLONE:
-	Inherits: BUG
-	Valued:
-		Cost: 500
-	RenderSprites:
-		Image: bug
-	-Buildable:
-	-FreeActor@1:
 
 ############################################
 # CABAL
 ############################################
+
 CABSENTRY:
 	Inherits: ^CabalDroneInfantry
 	Inherits@1: ^CabRender
@@ -1138,10 +1068,8 @@ CYBORG:
 
 PDRONE:
 	Inherits: ^CabalDroneInfantry
-	Armor:
-		Type: none
 	Valued:
-		Cost: 150
+		Cost: 175
 	SupplyTruck
 		Payload: 75
 		Voice: Move
@@ -1168,7 +1096,7 @@ PDRONE:
 			BlueTiberium: 100
 			Veins: 100
 	Health:
-		HP: 11000
+		HP: 9500
 	Passenger:
 	WithInfantryBody:
 		AttackSequence: shoot

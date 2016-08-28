@@ -24,6 +24,7 @@ CLOUD1:
 	-Targetable@GROUND:
 	-Targetable@AIRBORNE:
 	-RevealsShroud:
+	-SpawnActorOnDeath@vision:
 	-Voiced:
 	Health:
 		HP: 75
@@ -159,10 +160,15 @@ TRNSPORT:
 	Tooltip:
 		Name: Carryall
 		Description: VTOL Aircraft capable of lifting\nand transporting Vehicles.\n  Unarmed
+	Buildable:
+		Queue: Air
+		BuildPaletteOrder: 20
+		Prerequisites: ~gahpad, gadept
 	Aircraft:
 		LandWhenIdle: yes
 		TurnSpeed: 5
 		Speed: 149
+		CruiseAltitude: 2800
 		InitialFacing: 0
 		TakeoffSound: dropup1.aud
 		LandingSound: dropdwn1.aud
@@ -175,6 +181,9 @@ TRNSPORT:
 	RenderSprites:
 	Selectable:
 		Bounds: 44,32,0,-8
+	Carryall:
+		Voice: Move
+		LocalOffset: 0, 0, -224
 	SpawnActorOnDeath:
 		Actor: TRNSPORT.Husk
 

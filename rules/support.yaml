@@ -190,7 +190,7 @@ GAROCK:
 	WithSpriteBody:
 	# WithWallSpriteBody:
 	Valued:
-		Cost: 800
+		Cost: 700
 	Tooltip:
 		Name: RPG Tower
 		Description: GDI Advanced base defense.\n  Strong vs Armored ground units\n  Weak vs Aircraft
@@ -242,7 +242,7 @@ GACSAM:
 	WithSpriteBody:
 	# WithWallSpriteBody:
 	Valued:
-		Cost: 800
+		Cost: 600
 	Tooltip:
 		Name: SAM Tower
 		Description: GDI Anti-Air base defense.\nStronger than average AA.\n  Strong vs Aircraft\n  Weak vs Ground units

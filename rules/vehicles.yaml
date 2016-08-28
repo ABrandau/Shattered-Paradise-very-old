@@ -4,7 +4,7 @@
 SMECH:
 	Inherits: ^Walker
 	Valued:
-		Cost: 500
+		Cost: 400
 	Tooltip:
 		Name: Wolverine
 		Description: Anti-Personnel Walker.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
@@ -155,8 +155,6 @@ HVR:
 			Veins: 100
 	Health:
 		HP: 27000
-	Armor:
-		Type: Wood
 	Armament:
 		Weapon: HoverMissile
 		LocalOffset: 100,150,384, 100,-150,384
@@ -294,7 +292,7 @@ BGGY:
 	Inherits: ^VoxelVehicle
 	Inherits@3: ^BasicStealthDetection
 	Valued:
-		Cost: 500
+		Cost: 600
 	Tooltip:
 		Name: Raider Buggy
 		Description: Fast scout designed for harassment.\n  Strong vs Infantry, Aircraft.\n  Weak vs Vehicles.
@@ -308,8 +306,6 @@ BGGY:
 		Crushes: crate
 	Health:
 		HP: 20000
-	Armor:
-		Type: Wood
 	RevealsShroud:
 		Range: 7c0
 	Armament@PRIMARY:
@@ -424,8 +420,6 @@ BIKE:
 		Crushes: crate
 	Health:
 		HP: 7000
-	Armor:
-		Type: Wood
 	RevealsShroud:
 		Range: 7c0
 	Explodes:
@@ -529,10 +523,8 @@ ARMH:
 		Prerequisites: ~naweap, natech
 	Health:
 		HP: 16000
-	Armor:
-		Type: Wood
 	Mobile:
-		Speed: 60
+		Speed: 75
 		TurnSpeed: 10
 	RevealsShroud:
 		Range: 9c0
@@ -581,7 +573,7 @@ STNK:
 		Speed: 100
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 31000
+		HP: 27500
 	Armor:
 		Type: Light
 	Cloak@cloakgenerator:
@@ -622,8 +614,6 @@ Limped:
 		Description: Hover Drone, cloaks when deployed.\nSpreads unsmellable gas around weakening\nnearby units.\nUnnarmed.
 	Health:
 		HP: 22000
-	Armor:
-		Type: Wood
 	Mobile:
 		Speed: 95
 		Crushes: wall, mine, crate, infantry
@@ -657,8 +647,6 @@ SGEN:
 		Speed: 80
 	Health:
 		HP: 20000
-	Armor:
-		Type: Wood
 	Transforms:
 		IntoActor: mastl
 		# Offset: -1,-1
@@ -752,8 +740,6 @@ DEATHCLAW:
 		InitialStance: AttackAnything
 	Health:
 		HP: 60000
-	Armor:
-		Type: Wood
 	WithInfantryBody:
 		IdleSequences: idle2, idle3
 	-Crushable:
@@ -910,8 +896,6 @@ MLRS:
 		Crushes: wall, crate, infantry
 	Health:
 		HP: 15000
-	Armor:
-		Type: Wood
 	RenderVoxels:
 		LightAmbientColor: 0.5,0.5,0.5
 		LightDiffuseColor: 0.7,0.7,0.7
@@ -948,8 +932,6 @@ HVRTRUK3:
 		Speed: 100
 	Health:
 		HP: 12500
-	Armor:
-		Type: Wood
 	Explodes:
 		Weapon: MiniNuke
 		EmptyWeapon: MiniNuke
@@ -1136,8 +1118,6 @@ SCRGLYDER2:
 		Description: Specialized weapons platform.\nCan vary from a ground version and aerial version.\nThe aerial version attacks ground units and vice versa.\n Strong vs Armor.\n  Weak vs Light units.
 	Health:
 		HP: 15000
-	Armor:
-		Type: Wood
 	Mobile:
 		Speed: 91
 	Transforms:
@@ -1172,8 +1152,6 @@ SCRRECHARGER:
 		Crushes: crate
 	Health:
 		HP: 30000
-	Armor:
-		Type: Wood
 	WithRangeCircle:
 		Range: 6c0
 		Type: cloakgenerator
@@ -1214,8 +1192,8 @@ TRIPOD:
 		Crushes: crate
 	Health:
 		HP: 40000
-	Armor:
-		Type: Light
+	Carryable:
+		LocalOffset: 0,0,2500
 	AttackFrontal:
 		Voice: Attack
 	AutoTarget:
@@ -1308,8 +1286,6 @@ DINO:
 		VoiceSet: Limpet
 	Health:
 		HP: 22500
-	Armor:
-		Type: wood
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithInfantryBody:
@@ -1480,8 +1456,6 @@ CABAPC:
 		VoiceSet: Limpet
 	Health:
 		HP: 40000
-	Armor:
-		Type: Wood
 	Turreted:
 		TurnSpeed: 10
 	Cargo:
@@ -1583,3 +1557,5 @@ PALADIN:
 	AutoTarget:
 	Selectable:
 		Bounds: 40, 60, 0, -20
+	Carryable:
+		LocalOffset: 0,0,1200
