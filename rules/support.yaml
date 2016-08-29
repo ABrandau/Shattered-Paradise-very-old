@@ -504,7 +504,7 @@ NAOBEL:
 	RequiresPower:
 	DisabledOverlay:
 	Health:
-		HP: 60000
+		HP: 70000
 	Armor:
 		Type: Heavy
 	WithMuzzleOverlay:
@@ -515,8 +515,8 @@ NAOBEL:
 		MuzzlePalette: obelpal
 	AttackCharge:
 		ChargeAudio: obelpowr.aud
-		ReloadTime: 50
-		InitialChargeDelay: 50
+		ReloadTime: 40
+		InitialChargeDelay: 40
 	WithChargeOverlay:
 		Sequence: active
 		Palette: player

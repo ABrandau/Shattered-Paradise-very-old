@@ -9,6 +9,7 @@
 	-AutoSelectionSize:
 	RevealsShroud:
 		Range: 3c0
+		Type: CenterPosition 
 	-SelectionDecorations:
 	-Selectable:
 	AlwaysVisible:
@@ -23,10 +24,13 @@
 	Tooltip:
 		Name: Target
 	SelectionDecorations:
+	RevealsShroud:
+		Range: 3c0
+		Type: CenterPosition 
 	Aircraft:
 		TurnSpeed: 6
 		Speed: 0
-	HiddenUnderShroud:
+	HiddenUnderFog:
 	Armor:
 		Type: Wood
 	RenderSprites:
@@ -410,13 +414,14 @@ FIREACTOR:
 	-ActorLostNotification:
 	-SpawnActorOnDeath@vision:
 	-AppearsOnRadar:
+	-RevealsShroud:
 	Aircraft:
 		Speed: 0
 	-Targetable@GROUND:
 	-Targetable@AIRBORNE:
 	-Voiced:
 	Health:
-		HP: 40
+		HP: 30
 	SelfHealing:
 		Step: -10
 		Delay: 25

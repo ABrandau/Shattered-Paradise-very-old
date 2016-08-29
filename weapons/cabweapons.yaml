@@ -222,7 +222,7 @@ CyCannon:
 		Shadow: true
 		Image: TORPEDO
 	Warhead@1Dam: SpreadDamage
-		Spread: 43
+		Spread: 120
 		Damage: 12000
 		ValidTargets: Ground
 		Versus:
@@ -670,7 +670,7 @@ BlasterProton:
 		Image: TORPEDO
 		RangeLimit: 35
 	Warhead@1Dam: SpreadDamage
-		Spread: 300
+		Spread: 225
 		Damage: 2500
 		ValidTargets: Ground, Vehicle, Infantry, water
 		Versus:

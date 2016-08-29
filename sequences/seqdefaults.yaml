@@ -27,18 +27,29 @@
 	diebody1: death_a
 		Length: *
 		Tick: 1000
+		ZOffset: -511
 	diebody2: death_b
 		Length: *
 		Tick: 1000
+		ZOffset: -511
 	diebody3: death_c
 		Length: *
 		Tick: 1000
+		ZOffset: -511
 	diebody4: death_d
 		Length: *
 		Tick: 1000
+		ZOffset: -511
 	diebody5: death_f
 		Length: *
 		Tick: 1000
+		ZOffset: -511
+	dieevaporate: tibgas
+		Length: *
+		Offset: 0,-6
+	diemelt: infmelt
+		Length: *
+		Offset: 0,-6
 	webguy: webguy
 		Length: 6
 		ShadowStart: 6

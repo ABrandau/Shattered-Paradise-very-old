@@ -226,7 +226,7 @@ JuggCannon:
 	MinRange: 5c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 350
-		Damage: 4000
+		Damage: 5000
 		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn

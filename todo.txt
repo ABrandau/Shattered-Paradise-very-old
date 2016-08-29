@@ -5,6 +5,9 @@ Add some deception stuff for nod.
 add the EMP tank for GDI.
 have units auto kite.
 
+Make NOD heal when cloaked.
+Give Scrin a shield or sth.
+
 
 
 
@@ -12,7 +15,6 @@ Balance
 Possible basilisk buff needed
 
 
-nod inf burn infantry instead of flame throwers
 guardian platform aoe heal
 scrin buff overall
 
@@ -55,4 +57,6 @@ traffic lights
 
 trees
 
+houses
+buildings made out of planks.
 Forgotten civ structures

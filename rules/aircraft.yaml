@@ -361,7 +361,7 @@ APACHE:
 		Cost: 500
 	Tooltip:
 		Name: Harpy
-		Description: Scout helicopter\narmed with dual chain guns.\nDetects cloaked units.\nCloaks when idle.\nDetects cloaked units.\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles
+		Description: Scout helicopter armed with dual chain guns.\nIncinirates infantry similar to the Flame warrior.\nDetects cloaked units.\nCloaks when idle.\nDetects cloaked units.\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 20
@@ -458,9 +458,9 @@ SCRIN:
 		Voice: Attack
 		FacingTolerance: 20
 	AmmoPool:
-		Ammo: 9
+		Ammo: 27
 		PipCount: 3
-		ReloadCount: 3
+		ReloadCount: 9
 		ReloadTicks: 100
 		PipType: Ammo
 		PipTypeEmpty: AmmoEmpty

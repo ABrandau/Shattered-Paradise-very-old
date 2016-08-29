@@ -1182,7 +1182,7 @@ TRIPOD:
 		IconPalette: chromescrin
 	UpgradeActorsNear@qlo:
 		Upgrades: berserk
-		Range: 3c0
+		Range: 2c0
 		ValidStances: Enemy
 	Mobile:
 		TurnSpeed: 8

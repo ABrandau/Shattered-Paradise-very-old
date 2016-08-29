@@ -118,6 +118,7 @@ MCV:
 
 HARV:
 	Inherits: ^VoxelTank
+	Inherits@2: ^IncompleteSelfHeal
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -157,10 +158,6 @@ HARV:
 		HP: 100000
 	Targetable@MindControl:
 		TargetTypes: MindControlInmune
-	SelfHealing:
-		Delay: 10
-		HealIfBelow: 50
-		DamageCooldown: 200
 	-Capturable:
 	Armor:
 		Type: Heavy
@@ -430,6 +427,7 @@ GADEPT:
 		Range: 5c0
 	Reservable:
 	RepairsUnits:
+		HpPerStep: 2000
 	RallyPoint:
 		Palette: mouse
 		IsPlayerPalette: false

@@ -382,6 +382,7 @@
 	Capturable:
 	RepairableBuilding:
 		IndicatorPalette: mouse
+		RepairStep: 700
 	WithDeathAnimation:
 		DeathSequence: dead
 		UseDeathTypeSuffix: false
@@ -579,12 +580,16 @@
 	WithDeathAnimation@normal:
 		DeathTypes: #1 2 normals, 3 headshot, 4 explosion
 			BulletDeath: 1, 2
-			TiberiumDeath: 1, 2
-			TiberiumDeathStrong: 1, 2
 			CabalDeath: 1, 2
 			CabalDeathCrate: 1, 2
 			BlackHandRfle: 3
 			HeadshotDeath: 3
+	WithDeathAnimation@tib:
+		DeathSequencePalette: apolra2galpha
+		DeathPaletteIsPlayerPalette: False
+		DeathTypes:
+			TiberiumDeath: evaporate, melt
+			TiberiumDeathStrong: evaporate, melt
 	WithDeathAnimation@explosion:
 		DeathSequencePalette: effect
 		DeathPaletteIsPlayerPalette: False
@@ -620,9 +625,10 @@
 	Crushable:
 		CrushSound: squish6.aud
 	DamagedByTerrain:
-		Damage: 2
+		Damage: 200
 		DamageInterval: 25
 		Terrain: Tiberium, BlueTiberium
+		DamageTypes: TiberiumDeath, TiberiumDeathStrong
 	SpawnActorOnDeath@FLAMEGUY:
 		Actor: FLAMEGUY
 		DeathType: FireDeath
@@ -702,7 +708,7 @@
 ^Mutant:
 	Inherits: ^Soldier
 	DamagedByTerrain:
-		Damage: -2
+		Damage: -200
 		DamageInterval: 16
 		Terrain: Tiberium, BlueTiberium
 
@@ -728,6 +734,11 @@
 		Delay: 30
 		DamageCooldown: 200
 		HealIfBelow: 60
+	WithDeathAnimation@normal:
+		DeathTypes: #1 2 normals, 3 headshot, 4 explosion
+			TiberiumDeath: 1, 2
+			TiberiumDeathStrong: 1, 2
+	-WithDeathAnimation@tib:
 
 ^ScrinSoldier:
 	Inherits: ^Soldier
@@ -1172,7 +1183,7 @@
 	AttackMove:
 	HiddenUnderFog:
 	DamagedByTerrain:
-		Damage: -2
+		Damage: -200
 		DamageInterval: 16
 		Terrain: Tiberium, BlueTiberium
 	Guardable:

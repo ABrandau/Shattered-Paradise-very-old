@@ -165,7 +165,7 @@ ALTNODE1:
 		Cost: 150
 	Tooltip:
 		Name: Flame Warrior
-		Description: Light infantry variant. Fires inflamable bullets that\nincinerate infantry, the fire harms neavy units.\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft
+		Description: Light infantry variant. Fires inflamable bullets that incinerate\ninfantry, damaging units that are nearby the killed unit.\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft
 	Health:
 		HP: 10000
 	Mobile:

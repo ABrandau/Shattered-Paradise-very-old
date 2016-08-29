@@ -74,7 +74,7 @@ CrusaderBazookaInf:
 	Inherits: CrusaderBazooka
 	ValidTargets: Infantry
 	Projectile: Missile
-		Inaccuracy: 2c0
+		Inaccuracy: 0c512
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: Infantry
 
@@ -311,7 +311,7 @@ StealthRocket:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 3500
+		Damage: 3000
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -386,7 +386,7 @@ HarpyClaw:
 		Spread: 128
 		Damage: 4000
 		ValidTargets: Ground, Vehicle, Building, Infantry, Air
-		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+		DamageTypes: Prone70Percent, TriggerProne, MilitantFireDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
 		InvalidImpactTypes: Water
@@ -400,21 +400,20 @@ Proton:
 	ReloadDelay: 50
 	Range: 5c0
 	Report: scrin5b.aud
-	Burst: 3
-	ValidTargets: Ground, Vehicle, Building, Infantry, Air
-	BurstDelay: 3
-	Projectile: Bullet
+	Burst: 9
+	ValidTargets: Ground, Vehicle, Building, Infantry
+	BurstDelay: 2
+	Projectile: Missile
 		Speed: 341
 		Blockable: false
 		Shadow: true
 		Inaccuracy: 128
 		Image: TORPEDO
-		RangeLimit: 35
-		ValidTargets: Ground, water, Infantry, Vehicle, Building, Air
+		RangeLimit: 15c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 250
-		Damage: 5000
-		ValidTargets: Ground, water, Infantry, Vehicle, Building, Air
+		Damage: 2500
+		ValidTargets: Ground, water, Infantry, Vehicle, Building
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_bang
@@ -431,7 +430,7 @@ ProtonAA:
 	ReloadDelay: 50
 	Range: 5c0
 	Report: scrin5b.aud
-	Burst: 3
+	Burst: 9
 	BurstDelay: 3
 	ValidTargets: Air
 	Projectile: Missile
@@ -442,7 +441,7 @@ ProtonAA:
 		RangeLimit: 15c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 3000
+		Damage: 1200
 		ValidTargets: Air
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect

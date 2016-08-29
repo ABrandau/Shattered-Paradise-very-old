@@ -176,6 +176,9 @@
 	PaletteFromFile@apolra2:
 		Name: apolra2
 		Filename: apolra2.pal
+	PaletteFromFile@apolra2g:
+		Name: apolra2g
+		Filename: apolra2g.pal
 	PaletteFromPaletteWithAlpha@apolgreyalpha:
 		Name: apolgreyalpha
 		BasePalette: apgrey
@@ -195,6 +198,10 @@
 	PaletteFromPaletteWithAlpha@apolra2alpha:
 		Name: apolra2alpha
 		BasePalette: apolra2
+		Alpha: 0.8
+	PaletteFromPaletteWithAlpha@apolra2galpha:
+		Name: apolra2galpha
+		BasePalette: apolra2g
 		Alpha: 0.8
 	VoxelNormalsPalette@ra2normals:
 		Name: ra2normals

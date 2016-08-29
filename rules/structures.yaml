@@ -1521,7 +1521,7 @@ SCRDEPOT:
 		Cost: 1200
 	Tooltip:
 		Name: Scrin Maintenance Depot
-		Description: Allows the scrin commander\nto repair vehicles..
+		Description: Allows the scrin commander to repair vehicles.
 	WithBuildingExplosion:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
@@ -1536,6 +1536,7 @@ SCRDEPOT:
 		Type: Wood
 	RepairsUnits:
 		FinishRepairingNotification: UnitRepaired
+		HpPerStep: 2000
 	RevealsShroud:
 		Range: 4c0
 	Power:
