@@ -3,6 +3,8 @@ Randomize forg hp when created
 
 Add some deception stuff for nod.
 add the EMP tank for GDI.
+have units auto kite.
+
 
 
 
@@ -10,6 +12,11 @@ Balance
 Possible basilisk buff needed
 
 
+nod inf burn infantry instead of flame throwers
+guardian platform aoe heal
+scrin buff overall
+
+tick tank too strong
 
 todo
 
@@ -30,21 +37,14 @@ grenadier sequence bug
 figure a way to make visceroids combine.
 
 
-Fixes
+
 Ion storm bolts
 
 missing shadow fron nod missile silo
-
-emp on infantry
-
-gaurdian platform aoe heal
-scrin buff overall
-
-nod inf burn infantry instead of flame throwers
 harvester harvest anim uses the wrong pal
 
-tick tank strong
-
+Fix Temple of NOD offset.
+Make the NOD TOxin drone a mine.
 
 Civ stuff
 f

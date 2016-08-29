@@ -173,6 +173,9 @@
 	PaletteFromFile@apgrey:
 		Name: apgrey
 		Filename: apolgrey.pal
+	PaletteFromFile@apolra2:
+		Name: apolra2
+		Filename: apolra2.pal
 	PaletteFromPaletteWithAlpha@apolgreyalpha:
 		Name: apolgreyalpha
 		BasePalette: apgrey
@@ -189,6 +192,10 @@
 		Name: colossiglow
 		BasePalette: apcyan
 		Alpha: 0.08
+	PaletteFromPaletteWithAlpha@apolra2alpha:
+		Name: apolra2alpha
+		BasePalette: apolra2
+		Alpha: 0.8
 	VoxelNormalsPalette@ra2normals:
 		Name: ra2normals
 		Type: RedAlert2

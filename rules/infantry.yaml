@@ -45,8 +45,6 @@ JUMPJET:
 		HP: 16000
 	Armor:
 		Type: none
-	Passenger:
-		PipType: Green
 	Armament:
 		Weapon: JJCannon
 	-Crushable:
@@ -138,12 +136,11 @@ EAGLEGUARD:
 		Speed: 46
 	Health:
 		HP: 27500
-	Targetable:
-		TargetTypes: Ground, Infantry, Razorshark
+	Targetable@razor:
+		TargetTypes: Razorshark
 	-DamagedByTerrain:
 	Armor:
 		Type: Wood
-	Passenger:
 	Armament:
 		Weapon: TrooperRail
 		LocalOffset: 400,100,450
@@ -230,8 +227,8 @@ TEMPLAR:
 		HP: 20000
 	Mobile:
 		Speed: 55
-	Targetable:
-		TargetTypes: Ground, Infantry, Razorshark
+	Targetable@razor:
+		TargetTypes: Razorshark
 	Armament@PRIMARY:
 		Weapon: TemplarLasor
 		LocalOffset: 200,50,320
@@ -259,8 +256,8 @@ MHIJACK:
 	-Crushable:
 	Health:
 		HP: 11000
-	Targetable:
-		TargetTypes: Ground, Infantry, MindControlInmune
+	Targetable@MindControl:
+		TargetTypes: MindControlInmune
 	Mobile:
 		Speed: 80
 	Infiltrates:
@@ -292,10 +289,10 @@ BHS:
 	Tooltip:
 		Name: Hand of Kane
 		Description: Nod Commando, sniper unit.\nCloaked when not attacking.\nCan demolish structures using C4.\nInfantry killed by this unit explode.\nHeals near Tiberium.\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
-	Targetable:
-		TargetTypes: Ground, Infantry, Razorshark
-	Targetable:
-		TargetTypes: Ground, Infantry, MindControlInmune
+	Targetable@razor:
+		TargetTypes: Razorshark
+	Targetable@MindControl:
+		TargetTypes: MindControlInmune
 	Health:
 		HP: 19000
 	Mobile:
@@ -538,8 +535,8 @@ MUTFIEND:
 		Type: none
 	Mobile:
 		Speed: 80
-	Targetable:
-		TargetTypes: Ground, Infantry, Razorshark
+	Targetable@razor:
+		TargetTypes: Razorshark
 	Voiced:
 		VoiceSet: Fiend
 	Targetable:
@@ -618,8 +615,8 @@ AWARRIOR:
 		HP: 15000
 	Mobile:
 		Speed: 68
-	Targetable:
-		TargetTypes: Ground, Infantry, Razorshark
+	Targetable@razor:
+		TargetTypes: Razorshark
 	AutoTarget:
 		ScanRadius: 6
 	Armament@PRIMARY:
@@ -662,8 +659,10 @@ PSYKER:
 		HP: 15000
 	Mobile:
 		Speed: 75
-	Targetable:
-		TargetTypes: Ground, Infantry, MindControlInmune, Razorshark
+	Targetable@razor:
+		TargetTypes: Razorshark
+	Targetable@MindControl:
+		TargetTypes: MindControlInmune
 	Armament@PRIMARY:
 		Weapon: PsykerRay
 		Name: OnFoot
@@ -692,8 +691,6 @@ shark:
 		Description: Anti-infantry creature, fast and deadly\nInstakills non-armored infantry.\n  Strong vs Light Infantry\n  Weak vs Everything else
 	Selectable:
 		Class: Shark
-	GivesExperience:
-		Experience: 165
 	Health:
 		HP: 8500
 	Mobile:
@@ -705,10 +702,6 @@ shark:
 		OwnerType: Killer
 		DeathType: CabalDeath
 		RequiresLobbyCreeps: true
-	Guard:
-		Voice: Move
-	Passenger:
-		Voice: Move
 	RevealsShroud:
 		Range: 5c0
 	Armament:
@@ -720,8 +713,8 @@ shark:
 	AutoTarget:
 		ScanRadius: 8
 		InitialStance: Defend
-	Targetable:
-		TargetTypes: Ground, Infantry, Razorshark
+	Targetable@razor:
+		TargetTypes: Razorshark
 	WithInfantryBody:
 		AttackSequence: shoot
 		StandSequences: stand
@@ -811,8 +804,10 @@ COLOSSI:
 	Tooltip:
 		Name: Colossus
 		Description: Heavy duty alien that\ncan take lots of punishment\nand create an aura effect that harms\nand slows nearby units.\n  Strong vs Unarmored ground units.\n  Weak vs Aircraft.
-	Targetable:
-		TargetTypes: Ground, Infantry, Razorshark, Colossi
+	Targetable@razor:
+		TargetTypes: Razorshark
+	Targetable@Colossi:
+		TargetTypes: Colossi
 	Selectable:
 		Bounds: 26,30,0,-10
 	Health:
@@ -955,8 +950,10 @@ BUG:
 	Tooltip:
 		Name: Overtaker
 		Description: Support alien, it can mind\ncontrol enemies for brief moments.\n  Strong vs Ground units.\n  Weak vs Aircraft.
-	Targetable:
-		TargetTypes: Ground, Infantry, Razorshark, MindControlInmune
+	Targetable@razor:
+		TargetTypes: Razorshark
+	Targetable@MindControl:
+		TargetTypes: MindControlInmune
 	Selectable:
 		Bounds: 26,30,0,-10
 	Health:
@@ -1015,7 +1012,6 @@ CABSENTRY:
 	-SelfHealing@Scrin:
 	Health:
 		HP: 15000
-	Passenger:
 	Armament@primary:
 		Weapon: SentryGun
 	AutoTarget:
@@ -1050,15 +1046,14 @@ CYBORG:
 		Voice: Move
 	RevealsShroud:
 		Range: 8c0
-	Targetable:
-		TargetTypes: Ground, Infantry, Razorshark
+	Targetable@razor:
+		TargetTypes: Razorshark
 	Voiced:
 		VoiceSet: Cyborg
 	Mobile:
 		Speed: 45
 	Health:
 		HP: 25000
-	Passenger:
 	Armament:
 		Weapon: CyborgVulcan
 	AttackFrontal:
@@ -1097,7 +1092,6 @@ PDRONE:
 			Veins: 100
 	Health:
 		HP: 9500
-	Passenger:
 	WithInfantryBody:
 		AttackSequence: shoot
 		IdleSequences: idle1,idle2
@@ -1208,7 +1202,6 @@ MOTH:
 		UpgradeMaxEnabledLevel: 0
 	Health:
 		HP: 20000
-	Passenger:
 	SelectionDecorations:
 		VisualBounds: 22,32,-1,-9
 	DeployToUpgrade:
@@ -1271,8 +1264,8 @@ REAPERCAB:
 	SupplyTruck
 		Payload: 300
 		Voice: Move
-	Targetable:
-		TargetTypes: Ground, Infantry, Razorshark
+	Targetable@razor:
+		TargetTypes: Razorshark
 	Mobile:
 		Speed: 80
 		SharesCell: False
@@ -1284,7 +1277,6 @@ REAPERCAB:
 		HP: 30000
 	Voiced:
 		VoiceSet: CyborgReap
-	Passenger:
 	Armor:
 		Type: Wood
 	Armament@primary:
@@ -1327,15 +1319,14 @@ GLAD:
 		Bounds: 35,30,0,-10
 	Voiced:
 		VoiceSet: Cyborg
-	Targetable:
-		TargetTypes: Ground, Infantry, Razorshark
+	Targetable@razor:
+		TargetTypes: Razorshark
 	WithMuzzleOverlay:
 	Mobile:
 		Speed: 56
 		SharesCell: False
 	Health:
 		HP: 55000
-	Passenger:
 	Armament@primary:
 		Weapon: GLAD120mm
 		MuzzleSequence: muzzle
@@ -1382,9 +1373,8 @@ CYC2:
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
 	Health:
 		HP: 30000
-	Passenger:
-	Targetable:
-		TargetTypes: Ground, Infantry, MindControlInmune
+	Targetable@MindControl:
+		TargetTypes: MindControlInmune
 	Armament:
 		Weapon: CyCannon
 		LocalOffset: 170,85,683
@@ -1490,7 +1480,6 @@ cybdog:
 		Speed: 65
 	Health:
 		HP: 15000
-	Passenger:
 	RevealsShroud:
 		Range: 5c0
 	Armor@worker:

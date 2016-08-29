@@ -15,8 +15,10 @@ Mutant Changes:
 CABAL Changes:
 	Cyberdog hp: 300 -> 100.
 	Reclaimer: Cost 150 -> 175, hp: 110 -> 95.
+	Seeker: Speed 130 -> 120.
 Nod Changes:
 	Flame Warriors flamethrowers changed for stardard rifles that generate fire once they kill infantry, the fire harms nearby units
+	Crusaders: Damage: 6 -> 12, Attack Speed: 1 Second -> 2 Seconds.
 	Hand of Kane: Attack speed: 6 seconds -> 8, range: 7 -> 8, explosion spread: 426 -> 300.
 	Devil's Tongue: Flame speed: 100 -> 130.
 	Buggy: cost 500 -> 600.

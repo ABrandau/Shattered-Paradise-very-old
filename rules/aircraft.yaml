@@ -55,10 +55,8 @@ CLOUD1:
 	BodyOrientation:
 		QuantizedFacings: 32
 	AttackWander:
-	Explodes:
-		Weapon: GasCloudDeathWeapon
-		LoadedChance: 5
-		EmptyWeapon: GasCloudDeathWeapon2
+	WithDeathAnimation:
+		DeathSequence: die
 
 #######################################################
 #GDI
@@ -1277,7 +1275,6 @@ WASP:
 	-WithVoxelBody:
 	WithShadow:
 	RenderSprites:
-		# Scale: 0.4
 	WithFacingSpriteBody:
 	BodyOrientation:
 		QuantizedFacings: 32

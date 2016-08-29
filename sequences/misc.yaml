@@ -15,6 +15,178 @@ editor-overlay:
 	paste:
 		Start: 1
 
+explosion:
+	Defaults:
+		Length: *
+		ZOffset: 511
+	building: twlt070
+	pulse_explosion: pulsefx2
+		BlendMode: Additive
+		Tick: 80
+	small_watersplash: h2o_exp2
+	large_watersplash: h2o_exp1
+	water_piff: w_piff
+	water_piffs: w_piffs
+	piff: piff
+	piffs: piffpiff
+	small_explosion: explosml
+	medium_explosion: explomed
+	large_explosion: explolrg
+	tiny_bang: s_bang16
+	small_bang: s_bang24
+	medium_bang: s_bang34
+	large_bang: s_bang48
+	tiny_brnl: s_brnl20
+	small_brnl: s_brnl30
+	medium_brnl: s_brnl40
+	large_brnl: s_brnl58
+	tiny_tumu: s_tumu22
+	small_tumu: s_tumu30
+	medium_tumu: s_tumu42
+	large_tumu: s_tumu60
+	tiny_clsn: s_clsn16
+	small_clsn: s_clsn22
+	medium_clsn: s_clsn30
+	large_clsn: s_clsn42
+	verylarge_clsn: s_clsn58
+	tiny_twlt: twlt026
+	small_twlt: twlt036
+	medium_twlt: twlt050
+	large_twlt: twlt070
+	verylarge_twlt: twlt100
+	tiny_grey_explosion: xgrysml1
+	small_grey_explosion: xgrysml2
+	medium_grey_explosion: xgrymed1
+	large_grey_explosion: xgrymed2
+	## SP Explos start here
+	## Misc
+	fire1: fire1
+	fire2: fire2
+	fire3: fire3
+	fire4: fire4
+	sparks: sparks
+	sparks2: sparks2
+	sparks3: sparks3
+	#GDI
+	fsidlewall: fsidle
+		Offset: 0,-90
+		Tick: 35
+	fsgrndwall: fsgrnd
+		Offset: 0,-48
+		Tick: 35
+	fsidle: fsidle
+		Offset: 0,-78
+		Tick: 35
+	fsgrnd: fsgrnd
+		Offset: 0,-36
+		Tick: 35
+	podring: podring
+	droppod: droppod
+		Tick: 400
+	droppod2: droppod2
+		Tick: 400
+	ionring: ring1
+		Tick: 100
+	ionscorch: ionscorch
+		Tick: 400
+		ZOffset: -512
+	#Nod
+	militantfire: militantfire
+		Length: *
+		Offset: 0,-26
+		BlendMode: Additive
+		Tick: 35
+	militantfire2: militantfire2
+		Length: *
+		Offset: 0,-26
+		BlendMode: Additive
+		Tick: 35
+	militantfire3: militantfire3
+		Length: *
+		Offset: 0,-26
+		BlendMode: Additive
+		Tick: 35
+	nuke1: nuke1
+		ZOffset: 1024
+		BlendMode: Additive
+	nuke2: nuke2
+		ZOffset: 1024
+		BlendMode: Additive
+	nuke3: nuke3
+		ZOffset: 1024
+		BlendMode: Additive
+	#Mutants
+	bolt1: lightningbolts
+		Length: 1
+	bolt2: lightningbolts
+		Start: 1
+		Length: 1
+	bolt3: lightningbolts
+		Start: 2
+		Length: 1
+	bolt4: lightningbolts
+		Start: 3
+		Length: 1
+	bolt5: lightningbolts
+		Start: 4
+		Length: 1
+	bolt6: lightningbolts
+		Start: 5
+		Length: 1
+	bolt7: lightningbolts
+		Start: 6
+		Length: 1
+	bolt8: lightningbolts
+		Start: 7
+		Length: 1
+	bolt9: lightningbolts
+		Start: 8
+		Length: 1
+	bolt10: lightningbolts
+		Start: 9
+		Length: 1
+	mininuke1: nuke1
+		ZOffset: 1024
+		BlendMode: Additive
+	mininuke2: nuke2
+		ZOffset: 1024
+		BlendMode: Additive
+	tibexp: tibexp
+	tibexp2: tibexp2
+	bullparticle: bullparticle
+	tibexp2mini: tibexp2mini
+	tib_expsmall: tibexpsmall	
+	#CABAL
+	cabexplo: cabexplo
+	lurkertentacle: lurkertentacle
+		Offset: 0, -12
+		Tick: 15
+	#Scrin
+	destroexp: destroexp
+	lightningexplo: lightningexplo
+		Tick: 10
+	colossiglow: glow
+		Tick: 100
+	viscexplo: viscexplo
+	alienpiff3: alienpiff3
+	alienpiff4: alienpiff4
+	alienpiff5: alienpiff5
+	scrinpulse2: scrinpulse2
+		Offset: -5,-12
+	scrinpulse3: scrinpulse3
+		Offset: -5,-12
+	scrinenergyeff: scrinenergyeff
+		Tick: 25
+	firestormexplo: firestormexplo
+	scrinexplo1: scrinexplo1
+	scrinexplo2: scrinexplo2
+	scrinexplo3: scrinexplo3
+	scrinexplo4: scrinexplo4
+	scrinexplo5: scrinexplo5
+	scrinexplo6: scrinexplo6
+	scrinvehicleexplo1: scrinvehicleexplo1
+	scrinvehicleexplo2: scrinvehicleexplo2
+
 poweroff:
 	offline:
 		Length: *
@@ -78,6 +250,7 @@ dot:
 	idle:
 		UseTilesetExtension: false
 		Length: *
+		Offset: 0,99999
 
 lgrysmk1:
 	defaults:
@@ -175,199 +348,6 @@ pips:
 		Start: 4
 	pip-blue-building:
 		Start: 5
-
-explosion:
-	Defaults:
-		Length: *
-		ZOffset: 511
-	building: twlt070
-	pulse_explosion: pulsefx2
-		BlendMode: Additive
-		Tick: 80
-	small_watersplash: h2o_exp2
-	large_watersplash: h2o_exp1
-	water_piff: w_piff
-	water_piffs: w_piffs
-	piff: piff
-	piffs: piffpiff
-	small_explosion: explosml
-	medium_explosion: explomed
-	large_explosion: explolrg
-	tiny_bang: s_bang16
-	small_bang: s_bang24
-	medium_bang: s_bang34
-	large_bang: s_bang48
-	tiny_brnl: s_brnl20
-	small_brnl: s_brnl30
-	medium_brnl: s_brnl40
-	large_brnl: s_brnl58
-	tiny_tumu: s_tumu22
-	small_tumu: s_tumu30
-	medium_tumu: s_tumu42
-	large_tumu: s_tumu60
-	tiny_clsn: s_clsn16
-	small_clsn: s_clsn22
-	medium_clsn: s_clsn30
-	large_clsn: s_clsn42
-	verylarge_clsn: s_clsn58
-	tiny_twlt: twlt026
-	small_twlt: twlt036
-	medium_twlt: twlt050
-	large_twlt: twlt070
-	verylarge_twlt: twlt100
-	tiny_grey_explosion: xgrysml1
-	small_grey_explosion: xgrysml2
-	medium_grey_explosion: xgrymed1
-	large_grey_explosion: xgrymed2
-	## SP Explos start here
-	## Misc
-	fire1: fire1
-	fire2: fire2
-	fire3: fire3
-	fire4: fire4
-	sparks: sparks
-	sparks2: sparks2
-	sparks3: sparks3
-	gasclouddeath: cloud1d
-		Offset: 0,-12
-		ZOffset: 4096
-	veins: veinatac
-		Offset: 0,-12
-		Length: 12
-		UseTilesetExtension: true
-		ZOffset: 1023
-	#GDI
-	fsidlewall: fsidle
-		Offset: 0,-90
-		Tick: 35
-	fsgrndwall: fsgrnd
-		Offset: 0,-48
-		Tick: 35
-	fsidle: fsidle
-		Offset: 0,-78
-		Tick: 35
-	fsgrnd: fsgrnd
-		Offset: 0,-36
-		Tick: 35
-	podring: podring
-	droppod: droppod
-		Tick: 400
-	droppod2: droppod2
-		Tick: 400
-	ionring: ring1
-		Tick: 100
-	ionbeam: ionbeam
-		Offset: 0,-60
-		Length: *
-		Tick: 100
-	ionbeam2: ionbeam
-		Offset: 0,-180
-		Length: *
-		Tick: 100
-	ionbeam3: ionbeam
-		Offset: 0,-300
-		Length: *
-		Tick: 100
-	ionbeam4: ionbeam
-		Offset: 0,-420
-		Length: *
-		Tick: 100
-	ionbeam5: ionbeam
-		Offset: 0,-540
-		Length: *
-		Tick: 100
-	ionbeam6: ionbeam
-		Offset: 0,-660
-		Length: *
-		Tick: 100
-	ionscorch: ionscorch
-		Tick: 400
-		ZOffset: -512
-	#Nod
-	nuke1: nuke1
-		ZOffset: 1024
-		BlendMode: Additive
-	nuke2: nuke2
-		ZOffset: 1024
-		BlendMode: Additive
-	nuke3: nuke3
-		ZOffset: 1024
-		BlendMode: Additive
-	#Mutants
-	bolt1: lightningbolts
-		Length: 1
-	bolt2: lightningbolts
-		Start: 1
-		Length: 1
-	bolt3: lightningbolts
-		Start: 2
-		Length: 1
-	bolt4: lightningbolts
-		Start: 3
-		Length: 1
-	bolt5: lightningbolts
-		Start: 4
-		Length: 1
-	bolt6: lightningbolts
-		Start: 5
-		Length: 1
-	bolt7: lightningbolts
-		Start: 6
-		Length: 1
-	bolt8: lightningbolts
-		Start: 7
-		Length: 1
-	bolt9: lightningbolts
-		Start: 8
-		Length: 1
-	bolt10: lightningbolts
-		Start: 9
-		Length: 1
-	mininuke1: nuke1
-		ZOffset: 1024
-		BlendMode: Additive
-	mininuke2: nuke2
-		ZOffset: 1024
-		BlendMode: Additive
-	tibexp: tibexp
-	tibexp2: tibexp2
-	bullparticle: bullparticle
-	tibexp2mini: tibexp2mini
-	tib_expsmall: tibexpsmall	
-	#CABAL
-	smokebomb1: smokebomb1
-	smokebomb2: smokebomb2
-	smokebomb3: smokebomb3
-	smokebomb4: smokebomb4
-	cabexplo: cabexplo
-	lurkertentacle: lurkertentacle
-		Offset: 0, -12
-		Tick: 15
-	#Scrin
-	destroexp: destroexp
-	lightningexplo: lightningexplo
-		Tick: 10
-	colossiglow: glow
-		Tick: 100
-	viscexplo: viscexplo
-	alienpiff3: alienpiff3
-	alienpiff4: alienpiff4
-	alienpiff5: alienpiff5
-	scrinpulse2: scrinpulse2
-		Offset: -5,-12
-	scrinpulse3: scrinpulse3
-		Offset: -5,-12
-	scrinenergyeff: scrinenergyeff
-		Tick: 25
-	firestormexplo: firestormexplo
-	scrinexplo1: scrinexplo1
-	scrinexplo2: scrinexplo2
-	scrinexplo3: scrinexplo3
-	scrinexplo4: scrinexplo4
-	scrinexplo5: scrinexplo5
-	scrinexplo6: scrinexplo6
-	scrinvehicleexplo1: scrinvehicleexplo1
-	scrinvehicleexplo2: scrinvehicleexplo2
 
 discus:
 	idle:

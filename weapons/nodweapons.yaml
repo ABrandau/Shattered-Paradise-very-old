@@ -3,14 +3,14 @@
 ##########################################
 MilitantRifle:
 	Inherits: ^RifleWarhead
-	ReloadDelay: 40
+	ReloadDelay: 50
 	Range: 4c0
 	Report: infgun3.aud, gostgun1.aud, slvkgun1.aud
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 1200
+		Damage: 1000
 		DamageTypes: Prone70Percent, TriggerProne, MilitantFireDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -30,17 +30,18 @@ MillitantFire:
 	ValidTargets: Ground
 	Warhead@3Dam_area: SpreadDamage
 		Spread: 250
-		Damage: 3000
+		Damage: 2500
 		Falloff: 100, 50, 25, 0
 		ValidTargets: Ground
-		DamageTypes: FireDeath
+		DamageTypes: MilitantFireDeath
 	Warhead@2Eff: CreateEffect
-		Explosions: fire1, fire2
+		Explosions: militantfire, militantfire2, militantfire3
 		InvalidImpactTypes: Water, Air, AirHit
+		ExplosionPalette: apolra2
 
 CrusaderBazooka:
 	Inherits: ^RocketWarhead
-	ReloadDelay: 25
+	ReloadDelay: 50
 	Range: 6c600
 	Report: scifiexplo.wav
 	ValidTargets: Vehicle, Air, Building
@@ -57,7 +58,7 @@ CrusaderBazooka:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 800
+		Damage: 2000
 		ValidTargets: Vehicle, Air, Building
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect

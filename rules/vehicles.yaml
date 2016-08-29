@@ -213,8 +213,6 @@ SONIC:
 		Queue: Vehicle
 		BuildPaletteOrder: 7
 		Prerequisites: ~gaweap, gatech
-	Targetable:
-		TargetTypes: Ground, Vehicle, Repair
 	Mobile:
 		TurnSpeed: 4
 		Speed: 56
@@ -277,8 +275,8 @@ HMEC:
 	Armament@RAILGUN:
 		Weapon: MechRailgun
 		LocalOffset: 260,-220,728, 260,220,728
-	Targetable:
-		TargetTypes: Ground, Vehicle, MindControlInmune, repair
+	Targetable@MindControl:
+		TargetTypes: MindControlInmune
 	-WithVoxelBody:
 	WithVoxelWalkerBody:
 		TickRate: 1
@@ -445,6 +443,14 @@ SAPC:
 		HP: 17500
 	Armor:
 		Type: Light
+	Cloak@cloakgenerator:
+		UpgradeTypes:
+		InitialDelay: 80
+		CloakDelay: 80
+		CloakSound: cloak5.aud
+		UncloakSound: cloak5.aud
+		IsPlayerPalette: true
+		UncloakOn: Unload, Move
 	Cargo:
 		Types: Infantry
 		MaxWeight: 5
@@ -766,8 +772,6 @@ MUTAPC:
 		Queue: Vehicle
 		BuildPaletteOrder: 25
 		Prerequisites: ~muweap
-	Targetable:
-		TargetTypes: Ground, Vehicle, Repair
 	Mobile:
 		TurnSpeed: 7
 		Speed: 150
@@ -811,8 +815,6 @@ MUTTANK:
 		Queue: Vehicle
 		BuildPaletteOrder: 26
 		Prerequisites: ~muweap
-	Targetable:
-		TargetTypes: Ground, Vehicle, Repair
 	Mobile:
 		TurnSpeed: 8
 		Speed: 110
@@ -847,8 +849,6 @@ MUTQUAD:
 		Queue: Vehicle
 		BuildPaletteOrder: 27
 		Prerequisites: ~muweap, muradr
-	Targetable:
-		TargetTypes: Ground, Vehicle, Repair
 	Mobile:
 		TurnSpeed: 7
 		Speed: 75
@@ -888,8 +888,6 @@ MLRS:
 		Queue: Vehicle
 		BuildPaletteOrder: 31
 		Prerequisites: ~muweap, muhall
-	Targetable:
-		TargetTypes: Ground, Vehicle, Repair
 	Mobile:
 		TurnSpeed: 9
 		Speed: 90
@@ -1007,8 +1005,8 @@ SCRHARV:
 		Priority: 7
 		Bounds: 36,36
 	-Capturable:
-	Targetable:
-		TargetTypes: Ground, Vehicle, Repair, MindControlInmune
+	Targetable@MindControl:
+		TargetTypes: MindControlInmune
 	Harvester:
 		Capacity: 30
 		Resources: Tiberium, BlueTiberium
@@ -1280,7 +1278,7 @@ DINO:
 		Prerequisites: ~cabweap
 	Mobile:
 		TurnSpeed: 12
-		Speed: 130
+		Speed: 120
 		Crushes: crate
 	Voiced:
 		VoiceSet: Limpet

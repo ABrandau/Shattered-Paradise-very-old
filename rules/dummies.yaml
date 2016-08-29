@@ -16,137 +16,102 @@
 	RenderSprites:
 		Image: blackhanddummy
 
-VISIONACTOR:
-	Inherits: ^Helicopter
+^DUMMYAIRCRAFT:
+	Inherits: ^SpriteActor
 	Valued:
 		Cost: 900
 	Tooltip:
 		Name: Target
-	-Selectable:
 	SelectionDecorations:
-	AutoSelectionSize:
-	-UpdatesPlayerStatistics:
-	-ActorLostNotification:
-	-SpawnActorOnDeath@vision:
-	-AppearsOnRadar:
 	Aircraft:
+		TurnSpeed: 6
 		Speed: 0
-	-Targetable@GROUND:
-	-Targetable@AIRBORNE:
+	HiddenUnderShroud:
+	Armor:
+		Type: Wood
+	RenderSprites:
+		Image: dot
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32
+
+VISIONACTOR:
+	Inherits: ^DUMMYAIRCRAFT
 	RevealsShroud:
 		Range: 3c0
-	-Voiced:
 	Health:
 		HP: 50
 	SelfHealing:
 		Step: -10
 		Delay: 10
 		HealIfBelow: 200
-	Armor:
-		Type: Wood
-	-RenderVoxels:
-	-WithVoxelBody:
-	RenderSprites:
-		Image: dot
-	WithFacingSpriteBody:
-	BodyOrientation:
-		QuantizedFacings: 32
 
 ##################################################################
 # GDI
 ##################################################################
 
 SHAKYSHAKY:
-	Inherits: ^Helicopter
-	Valued:
-		Cost: 900
-	Tooltip:
-		Name: Target
-	-Selectable:
-	SelectionDecorations:
-	AutoSelectionSize:
-	-UpdatesPlayerStatistics:
-	-ActorLostNotification:
-	-AppearsOnRadar:
-	Aircraft:
-		Speed: 0
-	-Targetable@GROUND:
-	-Targetable@AIRBORNE:
-	-RevealsShroud:
+	Inherits: ^DUMMYAIRCRAFT
 	ShakeOnDeath:
 	RevealsShroud:
 		Range: 3c0
-	-Voiced:
 	Health:
 		HP: 10
 	SelfHealing:
 		Step: -10
 		Delay: 10
 		HealIfBelow: 200
-	Armor:
-		Type: Wood
-	-RenderVoxels:
-	-WithVoxelBody:
-	RenderSprites:
-		Image: dot
-	WithFacingSpriteBody:
-	BodyOrientation:
-		QuantizedFacings: 32
 
 IONBEAMTARGET:
-	Inherits: ^Helicopter
-	Valued:
-		Cost: 900
+	Inherits: ^DUMMYAIRCRAFT
+	Inherits@2: ^VisionWhenKilled
 	Tooltip:
 		Name: Target
-	-Selectable:
-	SelectionDecorations:
-	AutoSelectionSize:
-	-UpdatesPlayerStatistics:
-	-ActorLostNotification:
-	-AppearsOnRadar:
-	RevealsShroud:
-		Range: 3c0
-	Aircraft:
-		Speed: 0
+	Health:
+		HP: 5000
 	Targetable:
 		TargetTypes: IonSpawner
-	-Targetable@GROUND:
-	-Targetable@AIRBORNE:
 	ShakeOnDeath:
-	-Voiced:
-	Health:
-		HP: 150
-	SelfHealing:
-		Step: -10
-		Delay: 10
-		HealIfBelow: 200
-	Armor:
-		Type: Wood
-	-RenderVoxels:
-	-WithVoxelBody:
+	RevealsShroud:
+		Range: 3c0
 	RenderSprites:
-		Image: dot
-	WithFacingSpriteBody:
-	BodyOrientation:
-		QuantizedFacings: 32
+		Image: ionbeamtarget
 	Explodes:
 		Weapon: IonCannon
 		EmptyWeapon: IonCannon
+	WithDeathAnimation@1:
+		UseDeathTypeSuffix: false
+		DeathSequence: ionbeam
+		DeathSequencePalette: effectalpha
+		DeathPaletteIsPlayerPalette: false
+	WithDeathAnimation@2:
+		UseDeathTypeSuffix: false
+		DeathSequence: ionbeam2
+		DeathSequencePalette: effectalpha
+		DeathPaletteIsPlayerPalette: false
+	WithDeathAnimation@3:
+		UseDeathTypeSuffix: false
+		DeathSequence: ionbeam3
+		DeathSequencePalette: effectalpha
+		DeathPaletteIsPlayerPalette: false
+	WithDeathAnimation@4:
+		UseDeathTypeSuffix: false
+		DeathSequence: ionbeam4
+		DeathSequencePalette: effectalpha
+		DeathPaletteIsPlayerPalette: false
+	WithDeathAnimation@5:
+		UseDeathTypeSuffix: false
+		DeathSequence: ionbeam5
+		DeathSequencePalette: effectalpha
+		DeathPaletteIsPlayerPalette: false
+	WithDeathAnimation@6:
+		UseDeathTypeSuffix: false
+		DeathSequence: ionbeam6
+		DeathSequencePalette: effectalpha
+		DeathPaletteIsPlayerPalette: false
 
 IONBEAMMINI:
-	Inherits: ^Helicopter
-	Valued:
-		Cost: 900
-	Tooltip:
-		Name: Ion Beam
-		Description: yeeeeeeeeeeee
-	-Selectable:
-	SelectionDecorations:
-	AutoSelectionSize:
-	-UpdatesPlayerStatistics:
-	-ActorLostNotification:
-	-AppearsOnRadar:
+	Inherits: ^DUMMYAIRCRAFT
 	RevealsShroud:
 		Range: 3c0
 	Aircraft:
@@ -156,19 +121,14 @@ IONBEAMMINI:
 		AltitudeVelocity: 400
 		Speed: 30
 		MoveIntoShroud: true
-	Targetable:
-		TargetTypes: IonBeam
-	-Targetable@GROUND:
-	-Targetable@AIRBORNE:
-	-Voiced:
 	Health:
 		HP: 150
 	SelfHealing:
 		Step: -10
 		Delay: 10
 		HealIfBelow: 200
-	Armor:
-		Type: Wood
+	RevealsShroud:
+		Range: 3c0
 	AttackHeli:
 		FacingTolerance: 20
 		Voice: Attack
@@ -176,8 +136,9 @@ IONBEAMMINI:
 		ScanRadius: 99
 		InitialStance: AttackAnything
 		ForceTargetStances: Ally
-	-RenderVoxels:
-	-WithVoxelBody:
+	RenderSprites:
+		Image: ionbeammini
+		Palette: effectalpha
 	Armament:
 		Weapon: IonDrag
 		TargetStances: Ally
@@ -241,18 +202,7 @@ IONBEAMMINI:
 		Weapon: IonScorch
 
 IONBEAMROAMER:
-	Inherits: ^Helicopter
-	Valued:
-		Cost: 900
-	Tooltip:
-		Name: Ion Beam
-		Description: yeeeeeeeeeeee
-	-Selectable:
-	SelectionDecorations:
-	AutoSelectionSize:
-	-UpdatesPlayerStatistics:
-	-ActorLostNotification:
-	-AppearsOnRadar:
+	Inherits: ^DUMMYAIRCRAFT
 	Aircraft:
 		CruiseAltitude: 0
 		TurnSpeed: 20
@@ -260,30 +210,18 @@ IONBEAMROAMER:
 		AltitudeVelocity: 400#0c43
 		Speed: 25
 		MoveIntoShroud: true
-	Targetable:
-		TargetTypes: IonBeam
-	-Targetable@GROUND:
-	-Targetable@AIRBORNE:
 	RevealsShroud:
 		Range: 3c0
-	-Voiced:
 	Health:
 		HP: 75
 	SelfHealing:
 		Step: -1
 		Delay: 15
 		HealIfBelow: 200
-	Armor:
-		Type: Wood
 	AttackHeli:
 		FacingTolerance: 20
 		Voice: Attack
 	AttackWander:
-	-RenderVoxels:
-	-WithVoxelBody:
-	WithDeathAnimation:
-		DeathSequencePalette: effectalpha
-		DeathPaletteIsPlayerPalette: false
 	RejectsOrders@berserk:
 		UpgradeMinEnabledLevel: 0
 	RenderSprites:
@@ -310,7 +248,7 @@ IONBEAMROAMER:
 		Weapon: IonScorch
 
 KILLEDACTOR:
-	Inherits: ^DUMMYSTRUCTURE
+	Inherits: ^DUMMYAIRCRAFT
 	SelfHealing:
 		Step: -5
 		HealIfBelow: 110

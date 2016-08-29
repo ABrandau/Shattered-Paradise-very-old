@@ -131,6 +131,7 @@ HARV:
 	Selectable:
 		Priority: 7
 		Bounds: 36,36
+	WithVoxelUnloadBody:
 	Harvester:
 		Capacity: 30
 		DeliveryBuildings: proc
@@ -350,16 +351,6 @@ GACNST:
 		Prerequisite: structures.cab
 	SelectionDecorations:
 		VisualBounds: 144, 80, 0, -12
-	# DetonateWeaponPower:
-		# Icon: meteor
-		# Description: Rain Dance
-		# DisplayTimer: True
-		# DisplayBeacon: True
-		# LongDesc: Drags meteors from orbit dealing moderate \ndamage over a wide area.
-		# ChargeTime: 360
-		# ActivationSequence: idle
-		# Weapon: IonCannonSpawner
-		# OrderName: IonCannon2
 
 PROC:
 	Inherits: ^Building

@@ -96,19 +96,6 @@ IonCannon:
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 	Warhead@5Effect: CreateEffect
-		Explosions: ionbeam
-		ImpactSound: ion1.aud
-	Warhead@6Effect: CreateEffect
-		Explosions: ionbeam2
-	Warhead@7Effect: CreateEffect
-		Explosions: ionbeam3
-	Warhead@8Effect: CreateEffect
-		Explosions: ionbeam4
-	Warhead@9Effect: CreateEffect
-		Explosions: ionbeam5
-	Warhead@10Effect: CreateEffect
-		Explosions: ionbeam6
-	Warhead@11Effect: CreateEffect
 		Explosions: ionring
 
 IonCannonSpawner:
@@ -145,7 +132,7 @@ IonScorch:
 	ReloadDelay: 1
 	Projectile: InstantExplode
 	ValidTargets: Ground, Air, IonSpawner
-	Warhead@3Dam_area: SpreadDamage
+	Warhead@1Dam_area: SpreadDamage
 		Spread: 250
 		Damage: 1200
 		Falloff: 100, 50, 25, 0
@@ -155,7 +142,12 @@ IonScorch:
 		Explosions: ionscorch
 		ExplosionPalette: effectalpha
 		ImpactSound: ion1.aud
-	Warhead@op: FireShrapnel
+	Warhead@3Dam_area: SpreadDamage
+		Spread: 250
+		Damage: 1200
+		ValidTargets: IonSpawner
+		DamageTypes: SmallExplosionDeath
+	Warhead@4op: FireShrapnel
 		Weapon: SmallDebris
 		Amount: 1
 		AllowDirectHit: false

@@ -128,10 +128,6 @@
 	ReloadDelayMultiplier@WolfBuff:
 		UpgradeTypes: WolfBuff
 		Modifier: 80, 70
-	DamageMultiplier@WolfBuff:
-		Modifier: 110, 115
-		UpgradeTypes: WolfBuff
-		BaseLevel: 1
 #DECORATIONS
 	WithDecoration@tibicon:
 		Image: tibicon
@@ -210,6 +206,7 @@
 		UpgradeMinEnabledLevel: 1
 
 #EMP ON CYBORGS
+^EmpOnCyborgs:
 	SpeedMultiplier@cyborgemp:
 		UpgradeTypes: empdisable
 		Modifier: 75
@@ -278,6 +275,13 @@
 		Sequence: webguy
 		Palette: player
 		UpgradeTypes: WebDisable
+		UpgradeMinEnabledLevel: 1
+
+^MindControllable:
+	TemporaryOwnerManager:
+	Targetable@MindControl:
+		TargetTypes: MindControlInmune
+		UpgradeTypes: MindControlTargetting
 		UpgradeMinEnabledLevel: 1
 
 ^BurstRecovery:
@@ -512,9 +516,9 @@
 	Inherits@8:^VentilatorBuff
 	Inherits@9: ^VisionWhenKilled
 	Inherits@10: ^BurnsGirl
+	Inherits@11: ^MindControllable
 	DrawLineToTarget:
 	WithTextControlGroupDecoration:
-	TemporaryOwnerManager:
 	Cloak@CLOAKGENERATOR:
 		UpgradeTypes: cloakgenerator
 		UpgradeMinEnabledLevel: 1
@@ -556,14 +560,9 @@
 		VoiceSet: Infantry
 	IgnoresDisguise:
 	Targetable:
-		TargetTypes: Ground, Infantry
-		UpgradeMaxEnabledLevel: 0
-		UpgradeMinEnabledLevel:	0
-		UpgradeTypes: MindControlTargetting
-	Targetable@MindControl:
-		TargetTypes: Ground, Infantry, MindControlInmune
-		UpgradeTypes: MindControlTargetting
-		UpgradeMinEnabledLevel: 1
+		TargetTypes: Ground
+	Targetable@Inf:
+		TargetTypes: Infantry
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	WithInfantryBody:
@@ -600,7 +599,6 @@
 			SmallExplosionDeath: body1, body2, body3, body4, body5
 			EnergyDeath: body1, body2, body3, body4, body5
 			ExplosionDeath: body1, body2, body3, body4, body5
-			FireDeath: body1, body2, body3, body4, body5
 	AutoTarget:
 	AttackMove:
 		Voice: Move
@@ -618,6 +616,9 @@
 	SpawnActorOnDeath@FLAMEGUY:
 		Actor: FLAMEGUY
 		DeathType: FireDeath
+	SpawnActorOnDeath@FLAMEGUY2:
+		Actor: FLAMEGUY
+		DeathType: MilitantFireDeath
 	SpawnActorOnDeath@tiberium:
 		Actor: zombie
 		Probability: 10
@@ -689,27 +690,11 @@
 		CrushedPaletteIsPlayerPalette: true
 
 ^Mutant:
-	Inherits: ^Infantry
-	MustBeDestroyed:
-	TakeCover:
-		DamageModifiers:
-			Prone50Percent: 50
-			Prone60Percent: 60
-			Prone70Percent: 70
-			Prone100Percent: 100
-			Prone350Percent: 350
-		DamageTriggers: TriggerProne
+	Inherits: ^Soldier
 	DamagedByTerrain:
 		Damage: -2
 		DamageInterval: 16
 		Terrain: Tiberium, BlueTiberium
-	WithInfantryBody:
-		IdleSequences: idle1,idle2
-		AttackSequence: shoot
-	WithDeathAnimation:
-		CrushedSequence: die-crushed
-		CrushedSequencePalette: player
-		CrushedPaletteIsPlayerPalette: true
 
 ^Beast:
 	Inherits: ^Mutant
@@ -735,29 +720,19 @@
 		HealIfBelow: 60
 
 ^ScrinSoldier:
-	Inherits: ^Infantry
+	Inherits: ^Soldier
 	Inherits@2: ^ScrinRender
 	Voiced:
 		VoiceSet: Limpet
-	MustBeDestroyed:
 	WithDeathAnimation@normal:
 		DeathSequencePalette: playerscrin
 		CrushedSequencePalette: playerscrin
 		CrushedPaletteIsPlayerPalette: true
-	TakeCover:
-		DamageModifiers:
-			Prone50Percent: 50
-			Prone60Percent: 60
-			Prone70Percent: 70
-			Prone100Percent: 100
-			Prone350Percent: 350
-		DamageTriggers: TriggerProne
 	-DamagedByTerrain:
-	WithInfantryBody:
-		IdleSequences: idle1,idle2
 
 ^Cyborg:
 	Inherits@1: ^Infantry
+	Inherits@2: ^EmpOnCyborgs
 	Inherits@3:	^IncompleteSelfHeal
 	-SpawnActorOnDeath@conversion:
 	-Crushable:
@@ -822,8 +797,8 @@
 	Inherits@5: ^RejectsOrdersBerkserk
 	Inherits@6: ^VisionWhenKilled
 	Inherits@7:^NodVehicleRepair
+	Inherits@8: ^MindControllable
 	DrawLineToTarget:
-	TemporaryOwnerManager:
 	WithTextControlGroupDecoration:
 	Mobile:
 		Crushes: crate
@@ -855,6 +830,8 @@
 		Bounds: 40,30
 	SelectionDecorations:
 		Palette: pips
+	Armor:
+		Type: Light
 	DamagedByTerrain@veins:
 		Damage: 12
 		DamageInterval: 12
@@ -862,8 +839,6 @@
 	UpgradeOnTerrain@VEINS:
 		TerrainTypes: Veins
 		Upgrades: veins
-	Armor:
-		Type: Light
 	WithIdleOverlay@VEINS:
 		Sequence: veins
 		UpgradeTypes: veins
@@ -904,14 +879,11 @@
 	Voiced:
 		VoiceSet: Vehicle
 	Targetable:
-		TargetTypes: Ground, Vehicle, Repair
-		UpgradeMaxEnabledLevel: 0
-		UpgradeMinEnabledLevel:	0
-		UpgradeTypes: MindControlTargetting
-	Targetable@MindControl:
-		TargetTypes: Ground, Vehicle, Repair, MindControlInmune
-		UpgradeTypes: MindControlTargetting
-		UpgradeMinEnabledLevel: 1
+		TargetTypes: Ground
+	Targetable@vehicle:
+		TargetTypes: Vehicle
+	Targetable@repair:
+		TargetTypes: repair
 	Repairable:
 		RepairBuildings: gadept
 		Voice: Move
@@ -987,13 +959,13 @@
 	Mobile:
 		Crushes: wall, crate, infantry
 		TerrainSpeeds:
-			Clear: 75
-			Road: 75
-			Rail: 75
-			DirtRoad: 75
-			Rough: 75
-			Tiberium: 50
-			BlueTiberium: 50
+			Clear: 90
+			Road: 100
+			Rail: 90
+			DirtRoad: 100
+			Rough: 80
+			Tiberium: 90
+			BlueTiberium: 90
 			Veins: 50
 	Carryable:
 		LocalOffset: 0,0,600
