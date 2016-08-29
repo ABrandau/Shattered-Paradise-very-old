@@ -508,13 +508,13 @@ GuardianRepair:
 	ReloadDelay: 100
 	Range: 5c0
 	Report: repair11.aud
-	ValidTargets: Vehicle
+	ValidTargets: Repair
 	Projectile: Bullet
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 213
 		Damage: -5000
-		ValidTargets: Vehicle
+		ValidTargets: Repair
 	Warhead@2Eff: CreateEffect
 		Explosions: sparks, sparks2, sparks3
 		ImpactSound: expnew14.aud

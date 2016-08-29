@@ -1114,7 +1114,6 @@ gafire:
 ionbeamtarget:
 	defaults:
 		UseTilesetCode: false
-	idle: scrbattleship
 	idle: dot
 		Offset: 0,-9999
 		Length: *

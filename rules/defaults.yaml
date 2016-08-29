@@ -139,7 +139,7 @@
 		UpgradeMinEnabledLevel: 1
 
 ^IncompleteSelfHeal:
-	SelfHealing@Scrin:
+	SelfHealing@Incomplete:
 		PercentageStep: 1
 		Step: 0
 		Delay: 100
@@ -147,12 +147,22 @@
 		HealIfBelow: 60
 
 ^PermanentSelfHeal:
-	SelfHealing@Scrin:
+	SelfHealing@Permanent:
 		PercentageStep: 1
 		Step: 0
 		Delay: 100
 		DamageCooldown: 200
 		HealIfBelow: 105
+
+^GuardianPlatformSelfHeal:
+	SelfHealing@GuardianPlatformSelfHeal:
+		PercentageStep: 1
+		Step: 0
+		Delay: 100
+		DamageCooldown: 200
+		HealIfBelow: 105
+		UpgradeTypes: AuraRepair
+		UpgradeMinEnabledLevel: 1
 
 #RIFLEMAN BURN
 ^BurnsGirl:
@@ -388,7 +398,7 @@
 		ActorTypes: marauder
 		Factions: mut
 	EmitInfantryOnSell@scr:
-		ActorTypes: legioclone
+		ActorTypes: legio
 		Factions: scr
 	SpawnActorOnDeath@tiberium2:
 		Actor: visc_lrg
@@ -512,8 +522,8 @@
 	Inherits@4: ^WebDisable
 	Inherits@5: ^BurstRecovery
 	Inherits@6: ^RejectsOrdersBerkserk
-	Inherits@7:^VentilatorPoison
-	Inherits@8:^VentilatorBuff
+	Inherits@7: ^VentilatorPoison
+	Inherits@8: ^VentilatorBuff
 	Inherits@9: ^VisionWhenKilled
 	Inherits@10: ^BurnsGirl
 	Inherits@11: ^MindControllable
@@ -798,6 +808,7 @@
 	Inherits@6: ^VisionWhenKilled
 	Inherits@7:^NodVehicleRepair
 	Inherits@8: ^MindControllable
+	Inherits@9:	^GuardianPlatformSelfHeal
 	DrawLineToTarget:
 	WithTextControlGroupDecoration:
 	Mobile:
@@ -1013,6 +1024,7 @@
 	Inherits@4: ^tractorstop
 	Inherits@5: ^PermanentSelfHeal
 	Inherits@6: ^VisionWhenKilled
+	Inherits@7:	^GuardianPlatformSelfHeal
 	DrawLineToTarget:
 	TemporaryOwnerManager:
 	WithTextControlGroupDecoration:
@@ -1055,7 +1067,7 @@
 		LandWhenIdle: no
 		Voice: Move
 		CruiseAltitude: 2560
-		# AltitudeVelocity: 250
+		AltitudeVelocity: 250
 	Passenger:
 		CargoType: Aircraft
 	Voiced:
@@ -1253,8 +1265,8 @@
 		PowerdownSpeech: DisablePower
 	AutoTarget:
 	RenderRangeCircle:
-	Targetable:
-		TargetTypes: Building, Ground, C4, DetonateAttack, Defence
+	Targetable@Defence:
+		TargetTypes: Defence
 	RenderDetectionCircle:
 	RevealsShroud:
 		Range: 10c0

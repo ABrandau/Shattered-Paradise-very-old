@@ -756,19 +756,107 @@ CARGOCAR:
 	AttackFrontal:
 
 ##############################################
-# Gate
+# Gates & Walls
 ##############################################
+GAWALL:
+	Inherits: ^Wall
+	SoundOnDamageTransition:
+		DamagedSounds:
+		DestroyedSounds:
+	Valued:
+		Cost: 50
+	-AppearsOnRadar:
+	CustomSellValue:
+		Value: 0
+	Tooltip:
+		Name: Concrete Wall
+		Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
+	Health:
+		HP: 30000
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		Image: wall.gdi
+	BlocksProjectiles:
+		Height: 640
+	Crushable:
+		CrushClasses: heavywall
+	LineBuild:
+		NodeTypes: wall, turret
+
+NAWALL:
+	Inherits: ^Wall
+	SoundOnDamageTransition:
+		DamagedSounds:
+		DestroyedSounds:
+	Valued:
+		Cost: 50
+	-AppearsOnRadar:
+	CustomSellValue:
+		Value: 0
+	Tooltip:
+		Name: NOD Wall
+		Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
+	Health:
+		HP: 30000
+	Armor:
+		Type: Concrete
+	RenderSprites:
+		Image: wall.nod
+	BlocksProjectiles:
+		Height: 640
+	Crushable:
+		CrushClasses: heavywall
+	LineBuild:
+		NodeTypes: wall, turret
+
+GAGATE_A:
+	Inherits: ^Gate_A
+	Tooltip:
+		Name: Gate
+	-AppearsOnRadar:
+	-UpdatesPlayerStatistics:
+	RenderSprites:
+		Image: gate_a.gdi
+		FactionImages:
+			gdi: gate_b.gdi
+			nod: gate_b.nod
+
+GAGATE_B:
+	Inherits: ^Gate_B
+	Tooltip:
+		Name: Gate
+	-AppearsOnRadar:
+	-UpdatesPlayerStatistics:
+	RenderSprites:
+		Image: gate_b.gdi
+		FactionImages:
+			gdi: gate_b.gdi
+			nod: gate_b.nod
 
 NAGATE_A:
 	Inherits: ^Gate_A
-	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 100
-		Prerequisites: ~sharedwall
 	Tooltip:
 		Name: Gate
+	-AppearsOnRadar:
+	-UpdatesPlayerStatistics:
 	RenderSprites:
-		Image: gate_a.nod
+		Image: gate_a.gdi
+		FactionImages:
+			gdi: gate_a.gdi
+			nod: gate_a.nod
+
+NAGATE_B:
+	Inherits: ^Gate_B
+	Tooltip:
+		Name: Gate
+	-AppearsOnRadar:
+	-UpdatesPlayerStatistics:
+	RenderSprites:
+		Image: gate_b.gdi
+		FactionImages:
+			gdi: gate_b.gdi
+			nod: gate_b.nod
 
 ##############################################
 # Structures
@@ -2160,6 +2248,7 @@ GASAND:
 	Tooltip:
 		Name: Sandbags
 		Description: Stops infantry and light vehicles.\nCan be crushed by tanks.
+	-AppearsOnRadar:
 	Health:
 		HP: 25000
 	Armor:

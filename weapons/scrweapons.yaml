@@ -27,7 +27,7 @@ LegioNeedler:
 		RangeLimit: 15c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 300
-		Damage: 2000
+		Damage: 3500
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -47,7 +47,7 @@ ColossiTesla:
 		Palette: apolbluealpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 2800
+		Damage: 3500
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@op: FireShrapnel
@@ -61,7 +61,7 @@ ColossiTeslaSplash:
 	Projectile: TeslaZap
 		Palette: apolbluealpha
 	Warhead@1Dam: SpreadDamage
-		Damage: 1400
+		Damage: 2000
 	-Warhead@op: FireShrapnel
 
 ColossiBlast:
@@ -172,11 +172,11 @@ ScorpAcid:
 	Burst: 12
 	Report: flamtnk1.aud
 	Projectile: Bullet
-		Speed: 160
+		Speed: 200
 		Image: acidall32
 		Inaccuracy: 1c0
 		Palette: apolredalpha
-	BurstDelay: 4
+	BurstDelay: 3
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 1300
@@ -197,12 +197,12 @@ ScorpAcid:
 
 ScrMbtCannon:
 	Inherits: ^APWarhead
-	ReloadDelay: 50
+	ReloadDelay: 25
 	Range: 5c0
 	Report: sonic4.aud
 	Projectile: AreaBeam
 		Speed: 450
-		Duration: 60
+		Duration: 30
 		DamageInterval: 5
 		Width: 60
 		Shape: Cylindrical
@@ -260,7 +260,7 @@ TripodLaser:
 	Range: 6c0
 	Report: scrin5b.aud
 	Projectile: Bullet
-		Speed: 400
+		Speed: 350
 		Image: greenplasma
 		Shadow: true
 		Angle: 62
@@ -290,7 +290,7 @@ TripodProton:
 		RangeLimit: 35
 	Warhead@1Dam: SpreadDamage
 		Spread: 90
-		Damage: 1700
+		Damage: 1400
 		ValidTargets: Ground
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -364,7 +364,7 @@ Glyder1Cannon:
 	Inherits: ^APWarhead
 	ReloadDelay: 100
 	Range: 6c0
-	Burst: 3
+	Burst: 5
 	Report: photon1.wav
 	ValidTargets: Ground
 	Projectile: Bullet
@@ -374,8 +374,8 @@ Glyder1Cannon:
 		Shadow: true
 		Palette: apblue
 	Warhead@1Dam: SpreadDamage
-		Spread: 100
-		Damage: 1800
+		Spread: 150
+		Damage: 2500
 		ValidTargets: Ground
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -396,7 +396,7 @@ BattleshipCannon:
 	ReloadDelay: 45
 	Range: 5c768
 	Report: battleshipgun1.wav
-	Burst: 6
+	Burst: 8
 	BurstDelay: 4
 	ValidTargets: Ground, Infantry, Vehicle, water
 	Projectile: Bullet
@@ -493,7 +493,7 @@ DestroyerCannon:
 	Inaccuracy: 2c0
 	BurstDelay: 5
 	Projectile: Bullet
-		Speed: 280
+		Speed: 300
 		Image: destroshell
 		TrailImage: blueballminitrail
 		Palette: pips
@@ -501,7 +501,7 @@ DestroyerCannon:
 		Angle: 62
 	Warhead@1Dam: SpreadDamage
 		Spread: 400
-		Damage: 15000
+		Damage: 17000
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: scrinpulse2

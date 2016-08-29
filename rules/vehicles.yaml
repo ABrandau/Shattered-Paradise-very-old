@@ -1172,7 +1172,7 @@ TRIPOD:
 		Cost: 1400
 	Tooltip:
 		Name: Anhilator Tripod
-		Description: Combat walker. Nearby\n enemy units ignore orders.\n  Strong vs Ground units.\n  Weak vs Aircraft.
+		Description: Combat walker. Nearby\n enemy units ignore orders.\n  Strong vs Structures, Infantry.\n  Weak vs Aircraft.
 	Selectable:
 		Bounds: 50,100, 0, -30
 	Buildable:
@@ -1186,10 +1186,10 @@ TRIPOD:
 		ValidStances: Enemy
 	Mobile:
 		TurnSpeed: 8
-		Speed: 80
+		Speed: 70
 		Crushes: crate
 	Health:
-		HP: 40000
+		HP: 45000
 	Carryable:
 		LocalOffset: 0,0,2500
 	AttackFrontal:
@@ -1471,7 +1471,7 @@ CABAPC:
 
 SPIDERARTY:
 	Inherits: ^Walker
-	Inherits@2:	^IncompleteSelfHeal
+	Inherits@2:	^PermanentSelfHeal
 	Inherits@5: ^CabRender
 	Valued:
 		Cost: 1500

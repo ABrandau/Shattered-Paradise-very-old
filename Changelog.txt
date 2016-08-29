@@ -2,8 +2,11 @@
 
 [2016 - xx - xx]
 General Changes:
+	Rewrotte targetting yaml code.
 	Switched the armor of many vehicles that were wood into light.
 	Fixed clouds and other no-actors giving vision when dissapearing.
+	Walls now won't appear in the radar anymore.
+	Fixed third game showing on defense queue.
 GDI Changes:
 	Carryalls are now working ingame.
 	Medic: cost 400 -> 300.
@@ -24,7 +27,15 @@ Nod Changes:
 	Buggy: cost 500 -> 600.
 	Stealth Tank: hp: 310 -> 275.
 Scrin Changes:
+	Legionaire: cost 200 -> 180, damage: 20 -> 35.
+	Colossus: Damage: 28 -> 35. Splash damage: 14 -> 20.
+	Stormrider: cost 550 -> 450, speed 155 -> 160.
 	The barracks now uses the standard production system, units come out one by one.
+	Aerial Glyder: cost 750 -> 650, damage: 18 -> 25  Spread: 100-> 150, burst: 3 -> 5
+	Battleship HP: 800 -> 1100, Burst: 6 -> 8.
+	Scrin Destroyer: bullet Speed 280 -> 300, damage: 150 -> 170.
+	Tripod: Speed 70 -> 80, hp: 400 -> 50, bullet speed, 400 -> 300, reduced explosion damage.
+
 
 
 

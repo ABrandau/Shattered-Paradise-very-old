@@ -93,8 +93,8 @@ MCV:
 		Crushes: wall, crate, infantry
 	RevealsShroud:
 		Range: 4c0
-	Targetable:
-		TargetTypes: Ground, MindControlInmune
+	Targetable@MindControl:
+		TargetTypes: MindControlInmune
 	MustBeDestroyed:
 		RequiredForShortGame: true
 	-Capturable:
@@ -155,8 +155,8 @@ HARV:
 			Veins: 80
 	Health:
 		HP: 100000
-	Targetable:
-		TargetTypes: Ground, Vehicle, Repair, MindControlInmune
+	Targetable@MindControl:
+		TargetTypes: MindControlInmune
 	SelfHealing:
 		Delay: 10
 		HealIfBelow: 50
@@ -549,6 +549,7 @@ SHAWALL:
 	SoundOnDamageTransition:
 		DamagedSounds:
 		DestroyedSounds:
+	-AppearsOnRadar:
 	Valued:
 		Cost: 50
 	CustomSellValue:
@@ -644,6 +645,8 @@ GATE_A:
 		Queue: Defense
 		BuildPaletteOrder: 100
 		Prerequisites: ~sharedwall
+	-AppearsOnRadar:
+	-UpdatesPlayerStatistics:
 	Tooltip:
 		Name: Gate
 	RenderSprites:
@@ -661,6 +664,8 @@ GATE_B:
 		Queue: Defense
 		BuildPaletteOrder: 100
 		Prerequisites: ~sharedwall
+	-AppearsOnRadar:
+	-UpdatesPlayerStatistics:
 	Tooltip:
 		Name: Gate
 	RenderSprites:
@@ -671,43 +676,3 @@ GATE_B:
 			# mut: gate_b.mut
 			# cab: gate_b.cab
 			# scr: gate_b.scr
-
-GAGATE_A:
-	Inherits: ^Gate_A
-	Tooltip:
-		Name: Gate
-	RenderSprites:
-		Image: gate_a.gdi
-		FactionImages:
-			gdi: gate_b.gdi
-			nod: gate_b.nod
-
-GAGATE_B:
-	Inherits: ^Gate_B
-	Tooltip:
-		Name: Gate
-	RenderSprites:
-		Image: gate_b.gdi
-		FactionImages:
-			gdi: gate_b.gdi
-			nod: gate_b.nod
-
-NAGATE_A:
-	Inherits: ^Gate_A
-	Tooltip:
-		Name: Gate
-	RenderSprites:
-		Image: gate_a.gdi
-		FactionImages:
-			gdi: gate_a.gdi
-			nod: gate_a.nod
-
-NAGATE_B:
-	Inherits: ^Gate_B
-	Tooltip:
-		Name: Gate
-	RenderSprites:
-		Image: gate_b.gdi
-		FactionImages:
-			gdi: gate_b.gdi
-			nod: gate_b.nod

@@ -1009,7 +1009,6 @@ CABSENTRY:
 		Step: 0
 		Delay: 25
 		HealIfBelow: 200
-	-SelfHealing@Scrin:
 	Health:
 		HP: 15000
 	Armament@primary:

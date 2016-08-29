@@ -699,7 +699,7 @@ STORMRIDER:
 	Inherits: ^Plane
 	Inherits@2: ^SelfReloads
 	Valued:
-		Cost: 550
+		Cost: 450
 	Tooltip:
 		Name: Storm Rider
 		Description: Scrin fighter equiped with a blaster turret\nCan fire while moving.\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles, Anti Air weapons.
@@ -715,7 +715,7 @@ STORMRIDER:
 		MaximumPitch: 90
 		IdealSeparation: 1c0
 		TurnSpeed: 8
-		Speed: 155
+		Speed: 160
 		AirborneUpgrades: airborne
 		MoveIntoShroud: true
 		TakeoffSound: dropup1.aud
@@ -803,7 +803,7 @@ SCRGLYDER1:
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^SelfReloads
 	Valued:
-		Cost: 750
+		Cost: 650
 	Tooltip:
 		Name: Glider
 		Description: Specialized weapons platform.\nCan vary from a ground version and aerial version.\nThe aerial version attacks ground units and vice versa.\n Strong vs Armor.\n  Weak vs Light units.
@@ -976,7 +976,7 @@ SCRBATTLESHIP:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 80000
+		HP: 110000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
