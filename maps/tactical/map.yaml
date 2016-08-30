@@ -2,7 +2,7 @@ MapFormat: 11
 
 RequiresMod: ts
 
-Title: Tactical
+Title: Tactical Oportunities
 
 Author: Westwood Studios
 
@@ -14,7 +14,7 @@ Bounds: 2,4,146,288
 
 Visibility: Lobby
 
-Categories: Conquest, Playable, Original TS Map
+Categories: Fun Map / AI Stomp
 
 Players:
 	PlayerReference@Neutral:

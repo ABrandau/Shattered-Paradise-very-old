@@ -8,6 +8,8 @@ add the EMP tank for GDI.
 Make NOD heal when cloaked.
 Give Scrin a shield or sth.
 
+If Flame Warrior flame isn't good enough, make flame warriors able to suicide themselves.
+
 
 
 
@@ -16,6 +18,8 @@ Possible basilisk buff needed
 
 
 tick tank too strong
+Militant weird
+colossi weird
 
 todo
 

@@ -388,32 +388,6 @@ StealthRocketAA:
 	Warhead@5Smu: LeaveSmudge
 		SmudgeType: SmallCrater
 		InvalidTargets: Vehicle, Building, Wall
-
-ToxinMineExplode:
-	Warhead@1Dam: SpreadDamage
-		Spread: 400
-		Damage: 36000
-		Versus:
-			None: 90
-			Wood: 75
-			Light: 60
-			Heavy: 25
-		DamageTypes: Prone50Percent, TriggerProne, MilitantFireDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: large_explosion
-		ImpactSounds: kaboom15.aud
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: large_splash
-		ImpactSounds: splash9.aud
-		ValidImpactTypes: Water
-	Warhead@4Smu: LeaveSmudge
-		SmudgeType: Crater
-		InvalidTargets: Structure, Wall, Trees
-	Warhead@emp: GrantUpgrade
-		Range: 400
-		Duration: 150
-		Upgrades: berserk, AcidScaleDmg
 	
 ##################################################
 # Aircraft
