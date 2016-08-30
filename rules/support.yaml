@@ -266,7 +266,7 @@ GAPOWRUP:
 		Cost: 300
 	Tooltip:
 		Name: Power Turbine
-		Description: Provides extra power generation.
+		Description: Provides extra power generation. Place \nthem on the smokestack of the structure.
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 10
@@ -710,7 +710,7 @@ NAMISL:
 	NukePower@NodNuke:
 		Cursor: nuke
 		Icon: clustermissile
-		ChargeTime: 390
+		ChargeTime: 360
 		Description: Cluster Missile
 		LongDesc: Launches a conventional warhead\nat a target location.
 		BeginChargeSound:
@@ -1176,7 +1176,7 @@ SCRNEEDLER:
 		Palette: apolbluealpha
 	DisabledOverlay:
 	Health:
-		HP: 40000
+		HP: 50000
 	Armor:
 		Type: Heavy
 	BodyOrientation:
@@ -1257,7 +1257,7 @@ SCRDRONE:
 		Cost: 1300
 	Tooltip:
 		Name: Visceroid Hive
-		Description: Advanced base defense.\nSpawns Visceroids near the enemies.\nRequires power to operate.\n  Strong vs All
+		Description: Advanced base defense.\nThrows Visceroids near the enemies.\nRequires power to operate.\n  Strong vs All
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 60
@@ -1273,9 +1273,9 @@ SCRDRONE:
 	RequiresPower:
 	DisabledOverlay:
 	Health:
-		HP: 60000
+		HP: 80000
 	Armor:
-		Type: Heavy
+		Type: Light
 	RevealsShroud:
 		Range: 12c0
 	AttackOmni:

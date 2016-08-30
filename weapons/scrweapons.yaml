@@ -94,7 +94,7 @@ ColossiBlastTesla:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 80
 	Range: 3c0
-	Report: voltautofire.wav
+	# Report: voltautofire.wav
 	Projectile: TeslaZap
 		BrightZaps: 1
 		DimZaps: 1
@@ -308,7 +308,7 @@ TripodProton:
 #################################################
 StormRiderBlast:
 	Inherits: ^RifleWarhead
-	ReloadDelay: 75
+	ReloadDelay: 100
 	Range: 6c512
 	Report: laserpistol.wav
 	ValidTargets: Ground
@@ -323,8 +323,8 @@ StormRiderBlast:
 		Inaccuracy: 384
 		Image: blueplasma
 	Warhead@1Dam: SpreadDamage
-		Spread: 171
-		Damage: 3000
+		Spread: 120
+		Damage: 6000
 		ValidTargets: Ground
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -557,7 +557,7 @@ WyvermBlast:
 		Image: blueplasma
 	Warhead@1Dam: SpreadDamage
 		Spread: 171
-		Damage: 4000
+		Damage: 6000
 		ValidTargets: Ground, Air
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect

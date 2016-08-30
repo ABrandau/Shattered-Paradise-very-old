@@ -353,6 +353,8 @@ PROC:
 	Inherits: ^Building
 	Valued:
 		Cost: 1700
+	CustomSellValue:
+		Value: 300
 	Tooltip:
 		Name: Tiberium Refinery
 		Description: Processes raw Tiberium\ninto usable resources.\nIncompatible with scrin harvesters.
@@ -379,8 +381,6 @@ PROC:
 		PipColor: Green
 		PipCount: 15
 		Capacity: 1500
-	CustomSellValue:
-		Value: 600
 	FreeActor:
 		Actor: HARV
 		SpawnOffset: 3,1

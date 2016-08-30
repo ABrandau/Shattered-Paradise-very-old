@@ -208,7 +208,7 @@ SONIC:
 		Cost: 1500
 	Tooltip:
 		Name: Disruptor
-		Description: Armored Vehicle with a \nlong range sonic cannon.\nResistant to sonic damage.\n  Strong vs Ground units.\n  Weak vs Aircraft.
+		Description: Armored Vehicle with a long range sonic cannon.\nResistant to sonic damage. Auto repairs up to half health.\n  Strong vs Ground units.\n  Weak vs Aircraft.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 7

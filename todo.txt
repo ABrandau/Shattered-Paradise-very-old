@@ -29,8 +29,6 @@ Veterancy Chevrons
 
 Status Icons
 
-Tiberium death effect for infantry
-
 place anti light for alien weapons.
 
 Improve the hover tank lazor
@@ -47,11 +45,9 @@ missing shadow fron nod missile silo
 harvester harvest anim uses the wrong pal
 
 Fix Temple of NOD offset.
-Make the NOD TOxin drone a mine.
 
-Civ stuff
-f
-
+Graphics
+cnc 3 big tiberium glaciers
 boxes
 
 traffic lights

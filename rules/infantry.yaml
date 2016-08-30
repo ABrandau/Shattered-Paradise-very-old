@@ -166,16 +166,19 @@ ALTNODE1:
 		Cost: 150
 	Tooltip:
 		Name: Flame Warrior
-		Description: Light infantry variant. Fires inflamable bullets that incinerate\ninfantry, damaging units that are nearby the killed unit.\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft
+		Description: Light infantry variant. Fires inflamable bullets that incinerate\ninfantry, damaging units that are nearby the killed unit. They\ncan Be ordered to suicide, setting any nearby infantry ablaze,\ndealing damage as mentioned before.\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft
 	Health:
 		HP: 10000
 	Mobile:
 		Speed: 70
-	DeployToTimedUpgrade:
+	DeployToUpgrade:
 		DeployedUpgrades: WingsOfFire
-		CooldownTicks: 3000
-		StartsFullyCharged: true
-		DeployedTicks: 300
+		UndeployedUpgrades: undeployed
+		DeployAnimation: die1
+		Facing: 160
+		AllowedTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
+		DeploySound:
+		UndeploySound:
 	ExplodeWeapon:
 		Weapon: MilitantExplode
 		UpgradeTypes: WingsOfFire
@@ -206,7 +209,7 @@ CRUSADER:
 		Cost: 210
 	Tooltip:
 		Name: Crusader
-		Description: Anti Armour Infantry, equiped with a Rocket\nlauncher backpack, can fire while moving.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry.
+		Description: Anti Armour Infantry, equiped with a Rocket\nlauncher backpack, can fire while moving.\nCan also set infantry on fire.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry.
 	Health:
 		HP: 11000
 	Mobile:
@@ -235,7 +238,7 @@ TEMPLAR:
 		Cost: 300
 	Tooltip:
 		Name: Templar
-		Description: Heavy weapons Infantry.\nHeals on Tiberium.\nDeals full damage to all units.\n  Weak vs Anti infantry weapons, Aircraft.
+		Description: Heavy weapons Infantry, heals on Tiberium.\nDeals full damage to all units.\n  Weak vs Anti infantry weapons, Aircraft.
 	Health:
 		HP: 20000
 	Mobile:
@@ -922,7 +925,7 @@ FLOAT:
 	Selectable:
 		Class: FLoat
 	Valued:
-		Cost: 780
+		Cost: 450  
 	-Crushable:
 	Tooltip:
 		Name: Purifier
@@ -1219,7 +1222,7 @@ MOTH:
 		UpgradeTypes: notmobile
 		UpgradeMaxEnabledLevel: 0
 	Health:
-		HP: 20000
+		HP: 15000
 	SelectionDecorations:
 		VisualBounds: 22,32,-1,-9
 	DeployToUpgrade:
@@ -1247,8 +1250,13 @@ MOTH:
 		IsPlayerPalette: true
 		UpgradeTypes: deployed
 		UpgradeMinEnabledLevel: 1
+		WhileCloakedUpgrades: armor
 		UncloakOn: Demolish
 	-WithIdleOverlay@web:
+	DamageMultiplier@abudctorarmor:
+		UpgradeTypes: deployed
+		BaseLevel: 1
+		Modifier: 75
 	WithIdleOverlay:
 		Sequence: idle
 		UpgradeTypes: deployed

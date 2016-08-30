@@ -169,7 +169,6 @@ TRNSPORT:
 		InitialFacing: 0
 		TakeoffSound: dropup1.aud
 		LandingSound: dropdwn1.aud
-		AltitudeVelocity: 64
 		MoveIntoShroud: false
 	Health:
 		HP: 17500
@@ -196,7 +195,7 @@ GUARDIAN:
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 20
-		Prerequisites: ~gahpad, gatech
+		Prerequisites: ~gahpad, gadept, gatech
 	Selectable:
 		Bounds: 110,90
 	Aircraft:
@@ -441,7 +440,7 @@ SCRIN:
 		ZOffset: 512
 	Aircraft:
 		MaximumPitch: 90
-		TurnSpeed: 3
+		TurnSpeed: 6
 		Speed: 175
 		AirborneUpgrades: airborne
 		MoveIntoShroud: true
@@ -910,7 +909,7 @@ SCRTRANS:
 		Description: Scrin equivalent to an APC.\nTransports infantry around the field.\n  Unarmed
 	Buildable:
 		Queue: Air
-		Prerequisites: ~scrair
+		Prerequisites: ~scrair, scrdepot
 	Voiced:
 		VoiceSet: Limpet
 	Cargo:

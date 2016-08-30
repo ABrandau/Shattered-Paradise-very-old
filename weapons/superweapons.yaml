@@ -596,7 +596,10 @@ CabalCannon:
 	Warhead@5Spawn: SpawnActor
 		Actors: shakyshaky
 		Range: 3
-	Warhead@6ClusterSmudges: LeaveSmudge
+	Warhead@6Spawn: SpawnActor
+		Actors: visionactor
+		Range: 3
+	Warhead@7ClusterSmudges: LeaveSmudge
 		SmudgeType: SmallScorch
 		Size: 2
 		InvalidTargets: Vehicle, Building, Wall

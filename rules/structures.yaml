@@ -1361,6 +1361,8 @@ SCRPROC:
 	Inherits@2: ^ScrinRender
 	Valued:
 		Cost: 1700
+	CustomSellValue:
+		Value: 300
 	Tooltip:
 		Name: Scrin Refinery
 		Description: Processes raw Ichor\ninto usable resources.\nIncompatible with human harvesters.
@@ -1389,8 +1391,6 @@ SCRPROC:
 		PipColor: Green
 		PipCount: 15
 		Capacity: 1500
-	CustomSellValue:
-		Value: 600
 	FreeActor:
 		Actor: SCRHARV
 		SpawnOffset: 3,1

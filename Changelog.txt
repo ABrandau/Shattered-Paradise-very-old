@@ -23,6 +23,7 @@ Mutant Changes:
 CABAL Changes:
 	Cyberdog hp: 300 -> 100.
 	Reclaimer: Cost 150 -> 175, hp: 110 -> 95.
+	Abductors now take 25% less damage when deployed.
 	Cyborg Commando: Spread: 48 -> 120
 	Seeker: Speed 130 -> 120.
 	Blaster Turret: Spread: 300 -> 225.
@@ -31,7 +32,7 @@ Nod Changes:
 	Repair Vehicle removed.
 	Flame Warriors flamethrowers changed for stardard rifles that generate fire once they kill infantry, the fire harms nearby units.
 	They can also commit suicide.
-	Crusaders: Damage: 6 -> 20, Attack Speed: 1 Second -> 2 Seconds, removed innacuracy against infantry.
+	Crusaders: Damage: 6 -> 20, Attack Speed: 1 Second -> 2 Seconds, removed innacuracy against infantry, they share the Flame Warrior passive.
 	Hand of Kane: Attack speed: 6 seconds -> 8, range: 7 -> 8, explosion spread: 426 -> 300.
 	Devil's Tongue: Flame speed: 100 -> 130.
 	Buggy: cost 500 -> 600.
@@ -51,7 +52,7 @@ Scrin Changes:
 	Scrin Destroyer: bullet Speed 280 -> 300, damage: 150 -> 170.
 	Tripod: Speed 70 -> 80, hp: 400 -> 50, bullet speed, 400 -> 300, reduced explosion damage.
 	The barracks now uses the standard production system, units come out one by one.
-
+	Visceroid Hive: hp: 600 -> 800, Armor: Heavy -> Light.
 
 
 [2016 - 06 - 13]

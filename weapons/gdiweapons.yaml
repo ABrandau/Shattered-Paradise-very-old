@@ -253,7 +253,7 @@ JuggCannon:
 		InvalidTargets: Vehicle, Building, Wall
 
 SonicZap:
-	ReloadDelay: 250
+	ReloadDelay: 120
 	Range: 4c0
 	Report: sonic4.aud
 	Projectile: AreaBeam

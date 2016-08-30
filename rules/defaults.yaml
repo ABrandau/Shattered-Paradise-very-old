@@ -121,10 +121,10 @@
 #WOLF BUFFS AND DEBUFFS
 	SpeedMultiplier@WolfBuff:
 		UpgradeTypes: WolfBuff
-		Modifier: 120, 130
+		Modifier: 130, 140
 	ReloadDelayMultiplier@WolfBuff:
 		UpgradeTypes: WolfBuff
-		Modifier: 80, 70
+		Modifier: 70, 60
 #DECORATIONS
 	WithDecoration@tibicon:
 		Image: tibicon
@@ -163,7 +163,7 @@
 
 ^NodCloakHealing:
 	SelfHealing@NodCloakHealing:
-		PercentageStep: 1
+		PercentageStep: 2
 		Step: 0
 		Delay: 100
 		DamageCooldown: 200
@@ -172,7 +172,7 @@
 		UpgradeMinEnabledLevel: 1
 
 #RIFLEMAN BURN
-^BurnsGirl:
+^BurnsGirl: #wiu wiu wiu wiu wiu wiu
 	SpawnActorOnDeath@burns:
 		Actor: fireactor
 		Probability: 100
@@ -203,7 +203,7 @@
 	SelfHealing@VentilatorPoison:
 		PercentageStep: -3
 		Step: 0
-		Delay: 75
+		Delay: 60
 		UpgradeTypes: VentilatorPoison, WolfBuff
 		HealIfBelow: 200
 		DamageTypes: TiberiumDeath
@@ -211,7 +211,7 @@
 	SelfHealing@VentilatorPoisonCounter:
 		PercentageStep: 3
 		Step: 0
-		Delay: 75
+		Delay: 60
 		UpgradeTypes: WolfBuff
 		HealIfBelow: 60
 		DamageTypes: TiberiumDeath
@@ -336,6 +336,7 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^VisionWhenKilled
+	Inherits@4: ^BurnsGirl
 	WithTextControlGroupDecoration:
 	SelectionDecorations:
 		Palette: pips

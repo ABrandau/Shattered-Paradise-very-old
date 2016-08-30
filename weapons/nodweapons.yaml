@@ -30,7 +30,7 @@ MillitantFire:
 	ValidTargets: Ground
 	Warhead@3Dam_area: SpreadDamage
 		Spread: 250
-		Damage: 2500
+		Damage: 2000
 		Falloff: 100, 50, 25, 0
 		ValidTargets: Ground
 		DamageTypes: MilitantFireDeath
@@ -87,7 +87,7 @@ CrusaderBazooka:
 		Spread: 128
 		Damage: 2000
 		ValidTargets: Vehicle, Air, Building, Infantry
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, MilitantFireDeath#SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
 		ImpactSound: expnew12.aud
