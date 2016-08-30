@@ -100,8 +100,8 @@
 		UpgradeMinEnabledLevel: 1
 #GENERIC POISON EFFECT
 	SelfHealing@poisoncloud:
-		PercentageStep: -1
-		Delay: 15
+		PercentageStep: -3
+		Delay: 25
 		UpgradeTypes: Poison
 		HealIfBelow: 200
 		DamageTypes: TiberiumDeath
@@ -360,9 +360,15 @@
 	WithBuildingExplosion:
 		Sequences: building, large_bang, large_brnl, verylarge_clsn, large_tumu
 	EngineerRepairable:
+	SelfHealing@poisoncloud:
+		PercentageStep: -1
 	ShakeOnDeath:
 	Guardable:
 		Range: 6c0
+	Health:
+		HP: 28000
+		Shape: Circle
+			Radius: 500
 	Demolishable:
 	Cloak@CLOAKGENERATOR:
 		UpgradeTypes: cloakgenerator
@@ -612,7 +618,6 @@
 		DeathPaletteIsPlayerPalette: False
 		DeathTypes: #1 2 normals, 3 headshot, 4 explosion
 			BulletDeath: body1, body2, body3, body4, body5
-			TiberiumDeath: body1, body2, body3, body4, body5
 			CabalDeath: body1, body2, body3, body4, body5
 			CabalDeathCrate: body1, body2, body3, body4, body5
 			BlackHandRfle: body1, body2, body3, body4, body5
@@ -655,6 +660,13 @@
 		InternalOwner: Creeps
 		DeathType: TiberiumDeath
 		RequiresLobbyCreeps: true
+	SpawnActorOnDeath@berserk:
+		Actor: berserker
+		Probability: 5
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		DeathType: TiberiumDeath
+		RequiresLobbyCreeps: true
 	SpawnActorOnDeath@tiberium3:
 		Actor: zombie
 		Probability: 40
@@ -665,6 +677,13 @@
 	SpawnActorOnDeath@tiberium4:
 		Actor: VISC_LRG
 		Probability: 40
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		DeathType: TiberiumDeathStrong
+		RequiresLobbyCreeps: true
+	SpawnActorOnDeath@berserk:
+		Actor: berserker
+		Probability: 10
 		OwnerType: InternalName
 		InternalOwner: Creeps
 		DeathType: TiberiumDeathStrong
@@ -744,7 +763,10 @@
 		DeathTypes: #1 2 normals, 3 headshot, 4 explosion
 			TiberiumDeath: 1, 2
 			TiberiumDeathStrong: 1, 2
+			EnergyDeath: 1, 2
 	-WithDeathAnimation@tib:
+	-SpawnActorOnDeath@FLAMEGUY:
+	-SpawnActorOnDeath@FLAMEGUY2:
 
 ^ScrinSoldier:
 	Inherits: ^Soldier
@@ -826,6 +848,7 @@
 	Inherits@7:^NodVehicleRepair
 	Inherits@8: ^MindControllable
 	Inherits@9:	^GuardianPlatformSelfHeal
+	Inherits@10: ^BurnsGirl
 	DrawLineToTarget:
 	WithTextControlGroupDecoration:
 	Mobile:
@@ -885,25 +908,33 @@
 		DeathType: CabalDeath
 		RequiresLobbyCreeps: false
 	SpawnActorOnDeath@egg:
-		Actor: eggs
+		Actor: crab
 		Probability: 10
 		OwnerType: InternalName
 		InternalOwner: Creeps
-		DeathType: TiberiumDeath, TiberiumDeathStrong
+		DeathType:  TiberiumDeath
 		RequiresLobbyCreeps: true
 	SpawnActorOnDeath@berserk:
 		Actor: berserker
-		Probability: 1
+		Probability: 10
 		OwnerType: InternalName
 		InternalOwner: Creeps
-		DeathType: TiberiumDeath, TiberiumDeathStrong
+		DeathType: TiberiumDeath
 		RequiresLobbyCreeps: true
-	SpawnActorOnDeath@scrmine:
-		Actor: scrmine
-		Probability: 100
-		OwnerType: Killer
-		DeathType: ScrinDroneDeath
-		RequiresLobbyCreeps: false
+	SpawnActorOnDeath@egg2:
+		Actor: crab
+		Probability: 40
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		DeathType:  TiberiumDeathStrong
+		RequiresLobbyCreeps: true
+	SpawnActorOnDeath@berserk2:
+		Actor: berserker
+		Probability: 40
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		DeathType: TiberiumDeathStrong
+		RequiresLobbyCreeps: true
 	Voiced:
 		VoiceSet: Vehicle
 	Targetable:

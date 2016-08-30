@@ -365,6 +365,9 @@ proc.gdi:
 	make: ntrefnmk
 		Length: 20
 		ShadowStart: 20
+	unload-overlay: narefn_a
+		Length: *
+		ZOffset: 1024
 	flame: ntrefn_b
 		Length: *
 	idle-redlights: ntrefn_c
@@ -407,6 +410,9 @@ proc.nod:
 		ShadowStart: 20
 	flame: ntrefn_b
 		Length: *
+	unload-overlay: narefn_a
+		Length: *
+		ZOffset: 1024
 	idle-redlights: ntrefn_c
 		Length: 16
 		Tick: 120
@@ -446,6 +452,9 @@ proc.mut:
 		ShadowStart: 20
 	flame: ntrefn_b
 		Length: *
+	unload-overlay: narefn_a
+		Length: *
+		ZOffset: 1024
 	idle-redlights: ntrefn_c
 		Length: 16
 		Tick: 120
@@ -485,6 +494,9 @@ proc.cab:
 		ShadowStart: 20
 	flame: ntrefn_b
 		Length: *
+	unload-overlay: narefn_a
+		Length: *
+		ZOffset: 1024
 	idle-redlights: ntrefn_c
 		Length: 16
 		Tick: 120

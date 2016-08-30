@@ -656,7 +656,7 @@ CTurretCannon:
 		InvalidTargets: Vehicle, Building, Wall
 
 BlasterProton:
-	Inherits: ^BombWarhead
+	Inherits: ArtilleryWarhead
 	ReloadDelay: 150
 	Burst: 8
 	Range: 10c0

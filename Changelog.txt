@@ -2,6 +2,9 @@
 
 [2016 - xx - xx]
 General Changes:
+	Cleaned unit descriptions a bit.
+	Filtered maps by type: 1v1, 2v2, 3v3, 4v4, FFA and fun maps / comp stomp.
+	Cloud: speed: 40 -> 30, Lifetime: 15 seconds.
 	Aircraft cannot be confused.
 	Harvesters are now worth $1100 and refineries $1700.
 	Switched the armor of many vehicles that were wood into light.
@@ -9,6 +12,7 @@ General Changes:
 	Walls now won't appear in the radar anymore.
 	Fixed third gate showing on defense queue.
 	Commandos are now immune to order rejection.
+	Beast will no longer spawn flameguys, show energy or tiberium deaths, those are set as the default ones.
 GDI Changes:
 	Carryalls are now working ingame.
 	Medic: cost 400 -> 300.
@@ -19,6 +23,8 @@ GDI Changes:
 	Guardian Platform now applies a healing aura on nearby friendly vehicles.
 	Juggernaut: Cost: 800 -> 900.
 Mutant Changes:
+	Marauder: Cost: 125 -> 110,
+	Skirmisher: Cost: 160 -> 180.
 	Mind walker damage: 500 -> 300.
 CABAL Changes:
 	Cyberdog hp: 300 -> 100.
@@ -26,7 +32,8 @@ CABAL Changes:
 	Abductors now take 25% less damage when deployed.
 	Cyborg Commando: Spread: 48 -> 120
 	Seeker: Speed 130 -> 120.
-	Blaster Turret: Spread: 300 -> 225.
+	Railgun Turret: Power: -60 -> 40.
+	Blaster Turret: Spread: 300 -> 225, Power: -75 ->60 Warhead: Bomb -> Artillery.
 Nod Changes:
 	NOD Units now heal when they are cloaked.
 	Repair Vehicle removed.

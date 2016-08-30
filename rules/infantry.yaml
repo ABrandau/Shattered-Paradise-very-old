@@ -11,7 +11,7 @@ GDIE1:
 		Cost: 130
 	Tooltip:
 		Name: Marine
-		Description: General-Purpose Infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: General-Purpose Infantry.\n  Strong vs Infantry\n\n  Weak vs Vehicles, Aircraft
 	Health:
 		HP: 12000
 	Mobile:
@@ -32,7 +32,7 @@ JUMPJET:
 		Cost: 250
 	Tooltip:
 		Name: Jumpjet Infantry
-		Description: Airborne Soldier, equipped with an AP rifle.\n Can target helicopters and battleships.\nWIP unit - Cannot fly.\n  Strong vs Heavy Vehicles, Helicopters.\n  Weak vs Infantry, Light Vehicles, Structures.
+		Description: Airborne Soldier, equipped with an AP rifle.\nCan target helicopters and battleships.\nWIP unit - Cannot fly.\n\n  Strong vs Heavy Vehicles, Helicopters.\n  Weak vs Infantry, Light Vehicles, Structures.
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 2
@@ -66,7 +66,7 @@ GRENADIER:
 		Cost: 210
 	Tooltip:
 		Name: Grenadier
-		Description: Support Infantry armed with grenade launchers.\nCan explode violently when killed.\n  Strong vs Buildings, Infantry, Light Vehicles.\n  Weak vs Vehicles, Aircraft
+		Description: Support Infantry armed with grenade launchers.\nCan explode violently when killed.\n\n  Strong vs Buildings, Infantry, Light Vehicles.\n  Weak vs Vehicles, Aircraft
 	Health:
 		HP: 9000
 	Mobile:
@@ -92,7 +92,7 @@ MEDIC:
 		Cost: 300
 	Tooltip:
 		Name: Medic
-		Description: Heals nearby infantry.\n  Unarmed
+		Description: Heals nearby infantry.\n\n  Unarmed
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 4
@@ -125,7 +125,7 @@ EAGLEGUARD:
 		Cost: 600
 	Tooltip:
 		Name: Eagle Guard
-		Description: Elite Infantry, armed with power\narmor and a an EMP ray. Its\nattacks disable vehicles briefly.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft.
+		Description: Elite Infantry, armed with power armor and a an EMP ray.\nIts attacks disable vehicles briefly.\n\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft.
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 5
@@ -166,7 +166,7 @@ ALTNODE1:
 		Cost: 150
 	Tooltip:
 		Name: Flame Warrior
-		Description: Light infantry variant. Fires inflamable bullets that incinerate\ninfantry, damaging units that are nearby the killed unit. They\ncan Be ordered to suicide, setting any nearby infantry ablaze,\ndealing damage as mentioned before.\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft
+		Description: Light infantry variant. Fires inflamable bullets that incinerate\nunits, damaging units that are nearby the killed unit. They can\nbe ordered to suicide, setting any nearby unit ablaze, dealing\n damage as mentioned before.\n\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft
 	Health:
 		HP: 10000
 	Mobile:
@@ -209,7 +209,7 @@ CRUSADER:
 		Cost: 210
 	Tooltip:
 		Name: Crusader
-		Description: Anti Armour Infantry, equiped with a Rocket\nlauncher backpack, can fire while moving.\nCan also set infantry on fire.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry.
+		Description: Anti Armour Infantry, equiped with a Rocket\nlauncher backpack, can fire while moving.\nCan also set units on fire.\n\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry.
 	Health:
 		HP: 11000
 	Mobile:
@@ -238,7 +238,7 @@ TEMPLAR:
 		Cost: 300
 	Tooltip:
 		Name: Templar
-		Description: Heavy weapons Infantry, heals on Tiberium.\nDeals full damage to all units.\n  Weak vs Anti infantry weapons, Aircraft.
+		Description: Heavy weapons Infantry, heals on Tiberium.\n\n  Deals full damage to ground units.\n  Weak vs Anti infantry weapons, Aircraft.
 	Health:
 		HP: 20000
 	Mobile:
@@ -267,7 +267,7 @@ MHIJACK:
 		Cost: 600
 	Tooltip:
 		Name: Hijacker
-		Description: NOD Agent, can steal enemy vehicles\nand infiltrate powerplants.\nCloaks when idle.\n  Unarmed
+		Description: NOD Agent, can steal enemy vehicles\nand infiltrate powerplants.\nCloaks when idle.\n\n  Unarmed
 	Voiced:
 		VoiceSet: Spy
 	-Crushable:
@@ -306,7 +306,7 @@ BHS:
 		Cost: 1000
 	Tooltip:
 		Name: Hand of Kane
-		Description: Nod Commando, sniper unit.\nCloaked when not attacking.\nCan demolish structures using C4.\nInfantry killed by this unit explode.\nHeals near Tiberium.\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
+		Description: Nod Commando, sniper unit.\nCloaked when not attacking.\nCan demolish structures using C4.\nInfantry killed by this unit explode.\nHeals near Tiberium.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
 	Targetable@razor:
 		TargetTypes: Razorshark
 	Targetable@MindControl:
@@ -352,10 +352,10 @@ MARAUDER:
 		BuildPaletteOrder: 18
 		Prerequisites: ~murax
 	Valued:
-		Cost: 125
+		Cost: 110
 	Tooltip:
 		Name: Marauder
-		Description: Mutant Militia, equipped with shotguns.\nThey can generate tiberium fortifications for themselves.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft, Base Defences.
+		Description: Mutant Militia, equipped with shotguns.\nThey can generate tiberium fortifications for themselves.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft, Base Defences.
 	Voiced:
 		VoiceSet: Rocket
 	Health:
@@ -457,10 +457,10 @@ E3:
 		BuildPaletteOrder: 19
 		Prerequisites: ~murax
 	Valued:
-		Cost: 160
+		Cost: 180
 	Tooltip:
 		Name: Skirmisher
-		Description: Anti-tank Militia.\n  Strong vs Vehicles, Aircraft, Buildings\n  Weak vs Infantry
+		Description: Anti-tank Militia.\n\n  Strong vs Vehicles, Aircraft, Buildings\n  Weak vs Infantry
 	Voiced:
 		VoiceSet: Rocket
 	Health:
@@ -490,7 +490,7 @@ E2:
 		Cost: 400
 	Tooltip:
 		Name: Mutant Engineer
-		Description: Infiltrates, captures enemy structures\nand also places mines.\n  Unarmed
+		Description: Infiltrates, captures enemy structures\nand also places mines.\n\n  Unarmed
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 20
@@ -534,7 +534,7 @@ MUTFIEND:
 	Inherits: ^Beast
 	Tooltip:
 		Name: Tiberian Fiend
-		Description: Tiberian Beast, fires tiberium shards at enemies.\nCannot be crushed.\n  Strong vs Ground units.\n  Weak vs Aircraft.
+		Description: Tiberian Beast, fires tiberium shards at enemies.\nCannot be crushed.\n\n  Strong vs Ground units.\n  Weak vs Aircraft.
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 21
@@ -595,7 +595,7 @@ SEER:
 		Cost: 550
 	Tooltip:
 		Name: Seer
-		Description: Psychic mutant that works as a reconnaissance unit.\nCan deploy sentry wards and Detects cloaked units.\n  Unnarmed.
+		Description: Psychic mutant that works as a reconnaissance unit.\nCan deploy sentry wards and detects cloaked units.\n\n  Unnarmed.
 	Voiced:
 		VoiceSet: Umagon
 	Health:
@@ -628,7 +628,7 @@ AWARRIOR:
 		Cost: 350
 	Tooltip:
 		Name: Forgotten Knight
-		Description: Elite Infantry armed with gas throwers, they have\na small change of turning into Ravagers when killed.\n  Strong vs Infantry, Buildings.\n  Weak vs Aircraft, Vehicles.
+		Description: Elite Infantry armed with gas throwers, they have a\nsmall change of turning into Ravagers when killed.\n\n  Strong vs Infantry, Buildings.\n  Weak vs Aircraft, Vehicles.
 	Voiced:
 		VoiceSet: Rocket
 	-UpdatesPlayerStatistics:
@@ -673,7 +673,7 @@ PSYKER:
 		Cost: 900
 	Tooltip:
 		Name: Mind Walker
-		Description: Forgotten Commando. Pure strain\nforgotten that can call down lightning.\nAttacks from afar.\n  Strong vs Vehicles, Aircraft, Buildings\n  Weak vs Infantry
+		Description: Forgotten Commando. Pure strain\nforgotten that can call down lightning.\nAttacks from afar.\n\n  Strong vs Vehicles, Aircraft, Buildings\n  Weak vs Infantry
 	Voiced:
 		VoiceSet: Umagon
 	Health:
@@ -710,7 +710,7 @@ shark:
 		Cost: 200
 	Tooltip:
 		Name: Razorshark
-		Description: Anti-infantry creature, fast and deadly\nInstakills non-armored infantry.\n  Strong vs Light Infantry\n  Weak vs Everything else
+		Description: Anti-infantry creature, fast and deadly\nInstakills non-armored infantry.\n\n  Strong vs Light Infantry.\n  Weak vs Everything else.
 	Selectable:
 		Class: Shark
 	Health:
@@ -756,7 +756,7 @@ LEGIO:
 		Cost: 180
 	Tooltip:
 		Name: Legionnaire
-		Description: Scrin Frontile trooper. Resistant\nto damage. Cannot be crushed.\nIts weapon damage spreads to nearby cells.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry
+		Description: Scrin Frontile trooper. Resistant\nto damage. Cannot be crushed.\nIts weapon damage spreads to nearby cells.\n\n  Strong vs Vehicles, Buildings.\n  Weak vs Infantry.
 	Health:
 		HP: 15000
 	-Crushable:
@@ -779,7 +779,7 @@ SHAPESHIFTER:
 		Cost: 500
 	Tooltip:
 		Name: Shapeshifter
-		Description: Infiltrates, captures enemy structures\nand also places mines.\n  Unarmed
+		Description: Infiltrates, captures enemy structures\nand also places mines.\n\n  Unarmed.
 	MineImmune:
 	Minelayer:
 		Mine: mumine
@@ -825,7 +825,7 @@ COLOSSI:
 		Cost: 600
 	Tooltip:
 		Name: Colossus
-		Description: Heavy duty alien that\ncan take lots of punishment\nand create an aura effect that harms\nand slows nearby units.\n  Strong vs Unarmored ground units.\n  Weak vs Aircraft.
+		Description: Heavy duty alien that can take lots of punishment\nand electrify its sorroundings when ordered to.\n\n  Strong vs Unarmored ground units.\n  Weak vs Vehicles, Aircraft.
 	Targetable@razor:
 		TargetTypes: Razorshark
 	Targetable@Colossi:
@@ -896,7 +896,7 @@ STALKER:
 		Cost: 350
 	Tooltip:
 		Name: Stalker
-		Description: Disruption infantry\nConfuses enemies for shorter periods of time.\nchanging their alegiance.\nCan move through water.\n  Unarmed.
+		Description: Disruption infantry Confuses enemies for shorter periods of time.\nchanging their alegiance.\n\n  Unarmed.
 	Health:
 		HP: 13000
 	Mobile:
@@ -929,7 +929,7 @@ FLOAT:
 	-Crushable:
 	Tooltip:
 		Name: Purifier
-		Description: Recon unit, suited for harassment.\nCan move through water and Cliffs.\n  Strong vs Infantry, Buildings\n  Weak vs Tanks, Aircraft
+		Description: Recon unit, suited for harassment.\nCan move through water and Cliffs.\n\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
 	Health:
 		HP: 18000
 	Mobile:
@@ -971,7 +971,7 @@ BUG:
 		Cost: 1000
 	Tooltip:
 		Name: Overtaker
-		Description: Support alien, it can mind\ncontrol enemies for brief moments.\n  Strong vs Ground units.\n  Weak vs Aircraft.
+		Description: Alien species that can mind control enemies for brief moments.\n\n  Strong vs Ground units.\n  Weak vs Aircraft.
 	Targetable@razor:
 		TargetTypes: Razorshark
 	Targetable@MindControl:
@@ -1055,7 +1055,7 @@ CYBORG:
 		Cost: 350
 	Tooltip:
 		Name: Cyborg Infantry
-		Description: Heavy armored unit.\n  Strong vs Infantry, Light armor\n  Weak vs Anti Armor weapons, Aircraft
+		Description: Heavy armored unit.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 11
@@ -1091,7 +1091,7 @@ PDRONE:
 		Voice: Move
 	Tooltip:
 		Name: Reclaimer
-		Description: Utility drone, soldiers killed by this unit will be turned into workers.\nCan only target infantry.\n  Strong vs Infantry\n  Weak vs Everything else.
+		Description: Melee drone, soldiers killed by this unit will be turned into\nworkers. Can only target infantry.\n\n  Strong vs Infantry\n  Weak vs Everything else.
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 12
@@ -1152,7 +1152,7 @@ SWARMLING:
 		Cost: 550
 	Tooltip:
 		Name: Swarmling
-		Description: Infiltrates, captures enemy structures\nand also places mines.\n  Unarmed
+		Description: Infiltrates, captures enemy structures\nand also places mines.\n\n  Unarmed
 	MineImmune:
 	Minelayer:
 		Mine: mumine
@@ -1194,7 +1194,7 @@ MOTH:
 		Cost: 700
 	Tooltip:
 		Name: Abductor
-		Description: Ambush drone that needs to deploy to attack.\nWhen deployed it burrows underground and fires spike\nat nearby enemies.\nEnemy units are converted into cyborgs.\n  Strong vs Infantry, Light Vehicles.\n  Weak vs Aircraft, Detectors.
+		Description: Ambusher drone that needs to deploy to attack.\nWhen deployed it burrows underground \nand fires spikes at nearby enemies.\nEnemy units are converted into cyborgs.\n\n  Strong vs Infantry, Light Vehicles.\n  Weak vs Aircraft, Detectors.
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 15
@@ -1276,7 +1276,7 @@ REAPERCAB:
 		Cost: 1100
 	Tooltip:
 		Name: Cyborg Reaper
-		Description: Cyborg construct, equipped with multi missiles\nand web launchers that can ensrane infantry.\n Strong vs Vehicles, Aircraft\n Weak vs Infantry.
+		Description: Cyborg construct, equipped with multi missiles\nand web launchers that can ensrane infantry.\n\n Strong vs Vehicles, Aircraft\n Weak vs Infantry.
 	Buildable:
 		Queue: Infantry
 		SharesCell: false
@@ -1333,7 +1333,7 @@ GLAD:
 		Voice: Move
 	Tooltip:
 		Name: Gladiator
-		Description: Advanced cyborg construct, extremely resilient\nand capable of piercing enemy armor.\n  Detects cloaked units.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft.
+		Description: Advanced cyborg construct, extremely resilient\nand capable of piercing enemy armor.\nDetects cloaked units.\n\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft.
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 14
@@ -1373,7 +1373,7 @@ CYC2:
 		Cost: 1200
 	Tooltip:
 		Name: Cyborg Commando
-		Description: Elite cybernetic infantry unit.\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft\nMaximum 1 can be trained.
+		Description: Elite cybernetic infantry unit, equipped with a plasma cannon.\n\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft\nMaximum 1 can be trained.
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 17

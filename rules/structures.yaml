@@ -1145,7 +1145,7 @@ MUSTABLE:
 		Cost: 500
 	Tooltip:
 		Name: Training Grounds
-		Description: Allows beast herding. Beasts\nbecome stronger when hurt,\ngain regenerative capabilities but they can't\nbe ordered while in  this state.
+		Description: Allows beast herding.\nBeasts become stronger when hurt,\ngain regenerative capabilities but \nthey can't be ordered while in  this state.
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	Building:

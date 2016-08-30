@@ -180,7 +180,7 @@ ScorpAcid:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 1300
-		DamageTypes: Prone100Percent, TriggerProne, FireDeath, TiberiumDeath
+		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 		InvalidTargets: Vehicle, Building, Wall
@@ -620,7 +620,7 @@ NeedlerAcid:
 	Warhead@1Dam: SpreadDamage
 		Spread: 80
 		Damage: 1200
-		DamageTypes: Prone100Percent, TriggerProne, FireDeath, TiberiumDeath
+		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 		InvalidTargets: Vehicle, Building, Wall

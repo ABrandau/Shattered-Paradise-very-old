@@ -270,7 +270,7 @@ DeathclawBlow:
 		Spread: 42
 		Damage: 6000
 		InvalidTargets: Building
-		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath			
+		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong			
 
 ###############################################################		
 # Vehicle
@@ -394,7 +394,7 @@ TiberianRocket:
 		Damage: 2000
 		ValidTargets: Ground
 		Versus:
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, TiberiumDeathStrong
+		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeathStrong
 	Warhead@3EffWater: CreateEffect
 		Explosions: small_watersplash
 		ExplosionPalette: player
@@ -426,7 +426,7 @@ MiniNuke:
 		Versus:
 			Concrete: 25
 		AffectsParent: true
-		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeath
+		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeathStrong
 	Warhead@2Eff: CreateEffect
 		Explosions: mininuke1, mininuke2
 		ImpactSound: expnew09.aud
@@ -555,7 +555,7 @@ FalconPunch:
 		Spread: 200
 		Damage: 500
 		ValidTargets: Ground, Water
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath, TiberiumDeathStrong
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallCrater
 		InvalidTargets: Vehicle, Building, Wall

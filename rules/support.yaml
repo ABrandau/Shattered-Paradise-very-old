@@ -113,7 +113,7 @@ GAVULC:
 		Cost: 350
 	Tooltip:
 		Name: Vulcan Tower
-		Description: Basic base defense.\n  Strong vs Infantry, Light armor\n  Weak vs Aircraft
+		Description: Basic base defense.\n\n  Strong vs Infantry.\n  Weak vs Aircraft.
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 40
@@ -169,7 +169,7 @@ GAROCK:
 		Cost: 700
 	Tooltip:
 		Name: RPG Tower
-		Description: GDI Advanced base defense.\n  Strong vs Armored ground units\n  Weak vs Aircraft
+		Description: GDI Advanced base defense.\n\n  Strong vs Vehicles.\n  Weak vs Aircraft.
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 40
@@ -221,7 +221,7 @@ GACSAM:
 		Cost: 600
 	Tooltip:
 		Name: SAM Tower
-		Description: GDI Anti-Air base defense.\nStronger than average AA.\n  Strong vs Aircraft\n  Weak vs Ground units
+		Description: GDI Anti-Air base defense.\nStronger than average AA.\n\n  Strong vs Aircraft.\n  Weak vs Infantry, Vehicles.
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 40
@@ -266,7 +266,7 @@ GAPOWRUP:
 		Cost: 300
 	Tooltip:
 		Name: Power Turbine
-		Description: Provides extra power generation. Place \nthem on the smokestack of the structure.
+		Description: Provides extra power generation. Place\nthem on the smokestack of the structure.
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 10
@@ -454,7 +454,7 @@ NALASR:
 		Cost: 350
 	Tooltip:
 		Name: Laser Turret
-		Description: Basic base defense.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft
+		Description: Basic base defense.\nRequires power to operate.\n\n  Strong vs Ground units\n  Weak vs Aircraft
 	Buildable:
 		Queue: Defense
 		Prerequisites: nahand, ~structures.nod
@@ -490,7 +490,7 @@ NAOBEL:
 		Cost: 1500
 	Tooltip:
 		Name: Obelisk of Light
-		Description: Advanced base defense.\nRequires power to operate.\n  Strong vs Ground units\n  Weak vs Aircraft
+		Description: Advanced base defense.\nRequires power to operate.\n\n  Strong vs Ground units\n  Weak vs Aircraft
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
@@ -534,7 +534,7 @@ NASAM:
 		Cost: 600
 	Tooltip:
 		Name: S.A.M. Site
-		Description: Nod Anti-Air base defense.\nRequires power to operate.\n  Strong vs Aircraft\n  Weak vs Ground units
+		Description: Nod Anti-Air base defense.\nRequires power to operate.\n\n  Strong vs Aircraft\n  Weak vs Ground units
 	Buildable:
 		Queue: Defense
 		Prerequisites: nahand, ~structures.nod
@@ -826,7 +826,7 @@ MUFLAK:
 		Cost: 350
 	Tooltip:
 		Name: Flak Station
-		Description: Anti-Air base defense.\nDoesn't require power to operate.\n  Strong vs Aircraft\n  Weak vs Ground units
+		Description: Anti-Air base defense. Doesn't require power to operate.\n\n  Strong vs Aircraft\n  Weak vs Ground units
 	Buildable:
 		Queue: Defense
 		Prerequisites: proc, murax, ~structures.mut
@@ -867,7 +867,7 @@ MUBUNKR:
 		Cost: 900
 	Tooltip:
 		Name: Bunker
-		Description: Advanced base defense.\nCannot target air units.\n  Strong vs Ground units\n  Weak vs Aircraft
+		Description: Fortified position where infantry can fire from within.\nCan hold up to 6 soldiers, starts with a Marauder and\n a Skirmisher on it.\n\n  Strength depends on garrisoned units.\n  Cannot target air units.
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 30
@@ -1162,7 +1162,7 @@ SCRNEEDLER:
 		Cost: 500
 	Tooltip:
 		Name: Ichor Waste Turret
-		Description: Basic defense, cloaks when idle.\nRequires power to operate.\n  Strong vs Ground\n  Weak vs Air.
+		Description: Basic defense, cloaks when idle.\nRequires power to operate.\n\n  Strong vs Ground\n  Weak vs Air.
 	Buildable:
 		Queue: Defense
 		Prerequisites: scrrax, ~structures.scr
@@ -1214,7 +1214,7 @@ SCRTRACTOR:
 		Cost: 450
 	Tooltip:
 		Name: Tractor Beam
-		Description: Scrin Anti-Air base defense, deals little damage\nbut slows down the targetted aircraft.\nRequires power to operate.\n  Strong vs Aircraft\n  Weak vs Ground units
+		Description: Scrin Anti-Air base defense, deals little damage\nbut slows down the targetted aircraft.\nRequires power to operate.\n\n  Strong vs Aircraft\n  Weak vs Ground units
 	Buildable:
 		Queue: Defense
 		Prerequisites: scrrax, ~structures.scr
@@ -1257,7 +1257,7 @@ SCRDRONE:
 		Cost: 1300
 	Tooltip:
 		Name: Visceroid Hive
-		Description: Advanced base defense.\nThrows Visceroids near the enemies.\nRequires power to operate.\n  Strong vs All
+		Description: Advanced base defense.\nThrows Visceroids near the enemies.\nRequires power to operate.\n\n  Strong vs Ground Units.\n  Weak vs Aircraft.
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 60
@@ -1499,7 +1499,7 @@ CABCANNON:
 		Cost: 500
 	Tooltip:
 		Name: Cannon Turret
-		Description: Anti-Armor turret.\nRequires power to operate.\n  Strong vs Ground Units\n  Weak vs Air Units
+		Description: Anti-Armor turret.\nRequires power to operate.\n\n  Strong vs Vehicles.\n  Weak vs Infantry, Aircraft.
 	Buildable:
 		Queue: Defense
 		Prerequisites: cabclaw, ~structures.cab
@@ -1540,7 +1540,7 @@ CABRAIL:
 		Cost: 800
 	Tooltip:
 		Name: Railgun Turret
-		Description: Anti-Air defence with low rate of fire.\nRequires power to operate.\n  Strong vs Aircraft.\n  Weak vs Ground Units.
+		Description: Anti-Air defence with low rate of fire.\nRequires power to operate.\n\n  Strong vs Aircraft.\n  Weak vs Infantry, Vehicles. 
 	Buildable:
 		Queue: Defense
 		Prerequisites: cabclaw, ~structures.cab
@@ -1571,7 +1571,7 @@ CABRAIL:
 		Weapon: AARail
 		LocalOffset: 550,-400,700
 	Power:
-		Amount: -50
+		Amount: -40
 	SelectionDecorations:
 		VisualBounds: 40, 36, -3, -8
 
@@ -1584,7 +1584,7 @@ CABBLAST:
 		Cost: 1200
 	Tooltip:
 		Name: Blaster Turret
-		Description: Artillery, fires plasma.\nHas a minimun range of fire.\nRequires power to operate.\n  Strong vs Infantry.\n  Weak vs Tanks, Aircraft.
+		Description: Artillery, fires plasma.\nHas a minimun range of fire.\nRequires power to operate.\n\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft.
 	Buildable:
 		Queue: Defense
 		Prerequisites: cabtech, ~structures.cab
@@ -1610,7 +1610,7 @@ CABBLAST:
 		Weapon: BlasterProton
 		LocalOffset: 512,0,512
 	Power:
-		Amount: -75
+		Amount: -60
 	SelectionDecorations:
 		VisualBounds: 40, 36, -3, -8
 
