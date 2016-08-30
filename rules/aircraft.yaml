@@ -1077,6 +1077,7 @@ MOTHERSHIP:
 		BuildLimit: 1
 	Voiced:
 		VoiceSet: Limpet
+	-RejectsOrders@berserk:
 	Selectable:
 		Bounds: 175,125
 	Aircraft:

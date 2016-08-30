@@ -2,11 +2,12 @@
 
 [2016 - xx - xx]
 General Changes:
-	Rewrotte targetting yaml code.
+	Harvesters are now worth $1100 and refineries $1700.
 	Switched the armor of many vehicles that were wood into light.
 	Fixed clouds and other no-actors giving vision when dissapearing.
 	Walls now won't appear in the radar anymore.
-	Fixed third game showing on defense queue.
+	Fixed third gate showing on defense queue.
+	Commandos are now immune to order rejection.
 GDI Changes:
 	Carryalls are now working ingame.
 	Medic: cost 400 -> 300.
@@ -15,6 +16,7 @@ GDI Changes:
 	RPG Tower: Cost 800 -> 700.
 	SAM Tower: Cost: 800 -> 600.
 	Guardian Platform now applies a healing aura on nearby friendly vehicles.
+	Juggernaut: Cost: 800 -> 900.
 Mutant Changes:
 	Mind walker damage: 500 -> 300.
 CABAL Changes:
@@ -24,11 +26,15 @@ CABAL Changes:
 	Seeker: Speed 130 -> 120.
 	Blaster Turret: Spread: 300 -> 225.
 Nod Changes:
-	Flame Warriors flamethrowers changed for stardard rifles that generate fire once they kill infantry, the fire harms nearby units
-	Crusaders: Damage: 6 -> 20, Attack Speed: 1 Second -> 2 Seconds, reduced innacuracy against infantry.
+	NOD Units now heal when they are cloaked.
+	Repair Vehicle removed.
+	Flame Warriors flamethrowers changed for stardard rifles that generate fire once they kill infantry, the fire harms nearby units.
+	They can also commit suicide.
+	Crusaders: Damage: 6 -> 20, Attack Speed: 1 Second -> 2 Seconds, removed innacuracy against infantry.
 	Hand of Kane: Attack speed: 6 seconds -> 8, range: 7 -> 8, explosion spread: 426 -> 300.
 	Devil's Tongue: Flame speed: 100 -> 130.
 	Buggy: cost 500 -> 600.
+	Demo Cycle: cost 650 -> 600, damage: 300 -> 400, Spread 0c5 -> 1c0, Warhead: Full Damage -> Bomb.
 	Stealth Tank: damage: 35 -> 30.
 	Stealth Tank: hp: 310 -> 275.
 	Harpies now share the incineration effect flame warriors provide.

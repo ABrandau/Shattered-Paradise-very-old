@@ -44,12 +44,21 @@
 		Length: *
 		Tick: 1000
 		ZOffset: -511
-	dieevaporate: tibgas
+	dieevaporate: infgas
 		Length: *
 		Offset: 0,-6
+		Tick: 30
 	diemelt: infmelt
 		Length: *
 		Offset: 0,-6
+	dieshatter: infshatter
+		Length: *
+		Offset: 0,-6
+	diecristalize1: infcrystalize
+		Length: 21
+	diecristalize2: infcrystalize
+		Start: 21
+		Length: 21
 	webguy: webguy
 		Length: 6
 		ShadowStart: 6

@@ -797,7 +797,7 @@ NASTLH:
 		Cost: 2500
 	Tooltip:
 		Name: Stealth Generator
-		Description: Generates a cloaking field\nto hide your forces from the enemy.
+		Description: Generates a cloaking field that hides\nnearby units and structures, Cloaked NOD units heal slowly.
 	Buildable:
 		BuildPaletteOrder: 80
 		Prerequisites: proc, natech, ~structures.nod
@@ -825,7 +825,7 @@ NASTLH:
 		PowerdownSpeech: DisablePower
 		IndicatorPalette: mouse
 	UpgradeActorsNear:
-		Upgrades: cloakgenerator
+		Upgrades: cloakgenerator, NodCloakHealing
 		Range: 12c0
 		EnableSound: cloak5.aud
 		DisableSound: cloak5.aud
@@ -1360,7 +1360,7 @@ SCRPROC:
 	Inherits: ^Building
 	Inherits@2: ^ScrinRender
 	Valued:
-		Cost: 2100
+		Cost: 1700
 	Tooltip:
 		Name: Scrin Refinery
 		Description: Processes raw Ichor\ninto usable resources.\nIncompatible with human harvesters.

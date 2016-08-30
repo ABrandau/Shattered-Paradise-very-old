@@ -120,7 +120,7 @@ HARV:
 	Inherits: ^VoxelTank
 	Inherits@2: ^IncompleteSelfHeal
 	Valued:
-		Cost: 1300
+		Cost: 1100
 	Tooltip:
 		Name: Harvester
 		Description: Collects Tiberium for processing.\nIncompatible with scrin refineries.\n  Unarmed
@@ -352,7 +352,7 @@ GACNST:
 PROC:
 	Inherits: ^Building
 	Valued:
-		Cost: 2000
+		Cost: 1700
 	Tooltip:
 		Name: Tiberium Refinery
 		Description: Processes raw Tiberium\ninto usable resources.\nIncompatible with scrin harvesters.

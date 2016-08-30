@@ -18,7 +18,7 @@
 	Faction@1:
 		Name: Nod
 		InternalName: nod
-		Description: NOD\n Hit and run Faction.\n + Good Speed.\n + Good Damage.\n -  Low Health.\n -  Doesn't have many aerial units.
+		Description: NOD\n Hit and run Faction.\n + Good Speed.\n + Good Damage.+\n + Units heal slowly when cloaked.\n -  Low Health.\n -  Doesn't have many aerial units.
 	Faction@2:
 		Name: Mutants
 		InternalName: mut

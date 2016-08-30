@@ -3,14 +3,14 @@
 ##########################################
 MilitantRifle:
 	Inherits: ^RifleWarhead
-	ReloadDelay: 50
+	ReloadDelay: 55
 	Range: 4c0
 	Report: infgun3.aud, gostgun1.aud, slvkgun1.aud
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 1000
+		Damage: 1100
 		DamageTypes: Prone70Percent, TriggerProne, MilitantFireDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
@@ -38,13 +38,40 @@ MillitantFire:
 		Explosions: militantfire, militantfire2, militantfire3
 		InvalidImpactTypes: Water, Air, AirHit
 		ExplosionPalette: apolra2
+		
+MilitantExplode:
+	Warhead@1Dam: SpreadDamage
+		Spread: 400
+		Damage: 18000
+		Versus:
+			None: 90
+			Wood: 75
+			Light: 60
+			Heavy: 25
+		DamageTypes: Prone50Percent, TriggerProne, MilitantFireDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: large_explosion
+		ImpactSounds: kaboom15.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: large_splash
+		ImpactSounds: splash9.aud
+		ValidImpactTypes: Water
+	Warhead@4Smu: LeaveSmudge
+		SmudgeType: Crater
+		InvalidTargets: Structure, Wall, Trees
+	Warhead@emp: GrantUpgrade
+		Range: 250
+		Duration: 75
+		Upgrades: berserk
+		
 
 CrusaderBazooka:
 	Inherits: ^RocketWarhead
 	ReloadDelay: 50
 	Range: 6c600
 	Report: scifiexplo.wav
-	ValidTargets: Vehicle, Air, Building
+	ValidTargets: Vehicle, Air, Building, Infantry
 	Projectile: Missile
 		Speed: 233
 		Blockable: false
@@ -59,7 +86,7 @@ CrusaderBazooka:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 2000
-		ValidTargets: Vehicle, Air, Building
+		ValidTargets: Vehicle, Air, Building, Infantry
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
@@ -69,14 +96,6 @@ CrusaderBazooka:
 		Explosions: small_watersplash
 		ImpactSound: ssplash3.aud
 		ValidImpactTypes: Water
-
-CrusaderBazookaInf:
-	Inherits: CrusaderBazooka
-	ValidTargets: Infantry
-	Projectile: Missile
-		Inaccuracy: 0c512
-	Warhead@1Dam: SpreadDamage
-		ValidTargets: Infantry
 
 TemplarLasor:
 	Inherits: ^FullDamage
@@ -170,12 +189,12 @@ BikeMissile:
 		InvalidTargets: Vehicle, Building, Wall
 
 BikeExplo:
-	Inherits: ^FullDamage
+	Inherits: ^BombWarhead
 	ValidTargets: Ground, Water, Air
 	Warhead@1Dam_impact: SpreadDamage
-		Spread: 0c512
-		Damage: 30000
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
+		Spread: 500
+		Falloff: 300, 150, 75, 32, 0 
+		Damage: 40000
 		ValidTargets: Ground, Water, Air
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath

@@ -59,12 +59,10 @@
 		UpgradeTypes: fireflystop
 		Modifier: 40
 		BaseLevel: 1
-		UpgradeMinEnabledLevel: 1
 	ReloadDelayMultiplier@firefly:
 		UpgradeTypes: fireflystop
 		Modifier: 150
 		BaseLevel: 1
-		UpgradeMinEnabledLevel: 1
 	UpgradeOverlay@firefly:
 		UpgradeTypes: fireflystop
 		UpgradeMinEnabledLevel: 1
@@ -82,7 +80,6 @@
 		UpgradeTypes: batteryboost
 		Modifier: 110, 115
 		BaseLevel: 1
-		UpgradeMinEnabledLevel: 1
 	SelfHealing@batteryboost:
 		PercentageStep: 1
 		Step: 0
@@ -164,6 +161,16 @@
 		UpgradeTypes: AuraRepair
 		UpgradeMinEnabledLevel: 1
 
+^NodCloakHealing:
+	SelfHealing@NodCloakHealing:
+		PercentageStep: 1
+		Step: 0
+		Delay: 100
+		DamageCooldown: 200
+		HealIfBelow: 105
+		UpgradeTypes: NodCloakHealing
+		UpgradeMinEnabledLevel: 1
+
 #RIFLEMAN BURN
 ^BurnsGirl:
 	SpawnActorOnDeath@burns:
@@ -221,12 +228,10 @@
 		UpgradeTypes: empdisable
 		Modifier: 75
 		BaseLevel: 1
-		UpgradeMinEnabledLevel: 1
 	ReloadDelayMultiplier@cyborgemp:
 		UpgradeTypes: empdisable
 		Modifier: 125
 		BaseLevel: 1
-		UpgradeMinEnabledLevel: 1
 	UpgradeOverlay@cyborgemp:
 		UpgradeTypes: empdisable
 		UpgradeMinEnabledLevel: 1
@@ -588,8 +593,8 @@
 		DeathSequencePalette: apolra2galpha
 		DeathPaletteIsPlayerPalette: False
 		DeathTypes:
-			TiberiumDeath: evaporate, melt
-			TiberiumDeathStrong: evaporate, melt
+			TiberiumDeath: evaporate, melt, shatter, cristalize1, cristalize2
+			TiberiumDeathStrong: evaporate, melt, shatter, cristalize1, cristalize2
 	WithDeathAnimation@explosion:
 		DeathSequencePalette: effect
 		DeathPaletteIsPlayerPalette: False

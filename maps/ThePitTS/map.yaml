@@ -1256,3 +1256,6 @@ Rules:
 			Green: 1.2
 			Blue: 0.8
 			Ambient: 0.7
+
+	ResourceType@BlueTiberium:
+		ValuePerUnit: 35

@@ -579,12 +579,12 @@ MASTL:
 	-AutoTarget:
 	-RenderRangeCircle:
 	WithRangeCircle:
-		Range: 6c0
+		Range: 5c0
 		Type: cloakgenerator
 	Armor:
 		Type: Light
 	RevealsShroud:
-		Range: 6c0
+		Range: 5c0
 	BodyOrientation:
 		QuantizedFacings: 32
 	Transforms:
@@ -594,11 +594,11 @@ MASTL:
 		NoTransformSounds:
 		Voice: Move
 	UpgradeActorsNear:
-		Upgrades: cloakgenerator
+		Upgrades: cloakgenerator, NodCloakHealing
 		Range: 5c0
 		EnableSound: cloak5.aud
 		DisableSound: cloak5.aud
-		AffectsParent: true
+		AffectsParent: false
 
 DLIMPET:
 	Inherits: ^DeployedVehicle

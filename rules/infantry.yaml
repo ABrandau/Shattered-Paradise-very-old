@@ -32,7 +32,7 @@ JUMPJET:
 		Cost: 250
 	Tooltip:
 		Name: Jumpjet Infantry
-		Description: Airborne Soldier, equipped with an AP rifle.\n Can target helicopters and battleships.\n  Strong vs Heavy Vehicles, Helicopters.\n  Weak vs Infantry, Light Vehicles, Structures.
+		Description: Airborne Soldier, equipped with an AP rifle.\n Can target helicopters and battleships.\nWIP unit - Cannot fly.\n  Strong vs Heavy Vehicles, Helicopters.\n  Weak vs Infantry, Light Vehicles, Structures.
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 2
@@ -157,6 +157,7 @@ EAGLEGUARD:
 #######################################################
 ALTNODE1:
 	Inherits: ^Soldier
+	Inherits@2: ^NodCloakHealing
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 6
@@ -170,6 +171,19 @@ ALTNODE1:
 		HP: 10000
 	Mobile:
 		Speed: 70
+	DeployToTimedUpgrade:
+		DeployedUpgrades: WingsOfFire
+		CooldownTicks: 3000
+		StartsFullyCharged: true
+		DeployedTicks: 300
+	ExplodeWeapon:
+		Weapon: MilitantExplode
+		UpgradeTypes: WingsOfFire
+		UpgradeMinEnabledLevel: 1
+		ResetReloadWhenEnabled: false
+	KillsSelf:
+		UpgradeTypes: WingsOfFire
+		UpgradeMinEnabledLevel: 1
 	-TakeCover:
 	Armament:
 		Weapon: MilitantRifle
@@ -183,6 +197,7 @@ ALTNODE1:
 
 CRUSADER:
 	Inherits: ^Soldier
+	Inherits@2: ^NodCloakHealing
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 7
@@ -199,9 +214,6 @@ CRUSADER:
 	Armament@PRIMARY:
 		Weapon: CrusaderBazooka
 		LocalOffset: 0,0,600
-	Armament@Secondary:
-		Weapon: CrusaderBazookaInf
-		LocalOffset: 0,0,600
 	-TakeCover:
 	AttackTurreted:
 		Voice: Attack
@@ -214,6 +226,7 @@ CRUSADER:
 
 TEMPLAR:
 	Inherits: ^Mutant
+	Inherits@2: ^NodCloakHealing
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 8
@@ -242,6 +255,7 @@ TEMPLAR:
 
 MHIJACK:
 	Inherits: ^Mutant
+	Inherits@2: ^NodCloakHealing
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 9
@@ -279,6 +293,7 @@ MHIJACK:
 
 BHS:
 	Inherits: ^Mutant
+	Inherits@2: ^NodCloakHealing
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 10
@@ -293,6 +308,9 @@ BHS:
 		TargetTypes: Razorshark
 	Targetable@MindControl:
 		TargetTypes: MindControlInmune
+	SelfHealing@NodCloakHealing:
+		Delay: 150
+	-RejectsOrders@berserk:
 	Health:
 		HP: 19000
 	Mobile:
@@ -657,6 +675,7 @@ PSYKER:
 		VoiceSet: Umagon
 	Health:
 		HP: 15000
+	-RejectsOrders@berserk:
 	Mobile:
 		Speed: 75
 	Targetable@razor:
@@ -1352,6 +1371,7 @@ CYC2:
 		BuildPaletteOrder: 17
 		Prerequisites: ~cabclaw, cabtech
 		BuildLimit: 1
+	-RejectsOrders@berserk:
 	Repairable:
 		RepairBuildings: gadept
 		Voice: Move

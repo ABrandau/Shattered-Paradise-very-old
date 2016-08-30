@@ -909,14 +909,14 @@ gatick:
 	make: gatickmk
 		Length: 24
 		ShadowStart: 24
-		
+
 mastl:
 	Defaults:
 		Offset: 0, -13
-		UseTilesetCode: true
-	idle:
+		UseTilesetCode: false
+	idle: mttl
 		ShadowStart: 3
-	damaged-idle:
+	damaged-idle: mttl
 		Start: 1
 		ShadowStart: 4
 	emp-overlay: emp_fx01

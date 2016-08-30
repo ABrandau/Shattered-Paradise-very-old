@@ -169,7 +169,7 @@ HVR:
 JUGGER:
 	Inherits: ^Walker
 	Valued:
-		Cost: 800
+		Cost: 900
 	Tooltip:
 		Name: Juggernaut
 		Description: GDI Light Artillery\n  Weak vs Vehicles, Aircraft
@@ -260,6 +260,7 @@ HMEC:
 		TurnSpeed: 3
 		Speed: 42
 		Crushes: wall, crate, infantry
+	-RejectsOrders@berserk:
 	Health:
 		HP: 80000
 	Armor:
@@ -288,12 +289,13 @@ HMEC:
 ################################################
 BGGY:
 	Inherits: ^VoxelVehicle
+	Inherits@2: ^NodCloakHealing
 	Inherits@3: ^BasicStealthDetection
 	Valued:
 		Cost: 600
 	Tooltip:
 		Name: Raider Buggy
-		Description: Fast scout designed for harassment.\n  Strong vs Infantry, Aircraft.\n  Weak vs Vehicles.
+		Description: Fast scout designed for harassment.\n  Strong vs Infantry, Armor, Aircraft.\n  Weak vs Vehicles.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 9
@@ -323,6 +325,7 @@ BGGY:
 
 TTNK:
 	Inherits: ^VoxelTank
+	Inherits@2: ^NodCloakHealing
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -403,15 +406,17 @@ TTNK:
 
 BIKE:
 	Inherits: ^VoxelVehicle
+	Inherits@2: ^NodCloakHealing
 	Valued:
-		Cost: 650
+		Cost: 600
 	Tooltip:
 		Name: Demo Cycle
-		Description: Suicide Vehicle armed with an explosive warhead.\nExplodes its warhead when destroyed.\n Strong vs Infantry, Vehicles\n  Weak vs Structures.
+		Description: Suicide Vehicle armed with an explosive warhead.\nExplodes its warhead when destroyed.\n Strong vs Light armored ground units.\n  Weak vs Structures.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 12
 		Prerequisites: ~naweap, naradr
+	-ActorLostNotification:
 	Mobile:
 		TurnSpeed: 10
 		Speed: 180
@@ -427,11 +432,12 @@ BIKE:
 
 SAPC:
 	Inherits: ^VoxelTank
+	Inherits@2: ^NodCloakHealing
 	Valued:
 		Cost: 800
 	Tooltip:
 		Name: Subterranean APC
-		Description: Troop transport that can move\nunderground to avoid detection.\n  Unarmed
+		Description: Troop transport that can move\nunderground to avoid detection.\n WIP Unit - Cloaks instead of moving undergraound\n  Unarmed
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 13
@@ -461,10 +467,11 @@ SAPC:
 
 REPAIR:
 	Inherits: ^VoxelTank
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 14
-		Prerequisites: ~naweap, naradr
+	Inherits@2: ^NodCloakHealing
+	# Buildable:
+		# Queue: Vehicle
+		# BuildPaletteOrder: 14
+		# Prerequisites: ~naweap, naradr
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -488,6 +495,7 @@ REPAIR:
 
 SUBTANK:
 	Inherits: ^VoxelTank
+	Inherits@2: ^NodCloakHealing
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -518,6 +526,7 @@ SUBTANK:
 ARMH:
 	Inherits: ^VoxelTank
 	Inherits@2:	^Ra2vxl
+	Inherits@3: ^NodCloakHealing
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -565,6 +574,7 @@ ARMH:
 
 STNK:
 	Inherits: ^VoxelTank
+	Inherits@2: ^NodCloakHealing
 	Valued:
 		Cost: 1100
 	Tooltip:
@@ -580,6 +590,8 @@ STNK:
 		Crushes: wall, crate, infantry
 	Health:
 		HP: 27500
+	SelfHealing@NodCloakHealing:
+		Delay: 150
 	Armor:
 		Type: Light
 	Cloak@cloakgenerator:
@@ -607,7 +619,8 @@ STNK:
 		Volume: 7
 
 Limped:
-	Inherits@2: ^ScrinRender
+	Inherits@1: ^ScrinRender
+	Inherits@2: ^NodCloakHealing
 	Inherits@3: ^HoverVehicle
 	Buildable:
 		Queue: Vehicle
@@ -639,11 +652,12 @@ Limped:
 
 SGEN:
 	Inherits: ^VoxelTank
+	Inherits@2: ^NodCloakHealing
 	Valued:
 		Cost: 1400
 	Tooltip:
 		Name: Mobile Stealth Generator
-		Description: High tech vehicle that can cloak\nnearby units when deployed.\nDoes not cloak structures.\n  Unarmed
+		Description: High tech vehicle that can cloak nearby \nunits and structures when deployed.\nCloaked NOD units heal slowly.\n  Unarmed
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 19
@@ -651,6 +665,7 @@ SGEN:
 	Mobile:
 		TurnSpeed: 6
 		Speed: 80
+	RenderVoxels:
 	Health:
 		HP: 20000
 	Transforms:
@@ -992,7 +1007,7 @@ SCRHARV:
 	Inherits@2: ^IncompleteSelfHeal
 	Inherits@3: ^HoverVehicle
 	Valued:
-		Cost: 1300
+		Cost: 1100
 	Tooltip:
 		Name: Harvester
 		Description: Collects Ichor for processing.\nIncompatible with human refineries.\n  Unarmed.

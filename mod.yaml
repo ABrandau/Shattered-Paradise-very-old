@@ -58,6 +58,7 @@ Packages:
 	~e01vox02.mix
 	~ecache01.mix
 	sp|bits
+	sp|bits/mixes
 	sp|bits/pal
 	sp|bits/gdi/infantry
 	sp|bits/nod/infantry
