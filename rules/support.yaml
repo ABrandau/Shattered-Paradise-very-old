@@ -2,7 +2,6 @@
 #GDI
 #######################################################
 
-
 GACTWR:
 	Inherits: ^Defense
 	-WithSpriteBody:
@@ -607,7 +606,7 @@ DLIMPET:
 	Tooltip:
 		Name: Deployed Toxin Mine
 	Health:
-		HP: 25000
+		HP: 10000
 	-AttackTurreted:
 	-AutoTarget:
 	-RenderRangeCircle:
@@ -629,12 +628,18 @@ DLIMPET:
 		IsPlayerPalette: true
 		CloakTypes: cloakgenerator
 	WithRangeCircle:
-		Range: 5c0
+		Range: 3c0
 		Type: cloakgenerator
+	Selectable:
+		Bounds: 12, 30, 0, 0
 	UpgradeActorsNear@toxin:
 		Upgrades: AcidScaleDmg
 		ValidStances: Enemy
 		Range: 8c0
+	UpgradeActorsNear@berserker:
+		Upgrades: berserk
+		ValidStances: Enemy
+		Range: 3c0
 
 GAARTY:
 	Inherits@1: ^DeployedVehicle

@@ -2,6 +2,7 @@
 
 [2016 - xx - xx]
 General Changes:
+	Aircraft cannot be confused.
 	Harvesters are now worth $1100 and refineries $1700.
 	Switched the armor of many vehicles that were wood into light.
 	Fixed clouds and other no-actors giving vision when dissapearing.

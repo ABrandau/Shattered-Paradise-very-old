@@ -213,6 +213,7 @@ SONIC:
 		Queue: Vehicle
 		BuildPaletteOrder: 7
 		Prerequisites: ~gaweap, gatech
+	-RejectsOrders@berserk:
 	Mobile:
 		TurnSpeed: 4
 		Speed: 56
@@ -610,6 +611,7 @@ STNK:
 		LocalOffset: 213,43,128, 213,-43,128
 	AttackFrontal:
 		Voice: Attack
+	-RejectsOrders@berserk:
 	AutoTarget:
 		InitialStance: HoldFire
 		InitialStanceAI: ReturnFire
@@ -618,24 +620,24 @@ STNK:
 		VoiceSet: StealthTankVO
 		Volume: 7
 
-Limped:
+LIMPED:
 	Inherits@1: ^ScrinRender
 	Inherits@2: ^NodCloakHealing
 	Inherits@3: ^HoverVehicle
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 18
-		Prerequisites: ~naweap, natech
+		Prerequisites: ~naweap, naradr
 	Valued:
-		Cost: 450
+		Cost: 800
 	Tooltip:
 		Name: Toxin Drone
-		Description: Hover Drone, cloaks when deployed.\nSpreads unsmellable gas around weakening\nnearby units.\nUnnarmed.
+		Description: Hover Drone, cloaks when deployed. Spreads unsmellable\ngas around it confusing nearby units becoming uncontrollable.\nUnnarmed.
 	Health:
-		HP: 22000
+		HP: 10000
 	Mobile:
-		Speed: 95
-		Crushes: wall, mine, crate, infantry
+		Speed: 80
+		Crushes: crate
 	Transforms:
 		IntoActor: dlimpet
 		Facing: 96
@@ -645,6 +647,8 @@ Limped:
 	WithSpriteBody:
 	RevealsShroud:
 		Range: 5c0
+	Selectable:
+		Bounds: 12, 30, 0, 0
 	RenderSprites:
 	BodyOrientation:
 		QuantizedFacings: 32
@@ -744,6 +748,7 @@ DEATHCLAW:
 		Description: Tiberium Beast.\n  Strong vs Ground Units\n  Weak vs Aircraft.\n  Can only target base defences.
 	Voiced:
 		VoiceSet: Fiend
+	-RejectsOrders@berserk:
 	SpawnActorOnDeath@conversion:
 		Actor: cybdog
 		Probability: 100
@@ -1199,6 +1204,7 @@ TRIPOD:
 		Upgrades: berserk
 		Range: 2c0
 		ValidStances: Enemy
+	-RejectsOrders@berserk:
 	Mobile:
 		TurnSpeed: 8
 		Speed: 70
@@ -1543,6 +1549,7 @@ PALADIN:
 		TurnSpeed: 6
 		Speed: 60
 		Crushes: wall, crate, infantry
+	-RejectsOrders@berserk:
 	Health:
 		HP: 100000
 	Voiced:

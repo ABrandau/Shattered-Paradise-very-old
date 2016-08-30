@@ -46,8 +46,7 @@ CLOUD1:
 	WithDeathAnimation:
 		DeathSequencePalette: effectalpha
 		DeathPaletteIsPlayerPalette: false
-	RejectsOrders@berserk:
-		UpgradeMinEnabledLevel: 0
+	RejectsOrders:
 	RenderSprites:
 		Image: cloud1
 		Palette: effectalpha
@@ -692,7 +691,6 @@ SCRPOD:
 	WithFacingSpriteBody:
 	WithShadow:
 	FlyAwayOnIdle:
-	-RejectsOrders@berserk:
 	RejectsOrders:
 
 STORMRIDER:
@@ -1077,7 +1075,6 @@ MOTHERSHIP:
 		BuildLimit: 1
 	Voiced:
 		VoiceSet: Limpet
-	-RejectsOrders@berserk:
 	Selectable:
 		Bounds: 175,125
 	Aircraft:
@@ -1201,7 +1198,6 @@ STORMRIDERRETURN:
 		# CanHover: true
 	SelfHealing:
 		PercentageStep: -5
-	-RejectsOrders@berserk:
 	RejectsOrders:
 	Armament:
 		Weapon: Return

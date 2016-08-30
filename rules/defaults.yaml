@@ -1036,7 +1036,6 @@
 	Inherits@0: ^GainsExperience
 	Inherits@1: ^GenericBuffsDebuffs
 	Inherits@2: ^ExistsInWorld
-	Inherits@3: ^RejectsOrdersBerkserk
 	Inherits@4: ^tractorstop
 	Inherits@5: ^PermanentSelfHeal
 	Inherits@6: ^VisionWhenKilled
