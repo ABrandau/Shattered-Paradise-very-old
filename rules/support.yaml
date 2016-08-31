@@ -1186,8 +1186,8 @@ SCRNEEDLER:
 	Cloak@CLOAKGENERATOR:
 		UpgradeMinEnabledLevel: 0
 		Palette: cloakscrin
-		InitialDelay: 125
-		CloakDelay: 75
+		InitialDelay: 150
+		CloakDelay: 150
 		CloakSound:
 		UncloakSound:
 		IsPlayerPalette: true

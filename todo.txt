@@ -3,23 +3,20 @@ Randomize forg hp when created
 
 Add some deception stuff for nod.
 add the EMP tank for GDI.
-have units auto kite.
-
-Make NOD heal when cloaked.
 Give Scrin a shield or sth.
 
-If Flame Warrior flame isn't good enough, make flame warriors able to suicide themselves.
-
-
-
+tiberium tornadoes.
 
 Balance
 Possible basilisk buff needed
 
 
-tick tank too strong
-Militant weird
-colossi weird
+Militant muff
+cabal too strong
+improve scrin battleship explosions
+marauder bad death anim
+sunstroke map broke.
+add floaters.
 
 todo
 
@@ -45,6 +42,10 @@ missing shadow fron nod missile silo
 harvester harvest anim uses the wrong pal
 
 Fix Temple of NOD offset.
+enlarge map editor selection screen. editor.yaml/Container@EDITOR_WORLD_ROOT/Container@ACTOR_WIDGETS ScrollPanel@ACTORTEMPLATE_LIST
+add apollo's explos.
+add the remaining FS assets.
+Mothership husks.
 
 Graphics
 cnc 3 big tiberium glaciers
@@ -52,6 +53,9 @@ boxes
 
 traffic lights
 
+Light posts
+tankers
+Proprs
 trees
 
 houses

@@ -2,8 +2,6 @@
 	AppearsOnRadar:
 	UpdatesPlayerStatistics:
 	CombatDebugOverlay:
-	GivesExperience:
-		PlayerExperienceModifier: 1
 	ScriptTriggers:
 	UpgradeManager:
 	Huntable:
@@ -1001,7 +999,7 @@
 			Tiberium: 100
 			BlueTiberium: 100
 			Veins: 100
-			Water: 100
+			Water: 80
 		Crushes: crate
 	-DamagedByTerrain@veins:
 	-UpgradeOnTerrain@VEINS:
@@ -1087,6 +1085,7 @@
 		UpgradeMinEnabledLevel: 1
 		InitialDelay: 0
 		CloakDelay: 90
+		IdealSeparation: 0c512
 		IsPlayerPalette: true
 		CloakSound: cloak5.aud
 		UncloakSound: cloak5.aud

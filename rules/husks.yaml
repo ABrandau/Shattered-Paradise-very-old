@@ -304,7 +304,7 @@ DRACHE.Husk:
 	Tooltip:
 		Name: Drache
 	FallsToEarth:
-		Explosion: ScrinUnitExplode2
+		Explosion: ScrinUnitExplode4
 	Selectable:
 		Bounds: 1,1
 	WithShadow:
@@ -326,7 +326,7 @@ SCRDESTROYER.Husk:
 	Tooltip:
 		Name: Destroyer
 	FallsToEarth:
-		Explosion: ScrinUnitExplode2
+		Explosion: ScrinUnitExplode3
 	Selectable:
 		Bounds: 1,1
 	WithShadow:
@@ -348,7 +348,7 @@ SCRBATTLESHIP.Husk:
 	Tooltip:
 		Name: Battlecruiser
 	FallsToEarth:
-		Explosion: ScrinUnitExplode2
+		Explosion: ScrinUnitExplode4
 	Selectable:
 		Bounds: 1,1
 	WithShadow:
@@ -368,9 +368,9 @@ MOTHERSHIP.Husk:
 	Inherits@2: ^ScrinRender
 	-Cloak@CLOAKGENERATOR:
 	Tooltip:
-		Name: Battlecruiser
+		Name: Mothership
 	FallsToEarth:
-		Explosion: ScrinUnitExplode2
+		Explosion: ScrinUnitExplode4
 	Selectable:
 		Bounds: 1,1
 	WithShadow:
@@ -392,7 +392,7 @@ SCRTRANS.Husk:
 	Tooltip:
 		Name: Scrin Transport
 	FallsToEarth:
-		Explosion: ScrinUnitExplode2
+		Explosion: ScrinUnitExplode3
 	Selectable:
 		Bounds: 1,1
 	WithShadow:
@@ -418,7 +418,7 @@ SCRCOUNCIL.Husk:
 	WithShadow:
 	WithFacingSpriteBody:
 	FallsToEarth:
-		Explosion: ScrinUnitExplode2
+		Explosion: ScrinUnitExplode3
 	BodyOrientation:
 		QuantizedFacings: 32			
 	Aircraft:

@@ -4,8 +4,8 @@
 General Changes:
 	Cleaned unit descriptions a bit.
 	Filtered maps by type: 1v1, 2v2, 3v3, 4v4, FFA and fun maps / comp stomp.
-	Cloud: speed: 40 -> 30, Lifetime: 15 seconds.
-	Aircraft cannot be confused.
+	Cloud: speed: 40 -> 30, Lifetime: 8 seconds.
+	Aircraft cannot be confused and have less colission issues in theory.
 	Harvesters are now worth $1100 and refineries $1700.
 	Switched the armor of many vehicles that were wood into light.
 	Fixed clouds and other no-actors giving vision when dissapearing.
@@ -23,26 +23,30 @@ GDI Changes:
 	Guardian Platform now applies a healing aura on nearby friendly vehicles.
 	Juggernaut: Cost: 800 -> 900.
 Mutant Changes:
-	Marauder: Cost: 125 -> 110,
+	Marauder: Cost: 125 -> 110, now they can only deploy on tiberium fields.
 	Skirmisher: Cost: 160 -> 180.
 	Mind walker damage: 500 -> 300.
 CABAL Changes:
+	All cyborgs except the commando are now unnarmored. (Cyborg Commando has light armor.
 	Cyberdog hp: 300 -> 100.
-	Reclaimer: Cost 150 -> 175, hp: 110 -> 95.
+	Reclaimer: Cost 150 -> 175, hp: 110 -> 95, Damage: 60 -> 45.
 	Abductors now take 25% less damage when deployed.
-	Cyborg Commando: Spread: 48 -> 120
+	Gladiator: Reload delay: 120 -> 150. can no longer detect cloaked units.
+	Artisan: Cost: 1500 -> 1200, Turret creation time: 14 seconds -> 12 Seconds.
+	Cyborg Reaper: Cost: 1100 -> 1200, can now detect cloaked units, damage: 70 -> 60.
+	Cyborg Commando: Spread: 48 -> 120.
 	Seeker: Speed 130 -> 120.
+	Wasp: damage: 12 -> 30.
 	Railgun Turret: Power: -60 -> 40.
 	Blaster Turret: Spread: 300 -> 225, Power: -75 ->60 Warhead: Bomb -> Artillery.
 Nod Changes:
 	NOD Units now heal when they are cloaked.
 	Repair Vehicle removed.
-	Flame Warriors flamethrowers changed for stardard rifles that generate fire once they kill infantry, the fire harms nearby units.
-	They can also commit suicide.
-	Crusaders: Damage: 6 -> 20, Attack Speed: 1 Second -> 2 Seconds, removed innacuracy against infantry, they share the Flame Warrior passive.
+	Flame Warriors flamethrowers changed for stardard rifles that generate fire once they kill infantry, the fire harms nearby units, They can also commit suicide.
+	Crusaders: Damage: 6 -> 20, Attack Speed: 1 Second -> 2 Seconds, removed innacuracy against infantry, they share the Flame Warrior passive and can now fire at ground.
 	Hand of Kane: Attack speed: 6 seconds -> 8, range: 7 -> 8, explosion spread: 426 -> 300.
 	Devil's Tongue: Flame speed: 100 -> 130.
-	Buggy: cost 500 -> 600.
+	Buggy: range: 6c0 -> 4c0.
 	Demo Cycle: cost 650 -> 600, damage: 300 -> 400, Spread 0c5 -> 1c0, Warhead: Full Damage -> Bomb.
 	Stealth Tank: damage: 35 -> 30.
 	Stealth Tank: hp: 310 -> 275.
@@ -50,15 +54,18 @@ Nod Changes:
 	The banshee has been reworked (too many numbers to add up here).
 	Obelisk: hp: 600 -> 700, reload delay: 50 -> 40. 
 Scrin Changes:
+	Re arranged explosion damages for the scrin battleships depending on size.
 	Legionaire: cost 200 -> 180, damage: 20 -> 35.
-	Colossus: Damage: 28 -> 35. Splash damage: 14 -> 20.
+	Colossus: Damage: 28 -> 35. Splash damage: 14 -> 20, armor: wood -> none.
 	Ichor Walker: Bullet Speed: 160 -> 200.
+	Tripod: Speed 70 -> 80, hp: 400 -> 50, bullet speed, 400 -> 300, reduced explosion damage.
 	Stormrider: cost 550 -> 450, speed 155 -> 160.
-	Aerial Glyder: cost 750 -> 650, damage: 18 -> 25  Spread: 100-> 150, burst: 3 -> 5
+	Aerial Glyder: cost 750 -> 650, damage: 18 -> 35  Spread: 100-> 150, burst: 3 -> 5
 	Battleship HP: 800 -> 1100, Burst: 6 -> 8.
 	Scrin Destroyer: bullet Speed 280 -> 300, damage: 150 -> 170.
-	Tripod: Speed 70 -> 80, hp: 400 -> 50, bullet speed, 400 -> 300, reduced explosion damage.
+	Wyverm: HP: 90 -> 45.
 	The barracks now uses the standard production system, units come out one by one.
+	Ichor Waste Turret: Burst: 10 -> 7, won't cloak between shots.
 	Visceroid Hive: hp: 600 -> 800, Armor: Heavy -> Light.
 
 

@@ -129,7 +129,7 @@ ReaperScytheFalling:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 7000
+		Damage: 6000
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
@@ -158,13 +158,13 @@ ProcessingHuman:
 		Speed: 5c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 6000
+		Damage: 4500
 		ValidTargets: Infantry
 		DamageTypes: Prone50Percent, TriggerProne, CabalDeath
 		
 GLAD120mm:
 	Inherits: ^APWarhead
-	ReloadDelay: 120
+	ReloadDelay: 150
 	Range: 5c0
 	Report: tankmediumfire.wav
 	Projectile: Bullet
@@ -438,9 +438,6 @@ ecmwave:
 	Projectile: Bullet
 		Speed: 100c0
 		Blockable: false
-		# Shadow: true
-		# Angle: 62
-		# Image: TORPEDO
 	Warhead@movestop: GrantUpgrade
 		Range: 2c0
 		Duration: 100
@@ -479,7 +476,7 @@ WaspLasor:
 		Color: 0dc7b8#0080FFC8				
 	Warhead@1Dam: SpreadDamage
 		Spread: 125
-		Damage: 1200
+		Damage: 3000
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 		ValidTargets: Ground, Air
 		

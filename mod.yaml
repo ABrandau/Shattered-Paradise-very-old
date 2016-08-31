@@ -62,7 +62,6 @@ Packages:
 	sp|bits/mixes
 	sp|bits/mixes/isotempfs.mix
 	sp|bits/mixes/ecache01.mix
-	sp|bits/mixes/scores01.mix
 	sp|bits/mixes/sounds01.mix
 	sp|bits/pal
 	sp|bits/gdi/infantry

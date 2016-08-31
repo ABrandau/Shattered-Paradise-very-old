@@ -27,7 +27,7 @@ CLOUD1:
 	-SpawnActorOnDeath@vision:
 	-Voiced:
 	Health:
-		HP: 15
+		HP: 8
 	SelfHealing:
 		Step: -1
 		Delay: 25
@@ -710,7 +710,6 @@ STORMRIDER:
 		VoiceSet: Limpet
 	Aircraft:
 		MaximumPitch: 90
-		IdealSeparation: 1c0
 		TurnSpeed: 8
 		Speed: 160
 		AirborneUpgrades: airborne
@@ -868,7 +867,6 @@ SCRDESTROYER:
 	Aircraft:
 		TurnSpeed: 5
 		Speed: 90
-		IdealSeparation: 3c0
 		Repulsable: true
 		MoveIntoShroud: true
 		TakeoffSound: orcaup1.aud
@@ -966,7 +964,6 @@ SCRBATTLESHIP:
 		Bounds: 175,125
 	Aircraft:
 		TurnSpeed: 5
-		IdealSeparation: 4c0
 		Speed: 80
 		Repulsable: true
 		MoveIntoShroud: true
@@ -1079,7 +1076,6 @@ MOTHERSHIP:
 	Aircraft:
 		TurnSpeed: 5
 		Speed: 80
-		IdealSeparation: 4c0
 		Repulsable: true
 		MoveIntoShroud: true
 		TakeoffSound: orcaup1.aud
@@ -1156,7 +1152,7 @@ STORMRIDERSPAWN:
 	BodyOrientation:
 		QuantizedFacings: 32
 	Health:
-		HP: 18000
+		HP: 9000
 	SelfHealing:
 		PercentageStep: -50
 		Step: 0

@@ -41,7 +41,6 @@ ColossiTesla:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 80
 	Range: 4c0
-	Report: voltautofire.wav
 	Charges: yes
 	Projectile: TeslaZap
 		Palette: apolbluealpha
@@ -94,7 +93,6 @@ ColossiBlastTesla:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 80
 	Range: 3c0
-	# Report: voltautofire.wav
 	Projectile: TeslaZap
 		BrightZaps: 1
 		DimZaps: 1
@@ -609,7 +607,7 @@ NeedlerAcid:
 	Inherits: ^FlameWarhead
 	ReloadDelay: 100
 	Range: 4c768
-	Burst: 10
+	Burst: 7
 	Report: flamtnk1.aud
 	Projectile: Bullet
 		Speed: 250

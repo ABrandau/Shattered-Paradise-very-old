@@ -3,7 +3,7 @@
 ##########################################
 MilitantRifle:
 	Inherits: ^RifleWarhead
-	ReloadDelay: 55
+	ReloadDelay: 40
 	Range: 4c0
 	Report: infgun3.aud, gostgun1.aud, slvkgun1.aud
 	Projectile: Bullet
@@ -71,7 +71,7 @@ CrusaderBazooka:
 	ReloadDelay: 50
 	Range: 6c600
 	Report: scifiexplo.wav
-	ValidTargets: Vehicle, Air, Building, Infantry
+	ValidTargets: Ground, Vehicle, Air, Building, Infantry
 	Projectile: Missile
 		Speed: 233
 		Blockable: false
@@ -86,7 +86,7 @@ CrusaderBazooka:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 2000
-		ValidTargets: Vehicle, Air, Building, Infantry
+		ValidTargets: Ground, Vehicle, Air, Building, Infantry
 		DamageTypes: Prone50Percent, TriggerProne, MilitantFireDeath#SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: small_clsn
@@ -136,7 +136,7 @@ BHRifle:
 BuggyCannon:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 50
-	Range: 5c0
+	Range: 4c0
 	Report: tsgun4.aud
 	Projectile: Bullet
 		Speed: 1c682
@@ -156,7 +156,7 @@ BikeMissile:
 	Inherits: ^RocketWarhead
 	ReloadDelay: 60
 	BurstDelay: 60
-	Range: 6c0
+	Range: 4c0
 	Report: misl1.aud
 	ValidTargets: Ground, Air
 	Projectile: Missile

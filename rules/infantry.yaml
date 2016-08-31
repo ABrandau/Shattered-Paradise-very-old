@@ -11,7 +11,7 @@ GDIE1:
 		Cost: 130
 	Tooltip:
 		Name: Marine
-		Description: General-Purpose Infantry.\n  Strong vs Infantry\n\n  Weak vs Vehicles, Aircraft
+		Description: General-Purpose Infantry.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Health:
 		HP: 12000
 	Mobile:
@@ -235,7 +235,7 @@ TEMPLAR:
 		BuildPaletteOrder: 8
 		Prerequisites: ~nahand, naradr
 	Valued:
-		Cost: 300
+		Cost: 350
 	Tooltip:
 		Name: Templar
 		Description: Heavy weapons Infantry, heals on Tiberium.\n\n  Deals full damage to ground units.\n  Weak vs Anti infantry weapons, Aircraft.
@@ -355,7 +355,7 @@ MARAUDER:
 		Cost: 110
 	Tooltip:
 		Name: Marauder
-		Description: Mutant Militia, equipped with shotguns.\nThey can generate tiberium fortifications for themselves.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft, Base Defences.
+		Description: Mutant Militia, equipped with shotguns. They can\nfortify themselves while on tiberium fields, becoming\n stronger but immobile.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft, Base Defences.
 	Voiced:
 		VoiceSet: Rocket
 	Health:
@@ -407,7 +407,7 @@ MARAUDER:
 		UndeployedUpgrades: undeployed
 		DeployAnimation: make
 		Facing: 160
-		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
+		AllowedTerrainTypes: Tiberium, BlueTiberium
 		DeploySound:
 		UndeploySound:
 	WithInfantryBody:
@@ -846,8 +846,6 @@ COLOSSI:
 		OwnerType: Killer
 		DeathType: CabalDeath
 		RequiresLobbyCreeps: true
-	Armor:
-		Type: wood
 	Armament:
 		Weapon: ColossiTesla
 		LocalOffset: 300,0,1000
@@ -1049,8 +1047,6 @@ CABSENTRY:
 
 CYBORG:
 	Inherits: ^Cyborg
-	Armor:
-		Type: Wood
 	Valued:
 		Cost: 350
 	Tooltip:
@@ -1272,11 +1268,12 @@ MOTH:
 REAPERCAB:
 	Inherits: ^CabalDroneInfantry
 	Inherits@2: ^IncompleteSelfHeal
+	Inherits@3: ^BasicStealthDetection
 	Valued:
-		Cost: 1100
+		Cost: 1200
 	Tooltip:
 		Name: Cyborg Reaper
-		Description: Cyborg construct, equipped with multi missiles\nand web launchers that can ensrane infantry.\n\n Strong vs Vehicles, Aircraft\n Weak vs Infantry.
+		Description: Cyborg construct, equipped with multi missiles\nand web launchers that can ensrane infantry.\nDetects cloaked units.\n\n Strong vs Vehicles, Aircraft\n Weak vs Infantry.
 	Buildable:
 		Queue: Infantry
 		SharesCell: false
@@ -1303,8 +1300,6 @@ REAPERCAB:
 		HP: 30000
 	Voiced:
 		VoiceSet: CyborgReap
-	Armor:
-		Type: Wood
 	Armament@primary:
 		Weapon: ReaperWeb
 		LocalOffset: 0,0,200
@@ -1323,9 +1318,6 @@ REAPERCAB:
 GLAD:
 	Inherits: ^Cyborg
 	Inherits@2: ^IncompleteSelfHeal
-	Inherits@3: ^BasicStealthDetection
-	Armor:
-		Type: wood
 	Valued:
 		Cost: 600
 	SupplyTruck
@@ -1333,7 +1325,7 @@ GLAD:
 		Voice: Move
 	Tooltip:
 		Name: Gladiator
-		Description: Advanced cyborg construct, extremely resilient\nand capable of piercing enemy armor.\nDetects cloaked units.\n\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft.
+		Description: Advanced cyborg construct, extremely resilient\nand capable of piercing enemy armor.\n\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft.
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 14
@@ -1352,7 +1344,7 @@ GLAD:
 		Speed: 56
 		SharesCell: False
 	Health:
-		HP: 55000
+		HP: 50000
 	Armament@primary:
 		Weapon: GLAD120mm
 		MuzzleSequence: muzzle
@@ -1368,7 +1360,7 @@ CYC2:
 	Inherits: ^Cyborg
 	Inherits@2: ^IncompleteSelfHeal
 	Armor:
-		Type: Heavy
+		Type: Light
 	Valued:
 		Cost: 1200
 	Tooltip:

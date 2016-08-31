@@ -293,7 +293,7 @@ BGGY:
 	Inherits@2: ^NodCloakHealing
 	Inherits@3: ^BasicStealthDetection
 	Valued:
-		Cost: 600
+		Cost: 500
 	Tooltip:
 		Name: Raider Buggy
 		Description: Fast scout designed for harassment.\n\n  Strong vs Infantry, Armor, Aircraft.\n  Weak vs Vehicles.
@@ -1417,7 +1417,7 @@ ECM:
 	Inherits@2:	^IncompleteSelfHeal
 	Inherits@1: ^Ra2vxl
 	Valued:
-		Cost: 1500
+		Cost: 1200
 	Tooltip:
 		Name: Artisan
 		Description: Support vehicle that deploys turrets.\nBuilds new turrets over time.\n\n  Unarmed.
@@ -1444,7 +1444,7 @@ ECM:
 		Ammo: 8
 		PipCount: 8
 		PipType: Ammo
-		SelfReloadDelay: 350
+		SelfReloadDelay: 300
 		SelfReloads: true
 		PipTypeEmpty: AmmoEmpty
 	WithVoxelBody:

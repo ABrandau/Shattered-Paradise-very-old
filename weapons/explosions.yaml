@@ -144,21 +144,55 @@ ScrinUnitExplode:
 		ImpactSound: expnew09.aud
 
 ScrinUnitExplode2:
-	Inherits: ^ExploDefaults
-	Warhead@1Dam: SpreadDamage
-		Spread: 426
-		Damage: 5000
-		Falloff: 1000, 368, 135, 50, 18, 7, 0
-		Versus:
-			None: 90
-			Wood: 75
-			Light: 60
-			Heavy: 25
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: scrinexplo3, scrinexplo4, scrinexplo5
-		ExplosionPalette: apolbluealpha
-		ImpactSound: expnew09.aud
+    Inherits: ^ExploDefaults
+    Warhead@1Dam: SpreadDamage
+        Spread: 426
+        Damage: 5000
+        Falloff: 1000, 368, 135, 50, 18, 7, 0
+        Versus:
+            None: 90
+            Wood: 75
+            Light: 60
+            Heavy: 25
+        DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: scrinexplo3, scrinexplo4, scrinexplo5
+        ExplosionPalette: apolbluealpha
+        ImpactSound: expnew09.aud
+ 
+ScrinUnitExplode3:
+    Inherits: ^ExploDefaults
+    Warhead@1Dam: SpreadDamage
+        Spread: 639
+        Damage: 7500
+        Falloff: 1000, 368, 135, 50, 18, 7, 0
+        Versus:
+            None: 135
+            Wood: 113
+            Light: 90
+            Heavy: 38
+        DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: scrinexplo3, scrinexplo4, scrinexplo5
+        ExplosionPalette: apolbluealpha
+        ImpactSound: expnew09.aud
+ 
+ScrinUnitExplode4:
+    Inherits: ^ExploDefaults
+    Warhead@1Dam: SpreadDamage
+        Spread: 852
+        Damage: 10000
+        Falloff: 1000, 368, 135, 50, 18, 7, 0
+        Versus:
+            None: 180
+            Wood: 150
+            Light: 120
+            Heavy: 50
+        DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+    Warhead@2Eff: CreateEffect
+        Explosions: scrinexplo3, scrinexplo4, scrinexplo5
+        ExplosionPalette: apolbluealpha
+        ImpactSound: expnew09.aud
 
 UnitExplodeSmall:
 	Warhead@1Dam: SpreadDamage
