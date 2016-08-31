@@ -156,47 +156,56 @@ EAGLEGUARD:
 #NOD
 #######################################################
 ALTNODE1:
-	Inherits: ^Soldier
-	Inherits@2: ^NodCloakHealing
-	Buildable:
-		Queue: Infantry
-		BuildPaletteOrder: 6
-		Prerequisites: ~nahand
-	Valued:
-		Cost: 150
-	Tooltip:
-		Name: Flame Warrior
-		Description: Light infantry variant. Fires inflamable bullets that incinerate\nunits, damaging units that are nearby the killed unit. They can\nbe ordered to suicide, setting any nearby unit ablaze, dealing\n damage as mentioned before.\n\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft
-	Health:
-		HP: 10000
-	Mobile:
-		Speed: 70
-	DeployToUpgrade:
-		DeployedUpgrades: WingsOfFire
-		UndeployedUpgrades: undeployed
-		DeployAnimation: die1
-		Facing: 160
-		AllowedTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
-		DeploySound:
-		UndeploySound:
-	ExplodeWeapon:
-		Weapon: MilitantExplode
-		UpgradeTypes: WingsOfFire
+    Inherits: ^Soldier
+    Inherits@2: ^NodCloakHealing
+    Buildable:
+        Queue: Infantry
+        BuildPaletteOrder: 6
+        Prerequisites: ~nahand
+    Valued:
+        Cost: 150
+    Tooltip:
+        Name: Flame Warrior
+        Description: Light infantry variant. Fires inflamable bullets that incinerate\nunits, damaging units that are nearby the killed unit. They can\nbe ordered to suicide, setting any nearby unit ablaze, dealing\ndamage as mentioned before.\n\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft
+    Health:
+        HP: 10000
+	Targetable@FlameWarrior:
+		TargetTypes: FlameWarrior
+    Mobile:
+        Speed: 70
+    DeployToUpgrade:
+        DeployedUpgrades: deployed
+        UndeployedUpgrades: undeployed
+        DeployAnimation:
+        Facing: 160
+        AllowedTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
+        DeploySound:
+        UndeploySound:
+    -TakeCover:
+    Armament:
+        Weapon: MilitantRifle
+        UpgradeTypes: deployed
+        UpgradeMaxEnabledLevel: 0
+    Armament@killsself:
+        Weapon: MilitantSuicide
+        UpgradeTypes: deployed
+        UpgradeMinEnabledLevel: 1
+        UpgradeMaxAcceptedLevel: 1
+    AttackFrontal:
+        Voice: Attack
+    WithInfantryBody:
+        AttackSequence: shoot
+    ProducibleWithLevel:
+        Prerequisites: barracks.upgraded
+    RenderSprites:
+	WithDecoration@bombicon:
+		Image: bombicon
+		Sequence: idle
+		ReferencePoint: Bottom, Left
+		Palette: mouse
+		ShowToEnemies: true
+		UpgradeTypes: deployed
 		UpgradeMinEnabledLevel: 1
-		ResetReloadWhenEnabled: false
-	KillsSelf:
-		UpgradeTypes: WingsOfFire
-		UpgradeMinEnabledLevel: 1
-	-TakeCover:
-	Armament:
-		Weapon: MilitantRifle
-	AttackFrontal:
-		Voice: Attack
-	WithInfantryBody:
-		AttackSequence: shoot
-	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
-	RenderSprites:
 
 CRUSADER:
 	Inherits: ^Soldier
@@ -355,7 +364,7 @@ MARAUDER:
 		Cost: 110
 	Tooltip:
 		Name: Marauder
-		Description: Mutant Militia, equipped with shotguns. They can\nfortify themselves while on tiberium fields, becoming\n stronger but immobile.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft, Base Defences.
+		Description: Mutant Militia, equipped with shotguns. They can\nfortify themselves while on tiberium fields, becoming\nstronger but immobile.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft, Base Defences.
 	Voiced:
 		VoiceSet: Rocket
 	Health:

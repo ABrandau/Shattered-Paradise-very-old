@@ -52,6 +52,7 @@ Nod Changes:
 	Stealth Tank: hp: 310 -> 275.
 	Harpies now share the incineration effect flame warriors provide.
 	The banshee has been reworked (too many numbers to add up here).
+	Laser Turret: Damage: 30 -> 35, Reload delay: 40 -> 30
 	Obelisk: hp: 600 -> 700, reload delay: 50 -> 40. 
 Scrin Changes:
 	Re arranged explosion damages for the scrin battleships depending on size.

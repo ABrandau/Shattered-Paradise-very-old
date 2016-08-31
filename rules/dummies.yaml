@@ -398,8 +398,19 @@ VEINHOLESPAWNERDUMMY:
 	-SpawnActorOnDeath@nanomachineburst:
 
 ##########################################################
-#
+# NOD
 ##########################################################
+NODSUICIDEDUMMY:
+    Inherits: ^DUMMYAIRCRAFT
+    Explodes:
+        Weapon: MilitantExplode
+        EmptyWeapon: MilitantExplode
+    Health:
+        HP: 1
+    SelfHealing:
+        Step: -1
+        Delay: 1
+        HealIfBelow: 200
 
 FIREACTOR:
 	Inherits: ^Helicopter

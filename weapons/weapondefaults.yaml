@@ -94,6 +94,9 @@ ArtilleryWarhead: #Inherits: ArtilleryWarhead
 			Wood: 75
 			Light: 60
 			Heavy: 25
+^DecentFalloff:	#Inherits: ^DecentFalloff
+	Warhead@1Dam: SpreadDamage
+		Falloff: 100, 50, 25, 12, 0
 
 ^FullDamage:	#Inherits: ^FullDamage
 	Warhead@1Dam: SpreadDamage

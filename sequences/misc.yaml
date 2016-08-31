@@ -285,6 +285,9 @@ meteor2:
 tibicon:
 	idle: tibicon
 
+bombicon:
+	idle: bombicon
+
 wrenchicon:
 	idle: wrenchicon	
 

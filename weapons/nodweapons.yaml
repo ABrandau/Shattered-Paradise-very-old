@@ -3,7 +3,7 @@
 ##########################################
 MilitantRifle:
 	Inherits: ^RifleWarhead
-	ReloadDelay: 40
+	ReloadDelay: 45
 	Range: 4c0
 	Report: infgun3.aud, gostgun1.aud, slvkgun1.aud
 	Projectile: Bullet
@@ -23,6 +23,50 @@ MilitantRifle:
 		Explosions: fire3, fire4
 		InvalidImpactTypes: Water, Air, AirHit
 
+MilitantSuicide:
+	Inherits: ^FullDamage
+	ReloadDelay: 40
+	Range: 1c0
+	Projectile: InstantExplode
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 1100
+		DamageTypes: Prone70Percent, TriggerProne, MilitantFireDeath
+	Warhead@5Actor: SpawnActor
+		Actors: NODSUICIDEDUMMY
+		FallRate: 5000
+		Range: 3
+		
+MilitantExplode:
+	Inherits: ^FlameWarhead
+	Inherits: ^DecentFalloff
+	Warhead@1Dam: SpreadDamage
+		Spread: 200
+		Damage: 100000
+		Versus:
+		DamageTypes: Prone50Percent, TriggerProne, MilitantFireDeath
+	Warhead@1Dam: SpreadDamage
+		Spread: 200
+		Damage: 100000
+		Versus:
+			None: 600
+			Wood: 50
+			Light: 25
+			Heavy: 12
+			Concrete: 2
+		DamageTypes: Prone50Percent, TriggerProne, MilitantFireDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: large_explosion
+		ImpactSounds: kaboom15.aud
+		InvalidImpactTypes: Water
+	Warhead@3EffWater: CreateEffect
+		Explosions: large_splash
+		ImpactSounds: splash9.aud
+		ValidImpactTypes: Water
+	Warhead@3Smu: LeaveSmudge
+		SmudgeType: SmallScorch
+		InvalidTargets: Vehicle, Building, Wall
+
 MillitantFire:
 	Inherits: ^FlameWarhead
 	ReloadDelay: 15
@@ -38,33 +82,9 @@ MillitantFire:
 		Explosions: militantfire, militantfire2, militantfire3
 		InvalidImpactTypes: Water, Air, AirHit
 		ExplosionPalette: apolra2
-		
-MilitantExplode:
-	Warhead@1Dam: SpreadDamage
-		Spread: 400
-		Damage: 18000
-		Versus:
-			None: 90
-			Wood: 75
-			Light: 60
-			Heavy: 25
-		DamageTypes: Prone50Percent, TriggerProne, MilitantFireDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: large_explosion
-		ImpactSounds: kaboom15.aud
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: large_splash
-		ImpactSounds: splash9.aud
-		ValidImpactTypes: Water
-	Warhead@4Smu: LeaveSmudge
-		SmudgeType: Crater
-		InvalidTargets: Structure, Wall, Trees
-	Warhead@emp: GrantUpgrade
-		Range: 250
-		Duration: 75
-		Upgrades: berserk
-		
+	Warhead@3Smu: LeaveSmudge
+		SmudgeType: SmallScorch
+		InvalidTargets: Vehicle, Building, Wall
 
 CrusaderBazooka:
 	Inherits: ^RocketWarhead
@@ -189,12 +209,12 @@ BikeMissile:
 		InvalidTargets: Vehicle, Building, Wall
 
 BikeExplo:
+	Inherits: ^DecentFalloff
 	Inherits: ^BombWarhead
 	ValidTargets: Ground, Water, Air
 	Warhead@1Dam_impact: SpreadDamage
 		Spread: 500
-		Falloff: 300, 150, 75, 32, 0 
-		Damage: 40000
+		Damage: 120000
 		ValidTargets: Ground, Water, Air
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
@@ -478,7 +498,7 @@ ProtonAA:
 ##################################################
 TurretLaserFire:
 	Inherits: ^FullDamage
-	ReloadDelay: 40
+	ReloadDelay: 30
 	Range: 6c768
 	Report: lastur1.aud
 	Projectile: LaserZap
@@ -487,7 +507,7 @@ TurretLaserFire:
 		ZOffset: 2047
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 3000
+		Damage: 3500
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 		
 ObeliskLaserFire:
