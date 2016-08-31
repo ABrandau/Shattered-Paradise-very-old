@@ -1194,3 +1194,17 @@ ufo:
 	idle: ufo.tem
 		Offset: -24, -60
 		AddExtension: false
+
+c_kodiak: #TODO Add Floaters and CABAL's defences.
+	idle:
+		Offset: 0,-38
+		Start: 1
+		Length: 1
+
+# defd:
+
+# AAOB:
+
+# CORE:
+
+# CROB:

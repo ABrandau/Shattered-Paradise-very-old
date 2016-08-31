@@ -52,6 +52,7 @@ Packages:
 	~scores01.mix
 	~expand01.mix
 	~sounds01.mix
+	~isotempfs.mix
 	~e01sc01.mix
 	~e01sc02.mix
 	~e01vox01.mix
@@ -59,6 +60,10 @@ Packages:
 	~ecache01.mix
 	sp|bits
 	sp|bits/mixes
+	sp|bits/mixes/isotempfs.mix
+	sp|bits/mixes/ecache01.mix
+	sp|bits/mixes/scores01.mix
+	sp|bits/mixes/sounds01.mix
 	sp|bits/pal
 	sp|bits/gdi/infantry
 	sp|bits/nod/infantry
@@ -107,7 +112,6 @@ Packages:
 
 MapFolders:
 	sp|maps: System
-	sp|maps/missions
 	~^maps/sp/{DEV_VERSION}: User
 
 Rules:
@@ -161,7 +165,7 @@ VoxelSequences:
 	sp|sequences/voxelsSP.yaml
 
 TileSets:
-	sp|tilesets/temperate.yaml
+	sp|tilesets/temperatefs.yaml
 	sp|tilesets/snow.yaml
 
 MapGrid:

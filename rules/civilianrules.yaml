@@ -2400,6 +2400,116 @@ UFO:
 	SelectionDecorations:
 		VisualBounds: 144, 72, 0, 0
 
+C_KODIAK:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Kodiak Crash
+	Armor:
+		Type: heavy
+	Health:
+		HP: 1000
+	Building:
+		Dimensions: 3,3
+		Footprint: xxx xxx xxx
+	RenderSprites:
+	WithSpriteBody:
+	AutoSelectionSize:
+	BodyOrientation:
+		UseClassicPerspectiveFudge: False
+		QuantizedFacings: 1
+	FrozenUnderFog:
+
+# DDEF:
+	# Inherits: ^CivBuilding
+	# Tooltip:
+		# Name: Core Defender
+	# Valued:
+		# Cost: 10000
+	# Armor:
+		# Type: concrete
+	# RevealsShroud:
+		# Range: 6c0
+	# Health:
+		# HP: 9999
+	# Power:
+		# Amount: 0
+	# RenderSprites:
+		# Image: defd
+	# WithSpriteBody:
+	# AutoSelectionSize:
+	# BodyOrientation:
+		# UseClassicPerspectiveFudge: False
+		# QuantizedFacings: 1
+	# FrozenUnderFog:
+
+# AAOB:
+	# Inherits: ^CivBuilding
+	# Tooltip:
+		# Name: Obelisk of Darkness
+	# Valued:
+		# Cost: 1500
+	# Armor:
+		# Type: concrete
+	# RevealsShroud:
+		# Range: 8c0
+	# Health:
+		# HP: 1000
+	# Power:
+		# Amount: 0
+	# EmitInfantryOnSell:
+	# RenderSprites:
+		# Image: obl2
+	# WithSpriteBody:
+	# AutoSelectionSize:
+	# BodyOrientation:
+		# UseClassicPerspectiveFudge: False
+		# QuantizedFacings: 1
+	# FrozenUnderFog:
+
+# CORE:
+	# Inherits: ^CivBuilding
+	# Tooltip:
+		# Name: Cabal Core
+	# Armor:
+		# Type: concrete
+	# Health:
+		# HP: 3000
+	# Building:
+		# Dimensions: 3,3
+		# Footprint: xxx xxx xxx
+	# WithMakeAnimation:
+	# RenderSprites:
+	# WithSpriteBody:
+	# AutoSelectionSize:
+	# BodyOrientation:
+		# UseClassicPerspectiveFudge: False
+		# QuantizedFacings: 1
+	# FrozenUnderFog:
+
+# CROB:
+	# Inherits: ^CivBuilding
+	# Tooltip:
+		# Name: CABAL Obelisk
+	# Valued:
+		# Cost: 1500
+	# Armor:
+		# Type: concrete
+	# RevealsShroud:
+		# Range: 8c0
+	# Health:
+		# HP: 1000
+	# Power:
+		# Amount: 0
+	# EmitInfantryOnSell:
+	# RenderSprites:
+		# Image: obl1
+	# WithSpriteBody:
+	# AutoSelectionSize:
+	# BodyOrientation:
+		# UseClassicPerspectiveFudge: False
+		# QuantizedFacings: 1
+	# FrozenUnderFog:
+
 EGGS:
 	Inherits: ^CivBuilding
 	Tooltip:

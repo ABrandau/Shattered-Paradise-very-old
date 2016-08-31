@@ -13,7 +13,7 @@ machinescollide: Machines Collide
 empmil: EmpMil
 #Original
 #Tiberian Sun
-intro: Intro
+intro: Tiberian Sun Title Music
 	Hidden: true
 approach: Approach
 defense: The Defense
@@ -37,6 +37,8 @@ whatlurk: What Lurks
 maps: Map Selection
 	Hidden: true
 #Firestorm
+fsmenu: Firestorm Title Music
+	Hidden: true
 dmachine: Deploy Machines
 elusive: Elusive
 hacker: Hacker

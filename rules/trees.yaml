@@ -97,6 +97,96 @@ TREE24:
 TREE25:
 	Inherits: ^Tree
 
+fona01:
+	Inherits: ^Tree
+	Tooltip:
+		Name: Fona
+
+fona02:
+	Inherits: ^Tree
+	Tooltip:
+		Name: Fona
+
+fona03:
+	Inherits: ^Tree
+	Tooltip:
+		Name: Fona
+
+fona04:
+	Inherits: ^Tree
+	Tooltip:
+		Name: Fona
+
+fona05:
+	Inherits: ^Tree
+	Tooltip:
+		Name: Fona
+
+fona06:
+	Inherits: ^Tree
+	Tooltip:
+		Name: Fona
+
+fona07:
+	Inherits: ^Tree
+	Tooltip:
+		Name: Fona
+
+fona08:
+	Inherits: ^Tree
+	Tooltip:
+		Name: Fona
+
+fona09:
+	Inherits: ^Tree
+	Tooltip:
+		Name: Fona
+
+fona10:
+	Inherits: ^Tree
+	Tooltip:
+		Name: Fona
+
+fona11:
+	Inherits: ^Tree
+	Tooltip:
+		Name: Fona
+
+fona12:
+	Inherits: ^Tree
+	Tooltip:
+		Name: Fona
+
+fona13:
+	Inherits: ^Tree
+	Tooltip:
+		Name: Fona
+
+fona14:
+	Inherits: ^Tree
+	Tooltip:
+		Name: Fona
+
+fona15:
+	Inherits: ^Tree
+	Tooltip:
+		Name: Fona
+
+# bigblue3:
+	# Inherits: ^Tree
+        # Tooltip:
+                # Name: Blue Tiberium Tree
+        # Building:
+                # Dimensions: 1,1
+                # Footprint: x
+        # RenderSprites:
+        # WithSpriteBody:
+        # AutoSelectionSize:
+        # BodyOrientation:
+                # UseClassicPerspectiveFudge: False
+                # QuantizedFacings: 1
+        # FrozenUnderFog:
+
 VEINHOLE:
 	Inherits: ^Building
 	RadarColorFromTerrain:
