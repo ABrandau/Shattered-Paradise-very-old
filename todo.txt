@@ -8,15 +8,10 @@ Give Scrin a shield or sth.
 tiberium tornadoes.
 
 Balance
-Possible basilisk buff needed
-
-
-Militant muff
-cabal too strong
+Fix bassilisk
 improve scrin battleship explosions
 marauder bad death anim
-sunstroke map broke.
-add floaters.
+nanomachine core no animation
 
 todo
 
@@ -46,6 +41,7 @@ enlarge map editor selection screen. editor.yaml/Container@EDITOR_WORLD_ROOT/Con
 add apollo's explos.
 add the remaining FS assets.
 Mothership husks.
+add floaters.
 
 Graphics
 cnc 3 big tiberium glaciers

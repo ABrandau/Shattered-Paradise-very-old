@@ -435,6 +435,54 @@ CRAB:
 		ReduceMoveRadiusDelay: 5
 		MinMoveDelayInTicks: 100
 		MaxMoveDelayInTicks: 200
+
+FLOATER:
+	Inherits: ^HoverVehicle
+	Tooltip:
+		Name: Floater
+	-GainsExperience:		
+	Health:
+		HP: 50000
+		Shape: Circle
+			Radius: 213
+	Valued:
+		Cost: 100
+	Armor:
+		Type: Light
+	RevealsShroud:
+		Range: 5c0
+	-SpawnActorOnDeath@conversion:
+	-UpgradeOverlay@EMPDISABLE:
+	-DisableOnUpgrade@EMPDISABLE:
+	-TimedUpgradeBar@EMPDISABLE:
+	-WithIdleOverlay@EMPDISABLE:
+	-PowerMultiplier@EMPDISABLE:
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	Mobile:
+		Speed: 90
+		Crushes: nada
+	Voiced:
+		VoiceSet: Fiend
+	Targetable:
+		TargetTypes: Infantry, Ground, NeutralTibCritter
+	Armament:
+		Weapon: CrabAcid
+	WithInfantryBody:
+		AttackSequence: shoot
+		IdleSequences:
+	AutoTarget:
+		ScanRadius: 6
+	Explodes:
+		Weapon: UnitExplodeSmall
+		EmptyWeapon: UnitExplodeSmall
+	AttackFrontal:
+		Voice: Attack
+	AttackWander:
+		WanderMoveRadius: 1
+		ReduceMoveRadiusDelay: 5
+		MinMoveDelayInTicks: 100
+		MaxMoveDelayInTicks: 200
 		
 BERSERKER:
 	Inherits: ^Mutant

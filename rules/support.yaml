@@ -626,7 +626,6 @@ DLIMPET:
 		CloakSound:
 		UncloakSound:
 		IsPlayerPalette: true
-		CloakTypes: cloakgenerator
 	WithRangeCircle:
 		Range: 3c0
 		Type: cloakgenerator
@@ -636,10 +635,8 @@ DLIMPET:
 		Upgrades: AcidScaleDmg
 		ValidStances: Enemy
 		Range: 8c0
-	UpgradeActorsNear@berserker:
-		Upgrades: berserk
-		ValidStances: Enemy
-		Range: 3c0
+	ExplodeWeapon:
+		Weapon: ToxinBerserk
 
 GAARTY:
 	Inherits@1: ^DeployedVehicle
@@ -741,7 +738,7 @@ NAMISL:
 		InsufficientPowerSound:
 		IncomingSound: 00-i150.aud
 		LaunchSound: icbm1.aud
-		FlightDelay: 200
+		FlightDelay: 100
 		MissileWeapon: ToxinMissile
 		SpawnOffset: 0,427,0
 		DisplayTimer: True
@@ -957,7 +954,7 @@ MUTSW2:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
 	Selectable:
-		Bounds: 42,42
+		Bounds: 130, 80, 0, -24
 	Health:
 		HP: 80000
 	Armor:
@@ -967,12 +964,12 @@ MUTSW2:
 	Power:
 		Amount: -150
 	SelectionDecorations:
-		VisualBounds: 42,42
+		VisualBounds: 130, 100, 0, -24
 	IonCannonPower:
 		Weapon: VeinholeSummonerWeapon
 		Effect: dot
 		Icon: veinholesw
-		ChargeTime: 300
+		ChargeTime: 240
 		OrderName: Veinhole
 		DisplayTimer: True
 		DisplayBeacon: True
@@ -1467,8 +1464,6 @@ CABSENTRYTURRET:
 	Building:
 	Selectable:
 		Bounds: 40, 30, -3, -8
-	RequiresPower:
-	DisabledOverlay:
 	Health:
 		HP: 7500
 	-Sellable:
@@ -1704,7 +1699,7 @@ CABSW1:
 	FireArmamentPower:
 		Cursor: emp
 		Icon: cabcannon
-		ChargeTime: 180
+		ChargeTime: 240
 		Description: Iron Savior
 		LongDesc: Fires a volley of bullets\nat the target location.
 		EndChargeSound: speech-nod|00-i158.aud

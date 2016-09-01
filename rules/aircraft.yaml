@@ -56,6 +56,7 @@ CLOUD1:
 	AttackWander:
 	WithDeathAnimation:
 		DeathSequence: die
+		UseDeathTypeSuffix: false
 
 #######################################################
 #GDI
@@ -761,8 +762,8 @@ drache:
 		VoiceSet: Limpet
 	Armor:
 		Type: Light
-	Targetable:
-		TargetTypes: MindControlInmune, Aircraft
+	Targetable@MindControlInmune:
+		TargetTypes: MindControlInmune
 	Aircraft:
 		TurnSpeed: 5
 		Speed: 50
@@ -1251,10 +1252,13 @@ WASP:
 	Armament@Primary:
 		Weapon: WaspLasor
 		LocalOffset: 200,350,-100
+
 	Armament@Secondary:
 		Weapon: WaspLasor
 		AmmoPoolName: Rocket
 		LocalOffset: 200,-350,-100
+	Armament@TheRealThing:
+		Weapon: WaspBullet
 	AttackHeli:
 		FacingTolerance: 20
 		Voice: Attack

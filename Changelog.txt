@@ -1,6 +1,29 @@
 ﻿YEAR - MONTH - DAY
 
-[2016 - xx - xx]
+[2016 - 09 - 01]
+General Changes:
+	Fixed veinhole health.
+	Tiberium values reduced to by 1/4.
+	Structures can only be placed now around the influence radious of a conyard.
+GDI Changes:
+	Drop pods cooldown: 3 minutes -> 4 minutes.
+Mutant Changes:
+	Ravager: Damage: 60 -> 40.
+	Veinhole Summon cooldown: 5 minutes -> 4 minutes.
+CABAL Changes:
+	Cyborg: hp: 250 -> 350, removed damage cooldown from it's self heal capabilities.
+	Fixed glitch tat made Artisan turrets stop working while on low power.
+	Devourer: Hp: 350 -> 450, can now crush infantry, spread: 256 -> 210.
+	Wasp: Fixed bug that made it ignore armors when damaging units.
+	Blaster Turret: Damage per volley: 25 -> 35.
+	Iron Savior: Damage per volley: 150 -> 120, Cooldown: 3 minutes -> 4 minutes.
+Nod Changes:
+	Fixed Toxin drone being undetectable, now it makes nearby units uncontrollable every 6 seconds, and the effect last 3 seconds.
+	Toxin Missile flight delay: 8 seconds -> 4 seconds, units attacked by it will remain uncontrollable for 8 seconds.
+Scrin Changes:
+	Drache: Fixed targetting bug possibly.
+
+[2016 - 08 - 31]
 General Changes:
 	Cleaned unit descriptions a bit.
 	Filtered maps by type: 1v1, 2v2, 3v3, 4v4, FFA and fun maps / comp stomp.
@@ -25,6 +48,7 @@ GDI Changes:
 Mutant Changes:
 	Marauder: Cost: 125 -> 110, now they can only deploy on tiberium fields.
 	Skirmisher: Cost: 160 -> 180.
+	Knight: 10% of turning into a ravager when killed -> 7%.
 	Mind walker damage: 500 -> 300.
 CABAL Changes:
 	All cyborgs except the commando are now unnarmored. (Cyborg Commando has light armor.

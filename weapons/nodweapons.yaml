@@ -73,7 +73,7 @@ MillitantFire:
 	Projectile: InstantExplode
 	ValidTargets: Ground
 	Warhead@3Dam_area: SpreadDamage
-		Spread: 250
+		Spread: 300
 		Damage: 2000
 		Falloff: 100, 50, 25, 0
 		ValidTargets: Ground
@@ -329,7 +329,20 @@ BCLazor:
 	Warhead@4Smu: LeaveSmudge
 		SmudgeType: MediumCrater
 		InvalidTargets: Vehicle, Building, Wall
-		
+
+ToxinBerserk:
+	ReloadDelay: 150
+	Projectile: InstantExplode
+	Warhead@1Dam: SpreadDamage
+		Spread: 213
+		Damage: -1
+		ValidTargets: Repair
+	Warhead@emp: GrantUpgrade
+		Range: 4c0
+		Duration: 75
+		Upgrades: berserk
+		ValidStances: Enemy, Neutral
+
 StealthRocket:
 	Inherits: ^RocketWarhead
 	ReloadDelay: 125

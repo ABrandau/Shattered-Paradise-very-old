@@ -61,6 +61,7 @@ Packages:
 	sp|bits
 	sp|bits/mixes
 	sp|bits/mixes/isotempfs.mix
+	sp|bits/mixes/temperatfs.mix
 	sp|bits/mixes/ecache01.mix
 	sp|bits/mixes/sounds01.mix
 	sp|bits/pal

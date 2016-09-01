@@ -171,7 +171,7 @@ GLAD120mm:
 		Speed: 1c512
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 40
+		Damage: 4000
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: large_clsn
@@ -404,7 +404,7 @@ DevourerShell:
 		Angle: 150
 		RangeLimit: 25
 	Warhead@1Dam: SpreadDamage
-		Spread: 256
+		Spread: 210
 		Damage: 3000
 		Versus:
 			Worker: 25
@@ -464,8 +464,22 @@ PalaLazor:
 ########################################################################
 # Aircraft
 ########################################################################
-WaspLasor:
+
+WaspBullet:
 	Inherits: ^APWarhead
+	ReloadDelay: 50
+	Range: 6c0
+	Report: lastur1.aud
+	ValidTargets: Ground, Air
+	Projectile:	Bullet
+		Speed: 100c0		
+	Warhead@1Dam: SpreadDamage
+		Spread: 125
+		Damage: 6000
+		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+		ValidTargets: Ground, Air
+
+WaspLasor:
 	ReloadDelay: 50
 	Range: 6c0
 	Report: lastur1.aud
@@ -473,12 +487,12 @@ WaspLasor:
 	Projectile: LaserZap
 		BeamWidth: 0.5
 		BeamDuration: 5
-		Color: 0dc7b8#0080FFC8				
+		Color: 0dc7b8
 	Warhead@1Dam: SpreadDamage
-		Spread: 125
-		Damage: 3000
-		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+		Spread: 128
+		Damage: 1
 		ValidTargets: Ground, Air
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 		
 WaspBazooka:
 	Inherits: ^RocketWarhead
@@ -668,7 +682,7 @@ BlasterProton:
 		RangeLimit: 35
 	Warhead@1Dam: SpreadDamage
 		Spread: 225
-		Damage: 2500
+		Damage: 3500
 		ValidTargets: Ground, Vehicle, Infantry, water
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath

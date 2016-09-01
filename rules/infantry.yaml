@@ -285,7 +285,7 @@ MHIJACK:
 	Targetable@MindControl:
 		TargetTypes: MindControlInmune
 	Mobile:
-		Speed: 80
+		Speed: 76
 	Infiltrates:
 		Types: SpyInfiltrate
 	Captures:
@@ -293,8 +293,8 @@ MHIJACK:
 		Sabotage: false
 	Cloak@CLOAKGENERATOR:
 		UpgradeMinEnabledLevel: 0
-		InitialDelay: 50
-		CloakDelay: 50
+		InitialDelay: 100
+		CloakDelay: 100
 		IsPlayerPalette: true
 		UncloakOn: Attack
 	RenderSprites:
@@ -666,7 +666,7 @@ AWARRIOR:
 		Armaments: OnFoot
 	SpawnActorOnDeath@deathclaw:
 		Actor: deathclaw
-		Probability: 10
+		Probability: 7
 		InternalOwner: Victim
 	WithMuzzleOverlay:
 
@@ -1060,13 +1060,16 @@ CYBORG:
 		Cost: 350
 	Tooltip:
 		Name: Cyborg Infantry
-		Description: Heavy armored unit.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft
+		Description: Durable infantry that has good vision and damage. Auto repairs\nslowly up full to health even when under attack.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 11
 		Prerequisites: ~cabclaw
 	Selectable:
 		Bounds: 22,32,-1,-9
+	SelfHealing@Permanent:
+		DamageCooldown: 0
+		Delay: 75
 	SupplyTruck
 		Payload: 175
 		Voice: Move
@@ -1079,7 +1082,7 @@ CYBORG:
 	Mobile:
 		Speed: 45
 	Health:
-		HP: 25000
+		HP: 35000
 	Armament:
 		Weapon: CyborgVulcan
 	AttackFrontal:

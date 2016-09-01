@@ -1505,12 +1505,12 @@ SPIDERARTY:
 	Mobile:
 		TurnSpeed: 12
 		Speed: 70
-		Crushes: crate
+		Crushes: crate, infantry
 		TerrainSpeeds:
 	Voiced:
 		VoiceSet: Limpet
 	Health:
-		HP: 35000
+		HP: 45000
 	Armor:
 		Type: Light
 	BodyOrientation:
@@ -1549,6 +1549,9 @@ PALADIN:
 		Speed: 60
 		Crushes: wall, crate, infantry
 	-RejectsOrders@berserk:
+	SelfHealing@Permanent:
+		DamageCooldown: 0
+		Delay: 75
 	Health:
 		HP: 100000
 	Voiced:

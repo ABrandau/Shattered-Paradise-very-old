@@ -154,7 +154,23 @@ crab:
 		Length: 5
 		Facings: -8
 		ShadowStart: 259
-	icon: sidebar-gdi|e1icon	
+	icon: sidebar-gdi|e1icon
+
+floater:
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 1
+		Length: 16
+		ShadowStart: 32
+	run:
+		Facings: 1
+		Length: 16
+		ShadowStart: 32
+	shoot:
+		Facings: 1
+		Start: 16
+		ShadowStart: 47
 	
 weedguy:
 	Inherits: ^InfantryDeathAnims

@@ -350,6 +350,7 @@
 		BuildSounds: place2.aud
 		TerrainTypes: Clear, Road, DirtRoad, Rough
 		Adjacent: 4
+		RequiresBaseProvider: True
 	FrozenUnderFog:
 	SoundOnDamageTransition:
 		DamagedSounds: expnew01.aud
@@ -1244,7 +1245,7 @@
 		StartsRevealed: true
 	SeedsResource:
 		ResourceType: Tiberium
-		Interval: 55
+		Interval: 45
 	WithIdleAnimation:
 
 ^Tree:

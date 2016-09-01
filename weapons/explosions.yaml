@@ -94,21 +94,6 @@ BlackHandExplode:
 		Upgrades: AcidScaleDmg
 		ValidTargets: Ground, Vehicle, Infantry, Building
 
-GasCloudDeathWeapon:
-	ReloadDelay: 10
-	Inherits: ^MeleeWarhead
-	Warhead@1Dam: SpreadDamage
-		Spread: 200
-		Damage: 4000
-		InvalidTargets: Veinhole
-		Versus:
-		DamageTypes: TiberiumDeathStrong
-
-GasCloudDeathWeapon2:
-	Inherits: GasCloudDeathWeapon
-	Warhead@2Eff: CreateEffect
-		Explosions: gasclouddeath
-
 VeinholeExplosion:
 	Warhead@1Dam: SpreadDamage
 		Spread: 426

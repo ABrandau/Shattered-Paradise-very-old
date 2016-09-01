@@ -268,7 +268,7 @@ DeathclawBlow:
 		Speed: 5c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 6000
+		Damage: 4000
 		InvalidTargets: Building
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong			
 
