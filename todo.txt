@@ -8,10 +8,11 @@ Give Scrin a shield or sth.
 tiberium tornadoes.
 
 Balance
-Fix bassilisk
 improve scrin battleship explosions
 marauder bad death anim
-nanomachine core no animation
+remove selectable from a shit ton of actors.
+make flame tanks teleport
+double check sandbags
 
 todo
 

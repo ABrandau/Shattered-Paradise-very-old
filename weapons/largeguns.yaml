@@ -1,4 +1,6 @@
 120mm:
+	Inherits: ^APWarhead
+	Inherits@2: ^Large_Clsn
 	ReloadDelay: 80
 	Range: 6c768
 	Report: 120mmf.aud
@@ -7,27 +9,11 @@
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 5000
-		Versus:
-			None: 25
-			Wood: 65
-			Light: 75
-			Heavy: 100
-			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: large_clsn
-		ImpactSound: expnew14.aud
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
-	Warhead@4Smu: LeaveSmudge
-		SmudgeType: MediumCrater
-		InvalidTargets: Vehicle, Building, Wall
 
 120mmx:
+	Inherits: ^APWarhead
+	Inherits@2: ^Large_Clsn
 	ReloadDelay: 80
 	Range: 6c768
 	Report: 120mmf.aud
@@ -42,27 +28,11 @@
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 5000
-		Versus:
-			None: 25
-			Wood: 65
-			Light: 75
-			Heavy: 100
-			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: medium_clsn
-		ImpactSound: expnew14.aud
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
-	Warhead@4Smu: LeaveSmudge
-		SmudgeType: MediumCrater
-		InvalidTargets: Vehicle, Building, Wall
 
 155mm:
+	Inherits: ^ArtilleryWarhead
+	Inherits@2: ^Large_Explosion
 	ReloadDelay: 110
 	Range: 18c0
 	Report: 120mmf.aud
@@ -77,22 +47,4 @@
 	Warhead@1Dam: SpreadDamage
 		Spread: 298
 		Damage: 15000
-		Versus:
-			None: 100
-			Wood: 85
-			Light: 68
-			Heavy: 35
-			Concrete: 35
 		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: large_explosion
-		ImpactSound: expnew06.aud
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSound: ssplash2.aud
-		ValidImpactTypes: Water
-	Warhead@4Smu: LeaveSmudge
-		SmudgeType: MediumCrater
-		InvalidTargets: Vehicle, Building, Wall

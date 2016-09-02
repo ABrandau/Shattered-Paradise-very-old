@@ -200,7 +200,7 @@ VEINHOLE:
 		Name: Veinhole Monster
 	-SelfHealing@poisoncloud:
 	SeedsResource:
-		Interval: 10
+		Interval: 5
 		ResourceType: Veins
 		MaxRange: 24
 	RenderSprites:
@@ -232,7 +232,7 @@ VEINHOLE:
 	Targetable:
 		TargetTypes: Building, Ground, Veinhole
 	Health:
-		HP: 20000
+		HP: 40000
 	Armor:
 		Type: Wood
 	Explodes:

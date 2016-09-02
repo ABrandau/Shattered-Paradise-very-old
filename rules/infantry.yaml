@@ -257,6 +257,8 @@ TEMPLAR:
 	Armament@PRIMARY:
 		Weapon: TemplarLasor
 		LocalOffset: 200,50,320
+	Crushable:
+		WarnProbability: 90
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:
@@ -716,7 +718,7 @@ shark:
 		BuildPaletteOrder: 24
 		Prerequisites: ~scrrax
 	Valued:
-		Cost: 200
+		Cost: 250
 	Tooltip:
 		Name: Razorshark
 		Description: Anti-infantry creature, fast and deadly\nInstakills non-armored infantry.\n\n  Strong vs Light Infantry.\n  Weak vs Everything else.
@@ -1282,7 +1284,7 @@ REAPERCAB:
 	Inherits@2: ^IncompleteSelfHeal
 	Inherits@3: ^BasicStealthDetection
 	Valued:
-		Cost: 1200
+		Cost: 1300
 	Tooltip:
 		Name: Cyborg Reaper
 		Description: Cyborg construct, equipped with multi missiles\nand web launchers that can ensrane infantry.\nDetects cloaked units.\n\n Strong vs Vehicles, Aircraft\n Weak vs Infantry.
@@ -1337,7 +1339,7 @@ GLAD:
 		Voice: Move
 	Tooltip:
 		Name: Gladiator
-		Description: Advanced cyborg construct, extremely resilient\nand capable of piercing enemy armor.\n\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft.
+		Description: Advanced cyborg construct, extremely resilient\nand capable of piercing enemy armor.\n\n  Strong vs Vehicles.\n  Weak vs Infantry, Aircraft.
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 14

@@ -2,25 +2,39 @@
 
 [2016 - 09 - 01]
 General Changes:
+	Berserkers now roam the land.
+	Changed the set of explosions to a new set provided by ApolloTD
+	Corrected a bug that made gas clouds heal themselves.
 	Fixed veinhole health.
+	Fixed a bug that made clouds heal eachother.
 	Tiberium values reduced to by 1/4.
 	Structures can only be placed now around the influence radious of a conyard.
 GDI Changes:
 	Drop pods cooldown: 3 minutes -> 4 minutes.
 Mutant Changes:
 	Ravager: Damage: 60 -> 40.
+	Falcon: Hp: 150 -> 130, Speed: 180 -> 150, spawns less clouds.
+	Flak Station: Cost: 350 -> 300.
 	Veinhole Summon cooldown: 5 minutes -> 4 minutes.
 CABAL Changes:
 	Cyborg: hp: 250 -> 350, removed damage cooldown from it's self heal capabilities.
+	Reaper: cost: 1200 -> 1300, rocket damage: 60 -> 45.
 	Fixed glitch tat made Artisan turrets stop working while on low power.
 	Devourer: Hp: 350 -> 450, can now crush infantry, spread: 256 -> 210.
-	Wasp: Fixed bug that made it ignore armors when damaging units.
-	Blaster Turret: Damage per volley: 25 -> 35.
+	Wasp: Fixed bug that made it ignore armors when damaging units. Damage: 60 -> 45.
+	Blaster Turret: Damage per volley: 25 -> 30, Burst: 8 -> 6.
 	Iron Savior: Damage per volley: 150 -> 120, Cooldown: 3 minutes -> 4 minutes.
 Nod Changes:
+	Increased Nuke damage.
+	NOD Sam: Attack Speed: 100 -> 75.
 	Fixed Toxin drone being undetectable, now it makes nearby units uncontrollable every 6 seconds, and the effect last 3 seconds.
 	Toxin Missile flight delay: 8 seconds -> 4 seconds, units attacked by it will remain uncontrollable for 8 seconds.
+	Templar: damage: 5 -> 4.
+	Hand of Kane: Range: 8 -> 9.
+	Stealh Tank: Anti Air damage: 10 -> 7 (fires 4 rockets), turn speed: 7 -> 9
+	Banshee: Speed: 175 -> 180.
 Scrin Changes:
+	Razorshark: cost: 200 -> 250.
 	Drache: Fixed targetting bug possibly.
 
 [2016 - 08 - 31]

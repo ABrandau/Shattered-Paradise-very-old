@@ -13,6 +13,7 @@ SharkJump:
 
 LegioNeedler:
 	Inherits: ^RocketWarhead
+	Inherits@2: ^Scrin_Pulse
 	ReloadDelay: 100
 	Range: 5c0
 	Report: photon1.wav
@@ -30,13 +31,7 @@ LegioNeedler:
 		Damage: 3500
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: scrinpulse3
-		ImpactSound: expnew12.aud
-	Warhead@5Smu: LeaveSmudge
-		SmudgeType: SmallCrater
-		InvalidTargets: Vehicle, Building, Wall
-		
+
 ColossiTesla:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 80
@@ -223,6 +218,7 @@ ScrMbtCannon:
 
 Glyder2Cannon:
 	Inherits: ^FullDamage
+	Inherits@2: ^Scrin_Pulse	
 	ReloadDelay: 100
 	Range: 6c0
 	Burst: 4
@@ -239,21 +235,9 @@ Glyder2Cannon:
 		Damage: 2000
 		ValidTargets: Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: scrinpulse3
-		ImpactSound: expnew12.aud
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
-	Warhead@4Smu: LeaveSmudge
-		SmudgeType: SmallCrater
-		InvalidTargets: Vehicle, Building, Wall
 
 TripodLaser:
-	Inherits: ^MeleeWarhead
+	Inherits: ^ArtilleryWarhead
 	ReloadDelay: 80
 	Range: 6c0
 	Report: scrin5b.aud
@@ -275,6 +259,7 @@ TripodLaser:
 
 TripodProton:
 	Inherits: ^RifleWarhead
+	Inherits@2: ^Small_Bang
 	ReloadDelay: 50
 	Range: 1c0
 	Report: scrin5b.aud
@@ -291,21 +276,13 @@ TripodProton:
 		Damage: 1400
 		ValidTargets: Ground
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: small_bang
-		ImpactSound: expnew12.aud
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
 
 #################################################
 # Aircraft
 #################################################
 StormRiderBlast:
 	Inherits: ^RifleWarhead
+	Inherits@2: ^Scrin_Explo
 	ReloadDelay: 100
 	Range: 6c512
 	Report: laserpistol.wav
@@ -325,14 +302,10 @@ StormRiderBlast:
 		Damage: 6000
 		ValidTargets: Ground
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: scrinexplo1
-		ExplosionPalette: apolbluealpha
-		ImpactSound: expnew13.aud
-		InvalidImpactTypes: Water
 
 StormRiderBlastAA:
 	Inherits: ^FullDamage
+	Inherits@2: ^Scrin_Explo
 	ReloadDelay: 75
 	Report: laserpistol.wav
 	Range: 6c512
@@ -352,14 +325,10 @@ StormRiderBlastAA:
 		Damage: 2500
 		ValidTargets: Air
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: scrinexplo1
-		ExplosionPalette: apolbluealpha
-		ImpactSound: expnew13.aud
-		InvalidImpactTypes: Water
 
 Glyder1Cannon:
 	Inherits: ^APWarhead
+	Inherits@2: ^Scrin_Pulse
 	ReloadDelay: 100
 	Range: 6c0
 	Burst: 5
@@ -376,21 +345,10 @@ Glyder1Cannon:
 		Damage: 2500
 		ValidTargets: Ground
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: scrinpulse3
-		ImpactSound: expnew12.aud
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
-	Warhead@4Smu: LeaveSmudge
-		SmudgeType: SmallCrater
-		InvalidTargets: Vehicle, Building, Wall
 
 BattleshipCannon:
 	Inherits: ^GrenadeWarhead
+	Inherits@2: ^Scrin_Explo
 	ReloadDelay: 45
 	Range: 5c768
 	Report: battleshipgun1.wav
@@ -411,19 +369,7 @@ BattleshipCannon:
 		Damage: 2500
 		ValidTargets: Ground, Infantry, Vehicle, Air, water
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: scrinexplo1
-		ExplosionPalette: apolbluealpha
-		ImpactSound: expnew14.aud
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
-	Warhead@4Smu: LeaveSmudge
-		SmudgeType: MediumCrater
-		InvalidTargets: Vehicle, Building, Wall
+
 
 BattleshipRocketDummy:
 	ReloadDelay: 45
@@ -448,6 +394,7 @@ BattleshipRocketDummy:
 
 BattleshipRocket:
 	Inherits: ^RocketWarhead
+	Inherits@2: ^Scrin_Explo
 	ReloadDelay: 45
 	Range: 5c768
 	Report: battleshipgun1.wav
@@ -467,22 +414,9 @@ BattleshipRocket:
 		Damage: 4000
 		ValidTargets: Ground, Infantry, Vehicle, Air, water
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: scrinexplo1
-		ExplosionPalette: apolbluealpha
-		ImpactSound: expnew14.aud
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
-	Warhead@4Smu: LeaveSmudge
-		SmudgeType: MediumCrater
-		InvalidTargets: Vehicle, Building, Wall
 		
 DestroyerCannon:
-	Inherits: ArtilleryWarhead
+	Inherits: ^ArtilleryWarhead
 	ReloadDelay: 150
 	Range: 14c0
 	MinRange: 4c0
@@ -521,7 +455,7 @@ DestroyerCannonOP:
 		Range: 2
 		
 FighterSpawn:
-	Inherits: ArtilleryWarhead
+	Inherits: ^ArtilleryWarhead
 	ReloadDelay: 100
 	Range: 10c0
 	Report: dropup1.aud
@@ -538,7 +472,8 @@ FighterSpawn:
 		ValidTargets: Infantry, Air, Vehicle, Building, Wall
 
 WyvermBlast:
-	Inherits: ^MeleeWarhead
+	Inherits: ^ArtilleryWarhead
+	Inherits@2: ^Scrin_Explo
 	ReloadDelay: 65
 	Range: 6c512
 	Report: laserpistol.wav
@@ -558,11 +493,6 @@ WyvermBlast:
 		Damage: 6000
 		ValidTargets: Ground, Air
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: scrinexplo1
-		ExplosionPalette: apolbluealpha
-		ImpactSound: expnew13.aud
-		InvalidImpactTypes: Water
 
 Return:
 	ReloadDelay: 25

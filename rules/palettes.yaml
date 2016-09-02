@@ -203,6 +203,11 @@
 		Name: apolra2galpha
 		BasePalette: apolra2g
 		Alpha: 0.8
+	PaletteFromJasc32File@gensmkexploj:
+		Name: gensmkexploj
+		Filename: gensmkexploj.pal
+		Premultiply: false
+		AllowModifiers: false
 	VoxelNormalsPalette@ra2normals:
 		Name: ra2normals
 		Type: RedAlert2

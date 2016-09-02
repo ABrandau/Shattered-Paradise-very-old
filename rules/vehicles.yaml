@@ -348,13 +348,13 @@ TTNK:
 		UpgradeMinEnabledLevel: 1
 	Armament@PRIMARY:
 		Weapon: Tick90mm
-		LocalOffset: 256,-400,600
+		LocalOffset: 350,-0,600
 		MuzzleSequence: muzzle
 	Armament@DEPLOYED:
 		Name: deployed
 		Turret: deployed
 		Weapon: Tick90mm
-		LocalOffset: 256,-400,600
+		LocalOffset: 256,-0,600
 		MuzzleSequence: muzzle
 	WithMuzzleOverlay:
 	RevealsShroud:
@@ -586,7 +586,7 @@ STNK:
 		Prerequisites: ~naweap, natech
 		Queue: Vehicle
 	Mobile:
-		TurnSpeed: 7
+		TurnSpeed: 9
 		Speed: 100
 		Crushes: wall, crate, infantry
 	Health:

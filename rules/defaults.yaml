@@ -99,6 +99,7 @@
 #GENERIC POISON EFFECT
 	SelfHealing@poisoncloud:
 		PercentageStep: -3
+		Step: 0
 		Delay: 25
 		UpgradeTypes: Poison
 		HealIfBelow: 200
@@ -357,7 +358,8 @@
 		DestroyedSounds: crmble2.aud
 	WithSpriteBody:
 	WithBuildingExplosion:
-		Sequences: building, large_bang, large_brnl, verylarge_clsn, large_tumu
+		Sequences:  jtwlt100, jtwlt100b, jtwlt070, jtwlt070b, jstumu42, jstumu42b ,jstumu60, jstumu60b, jbrrlexp1, jsbang34, jsbang34b, jsbang48, jsbang48b # building, large_bang, large_brnl, verylarge_clsn, large_tumu,
+		Palette: gensmkexploj
 	EngineerRepairable:
 	SelfHealing@poisoncloud:
 		PercentageStep: -1
@@ -763,6 +765,7 @@
 			TiberiumDeath: 1, 2
 			TiberiumDeathStrong: 1, 2
 			EnergyDeath: 1, 2
+	-WithDeathAnimation@body:
 	-WithDeathAnimation@tib:
 	-SpawnActorOnDeath@FLAMEGUY:
 	-SpawnActorOnDeath@FLAMEGUY2:
@@ -780,7 +783,7 @@
 
 ^Cyborg:
 	Inherits@1: ^Infantry
-	Inherits@2: ^EmpOnCyborgs
+	# Inherits@2: ^EmpOnCyborgs
 	Inherits@3:	^IncompleteSelfHeal
 	-SpawnActorOnDeath@conversion:
 	-Crushable:
@@ -883,7 +886,7 @@
 	Armor:
 		Type: Light
 	DamagedByTerrain@veins:
-		Damage: 12
+		Damage: 1000
 		DamageInterval: 12
 		Terrain: Veins
 	UpgradeOnTerrain@VEINS:

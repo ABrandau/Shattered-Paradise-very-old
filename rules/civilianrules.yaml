@@ -526,6 +526,11 @@ BERSERKER:
 		IdleSequences: idle1, idle2, idle3
 	AttackFrontal:
 		Voice: Attack
+	AttackWander:
+		WanderMoveRadius: 1
+		ReduceMoveRadiusDelay: 5
+		MinMoveDelayInTicks: 100
+		MaxMoveDelayInTicks: 200
 
 CIV1:
 	Inherits: ^CivilianInfantry
@@ -2345,6 +2350,11 @@ GALITE:
 		Palette: terraindecoration
 	-WithMakeAnimation:
 	-WithDeathAnimation:
+	-UpgradeOverlay@EMPDISABLE:
+	-DisableOnUpgrade@EMPDISABLE:
+	-TimedUpgradeBar@EMPDISABLE:
+	-WithIdleOverlay@EMPDISABLE:
+	-PowerMultiplier@EMPDISABLE:
 	Health:
 		HP: 60000
 	Armor:

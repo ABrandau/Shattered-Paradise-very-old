@@ -64,6 +64,7 @@ Packages:
 	sp|bits/mixes/temperatfs.mix
 	sp|bits/mixes/ecache01.mix
 	sp|bits/mixes/sounds01.mix
+	sp|bits/neutral/anims/explosions
 	sp|bits/pal
 	sp|bits/gdi/infantry
 	sp|bits/nod/infantry
@@ -134,6 +135,7 @@ Rules:
 
 Weapons:
 	sp|weapons/weapondefaults.yaml
+	sp|weapons/explodefaults.yaml
 	sp|weapons/neutralweapons.yaml
 	sp|weapons/explosions.yaml
 	sp|weapons/largeguns.yaml

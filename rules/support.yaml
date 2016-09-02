@@ -820,7 +820,7 @@ MUFLAK:
 	Inherits@1: ^MutRender
 	Inherits@2: ^TowerStealthDetection
 	Valued:
-		Cost: 350
+		Cost: 300
 	Tooltip:
 		Name: Flak Station
 		Description: Anti-Air base defense. Doesn't require power to operate.\n\n  Strong vs Aircraft\n  Weak vs Ground units

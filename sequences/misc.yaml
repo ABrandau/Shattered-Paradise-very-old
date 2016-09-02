@@ -15,10 +15,43 @@ editor-overlay:
 	paste:
 		Start: 1
 
+resources:
+	Defaults:
+		UseTilesetExtension: true
+		Length: 12
+		ShadowStart: 12
+		Offset: 0, -12
+		ZRamp: 1
+	tib01: tib01
+	tib02: tib02
+	tib03: tib03
+	tib04: tib04
+	tib05: tib05
+	tib06: tib06
+	tib07: tib07
+	tib08: tib08
+	tib09: tib09
+	tib10: tib10
+	tib11: tib11
+	tib12: tib12
+	tib13: tib13
+	tib14: tib14
+	tib15: tib15
+	tib16: tib16
+	tib17: tib17
+	tib18: tib18
+	tib19: tib19
+	tib20: tib20
+	veins: veins
+		Length: 1
+		Start: 52
+		ShadowStart: -1
+		Tick: 180
+
 explosion:
 	Defaults:
 		Length: *
-		ZOffset: 511
+		ZOffset: 4048
 	building: twlt070
 	pulse_explosion: pulsefx2
 		BlendMode: Additive
@@ -29,6 +62,95 @@ explosion:
 	water_piffs: w_piffs
 	piff: piff
 	piffs: piffpiff
+	jaccexp: jaccexp
+	japmuzzle: japmuzzle
+	japmuzzleb: japmuzzleb
+	japocexp: japocexp
+	jbiggunfx: jbiggunfx
+	jbrrlexp1: jbrrlexp1
+	jbrrlexp1b: jbrrlexp1b
+	jbrrlexp2: jbrrlexp2
+	jbrrlexp2b: jbrrlexp2b
+	jcrivexp: jcrivexp
+	jcrivexpb: jcrivexpb
+	jcrivexpc: jcrivexpc
+	jdurasmoke: jdurasmoke
+	jexplolrg: jexplolrg
+	jexplolrgb: jexplolrgb
+	jexplomed: jexplomed
+	jexplomedb: jexplomedb
+	jexplosml: jexplosml
+	jexplosmlb: jexplosmlb
+	jflmtrail: jflmtrail
+	jgcmuzzle: jgcmuzzle
+	jgrpowexp: jgrpowexp
+	jgtpowerxpb: jgtpowerxpb
+	jgunfire: jgunfire
+	jhtrkpuff: jhtrkpuff
+	jlgrysmk1: jlgrysmk1
+	jsbang16: jsbang16
+	jsbang16b: jsbang16b
+	jsbang24: jsbang24
+	jsbang24b: jsbang24b
+	jsbang34: jsbang34
+	jsbang34b: jsbang34b
+	jsbang48: jsbang48
+	jsbang48b: jsbang48b
+	jsbrnl: jsbrnl
+	jsbrnlb: jsbrnlb
+	jsbrnl20: jsbrnl20
+	jsbrnl20b: jsbrnl20b
+	jsbrnl30: jsbrnl30
+	jsbrnl30b: jsbrnl30b
+	jsbrnl40: jsbrnl40
+	jsbrnl40b: jsbrnl40b
+	jsbrnl58: jsbrnl58
+	jsbrnl40: jsbrnl40
+	jsbrnl40b: jsbrnl40b
+	jsbrnl58: jsbrnl58
+	jsbrnl58b: jsbrnl58b
+	jsclsn16: jsclsn16
+	jsclsn16b: jsclsn16b
+	jsclsn22: jsclsn22
+	jsclsn22b: jsclsn22b
+	jsclsn30: jsclsn30
+	jsclsn30b: jsclsn30b
+	jsclsn42: jsclsn42
+	jsclsn42b: jsclsn42b
+	jsclsn58: jsclsn58
+	jsclsn58b: jsclsn58b
+	jsgrysmk1: jsgrysmk1
+	jsmkblast: jsmkblast
+	jsmkpuff: jsmkpuff
+	jsmkpuffb: jsmkpuffb
+	jsmokey: jsmokey
+	jstumu22: jstumu22
+	jstumu22b: jstumu22b
+	jstumu30: jstumu30
+	jstumu30b: jstumu30b
+	jstumu42: jstumu42
+	jstumu42b: jstumu42b
+	jstumu60: jstumu60
+	jstumu60b: jstumu60b
+	jtwlt026: jtwlt026
+	jtwlt026b: jtwlt026b
+	jtwlt036: jtwlt036
+	jtwlt036b: jtwlt036b
+	jtwlt050: jtwlt050
+	jtwlt050b: jtwlt050b
+	jtwlt070: jtwlt070
+	jtwlt070b: jtwlt070b
+	jtwlt100: jtwlt100
+	jtwlt100b: jtwlt100b
+	jvtmuzzle: jvtmuzzle
+	jxgrymed1: jxgrymed1
+	jxgrymed1b: jxgrymed1b
+	jxgrymed2: jxgrymed2
+	jxgrymed2b: jxgrymed2b
+	jxgrysml1: jxgrysml1
+	jxgrysml1b: jxgrysml1b
+	jxgrysml2: jxgrysml2
+	jxgrysml2b: jxgrysml2b
 	small_explosion: explosml
 	medium_explosion: explomed
 	large_explosion: explolrg
@@ -58,6 +180,7 @@ explosion:
 	small_grey_explosion: xgrysml2
 	medium_grey_explosion: xgrymed1
 	large_grey_explosion: xgrymed2
+
 	## SP Explos start here
 	## Misc
 	fire1: fire1
@@ -499,39 +622,6 @@ wake:
 		Length: *
 		Tick: 180
 		ZOffset: -512
-
-resources:
-	Defaults:
-		UseTilesetExtension: true
-		Length: 12
-		ShadowStart: 12
-		Offset: 0, -12
-		ZRamp: 1
-	tib01: tib01
-	tib02: tib02
-	tib03: tib03
-	tib04: tib04
-	tib05: tib05
-	tib06: tib06
-	tib07: tib07
-	tib08: tib08
-	tib09: tib09
-	tib10: tib10
-	tib11: tib11
-	tib12: tib12
-	tib13: tib13
-	tib14: tib14
-	tib15: tib15
-	tib16: tib16
-	tib17: tib17
-	tib18: tib18
-	tib19: tib19
-	tib20: tib20
-	veins: veins
-		Length: 1
-		Start: 52
-		ShadowStart: -1
-		Tick: 180
 
 shroud:
 	Defaults:

@@ -3,6 +3,7 @@
 ########################################################################
 CyborgVulcan:
 	Inherits: ^RifleWarhead
+	Inherits@1:	^Piffs
 	ReloadDelay: 60
 	Burst: 3
 	Range: 5c0
@@ -13,16 +14,11 @@ CyborgVulcan:
 		Spread: 128
 		Damage: 1200
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: piffs
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: water_piffs
-		ExplosionPalette: ra
-		ValidImpactTypes: Water		
+
 
 SentryGun:
 	Inherits: ^FullDamage
+	Inherits@1: ^Mediuml_Clsn
 	ReloadDelay: 60
 	Range: 4c0
 	Report: 120mmf.aud
@@ -35,21 +31,9 @@ SentryGun:
 		Spread: 60
 		Damage: 600
 		DamageTypes: Prone50Percent, TriggerProne, CabalDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: medium_clsn
-		ImpactSound: expnew14.aud
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
-	Warhead@4Smu: LeaveSmudge
-		SmudgeType: SmallCrater
-		InvalidTargets: Vehicle, Building, Wall
-	
+
 ReaperWeb:
-	Inherits: ^GrenadeWarhead
+	Inherits: ^RifleWarhead
 	ReloadDelay: 75
 	Range: 7c0
 	Burst: 1
@@ -66,15 +50,6 @@ ReaperWeb:
 		Damage: 500
 		ValidTargets: Infantry
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: small_clsn
-		ImpactSound: expnew14.aud
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
 	Warhead@emp: GrantUpgrade
 		Range: 1c0
 		Duration: 35
@@ -83,6 +58,7 @@ ReaperWeb:
 	
 ReaperScythe:
 	Inherits: ^RocketWarhead
+	Inherits@2: ^Small_Clsn
 	ReloadDelay: 125
 	Range: 7c0
 	Burst: 4
@@ -113,6 +89,7 @@ ReaperScythe:
 
 ReaperScytheFalling:
 	Inherits: ^RocketWarhead
+	Inherits@1: ^Small_Clsn
 	ReloadDelay: 125
 	Range: 6c0
 	MinRange: 3c0
@@ -129,24 +106,9 @@ ReaperScytheFalling:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 6000
+		Damage: 4500
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: small_clsn
-		ImpactSound: expnew12.aud
-		InvalidImpactTypes: Water, Air, AirHit
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
-	Warhead@4EffAir: CreateEffect
-		Explosions: small_twlt
-		ImpactSound: expnew12.aud
-		ValidImpactTypes: Air, AirHit
-	Warhead@5Smu: LeaveSmudge
-		SmudgeType: SmallCrater
-		InvalidTargets: Vehicle, Building, Wall
 		
 ProcessingHuman:
 	Inherits: ^RifleWarhead
@@ -164,6 +126,7 @@ ProcessingHuman:
 		
 GLAD120mm:
 	Inherits: ^APWarhead
+	Inherits@2: ^Mediuml_Clsn
 	ReloadDelay: 150
 	Range: 5c0
 	Report: tankmediumfire.wav
@@ -173,20 +136,9 @@ GLAD120mm:
 		Spread: 128
 		Damage: 4000
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: large_clsn
-		ImpactSound: expnew14.aud
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
-	Warhead@4Smu: LeaveSmudge
-		SmudgeType: MediumCrater
-		InvalidTargets: Vehicle, Building, Wall
 
 LurkerHit:
-	Inherits: ^MeleeWarhead
+	Inherits: ^ArtilleryWarhead
 	ReloadDelay: 80
 	Range: 7c0
 	Report: lasershotgun.wav
@@ -249,6 +201,7 @@ CyCannon:
 ########################################################################				
 WorkerMinigun:
 	Inherits: ^RifleWarhead
+	Inherits@2: ^Piffs
 	ReloadDelay: 50
 	Range: 4c0
 	Report: infgun3.aud, gostgun1.aud, slvkgun1.aud
@@ -258,16 +211,10 @@ WorkerMinigun:
 		Spread: 128
 		Damage: 500
 		DamageTypes: Prone70Percent, TriggerProne
-	Warhead@2Eff: CreateEffect
-		Explosions: piffs
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: water_piffs
-		ExplosionPalette: ra
-		ValidImpactTypes: Water
 
 Dogzooka:
 	Inherits: ^RocketWarhead
+	Inherits@2: ^Small_Clsn
 	ReloadDelay: 75
 	Range: 6c0
 	MinRange: 0c512
@@ -288,26 +235,12 @@ Dogzooka:
 		Damage: 1000
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: small_clsn
-		ImpactSound: expnew12.aud
-		InvalidImpactTypes: Water, Air, AirHit
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
-	Warhead@4EffAir: CreateEffect
-		Explosions: small_twlt
-		ImpactSound: expnew12.aud
-		ValidImpactTypes: Air, AirHit
-	Warhead@5Smu: LeaveSmudge
-		SmudgeType: SmallCrater
-		InvalidTargets: Vehicle, Building, Wall
 ########################################################################
 # Vehicles
 ########################################################################		
 SeekerBazooka:
 	Inherits: ^RocketWarhead
+	Inherits@2: ^Small_Clsn
 	ReloadDelay: 125
 	Range: 8c0
 	MinRange: 3c0
@@ -328,24 +261,10 @@ SeekerBazooka:
 		Damage: 4000
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: small_clsn
-		ImpactSound: expnew12.aud
-		InvalidImpactTypes: Water, Air, AirHit
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
-	Warhead@4EffAir: CreateEffect
-		Explosions: small_twlt
-		ImpactSound: expnew12.aud
-		ValidImpactTypes: Air, AirHit
-	Warhead@5Smu: LeaveSmudge
-		SmudgeType: SmallCrater
-		InvalidTargets: Vehicle, Building, Wall
 
 CenturionVulcan:
 	Inherits: ^RifleWarhead
+	Inherits@2: ^Piffs
 	ReloadDelay: 35
 	Burst: 2
 	Range: 6c0
@@ -356,17 +275,11 @@ CenturionVulcan:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 2000
-		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: piffs
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: water_piffs
-		ExplosionPalette: ra
-		ValidImpactTypes: Water				
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath		
 		
 TermitaGrinder:
-	Inherits: ^APWarhead
+	Inherits: ^ArtilleryWarhead
+	Inherits@2: ^Small_Clsn
 	ReloadDelay: 30
 	Range: 1c512
 	Report: repair11.aud
@@ -377,15 +290,10 @@ TermitaGrinder:
 		Damage: 3500
 		Versus:
 		DamageTypes: Prone100Percent, TriggerProne, CabalDeathCrate
-	Warhead@2Eff: CreateEffect
-		Explosions: small_clsn
-		ImpactSound: expnew12.aud
-	Warhead@5Smu: LeaveSmudge
-		SmudgeType: SmallCrater
-		InvalidTargets: Vehicle, Building, Wall
 
 DevourerShell:
-	Inherits: ArtilleryWarhead
+	Inherits: ^ArtilleryWarhead
+	Inherits@2: ^Small_Clsn
 	ReloadDelay: 150
 	Range: 15c0
 	Burst: 2
@@ -410,18 +318,6 @@ DevourerShell:
 			Worker: 25
 		ValidTargets: Ground, Vehicle, Infantry, water
 		DamageTypes: Prone50Percent, TriggerProne, CabalDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: small_clsn
-		ImpactSound: expnew12.aud
-		InvalidImpactTypes: Water, Air, AirHit
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
-	Warhead@5: LeaveSmudge
-		SmudgeType: SmallCrater
-		InvalidTargets: Vehicle, Building, Wall
 
 DevourerShellSpawner:
 	Inherits: DevourerShell
@@ -449,7 +345,7 @@ ecmwave:
 		ValidTargets: Vehicle
 
 PalaLazor:
-	Inherits: ^MeleeWarhead
+	Inherits: ^ArtilleryWarhead
 	ReloadDelay: 90
 	Range: 6c0
 	Report: obelray1.aud
@@ -475,7 +371,7 @@ WaspBullet:
 		Speed: 100c0		
 	Warhead@1Dam: SpreadDamage
 		Spread: 125
-		Damage: 6000
+		Damage: 4500
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 		ValidTargets: Ground, Air
 
@@ -493,49 +389,10 @@ WaspLasor:
 		Damage: 1
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-		
-WaspBazooka:
-	Inherits: ^RocketWarhead
-	ReloadDelay: 80
-	Range: 6c0
-	MinRange: 0c512
-	Report: rketinf1.aud
-	Burst: 2
-	BurstDelay: 15
-	ValidTargets: Ground, Air
-	Projectile: Missile
-		Speed: 250
-		Blockable: false
-		Shadow: true
-		Inaccuracy: 128
-		Image: DRAGON
-		TrailImage: small_smoke_trail
-		RateOfTurn: 16
-		RangeLimit: 15c0
-		Palette: ra
-	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 2000
-		ValidTargets: Ground, Air
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: small_clsn
-		ImpactSound: expnew12.aud
-		InvalidImpactTypes: Water, Air, AirHit
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
-	Warhead@4EffAir: CreateEffect
-		Explosions: small_twlt
-		ImpactSound: expnew12.aud
-		ValidImpactTypes: Air, AirHit
-	Warhead@5Smu: LeaveSmudge
-		SmudgeType: SmallCrater
-		InvalidTargets: Vehicle, Building, Wall
 	
 BasiliskProton:
-	Inherits: ^RifleWarhead
+	Inherits: ^ArtilleryWarhead
+	Inherits@2: ^Small_Bang
 	ReloadDelay: 50
 	Range: 4c0
 	Report: scrin5b.aud
@@ -554,15 +411,6 @@ BasiliskProton:
 		Damage: 2500
 		ValidTargets: Ground
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: small_bang
-		ImpactSound: expnew12.aud
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water	
 
 BasiliskBomb:
 	Inherits: ^RifleWarhead
@@ -609,6 +457,7 @@ BasiliskBomb:
 # Building
 ########################################################################
 SentryTurretGun:
+	Inherits@2: ^Mediuml_Clsn
 	ReloadDelay: 25
 	Range: 5c0
 	Report: 120mmf.aud
@@ -623,21 +472,10 @@ SentryTurretGun:
 		Versus:
 			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: medium_clsn
-		ImpactSound: expnew14.aud
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
-	Warhead@4Smu: LeaveSmudge
-		SmudgeType: SmallCrater
-		InvalidTargets: Vehicle, Building, Wall
 
 CTurretCannon:
 	Inherits: ^APWarhead
+	Inherits@2: ^Mediuml_Clsn
 	ReloadDelay: 20
 	Range: 6c768
 	Report: 120mmf.aud
@@ -653,23 +491,12 @@ CTurretCannon:
 		Spread: 128
 		Damage: 2500
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: medium_clsn
-		ImpactSound: expnew14.aud
-		InvalidImpactTypes: Water
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
-	Warhead@4Smu: LeaveSmudge
-		SmudgeType: MediumCrater
-		InvalidTargets: Vehicle, Building, Wall
 
 BlasterProton:
-	Inherits: ArtilleryWarhead
+	Inherits: ^ArtilleryWarhead
+	Inherits@2: ^Small_Clsn
 	ReloadDelay: 150
-	Burst: 8
+	Burst: 6
 	Range: 10c0
 	Report: hovrmis1.aud
 	ValidTargets: Ground, Vehicle, Infantry, water
@@ -682,22 +509,10 @@ BlasterProton:
 		RangeLimit: 35
 	Warhead@1Dam: SpreadDamage
 		Spread: 225
-		Damage: 3500
+		Damage: 3000
 		ValidTargets: Ground, Vehicle, Infantry, water
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: small_clsn
-		ImpactSound: expnew12.aud
-		InvalidImpactTypes: Water, Air, AirHit
-	Warhead@3EffWater: CreateEffect
-		Explosions: small_watersplash
-		ExplosionPalette: player
-		ImpactSound: ssplash3.aud
-		ValidImpactTypes: Water
-	Warhead@5: LeaveSmudge
-		SmudgeType: SmallCrater
-		InvalidTargets: Vehicle, Building, Wall
 
 AARail:
 	Inherits: ^FullDamage

@@ -128,6 +128,8 @@ GAWEAP:
 		Dimensions: 4,3
 	Selectable:
 		Bounds: 154, 96, -2, -12
+	Armor:
+		Type: Heavy
 	Health:
 		HP: 130000
 	RallyPoint:
@@ -599,6 +601,8 @@ NAWEAP:
 		Sequence: production-lights
 	WithIdleOverlay@BIB:
 		Sequence: bib
+	Armor:
+		Type: Heavy
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
@@ -981,8 +985,8 @@ MUWEAP:
 	WithIdleOverlay@ROOF:
 		Sequence: idle-roof
 	WithProductionDoorOverlay@DOOR:
-	# WithProductionOverlay@REDLIGHTS:
-		# Sequence: production-lights
+	Armor:
+		Type: Heavy
 	WithIdleOverlay@BIB:
 		Sequence: bib
 	Power:
@@ -1161,7 +1165,7 @@ drached:
 	Health:
 		HP: 150000
 	Armor:
-		Type: Wood
+		Type: Heavy
 	RevealsShroud:
 		Range: 5c0
 	Production:
@@ -1350,7 +1354,7 @@ SCRPROC:
 		Name: Scrin Refinery
 		Description: Processes raw Ichor\ninto usable resources.\nIncompatible with human harvesters.
 	Armor:
-		Type: Light
+		Type: Heavy
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 20
@@ -1459,6 +1463,8 @@ SCRAIR:
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
+	Armor:
+		Type: Wood
 	Health:
 		HP: 60000
 	RevealsShroud:
@@ -1728,6 +1734,8 @@ CABWEAP:
 		Bounds: 154, 96, -2, -12
 	Health:
 		HP: 130000
+	Armor:
+		Type: Heavy
 	RallyPoint:
 		Offset: 4,1
 		Palette: mouse

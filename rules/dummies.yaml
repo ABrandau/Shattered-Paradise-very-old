@@ -23,7 +23,6 @@
 		Cost: 900
 	Tooltip:
 		Name: Target
-	SelectionDecorations:
 	RevealsShroud:
 		Range: 3c0
 		Type: CenterPosition 

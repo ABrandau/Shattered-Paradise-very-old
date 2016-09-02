@@ -1,17 +1,16 @@
 MineExplode:
 	Inherits: ^ExploDefaults
+	Inherits@2: ^Large_twlt
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
 		Damage: 15000
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 		InvalidTargets: Mine
-	Warhead@2Eff: CreateEffect
-		Explosions: large_twlt
-		ImpactSound: expnew09.aud
 
 ReactorExplode:
 	Inherits: ^ExploDefaults
+	Inherits@2: ^Large_twlt
 	Warhead@1Dam: SpreadDamage
 		Spread: 3c0
 		Damage: 50000
@@ -26,12 +25,11 @@ ReactorExplode:
 
 CyborgExplode:
 	Inherits: ^ExploDefaults
-	Warhead@1Eff: CreateEffect
-		Explosions: medium_bang
-		ImpactSounds: expnew10.aud
+	Inherits@2: ^Medium_Bang
 
 SmallPlaneExplode:
 	Inherits: ^ExploDefaults
+	Inherits@2: ^Large_twlt
 	Warhead@1Dam: SpreadDamage
 		Spread: 426
 		Damage: 2500
@@ -42,24 +40,32 @@ SmallPlaneExplode:
 			Light: 60
 			Heavy: 25
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: large_twlt
-		ImpactSound: expnew09.aud
 
 DroneExplode:
 	Inherits: ^ExploDefaults
-	Warhead@2Eff: CreateEffect
-		Explosions: large_twlt
-		ImpactSound: expnew09.aud
+	Inherits@2: ^Large_twlt
 	Warhead@op: FireShrapnel
 		Weapon: SmallDebris
 		Amount: 1
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 
+UnitExplodeSmall:
+	Inherits@2: ^Small_Brnl
+	Warhead@1Dam: SpreadDamage
+		Spread: 426
+		Damage: 4000
+		Versus:
+			None: 90
+			Wood: 75
+			Light: 60
+			Heavy: 25
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+
 UnitExplode:
 	Inherits: ^ExploDefaults
 	Warhead@1Dam: SpreadDamage
+	Inherits@2: ^Medium_Brnl
 		Spread: 426
 		Damage: 8000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -69,9 +75,6 @@ UnitExplode:
 			Light: 60
 			Heavy: 25
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: large_twlt
-		ImpactSound: expnew09.aud
 
 BlackHandExplode:
 	Inherits: ^ExploDefaults
@@ -96,6 +99,7 @@ BlackHandExplode:
 
 VeinholeExplosion:
 	Warhead@1Dam: SpreadDamage
+	Inherits@2: ^Large_twlt
 		Spread: 426
 		Damage: 5000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
@@ -105,9 +109,6 @@ VeinholeExplosion:
 			Light: 60
 			Heavy: 25
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: large_twlt
-		ImpactSound: expnew09.aud
 	Warhead@3Veinholekill: DestroyResource
 		Size: 30,0
 
@@ -178,20 +179,6 @@ ScrinUnitExplode4:
         Explosions: scrinexplo3, scrinexplo4, scrinexplo5
         ExplosionPalette: apolbluealpha
         ImpactSound: expnew09.aud
-
-UnitExplodeSmall:
-	Warhead@1Dam: SpreadDamage
-		Spread: 426
-		Damage: 4000
-		Versus:
-			None: 90
-			Wood: 75
-			Light: 60
-			Heavy: 25
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@2Eff: CreateEffect
-		Explosions: medium_brnl
-		ImpactSound: expnew13.aud
 
 TiberiumExplosion:
 	Warhead@1Dam: SpreadDamage

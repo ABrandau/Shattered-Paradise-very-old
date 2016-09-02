@@ -9,7 +9,7 @@ CLOUD1:
 		Name: Gas Cloud
 		Description: yeeeeeeeeeeee
 	-Selectable:
-	SelectionDecorations:
+	-SelectionDecorations:
 	AutoSelectionSize:
 	-UpdatesPlayerStatistics:
 	-ActorLostNotification:
@@ -24,6 +24,7 @@ CLOUD1:
 	-Targetable@GROUND:
 	-Targetable@AIRBORNE:
 	-RevealsShroud:
+	-SelfHealing@poisoncloud
 	-SpawnActorOnDeath@vision:
 	-Voiced:
 	Health:
@@ -442,7 +443,7 @@ SCRIN:
 	Aircraft:
 		MaximumPitch: 90
 		TurnSpeed: 6
-		Speed: 175
+		Speed: 180
 		AirborneUpgrades: airborne
 		MoveIntoShroud: true
 		TakeoffSound: dropup1.aud
@@ -599,13 +600,13 @@ WETP:
 		CruiseAltitude: 3072
 		MaximumPitch: 120
 		TurnSpeed: 6
-		Speed: 180
+		Speed: 150
 		AirborneUpgrades: airborne
 		MoveIntoShroud: true
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 15000
+		HP: 13000
 	Armor:
 		Type: Light
 	Armament:
