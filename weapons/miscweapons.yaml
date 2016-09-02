@@ -131,6 +131,7 @@ VeinholeAttack:
 		Actors: cloud1
 		FallRate: 5000
 		Range: 3
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 
 Veins:
 	ReloadDelay: 12

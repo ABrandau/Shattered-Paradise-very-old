@@ -12,11 +12,11 @@ Scipción		: Got me into 3D modelling.
 Penev, abcdefg30	: Saved the mod from countless bugs.
 Graion Dilach		: Code wizzard, responsible for the code necessary for many features the mod offers.
 FiveAces		: Streaming.
-Lucassss		: Testing.
 SchismNavigator		: Worked on SP for some time.
 4XS			: For his help with concept art.
+Lucassss		: Testing and balancing.
 Murto The Ray		: Testing and Balancing.
-Apollo			: Knowledge and some explosion and palette packs.
+Apollo			: Knowledge about palettes and explosion making.
 
 #Images and Others.
 
@@ -34,7 +34,7 @@ The_Dementor	: cyborg commando cameo, Wrench and Tiberium Icons.
 Gangster	: His template.
 Zoidzilla	: His template.	
 Zero18		: Gargoil vxl,	Quad Cannon vxl, Basilisk vxl,	Leonid tank vxl.	
-ApolloTD	: Gradient Colored Palettes.				
+ApolloTD	: Gradient Colored Palettes, Explosion Packs,				
 Moder.U		: Falcon vxl, Battle Fortress vxl, Beam Cannon vxl.
 Super Joe	: Marine shp, Militant shp.			
 Lin Kuei Ominae	: Tripod shp (Unit and Cameo).

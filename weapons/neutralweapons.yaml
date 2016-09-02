@@ -79,7 +79,7 @@ CrabAcid:
 		Image: acidall32mini #flamebro 
 		Inaccuracy: 384
 		Palette: apolgreenalpha
-	Burst: 4
+	Burst: 3
 	BurstDelay: 5
 	Warhead@1Dam: SpreadDamage
 		Spread: 128

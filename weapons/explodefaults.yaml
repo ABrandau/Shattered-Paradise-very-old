@@ -68,7 +68,7 @@
 
 ^Small_Bang:	#Inherits@2: ^Small_Bang
 	Warhead@2Eff: CreateEffect
-		Explosions: jbang16, jbang16b, jbang24
+		Explosions: jsbang16, jsbang16b, jsbang24
 		ExplosionPalette: gensmkexploj
 		ImpactSound: expnew12.aud
 		InvalidImpactTypes: Water
@@ -87,7 +87,7 @@
 
 ^Medium_Bang:	#Inherits@2: ^Medium_Bang
 	Warhead@1Eff: CreateEffect
-		Explosions: jbang34b, jbang34b, jbang48, jbang48b
+		Explosions: jsbang34b, jsbang34b, jsbang48, jsbang48b
 		ExplosionPalette: gensmkexploj
 		ImpactSounds: expnew10.aud
 	Warhead@4EffAir: CreateEffect
@@ -160,7 +160,7 @@
 
 ^Large_twlt:	#Inherits@2: ^Large_twlt
 	Warhead@2Eff: CreateEffect
-		Explosions: jtwl70, jtwl70b, jtwl100, jtwl100b
+		Explosions: jtwlt070, jtwlt070b, jtwlt100, jtwlt100b
 		ExplosionPalette: gensmkexploj
 		ImpactSound: expnew09.aud
 	Warhead@3EffWater: CreateEffect

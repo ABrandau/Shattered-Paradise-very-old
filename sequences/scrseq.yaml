@@ -476,6 +476,14 @@ tripod:
 		Facings: -8
 		ShadowStart: 527
 		Tick: 100
+	die1:
+		Length: 51
+		Start: 240
+		ShadowStart: 567
+	die2:
+		Start: 291
+		Length: 36
+		ShadowStart: 618
 	icon: tripodicon	
 ##########################################################
 # Aircraft

@@ -726,6 +726,7 @@
 		DamageTriggers: TriggerProne
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
+		AttackSequence: shoot
 	WithDeathAnimation:
 		CrushedSequence: die-crushed
 		CrushedSequencePalette: player
@@ -1432,10 +1433,10 @@
 		QuantizedFacings: 1
 
 ^Railway:
+	Inherits: ^TerrainOverlay
 	EditorOnlyTooltip:
 		Name: Railway
-	Inherits: ^TerrainOverlay
-	RenderSprites:
+	AutoSelectionSize:
 
 ^Tunnel:
 	Inherits: ^TerrainOverlay

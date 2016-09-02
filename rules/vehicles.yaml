@@ -1215,6 +1215,20 @@ TRIPOD:
 	AttackFrontal:
 		Voice: Attack
 	AutoTarget:
+	WithDeathAnimation@die:
+		DeathSequencePalette: player
+		DeathPaletteIsPlayerPalette: True
+		DeathTypes: 1, 2
+			BulletDeath: 1, 2
+			CabalDeath: 1, 2
+			CabalDeathCrate: 1, 2
+			BlackHandRfle: 1, 2
+			HeadshotDeath: 1, 2
+			SmallExplosionDeath: 1, 2
+			TiberiumDeath: 1, 2
+			TiberiumDeathStrong: 1, 2
+			EnergyDeath: 1, 2
+			ExplosionDeath: 1, 2
 	Armament:
 		Weapon: TripodLaser
 		LocalOffset: 100,225,2400

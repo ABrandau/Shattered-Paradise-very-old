@@ -1005,44 +1005,6 @@ MUWARD:
 		CloakTypes: cloakgenerator
 		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
 
-MUMINE:
-	Inherits: ^DeployedVehicle
-	Valued:
-		Cost: 800
-	Tooltip:
-		Name: Mine
-	Selectable:
-		Priority: 1
-	Health:
-		HP: 5000
-	-AttackTurreted:
-	-AutoTarget:
-	-RenderRangeCircle:
-	-Voiced:
-	Armor:
-		Type: Heavy
-	RevealsShroud:
-		Range: 3c0
-	Targetable:
-		TargetTypes: Ground, Repair, DetonateAttack, MindControlInmune, Mine
-	BodyOrientation:
-		QuantizedFacings: 32
-	Cloak@cloakgenerator:
-		UpgradeTypes:
-		CloakSound:
-		InitialDelay: 50
-		CloakDelay: 50
-		UncloakSound:
-		Palette: cloakmut
-		IsPlayerPalette: true
-		CloakTypes: cloakgenerator
-	Mine:
-		CrushClasses: crate
-		DetonateClasses: crate
-		AvoidFriendly: true
-	Explodes:
-		Weapon: MineExplode
-
 MUVENTI:
 	Inherits: ^Building
 	Inherits@1: ^MutRender

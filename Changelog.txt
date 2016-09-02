@@ -2,6 +2,8 @@
 
 [2016 - 09 - 01]
 General Changes:
+	Train tracks can now be seen in some maps.
+	Crab: Burst: 4 -> 3.
 	Berserkers now roam the land.
 	Changed the set of explosions to a new set provided by ApolloTD
 	Corrected a bug that made gas clouds heal themselves.

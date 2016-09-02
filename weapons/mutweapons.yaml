@@ -255,7 +255,7 @@ LeonidCannon:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 4000
-		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 		
 QuadFire:
 	Inherits: ^RifleWarhead

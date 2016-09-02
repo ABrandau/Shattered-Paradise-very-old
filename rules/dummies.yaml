@@ -124,6 +124,8 @@ IONBEAMMINI:
 		AltitudeVelocity: 400
 		Speed: 30
 		MoveIntoShroud: true
+	Tooltip:
+		Name: Ion Beam
 	Health:
 		HP: 150
 	SelfHealing:
@@ -303,6 +305,8 @@ NANOMACHINEBURSTDUMMY:
 		Step: -1
 		Delay: 25
 		HealIfBelow: 200
+	Tooltip:
+		Name: Nanomachine Swarm
 	RenderSprites:
 		Image: nanomachineswarmdummy
 		Palette: apolgreyalpha

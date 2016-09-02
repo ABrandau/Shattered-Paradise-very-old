@@ -232,7 +232,7 @@ VEINHOLE:
 	Targetable:
 		TargetTypes: Building, Ground, Veinhole
 	Health:
-		HP: 40000
+		HP: 200000
 	Armor:
 		Type: Wood
 	Explodes:
