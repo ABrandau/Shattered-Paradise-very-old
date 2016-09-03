@@ -47,6 +47,7 @@ Nod Changes:
 	Stealh Tank: Anti Air damage: 10 -> 7 (fires 4 rockets), turn speed: 7 -> 9
 	Banshee: Speed: 175 -> 180.
 Scrin Changes:
+	Scrin kills now generate essence that can be grabbed by other scrin units, healing them.
 	Razorshark: cost: 200 -> 250, same change as beasts about zombie spawn.
 	Tripod: HP: 450 -> 400, Warhead: Rifle, now display death animations when destroyed.
 	Drache: Fixed targetting bug possibly.

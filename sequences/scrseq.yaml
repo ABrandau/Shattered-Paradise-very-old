@@ -1177,4 +1177,24 @@ scrsw1:
 		BlendMode: Additive
 	icon: scrsw1icon
 		Offset: 0, 0
-		UseTilesetCode: false	
+		UseTilesetCode: false
+
+scrinessencesmall:
+	Defaults: essence
+		# Offset: -6, -30
+		UseTilesetCode: False
+	idle:
+		Start: 21
+		Length: 16
+	make:
+		Length: 21
+		SkipMakeAnimations: False
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: scrsw1icon
+		Offset: 0, 0
+		UseTilesetCode: false		

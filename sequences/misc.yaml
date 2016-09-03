@@ -1023,6 +1023,12 @@ blueballminitrail:
 		Length: *
 		ZOffset: 1023
 
+essencetrail:
+	idle:
+		Facings: 1
+		Length: *
+		ZOffset: 1023
+
 projwyverm:
 	idle:
 		Facings: -32

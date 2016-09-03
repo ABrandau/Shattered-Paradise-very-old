@@ -7,6 +7,8 @@ Give Scrin a shield or sth.
 
 tiberium tornadoes.
 Make conyards, refineries and warfactories wood but buff them somehow.
+Have tib trees spawn tib explosions on random cells around it
+Alien layer that spawns from structures
 
 Balance
 improve scrin battleship explosions

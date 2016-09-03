@@ -187,7 +187,7 @@ ALTNODE1:
         UpgradeTypes: deployed
         UpgradeMaxEnabledLevel: 0
     Armament@killsself:
-        Weapon: MilitantSuicide
+        Weapon: MilitantExplode
         UpgradeTypes: deployed
         UpgradeMinEnabledLevel: 1
         UpgradeMaxAcceptedLevel: 1
@@ -721,6 +721,8 @@ shark:
 	-SpawnActorOnDeath@berserk:
 		Probability: 40
 	-SpawnActorOnDeath@berserk2:
+	-Targetable@Essence:
+	-SelfHealing@Scrin:
 	RevealsShroud:
 		Range: 5c0
 	Armament:

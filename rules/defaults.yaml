@@ -115,7 +115,13 @@
 		Actor: fireactor
 		Probability: 100
 		OwnerType: Killer
+		RequiresLobbyCreeps: false
 		DeathType: MilitantFireDeath
+	SpawnActorOnDeath@ScrinEssence:
+		Actor: scrinessencesmall
+		Probability: 100
+		OwnerType: Killer
+		DeathType: ScrinEssenceKill
 		RequiresLobbyCreeps: false
 
 #VENTILATOR BUFF AND DEBUFF
@@ -779,6 +785,7 @@
 
 ^ScrinSoldier:
 	Inherits: ^Soldier
+	Inherits@1: ^ScrinReaper
 	Inherits@2: ^ScrinRender
 	Voiced:
 		VoiceSet: Limpet
@@ -986,6 +993,8 @@
 		InternalOwner: Creeps
 		DeathType: TiberiumDeathStrong
 		RequiresLobbyCreeps: true
+	SpawnActorOnDeath@ScrinEssence:
+		Actor: SCRINESSENCEBIG
 	Voiced:
 		VoiceSet: Vehicle
 	Targetable:
@@ -1090,6 +1099,7 @@
 		EmptyWeapon: UnitExplode
 
 ^ScrinVehicle:
+	Inherits@1: ^ScrinReaper
 	Inherits@2: ^ScrinRender
 	Explodes:
 		Weapon: ScrinUnitExplode
@@ -1603,6 +1613,18 @@
 		Probability: 100
 		OwnerType: victim
 		RequiresLobbyCreeps: false
+
+^ScrinReaper:
+	Targetable@Essence:
+		TargetTypes: ScrinUnit
+	SelfHealing@Scrin:
+		PercentageStep: 1
+		Step: 0
+		Delay: 25
+		DamageCooldown: 0
+		HealIfBelow: 105
+		UpgradeTypes: ScrinEssence
+		UpgradeMinEnabledLevel: 1
 
 ^SelfReloads:
 	AmmoPool:

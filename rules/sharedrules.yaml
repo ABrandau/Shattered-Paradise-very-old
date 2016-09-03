@@ -667,7 +667,6 @@ MUMINE:
 	-RenderRangeCircle:
 	-ActorLostNotification:
 	-UpdatesPlayerStatistics:
-	-SpawnActorOnDeath@burns:
 	-Voiced:
 	Armor:
 		Type: Mine

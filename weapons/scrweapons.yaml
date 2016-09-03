@@ -9,7 +9,7 @@ SharkJump:
 		Damage: 2000
 		ValidTargets: Infantry
 		InvalidTargets: Razorshark
-		DamageTypes: BulletDeath
+		DamageTypes: BulletDeath, ScrinUnit
 
 LegioNeedler:
 	Inherits: ^RocketWarhead
@@ -30,7 +30,7 @@ LegioNeedler:
 		Spread: 300
 		Damage: 3500
 		ValidTargets: Ground, Air
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, ScrinEssenceKill
 
 ColossiTesla:
 	Inherits: ^RifleWarhead
@@ -43,7 +43,7 @@ ColossiTesla:
 		Spread: 42
 		Damage: 3500
 		Versus:
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath, ScrinEssenceKill
 	Warhead@op: FireShrapnel
 		Weapon: ColossiTeslaSplash
 		Amount: 2
@@ -72,7 +72,7 @@ ColossiBlast:
 			Light: 2
 			Heavy: 2
 			Concrete: 2 
-		DamageTypes: FireDeath #EnergyDeath
+		DamageTypes: FireDeath, ScrinEssenceKill
 		InvalidTargets: Colossi
 	Warhead@2Eff: CreateEffect
 		Explosions: colossiglow
@@ -94,7 +94,7 @@ ColossiBlastTesla:
 		Palette: apolbluealpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 100
+		Damage: 1
 		Versus:
 		DamageTypes: FireDeath
 	Warhead@op: FireShrapnel
@@ -118,7 +118,7 @@ FloatTesla:
 		Spread: 42
 		Damage: 2800
 		Versus:
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath, ScrinEssenceKill
 	Warhead@op: FireShrapnel
 		Weapon: DummySparks
 		Amount: 2
@@ -173,7 +173,7 @@ ScorpAcid:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 1300
-		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath
+		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath, ScrinEssenceKill
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 		InvalidTargets: Vehicle, Building, Wall
@@ -214,7 +214,7 @@ ScrMbtCannon:
 			Light: 75
 			Heavy: 100
 			Concrete: 60
-		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, ScrinEssenceKill
 
 Glyder2Cannon:
 	Inherits: ^FullDamage
@@ -234,7 +234,7 @@ Glyder2Cannon:
 		Spread: 350
 		Damage: 2000
 		ValidTargets: Air
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, ScrinEssenceKill
 
 TripodLaser:
 	Inherits: ^RifleWarhead
@@ -250,7 +250,7 @@ TripodLaser:
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 4000
-		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath, ScrinEssenceKill
 	Warhead@op: FireShrapnel
 		Weapon: TripodProton
 		Amount: 30
@@ -275,7 +275,7 @@ TripodProton:
 		Spread: 100
 		Damage: 700
 		ValidTargets: Ground
-		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, ScrinEssenceKill
 
 #################################################
 # Aircraft
@@ -301,7 +301,7 @@ StormRiderBlast:
 		Spread: 120
 		Damage: 6000
 		ValidTargets: Ground
-		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
+		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath, ScrinEssenceKill
 
 StormRiderBlastAA:
 	Inherits: ^FullDamage
@@ -368,7 +368,7 @@ BattleshipCannon:
 		Spread: 128
 		Damage: 2500
 		ValidTargets: Ground, Infantry, Vehicle, Air, water
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, ScrinEssenceKill
 
 
 BattleshipRocketDummy:
@@ -413,7 +413,7 @@ BattleshipRocket:
 		Spread: 128
 		Damage: 4000
 		ValidTargets: Ground, Infantry, Vehicle, Air, water
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, ScrinEssenceKill
 		
 DestroyerCannon:
 	Inherits: ^ArtilleryWarhead
@@ -492,7 +492,7 @@ WyvermBlast:
 		Spread: 171
 		Damage: 6000
 		ValidTargets: Ground, Air
-		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
+		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath, ScrinEssenceKill
 
 Return:
 	ReloadDelay: 25
@@ -548,7 +548,7 @@ NeedlerAcid:
 	Warhead@1Dam: SpreadDamage
 		Spread: 80
 		Damage: 1200
-		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath
+		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath, ScrinEssenceKill
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
 		InvalidTargets: Vehicle, Building, Wall
@@ -597,7 +597,7 @@ DronePlane:
 		Spread: 150
 		Damage: 3000
 		ValidTargets: Ground, Air
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, ScrinEssenceKill
 	Warhead@2Eff: CreateEffect
 		Explosions: viscexplo
 		ExplosionPalette: effect
@@ -615,3 +615,48 @@ DronePlane:
 		Actors: VISC_LRG_SCRIN, VISC_LRG_SCRIN
 		FallRate: 5000
 		Range: 3
+
+EssenceSmall:
+	ReloadDelay: 45
+	Range: 10c0
+	ValidTargets: ScrinUnit
+	Projectile: InstantExplode
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 50
+		AffectsParent: True
+		ValidTargets: ScrinEssence
+	Warhead@op: FireShrapnel
+		Weapon: EssenceMissile
+		Amount: 1
+		AimChance: 100
+		ThrowWithoutTarget: False
+		AllowDirectHit: True
+		AimTargetStances: Ally
+		ValidTargets: Ground, ScrinUnit
+
+EssenceBig:
+	Inherits: EssenceSmall
+	Warhead@op: FireShrapnel
+		Amount: 2
+
+EssenceMissile:
+	Inherits: ^ArtilleryWarhead
+	ReloadDelay: 45
+	Range: 10c0
+	Report: battleshipgun1.wav
+	ValidTargets: Ground, Infantry, Vehicle, Air, water, ScrinUnit
+	Projectile: Missile
+		Speed: 100
+		Blockable: False
+		Shadow: true
+		RateOfTurn: 8
+		RangeLimit: 99c0
+		Image: essencetrail
+		# ContrailLength: 30
+		Palette: apolra2ialpha
+		# ContrailColor: 0B124D
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: -3000
+		ValidTargets: ScrinUnit

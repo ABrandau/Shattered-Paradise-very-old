@@ -403,54 +403,20 @@ VEINHOLESPAWNERDUMMY:
 ##########################################################
 # NOD
 ##########################################################
-NODSUICIDEDUMMY:
-    Inherits: ^DUMMYAIRCRAFT
-    Explodes:
-        Weapon: MilitantExplode
-        EmptyWeapon: MilitantExplode
-    Health:
-        HP: 1
-    SelfHealing:
-        Step: -1
-        Delay: 1
-        HealIfBelow: 200
 
 FIREACTOR:
-	Inherits: ^Helicopter
-	Valued:
-		Cost: 900
+	Inherits: ^DUMMYAIRCRAFT
 	Tooltip:
-		Name: Target
-	-Selectable:
-	SelectionDecorations:
-	AutoSelectionSize:
-	-UpdatesPlayerStatistics:
-	-ActorLostNotification:
-	-SpawnActorOnDeath@vision:
-	-AppearsOnRadar:
+		Name: Fire
 	-RevealsShroud:
-	Aircraft:
-		Speed: 0
-	-Targetable@GROUND:
-	-Targetable@AIRBORNE:
-	-Voiced:
 	Health:
 		HP: 30
 	SelfHealing:
 		Step: -10
 		Delay: 25
 		HealIfBelow: 200
-	Armor:
-		Type: Wood
-	-RenderVoxels:
-	-WithVoxelBody:
-	RenderSprites:
-		Image: dot
 	ExplodeWeapon:
 		Weapon: MillitantFire
-	WithFacingSpriteBody:
-	BodyOrientation:
-		QuantizedFacings: 32
 
 BLACKHANDDUMMY:
 	Inherits: ^DUMMYSTRUCTURE
@@ -463,6 +429,40 @@ BLACKHANDDUMMY:
 	Explodes:
 		Weapon: BlackHandExplode
 		EmptyWeapon: BlackHandExplode
+
+################################################################################
+#	Scrin
+################################################################################
+SCRINESSENCESMALL:
+	Inherits: ^DUMMYAIRCRAFT
+	SelfHealing:
+		PercentageStep: -50
+		Step: 0
+		Delay: 9999#250
+		HealIfBelow: 200
+	Targetable@Esscence:
+		TargetTypes: ScrinEssence
+	Selectable:
+	Health:
+		HP: 10
+		NotifyAppliedDamage: False
+	AttackFrontal:
+	Turreted:
+		TurnSpeed: 99
+	AutoTarget:
+	RenderSprites:
+		Image: scrinessencesmall
+		Palette: apolra2ialpha
+		PlayerPalette: apolra2ialpha
+	Armament:
+		Weapon: EssenceSmall
+		TargetStances: Ally
+		# FireDelay: 25
+
+SCRINESSENCEBIG:
+	Inherits: SCRINESSENCESMALL
+	Armament:
+		Weapon: EssenceBig
 
 SCRINENERGYDUMMY:
 	Inherits: ^Tank

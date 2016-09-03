@@ -179,6 +179,9 @@
 	PaletteFromFile@apolra2g:
 		Name: apolra2g
 		Filename: apolra2g.pal
+	PaletteFromFile@apolra2i:
+		Name: apolra2i
+		Filename: apolra2i.pal
 	PaletteFromPaletteWithAlpha@apolgreyalpha:
 		Name: apolgreyalpha
 		BasePalette: apgrey
@@ -203,6 +206,10 @@
 		Name: apolra2galpha
 		BasePalette: apolra2g
 		Alpha: 0.8
+	PaletteFromPaletteWithAlpha@apolra2ialpha:
+		Name: apolra2ialpha
+		BasePalette: apolra2i
+		Alpha: 0.3
 	PaletteFromJasc32File@gensmkexploj:
 		Name: gensmkexploj
 		Filename: gensmkexploj.pal

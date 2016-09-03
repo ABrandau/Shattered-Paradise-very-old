@@ -16,33 +16,18 @@ MilitantRifle:
 	Warhead@3Eff: CreateEffect
 		Explosions: fire3, fire4
 		InvalidImpactTypes: Water, Air, AirHit
-
-MilitantSuicide:
-	Inherits: ^FullDamage
-	ReloadDelay: 40
-	Range: 1c0
-	Projectile: InstantExplode
-	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 1100
-		DamageTypes: Prone70Percent, TriggerProne, MilitantFireDeath
-	Warhead@5Actor: SpawnActor
-		Actors: NODSUICIDEDUMMY
-		FallRate: 5000
-		Range: 3
 		
 MilitantExplode:
 	Inherits: ^FlameWarhead
 	Inherits@1: ^DecentFalloff
 	Inherits@2: ^Large_Explosion
+	ReloadDelay: 40
+	Range: 1c0
+	Projectile: InstantExplode
 	Warhead@1Dam: SpreadDamage
 		Spread: 200
 		Damage: 100000
-		Versus:
-		DamageTypes: Prone50Percent, TriggerProne, MilitantFireDeath
-	Warhead@1Dam: SpreadDamage
-		Spread: 200
-		Damage: 100000
+		AffectsParent: True
 		Versus:
 			None: 600
 			Wood: 50
