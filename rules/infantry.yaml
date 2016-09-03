@@ -497,40 +497,17 @@ E3:
 
 E2:
 	Inherits: ^Mutant
+	Inherits@1:	^Engineer
 	Valued:
 		Cost: 400
 	Tooltip:
 		Name: Mutant Engineer
-		Description: Infiltrates, captures enemy structures\nand also places mines.\n\n  Unarmed
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 20
 		Prerequisites: ~murax
 	Voiced:
 		VoiceSet: Engineer
-	MineImmune:
-	Minelayer:
-		Mine: mumine
-		RearmBuildings:
-	AmmoPool:
-		Ammo: 3
-		PipCount: 3
-		PipType: Ammo
-		SelfReloadDelay: 500
-		SelfReloads: true
-		PipTypeEmpty: AmmoEmpty	
-	Mobile:
-		Speed: 56
-	Health:
-		HP: 8000
-	-AutoTarget:
-	Passenger:
-		PipType: Yellow
-	EngineerRepair:
-	RepairsBridges:
-	Captures:
-		CaptureTypes: building
-	-GainsExperience:
 	RenderSprites:
 	WithInfantryBody:
 		AttackSequence: throw
@@ -540,6 +517,8 @@ E2:
 	SpawnActorOnDeath@tiberium2:
 		Probability: 6
 		DeathType:
+	-AutoTarget:
+	-GainsExperience:
 
 MUTFIEND:
 	Inherits: ^Beast
@@ -735,6 +714,13 @@ shark:
 		OwnerType: Killer
 		DeathType: CabalDeath
 		RequiresLobbyCreeps: true
+	SpawnActorOnDeath@tiberium2:
+		Probability: 20
+	-SpawnActorOnDeath@tiberium3:
+	SpawnActorOnDeath@tiberium4:
+	-SpawnActorOnDeath@berserk:
+		Probability: 40
+	-SpawnActorOnDeath@berserk2:
 	RevealsShroud:
 		Range: 5c0
 	Armament:
@@ -786,22 +772,11 @@ LEGIO:
 
 SHAPESHIFTER:
 	Inherits: ^Soldier
+	Inherits@3:	^Engineer
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Shapeshifter
-		Description: Infiltrates, captures enemy structures\nand also places mines.\n\n  Unarmed.
-	MineImmune:
-	Minelayer:
-		Mine: mumine
-		RearmBuildings:
-	AmmoPool:
-		Ammo: 3
-		PipCount: 3
-		PipType: Ammo
-		SelfReloadDelay: 500
-		SelfReloads: true
-		PipTypeEmpty: AmmoEmpty
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 26
@@ -809,21 +784,18 @@ SHAPESHIFTER:
 	Voiced:
 		VoiceSet: Hijacker
 	-DamagedByTerrain:
+	Selectable:
+		Priority: 6
+	-TakeCover:
+	Minelayer:
+		Mine: SCRMINE
 	Mobile:
 		Speed: 65
-	Health:
-		HP: 8000
-	Passenger:
-		PipType: Yellow
-	EngineerRepair:
-	RepairsBridges:
 	WithInfantryBody:
 		IdleSequences: idle1, idle2, idle3, idle4
-	Captures:
-		CaptureTypes: building
+	RenderSprites:
 	-AutoTarget:
 	-GainsExperience:
-	RenderSprites:
 
 COLOSSI:
 	Inherits: ^ScrinSoldier
@@ -836,7 +808,7 @@ COLOSSI:
 		Cost: 600
 	Tooltip:
 		Name: Colossus
-		Description: Heavy duty alien that can take lots of punishment\nand electrify its sorroundings when ordered to.\n\n  Strong vs Unarmored ground units.\n  Weak vs Vehicles, Aircraft.
+		Description: Heavy duty alien that can take lots of punishment\nand electrify its sorroundings when ordered to.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
 	Targetable@razor:
 		TargetTypes: Razorshark
 	Targetable@Colossi:
@@ -938,7 +910,7 @@ FLOAT:
 	-Crushable:
 	Tooltip:
 		Name: Purifier
-		Description: Recon unit, suited for harassment.\nCan move through water and Cliffs.\n\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft
+		Description: Recon unit, suited for harassment.\nCan move through water and Cliffs.\n\n  Strong vs Infantry, Buildings.\n  Weak vs Vehicles, Aircraft.
 	Health:
 		HP: 18000
 	Mobile:
@@ -1033,6 +1005,7 @@ CABSENTRY:
 		VoiceSet: Limpet
 	-ActorLostNotification:
 	-UpdatesPlayerStatistics:
+	-SpawnActorOnDeath@nanomachineburst:
 	Mobile:
 		Speed: 70
 	SelfHealing:
@@ -1158,22 +1131,9 @@ PDRONE:
 
 SWARMLING:
 	Inherits: ^CabalDroneInfantry
-	Valued:
-		Cost: 550
+	Inherits@1:	^Engineer
 	Tooltip:
 		Name: Swarmling
-		Description: Infiltrates, captures enemy structures\nand also places mines.\n\n  Unarmed
-	MineImmune:
-	Minelayer:
-		Mine: mumine
-		RearmBuildings:
-	AmmoPool:
-		Ammo: 3
-		PipCount: 3
-		PipType: Ammo
-		SelfReloadDelay: 500
-		SelfReloads: true
-		PipTypeEmpty: AmmoEmpty	
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 13
@@ -1187,13 +1147,8 @@ SWARMLING:
 		Speed: 60
 	Health:
 		HP: 8000
-	Passenger:
-		PipType: Yellow
-	EngineerRepair:
-	RepairsBridges:
-	Captures:
-		CaptureTypes: building
 	-AutoTarget:
+	-GainsExperience:
 
 MOTH:
 	Inherits: ^CabalDroneInfantry
@@ -1233,6 +1188,8 @@ MOTH:
 		UpgradeMaxEnabledLevel: 0
 	Health:
 		HP: 15000
+	Selectable:
+		Priority: 7
 	SelectionDecorations:
 		VisualBounds: 22,32,-1,-9
 	DeployToUpgrade:
@@ -1281,7 +1238,7 @@ MOTH:
 
 REAPERCAB:
 	Inherits: ^CabalDroneInfantry
-	Inherits@2: ^IncompleteSelfHeal
+	Inherits@2: ^PermanentSelfHeal
 	Inherits@3: ^BasicStealthDetection
 	Valued:
 		Cost: 1300
@@ -1320,6 +1277,11 @@ REAPERCAB:
 	Armament@secondary:
 		Weapon: ReaperScythe
 		LocalOffset: 0,-200,500, 0,200,500
+	WithDeathAnimation@die:
+		DeathSequence: die1
+		DeathSequencePalette: player
+		DeathPaletteIsPlayerPalette: True
+		UseDeathTypeSuffix: False
 	AttackFrontal:
 		Voice: Attack
 	-UpgradeOverlay@WebDisable:
@@ -1372,7 +1334,7 @@ GLAD:
 
 CYC2:
 	Inherits: ^Cyborg
-	Inherits@2: ^IncompleteSelfHeal
+	Inherits@2: ^PermanentSelfHeal
 	Armor:
 		Type: Light
 	Valued:
@@ -1495,8 +1457,6 @@ PALADIN2:
 
 cybdog:
 	Inherits: ^Cyborg
-	Armor:
-		Type: Light
 	Valued:
 		Cost: 650
 	Tooltip:

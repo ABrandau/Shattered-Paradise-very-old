@@ -106,7 +106,7 @@ ReaperScytheFalling:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 4500
+		Damage: 3500
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 		
@@ -170,7 +170,7 @@ CyCannon:
 		MaximumLaunchSpeed: 192
 		Blockable: false
 		HorizontalRateOfTurn: 2
-		Speed: 250
+		Speed: 350
 		Shadow: true
 		Image: TORPEDO
 	Warhead@1Dam: SpreadDamage

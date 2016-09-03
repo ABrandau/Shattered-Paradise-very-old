@@ -6,6 +6,7 @@ add the EMP tank for GDI.
 Give Scrin a shield or sth.
 
 tiberium tornadoes.
+Make conyards, refineries and warfactories wood but buff them somehow.
 
 Balance
 improve scrin battleship explosions
@@ -13,6 +14,8 @@ marauder bad death anim
 remove selectable from a shit ton of actors.
 make flame tanks teleport
 double check sandbags
+
+logrdg17
 
 todo
 
@@ -28,6 +31,7 @@ Improve the hover tank lazor
 
 grenadier sequence bug
 
+add radiation to nod nuke.
 figure a way to make visceroids combine.
 
 
@@ -42,6 +46,7 @@ enlarge map editor selection screen. editor.yaml/Container@EDITOR_WORLD_ROOT/Con
 add apollo's explos.
 add the remaining FS assets.
 Mothership husks.
+Increase civ building hp
 add floaters.
 
 Graphics

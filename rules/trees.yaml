@@ -206,6 +206,7 @@ VEINHOLE:
 	RenderSprites:
 		Palette: player
 	SelfHealing:
+		PercentageStep: 1
 		HealIfBelow: 200
 		Delay: 25
 	WithSpriteBody:

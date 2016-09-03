@@ -2,25 +2,36 @@
 
 [2016 - 09 - 01]
 General Changes:
+	Civilian structures now have the right armor set for each, tho they still need an hp increase.
+	Fixed glitch that made infantry don't make death sounds when killed by special weapon types.
 	Train tracks can now be seen in some maps.
 	Crab: Burst: 4 -> 3.
 	Berserkers now roam the land.
 	Changed the set of explosions to a new set provided by ApolloTD
 	Corrected a bug that made gas clouds heal themselves.
+	Cloud Poison now eats 4% max hp of infantry per second, 3% for vehicles, and 2% for structures.
 	Fixed veinhole health.
 	Fixed a bug that made clouds heal eachother.
+	Engineers and other deployable units are now filtered when selecting troops.
 	Tiberium values reduced to by 1/4.
-	Structures can only be placed now around the influence radious of a conyard.
+	Structures can only be placed now around the influence radius of a conyard.
+	Added a new tech structure, The tiberium well, it functions as a classic Oil Derrick and it will need a re render in the future :/
+	Mines cannot be set ablaze by NOD tier 1 infantry.
+	Engineers can now hold up to 5 mines, which ream automatically very slow, but will ream fast if the unit is placed near a barracks.
 GDI Changes:
 	Drop pods cooldown: 3 minutes -> 4 minutes.
+	Juggeranut: range: 20 -> 18, bullet speed: 170 -> 150, damage: 50 -> 45, now has a minimun range of 5 cells.
 Mutant Changes:
+	Beasts won't spawn berserkers or zombies when killed by tiberium, but have a higher chance of spawning visceroids to compensate.
+	IFV: Speed: 150 -> 130.
 	Ravager: Damage: 60 -> 40.
 	Falcon: Hp: 150 -> 130, Speed: 180 -> 150, spawns less clouds.
 	Flak Station: Cost: 350 -> 300.
 	Veinhole Summon cooldown: 5 minutes -> 4 minutes.
+	Bird: 2 eggs -> 3 eggs. The maximun amount of crabs that eggs can spawn has been reduced to 3 from 5.
 CABAL Changes:
 	Cyborg: hp: 250 -> 350, removed damage cooldown from it's self heal capabilities.
-	Reaper: cost: 1200 -> 1300, rocket damage: 60 -> 45.
+	Reaper: cost: 1200 -> 1300, rocket damage: 60 -> 35.
 	Fixed glitch tat made Artisan turrets stop working while on low power.
 	Devourer: Hp: 350 -> 450, can now crush infantry, spread: 256 -> 210.
 	Wasp: Fixed bug that made it ignore armors when damaging units. Damage: 60 -> 45.
@@ -36,7 +47,8 @@ Nod Changes:
 	Stealh Tank: Anti Air damage: 10 -> 7 (fires 4 rockets), turn speed: 7 -> 9
 	Banshee: Speed: 175 -> 180.
 Scrin Changes:
-	Razorshark: cost: 200 -> 250.
+	Razorshark: cost: 200 -> 250, same change as beasts about zombie spawn.
+	Tripod: HP: 450 -> 400, Warhead: Rifle, now display death animations when destroyed.
 	Drache: Fixed targetting bug possibly.
 
 [2016 - 08 - 31]

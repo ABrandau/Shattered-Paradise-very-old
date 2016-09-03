@@ -156,11 +156,12 @@ JuggCannon:
 	Inherits@2: ^Small_Clsn
 	Inherits@3: ^Small_Twlt
 	ReloadDelay: 100
-	Range: 20c0
+	Range: 18c0
+	MinRange: 5c0
 	Burst: 3
 	Report: jugger1.aud
 	Projectile: Bullet
-		Speed: 170
+		Speed: 150
 		Image: 120mm
 		Angle: 165
 		Shadow: true
@@ -172,7 +173,7 @@ JuggCannon:
 	MinRange: 5c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 350
-		Damage: 5000
+		Damage: 4500
 		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
 
 SonicZap:

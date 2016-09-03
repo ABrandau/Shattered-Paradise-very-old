@@ -28,45 +28,21 @@ E1:
 
 ENGINEER:
 	Inherits: ^Soldier
-	Valued:
-		Cost: 500
-	Tooltip:
-		Name: Engineer
-		Description: Infiltrates, captures enemy structures\nand also places mines.\n\n  Unarmed
+	Inherits@2: ^NodCloakHealing
+	Inherits@3:	^Engineer
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 8
 		Prerequisites: ~barracks
 	Voiced:
 		VoiceSet: Engineer
-	Mobile:
-		Speed: 56
-	Health:
-		HP: 10000
-	MineImmune:
-	Minelayer:
-		Mine: mumine
-		RearmBuildings:
-	AmmoPool:
-		Ammo: 3
-		PipCount: 3
-		PipType: Ammo
-		SelfReloadDelay: 500
-		SelfReloads: true
-		PipTypeEmpty: AmmoEmpty	
-	Passenger:
-		PipType: Yellow
-	EngineerRepair:
-	RepairsBridges:
-	Captures:
-		CaptureTypes: building
-	-AutoTarget:
-	-GainsExperience:
 	RenderSprites:
 		Image: engineer.gdi
 		FactionImages:
 			gdi: engineer.gdi
 			nod: engineer.nod
+	-AutoTarget:
+	-GainsExperience:
 
 ######################################################
 # Vehicles
@@ -83,7 +59,7 @@ MCV:
 		Name: Mobile Construction Vehicle
 		Description: Deploys into a Construction Yard.\n\n  Unarmed
 	Selectable:
-		Priority: 3
+		Priority: 4
 	Health:
 		HP: 60000
 	Armor:
@@ -689,11 +665,14 @@ MUMINE:
 	-AttackTurreted:
 	-AutoTarget:
 	-RenderRangeCircle:
+	-ActorLostNotification:
+	-UpdatesPlayerStatistics:
+	-SpawnActorOnDeath@burns:
 	-Voiced:
 	Armor:
-		Type: Heavy
+		Type: Mine
 	RevealsShroud:
-		Range: 3c0
+		Range: 1c0
 	Targetable:
 		TargetTypes: Ground, Repair, DetonateAttack, MindControlInmune, Mine
 	BodyOrientation:
@@ -706,7 +685,8 @@ MUMINE:
 		UncloakSound:
 		Palette: cloakmut
 		IsPlayerPalette: true
-		CloakTypes: cloakgenerator
+		CloakTypes: mine
+		UncloakOn: Dock
 	Mine:
 		CrushClasses: crate
 		DetonateClasses: crate

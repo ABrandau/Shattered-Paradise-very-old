@@ -580,6 +580,8 @@ MASTL:
 	WithRangeCircle:
 		Range: 5c0
 		Type: cloakgenerator
+	Selectable:
+		Priority: 6
 	Armor:
 		Type: Light
 	RevealsShroud:
@@ -1121,7 +1123,7 @@ SCRNEEDLER:
 		Cost: 500
 	Tooltip:
 		Name: Ichor Waste Turret
-		Description: Basic defense, cloaks when idle.\nRequires power to operate.\n\n  Strong vs Ground\n  Weak vs Air.
+		Description: Basic defense, cloaks when idle.\nRequires power to operate.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
 	Buildable:
 		Queue: Defense
 		Prerequisites: scrrax, ~structures.scr
@@ -1380,36 +1382,11 @@ SCRSHIELD:
 		OrderName: Nodemp
 
 SCRMINE:
-	Inherits: ^DeployedVehicle
-	Valued:
-		Cost: 800
+	Inherits: ^ScrinRender
+	Inherits@1: MUMINE
 	Tooltip:
 		Name: Scrin Mine
-	Health:
-		HP: 5000
-	-AttackTurreted:
-	-AutoTarget:
-	-RenderRangeCircle:
-	-Voiced:
-	Armor:
-		Type: Wood
-	RevealsShroud:
-		Range: 3c0
-	BodyOrientation:
-		QuantizedFacings: 32
-	Cloak@cloakgenerator:
-		UpgradeTypes:
-		CloakSound:
-		UncloakSound:
-		Palette: playerscrin
-		IsPlayerPalette: true
-		CloakTypes: cloakgenerator
-	Mine:
-		CrushClasses: crate
-		DetonateClasses: crate
-		AvoidFriendly: true
-	Explodes:
-		Weapon: MineExplode
+	-Buildable:
 
 ##############################################
 # CABAL

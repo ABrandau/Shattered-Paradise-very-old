@@ -232,6 +232,7 @@ DroppodElevator5:
 
 droppod1:
 	Inherits: ^BombWarhead
+	Inherits@2: ^Small_Clsn
 	ReloadDelay: 3
 	Range: 3c0
 	ValidTargets: Ground, Vehicle, Building, Infantry, Water
@@ -364,6 +365,7 @@ ClusterMissile:
 
 NukeFlame:
 	Inherits: ^FlameWarhead
+	Inherits@2: ^FlameScorch
 	Range: 5c0
 	MinRange: 3c0
 	Projectile: Bullet
@@ -376,12 +378,6 @@ NukeFlame:
 		Spread: 341
 		Damage: 400
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath
-	Warhead@2Smu: LeaveSmudge
-		SmudgeType: SmallScorch
-		InvalidTargets: Vehicle, Building, Wall
-	Warhead@3Eff: CreateEffect
-		Explosions: fire1, fire2
-		InvalidImpactTypes: Water, Air, AirHit
 
 NukeFlame2:
 	Inherits: NukeFlame
@@ -510,6 +506,7 @@ MeteorElevator3:
 
 MeteorRainNormal:
 	Inherits: ^BombWarhead
+	Inherits@2: ^Small_Twlt
 	ReloadDelay: 8
 	Range: 1c0
 	ValidTargets: Ground, Vehicle, Building, Infantry, Water

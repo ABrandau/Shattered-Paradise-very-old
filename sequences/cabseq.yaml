@@ -290,10 +290,6 @@ reapercab:
 		Start: 104
 		Length: 13
 		ShadowStart: 221
-	die2:
-		Start: 104
-		Length: 13
-		ShadowStart: 221
 	shoot:
 		Facings: -8
 		ShadowStart: 117

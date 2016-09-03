@@ -98,7 +98,7 @@
 		UpgradeMinEnabledLevel: 1
 #GENERIC POISON EFFECT
 	SelfHealing@poisoncloud:
-		PercentageStep: -3
+		PercentageStep: -4
 		Step: 0
 		Delay: 25
 		UpgradeTypes: Poison
@@ -110,7 +110,16 @@
 		Percentage: 20
 		ValidStances: Enemy
 		DeathTypes: CabalDeathCrate
+#wiu wiu wiu wiu wiu wiu
+	SpawnActorOnDeath@burns:
+		Actor: fireactor
+		Probability: 100
+		OwnerType: Killer
+		DeathType: MilitantFireDeath
+		RequiresLobbyCreeps: false
+
 #VENTILATOR BUFF AND DEBUFF
+^TiberianBuffs:
 	ReloadDelayMultiplier@VentilatorBuff:
 		UpgradeTypes: VentilatorBuff
 		Modifier: 90, 85
@@ -169,15 +178,6 @@
 		HealIfBelow: 105
 		UpgradeTypes: NodCloakHealing
 		UpgradeMinEnabledLevel: 1
-
-#RIFLEMAN BURN
-^BurnsGirl: #wiu wiu wiu wiu wiu wiu
-	SpawnActorOnDeath@burns:
-		Actor: fireactor
-		Probability: 100
-		OwnerType: Killer
-		DeathType: MilitantFireDeath
-		RequiresLobbyCreeps: false
 
 ^NodVehicleRepair:
 	SelfHealing@NodVehicleRepair:
@@ -335,7 +335,6 @@
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
 	Inherits@3: ^VisionWhenKilled
-	Inherits@4: ^BurnsGirl
 	WithTextControlGroupDecoration:
 	SelectionDecorations:
 		Palette: pips
@@ -362,7 +361,7 @@
 		Palette: gensmkexploj
 	EngineerRepairable:
 	SelfHealing@poisoncloud:
-		PercentageStep: -1
+		PercentageStep: -2
 	ShakeOnDeath:
 	Guardable:
 		Range: 6c0
@@ -539,8 +538,8 @@
 	Inherits@7: ^VentilatorPoison
 	Inherits@8: ^VentilatorBuff
 	Inherits@9: ^VisionWhenKilled
-	Inherits@10: ^BurnsGirl
 	Inherits@11: ^MindControllable
+	Inherits@12: ^TiberianBuffs
 	DrawLineToTarget:
 	WithTextControlGroupDecoration:
 	Cloak@CLOAKGENERATOR:
@@ -670,19 +669,19 @@
 		RequiresLobbyCreeps: true
 	SpawnActorOnDeath@tiberium3:
 		Actor: zombie
-		Probability: 40
+		Probability: 30
 		OwnerType: InternalName
 		InternalOwner: Creeps
 		DeathType: TiberiumDeathStrong
 		RequiresLobbyCreeps: true
 	SpawnActorOnDeath@tiberium4:
 		Actor: VISC_LRG
-		Probability: 40
+		Probability: 30
 		OwnerType: InternalName
 		InternalOwner: Creeps
 		DeathType: TiberiumDeathStrong
 		RequiresLobbyCreeps: true
-	SpawnActorOnDeath@berserk:
+	SpawnActorOnDeath@berserk2:
 		Actor: berserker
 		Probability: 10
 		OwnerType: InternalName
@@ -705,7 +704,7 @@
 		Voice: Move
 	Guardable:
 	DeathSounds@NORMAL:
-		DeathTypes: BulletDeath, SmallExplosionDeath, ExplosionDeath
+		DeathTypes: BulletDeath, SmallExplosionDeath, ExplosionDeath, CabalDeath, CabalDeathCrate, BlackHandRfle, HeadshotDeath, SmallExplosionDeath, TiberiumDeath, TiberiumDeathStrong
 	DeathSounds@BURNED:
 		Voice: Burned
 		DeathTypes: FireDeath
@@ -745,6 +744,13 @@
 	UpgradeOnDamageState@beastberserk:
 		Upgrades: beastdamaged, berserk
 		ValidDamageStates: Heavy, Critical
+	SpawnActorOnDeath@tiberium2:
+		Probability: 20
+	-SpawnActorOnDeath@tiberium3:
+	SpawnActorOnDeath@tiberium4:
+	-SpawnActorOnDeath@berserk:
+		Probability: 40
+	-SpawnActorOnDeath@berserk2:
 	SpeedMultiplier@beastberserk:
 		UpgradeTypes: beastdamaged
 		Modifier: 120
@@ -840,6 +846,46 @@
 		CrushedSequencePalette: player
 		CrushedPaletteIsPlayerPalette: true
 
+^Engineer:
+	Valued:
+		Cost: 500
+	Tooltip:
+		Name: Engineer
+		Description: Utility unit that can captures enemy structures. Detect\nand place mines, repair allied buildings instantly. Mines\nream automatically but do so faster near a barracks.\n\n  Unarmed
+	Selectable:
+		Priority: 6
+	Mobile:
+		Speed: 60
+	Health:
+		HP: 9500
+	MineImmune:
+	Minelayer:
+		AmmoPoolName: Mine
+		Mine: mumine
+		RearmBuildings:
+	AmmoPool:
+		Ammo: 5
+		Name: Mine
+		PipCount: 5
+		PipType: Ammo
+		SelfReloadDelay: 1000
+		SelfReloads: true
+		PipTypeEmpty: AmmoEmpty
+	ReloadAmmoWhenEnabled:
+		Name: Mine
+		UpgradeTypes: MineReam
+		UpgradeMinEnabledLevel: 1
+		ReloadDelay: 100
+	Passenger:
+		PipType: Yellow
+	EngineerRepair:
+	RepairsBridges:
+	DetectCloaked:
+		CloakTypes: mine
+		Range: 4c0
+	Captures:
+		CaptureTypes: building
+
 ^Vehicle:
 	Inherits@0: ^GainsExperience
 	Inherits@1: ^GenericBuffsDebuffs
@@ -851,7 +897,7 @@
 	Inherits@7:^NodVehicleRepair
 	Inherits@8: ^MindControllable
 	Inherits@9:	^GuardianPlatformSelfHeal
-	Inherits@10: ^BurnsGirl
+	Inherits@11: ^TiberianBuffs
 	DrawLineToTarget:
 	WithTextControlGroupDecoration:
 	Mobile:
@@ -884,10 +930,12 @@
 		Bounds: 40,30
 	SelectionDecorations:
 		Palette: pips
+	SelfHealing@poisoncloud:
+		PercentageStep: -3
 	Armor:
 		Type: Light
 	DamagedByTerrain@veins:
-		Damage: 1000
+		Damage: 1500
 		DamageInterval: 12
 		Terrain: Veins
 	UpgradeOnTerrain@VEINS:
@@ -990,6 +1038,9 @@
 			Tiberium: 70
 			BlueTiberium: 70
 			Veins: 70
+	Explodes:
+		Weapon: UnitExplode
+		EmptyWeapon: UnitExplode
 
 ^HoverVehicle:
 	Inherits: ^Vehicle
@@ -1015,6 +1066,9 @@
 		TerrainTypes: Water
 		StationaryInterval: 18
 		MovingInterval: 6
+	Explodes:
+		Weapon: UnitExplode
+		EmptyWeapon: UnitExplode
 
 ^Walker:
 	Inherits: ^Vehicle
@@ -1031,6 +1085,9 @@
 			Veins: 50
 	Carryable:
 		LocalOffset: 0,0,600
+	Explodes:
+		Weapon: UnitExplode
+		EmptyWeapon: UnitExplode
 
 ^ScrinVehicle:
 	Inherits@2: ^ScrinRender
@@ -1161,6 +1218,8 @@
 	Aircraft:
 		LandWhenIdle: no
 		CruiseAltitude: 2560
+	Selectable:
+		Priority: 8
 	ReturnOnIdle:
 	RevealsShroud:
 		Range: 8c0
@@ -1344,6 +1403,8 @@
 	AutoTarget:
 	RenderRangeCircle:
 	DrawLineToTarget:
+	SelfHealing@poisoncloud:
+		PercentageStep: -3
 	Building:
 		Dimensions: 1,1
 		Footprint: x
@@ -1493,9 +1554,6 @@
 	LineBuildNode:
 		Connections: 0,-1, 0,1
 
-##################################################
-# SP Starts here
-##################################################
 ^ScrinRender:
 	Buildable:
 		IconPalette: chromescrin

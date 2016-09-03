@@ -794,7 +794,7 @@ MUTAPC:
 		Prerequisites: ~muweap
 	Mobile:
 		TurnSpeed: 7
-		Speed: 150
+		Speed: 130
 		Crushes: wall, crate, infantry
 	Health:
 		HP: 19000
@@ -861,10 +861,10 @@ MUTQUAD:
 	Inherits: ^VoxelTank
 	Inherits@1:	^Ra2vxl
 	Valued:
-		Cost: 650
+		Cost: 700
 	Tooltip:
 		Name: Quad Cannon
-		Description: Medium truck equiped with a quad cannon.\n\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles.
+		Description: Heavy armored truck equiped with a quad cannon.\n\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 27
@@ -876,7 +876,7 @@ MUTQUAD:
 	Health:
 		HP: 30000
 	Armor:
-		Type: Light
+		Type: Heavy
 	RenderVoxels:
 		Scale: 1 #0.75
 	WithMuzzleOverlay:
@@ -1160,6 +1160,7 @@ SCRRECHARGER:
 	Tooltip:
 		Name: Ichor Battery
 		Description: Support walker. Charges nearby Scrin units, increasing their damage and healing them.\n\n  Unarmed.
+	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 33
 		Prerequisites: ~scrweap, scrradr
@@ -1207,9 +1208,9 @@ TRIPOD:
 	Mobile:
 		TurnSpeed: 8
 		Speed: 70
-		Crushes: crate
+		Crushes: crate, infantry
 	Health:
-		HP: 45000
+		HP: 40000
 	Carryable:
 		LocalOffset: 0,0,2500
 	AttackFrontal:
@@ -1218,7 +1219,7 @@ TRIPOD:
 	WithDeathAnimation@die:
 		DeathSequencePalette: player
 		DeathPaletteIsPlayerPalette: True
-		DeathTypes: 1, 2
+		DeathTypes:
 			BulletDeath: 1, 2
 			CabalDeath: 1, 2
 			CabalDeathCrate: 1, 2
@@ -1444,6 +1445,8 @@ ECM:
 		Speed: 75
 	Voiced:
 		VoiceSet: Limpet
+	Selectable:
+		Priority: 6
 	Health:
 		HP: 25000
 	Armor:

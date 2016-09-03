@@ -72,6 +72,9 @@ GAPILE:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
+	UpgradeActorsNear:
+		Upgrades: MineReam
+		Range: 4c0
 	Selectable:
 		Bounds: 88, 48, 0, -8
 	Health:
@@ -521,6 +524,9 @@ NAHAND:
 		Description: Produces infantry.
 	ProvidesPrerequisite@engineer:
 		Prerequisite: barracks
+	UpgradeActorsNear:
+		Upgrades: MineReam
+		Range: 4c0
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
@@ -918,6 +924,9 @@ MURAX:
 		Dimensions: 2,2
 	Selectable:
 		Bounds: 88, 48, 0, -8
+	UpgradeActorsNear:
+		Upgrades: MineReam
+		Range: 4c0
 	Health:
 		HP: 80000
 	Armor:
@@ -1308,6 +1317,9 @@ SCRRAX:
 		Dimensions: 2,2
 	Selectable:
 		Bounds: 88, 48, 0, -8
+	UpgradeActorsNear:
+		Upgrades: MineReam
+		Range: 4c0
 	Health:
 		HP: 80000
 	Armor:
@@ -1682,6 +1694,9 @@ CABCLAW:
 		Dimensions: 2,3
 	Selectable:
 		Bounds: 96, 70, 0, -24
+	UpgradeActorsNear:
+		Upgrades: MineReam
+		Range: 4c0
 	Health:
 		HP: 80000
 	Armor:

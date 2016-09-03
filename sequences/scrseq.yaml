@@ -38,11 +38,6 @@ shark:
 		Start: 1198
 		Length: 7
 		ShadowStart: 2401
-	die-crushed:
-		Start: 1176
-		Length: 8
-		ShadowStart: 2380
-		ZOffset: -511
 	shoot: 
 		Tick: 300
 		Facings: 8	

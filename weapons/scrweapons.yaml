@@ -237,7 +237,7 @@ Glyder2Cannon:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 
 TripodLaser:
-	Inherits: ^ArtilleryWarhead
+	Inherits: ^RifleWarhead
 	ReloadDelay: 80
 	Range: 6c0
 	Report: scrin5b.aud
@@ -272,8 +272,8 @@ TripodProton:
 		Image: TORPEDO
 		RangeLimit: 35
 	Warhead@1Dam: SpreadDamage
-		Spread: 90
-		Damage: 1400
+		Spread: 100
+		Damage: 700
 		ValidTargets: Ground
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 

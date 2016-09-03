@@ -19,7 +19,7 @@ CLOUD1:
 		TurnSpeed: 6
 		Repulsable: false
 		AltitudeVelocity: 400#0c43
-		Speed: 30
+		Speed: 20
 		MoveIntoShroud: true
 	-Targetable@GROUND:
 	-Targetable@AIRBORNE:
@@ -28,7 +28,7 @@ CLOUD1:
 	-SpawnActorOnDeath@vision:
 	-Voiced:
 	Health:
-		HP: 8
+		HP: 9
 	SelfHealing:
 		Step: -1
 		Delay: 25
@@ -45,6 +45,7 @@ CLOUD1:
 	-RenderVoxels:
 	-WithVoxelBody:
 	WithDeathAnimation:
+		UseDeathTypeSuffix: False
 		DeathSequencePalette: effectalpha
 		DeathPaletteIsPlayerPalette: false
 	RejectsOrders:
@@ -488,6 +489,7 @@ MUTBIRD:
 		Prerequisites: ~muair, mustable
 	Selectable:
 		Bounds: 30,24
+		Priority: 6
 	Voiced:
 		VoiceSet: Fiend
 	Aircraft:
@@ -507,8 +509,8 @@ MUTBIRD:
 	Minelayer:
 		Mine: eggs
 	AmmoPool:
-		Ammo: 2
-		PipCount: 2
+		Ammo: 3
+		PipCount: 3
 		PipType: Ammo
 		SelfReloadDelay: 300
 		SelfReloads: false
@@ -757,6 +759,7 @@ drache:
 		Description: Deploys into another Construction Yard.\n\n  Unarmed
 	Selectable:
 		Bounds: 144, 60, 0, -6
+		Priority: 4
 	Health:
 		HP: 60000
 	Voiced:
@@ -972,7 +975,7 @@ SCRBATTLESHIP:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 110000
+		HP: 100000
 	Armor:
 		Type: Heavy
 	RevealsShroud:

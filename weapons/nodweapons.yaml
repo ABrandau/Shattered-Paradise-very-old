@@ -185,8 +185,8 @@ BikeExplo:
 	Inherits@2: ^Large_Explosion
 	ValidTargets: Ground, Water, Air
 	Warhead@1Dam_impact: SpreadDamage
-		Spread: 500
-		Damage: 200000
+		Spread: 700
+		Damage: 150000
 		ValidTargets: Ground, Water, Air
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath

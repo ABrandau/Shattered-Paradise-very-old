@@ -208,6 +208,14 @@
 		Filename: gensmkexploj.pal
 		Premultiply: false
 		AllowModifiers: false
+	PaletteFromFile@silo:
+		Name: silo
+		AllowModifiers: false
+		Filename: silo2.pal
+	PlayerColorPalette@playersilo:
+		BasePalette: silo
+		BaseName: playersilo
+		RemapIndex: 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 31
 	VoxelNormalsPalette@ra2normals:
 		Name: ra2normals
 		Type: RedAlert2
@@ -223,7 +231,7 @@
 	PlayerColorPalette@playerscrin:
 		BasePalette: playerscrin
 		BaseName: playerscrin
-		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31	
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
 	PaletteFromPlayerPaletteWithAlpha@cloakscrin:
 		BaseName: cloakscrin
 		BasePalette: playerscrin
@@ -236,7 +244,7 @@
 	PlayerColorPalette@playermut:
 		BasePalette: playermut
 		BaseName: playermut
-		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31			
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
 	PaletteFromPlayerPaletteWithAlpha@cloakmut:
 		BaseName: cloakmut
 		BasePalette: playermut
@@ -249,7 +257,7 @@
 	PlayerColorPalette@playercab:
 		BasePalette: playercab
 		BaseName: playercab
-		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31			
+		RemapIndex: 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31
 	PaletteFromPlayerPaletteWithAlpha@cloakcab:
 		BaseName: cloakcab
 		BasePalette: playercab

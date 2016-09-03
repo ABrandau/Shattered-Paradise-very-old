@@ -4,28 +4,28 @@
 		Damage: 20
 		Versus:
 			None: 125
-			Wood: 50
-			Light: 30
-			Heavy: 20
-			Concrete: 10
+			Wood: 40
+			Light: 25
+			Heavy: 15
+			Concrete: 5
 
 ^RocketWarhead:	#Inherits: ^RocketWarhead
 	Warhead@1Dam: SpreadDamage
 		Versus:
 			None: 10
-			Wood: 80
+			Wood: 75
 			Light: 100
-			Heavy: 125
-			Concrete: 50
+			Heavy: 100
+			Concrete: 60
 
 ^APWarhead:	#Inherits: ^APWarhead , Tanks, Wasps and Gladiators use this.
 	Warhead@1Dam: SpreadDamage
 		Versus:
 			None: 35
 			Wood: 50
-			Light: 125
-			Heavy: 85
-			Concrete: 60
+			Light: 100
+			Heavy: 130
+			Concrete: 45
 
 ^FlameWarhead:	#Inherits: ^FlameWarhead , Specific Anti infantry.
 	Warhead@1Dam: SpreadDamage
