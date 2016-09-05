@@ -76,15 +76,12 @@
 #SCRIN BATTERY
 	FirepowerMultiplier@batteryboost:
 		UpgradeTypes: batteryboost
-		Modifier: 110, 115
+		Modifier: 120, 130
 		BaseLevel: 1
-	SelfHealing@batteryboost:
-		PercentageStep: 1
-		Step: 0
-		Delay: 100
-		HealIfBelow: 101
+	SpeedMultiplier@batteryboost:
 		UpgradeTypes: batteryboost
-		UpgradeMinEnabledLevel: 1
+		Modifier: 120, 130
+		BaseLevel: 1
 # TIMELINE TROLLING
 	SpeedMultiplier@ScrinTimeline:
 		UpgradeTypes: TimeLineTrolling
@@ -110,6 +107,9 @@
 		Percentage: 20
 		ValidStances: Enemy
 		DeathTypes: CabalDeathCrate
+	GivesProximityBounty@BloodDerrick:
+		Percentage: 30
+		# BountyType: BloodDerrick
 #wiu wiu wiu wiu wiu wiu
 	SpawnActorOnDeath@burns:
 		Actor: fireactor
@@ -363,7 +363,7 @@
 		DestroyedSounds: crmble2.aud
 	WithSpriteBody:
 	WithBuildingExplosion:
-		Sequences:  jtwlt100, jtwlt100b, jtwlt070, jtwlt070b, jstumu42, jstumu42b ,jstumu60, jstumu60b, jbrrlexp1, jsbang34, jsbang34b, jsbang48, jsbang48b # building, large_bang, large_brnl, verylarge_clsn, large_tumu,
+		Sequences:  jtwlt100, jtwlt100b, jtwlt070, jtwlt070b, jstumu42, jstumu42b ,jstumu60, jstumu60b, jbrrlexp1, jsbang34, jsbang34b, jsbang48, jsbang48b, jbrrlexp1b
 		Palette: gensmkexploj
 	EngineerRepairable:
 	SelfHealing@poisoncloud:
@@ -443,6 +443,8 @@
 		Weapon: SmokeShrapnel
 		UpgradeTypes: smoketrail
 		UpgradeMinEnabledLevel: 1
+	SpawnActorOnDeath@ScrinEssence:
+		Actor: SCRINESSENCEBIG
 
 ^CivBuilding:
 	Inherits: ^BasicBuilding
@@ -609,11 +611,11 @@
 			TiberiumDeath: evaporate, melt, shatter, cristalize1, cristalize2
 			TiberiumDeathStrong: evaporate, melt, shatter, cristalize1, cristalize2
 	WithDeathAnimation@explosion:
-		DeathSequencePalette: effect
+		DeathSequencePalette: gensmkexploj
 		DeathPaletteIsPlayerPalette: False
 		DeathTypes:
-			SmallExplosionDeath: 4
-			ExplosionDeath: 4
+			SmallExplosionDeath: 4, 5, 7
+			ExplosionDeath: 4, 5, 7
 	WithDeathAnimation@energy:
 		DeathSequencePalette: ra
 		DeathPaletteIsPlayerPalette: False
@@ -994,7 +996,7 @@
 		DeathType: TiberiumDeathStrong
 		RequiresLobbyCreeps: true
 	SpawnActorOnDeath@ScrinEssence:
-		Actor: SCRINESSENCEBIG
+		Actor: SCRINESSENCEMEDIUM
 	Voiced:
 		VoiceSet: Vehicle
 	Targetable:
@@ -1228,8 +1230,6 @@
 	Aircraft:
 		LandWhenIdle: no
 		CruiseAltitude: 2560
-	Selectable:
-		Priority: 8
 	ReturnOnIdle:
 	RevealsShroud:
 		Range: 8c0
@@ -1311,7 +1311,7 @@
 	AppearsOnRadar:
 	WithIdleOverlay:
 		Sequence: light
-		Palette: tibtreepal
+		Palette: gradgreen
 	RadarColorFromTerrain:
 		Terrain: Tiberium
 	FrozenUnderFog:
@@ -1320,6 +1320,8 @@
 		ResourceType: Tiberium
 		Interval: 45
 	WithIdleAnimation:
+	ExplodeWeapon:
+		Weapon: TibBurst
 
 ^Tree:
 	Inherits@1: ^SpriteActor

@@ -151,6 +151,9 @@ explosion:
 	jxgrysml1b: jxgrysml1b
 	jxgrysml2: jxgrysml2
 	jxgrysml2b: jxgrysml2b
+	infdeathexplo1: infdeathexplo1
+	infdeathexplo2: infdeathexplo2
+	infdeathexplo3: infdeathexplo3
 	small_explosion: explosml
 	medium_explosion: explomed
 	large_explosion: explolrg
@@ -1024,6 +1027,12 @@ blueballminitrail:
 		ZOffset: 1023
 
 essencetrail:
+	idle:
+		Facings: 1
+		Length: *
+		ZOffset: 1023
+
+essencetrailmini:
 	idle:
 		Facings: 1
 		Length: *

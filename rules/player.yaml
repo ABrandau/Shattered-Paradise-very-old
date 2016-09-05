@@ -60,6 +60,7 @@ Player:
 	Shroud:
 	FrozenActorLayer:
 	BaseAttackNotifier:
+		NotifyInterval: 20
 		AllyNotification: OurAllyIsUnderAttack
 	HarvesterAttackNotifier:
 	PlayerStatistics:

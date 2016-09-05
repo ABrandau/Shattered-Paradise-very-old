@@ -1,6 +1,6 @@
 ﻿YEAR - MONTH - DAY
 
-[2016 - 09 - 01]
+[2016 - 09 - 04]
 General Changes:
 	Civilian structures now have the right armor set for each, tho they still need an hp increase.
 	Fixed glitch that made infantry don't make death sounds when killed by special weapon types.
@@ -16,6 +16,7 @@ General Changes:
 	Tiberium values reduced to by 1/4.
 	Structures can only be placed now around the influence radius of a conyard.
 	Added a new tech structure, The tiberium well, it functions as a classic Oil Derrick and it will need a re render in the future :/
+	Tiberium trees now seed tiberium randomly.
 	Mines cannot be set ablaze by NOD tier 1 infantry.
 	Engineers can now hold up to 5 mines, which ream automatically very slow, but will ream fast if the unit is placed near a barracks.
 GDI Changes:
@@ -34,7 +35,8 @@ CABAL Changes:
 	Reaper: cost: 1200 -> 1300, rocket damage: 60 -> 35.
 	Fixed glitch tat made Artisan turrets stop working while on low power.
 	Devourer: Hp: 350 -> 450, can now crush infantry, spread: 256 -> 210.
-	Wasp: Fixed bug that made it ignore armors when damaging units. Damage: 60 -> 45.
+	Centurion: damage: 40 -> 34.
+	Wasp: Fixed bug that made it ignore armors when damaging units. Damage: 60 -> 35.
 	Blaster Turret: Damage per volley: 25 -> 30, Burst: 8 -> 6.
 	Iron Savior: Damage per volley: 150 -> 120, Cooldown: 3 minutes -> 4 minutes.
 Nod Changes:
@@ -51,6 +53,7 @@ Scrin Changes:
 	Razorshark: cost: 200 -> 250, same change as beasts about zombie spawn.
 	Tripod: HP: 450 -> 400, Warhead: Rifle, now display death animations when destroyed.
 	Drache: Fixed targetting bug possibly.
+	THe Creation engine Support power now affects a small area instead of the entire map.
 
 [2016 - 08 - 31]
 General Changes:

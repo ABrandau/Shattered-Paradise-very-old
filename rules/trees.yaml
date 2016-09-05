@@ -21,6 +21,8 @@ BIGBLUE:
 	SeedsResource:
 		ResourceType: BlueTiberium
 		Interval: 60
+	ExplodeWeapon:
+		Weapon: BlueTibBurst
 
 TREE01:
 	Inherits: ^Tree

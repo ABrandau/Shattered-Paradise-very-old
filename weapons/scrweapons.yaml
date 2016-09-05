@@ -216,6 +216,14 @@ ScrMbtCannon:
 			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, ScrinEssenceKill
 
+BatteryBuff:
+	Inherits: ^NoDamage
+	ReloadDelay: 75
+	Range: 10c0
+	Projectile: InstantExplode
+	Warhead@1Dam: SpreadDamage
+		Damage: 1
+
 Glyder2Cannon:
 	Inherits: ^FullDamage
 	Inherits@2: ^Scrin_Pulse	
@@ -635,17 +643,22 @@ EssenceSmall:
 		AimTargetStances: Ally
 		ValidTargets: Ground, ScrinUnit
 
-EssenceBig:
+EssenceMedium:
 	Inherits: EssenceSmall
 	Warhead@op: FireShrapnel
 		Amount: 2
 
+EssenceBig:
+	Inherits: EssenceSmall
+	Warhead@op: FireShrapnel
+		Amount: 4
+
 EssenceMissile:
-	Inherits: ^ArtilleryWarhead
+	Inherits: ^FullDamage
 	ReloadDelay: 45
 	Range: 10c0
 	Report: battleshipgun1.wav
-	ValidTargets: Ground, Infantry, Vehicle, Air, water, ScrinUnit
+	ValidTargets: ScrinUnit
 	Projectile: Missile
 		Speed: 100
 		Blockable: False
@@ -653,10 +666,15 @@ EssenceMissile:
 		RateOfTurn: 8
 		RangeLimit: 99c0
 		Image: essencetrail
-		# ContrailLength: 30
+		TrailImage: essencetrailmini
+		TrailPalette: apolra2ialpha
+		TrailInterval: 1
+		Jammable: False
 		Palette: apolra2ialpha
-		# ContrailColor: 0B124D
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: -3000
 		ValidTargets: ScrinUnit
+	Warhead@2Eff: CreateEffect
+		Explosions: tibexp2
+		ExplosionPalette: apolra2ialpha

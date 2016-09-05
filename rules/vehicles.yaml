@@ -158,6 +158,9 @@ HVR:
 	Armament:
 		Weapon: HoverMissile
 		LocalOffset: 100,150,384, 100,-150,384
+	Armament@AA:
+		Weapon: HoverMissileAA
+		LocalOffset: 100,150,384, 100,-150,384
 	Turreted:
 		TurnSpeed: 8
 		Offset: -128,0,85
@@ -309,14 +312,17 @@ BGGY:
 		HP: 20000
 	RevealsShroud:
 		Range: 7c0
-	Armament@PRIMARY:
-		Weapon: BikeMissile
-		LocalOffset: -128,-170,213, -128,170,213
 	Armament:
 		Weapon: BuggyCannon
 		LocalOffset: 0,-43,384, 0,43,384
 		MuzzleSequence: muzzle
 		MuzzleSplitFacings: 8
+	Armament@PRIMARY:
+		Weapon: BikeMissile
+		LocalOffset: -128,-170,213, -128,170,213
+	Armament@AA:
+		Weapon: BikeMissileAA
+		LocalOffset: -128,-170,213, -128,170,213
 	Turreted:
 		Rof: 10
 	AttackTurreted:
@@ -1159,7 +1165,7 @@ SCRRECHARGER:
 		Cost: 1100
 	Tooltip:
 		Name: Ichor Battery
-		Description: Support walker. Charges nearby Scrin units, increasing their damage and healing them.\n\n  Unarmed.
+		Description: Support walker. Charges nearby Scrin units, increasing their damage and speed.\n\n  Unarmed.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 33
@@ -1178,6 +1184,10 @@ SCRRECHARGER:
 		Range: 6c0
 		ValidStances: Ally
 		AffectsParent: true
+	Armament:
+		Weapon: BatteryBuff
+	AttackFrontal:
+	AutoTarget:
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	WithFacingSpriteBody:

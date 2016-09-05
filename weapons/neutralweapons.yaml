@@ -111,7 +111,66 @@ CrabSpawner:
 		Actors: crab
 		FallRate: 5000
 		Range: 3
-		
+
+TibBurst
+	ReloadDelay: 150
+	Projectile: InstantExplode
+	Warhead@op: FireShrapnel
+		Weapon: TibBurstExplo
+		Amount: 1
+		# AimChance: 50
+
+TibBurstExplo:
+	ReloadDelay: 150
+	Range: 7c0
+	Projectile: Bullet
+		Speed: 1c682
+		Inaccuracy: 0c512
+	Warhead@2Res: CreateResource
+		AddsResourceType: Tiberium
+		Size: 1,1
+	Warhead@2Eff: CreateEffect
+		Explosions: tibexp2
+		ExplosionPalette: apolgreenalpha
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+
+BlueTibBurst
+	ReloadDelay: 150
+	Projectile: InstantExplode
+	Warhead@op: FireShrapnel
+		Weapon: BlueTibBurstExplo
+		Amount: 1
+		# AimChance: 50
+
+BlueTibBurstExplo:
+	ReloadDelay: 150
+	Range: 7c0
+	Projectile: Bullet
+		Speed: 1c682
+		Inaccuracy: 0c512
+	Warhead@2Res: CreateResource
+		AddsResourceType: BlueTiberium
+		InitialSpawnDelay: 1500
+		Size: 1,1
+	Warhead@2Eff: CreateEffect
+		Explosions: tibexp2
+		ExplosionPalette: apolbluealpha
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+
+DerrickAnimation:
+	Inherits: ^FullDamage
+	ReloadDelay: 25
+	Range: 9c0
+	ValidTargets: KilledUnit
+	Projectile: Bullet
+		Speed: 100c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 200
+		Damage: 1
+		ValidTargets: KilledUnit
+
 LTrail:
 	ReloadDelay: 60
 	Range: 6c0

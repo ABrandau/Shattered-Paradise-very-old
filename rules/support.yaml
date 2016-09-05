@@ -1266,6 +1266,7 @@ SCREXTRACTOR:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
 	-RenderRangeCircle:
+	-CanPowerDown:
 	Building:
 		Footprint: x
 		Dimensions: 1,1

@@ -433,7 +433,7 @@ EnergyAssimilator:
 	ValidTargets: Ground, Air, Building
 	Warhead@1Dam_impact: SpreadDamage
 		Spread: 250
-		Damage: 5000
+		Damage: 5
 		Falloff: 500, 368, 135, 50, 18, 7, 0
 		ValidTargets: Ground, Air
 		DamageTypes: Prone100Percent, TriggerProne, EnergyDeath
@@ -443,14 +443,14 @@ EnergyAssimilator:
 		ExplosionPalette: scrinenergystuffsalpha
 		ImpactSound: ion1.aud
 	Warhead@energy: GrantUpgrade
-		Range: 999c0
+		Range: 15c0
 		Duration: 400
 		Upgrades: empdisable
 		ValidTargets: Powerplant
 		ValidStances: Enemy, Neutral
 		Delay: 15
 	Warhead@trolling: GrantUpgrade
-		Range: 999c0
+		Range: 15c0
 		Duration: 200
 		Upgrades: TimeLineTrolling
 		ValidTargets: Ground, Air, Infantry, Vehicle, Aircraft

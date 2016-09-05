@@ -274,7 +274,7 @@ CenturionVulcan:
 		Inaccuracy: 0c512
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 2000
+		Damage: 1700
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath		
 		
 TermitaGrinder:
@@ -371,7 +371,7 @@ WaspBullet:
 		Speed: 100c0		
 	Warhead@1Dam: SpreadDamage
 		Spread: 125
-		Damage: 4500
+		Damage: 3500
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 		ValidTargets: Ground, Air
 

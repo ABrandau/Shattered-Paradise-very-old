@@ -451,6 +451,8 @@ FLOATER:
 		Type: Light
 	RevealsShroud:
 		Range: 5c0
+	ExplodeWeapon:
+		Weapon: VeinholeAttack
 	-SpawnActorOnDeath@conversion:
 	-UpgradeOverlay@EMPDISABLE:
 	-DisableOnUpgrade@EMPDISABLE:
@@ -2268,7 +2270,7 @@ WELL:
 	Armor:
 		Type: Heavy
 	RenderSprites:
-		Palette: silo
+		-Palette: silo
 		PlayerPalette: playersilo
 	Capturable:
 	CashTrickler:
@@ -2280,6 +2282,47 @@ WELL:
 	RenderSprites:
 	Explodes:
 		Weapon: TiberiumExplosion
+
+BLOODDERRICK:
+	Inherits: ^CivBuilding
+	Tooltip:
+		Name: Blood Derrick
+	Building:
+		Footprint: xxx xxx xxx
+		Dimensions: 3, 3
+	Selectable:
+		Bounds: 102, 60, 0, 0
+	Armor:
+		Type: Heavy
+	Capturable:
+		CaptureThreshold: 100
+	Health:
+		HP: 500000
+	Explodes:
+		Weapon: TiberiumExplosion
+	RenderSprites:
+		-Palette: playerscrin
+		PlayerPalette: playerscrin
+	Cloak@CLOAKGENERATOR:
+		Palette: cloakscrin
+	WithDeathAnimation:
+		DeathSequencePalette: playerscrin
+		CrushedSequencePalette: playerscrin
+		CrushedPaletteIsPlayerPalette: true
+	SelectionDecorations:
+		VisualBounds: 102, 60, 0, 0
+	AttackOmni:
+	WithAttackAnimation:
+		AttackSequence: move
+	RejectsOrders:
+	Armament:
+		Weapon: DerrickAnimation
+		TargetStances: Ally, Enemy, Neutral
+	AutoTarget:
+	ProximityBounty:
+		Delay: 50 #1500
+		BountyType: BloodDerrick
+		Range: 9c0
 
 GASAND:
 	Inherits: ^Wall

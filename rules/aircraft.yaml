@@ -1033,16 +1033,20 @@ SCRINCOUNCIL:
 		MoveIntoShroud: true
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
-	ProduceActorPower@as:
+	DetonateWeaponPower:
 		Description: Reality destabilization
-		LongDesc: Creates a rift in space and time dirupting the behaviour of all\nthe units on the level, all units will move backwards and fire slower for 8 seconds,\nhostile powerplants will be disabled for 16 seconds, does not affect units\ncreated while in the duration of the effet.
+		LongDesc: Creates a rift in space and time dirupting the behaviour of all\nthe units in the area, all units will move backwards and fire slower for 8 seconds,\nhostile powerplants will be disabled for 16 seconds, does not affect units\ncreated while in the duration of the effet.
 		Icon: mothershipicon
-		Actors: scrinenergydummy
-		Type: HunterSeeker
+		DisplayTimer: True
+		DisplayBeacon: True
 		ChargeTime: 240
-		IconPalette: chromescrin
+		OrderName: destabilization
+		ActivationSequence: idle
+		Weapon: EnergyAssimilator
+	WithSpriteBody:
+		Sequence: dummy
 	Production:
-		Produces: Vehicle, HunterSeeker
+		Produces: Vehicle
 	Exit@1:
 		SpawnOffset: 0,0,-50
 	ProductionQueue:

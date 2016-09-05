@@ -438,11 +438,12 @@ SCRINESSENCESMALL:
 	SelfHealing:
 		PercentageStep: -50
 		Step: 0
-		Delay: 9999#250
+		Delay: 3000
 		HealIfBelow: 200
+	Tooltip:
+		Name: Essence
 	Targetable@Esscence:
 		TargetTypes: ScrinEssence
-	Selectable:
 	Health:
 		HP: 10
 		NotifyAppliedDamage: False
@@ -450,6 +451,7 @@ SCRINESSENCESMALL:
 	Turreted:
 		TurnSpeed: 99
 	AutoTarget:
+	-RevealsShroud:
 	RenderSprites:
 		Image: scrinessencesmall
 		Palette: apolra2ialpha
@@ -457,43 +459,13 @@ SCRINESSENCESMALL:
 	Armament:
 		Weapon: EssenceSmall
 		TargetStances: Ally
-		# FireDelay: 25
+
+SCRINESSENCEMEDIUM:
+	Inherits: SCRINESSENCESMALL
+	Armament:
+		Weapon: EssenceMedium
 
 SCRINESSENCEBIG:
 	Inherits: SCRINESSENCESMALL
 	Armament:
 		Weapon: EssenceBig
-
-SCRINENERGYDUMMY:
-	Inherits: ^Tank
-	-ActorLostNotification:
-	-UpdatesPlayerStatistics:
-	Valued:
-		Cost: 500
-	Tooltip:
-		Name: Wolverine
-		Description: Anti-Personnel Walker.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
-	Mobile:
-		TurnSpeed: 5
-		Speed: 99
-		TerrainSpeeds:
-			Cliff: 80
-			Water: 80
-	Armor:
-		Type: light
-	RenderSprites:
-		Image: blackhanddummy
-	QuantizeFacingsFromSequence:
-		Sequence: stand
-	-Selectable:
-	SelfHealing:
-		Step: -1
-		Delay: 25
-		HealIfBelow: 200
-	Health:
-		HP: 2
-		NotifyAppliedDamage: False
-	Explodes:
-		Weapon: EnergyAssimilator
-		LoadedChance: 100
-	-SpawnActorOnDeath@nanomachineburst:

@@ -1378,7 +1378,7 @@ SCRPROC:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
 	Selectable:
-		Bounds: 134, 96, 0, -12
+		Bounds: 150, 122, -10, -18
 	Health:
 		HP: 120000
 	RevealsShroud:
@@ -1398,7 +1398,7 @@ SCRPROC:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
-		VisualBounds: 134, 122, 0, -18
+		VisualBounds: 150, 122, -10, -18
 	RenderSprites:
 
 SCRWEAP:

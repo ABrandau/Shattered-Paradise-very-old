@@ -16,13 +16,20 @@
 		Length: *
 	muzzle: gunfire
 		Length: *
+	dummy: dot
+		UseTilesetCode: false
+		ZOffset: -9999
 		
 ^InfantryDeathAnims:
 	die3: infdie
 		Length: *
-	die4: s_bang34
+	die4: infdeathexplo1
+		Length: *
+	die5: infdeathexplo2
 		Length: *
 	die6: electro
+		Length: *
+	die7: infdeathexplo3
 		Length: *
 	diebody1: death_a
 		Length: *

@@ -30,7 +30,7 @@
 	Faction@4:
 		Name: Scrin
 		InternalName: scr
-		Description: Scrin\nAerial Faction.\n + Versatile.\n + Infantry are immune to tiberium radiation.\n + Strong air power.\n + Air units slowly repair.\n + High Damage.\n -  Low health\n -  Low weapon range.
+		Description: Scrin\nAerial Faction.\n + Versatile.\n + Infantry are immune to tiberium radiation.\n + Strong air power.\n + Ground units absorv the essence of killed units to heal.\n + Air units slowly repair.\n + High Damage.\n -  Low health.\n -  Low weapon range.\n - High Costs.\n - Most vehicles can't crush infantry.
 	Faction@Random:
 		Name: Random
 		InternalName: Random

@@ -127,7 +127,7 @@ HoverMissile:
 	Burst: 2
 	Range: 6c512
 	Report: hovrmis1.aud
-	ValidTargets: Ground, Air
+	ValidTargets: Ground
 	Projectile: Missile
 		MaximumLaunchSpeed: 213
 		Arm: 2
@@ -142,7 +142,7 @@ HoverMissile:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 3000
-		ValidTargets: Ground, Air
+		ValidTargets: Ground
 		Versus:
 			None: 25
 			Wood: 65
@@ -150,6 +150,13 @@ HoverMissile:
 			Heavy: 100
 			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+
+HoverMissileAA:
+	Inherits: HoverMissile
+	ValidTargets: Air
+	Warhead@1Dam: SpreadDamage
+		Damage: 2000
+		ValidTargets: Air
 
 JuggCannon:
 	Inherits: ^ArtilleryWarhead

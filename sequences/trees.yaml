@@ -4,7 +4,7 @@ tibtre01:
 		Offset: 0, -12
 	idle:
 		ShadowStart: 11
-	light: ulpha
+	light: 512gradgreen
 		UseTilesetExtension: false
 		BlendMode: Additive
 	active:
@@ -19,7 +19,7 @@ tibtre02:
 		Offset: 0, -12
 	idle:
 		ShadowStart: 11
-	light: ulpha
+	light: 512gradgreen
 		UseTilesetExtension: false
 		BlendMode: Additive
 	active:
@@ -34,7 +34,7 @@ tibtre03:
 		Offset: 0, -12
 	idle:
 		ShadowStart: 11
-	light: ulpha
+	light: 512gradgreen
 		UseTilesetExtension: false
 		BlendMode: Additive
 	active:

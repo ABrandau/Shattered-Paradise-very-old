@@ -1070,6 +1070,16 @@ well:
 		UseTilesetCode: false
 	icon: sidebar-gdi|e1icon
 
+bloodderrick:
+	Defaults:
+		Offset: 0, -32
+	idle: derrickidle
+		Length: *
+		UseTilesetCode: false
+	move: derrickmove
+		Length: *
+		UseTilesetCode: false
+
 gakodk:
 	Defaults:
 		UseTilesetCode: true

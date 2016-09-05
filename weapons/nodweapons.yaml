@@ -146,7 +146,7 @@ BikeMissile:
 	BurstDelay: 60
 	Range: 4c0
 	Report: misl1.aud
-	ValidTargets: Ground, Air
+	ValidTargets: Ground
 	Projectile: Missile
 		Arm: 2
 		Blockable: false
@@ -161,8 +161,15 @@ BikeMissile:
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
 		Damage: 4000
-		ValidTargets: Ground, Air
+		ValidTargets: Ground
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+
+BikeMissileAA:
+	Inherits: BikeMissile
+	ValidTargets: Air
+	Warhead@1Dam: SpreadDamage
+		Damage: 2500
+		ValidTargets: Air
 
 BikeExplo:
 	Inherits: ^DecentFalloff
@@ -268,7 +275,7 @@ StealthRocket:
 	Range: 6c0
 	Burst: 5
 	Report: misl1.aud
-	ValidTargets: Ground, Air
+	ValidTargets: Ground
 	Projectile: Missile
 		MaximumLaunchSpeed: 171
 		Arm: 2
@@ -283,32 +290,16 @@ StealthRocket:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 3000
-		ValidTargets: Ground, Air
+		ValidTargets: Ground
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 		
 StealthRocketAA:
-	Inherits@2: ^Small_Clsn
-	ReloadDelay: 150
-	Range: 6c0
+	Inherits: StealthRocket
 	Burst: 4
-	Report: misl1.aud
 	ValidTargets: Air
-	Projectile: Missile
-		MaximumLaunchSpeed: 171
-		Arm: 2
-		Blockable: false
-		Shadow: true
-		Inaccuracy: 0c512
-		Image: DRAGON
-		TrailImage: small_smoke_trail
-		HorizontalRateOfTurn: 8
-		RangeLimit: 15c0
-		Palette: ra
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
 		Damage: 700
 		ValidTargets: Air
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	
 ##################################################
 # Aircraft

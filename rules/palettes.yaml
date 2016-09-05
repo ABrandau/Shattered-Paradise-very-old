@@ -210,6 +210,11 @@
 		Name: apolra2ialpha
 		BasePalette: apolra2i
 		Alpha: 0.3
+	PaletteFromJasc32File@gradgreen:
+		Name: gradgreen
+		Filename: gradgreen.pal
+		Premultiply: true
+		AllowModifiers: false
 	PaletteFromJasc32File@gensmkexploj:
 		Name: gensmkexploj
 		Filename: gensmkexploj.pal
