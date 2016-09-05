@@ -126,9 +126,9 @@ TibBurstExplo:
 	Projectile: Bullet
 		Speed: 1c682
 		Inaccuracy: 0c512
-	Warhead@2Res: CreateResource
-		AddsResourceType: Tiberium
-		Size: 1,1
+	# Warhead@2Res: CreateResource
+		# AddsResourceType: Tiberium
+		# Size: 1,1
 	Warhead@2Eff: CreateEffect
 		Explosions: tibexp2
 		ExplosionPalette: apolgreenalpha
@@ -149,10 +149,10 @@ BlueTibBurstExplo:
 	Projectile: Bullet
 		Speed: 1c682
 		Inaccuracy: 0c512
-	Warhead@2Res: CreateResource
-		AddsResourceType: BlueTiberium
-		InitialSpawnDelay: 1500
-		Size: 1,1
+	# Warhead@2Res: CreateResource
+		# AddsResourceType: BlueTiberium
+		# InitialSpawnDelay: 1500
+		# Size: 1,1
 	Warhead@2Eff: CreateEffect
 		Explosions: tibexp2
 		ExplosionPalette: apolbluealpha

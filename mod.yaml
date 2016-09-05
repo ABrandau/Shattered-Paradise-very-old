@@ -132,6 +132,7 @@ Rules:
 	sp|rules/civilianrules.yaml
 	sp|rules/sharedrules.yaml
 	sp|rules/husks.yaml
+	sp|rules/bridges.yaml
 
 Weapons:
 	sp|weapons/weapondefaults.yaml
@@ -161,6 +162,7 @@ Sequences:
 	sp|sequences/mutseq.yaml
 	sp|sequences/cabseq.yaml
 	sp|sequences/scrseq.yaml
+	sp|sequences/bridges.yaml
 
 VoxelSequences:
 	sp|sequences/voxels.yaml

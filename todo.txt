@@ -16,8 +16,7 @@ marauder bad death anim
 remove selectable from a shit ton of actors.
 make flame tanks teleport
 double check sandbags
-buggy AA too strong
-rework scrin support power.
+Remove blocks projectiles from some defences.
 
 todo
 
@@ -53,6 +52,8 @@ add floaters.
 Improve mammoth mk, both graphically and gameplay wise.
 Create descriptive categories for the skirmish maps.
 Remove health bars on some props.
+remake crates and add a water variation
+remove hv openra, pitt or plateau, nasapan muja, scars of war, town of kaskajarosk, dustland, eva creek.
 
 Graphics
 cnc 3 big tiberium glaciers
