@@ -47,12 +47,12 @@ JUMPJET:
 		Type: none
 	Armament:
 		Weapon: JJCannon
-	-Crushable:
+	# -Crushable:
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:
 		AttackSequence: shoot
-	-TakeCover:
+	# -TakeCover:
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 
@@ -144,8 +144,7 @@ EAGLEGUARD:
 	Armament:
 		Weapon: TrooperRail
 		LocalOffset: 400,100,450
-	Crushable:
-		CrushSound: squishy2.aud
+	-Crushable:
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:
@@ -325,6 +324,8 @@ BHS:
 	SelfHealing@NodCloakHealing:
 		Delay: 150
 	-RejectsOrders@berserk:
+	Crushable:
+		WarnProbability: 85
 	Health:
 		HP: 19000
 	Mobile:
@@ -669,6 +670,8 @@ PSYKER:
 	Health:
 		HP: 15000
 	-RejectsOrders@berserk:
+	Crushable:
+		WarnProbability: 85
 	Mobile:
 		Speed: 75
 	Targetable@razor:

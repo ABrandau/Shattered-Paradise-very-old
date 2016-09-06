@@ -451,7 +451,7 @@ NALASR:
 	Inherits: ^Defense
 	Inherits@1: ^TowerStealthDetection
 	Valued:
-		Cost: 350
+		Cost: 300
 	Tooltip:
 		Name: Laser Turret
 		Description: Basic base defense.\nRequires power to operate.\n\n  Strong vs Ground units\n  Weak vs Aircraft
@@ -479,7 +479,7 @@ NALASR:
 	RenderVoxels:
 	WithVoxelTurret:
 	Power:
-		Amount: -35
+		Amount: -300
 	SelectionDecorations:
 		VisualBounds: 40, 36, -8, -8
 
@@ -1486,7 +1486,7 @@ CABRAIL:
 	RequiresPower:
 	DisabledOverlay:
 	Health:
-		HP: 35000
+		HP: 60000
 	Armor:
 		Type: Light
 	BodyOrientation:

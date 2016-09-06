@@ -206,7 +206,7 @@ ScrMbtCannon:
 	Warhead@1Dam: SpreadDamage
 		Range: 0, 32
 		Falloff: 100, 100
-		Damage: 1500
+		Damage: 500
 		AffectsParent: false
 		Versus:
 			None: 25

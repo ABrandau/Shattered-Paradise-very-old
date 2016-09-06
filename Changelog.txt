@@ -1,5 +1,25 @@
 ﻿YEAR - MONTH - DAY
 
+[2016 - 09 - 05]
+General Changes:
+	Reordered map pool and also added more maps to it.
+	Blood derricks now award the onwer $100 every 7 seconds, units that die near one
+	award the owner 30% of their cost after a minute of their death.
+	Mine: damage: 125 -> 160
+	Infantry chance of dodging crushing attempts: 75 -> 50.
+GDI Changes:
+	Jumpjet: Warhead: ap -> rocket, can now be crushed and can go prone, but has no animation that displays this.
+	Eagle guard is now uncrushable.
+NOD Changes:
+	Militant: Rifle damage: 11 -> 16, Suicide damage: 100 -> 130.
+	Laser Turret: Cost: 350 -> 300, Power: -35 -> -30.
+Mutant Changes:
+	Leonid Tank: HP 250 -> 300.
+CABAL Changes:
+	Railgun Turret: hp: 350 -> 600, damage 40 -> 50.
+Scrin Changes:
+	Scrin Tank: damage per second: 75 -> 25.
+
 [2016 - 09 - 04]
 General Changes:
 	Civilian structures now have the right armor set for each, tho they still need an hp increase.

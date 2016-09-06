@@ -533,7 +533,7 @@ AARail:
 	Warhead@1Dam: SpreadDamage
 		Range: 0, 32
 		Falloff: 100, 100
-		Damage: 2000
+		Damage: 2500
 		InfDeath: 6
 		ValidTargets: Air
 		AffectsParent: false

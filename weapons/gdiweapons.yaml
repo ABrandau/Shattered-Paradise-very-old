@@ -12,7 +12,7 @@ MarineRifle:
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 
 JJCannon:
-	Inherits: ^APWarhead
+	Inherits: ^RocketWarhead
 	Inherits@2: ^Mediuml_Clsn
 	ReloadDelay: 50
 	Range: 4c0

@@ -11,7 +11,7 @@ MilitantRifle:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 1100
+		Damage: 1600
 		DamageTypes: Prone70Percent, TriggerProne, MilitantFireDeath
 	Warhead@3Eff: CreateEffect
 		Explosions: fire3, fire4
@@ -26,7 +26,7 @@ MilitantExplode:
 	Projectile: InstantExplode
 	Warhead@1Dam: SpreadDamage
 		Spread: 200
-		Damage: 100000
+		Damage: 130000
 		AffectsParent: True
 		Versus:
 			None: 600

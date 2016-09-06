@@ -846,7 +846,7 @@ MUTTANK:
 		Speed: 110
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 25000
+		HP: 30000
 	Armor:
 		Type: Heavy
 	Armament:

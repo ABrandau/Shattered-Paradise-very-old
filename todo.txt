@@ -17,6 +17,7 @@ remove selectable from a shit ton of actors.
 make flame tanks teleport
 double check sandbags
 Remove blocks projectiles from some defences.
+scrin op glyders and tanks and 
 
 todo
 

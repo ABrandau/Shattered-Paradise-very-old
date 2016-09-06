@@ -109,7 +109,6 @@
 		DeathTypes: CabalDeathCrate
 	GivesProximityBounty@BloodDerrick:
 		Percentage: 30
-		# BountyType: BloodDerrick
 #wiu wiu wiu wiu wiu wiu
 	SpawnActorOnDeath@burns:
 		Actor: fireactor
@@ -642,6 +641,7 @@
 	HiddenUnderFog:
 	ActorLostNotification:
 	Crushable:
+		WarnProbability: 50
 		CrushSound: squish6.aud
 	DamagedByTerrain:
 		Damage: 200

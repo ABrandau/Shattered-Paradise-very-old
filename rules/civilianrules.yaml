@@ -639,6 +639,44 @@ ICBM:
 		NoTransformSounds:
 		Voice: Move
 
+WEED:
+	Inherits: ^VoxelTank
+	Valued:
+		Cost: 1400
+	Tooltip:
+		Name: Weed Eater
+		Description: Collects veins for processing.\n  Unarmed
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 100
+		Prerequisites: ~naweap, nawast
+	Harvester:
+		DeliveryBuildings: nawast
+		Capacity: 7
+		Resources: Veins
+		BaleUnloadDelay: 20
+		BaleLoadDelay: 40
+		SearchFromProcRadius: 72
+		SearchFromOrderRadius: 36
+		HarvestVoice: Attack
+		DeliverVoice: Move
+	Mobile:
+		Speed: 71
+		TurnSpeed: 5
+	Health:
+		HP: 600
+	SelfHealing:
+		Delay: 10
+		HealIfBelow: 50
+		DamageCooldown: 200
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 4c0
+	-WithVoxelBody:
+	WithVoxelUnloadBody:
+	-GainsExperience:
+
 BUS:
 	Inherits: ^CivilianVoxelVehicle
 	Valued:
@@ -2311,6 +2349,10 @@ BLOODDERRICK:
 		CrushedPaletteIsPlayerPalette: true
 	SelectionDecorations:
 		VisualBounds: 102, 60, 0, 0
+	CashTrickler:
+		Period: 175
+		Amount: 100
+		CaptureAmount: 500
 	AttackOmni:
 	WithAttackAnimation:
 		AttackSequence: move
@@ -2320,7 +2362,7 @@ BLOODDERRICK:
 		TargetStances: Ally, Enemy, Neutral
 	AutoTarget:
 	ProximityBounty:
-		Delay: 50 #1500
+		Delay: 1500
 		BountyType: BloodDerrick
 		Range: 9c0
 

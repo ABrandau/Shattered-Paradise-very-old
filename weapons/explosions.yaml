@@ -3,9 +3,9 @@ MineExplode:
 	Inherits@2: ^Large_twlt
 	Warhead@1Dam: SpreadDamage
 		Spread: 256
-		Damage: 12500
+		Damage: 16000
 		Versus:
-			Mine: 50
+			Mine: 25
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 		InvalidTargets: Mine
