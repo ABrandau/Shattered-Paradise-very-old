@@ -416,7 +416,7 @@ awarrior:
 	prone-shoot:
 		Ticks: 20	
 		Start: 246
-		Length: 7
+		Length: 6
 		Facings: 8
 		ShadowStart: 576
 	standup-0:

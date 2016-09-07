@@ -19,17 +19,14 @@ flameguy:
 cloud1:
 	Inherits: ^EmpOverlay
 	Defaults:
+		Length: *
 		Offset: 0,-6
 		ZOffset: 4096
 	idle:
-		Length: *
 	run:
-		Length: *
 	stand:
-		Length: *
 	die: cloud1d
-		Offset: 0,-12
-		ZOffset: 4096
+	die1: cloud1d
 
 zombie:
 	Inherits: ^InfantryDeathAnims

@@ -49,8 +49,7 @@ Player:
 	ScriptTriggers:
 	MissionObjectives:
 	ConquestVictoryConditions:
-	GivesExperience:
-		PlayerExperienceModifier: 1
+	PlayerExperience:
 	PowerManager:
 	AllyRepair:
 	PlayerResources:

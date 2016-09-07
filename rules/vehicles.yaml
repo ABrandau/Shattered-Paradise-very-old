@@ -1111,6 +1111,8 @@ SCRMBT:
 		HP: 30000
 	Armor:
 		Type: Heavy
+	Armor@HoverTank:
+		Type: HoverTank
 	Mobile:
 		Speed: 100
 	Turreted:

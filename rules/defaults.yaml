@@ -2,6 +2,8 @@
 	AppearsOnRadar:
 	UpdatesPlayerStatistics:
 	CombatDebugOverlay:
+	GivesExperience:
+		PlayerExperienceModifier: 1
 	ScriptTriggers:
 	UpgradeManager:
 	Huntable:
@@ -463,6 +465,18 @@
 		Pieces: 3, 7
 		Range: 2c0, 5c0
 
+^TechBuilding:
+	Inherits: ^CivBuilding
+	RepairableBuilding:
+		IndicatorPalette: mouse
+		RepairStep: 700
+	Armor:
+		Type: Heavy
+	Capturable:
+		CaptureThreshold: 100
+	RenderSprites:
+		-Palette: silo
+
 ^CivBillboard:
 	Inherits: ^CivBuilding
 	Building:
@@ -741,6 +755,8 @@
 
 ^Mutant:
 	Inherits: ^Soldier
+	Targetable@Mutant:
+		TargetTypes: Mutant
 	DamagedByTerrain:
 		Damage: -200
 		DamageInterval: 16
@@ -894,6 +910,7 @@
 		Range: 4c0
 	Captures:
 		CaptureTypes: building
+		PlayerExperience: 50
 
 ^Vehicle:
 	Inherits@0: ^GainsExperience
@@ -1394,6 +1411,8 @@
 		Range: 10c0
 	DetectCloaked:
 		Range: 5c0
+	Armor:
+		Type: Heavy
 
 ^DeployedVehicle:
 	Inherits@1: ^GenericBuffsDebuffs
@@ -1415,6 +1434,8 @@
 	AutoTarget:
 	RenderRangeCircle:
 	DrawLineToTarget:
+	Armor:
+		Type: Light
 	SelfHealing@poisoncloud:
 		PercentageStep: -3
 	Building:

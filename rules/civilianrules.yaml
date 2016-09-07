@@ -2297,7 +2297,7 @@ GAOLDCC6:
 		Weapon: TiberiumExplosion
 
 WELL:
-	Inherits: ^CivBuilding
+	Inherits: ^TechBuilding
 	Tooltip:
 		Name: Tiberium Well
 	Building:
@@ -2305,15 +2305,11 @@ WELL:
 		Dimensions: 3, 3
 	Selectable:
 		Bounds: 90, 60, 0, -12
-	Armor:
-		Type: Heavy
 	RenderSprites:
-		-Palette: silo
 		PlayerPalette: playersilo
-	Capturable:
 	CashTrickler:
 		Period: 375
-		Amount: 100
+		Amount: 50
 		CaptureAmount: 500
 	Health:
 		HP: 100000
@@ -2322,7 +2318,7 @@ WELL:
 		Weapon: TiberiumExplosion
 
 BLOODDERRICK:
-	Inherits: ^CivBuilding
+	Inherits: ^TechBuilding
 	Tooltip:
 		Name: Blood Derrick
 	Building:
@@ -2330,16 +2326,11 @@ BLOODDERRICK:
 		Dimensions: 3, 3
 	Selectable:
 		Bounds: 102, 60, 0, 0
-	Armor:
-		Type: Heavy
-	Capturable:
-		CaptureThreshold: 100
 	Health:
 		HP: 500000
 	Explodes:
 		Weapon: TiberiumExplosion
 	RenderSprites:
-		-Palette: playerscrin
 		PlayerPalette: playerscrin
 	Cloak@CLOAKGENERATOR:
 		Palette: cloakscrin
@@ -2351,11 +2342,14 @@ BLOODDERRICK:
 		VisualBounds: 102, 60, 0, 0
 	CashTrickler:
 		Period: 175
-		Amount: 100
+		Amount: 50
 		CaptureAmount: 500
 	AttackOmni:
 	WithAttackAnimation:
 		AttackSequence: move
+	WithRangeCircle:
+		Range: 9c0
+		Type: cloakgenerator
 	RejectsOrders:
 	Armament:
 		Weapon: DerrickAnimation

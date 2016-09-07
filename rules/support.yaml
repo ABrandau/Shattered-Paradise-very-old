@@ -18,8 +18,6 @@ GACTWR:
 	DisabledOverlay:
 	Health:
 		HP: 50000
-	Armor:
-		Type: Light
 	BlocksProjectiles:
 		Height: 768
 	BodyOrientation:
@@ -125,8 +123,6 @@ GAVULC:
 	RequiresPower:
 	Health:
 		HP: 30000
-	Armor:
-		Type: Light
 	BlocksProjectiles:
 		Height: 768
 	BodyOrientation:
@@ -181,8 +177,6 @@ GAROCK:
 		Bounds: 48, 36, 0, -6
 	Health:
 		HP: 50000
-	Armor:
-		Type: Light
 	BlocksProjectiles:
 		Height: 768
 	BodyOrientation:
@@ -233,8 +227,6 @@ GACSAM:
 		Bounds: 48, 36, 0, -6
 	Health:
 		HP: 45000
-	Armor:
-		Type: Light
 	BlocksProjectiles:
 		Height: 768
 	BodyOrientation:
@@ -324,8 +316,6 @@ REPAIRTUR:
 	DisabledOverlay:
 	Health:
 		HP: 50000
-	Armor:
-		Type: Light
 	BodyOrientation:
 		QuantizedFacings: 32
 	RenderRangeCircle:
@@ -385,8 +375,6 @@ GAFIRE:
 		Bounds: 110, 60, 3, -4
 	Health:
 		HP: 50000
-	Armor:
-		Type: Wood
 	RevealsShroud:
 		Range: 4c0
 	WithIdleOverlay@1:
@@ -422,8 +410,6 @@ GUARDIANDEP:
 		Bounds: 110, 60, 3, -4
 	Health:
 		HP: 65000
-	Armor:
-		Type: Heavy
 	RevealsShroud:
 		Range: 15c0
 	Voiced:
@@ -466,8 +452,6 @@ NALASR:
 	DisabledOverlay:
 	Health:
 		HP: 30000
-	Armor:
-		Type: Heavy
 	Turreted:
 		TurnSpeed: 10
 		InitialFacing: 300
@@ -504,8 +488,6 @@ NAOBEL:
 	DisabledOverlay:
 	Health:
 		HP: 70000
-	Armor:
-		Type: Heavy
 	WithMuzzleOverlay:
 	Armament:
 		Weapon: ObeliskLaserFire
@@ -546,8 +528,6 @@ NASAM:
 	DisabledOverlay:
 	Health:
 		HP: 50000
-	Armor:
-		Type: Light
 	BodyOrientation:
 		QuantizedFacings: 32
 	RenderRangeCircle:
@@ -582,8 +562,6 @@ MASTL:
 		Type: cloakgenerator
 	Selectable:
 		Priority: 6
-	Armor:
-		Type: Light
 	RevealsShroud:
 		Range: 5c0
 	BodyOrientation:
@@ -612,8 +590,6 @@ DLIMPET:
 	-AttackTurreted:
 	-AutoTarget:
 	-RenderRangeCircle:
-	Armor:
-		Type: Light
 	RevealsShroud:
 		Range: 6c0
 	BodyOrientation:
@@ -648,8 +624,6 @@ GAARTY:
 		Name: Deployed Artillery
 	Health:
 		HP: 30000
-	Armor:
-		Type: Light
 	RevealsShroud:
 		Range: 9c0
 	Turreted:
@@ -690,8 +664,6 @@ NAMISL:
 		Bounds: 75,48
 	Health:
 		HP: 100000
-	Armor:
-		Type: Wood
 	RevealsShroud:
 		Range: 4c0
 	WithIdleOverlay@LIGHTS:
@@ -836,8 +808,6 @@ MUFLAK:
 	DisabledOverlay:
 	Health:
 		HP: 35000
-	Armor:
-		Type: Light
 	BodyOrientation:
 		QuantizedFacings: 32
 	RenderRangeCircle:
@@ -885,8 +855,6 @@ MUBUNKR:
 	-EmitInfantryOnSell@scr:
 	Health:
 		HP: 80000
-	Armor:
-		Type: Heavy
 	RevealsShroud:
 		Range: 8c0
 	AutoTarget:
@@ -923,8 +891,6 @@ MUTSW1:
 		Bounds: 116, 60, 3, -6
 	Health:
 		HP: 80000
-	Armor:
-		Type: Wood
 	RevealsShroud:
 		Range: 5c0
 	SelectionDecorations:
@@ -959,8 +925,6 @@ MUTSW2:
 		Bounds: 130, 80, 0, -24
 	Health:
 		HP: 80000
-	Armor:
-		Type: Wood
 	RevealsShroud:
 		Range: 5c0
 	Power:
@@ -990,8 +954,6 @@ MUWARD:
 	-AutoTarget:
 	-RenderRangeCircle:
 	-Voiced:
-	Armor:
-		Type: Wood
 	RevealsShroud:
 		Range: 7c0
 	BodyOrientation:
@@ -1018,25 +980,18 @@ MUVENTI:
 		Cost: 1500
 	Tooltip:
 		Name: Tiberium Ventilator
-		Description: Provides an area buff and debuff for nearby units.
+		Description: Releases tiberium toxins into the area, harming\non mutant infantry and healing any mutant\n in the area.\nDoesn't stop operating while in low power.
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Health:
 		HP: 75000
-	Armor:
-		Type: Wood
 	RequiresPower:
 	WithRangeCircle:
-		Range: 12c0
+		Range: 8c0
 		Type: cloakgenerator
-	UpgradeActorsNear@lobo:
-		Upgrades: VentilatorBuff, MindControlTargetting
-		Range: 12c0
-	UpgradeActorsNear@qlo:
-		Upgrades: VentilatorPoison, MindControlTargetting
-		Range: 12c0
-		ValidStances: Enemy
+	ExplodeWeapon:
+		Weapon: VentilatorPoison
 	RevealsShroud:
 		Range: 4c0
 	WithIdleOverlay@LIGHTS:
@@ -1138,8 +1093,6 @@ SCRNEEDLER:
 	DisabledOverlay:
 	Health:
 		HP: 50000
-	Armor:
-		Type: Heavy
 	BodyOrientation:
 		QuantizedFacings: 32
 	RenderRangeCircle:
@@ -1190,8 +1143,6 @@ SCRTRACTOR:
 	DisabledOverlay:
 	Health:
 		HP: 35000
-	Armor:
-		Type: Light
 	BodyOrientation:
 		QuantizedFacings: 32
 	RenderRangeCircle:
@@ -1235,8 +1186,6 @@ SCRDRONE:
 	DisabledOverlay:
 	Health:
 		HP: 80000
-	Armor:
-		Type: Light
 	RevealsShroud:
 		Range: 12c0
 	AttackOmni:
@@ -1250,9 +1199,8 @@ SCRDRONE:
 		VisualBounds: 88, 72, 0, -12
 
 SCREXTRACTOR:
-	Inherits: ^Defense
+	Inherits: ^Building
 	Inherits@2: ^ScrinRender
-	Inherits@3: ^TowerStealthDetection
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -1265,8 +1213,6 @@ SCREXTRACTOR:
 	WithBuildingExplosion:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
-	-RenderRangeCircle:
-	-CanPowerDown:
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -1278,11 +1224,8 @@ SCREXTRACTOR:
 		MaxRange: 1
 	RequiresPower:
 	DisabledOverlay:
-	-AutoTarget:
 	Health:
 		HP: 60000
-	Armor:
-		Type: wood
 	RevealsShroud:
 		Range: 4c0
 	Power:
@@ -1311,8 +1254,6 @@ SCRSW1:
 		Bounds: 116, 60, 3, -6
 	Health:
 		HP: 80000
-	Armor:
-		Type: Wood
 	RevealsShroud:
 		Range: 5c0
 	Power:
@@ -1359,8 +1300,6 @@ SCRSHIELD:
 		LocalOffset: 0,0,1800
 	Health:
 		HP: 40000
-	Armor:
-		Type: Heavy
 	RevealsShroud:
 		Range: 8c0
 	Power:
@@ -1407,8 +1346,6 @@ CABSENTRYTURRET:
 	Health:
 		HP: 7500
 	-Sellable:
-	Armor:
-		Type: Wood
 	BodyOrientation:
 		QuantizedFacings: 32
 	-CanPowerDown:
@@ -1446,8 +1383,6 @@ CABCANNON:
 	DisabledOverlay:
 	Health:
 		HP: 45000
-	Armor:
-		Type: Light
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithMuzzleOverlay:
@@ -1487,8 +1422,6 @@ CABRAIL:
 	DisabledOverlay:
 	Health:
 		HP: 60000
-	Armor:
-		Type: Light
 	BodyOrientation:
 		QuantizedFacings: 32
 	RenderRangeCircle:
@@ -1531,8 +1464,6 @@ CABBLAST:
 	DisabledOverlay:
 	Health:
 		HP: 60000
-	Armor:
-		Type: Light
 	BodyOrientation:
 		QuantizedFacings: 32
 	Turreted:
@@ -1567,8 +1498,6 @@ CABEYE:
 		Dimensions: 2,2
 	Health:
 		HP: 75000
-	Armor:
-		Type: Wood
 	DetectCloaked:
 		Range: 9c0
 	WithRangeCircle:
@@ -1579,7 +1508,7 @@ CABEYE:
 	RevealsShroud:
 		Range: 19c0
 	Selectable:
-		Bounds: 90, 48, 0, -6
+		Bounds: 90, 124, 0, -40
 	Power:
 		Amount: -50
 	Targetable:
@@ -1587,7 +1516,7 @@ CABEYE:
 	DisabledOverlay:
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
-		VisualBounds: 90, 84, 0, -12
+		VisualBounds: 90, 124, 0, -40
 
 CABSW1:
 	Inherits: ^Defense
@@ -1611,12 +1540,12 @@ CABSW1:
 	DisabledOverlay:
 	Health:
 		HP: 35000
-	Armor:
-		Type: Light
 	BodyOrientation:
 		QuantizedFacings: 32
 	RenderRangeCircle:
 		RangeCircleType: aa
+	Armor:
+		Type: Wood
 	Turreted:
 		TurnSpeed: 1
 		InitialFacing: 50
@@ -1648,7 +1577,7 @@ CABSW1:
 		OrderName: singularity
 
 cabobelisk:
-	Inherits: ^Defense
+	Inherits: ^Building
 	Inherits@1: ^CabRender
 	Valued:
 		Cost: 2000
@@ -1669,12 +1598,8 @@ cabobelisk:
 	DisabledOverlay:
 	Health:
 		HP: 35000
-	Armor:
-		Type: Light
 	BodyOrientation:
 		QuantizedFacings: 32
-	-AutoTarget:
-	-RenderRangeCircle:
 	Power:
 		Amount: -100
 	SelectionDecorations:

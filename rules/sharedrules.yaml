@@ -412,6 +412,7 @@ GADEPT:
 		Range: 6c0
 	RepairsUnits:
 		FinishRepairingNotification: UnitRepaired
+		PlayerExperience: 15
 	WithIdleOverlay@LIGHT:
 		Sequence: idle-light
 	WithIdleOverlay@GROUND:
@@ -655,7 +656,7 @@ GATE_B:
 MUMINE:
 	Inherits: ^DeployedVehicle
 	Valued:
-		Cost: 800
+		Cost: 100
 	Tooltip:
 		Name: Mine
 	Selectable:
@@ -663,6 +664,7 @@ MUMINE:
 	Health:
 		HP: 5000
 	-AttackTurreted:
+	-SpawnActorOnDeath@ScrinEssence:
 	-AutoTarget:
 	-RenderRangeCircle:
 	-ActorLostNotification:

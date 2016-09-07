@@ -494,3 +494,29 @@ FlakFire:
 		Explosions: water_piffs
 		ExplosionPalette: ra
 		ValidImpactTypes: Water
+
+VentilatorPoison:
+	Inherits: ^RifleWarhead
+	ReloadDelay: 150
+	Range: 4c0
+	ValidTargets: Infantry
+	Projectile: InstantExplode
+	Warhead@1Dam: SpreadDamage
+		Spread: 2c0
+		Falloff: 300, 150, 100, 50, 0
+		ValidTargets: Infantry
+		InvalidTargets: Mutant
+		Damage: 1000
+		DamageTypes: TiberiumDeath
+	Warhead@2Dam: SpreadDamage
+		Spread: 2c0
+		ValidTargets: Mutant
+		Falloff: 300, 150, 100, 50, 0
+		Damage: -1000
+		Versus:
+			None: 125
+			Wood: 25
+			Light: 25
+			Heavy: 15
+			Concrete: 5
+		DamageTypes: TiberiumDeath

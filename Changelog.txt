@@ -2,11 +2,14 @@
 
 [2016 - 09 - 05]
 General Changes:
+	The new game scoring system is now Enabled.
 	Reordered map pool and also added more maps to it.
-	Blood derricks now award the onwer $100 every 7 seconds, units that die near one
+	Added tiberium wells, these serve as oil derricks and grant the player $50 every 15 seconds.
+	Blood derricks now award the onwer $50 every 7 seconds, units that die near one
 	award the owner 30% of their cost after a minute of their death.
 	Mine: damage: 125 -> 160
 	Infantry chance of dodging crushing attempts: 75 -> 50.
+	All defences now use Heavy armor, and all super weapons use wood armor.
 GDI Changes:
 	Jumpjet: Warhead: ap -> rocket, can now be crushed and can go prone, but has no animation that displays this.
 	Eagle guard is now uncrushable.
@@ -15,10 +18,14 @@ NOD Changes:
 	Laser Turret: Cost: 350 -> 300, Power: -35 -> -30.
 Mutant Changes:
 	Leonid Tank: HP 250 -> 300.
+	Reworked tiberium ventilator, now it periodically harms non mutant infantry in the area while healing mutants.
 CABAL Changes:
 	Railgun Turret: hp: 350 -> 600, damage 40 -> 50.
 Scrin Changes:
+	Razorshark: Cost: 250 -> 300.
 	Scrin Tank: damage per second: 75 -> 25.
+	Scrin Glider: Warhead: Armor Piercing -> Rocket, Damage: 25 -> 17, Spread: 150 -> 200
+	Destroyer: reload delay: 150 -> 200.
 
 [2016 - 09 - 04]
 General Changes:

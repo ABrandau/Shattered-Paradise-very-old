@@ -121,7 +121,7 @@ TibBurst
 		# AimChance: 50
 
 TibBurstExplo:
-	ReloadDelay: 150
+	ReloadDelay: 50
 	Range: 4c0
 	Projectile: Bullet
 		Speed: 1c682
@@ -144,7 +144,7 @@ BlueTibBurst
 		# AimChance: 50
 
 BlueTibBurstExplo:
-	ReloadDelay: 150
+	ReloadDelay: 50
 	Range: 3c0
 	Projectile: Bullet
 		Speed: 1c682

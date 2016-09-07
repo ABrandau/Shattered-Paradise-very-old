@@ -33,6 +33,7 @@ CLOUD1:
 		Step: -1
 		Delay: 25
 		HealIfBelow: 200
+		DamageTypes: CloudDie
 	Armor:
 		Type: Wood
 	UpgradeActorsNear:
@@ -1023,6 +1024,8 @@ SCRINCOUNCIL:
 		Bounds: 100,90
 	Voiced:
 		VoiceSet: Limpet
+	Selectable:
+		Priority: 6
 	Health:
 		HP: 70000
 	Armor:

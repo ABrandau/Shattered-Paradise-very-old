@@ -214,6 +214,7 @@ ScrMbtCannon:
 			Light: 75
 			Heavy: 100
 			Concrete: 60
+			HoverTank: 25
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, ScrinEssenceKill
 
 BatteryBuff:
@@ -335,7 +336,7 @@ StormRiderBlastAA:
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
 
 Glyder1Cannon:
-	Inherits: ^APWarhead
+	Inherits: ^RocketWarhead
 	Inherits@2: ^Scrin_Pulse
 	ReloadDelay: 100
 	Range: 6c0
@@ -349,8 +350,8 @@ Glyder1Cannon:
 		Shadow: true
 		Palette: apblue
 	Warhead@1Dam: SpreadDamage
-		Spread: 150
-		Damage: 2500
+		Spread: 200
+		Damage: 1700
 		ValidTargets: Ground
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 
@@ -425,7 +426,7 @@ BattleshipRocket:
 		
 DestroyerCannon:
 	Inherits: ^ArtilleryWarhead
-	ReloadDelay: 150
+	ReloadDelay: 200
 	Range: 14c0
 	MinRange: 4c0
 	Report: oneshot04.wav
@@ -442,7 +443,7 @@ DestroyerCannon:
 	Warhead@1Dam: SpreadDamage
 		Spread: 400
 		Damage: 17000
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, ScrinEssenceKill
 	Warhead@2Eff: CreateEffect
 		Explosions: scrinpulse2
 		ImpactSound: expnew14.aud

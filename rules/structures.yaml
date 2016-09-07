@@ -1538,6 +1538,7 @@ SCRDEPOT:
 	RepairsUnits:
 		FinishRepairingNotification: UnitRepaired
 		HpPerStep: 2000
+		PlayerExperience: 15
 	RevealsShroud:
 		Range: 4c0
 	Power:
