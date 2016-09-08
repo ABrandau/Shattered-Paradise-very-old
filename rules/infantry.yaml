@@ -703,7 +703,7 @@ shark:
 		Cost: 300
 	Tooltip:
 		Name: Razorshark
-		Description: Anti-infantry creature, fast and deadly\nInstakills non-armored infantry.\n\n  Strong vs Light Infantry.\n  Weak vs Everything else.
+		Description: Anti-infantry creature, fast and deadly\nInstakills non-armored infantry. Does\nnot release essence from killed infantry.\n\n  Strong vs Light Infantry.\n  Weak vs Everything else.
 	Selectable:
 		Class: Shark
 	Health:
@@ -755,7 +755,7 @@ LEGIO:
 		BuildPaletteOrder: 25
 		Prerequisites: ~scrrax
 	Valued:
-		Cost: 180
+		Cost: 210
 	Tooltip:
 		Name: Legionnaire
 		Description: Scrin Frontile trooper. Resistant\nto damage. Cannot be crushed.\n\n  Strong vs Vehicles, Buildings.\n  Weak vs Infantry.
@@ -804,7 +804,6 @@ SHAPESHIFTER:
 
 COLOSSI:
 	Inherits: ^ScrinSoldier
-	Inherits@2: ^PermanentSelfHeal
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 27
@@ -827,6 +826,12 @@ COLOSSI:
 		SharesCell: False
 		UpgradeTypes: notmobile
 		UpgradeMaxEnabledLevel: 0
+	SelfHealing@ScrinCounter:
+		PercentageStep: 1
+		Step: 0
+		Delay: 5
+		DamageCooldown: 100
+		HealIfBelow: 75
 	SpawnActorOnDeath@FLAMEGUY:
 	SpawnActorOnDeath@conversion:
 		Actor: cybdog

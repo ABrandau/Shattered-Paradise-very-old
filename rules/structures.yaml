@@ -75,6 +75,9 @@ GAPILE:
 	UpgradeActorsNear:
 		Upgrades: MineReam
 		Range: 4c0
+	WithRangeCircle:
+		Range: 4c0
+		Type: Mines
 	Selectable:
 		Bounds: 88, 48, 0, -8
 	Health:
@@ -527,6 +530,9 @@ NAHAND:
 	UpgradeActorsNear:
 		Upgrades: MineReam
 		Range: 4c0
+	WithRangeCircle:
+		Range: 4c0
+		Type: Mines
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
@@ -927,6 +933,9 @@ MURAX:
 	UpgradeActorsNear:
 		Upgrades: MineReam
 		Range: 4c0
+	WithRangeCircle:
+		Range: 4c0
+		Type: Mines
 	Health:
 		HP: 80000
 	Armor:
@@ -1219,7 +1228,7 @@ SCRPOWR:
 		Cost: 400
 	Tooltip:
 		Name: Scrin Generator
-		Description: Provides power for other structures.
+		Description: Provides power for other structures. Aliens near\nthis structure stop degenerating health.
 	ProvidesPrerequisite:
 		Prerequisite: scrpowr
 	Building:
@@ -1228,6 +1237,12 @@ SCRPOWR:
 	WithBuildingExplosion:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
+	UpgradeActorsNear:
+		Upgrades: StandOnTib
+		Range: 4c0
+	WithRangeCircle:
+		Range: 4c0
+		Type: ScrinEssence
 	Health:
 		HP: 100000
 	Armor:
@@ -1260,9 +1275,15 @@ SCRADVPOWR:
 		Cost: 1000
 	Tooltip:
 		Name: Tiberium Reactior
-		Description: Provides power for other structures\nand also stores resources, explodes\nviolently when destroyed.
+		Description: Provides power for other structures and also stores resources\nAliens near this structure stop degenerating health.
 	ProvidesPrerequisite:
 		Prerequisite: scrpowr
+	UpgradeActorsNear:
+		Upgrades: StandOnTib
+		Range: 6c0
+	WithRangeCircle:
+		Range: 6c0
+		Type: ScrinEssence
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -1289,8 +1310,6 @@ SCRADVPOWR:
 	DisabledOverlay:
 	SelectionDecorations:
 		VisualBounds: 90, 84, 0, -12
-	Explodes:
-		Weapon: ReactorExplode
 	StoresResources:
 		PipCount: 6
 		Capacity: 2000
@@ -1320,6 +1339,9 @@ SCRRAX:
 	UpgradeActorsNear:
 		Upgrades: MineReam
 		Range: 4c0
+	WithRangeCircle:
+		Range: 4c0
+		Type: Mines
 	Health:
 		HP: 80000
 	Armor:
@@ -1698,6 +1720,9 @@ CABCLAW:
 	UpgradeActorsNear:
 		Upgrades: MineReam
 		Range: 4c0
+	WithRangeCircle:
+		Range: 4c0
+		Type: Mines
 	Health:
 		HP: 80000
 	Armor:

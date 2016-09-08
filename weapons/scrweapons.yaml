@@ -9,7 +9,7 @@ SharkJump:
 		Damage: 2000
 		ValidTargets: Infantry
 		InvalidTargets: Razorshark
-		DamageTypes: BulletDeath, ScrinUnit
+		DamageTypes: ScrinEssenceKill
 
 LegioNeedler:
 	Inherits: ^RocketWarhead
@@ -27,8 +27,10 @@ LegioNeedler:
 		RateOfTurn: 8
 		RangeLimit: 15c0
 	Warhead@1Dam: SpreadDamage
-		Spread: 300
-		Damage: 3500
+		Spread: 200
+		Damage: 3000
+		Versus:
+			None: 30
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, ScrinEssenceKill
 
@@ -657,16 +659,10 @@ EssenceMedium:
 	Warhead@op: FireShrapnel
 		Amount: 2
 
-EssenceBig:
-	Inherits: EssenceSmall
-	Warhead@op: FireShrapnel
-		Amount: 4
-
 EssenceMissile:
 	Inherits: ^FullDamage
 	ReloadDelay: 45
 	Range: 7c0
-	Report: battleshipgun1.wav
 	ValidTargets: ScrinUnit
 	Projectile: Missile
 		Speed: 100
@@ -682,7 +678,7 @@ EssenceMissile:
 		Palette: apolra2ialpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: -3000
+		Damage: -2000
 		ValidTargets: ScrinUnit
 	Warhead@2Eff: CreateEffect
 		Explosions: tibexp2
@@ -699,29 +695,19 @@ EssenceMissileToBattery:
 
 HealScrin:
 	ReloadDelay: 150
-	Range: 4c0
+	Range: 2c0
 	ValidTargets: ScrinUnit
+	InvalidTargets: EssenceBattery
 	Projectile: InstantExplode
-		# Speed: 100
-		# Blockable: False
-		# Shadow: true
-		# RateOfTurn: 8
-		# RangeLimit: 99c0
-		# Image: essencetrail
-		# TrailImage: essencetrailmini
-		# TrailPalette: apolra2ialpha
-		# TrailInterval: 1
-		# Jammable: False
-		# Palette: apolra2ialpha
 	Warhead@1Dam: SpreadDamage
 		DebugOverlayColor: 00FF00
 		Spread: 1c0
-		Damage: -7500
+		Damage: -10000
 		AffectsParent: True
 		Versus:
 			None: 50
-			Light: 100
-			Heavy: 150
+			Light: 75
+			Heavy: 100
 		ValidTargets: ScrinUnit
 
 

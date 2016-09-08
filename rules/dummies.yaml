@@ -464,8 +464,3 @@ SCRINESSENCEMEDIUM:
 	Inherits: SCRINESSENCESMALL
 	Armament:
 		Weapon: EssenceMedium
-
-SCRINESSENCEBIG:
-	Inherits: SCRINESSENCESMALL
-	Armament:
-		Weapon: EssenceBig

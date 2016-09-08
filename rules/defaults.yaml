@@ -393,6 +393,8 @@
 		InternalOwner: Creeps
 		DeathType: TiberiumDeath
 		RequiresLobbyCreeps: true
+	SpawnActorOnDeath@ScrinEssence:
+		Actor: SCRINESSENCEMEDIUM
 
 ^Building:
 	Inherits@1: ^BasicBuilding
@@ -444,8 +446,6 @@
 		Weapon: SmokeShrapnel
 		UpgradeTypes: smoketrail
 		UpgradeMinEnabledLevel: 1
-	SpawnActorOnDeath@ScrinEssence:
-		Actor: SCRINESSENCEBIG
 
 ^CivBuilding:
 	Inherits: ^BasicBuilding
@@ -812,6 +812,7 @@
 		CrushedSequencePalette: playerscrin
 		CrushedPaletteIsPlayerPalette: true
 	-DamagedByTerrain:
+	-SelfHealing@ELITE:
 
 ^Cyborg:
 	Inherits@1: ^Infantry
@@ -1125,6 +1126,7 @@
 		EmptyWeapon: ScrinUnitExplode
 	Voiced:
 		VoiceSet: Limpet
+	-SelfHealing@ELITE:
 
 ^VoxelVehicle:
 	Inherits: ^Vehicle
@@ -1677,6 +1679,8 @@
 		DamageCooldown: 100
 		HealIfBelow: 105
 		DamageTypes: ScrinEssenceKill
+		UpgradeMaxEnabledLevel: 0
+		UpgradeTypes: StandOnTib, selfheal
 	SelfHealing@ScrinCounter:
 		PercentageStep: 1
 		Step: 0
@@ -1684,8 +1688,13 @@
 		DamageCooldown: 100
 		HealIfBelow: 50
 		DamageTypes: ScrinEssenceKill
+		UpgradeMaxEnabledLevel: 0
+		UpgradeTypes: StandOnTib, selfheal
 	SpawnActorOnDeath@ScrinEssence:
 		DeathType:
+	UpgradeOnTerrain@tib:
+		Upgrades: StandOnTib
+		TerrainTypes: Tiberium, BlueTiberium
 
 ^SelfReloads:
 	AmmoPool:

@@ -725,6 +725,7 @@ WOLF:
 		LocalOffset: 128,0,400
 	Armament@Secondary:
 		Weapon: BullBuff
+		LocalOffset: 0,0,500
 	Passenger:
 		CargoType: Vehicle
 		Voice: Move
@@ -1097,12 +1098,101 @@ SCRSCORPION:
 	Selectable:
 		Bounds: 50, 32, 0, -8
 
+SCRRECHARGER:
+	Inherits: ^ScrinVehicle
+	Inherits@1: ^Walker
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Essence Battery
+		Description: Support walker. Stores essence from fallen units\nand spends it to heal Scrin units.\n\n  Unarmed.
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 31
+		Prerequisites: ~scrweap
+	Mobile:
+		TurnSpeed: 6
+		Speed: 60
+		Crushes: crate
+	UpgradeActorsNear:
+		Upgrades: StandOnTib
+		Range: 4c0
+	Health:
+		HP: 30000
+	WithRangeCircle:
+		Range: 4c0
+		Type: ScrinEssence
+	Armament:
+		TargetStances: Ally
+		Weapon: HealScrin
+		ForceTargetStances: None
+		AmmoPoolName: Essence
+		MuzzlePalette: apolra2ialpha
+		MuzzleSequence: particles
+		LocalOffset: 0,0,500
+	AmmoPool:
+		Ammo: 18
+		Name: Essence
+		InitialAmmo: 0
+		ReloadDelay: 1
+		SelfReloadDelay: 1
+	ReloadAmmoWhenEnabled:
+		ReloadCount: 1
+		Name: Essence
+		ReloadDelay: 1
+		UpgradeTypes: EssenceGrab
+		UpgradeMinEnabledLevel: 1
+	Targetable@EssenceBattery:
+		TargetTypes: EssenceBattery
+	WithMuzzleOverlay:
+	AttackFrontal:
+	AutoTarget:
+	QuantizeFacingsFromSequence:
+		Sequence: stand
+	WithFacingSpriteBody:
+		Sequence: stand
+	WithMoveAnimation:
+		MoveSequence: run
+	-SelfHealing@Scrin:
+	-SelfHealing@ScrinCounter:
+
+SCRGLYDER2:
+	Inherits: ^ScrinVehicle
+	Inherits@1: ^HoverVehicle
+	Inherits@3: ^BasicStealthDetection
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 32
+		Prerequisites: ~scrweap, scrradr
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: Glider
+		Description: Specialized weapons platform it can vary from a ground version and\naerial version. The aerial version attacks ground units and vice versa.\n\n Strong vs Armor.\n  Weak vs Light units.
+	Health:
+		HP: 15000
+	Mobile:
+		Speed: 91
+	Transforms:
+		IntoActor: scrglyder1
+	Armament:
+		Weapon: Glyder2Cannon
+		Recoil: 85
+		RecoilRecovery: 25
+		LocalOffset: 768,0,90
+	AutoTarget:
+	AttackFrontal:
+	RenderSprites:
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32
+
 SCRMBT:
 	Inherits: ^ScrinVehicle
 	Inherits@1: ^HoverVehicle
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 32
+		BuildPaletteOrder: 33
 		Prerequisites: ~scrweap, scrradr
 	Valued:
 		Cost: 900
@@ -1130,88 +1220,6 @@ SCRMBT:
 	WithFacingSpriteBody:
 	BodyOrientation:
 		QuantizedFacings: 32
-
-SCRGLYDER2:
-	Inherits: ^ScrinVehicle
-	Inherits@1: ^HoverVehicle
-	Inherits@3: ^BasicStealthDetection
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 31
-		Prerequisites: ~scrweap
-	Valued:
-		Cost: 750
-	Tooltip:
-		Name: Glider
-		Description: Specialized weapons platform it can vary from a ground version and\naerial version. The aerial version attacks ground units and vice versa.\n\n Strong vs Armor.\n  Weak vs Light units.
-	Health:
-		HP: 15000
-	Mobile:
-		Speed: 91
-	Transforms:
-		IntoActor: scrglyder1
-	Armament:
-		Weapon: Glyder2Cannon
-		Recoil: 85
-		RecoilRecovery: 25
-		LocalOffset: 768,0,90
-	AutoTarget:
-	AttackFrontal:
-	RenderSprites:
-	WithFacingSpriteBody:
-	BodyOrientation:
-		QuantizedFacings: 32
-
-SCRRECHARGER:
-	Inherits: ^ScrinVehicle
-	Inherits@1: ^Walker
-	Valued:
-		Cost: 1100
-	Tooltip:
-		Name: Essence Battery
-		Description: Support walker. Stores essence from fallen units\nand spends it to heal Scrin units.\n\n  Unarmed.
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 33
-		Prerequisites: ~scrweap, scrradr
-	Mobile:
-		TurnSpeed: 6
-		Speed: 91
-		Crushes: crate
-	Health:
-		HP: 30000
-	WithRangeCircle:
-		Range: 6c0
-		Type: cloakgenerator
-	Armament:
-		TargetStances: Ally
-		Weapon: HealScrin
-		ForceTargetStances: None
-		AmmoPoolName: Essence
-	AmmoPool:
-		Ammo: 18
-		Name: Essence
-		InitialAmmo: 0
-		ReloadDelay: 1
-		SelfReloadDelay: 1
-	ReloadAmmoWhenEnabled:
-		ReloadCount: 1
-		Name: Essence
-		ReloadDelay: 1
-		UpgradeTypes: EssenceGrab
-		UpgradeMinEnabledLevel: 1
-	Targetable@EssenceBattery:
-		TargetTypes: EssenceBattery
-	AttackFrontal:
-	AutoTarget:
-	QuantizeFacingsFromSequence:
-		Sequence: stand
-	WithFacingSpriteBody:
-		Sequence: stand
-	WithMoveAnimation:
-		MoveSequence: run
-	-SelfHealing@Scrin:
-	-SelfHealing@ScrinCounter:
 
 TRIPOD:
 	Inherits: ^ScrinVehicle

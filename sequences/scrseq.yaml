@@ -443,6 +443,8 @@ scrrecharger:
 		Facings: -8
 		Length: 11
 		ShadowStart: 104
+	particles: batterybuff
+		Length: *
 	icon: scrrechargericon
 	
 	
