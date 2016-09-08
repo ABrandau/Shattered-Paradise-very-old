@@ -628,7 +628,7 @@ DronePlane:
 EssenceSmall:
 	ReloadDelay: 45
 	Range: 10c0
-	ValidTargets: ScrinUnit
+	ValidTargets: ScrinUnit, EssenceBattery
 	Projectile: InstantExplode
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
@@ -643,6 +643,14 @@ EssenceSmall:
 		AllowDirectHit: True
 		AimTargetStances: Ally
 		ValidTargets: Ground, ScrinUnit
+	Warhead@opbattery: FireShrapnel
+		Weapon: EssenceMissileToBattery
+		Amount: 1
+		AimChance: 100
+		ThrowWithoutTarget: False
+		AllowDirectHit: True
+		AimTargetStances: Ally
+		ValidTargets: Ground, EssenceBattery
 
 EssenceMedium:
 	Inherits: EssenceSmall
@@ -657,7 +665,7 @@ EssenceBig:
 EssenceMissile:
 	Inherits: ^FullDamage
 	ReloadDelay: 45
-	Range: 10c0
+	Range: 7c0
 	Report: battleshipgun1.wav
 	ValidTargets: ScrinUnit
 	Projectile: Missile
@@ -679,3 +687,41 @@ EssenceMissile:
 	Warhead@2Eff: CreateEffect
 		Explosions: tibexp2
 		ExplosionPalette: apolra2ialpha
+
+EssenceMissileToBattery:
+	Inherits: EssenceMissile
+	Range: 10c0
+	ValidTargets: EssenceBattery
+	Warhead@emp: GrantUpgrade
+		Range: 200
+		Duration: 3
+		Upgrades: EssenceGrab
+
+HealScrin:
+	ReloadDelay: 150
+	Range: 4c0
+	ValidTargets: ScrinUnit
+	Projectile: InstantExplode
+		# Speed: 100
+		# Blockable: False
+		# Shadow: true
+		# RateOfTurn: 8
+		# RangeLimit: 99c0
+		# Image: essencetrail
+		# TrailImage: essencetrailmini
+		# TrailPalette: apolra2ialpha
+		# TrailInterval: 1
+		# Jammable: False
+		# Palette: apolra2ialpha
+	Warhead@1Dam: SpreadDamage
+		DebugOverlayColor: 00FF00
+		Spread: 1c0
+		Damage: -7500
+		AffectsParent: True
+		Versus:
+			None: 50
+			Light: 100
+			Heavy: 150
+		ValidTargets: ScrinUnit
+
+

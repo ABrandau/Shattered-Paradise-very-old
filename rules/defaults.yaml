@@ -1671,13 +1671,21 @@
 	Targetable@Essence:
 		TargetTypes: ScrinUnit
 	SelfHealing@Scrin:
+		PercentageStep: -1
+		Step: 0
+		Delay: 5
+		DamageCooldown: 100
+		HealIfBelow: 105
+		DamageTypes: ScrinEssenceKill
+	SelfHealing@ScrinCounter:
 		PercentageStep: 1
 		Step: 0
-		Delay: 25
-		DamageCooldown: 0
-		HealIfBelow: 105
-		UpgradeTypes: ScrinEssence
-		UpgradeMinEnabledLevel: 1
+		Delay: 5
+		DamageCooldown: 100
+		HealIfBelow: 50
+		DamageTypes: ScrinEssenceKill
+	SpawnActorOnDeath@ScrinEssence:
+		DeathType:
 
 ^SelfReloads:
 	AmmoPool:

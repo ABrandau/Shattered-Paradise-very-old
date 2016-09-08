@@ -758,7 +758,7 @@ LEGIO:
 		Cost: 180
 	Tooltip:
 		Name: Legionnaire
-		Description: Scrin Frontile trooper. Resistant\nto damage. Cannot be crushed.\nIts weapon damage spreads to nearby cells.\n\n  Strong vs Vehicles, Buildings.\n  Weak vs Infantry.
+		Description: Scrin Frontile trooper. Resistant\nto damage. Cannot be crushed.\n\n  Strong vs Vehicles, Buildings.\n  Weak vs Infantry.
 	Health:
 		HP: 15000
 	-Crushable:

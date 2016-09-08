@@ -1257,7 +1257,7 @@ SCRADVPOWR:
 		BuildPaletteOrder: 2
 		Prerequisites: scrweap, ~structures.scr
 	Valued:
-		Cost: 1200
+		Cost: 1000
 	Tooltip:
 		Name: Tiberium Reactior
 		Description: Provides power for other structures\nand also stores resources, explodes\nviolently when destroyed.

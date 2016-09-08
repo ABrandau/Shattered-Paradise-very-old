@@ -833,7 +833,7 @@ MUTTANK:
 	Inherits: ^VoxelTank
 	Inherits@1:	^Ra2vxl
 	Valued:
-		Cost: 600
+		Cost: 550
 	Tooltip:
 		Name: Leonid Tank
 		Description: Light Tank, average quality but cheap.\n\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
@@ -857,7 +857,7 @@ MUTTANK:
 	AttackTurreted:
 		Voice: Attack
 	RenderVoxels:
-		Scale: 1
+		Scale: 0.95
 	Turreted:
 		TurnSpeed: 10
 	AutoTarget:
@@ -1062,6 +1062,8 @@ SCRHARV:
 	WithFacingSpriteBody:
 	BodyOrientation:
 		QuantizedFacings: 32
+	-SelfHealing@Scrin:
+	-SelfHealing@ScrinCounter:
 
 SCRSCORPION:
 	Inherits: ^ScrinVehicle
@@ -1166,8 +1168,8 @@ SCRRECHARGER:
 	Valued:
 		Cost: 1100
 	Tooltip:
-		Name: Ichor Battery
-		Description: Support walker. Charges nearby Scrin units, increasing their damage and speed.\n\n  Unarmed.
+		Name: Essence Battery
+		Description: Support walker. Stores essence from fallen units\nand spends it to heal Scrin units.\n\n  Unarmed.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 33
@@ -1181,13 +1183,25 @@ SCRRECHARGER:
 	WithRangeCircle:
 		Range: 6c0
 		Type: cloakgenerator
-	UpgradeActorsNear:
-		Upgrades: batteryboost
-		Range: 6c0
-		ValidStances: Ally
-		AffectsParent: true
 	Armament:
-		Weapon: BatteryBuff
+		TargetStances: Ally
+		Weapon: HealScrin
+		ForceTargetStances: None
+		AmmoPoolName: Essence
+	AmmoPool:
+		Ammo: 18
+		Name: Essence
+		InitialAmmo: 0
+		ReloadDelay: 1
+		SelfReloadDelay: 1
+	ReloadAmmoWhenEnabled:
+		ReloadCount: 1
+		Name: Essence
+		ReloadDelay: 1
+		UpgradeTypes: EssenceGrab
+		UpgradeMinEnabledLevel: 1
+	Targetable@EssenceBattery:
+		TargetTypes: EssenceBattery
 	AttackFrontal:
 	AutoTarget:
 	QuantizeFacingsFromSequence:
@@ -1196,6 +1210,8 @@ SCRRECHARGER:
 		Sequence: stand
 	WithMoveAnimation:
 		MoveSequence: run
+	-SelfHealing@Scrin:
+	-SelfHealing@ScrinCounter:
 
 TRIPOD:
 	Inherits: ^ScrinVehicle
@@ -1257,6 +1273,7 @@ TRIPOD:
 ##########################################################
 SCRDRONEC:
 	Inherits: ^ScrinVehicle
+	Inherits@1: ^HoverVehicle
 	# Buildable:
 		# Queue: Vehicle
 		# BuildPaletteOrder: 34
@@ -1268,39 +1285,8 @@ SCRDRONEC:
 		Description: Hover vehicle designed for scouting and harassment.\nCloaked, doesn't uncloak when attacking.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Health:
 		HP: 24000
-	Armor:
-		Type: Light
 	Mobile:
 		Speed: 128
-		Crushes: crate
-		TerrainSpeeds:
-			Water: 80
-			Clear: 90
-			Rough: 70
-			Road: 100
-			Beach: 70
-			Tiberium: 80
-			BlueTiberium: 80
-			Veins: 80
-	Hovers:
-	Cloak@CLOAKGENERATOR:
-		UpgradeMinEnabledLevel: 0
-		Palette: cloakscrin
-		InitialDelay: 50
-		CloakDelay: 50
-		CloakSound:
-		UncloakSound:
-		IsPlayerPalette: true
-		UncloakOn: Move, attack
-	# Armament:
-		# Weapon: DronecPlane
-		# Recoil: 85
-		# RecoilRecovery: 25
-		# LocalOffset: 768,0,400
-		# MuzzleSequence: muzzle
-	# WithMuzzleOverlay:
-	AutoTarget:
-	AttackFrontal:
 	RenderSprites:
 	WithFacingSpriteBody:
 	BodyOrientation:

@@ -10,6 +10,12 @@ Make conyards, refineries and warfactories wood but buff them somehow.
 Have tib trees spawn tib explosions on random cells around it
 Alien layer that spawns from structures
 have tib trees spawn tib randomly around nearby cells, just for graphical awesomeness.
+Worker rise anim
+make sure units match their looks.
+increase the brightness of some maps.
+Re render cabal stuff and remove black colors.
+drill sound for abductor
+Rework scrin -> loose health if haven't killed anything up to 50% , and essence batteries can stop that.
 
 Balance
 marauder bad death anim
@@ -17,7 +23,9 @@ remove selectable from a shit ton of actors.
 make flame tanks teleport
 double check sandbags
 Remove blocks projectiles from some defences.
-scrin op glyders and tanks and 
+ravager useless
+cabal commando storng
+mut quad strong
 
 todo
 
@@ -51,10 +59,8 @@ Scrin ship husks.
 Increase civ building hp
 add floaters.
 Improve mammoth mk, both graphically and gameplay wise.
-Create descriptive categories for the skirmish maps.
 Remove health bars on some props.
 remake crates and add a water variation
-remove hv openra, pitt or plateau, nasapan muja, scars of war, town of kaskajarosk, dustland, eva creek.
 
 Graphics
 cnc 3 big tiberium glaciers

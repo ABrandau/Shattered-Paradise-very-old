@@ -438,7 +438,7 @@ SCRINESSENCESMALL:
 	SelfHealing:
 		PercentageStep: -50
 		Step: 0
-		Delay: 3000
+		Delay: 2000
 		HealIfBelow: 200
 	Tooltip:
 		Name: Essence
@@ -458,7 +458,7 @@ SCRINESSENCESMALL:
 		PlayerPalette: apolra2ialpha
 	Armament:
 		Weapon: EssenceSmall
-		TargetStances: Ally
+		TargetStances: Ally, Neutral, Enemy
 
 SCRINESSENCEMEDIUM:
 	Inherits: SCRINESSENCESMALL
