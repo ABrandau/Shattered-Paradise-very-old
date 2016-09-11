@@ -134,7 +134,6 @@ HARV:
 		HP: 100000
 	Targetable@MindControl:
 		TargetTypes: MindControlInmune
-	Capturable:
 	Armor:
 		Type: Heavy
 	-GainsExperience:

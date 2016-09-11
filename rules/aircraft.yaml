@@ -877,6 +877,8 @@ SCRDESTROYER:
 		MoveIntoShroud: true
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
+	Targetable@Essence:
+		TargetTypes: ScrinUnit
 	Health:
 		HP: 30000
 	Armor:
@@ -968,6 +970,8 @@ SCRBATTLESHIP:
 		VoiceSet: Limpet
 	Selectable:
 		Bounds: 175,125
+	Targetable@Essence:
+		TargetTypes: ScrinUnit
 	Aircraft:
 		TurnSpeed: 5
 		Speed: 80
@@ -1083,6 +1087,8 @@ MOTHERSHIP:
 		BuildLimit: 1
 	Voiced:
 		VoiceSet: Limpet
+	Targetable@Essence:
+		TargetTypes: ScrinUnit
 	Selectable:
 		Bounds: 175,125
 	Aircraft:

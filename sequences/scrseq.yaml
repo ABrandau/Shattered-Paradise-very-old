@@ -4,48 +4,61 @@
 shark:
 	Inherits@1: ^InfantryDeathAnims
 	defaults:
-		Tick:120
+		Tick: 120
+		Offset: 0, -12
 	stand:
-		Facings: 8
-		ShadowStart: 1204
+		Start: 145
+		Facings: -8
+		ShadowStart: 714
 	run:
-		Start: 8
+		Start: 153
 		Length: 16
-		Facings: 8
+		Facings: -8
 		Tick: 40
-		ShadowStart: 1212
+		ShadowStart: 722
 	idle1:
-		Start: 184
-		Length: 21
-		ShadowStart: 1388
+		Length: 23
+		ShadowStart: 569
 	idle2:
-		Start: 595
-		Length: 21
-		ShadowStart: 1799
+		Start: 23
+		Length: 25
+		ShadowStart: 592
 	idle3:
-		Start: 656
-		Length: 24		
-		ShadowStart: 1860
+		Start: 49
+		Length: 39
+		ShadowStart: 618
 	idle4:
-		Start: 959
-		Length: 23		
-		ShadowStart: 2163
+		Start: 90
+		Length: 16
+		ShadowStart: 659
+	idle5:
+		Start: 106
+		Length: 24	
+		ShadowStart: 675
 	die1:
-		Start: 1176
+		Start: 130
 		Length: 8
-		ShadowStart: 2380
+		ShadowStart: 699
 	die2:
-		Start: 1198
+		Start: 138
 		Length: 7
-		ShadowStart: 2401
+		ShadowStart: 707
 	die-crushed:
-		Start: 1176
-		Length: 8
-		ShadowStart: 2380
-		ZOffset: -511
-	shoot: 
-		Tick: 300
-		Facings: 8	
+		Start: 138
+		Length: 7
+		ShadowStart: 707
+	shoot:
+		Start: 281
+		Length: 18
+		# Tick: 300
+		Facings: -8
+		ShadowStart: 850
+	shoot2:
+		Start: 425
+		Length: 18
+		# Tick: 300
+		Facings: -8
+		ShadowStart: 994
 	icon: sharkicon
 
 legio:

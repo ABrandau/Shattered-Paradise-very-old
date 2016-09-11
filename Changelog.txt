@@ -1,8 +1,35 @@
 ﻿YEAR - MONTH - DAY
 
+[2016 - 09 - 11]
+General Changes:
+	Increased the amount of tiberium on the bottom spawn point of Cannon Fodder.
+GDI Changes:
+	Eagle Guard: Armor: Wood -> Light.
+	Juggernaut: Range: 18 -> 15.
+NOD Changes:
+	Demo Cycles now make enemy affected targets uncontrollable for 10 seconds.
+	Subterranean APCs now move underground.
+	Mobile Stealth generator now cloak themselves.
+	Replaced Toxin drone for a Hologram Projector. Which continuously creates a
+	  Copy of the unit that is inside the vehicle, only works with NOD infantry.
+	Holograms have low hp, low vision, deal only 20% of the original damage and
+	  don't apply most of the death type effects.
+Mutant Changes:
+	Ravager: Cost: 1200 -> 900, can now target structures.
+CABAL Changes:
+	Devourer: Range: 15 -> 14.
+Scrin Changes:
+	Scrin ground units now loose any health over 50% hp when they are not over or
+	  near powersources, Tiberium, Host Stations, alien factories and powerplants
+	  Count as such.
+	Ichor Battery Renamed to Essence Battery, now it stores essence and spends it
+	  to make nearby Scrin units preserve their health.
+	Removed attack dog logic from razorshark and re-rendered it's sprite.
+
+
 [2016 - 09 - 05]
 General Changes:
-	The new game scoring system is now Enabled.
+	The new scoring system is now Enabled.
 	Reordered map pool and also added more maps to it.
 	Added tiberium wells, these serve as oil derricks and grant the player $50 every 15 seconds.
 	Blood derricks now award the onwer $50 every 7 seconds, units that die near one

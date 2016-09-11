@@ -224,6 +224,20 @@ DeathclawBlow:
 		Spread: 42
 		Damage: 4000
 		ValidTargets: Vehicle, Defence, Infantry
+		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong
+
+DeathclawBlow2:
+	Inherits: ^ArtilleryWarhead
+	ReloadDelay: 60
+	Range: 2c0
+	Report: fiend2.aud
+	ValidTargets: Building
+	Projectile: Bullet
+		Speed: 5c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 4000
+		ValidTargets: Building
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong			
 
 ###############################################################		

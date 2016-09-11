@@ -295,7 +295,7 @@ DevourerShell:
 	Inherits: ^ArtilleryWarhead
 	Inherits@2: ^Small_Clsn
 	ReloadDelay: 150
-	Range: 15c0
+	Range: 14c0
 	Burst: 2
 	BurstDelay: 15
 	MinRange: 4c0
@@ -525,11 +525,10 @@ AARail:
 		Speed: 20c0
 		Duration: 3
 		DamageInterval: 2
-		Width: 0c100
+		Width: 20
 		BeyondTargetRange: 0c64
-		BeamDuration: 3
 		Blockable: true
-		Color: 0080FFC8
+		Color: 0008ED
 	Warhead@1Dam: SpreadDamage
 		Range: 0, 32
 		Falloff: 100, 100

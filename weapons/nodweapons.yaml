@@ -182,6 +182,11 @@ BikeExplo:
 		ValidTargets: Ground, Water, Air
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+	Warhead@emp: GrantUpgrade
+		Range: 4c0
+		Duration: 75
+		Upgrades: berserk
+		ValidStances: Enemy, Neutral
 
 Tick90mm:
 	Inherits: ^APWarhead
@@ -223,6 +228,66 @@ DevilsFlame:
 		Damage: 400
 		DamageTypes: Prone100Percent, TriggerProne, FireDeath
 
+FlameHologram:
+	Inherits: ^NoDamage
+	ReloadDelay: 225
+	Range: 10c0
+	Report: dropup1.aud
+	Projectile: InstantExplode
+	ValidTargets: Ground, Infantry, Air, Vehicle, Building, Wall
+	Warhead@1Dam: SpreadDamage
+		Spread: 400
+		Damage: 1
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@5Actor: SpawnActor
+		Actors: FLAMEHOLOGRAM
+		FallRate: 5000
+		Range: 3
+		ValidTargets: Ground, Infantry, Air, Vehicle, Building, Wall
+
+CrusaHologram:
+	Inherits: FlameHologram
+	Warhead@5Actor: SpawnActor
+		Actors: CRUSAHOLOGRAM
+
+EngineerHologram:
+	Inherits: FlameHologram
+	Warhead@5Actor: SpawnActor
+		Actors: ENGINEERHOLOGRAM
+
+TemplarHologram:
+	Inherits: FlameHologram
+	Warhead@5Actor: SpawnActor
+		Actors: TEMPLARHOLOGRAM
+
+HijackerHologram:
+	Inherits: FlameHologram
+	Warhead@5Actor: SpawnActor
+		Actors: HIJACKERHOLOGRAM
+
+HandHologram:
+	Inherits: FlameHologram
+	Warhead@5Actor: SpawnActor
+		Actors: HANDHOLOGRAM
+
+SUBAPCTRAIL:
+	Inherits: ^NoDamage
+	ReloadDelay: 200
+	Range: 10c0
+	Report: subdril1.aud
+	Projectile: GravityBomb
+		Speed: -100c0
+		Acceleration: 100
+	ValidTargets: Ground, Infantry, Air, Vehicle, Building, Wall
+	Warhead@1Dam: SpreadDamage
+		Spread: 400
+		Damage: 1
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+	Warhead@2EffAir: CreateEffect
+		Explosions: dig
+		# ImpactSound: expnew12.aud
+		# ValidImpactTypes: Air, AirHit
+
 NODRepair:
 	ReloadDelay: 125
 	Range: 4c0
@@ -234,11 +299,10 @@ NODRepair:
 		Spread: 213
 		Damage: -1
 		ValidTargets: Repair
-	Warhead@emp: GrantUpgrade
-		Range: 300
-		Duration: 100
-		Upgrades: NodVehicleRepair
-
+	Warhead@4EffAir: CreateEffect
+		Explosions: small_twlt
+		ImpactSound: expnew12.aud
+		ValidImpactTypes: Air, AirHit
 BCLazor:
 	Inherits: ^ArtilleryWarhead
 	Inherits@2: ^Large_Explosion
@@ -298,7 +362,7 @@ StealthRocketAA:
 	Burst: 4
 	ValidTargets: Air
 	Warhead@1Dam: SpreadDamage
-		Damage: 700
+		Damage: 800
 		ValidTargets: Air
 	
 ##################################################

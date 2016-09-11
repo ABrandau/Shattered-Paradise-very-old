@@ -217,6 +217,9 @@ explosion:
 		Tick: 400
 		ZOffset: -512
 	#Nod
+	dig: dignod
+		Length: *
+		Tick: 25
 	militantfire: militantfire
 		Length: *
 		Offset: 0,-26
@@ -413,6 +416,9 @@ tibicon:
 
 bombicon:
 	idle: bombicon
+
+holoicon:
+	idle: holoicon
 
 wrenchicon:
 	idle: wrenchicon	

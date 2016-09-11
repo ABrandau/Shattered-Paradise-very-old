@@ -34,7 +34,7 @@ The_Dementor	: Cameos: Skirmisher, EMP pulse Icons, Harvester and MCV (mut and c
 The_Dementor	: cyborg commando cameo, Wrench and Tiberium Icons.
 Gangster	: His template.
 Zoidzilla	: His template.	
-Zero18		: Gargoil vxl,	Quad Cannon vxl, Basilisk vxl,	Leonid tank vxl.	
+Zero18		: Gargoil vxl,	Quad Cannon vxl, Basilisk vxl,	Leonid tank vxl, Hologram Projector vxl.	
 ApolloTD	: Gradient Colored Palettes, Explosion Packs,				
 Moder.U		: Falcon vxl, Battle Fortress vxl, Beam Cannon vxl.
 Super Joe	: Marine shp, Militant shp.			

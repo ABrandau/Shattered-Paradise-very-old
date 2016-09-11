@@ -76,10 +76,10 @@ TrooperRail:
 	Range: 5c0
 	Report: railgunfire.wav
 	Projectile: LaserZap
-		BeamWidth: 1
 		BeamDuration: 20
 		Blockable: true
-		Color: 0080FFC8		
+		Width: 40
+		Color: 0008ED
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 4000
@@ -163,7 +163,7 @@ JuggCannon:
 	Inherits@2: ^Small_Clsn
 	Inherits@3: ^Small_Twlt
 	ReloadDelay: 100
-	Range: 18c0
+	Range: 15c0
 	MinRange: 5c0
 	Burst: 3
 	Report: jugger1.aud
@@ -230,10 +230,10 @@ MechRailgun:
 		Speed: 20c0
 		Duration: 3
 		DamageInterval: 2
-		Width: 75
+		Width: 20
 		BeyondTargetRange: 0c64
 		Blockable: true
-		Color: 00FFFFC8
+		Color: 0008ED
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 15000

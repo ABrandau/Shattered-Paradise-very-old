@@ -136,11 +136,9 @@ EAGLEGUARD:
 		Speed: 46
 	Health:
 		HP: 27500
-	Targetable@razor:
-		TargetTypes: Razorshark
 	-DamagedByTerrain:
 	Armor:
-		Type: Wood
+		Type: Light
 	Armament:
 		Weapon: TrooperRail
 		LocalOffset: 400,100,450
@@ -164,7 +162,7 @@ ALTNODE1:
     Valued:
         Cost: 150
     Tooltip:
-        Name: Flame Warrior
+        Name: Militant
         Description: Light infantry variant. Fires inflamable bullets that incinerate\nunits, damaging units that are nearby the killed unit. They can\nbe ordered to suicide, setting any nearby unit ablaze, dealing\ndamage as mentioned before.\n\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft
     Health:
         HP: 10000
@@ -177,7 +175,8 @@ ALTNODE1:
         UndeployedUpgrades: undeployed
         DeployAnimation:
         Facing: 160
-        AllowedTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
+        AllowedTerrainTypes:
+		CanDeployOnRamps: true
         DeploySound:
         UndeploySound:
     -TakeCover:
@@ -205,6 +204,8 @@ ALTNODE1:
 		ShowToEnemies: true
 		UpgradeTypes: deployed
 		UpgradeMinEnabledLevel: 1
+	Passenger:
+		GrantUpgrades: FlameWarriorHologram
 
 CRUSADER:
 	Inherits: ^Soldier
@@ -234,6 +235,8 @@ CRUSADER:
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	RenderSprites:
+	Passenger:
+		GrantUpgrades: CrusaderHologram
 
 TEMPLAR:
 	Inherits: ^Mutant
@@ -246,13 +249,11 @@ TEMPLAR:
 		Cost: 350
 	Tooltip:
 		Name: Templar
-		Description: Heavy weapons Infantry, heals on Tiberium.\n\n  Deals full damage to ground units.\n  Weak vs Anti infantry weapons, Aircraft.
+		Description: Heavy weapons soldier, heals on Tiberium.\n\n  Deals full damage to ground units.\n  Weak vs Anti infantry weapons, Aircraft.
 	Health:
 		HP: 20000
 	Mobile:
 		Speed: 55
-	Targetable@razor:
-		TargetTypes: Razorshark
 	Armament@PRIMARY:
 		Weapon: TemplarLasor
 		LocalOffset: 200,50,320
@@ -265,6 +266,8 @@ TEMPLAR:
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	RenderSprites:
+	Passenger:
+		GrantUpgrades: TemplarHologram
 
 MHIJACK:
 	Inherits: ^Mutant
@@ -297,12 +300,14 @@ MHIJACK:
 		InitialDelay: 100
 		CloakDelay: 100
 		IsPlayerPalette: true
-		UncloakOn: Attack
+		UncloakOn: Move, Attack, Infiltrate
 	RenderSprites:
 		Image: Chamspy
 	-AutoTarget:
 	WithInfantryBody:
 		AttackSequence: shoot
+	Passenger:
+		GrantUpgrades: HijackerHologram
 
 BHS:
 	Inherits: ^Mutant
@@ -317,8 +322,6 @@ BHS:
 	Tooltip:
 		Name: Hand of Kane
 		Description: Nod Commando, sniper unit.\nCloaked when not attacking.\nCan demolish structures using C4.\nInfantry killed by this unit explode.\nHeals near Tiberium.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
-	Targetable@razor:
-		TargetTypes: Razorshark
 	Targetable@MindControlImmunity:
 		TargetTypes: MindControlInmune
 	SelfHealing@NodCloakHealing:
@@ -352,6 +355,49 @@ BHS:
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	RenderSprites:
+	Passenger:
+		GrantUpgrades: HandHologram
+
+FlameHologram:
+	Inherits@2: ^Hologram
+	Armament:
+		Weapon: MilitantRifle
+	RenderSprites:
+		Image: altnode1
+
+CrusaHologram:
+	Inherits@2: ^Hologram
+	Armament:
+		Weapon: CrusaderBazooka
+		LocalOffset: 0,0,600
+	RenderSprites:
+		Image: crusader
+
+EngineerHologram:
+	Inherits@2: ^Hologram
+	-AttackFrontal
+	RenderSprites:
+		Image: engineer
+
+TemplarHologram:
+	Inherits@2: ^Hologram
+	Armament:
+		Weapon: TemplarLasor
+	Crushable:
+	RenderSprites:
+		Image: templar
+
+HijackerHologram:
+	Inherits@2: ^Hologram
+	RenderSprites:
+		Image: mhijack
+
+HandHologram:
+	Inherits@2: ^Hologram
+	Armament:
+		Weapon: BHRifle
+	RenderSprites:
+		Image: bhs
 
 ############################################
 # Mutant
@@ -547,8 +593,6 @@ MUTFIEND:
 		Type: none
 	Mobile:
 		Speed: 80
-	Targetable@razor:
-		TargetTypes: Razorshark
 	Voiced:
 		VoiceSet: Fiend
 	Targetable:
@@ -627,8 +671,6 @@ AWARRIOR:
 		HP: 15000
 	Mobile:
 		Speed: 68
-	Targetable@razor:
-		TargetTypes: Razorshark
 	AutoTarget:
 		ScanRadius: 6
 	Armament@PRIMARY:
@@ -674,8 +716,6 @@ PSYKER:
 		WarnProbability: 85
 	Mobile:
 		Speed: 75
-	Targetable@razor:
-		TargetTypes: Razorshark
 	Targetable@MindControlImmunity:
 		TargetTypes: MindControlInmune
 	Armament@PRIMARY:
@@ -694,7 +734,6 @@ PSYKER:
 ############################################
 shark:
 	Inherits: ^ScrinSoldier
-	Inherits@2: ^PermanentSelfHeal
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 24
@@ -703,13 +742,13 @@ shark:
 		Cost: 300
 	Tooltip:
 		Name: Razorshark
-		Description: Anti-infantry creature, fast and deadly\nInstakills non-armored infantry. Does\nnot release essence from killed infantry.\n\n  Strong vs Light Infantry.\n  Weak vs Everything else.
+		Description: Anti-infantry creature, fast and deadly.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Structures, Aircraft.
 	Selectable:
 		Class: Shark
 	Health:
-		HP: 8500
+		HP: 17000
 	Mobile:
-		Speed: 78
+		Speed: 90
 		Voice: Move
 	SpawnActorOnDeath@conversion:
 		Actor: cybdog
@@ -724,21 +763,19 @@ shark:
 	-SpawnActorOnDeath@berserk:
 		Probability: 40
 	-SpawnActorOnDeath@berserk2:
-	-Targetable@Essence:
-	-SelfHealing@Scrin:
 	RevealsShroud:
 		Range: 5c0
 	Armament:
 		Weapon: SharkJump
-	AttackLeap:
+	Armament@1:
+		Weapon: SharkJump2
+	AttackFrontal:
 		Voice: Attack
 	AttackMove:
 		Voice: Move
 	AutoTarget:
 		ScanRadius: 8
-		InitialStance: Defend
-	Targetable@razor:
-		TargetTypes: Razorshark
+		InitialStance: AttackAnything
 	WithInfantryBody:
 		AttackSequence: shoot
 		StandSequences: stand
@@ -813,8 +850,6 @@ COLOSSI:
 	Tooltip:
 		Name: Colossus
 		Description: Heavy duty alien that can take lots of punishment\nand electrify its sorroundings when ordered to.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
-	Targetable@razor:
-		TargetTypes: Razorshark
 	Targetable@Colossi:
 		TargetTypes: Colossi
 	Selectable:
@@ -963,8 +998,6 @@ BUG:
 	Tooltip:
 		Name: Overtaker
 		Description: Alien species that can mind control enemies for brief moments.\n\n  Strong vs Ground units.\n  Weak vs Aircraft.
-	Targetable@razor:
-		TargetTypes: Razorshark
 	Targetable@MindControlImmunity:
 		TargetTypes: MindControlInmune
 	Selectable:
@@ -1060,8 +1093,6 @@ CYBORG:
 		Voice: Move
 	RevealsShroud:
 		Range: 8c0
-	Targetable@razor:
-		TargetTypes: Razorshark
 	Voiced:
 		VoiceSet: Cyborg
 	Mobile:
@@ -1268,8 +1299,6 @@ REAPERCAB:
 	SupplyTruck
 		Payload: 300
 		Voice: Move
-	Targetable@razor:
-		TargetTypes: Razorshark
 	Mobile:
 		Speed: 80
 		SharesCell: False
@@ -1323,8 +1352,6 @@ GLAD:
 		Bounds: 35,30,0,-10
 	Voiced:
 		VoiceSet: Cyborg
-	Targetable@razor:
-		TargetTypes: Razorshark
 	WithMuzzleOverlay:
 	Mobile:
 		Speed: 56

@@ -365,6 +365,10 @@ repair:
 	Inherits: ^EmpOverlay
 	icon: rboticon
 
+hologramprojector:
+	Inherits: ^EmpOverlay
+	icon: hologramprojectoricon
+
 armh:
 	Inherits: ^EmpOverlay
 	icon: beamcannonicon

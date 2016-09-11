@@ -463,7 +463,7 @@ NALASR:
 	RenderVoxels:
 	WithVoxelTurret:
 	Power:
-		Amount: -300
+		Amount: -30
 	SelectionDecorations:
 		VisualBounds: 40, 36, -8, -8
 
@@ -577,7 +577,7 @@ MASTL:
 		Range: 5c0
 		EnableSound: cloak5.aud
 		DisableSound: cloak5.aud
-		AffectsParent: false
+		AffectsParent: True
 
 DLIMPET:
 	Inherits: ^DeployedVehicle
@@ -1266,7 +1266,7 @@ SCRSW1:
 		DisplayTimer: True
 		DisplayBeacon: True
 		LongDesc: Drags meteors from orbit dealing moderate \ndamage over a wide area.
-		ChargeTime: 360
+		ChargeTime: 240
 		Weapon: MeteorSpawner
 
 SCRSHIELD:

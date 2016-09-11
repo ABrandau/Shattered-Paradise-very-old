@@ -418,7 +418,7 @@ BIKE:
 		Cost: 600
 	Tooltip:
 		Name: Demo Cycle
-		Description: Suicide Vehicle armed with an explosive warhead.\nExplodes its warhead when destroyed.\n\n Strong vs Light armored ground units.\n  Weak vs Structures.
+		Description: Suicide Vehicle armed with an explosive warhead.\nExplodes its warhead when destroyed.\nCan be carried on subterranean APCs.\n\n Strong vs Light armored ground units.\n  Weak vs Structures.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 12
@@ -430,6 +430,9 @@ BIKE:
 		Crushes: crate
 	Health:
 		HP: 7000
+	Passenger:
+		CargoType: Infantry
+		Weight: 5
 	RevealsShroud:
 		Range: 7c0
 	Explodes:
@@ -438,39 +441,58 @@ BIKE:
 	AttackSuicides:
 
 SAPC:
-	Inherits: ^VoxelTank
+	Inherits: ^Helicopter
 	Inherits@2: ^NodCloakHealing
 	Valued:
 		Cost: 800
 	Tooltip:
 		Name: Subterranean APC
-		Description: Troop transport that can move\nunderground to avoid detection.\n\n WIP Unit - Cloaks instead of moving undergraound\n  Unarmed
+		Description: Troop transport that can move underground to avoid detection.\nPassengers don't suvive the destruction of this vehicle.\n\n  Unarmed
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 13
 		Prerequisites: ~naweap, naradr
-	Mobile:
-		TurnSpeed: 7
-		Speed: 100
+	Selectable:
+		Priority: 7
+	Aircraft:
+		LandWhenIdle: yes
+		TurnSpeed: 5
+		Speed: 50
+		InitialFacing: 0
+		TakeoffSound: subdril1.aud
+		LandingSound: subdril1.aud
+		CruiseAltitude: -2c0
+		MinAirborneAltitude: -500
+		AltitudeVelocity: 0c43
+	-Targetable@GROUND:
+	Targetable@FuckingApc:
+		TargetTypes: Vehicle
+		UpgradeTypes: airborne
+		UpgradeMinEnabledLevel: 1
+		-UpgradeMaxEnabledLevel: 0
+	Targetable@AIRBORNE:
+		TargetTypes: None
+		UpgradeTypes: airborne
+		UpgradeMaxEnabledLevel: 0
+		-UpgradeMinEnabledLevel: 1
+	WithVoxelBody:
+		UpgradeTypes: airborne
+		UpgradeMinEnabledLevel: 1
+	ExplodeWeapon:
+		Weapon: SUBAPCTRAIL
+		UpgradeTypes: airborne
+		UpgradeMaxEnabledLevel: 0
 	Health:
 		HP: 17500
 	Armor:
 		Type: Light
-	Cloak@cloakgenerator:
-		UpgradeTypes:
-		InitialDelay: 80
-		CloakDelay: 80
-		CloakSound: cloak5.aud
-		UncloakSound: cloak5.aud
-		IsPlayerPalette: true
-		UncloakOn: Unload, Move
+	RenderSprites:
 	Cargo:
-		Types: Infantry
+		Types: Infantry, Bike
 		MaxWeight: 5
 		PipCount: 5
 		UnloadVoice: Unload
 		LoadingUpgrades: notmobile
-		EjectOnDeath: true
 
 REPAIR:
 	Inherits: ^VoxelTank
@@ -499,6 +521,62 @@ REPAIR:
 		ForceTargetStances: None
 	AttackFrontal:
 		Voice: Attack
+
+HOLOGRAMPROJECTOR:
+	Inherits: ^VoxelTank
+	Inherits@2:	^Ra2vxl
+	Inherits@3: ^NodCloakHealing
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 14
+		Prerequisites: ~naweap, naradr
+	Valued:
+		Cost: 1000
+	Tooltip:
+		Name: Hologram Projector
+		Description: Creates fake units based on the unit that is inside the vehicle.\n\n  Unarmed
+	Health:
+		HP: 20000
+	Selectable:
+		Priority: 7
+	Mobile:
+		Speed: 85
+		TurnSpeed: 5
+	RevealsShroud:
+		Range: 5c0
+	RenderVoxels:
+		Scale: 0.7
+	Cargo:
+		Types: Infantry
+		MaxWeight: 1
+		PipCount: 1
+		UnloadVoice: Unload
+		LoadingUpgrades: notmobile
+		EjectOnDeath: true
+	ExplodeWeapon@Flame:
+		Weapon: FlameHologram
+		UpgradeTypes: FlameWarriorHologram
+		UpgradeMinEnabledLevel: 1
+	ExplodeWeapon@Crusa:
+		Weapon: CrusaHologram
+		UpgradeTypes: CrusaderHologram
+		UpgradeMinEnabledLevel: 1
+	ExplodeWeapon@Engineer:
+		Weapon: EngineerHologram
+		UpgradeTypes: EngineerHologram
+		UpgradeMinEnabledLevel: 1
+	ExplodeWeapon@Templar:
+		Weapon: TemplarHologram
+		UpgradeTypes: TemplarHologram
+		UpgradeMinEnabledLevel: 1
+	ExplodeWeapon@Hijacker:
+		Weapon: HijackerHologram
+		UpgradeTypes: HijackerHologram
+		UpgradeMinEnabledLevel: 1
+	ExplodeWeapon@Hand:
+		Weapon: HandHologram
+		UpgradeTypes: HandHologram
+		UpgradeMinEnabledLevel: 1
 
 SUBTANK:
 	Inherits: ^VoxelTank
@@ -630,10 +708,10 @@ LIMPED:
 	Inherits@1: ^ScrinRender
 	Inherits@2: ^NodCloakHealing
 	Inherits@3: ^HoverVehicle
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 18
-		Prerequisites: ~naweap, naradr
+	# Buildable:
+		# Queue: Vehicle
+		# BuildPaletteOrder: 18
+		# Prerequisites: ~naweap, naradr
 	Valued:
 		Cost: 800
 	Tooltip:
@@ -749,10 +827,10 @@ DEATHCLAW:
 		BuildPaletteOrder: 31
 		Prerequisites: ~muweap, mustable, muhall
 	Valued:
-		Cost: 1200
+		Cost: 900
 	Tooltip:
 		Name: Ravager
-		Description: Melee Beast, can take a great amount of punishment.\n\n  Strong vs Ground Units\n  Weak vs Aircraft.\n  Can only target base defences.
+		Description: Melee Beast, can take a great amount of punishment.\n\n  Strong vs Ground Units\n  Weak vs Aircraft.
 	Voiced:
 		VoiceSet: Fiend
 	-RejectsOrders@berserk:
@@ -779,9 +857,10 @@ DEATHCLAW:
 	Mobile:
 		Speed: 78
 		SharesCell: false
-	Armament@PRIMARY:
+	Armament:
 		Weapon: DeathclawBlow
-		LocalOffset: 128,0,500
+	Armament@1:
+		Weapon: DeathclawBlow2
 	AttackFrontal:
 		Voice: Attack
 	SelectionDecorations:
@@ -1031,7 +1110,6 @@ SCRHARV:
 	Selectable:
 		Priority: 7
 		Bounds: 36,36
-	-Capturable:
 	Targetable@MindControl:
 		TargetTypes: MindControlInmune
 	Harvester:
@@ -1097,28 +1175,94 @@ SCRSCORPION:
 	WithInfantryBody:
 	Selectable:
 		Bounds: 50, 32, 0, -8
+	-SelfHealing@ELITE:
+
+SCRGLYDER2:
+	Inherits: ^ScrinVehicle
+	Inherits@1: ^HoverVehicle
+	Inherits@3: ^BasicStealthDetection
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 31
+		Prerequisites: ~scrweap
+	Valued:
+		Cost: 650
+	Tooltip:
+		Name: Glider
+		Description: Specialized weapons platform it can vary from a ground version and\naerial version. The aerial version attacks ground units and vice versa.\n\n Strong vs Armor.\n  Weak vs Light units.
+	Health:
+		HP: 15000
+	Mobile:
+		Speed: 91
+	Transforms:
+		IntoActor: scrglyder1
+	Armament:
+		Weapon: Glyder2Cannon
+		Recoil: 85
+		RecoilRecovery: 25
+		LocalOffset: 768,0,90
+	AutoTarget:
+	AttackFrontal:
+	RenderSprites:
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32
+	-SelfHealing@ELITE:
+
+SCRMBT:
+	Inherits: ^ScrinVehicle
+	Inherits@1: ^HoverVehicle
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 32
+		Prerequisites: ~scrweap, scrradr
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Hover Tank
+		Description: Light Tank, good for scouting, deals damage over an area.\n\n Strong vs Light, heavy armor\n  Weak vs Infantry, Aircraft
+	Health:
+		HP: 30000
+	Armor:
+		Type: Heavy
+	Armor@HoverTank:
+		Type: HoverTank
+	Mobile:
+		Speed: 100
+	Turreted:
+		TurnSpeed: 7
+	Armament:
+		Weapon: ScrMbtCannon
+		LocalOffset: 250,0,900
+		MuzzleSequence: muzzle
+	AttackTurreted:
+	WithSpriteTurret:
+	AutoTarget:
+	RenderSprites:
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32
+	-SelfHealing@ELITE:
+
 
 SCRRECHARGER:
 	Inherits: ^ScrinVehicle
 	Inherits@1: ^Walker
 	Valued:
-		Cost: 900
+		Cost: 800
 	Tooltip:
 		Name: Essence Battery
 		Description: Support walker. Stores essence from fallen units\nand spends it to heal Scrin units.\n\n  Unarmed.
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 31
-		Prerequisites: ~scrweap
+		BuildPaletteOrder: 33
+		Prerequisites: ~scrweap, scrradr
 	Mobile:
 		TurnSpeed: 6
 		Speed: 60
 		Crushes: crate
-	UpgradeActorsNear:
-		Upgrades: StandOnTib
-		Range: 4c0
 	Health:
-		HP: 30000
+		HP: 25000
 	WithRangeCircle:
 		Range: 4c0
 		Type: ScrinEssence
@@ -1155,71 +1299,7 @@ SCRRECHARGER:
 		MoveSequence: run
 	-SelfHealing@Scrin:
 	-SelfHealing@ScrinCounter:
-
-SCRGLYDER2:
-	Inherits: ^ScrinVehicle
-	Inherits@1: ^HoverVehicle
-	Inherits@3: ^BasicStealthDetection
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 32
-		Prerequisites: ~scrweap, scrradr
-	Valued:
-		Cost: 650
-	Tooltip:
-		Name: Glider
-		Description: Specialized weapons platform it can vary from a ground version and\naerial version. The aerial version attacks ground units and vice versa.\n\n Strong vs Armor.\n  Weak vs Light units.
-	Health:
-		HP: 15000
-	Mobile:
-		Speed: 91
-	Transforms:
-		IntoActor: scrglyder1
-	Armament:
-		Weapon: Glyder2Cannon
-		Recoil: 85
-		RecoilRecovery: 25
-		LocalOffset: 768,0,90
-	AutoTarget:
-	AttackFrontal:
-	RenderSprites:
-	WithFacingSpriteBody:
-	BodyOrientation:
-		QuantizedFacings: 32
-
-SCRMBT:
-	Inherits: ^ScrinVehicle
-	Inherits@1: ^HoverVehicle
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 33
-		Prerequisites: ~scrweap, scrradr
-	Valued:
-		Cost: 900
-	Tooltip:
-		Name: Hover Tank
-		Description: Light Tank, good for scouting, deals damage over an area.\n\n Strong vs Light, heavy armor\n  Weak vs Infantry, Aircraft
-	Health:
-		HP: 30000
-	Armor:
-		Type: Heavy
-	Armor@HoverTank:
-		Type: HoverTank
-	Mobile:
-		Speed: 100
-	Turreted:
-		TurnSpeed: 7
-	Armament:
-		Weapon: ScrMbtCannon
-		LocalOffset: 250,0,900
-		MuzzleSequence: muzzle
-	AttackTurreted:
-	WithSpriteTurret:
-	AutoTarget:
-	RenderSprites:
-	WithFacingSpriteBody:
-	BodyOrientation:
-		QuantizedFacings: 32
+	-SelfHealing@ELITE:
 
 TRIPOD:
 	Inherits: ^ScrinVehicle
@@ -1276,6 +1356,7 @@ TRIPOD:
 		AttackSequence: shoot
 	QuantizeFacingsFromSequence:
 		Sequence: stand
+	-SelfHealing@ELITE:
 ##########################################################
 # Unused
 ##########################################################

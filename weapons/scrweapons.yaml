@@ -1,15 +1,30 @@
 SharkJump:
+	Inherits: ^RifleWarhead
 	ValidTargets: Infantry
-	ReloadDelay: 75
+	ReloadDelay: 20
 	Range: 1c0
 	Report: fiend2.aud
-	InvalidTargets: Razorshark
+	Projectile: Bullet
+		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
-		Spread: 50
+		Spread: 32
 		Damage: 2000
 		ValidTargets: Infantry
-		InvalidTargets: Razorshark
-		DamageTypes: ScrinEssenceKill
+		DamageTypes: TriggerProne, BulletDeath, ScrinEssenceKill
+
+SharkJump2:
+	Inherits: ^RifleWarhead
+	ValidTargets: Building, Defence
+	ReloadDelay: 20
+	Range: 2c0
+	Report: fiend2.aud
+	Projectile: Bullet
+		Speed: 100c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 64
+		Damage: 2000
+		ValidTargets: Building, Defence
+		DamageTypes: TriggerProne, BulletDeath, ScrinEssenceKill
 
 LegioNeedler:
 	Inherits: ^RocketWarhead
@@ -140,7 +155,6 @@ StalkerSteal:
 	Projectile: Bullet
 		Speed: 100c0
 		Image: 120mm
-		ValidTargets: Infantry, Vehicle
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
@@ -547,7 +561,7 @@ CouncilSteal:
 NeedlerAcid:
 	Inherits: ^FlameWarhead
 	ReloadDelay: 100
-	Range: 4c768
+	Range: 6c768
 	Burst: 7
 	Report: flamtnk1.aud
 	Projectile: Bullet
@@ -558,7 +572,7 @@ NeedlerAcid:
 	BurstDelay: 4
 	Warhead@1Dam: SpreadDamage
 		Spread: 80
-		Damage: 1200
+		Damage: 1000
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath, ScrinEssenceKill
 	Warhead@2Smu: LeaveSmudge
 		SmudgeType: SmallScorch
@@ -582,7 +596,7 @@ TractorBeam:
 		Palette: pips
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 600
+		Damage: 800
 		ValidTargets: Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@TractorStop: GrantUpgrade
@@ -664,6 +678,7 @@ EssenceMissile:
 	ReloadDelay: 45
 	Range: 7c0
 	ValidTargets: ScrinUnit
+	InvalidTargets: EssenceBattery
 	Projectile: Missile
 		Speed: 100
 		Blockable: False
@@ -702,12 +717,16 @@ HealScrin:
 	Warhead@1Dam: SpreadDamage
 		DebugOverlayColor: 00FF00
 		Spread: 1c0
-		Damage: -10000
+		Damage: -3000
 		AffectsParent: True
 		Versus:
 			None: 50
 			Light: 75
 			Heavy: 100
 		ValidTargets: ScrinUnit
+	Warhead@emp: GrantUpgrade
+		Range: 1c0
+		Duration: 150
+		Upgrades: StandOnTib
 
 

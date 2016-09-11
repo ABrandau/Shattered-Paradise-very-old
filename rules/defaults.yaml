@@ -872,6 +872,58 @@
 		CrushedSequencePalette: player
 		CrushedPaletteIsPlayerPalette: true
 
+^Hologram:
+	Inherits: ^Soldier
+	RevealsShroud:
+		Range: 3c0
+	Health:
+		HP: 3500
+	-Armor:
+	-GainsExperience:
+	-GivesExperience:
+	-Passenger:
+	-DamagedByTerrain:
+	AttackFrontal:
+	WithDecoration@holoicon:
+		Image: holoicon
+		Sequence: idle
+		ReferencePoint: Bottom, Right
+		Palette: mouse
+		ShowToEnemies: true
+	WithDeathAnimation@body:
+		DeathSequencePalette: apolra2i
+		DeathPaletteIsPlayerPalette: False
+		DeathTypes: #1 2 normals, 3 headshot, 4 explosion
+			BulletDeath: evaporate
+			CabalDeath: evaporate
+			CabalDeathCrate: evaporate
+			BlackHandRfle: evaporate
+			HeadshotDeath: evaporate
+			SmallExplosionDeath: evaporate
+			FireDeath: evaporate
+			TiberiumDeath: evaporate
+			TiberiumDeathStrong: evaporate
+			EnergyDeath: evaporate
+			ExplosionDeath: evaporate
+	FirepowerMultiplier@Hologram:
+		Modifier: 20
+		BaseLevel: 0
+	-WithDeathAnimation@normal:
+	-WithDeathAnimation@tib:
+	-WithDeathAnimation@explosion:
+	-WithDeathAnimation@energy:
+	-SpawnActorOnDeath@FLAMEGUY:
+	-SpawnActorOnDeath@FLAMEGUY2:
+	-SpawnActorOnDeath@tiberium:
+	-SpawnActorOnDeath@tiberium2:
+	-SpawnActorOnDeath@berserk:
+	-SpawnActorOnDeath@tiberium3:
+	-SpawnActorOnDeath@tiberium4:
+	-SpawnActorOnDeath@berserk2:
+	-SpawnActorOnDeath@conversion:
+	-SpawnActorOnDeath@blackhand:
+	-SpawnActorOnDeath@ScrinEssence:
+
 ^Engineer:
 	Valued:
 		Cost: 500
@@ -912,6 +964,8 @@
 	Captures:
 		CaptureTypes: building
 		PlayerExperience: 50
+	Passenger:
+		GrantUpgrades: EngineerHologram
 
 ^Vehicle:
 	Inherits@0: ^GainsExperience
@@ -1126,7 +1180,6 @@
 		EmptyWeapon: ScrinUnitExplode
 	Voiced:
 		VoiceSet: Limpet
-	-SelfHealing@ELITE:
 
 ^VoxelVehicle:
 	Inherits: ^Vehicle
@@ -1675,8 +1728,8 @@
 	SelfHealing@Scrin:
 		PercentageStep: -1
 		Step: 0
-		Delay: 5
-		DamageCooldown: 100
+		Delay: 75
+		DamageCooldown: 0
 		HealIfBelow: 105
 		DamageTypes: ScrinEssenceKill
 		UpgradeMaxEnabledLevel: 0
@@ -1684,9 +1737,9 @@
 	SelfHealing@ScrinCounter:
 		PercentageStep: 1
 		Step: 0
-		Delay: 5
-		DamageCooldown: 100
-		HealIfBelow: 50
+		Delay: 75
+		DamageCooldown: 0
+		HealIfBelow: 60
 		DamageTypes: ScrinEssenceKill
 		UpgradeMaxEnabledLevel: 0
 		UpgradeTypes: StandOnTib, selfheal

@@ -814,8 +814,14 @@ NASTLH:
 		Sequence: pulse
 		PauseOnLowPower: true
 	WithRangeCircle:
-		Range: 10c0
+		Range: 12c0
 		Type: cloakgenerator
+	UpgradeActorsNear:
+		Upgrades: cloakgenerator, NodCloakHealing
+		Range: 12c0
+		EnableSound: cloak5.aud
+		DisableSound: cloak5.aud
+		AffectsParent: false
 	Power:
 		Amount: -300
 	RequiresPower:
@@ -823,12 +829,6 @@ NASTLH:
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
 		IndicatorPalette: mouse
-	UpgradeActorsNear:
-		Upgrades: cloakgenerator, NodCloakHealing
-		Range: 12c0
-		EnableSound: cloak5.aud
-		DisableSound: cloak5.aud
-		AffectsParent: false
 	Selectable:
 		Bounds: 106, 48, 8, -6
 	SelectionDecorations:
@@ -1193,6 +1193,12 @@ drached:
 	Tooltip:
 		Name: Deployed Host Station
 		Description: Builds base structures.
+	UpgradeActorsNear:
+		Upgrades: StandOnTib
+		Range: 5c0
+	WithRangeCircle:
+		Range: 5c0
+		Type: ScrinEssence
 	WithBuildingExplosion:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
@@ -1239,9 +1245,9 @@ SCRPOWR:
 		Palette: apolbluealpha
 	UpgradeActorsNear:
 		Upgrades: StandOnTib
-		Range: 4c0
+		Range: 5c0
 	WithRangeCircle:
-		Range: 4c0
+		Range: 5c0
 		Type: ScrinEssence
 	Health:
 		HP: 100000
@@ -1280,9 +1286,9 @@ SCRADVPOWR:
 		Prerequisite: scrpowr
 	UpgradeActorsNear:
 		Upgrades: StandOnTib
-		Range: 6c0
+		Range: 9c0
 	WithRangeCircle:
-		Range: 6c0
+		Range: 9c0
 		Type: ScrinEssence
 	Building:
 		Footprint: xxx xxx xxx
@@ -1337,7 +1343,7 @@ SCRRAX:
 	Selectable:
 		Bounds: 88, 48, 0, -8
 	UpgradeActorsNear:
-		Upgrades: MineReam
+		Upgrades: MineReam, StandOnTib
 		Range: 4c0
 	WithRangeCircle:
 		Range: 4c0
@@ -1449,6 +1455,12 @@ SCRWEAP:
 		HP: 130000
 	Armor:
 		Type: Heavy
+	UpgradeActorsNear:
+		Upgrades: StandOnTib
+		Range: 4c0
+	WithRangeCircle:
+		Range: 4c0
+		Type: Mines
 	RallyPoint:
 		Offset: 4,1
 		Palette: mouse
@@ -1783,6 +1795,12 @@ CABWEAP:
 		IsPlayerPalette: false
 	RevealsShroud:
 		Range: 6c0
+	UpgradeActorsNear:
+		Upgrades: StandOnTib
+		Range: 4c0
+	WithRangeCircle:
+		Range: 4c0
+		Type: ScrinEssence
 	Exit@1:
 		SpawnOffset: -384,-384,0
 		ExitCell: 3,1

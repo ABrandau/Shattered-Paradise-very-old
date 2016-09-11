@@ -15,7 +15,9 @@ make sure units match their looks.
 increase the brightness of some maps.
 Re render cabal stuff and remove black colors.
 drill sound for abductor
-Rework scrin -> loose health if haven't killed anything up to 50% , and essence batteries can stop that.
+Make nod feel more guerrilla like, toxins, ambushes, decoy armies and units that can hide.
+If sensor arrays are added, give nod a support ability to detect all sensor arrays in the level.
+Make alien air units behave as reapers.
 
 Balance
 marauder bad death anim

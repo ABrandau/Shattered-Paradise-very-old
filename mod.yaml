@@ -321,6 +321,10 @@ GameSpeeds:
 		Name: Fastest
 		Timestep: 20
 		OrderLatency: 6
+	simulationspeed:
+		Name: 20 times Fastest
+		Timestep: 1
+		OrderLatency: 6
 
 ColorValidator:
 
