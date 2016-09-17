@@ -246,29 +246,49 @@ mcv.mut:
 mcv.cab:
 	Inherits: ^EmpOverlay
 	icon: cabmcvicon
-	
-harv.gdi:
-	Inherits: ^EmpOverlay
+
+^Harvester:
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0, 37
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	veins: veinatac
+		Length: 12
+		UseTilesetExtension: true
+		ZOffset: 1023
+		Offset: 0, -12
+	smoketrailsmall: smoketrailsmall
+		Length: *
+	sparks: sparks3
+		Length: *
+	muzzle: gunfire
+		Length: *
+		Offset: 0, 0, 28
+	dummy: dot
+		UseTilesetCode: false
+		ZOffset: -9999
 	harvest: harvestr
 		Length: *
+		ZRamp: 1
+		Offset: 0, 0, 6
+	icon: sidebar-gdi|harvicon
+
+harv.gdi:
+	Inherits: ^Harvester
 	icon: sidebar-gdi|harvicon	
 	
 harv.nod:
-	Inherits: ^EmpOverlay
-	harvest: harvestr
-		Length: *
+	Inherits: ^Harvester
 	icon: sidebar-nod|harvicon	
 
 harv.mut:
-	Inherits: ^EmpOverlay
-	harvest: harvestr
-		Length: *
+	Inherits: ^Harvester
 	icon: mutharvicon
 
 harv.cab:
-	Inherits: ^EmpOverlay
-	harvest: harvestr
-		Length: *
+	Inherits: ^Harvester
 	icon: cabharvicon
 
 lpst.gdi:
@@ -297,7 +317,7 @@ lpst.nod:
 ##########################################################
 gacnst:
 	Defaults:
-		Offset: 0, -36
+		Offset: 0, -36, 36
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -348,11 +368,12 @@ gacnst:
 		Offset: 0,0
 		UseTilesetCode: false	
 
-# TODO: unused narefn_a
-proc.gdi:
+^Proc:
 	Defaults: ntrefn
-		Offset: -12, -42
+		Offset: -12, -42, 20
+		DepthSpriteOffset: 22, 0
 		UseTilesetCode: true
+		DepthSprite: isodepth.shp
 	idle:
 		ShadowStart: 3
 	damaged-idle:
@@ -365,11 +386,13 @@ proc.gdi:
 	make: ntrefnmk
 		Length: 20
 		ShadowStart: 20
+		Offset: -12, -42, 43
+		DepthSpriteOffset: -12, 0
+	flame: ntrefn_b
+		Length: *
 	unload-overlay: narefn_a
 		Length: *
 		ZOffset: 1024
-	flame: ntrefn_b
-		Length: *
 	idle-redlights: ntrefn_c
 		Length: 16
 		Tick: 120
@@ -377,150 +400,64 @@ proc.gdi:
 		Length: 16
 		Tick: 120
 	bib: ntrefnbb
+		Length: 1
 		ZOffset: -1024
+		Offset: -12, -42, 5
+		ZRamp: 1
+		-DepthSprite:
 	damaged-bib: ntrefnbb
 		Start: 1
 		ZOffset: -1024
+		Offset: -12, -42, 5
+		ZRamp: 1
+		-DepthSprite:
+	dead-bib: ntrefnbb
+		Start: 2
+		ZOffset: -1024
+		Offset: -12, -42, 5
+		ZRamp: 1
+		-DepthSprite:
 	emp-overlay: emp_fx01
 		Length: *
-		Offset: 0, 0
+		Offset: 0, 0, 21
 		UseTilesetCode: false
 		ZOffset: 512
 		BlendMode: Additive
+		-DepthSprite:
+
+# TODO: unused narefn_a
+proc.gdi:
+	Inherits: ^Proc
 	icon: sidebar-gdi|reficon
 		Offset: 0, 0
 		UseTilesetCode: false
+		-DepthSprite:
 
 # TODO: unused narefn_a
 proc.nod:
-	Defaults: ntrefn
-		Offset: -12, -42
-		UseTilesetCode: true
-	idle:
-		ShadowStart: 3
-	damaged-idle:
-		Start: 1
-		ShadowStart: 4
-	dead:
-		Start: 2
-		ShadowStart: 5
-		Tick: 400
-	make: ntrefnmk
-		Length: 20
-		ShadowStart: 20
-	flame: ntrefn_b
-		Length: *
-	unload-overlay: narefn_a
-		Length: *
-		ZOffset: 1024
-	idle-redlights: ntrefn_c
-		Length: 16
-		Tick: 120
-	damaged-idle-redlights: ntrefn_c
-		Length: 16
-		Tick: 120
-	bib: ntrefnbb
-		ZOffset: -1024
-	damaged-bib: ntrefnbb
-		Start: 1
-		ZOffset: -1024
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^Proc
 	icon: sidebar-nod|reficon
 		Offset: 0, 0
 		UseTilesetCode: false
+		-DepthSprite:
 
 proc.mut:
-	Defaults: ntrefn
-		Offset: -12, -42
-		UseTilesetCode: true
-	idle:
-		ShadowStart: 3
-	damaged-idle:
-		Start: 1
-		ShadowStart: 4
-	dead:
-		Start: 2
-		ShadowStart: 5
-		Tick: 400
-	make: ntrefnmk
-		Length: 20
-		ShadowStart: 20
-	flame: ntrefn_b
-		Length: *
-	unload-overlay: narefn_a
-		Length: *
-		ZOffset: 1024
-	idle-redlights: ntrefn_c
-		Length: 16
-		Tick: 120
-	damaged-idle-redlights: ntrefn_c
-		Length: 16
-		Tick: 120
-	bib: ntrefnbb
-		ZOffset: -1024
-	damaged-bib: ntrefnbb
-		Start: 1
-		ZOffset: -1024
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^Proc
 	icon: mutref
 		Offset: 0, 0
 		UseTilesetCode: false
+		-DepthSprite:
 
 proc.cab:
-	Defaults: ntrefn
-		Offset: -12, -42
-		UseTilesetCode: true
-	idle:
-		ShadowStart: 3
-	damaged-idle:
-		Start: 1
-		ShadowStart: 4
-	dead:
-		Start: 2
-		ShadowStart: 5
-		Tick: 400
-	make: ntrefnmk
-		Length: 20
-		ShadowStart: 20
-	flame: ntrefn_b
-		Length: *
-	unload-overlay: narefn_a
-		Length: *
-		ZOffset: 1024
-	idle-redlights: ntrefn_c
-		Length: 16
-		Tick: 120
-	damaged-idle-redlights: ntrefn_c
-		Length: 16
-		Tick: 120
-	bib: ntrefnbb
-		ZOffset: -1024
-	damaged-bib: ntrefnbb
-		Start: 1
-		ZOffset: -1024
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^Proc
 	icon: cabref
 		Offset: 0, 0
 		UseTilesetCode: false
+		-DepthSprite:
 
-gasilo.gdi:
+^Gasilo:
 	Defaults: gtsilo
-		Offset: 0, -24
+		Offset: 0, -24, 24
 		UseTilesetCode: true
 	idle: gtsilo_a
 	damaged-idle: gtsilo_a
@@ -558,146 +495,36 @@ gasilo.gdi:
 		UseTilesetCode: false
 		ZOffset: 512
 		BlendMode: Additive
+
+gasilo.gdi:
+	Inherits: ^Gasilo
 	icon: sidebar-gdi|siloicon
 		Offset: 0, 0
 		UseTilesetCode: false
 
 gasilo.nod:
-	Defaults: gtsilo
-		Offset: 0, -24
-		UseTilesetCode: true
-	idle: gtsilo_a
-	damaged-idle: gtsilo_a
-		Start: 4
-	stages: gtsilo_a
-		Length: 4
-	damaged-stages: gtsilo_a
-		Start: 4
-		Length: 4
-	idle-underlay:
-		ShadowStart: 3
-		ZOffset: -512
-	damaged-idle-underlay:
-		Start: 1
-		ShadowStart: 4
-		ZOffset: -512
-	dead:
-		Start: 2
-		ShadowStart: 5
-		ZOffset: -512
-		Tick: 400
-	idle-lights: gtsilo_b
-		Length: 16
-		Tick: 120
-	damaged-idle-lights: gtsilo_b
-		Start: 16
-		Length: 16
-		Tick: 120
-	make: gtsilomk
-		Length: 18
-		ShadowStart: 20
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^Gasilo
 	icon: sidebar-nod|siloicon
 		Offset: 0, 0
 		UseTilesetCode: false
 
 gasilo.mut:
-	Defaults: gtsilo
-		Offset: 0, -24
-		UseTilesetCode: true
-	idle: gtsilo_a
-	damaged-idle: gtsilo_a
-		Start: 4
-	stages: gtsilo_a
-		Length: 4
-	damaged-stages: gtsilo_a
-		Start: 4
-		Length: 4
-	idle-underlay:
-		ShadowStart: 3
-		ZOffset: -512
-	damaged-idle-underlay:
-		Start: 1
-		ShadowStart: 4
-		ZOffset: -512
-	dead:
-		Start: 2
-		ShadowStart: 5
-		ZOffset: -512
-		Tick: 400
-	idle-lights: gtsilo_b
-		Length: 16
-		Tick: 120
-	damaged-idle-lights: gtsilo_b
-		Start: 16
-		Length: 16
-		Tick: 120
-	make: gtsilomk
-		Length: 18
-		ShadowStart: 20
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^Gasilo
 	icon: mutsilo
 		Offset: 0, 0
 		UseTilesetCode: false
 
 gasilo.cab:
-	Defaults: gtsilo
-		Offset: 0, -24
-		UseTilesetCode: true
-	idle: gtsilo_a
-	damaged-idle: gtsilo_a
-		Start: 4
-	stages: gtsilo_a
-		Length: 4
-	damaged-stages: gtsilo_a
-		Start: 4
-		Length: 4
-	idle-underlay:
-		ShadowStart: 3
-		ZOffset: -512
-	damaged-idle-underlay:
-		Start: 1
-		ShadowStart: 4
-		ZOffset: -512
-	dead:
-		Start: 2
-		ShadowStart: 5
-		ZOffset: -512
-		Tick: 400
-	idle-lights: gtsilo_b
-		Length: 16
-		Tick: 120
-	damaged-idle-lights: gtsilo_b
-		Start: 16
-		Length: 16
-		Tick: 120
-	make: gtsilomk
-		Length: 18
-		ShadowStart: 20
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^Gasilo
 	icon: cabsilo
 		Offset: 0, 0
 		UseTilesetCode: false		
-		
-gadept.gdi:
+
+^Gadept:
 	Defaults: gtdept
-		Offset: 0, -36
+		Offset: 0, -36, 36
 		UseTilesetCode: true
+		DepthSprite: isodepth.shp
 	idle:
 		ShadowStart: 3
 	damaged-idle:
@@ -750,211 +577,46 @@ gadept.gdi:
 		ShadowStart: 10
 	emp-overlay: emp_fx01
 		Length: *
-		Offset: 0, 0
+		Offset: 0, 0, 37
 		UseTilesetCode: false
 		ZOffset: 512
 		BlendMode: Additive
+		-DepthSprite:
+		
+gadept.gdi:
+	Inherits: ^Gadept
 	icon: sidebar-gdi|fixicon
 		Offset: 0, 0
 		UseTilesetCode: false
+		-DepthSprite:
 
 gadept.nod:
-	Defaults: gtdept
-		Offset: 0, -36
-		UseTilesetCode: true
-	idle:
-		ShadowStart: 3
-	damaged-idle:
-		Start: 1
-		ShadowStart: 4
-	dead:
-		Start: 2
-		ShadowStart: 5
-		Tick: 400
-	ground: gtdeptbb
-		ShadowStart: 3
-		ZOffset: -1c611
-	damaged-ground: gtdeptbb
-		Start: 1
-		ShadowStart: 4
-		ZOffset: -1c611
-	dead-ground: gtdeptbb
-		Start: 2
-		ShadowStart: 5
-		ZOffset: -1c611
-		Tick: 400
-	idle-light: gtdept_b
-		Length: 7
-		Tick: 120
-	damaged-idle-light: gtdept_b
-		Start: 7
-		Length: 7
-		Tick: 120
-	circuits: gtdept_a
-		Length: 5
-		ZOffset: -1c511
-		Tick: 120
-	damaged-circuits: gtdept_a
-		Start: 5
-		Length: 5
-		ZOffset: -1c511
-		Tick: 120
-	crane: gtdept_c
-		Length: 16
-	platform: gtdept_d
-		Length: 7
-		ZOffset: -1c511
-	damaged-platform: gtdept_d
-		Start: 7
-		Length: 7
-		ZOffset: -1c511
-	make: gtdeptmk
-		Length: 10
-		Tick: 60
-		ShadowStart: 10
-	emp-overlay: emp_fx01
-		Length: *
+	Inherits: ^Gadept
+	icon: fixnod
 		Offset: 0, 0
 		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
-	icon: fixnod
-		Offset: 0,0
-		UseTilesetCode: false
+		-DepthSprite:
 		
 gadept.mut:
-	Defaults: gtdept
-		Offset: 0, -36
-		UseTilesetCode: true
-	idle:
-		ShadowStart: 3
-	damaged-idle:
-		Start: 1
-		ShadowStart: 4
-	dead:
-		Start: 2
-		ShadowStart: 5
-		Tick: 400
-	ground: gtdeptbb
-		ShadowStart: 3
-		ZOffset: -1c611
-	damaged-ground: gtdeptbb
-		Start: 1
-		ShadowStart: 4
-		ZOffset: -1c611
-	dead-ground: gtdeptbb
-		Start: 2
-		ShadowStart: 5
-		ZOffset: -1c611
-		Tick: 400
-	idle-light: gtdept_b
-		Length: 7
-		Tick: 120
-	damaged-idle-light: gtdept_b
-		Start: 7
-		Length: 7
-		Tick: 120
-	circuits: gtdept_a
-		Length: 5
-		ZOffset: -1c511
-		Tick: 120
-	damaged-circuits: gtdept_a
-		Start: 5
-		Length: 5
-		ZOffset: -1c511
-		Tick: 120
-	crane: gtdept_c
-		Length: 16
-	platform: gtdept_d
-		Length: 7
-		ZOffset: -1c511
-	damaged-platform: gtdept_d
-		Start: 7
-		Length: 7
-		ZOffset: -1c511
-	make: gtdeptmk
-		Length: 10
-		Tick: 60
-		ShadowStart: 10
-	emp-overlay: emp_fx01
-		Length: *
+	Inherits: ^Gadept
+	icon: fixforg
 		Offset: 0, 0
 		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
-	icon: fixforg
-		Offset: 0,0
-		UseTilesetCode: false
+		-DepthSprite:
 		
 gadept.cab:
-	Defaults: gtdept
-		Offset: 0, -36
-		UseTilesetCode: true
-	idle:
-		ShadowStart: 3
-	damaged-idle:
-		Start: 1
-		ShadowStart: 4
-	dead:
-		Start: 2
-		ShadowStart: 5
-		Tick: 400
-	ground: gtdeptbb
-		ShadowStart: 3
-		ZOffset: -1c611
-	damaged-ground: gtdeptbb
-		Start: 1
-		ShadowStart: 4
-		ZOffset: -1c611
-	dead-ground: gtdeptbb
-		Start: 2
-		ShadowStart: 5
-		ZOffset: -1c611
-		Tick: 400
-	idle-light: gtdept_b
-		Length: 7
-		Tick: 120
-	damaged-idle-light: gtdept_b
-		Start: 7
-		Length: 7
-		Tick: 120
-	circuits: gtdept_a
-		Length: 5
-		ZOffset: -1c511
-		Tick: 120
-	damaged-circuits: gtdept_a
-		Start: 5
-		Length: 5
-		ZOffset: -1c511
-		Tick: 120
-	crane: gtdept_c
-		Length: 16
-	platform: gtdept_d
-		Length: 7
-		ZOffset: -1c511
-	damaged-platform: gtdept_d
-		Start: 7
-		Length: 7
-		ZOffset: -1c511
-	make: gtdeptmk
-		Length: 10
-		Tick: 60
-		ShadowStart: 10
-	emp-overlay: emp_fx01
-		Length: *
+	Inherits: ^Gadept
+	icon: fixcab
 		Offset: 0, 0
 		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
-	icon: fixcab
-		Offset: 0,0
-		UseTilesetCode: false
+		-DepthSprite:
 ##########################################################
 # Infantry
 ##########################################################
-napuls.gdi:
+
+^Napuls:
 	Defaults: ntpuls
-		Offset: 0, -24
+		Offset: 0, -24, 24
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -976,90 +638,27 @@ napuls.gdi:
 		UseTilesetCode: false
 		ZOffset: 512
 		BlendMode: Additive
+
+napuls.gdi:
+	Inherits: ^Napuls
 	icon: sidebar-gdi|empicon
 		Offset: 0, 0
 		UseTilesetCode: false
 
 napuls.nod:
-	Defaults: ntpuls
-		Offset: 0, -24
-		UseTilesetCode: true
-	idle:
-		ShadowStart: 3
-	damaged-idle:
-		Start: 1
-		ShadowStart: 4
-	dead:
-		Start: 2
-		ShadowStart: 5
-		Tick: 400
-	turret: ntpuls_a
-		Facings: 32
-	make: ntpulsmk
-		Length: 20
-		ShadowStart: 20
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^Napuls
 	icon: sidebar-nod|empicon
 		Offset: 0, 0
 		UseTilesetCode: false
 
 napuls.mut:
-	Defaults: ntpuls
-		Offset: 0, -24
-		UseTilesetCode: true
-	idle:
-		ShadowStart: 3
-	damaged-idle:
-		Start: 1
-		ShadowStart: 4
-	dead:
-		Start: 2
-		ShadowStart: 5
-		Tick: 400
-	turret: ntpuls_a
-		Facings: 32
-	make: ntpulsmk
-		Length: 20
-		ShadowStart: 20
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^Napuls
 	icon: mutpulsicon
 		Offset: 0, 0
 		UseTilesetCode: false
 
 napuls.cab:
-	Defaults: ntpuls
-		Offset: 0, -24
-		UseTilesetCode: true
-	idle:
-		ShadowStart: 3
-	damaged-idle:
-		Start: 1
-		ShadowStart: 4
-	dead:
-		Start: 2
-		ShadowStart: 5
-		Tick: 400
-	turret: ntpuls_a
-		Facings: 32
-	make: ntpulsmk
-		Length: 20
-		ShadowStart: 20
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
+	Inherits: ^Napuls
 	icon: cabpulsicon
 		Offset: 0, 0
 		UseTilesetCode: false	

@@ -411,7 +411,7 @@ icbm:
 
 napowr:
 	Defaults:
-		Offset: 0, -24
+		Offset: 0, -24, 24
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -444,7 +444,7 @@ napowr:
 
 naapwr:
 	Defaults:
-		Offset: 12, -30
+		Offset: 12, -30, 30
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -477,7 +477,7 @@ naapwr:
 
 nahand:
 	Defaults:
-		Offset: -6, -30
+		Offset: -6, -30, 30
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -519,15 +519,23 @@ nahand:
 
 naweap:
 	Defaults:
-		Offset: -12, -42
+		Offset: -12, -42, 30
+		DepthSpriteOffset: 24, 0
 		UseTilesetCode: true
+		DepthSprite: isodepth.shp
 	idle: ntweap_1
 		ShadowStart: 2
 		ZOffset: -1024
+		Offset: -12, -42, 1
+		ZRamp: 1
+		-DepthSprite:
 	damaged-idle: ntweap_1
 		Start: 1
 		ShadowStart: 3
 		ZOffset: -1024
+		Offset: -12, -42, 1
+		ZRamp: 1
+		-DepthSprite:
 	idle-roof: ntweap_2
 		ShadowStart: 2
 		ZOffset: 512
@@ -561,28 +569,40 @@ naweap:
 		Length: 22
 		Tick: 80
 		ShadowStart: 22
+		Offset: -12, -42, 43
+		DepthSpriteOffset: -12, 0
 	bib: ntweapbb
 		ZOffset: -1024
+		Offset: -12, -42, 1
+		ZRamp: 1
+		-DepthSprite:
 	damaged-bib: ntweapbb
 		Start: 1
 		ZOffset: -1024
+		Offset: -12, -42, 1
+		ZRamp: 1
+		-DepthSprite:
 	dead-bib: ntweapbb
 		Start: 2
 		ZOffset: -1024
+		Offset: -12, -42, 1
+		ZRamp: 1
+		-DepthSprite:
 	emp-overlay: emp_fx01
 		Length: *
-		Offset: 0, 0
+		Offset: 0, 0, 31
 		UseTilesetCode: false
 		ZOffset: 512
 		BlendMode: Additive
+		-DepthSprite:
 	icon: nwepicon
 		Offset: 0, 0
 		UseTilesetCode: false
-
+		-DepthSprite:
 
 nahpad:
 	Defaults:
-		Offset: 0, -24
+		Offset: 0, -24, 24
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -632,7 +652,7 @@ nahpad:
 
 naradr:
 	Defaults:
-		Offset: 0, -24
+		Offset: 0, -24, 24
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -665,7 +685,7 @@ naradr:
 
 natech:
 	Defaults:
-		Offset: 0, -24
+		Offset: 0, -24, 24
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -697,7 +717,7 @@ natech:
 
 natmpl:
 	Defaults:
-		Offset: 0, -24
+		Offset: 0, -24, 24
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -730,7 +750,7 @@ natmpl:
 
 nawast:
 	Defaults: ntwast
-		Offset: 0, -36
+		Offset: 0, -36, 36
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -777,7 +797,7 @@ nawast:
 		
 namisl:
 	Defaults:
-		Offset: 0, -24
+		Offset: 0, -24, 24
 		UseTilesetCode: true
 	idle:
 	damaged-idle:
@@ -816,7 +836,7 @@ namisl:
 ##########################################################
 wall.nod:
 	Defaults: nawall
-		Offset: 0, -12
+		Offset: 0, -12, 12
 		UseTilesetCode: true
 	idle: nawall
 		Length: 16
@@ -864,7 +884,7 @@ gate_a.nod:
 
 gate_b.nod:
 	Defaults: nagate_b
-		Offset: 24, -24
+		Offset: 24, -24, 24
 		UseTilesetCode: true
 		Tick: 80
 	idle: nagate_b
@@ -893,7 +913,7 @@ gate_b.nod:
 
 gatick:
 	Defaults:
-		Offset: 0, -13
+		Offset: 0, -13, 13
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -916,7 +936,7 @@ gatick:
 
 mastl:
 	Defaults:
-		Offset: 0, -13
+		Offset: 0, -13, 13
 		UseTilesetCode: false
 	idle: mttl
 		ShadowStart: 3
@@ -935,7 +955,7 @@ mastl:
 		
 gaicbm:
 	Defaults:
-		Offset: 0, -12
+		Offset: 0, -12, 12
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -954,7 +974,7 @@ gaicbm:
 
 gaarty:
 	Defaults:
-		Offset: 0, -12
+		Offset: 0, -12, 12
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -977,7 +997,7 @@ gaarty:
 
 naobel:
 	Defaults:
-		Offset: 0, -24
+		Offset: 0, -24, 24
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -1015,7 +1035,7 @@ naobel:
 
 nalasr:
 	Defaults:
-		Offset: 0, -12
+		Offset: 0, -12, 12
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -1041,7 +1061,7 @@ nalasr:
 
 nasam:
 	Defaults:
-		Offset: 0, -12
+		Offset: 0, -12, 12
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -1071,7 +1091,7 @@ nasam:
 
 nastlh:
 	Defaults:
-		Offset: -16, -28
+		Offset: -16, -28, 28
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3

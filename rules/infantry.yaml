@@ -246,16 +246,19 @@ TEMPLAR:
 		BuildPaletteOrder: 8
 		Prerequisites: ~nahand, naradr
 	Valued:
-		Cost: 350
+		Cost: 450
 	Tooltip:
 		Name: Templar
-		Description: Heavy weapons soldier, heals on Tiberium.\n\n  Deals full damage to ground units.\n  Weak vs Anti infantry weapons, Aircraft.
+		Description: Heavy weapons soldier, good for supressing infantry, heals on Tiberium.\n\n  Deals full damage to ground units.\n  Weak vs Anti infantry weapons, Aircraft.
 	Health:
-		HP: 20000
+		HP: 17500
 	Mobile:
 		Speed: 55
-	Armament@PRIMARY:
+	Armament@1:
 		Weapon: TemplarLasor
+		LocalOffset: 200,50,320
+	Armament@2:
+		Weapon: TemplarGrenade
 		LocalOffset: 200,50,320
 	Crushable:
 		WarnProbability: 90
@@ -280,7 +283,7 @@ MHIJACK:
 		Cost: 600
 	Tooltip:
 		Name: Hijacker
-		Description: NOD Agent, can steal enemy vehicles\nand infiltrate powerplants.\nCloaks when idle.\n\n  Unarmed
+		Description: NOD Agent, can steal enemy vehicles\nand infiltrate powerplants.\nCloaks when deployed but becomes immobile.\n\n  Unarmed
 	Voiced:
 		VoiceSet: Spy
 	-Crushable:
@@ -290,11 +293,13 @@ MHIJACK:
 		TargetTypes: MindControlInmune
 	Mobile:
 		Speed: 76
+		UpgradeTypes: notmobile
+		UpgradeMaxEnabledLevel: 0
 	Infiltrates:
 		Types: SpyInfiltrate
 	Captures:
 		CaptureTypes: Vehicle
-		Sabotage: false
+		Sabotage: True
 	Cloak@CLOAKGENERATOR:
 		UpgradeMinEnabledLevel: 0
 		InitialDelay: 100
@@ -308,6 +313,15 @@ MHIJACK:
 		AttackSequence: shoot
 	Passenger:
 		GrantUpgrades: HijackerHologram
+    DeployToUpgrade:
+        DeployedUpgrades: cloakgenerator, NodCloakHealing, deployed, notmobile
+        UndeployedUpgrades: undeployed
+        DeployAnimation:
+        Facing: 160
+        AllowedTerrainTypes:
+		CanDeployOnRamps: true
+        DeploySound:
+        UndeploySound:
 
 BHS:
 	Inherits: ^Mutant

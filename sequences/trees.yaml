@@ -1,67 +1,50 @@
-tibtre01:
+^tibtree:
 	Defaults:
 		UseTilesetExtension: true
-		Offset: 0, -12
+		Offset: 0, -12, 12
 	idle:
 		ShadowStart: 11
-	light: 512gradgreen
-		UseTilesetExtension: false
-		BlendMode: Additive
 	active:
 		Start: 1
 		Length: 10
 		ShadowStart: 12
 		Tick: 160
+	light: 512gradgreen
+		UseTilesetExtension: false
+		BlendMode: Additive
+		Offset: 0, 0, 0.5
+		ZRamp: 1
+
+tibtre01:
+	Inherits: ^tibtree
 
 tibtre02:
-	Defaults:
-		UseTilesetExtension: true
-		Offset: 0, -12
-	idle:
-		ShadowStart: 11
-	light: 512gradgreen
-		UseTilesetExtension: false
-		BlendMode: Additive
-	active:
-		Start: 1
-		Length: 10
-		ShadowStart: 12
-		Tick: 160
+	Inherits: ^tibtree
 
 tibtre03:
-	Defaults:
-		UseTilesetExtension: true
-		Offset: 0, -12
-	idle:
-		ShadowStart: 11
-	light: 512gradgreen
-		UseTilesetExtension: false
-		BlendMode: Additive
-	active:
-		Start: 1
-		Length: 10
-		ShadowStart: 12
-		Tick: 160
+	Inherits: ^tibtree
 
 bigblue:
 	Defaults:
-		Offset: 0, -12
+		Offset: 0, -12, 12
 	idle: bigblue2
 		ShadowStart: 10
-	light: ulpha
-		UseTilesetExtension: false
-		BlendMode: Additive
 	active: bigblue2
 		Start: 1
 		Length: 9
 		ShadowStart: 11
 		Tick: 160
+	light: ulpha
+		UseTilesetExtension: false
+		BlendMode: Additive
+		Offset: 0, 0, 0.5
+		ZRamp: 1
 
 ^TreeArt:
 	idle:
 		ShadowStart: 1
 		UseTilesetExtension: true
-		Offset: 0, -12
+		Offset: 0, -12, 12
 tree01:
 	Inherits: ^TreeArt
 
@@ -188,24 +171,19 @@ veinhole:
 	Defaults:
 		UseTilesetExtension: true
 		ZOffset: -512
+		Offset: 0,-64, 64
 	idle:
-		Offset: 0,-60
 	dead:
-		Offset: 0,-60
 	stand:
-		Offset: 0,-60
 	shoot:
 		Length: 23
-		Offset: 0,-60
 		Tick: 50
 	muzzle: gaslrgmk
 		UseTilesetExtension: false
 		Length: *
-		Offset: 0,-60
 
 veinholeforg:
 	Defaults: veinhole
-		Offset: 0,-30
 		UseTilesetExtension: true
 		ZOffset: -512
 	idle:

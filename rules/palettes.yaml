@@ -182,6 +182,9 @@
 	PaletteFromFile@apolra2i:
 		Name: apolra2i
 		Filename: apolra2i.pal
+	PaletteFromFile@apolra2y:
+		Name: apolra2y
+		Filename: apolra2y.pal		
 	PaletteFromPaletteWithAlpha@apolgreyalpha:
 		Name: apolgreyalpha
 		BasePalette: apgrey
@@ -210,6 +213,10 @@
 		Name: apolra2ialpha
 		BasePalette: apolra2i
 		Alpha: 0.3
+	PaletteFromPaletteWithAlpha@apolra2yalpha:
+		Name: apolra2yalpha
+		BasePalette: apolra2y
+		Alpha: 0.7
 	PaletteFromJasc32File@gradgreen:
 		Name: gradgreen
 		Filename: gradgreen.pal

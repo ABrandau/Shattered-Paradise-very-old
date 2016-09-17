@@ -646,10 +646,6 @@ WEED:
 	Tooltip:
 		Name: Weed Eater
 		Description: Collects veins for processing.\n  Unarmed
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 100
-		Prerequisites: ~naweap, nawast
 	Harvester:
 		DeliveryBuildings: nawast
 		Capacity: 7
@@ -2362,10 +2358,6 @@ BLOODDERRICK:
 
 GASAND:
 	Inherits: ^Wall
-	Buildable:
-		Queue: Defense
-		BuildPaletteOrder: 1000
-		Prerequisites: ~disabled
 	SoundOnDamageTransition:
 		DamagedSounds: sandbag1.aud
 		DestroyedSounds: sandbag1.aud

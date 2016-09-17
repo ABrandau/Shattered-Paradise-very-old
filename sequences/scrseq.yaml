@@ -585,7 +585,7 @@ scrincouncil:
 drached:
 	Defaults:
 		Tick: 80
-		# Offset: 0, -36
+		Offset: 0, 0, 48
 	stand:
 		Facings: 1
 	run:
@@ -618,14 +618,23 @@ drached:
 
 scrpowr:
 	Defaults:
-		Offset: -12, -24
+		Offset: -12, -42, 22
+		DepthSpriteOffset: 32, 0
 		UseTilesetCode: true
+		DepthSprite: isodepth.shp
 	idle:
 		Start: 30
 		ShadowStart: 81
+		ZOffset: -1024
+		Offset: -12, -42, 0
+		ZRamp: 1
 	damaged-idle:
 		Start: 40
 		ShadowStart: 91
+		ZOffset: -1024
+		Offset: -12, -42, 0
+		ZRamp: 1
+		-DepthSprite:
 	dead:
 		Start: 40
 		ShadowStart: 91
@@ -634,27 +643,31 @@ scrpowr:
 		Start: 31
 		Length: 8
 		Tick: 200
-		ZOffset: 512
+		ZOffset: 2048
 	damaged-idle-lights:
 		Start: 41
 		Length: 8
 		Tick: 200
+		ZOffset: 2048
 	make:
 		Length: 30
 		ShadowStart: 51
+		Offset: -12, -42, 43
+		DepthSpriteOffset: -12, 0
 	emp-overlay: emp_fx01
 		Length: *
-		Offset: 0, 0
+		Offset: 0, 0, 23
 		UseTilesetCode: false
 		ZOffset: 512
 		BlendMode: Additive
+		-DepthSprite:
 	icon: scrpowricon
 		Offset: 0, 0
 		UseTilesetCode: false
 
 scradvpowr:
 	Defaults:
-		Offset: 0, -36
+		Offset: 0, -36, 36
 		UseTilesetCode: true
 	idle:
 		Start: 29
@@ -690,7 +703,7 @@ scradvpowr:
 
 scrrax:
 	Defaults:
-		Offset: 0, -24
+		Offset: 0, -24, 24
 		UseTilesetCode: true
 	idle:
 		Start: 40
@@ -720,7 +733,7 @@ scrrax:
 
 scrproc:
 	Defaults:
-		Offset: -12, -42
+		Offset: -12, -42, 42
 		UseTilesetCode: true
 	idle:
 		Start: 30
@@ -747,7 +760,7 @@ scrproc:
 		
 scrweap:
 	Defaults:
-		Offset: -12, -42
+		Offset: -12, -42, 42
 		ZOffset: -2048
 		UseTilesetCode: true
 	idle:
@@ -795,7 +808,7 @@ scrweap:
 		
 scrair:
 	Defaults:
-		Offset: 0, -36
+		Offset: 0, -36, 36
 		UseTilesetCode: true
 	idle:
 		Start: 30
@@ -849,7 +862,7 @@ scrair:
 		
 scrradr:
 	Defaults:
-		Offset: 0, -36
+		Offset: 0, -36, 36
 		UseTilesetCode: true
 	idle:
 		Start: 30
@@ -886,7 +899,7 @@ scrradr:
 
 scrdepot:
 	Defaults:
-		Offset: 0, -36
+		Offset: 0, -36, 36
 		UseTilesetCode: true
 	idle:
 		Start: 29
@@ -915,7 +928,7 @@ scrdepot:
 
 scrtech:
 	Defaults:
-		Offset: 12, -30
+		Offset: 12, -30, 30
 		UseTilesetCode: true
 	idle:
 		Start: 30
@@ -945,7 +958,7 @@ scrtech:
 ##########################################################
 scrwall:
 	Defaults: scrwall
-		Offset: 0, -12
+		Offset: 0, -12, 12
 		UseTilesetCode: true
 	idle: scrwall
 		Length: 16
@@ -956,7 +969,7 @@ scrwall:
 		
 scrgate_a:
 	Defaults: scrgate
-		Offset: -24, -24
+		Offset: -24, -24, 24
 		UseTilesetCode: true
 	idle: scrgate
 	dead: scrgate
@@ -975,7 +988,7 @@ scrgate_a:
 
 scrgate_b:
 	Defaults: scrgate
-		Offset: 24, -24
+		Offset: 24, -24, 24
 		UseTilesetCode: true
 	idle: scrgate
 		Start: 21
@@ -996,7 +1009,7 @@ scrgate_b:
 		
 scrneedler:
 	Defaults:
-		Offset: 0, -12
+		Offset: 0, -12, 12
 		UseTilesetCode: true
 	idle:
 		Start: 92
@@ -1031,7 +1044,7 @@ scrneedler:
 
 scrtractor:
 	Defaults:
-		Offset: 0, -12
+		Offset: 0, -12, 12
 		UseTilesetCode: true
 	idle:
 		Start: 31
@@ -1068,7 +1081,7 @@ scrtractor:
 
 scrmine:
 	Defaults:
-		Offset: 0, -12
+		Offset: 0, -12, 12
 		UseTilesetCode: true
 	idle:
 	damaged-idle:
@@ -1087,7 +1100,7 @@ scrmine:
 
 scrextractor:
 	Defaults:
-		Offset: 0, -12
+		Offset: 0, -12, 12
 		UseTilesetCode: true
 	idle:
 		Start: 31
@@ -1116,7 +1129,7 @@ scrextractor:
 
 scrdrone:
 	Defaults:
-		Offset: 0, -24
+		Offset: 0, -24, 24
 		UseTilesetCode: true
 	idle:
 		Start: 29
@@ -1143,7 +1156,7 @@ scrdrone:
 
 scrshield:
 	Defaults:
-		Offset: 0, -24
+		Offset: 0, -24, 24
 		UseTilesetCode: true
 	idle:
 		Start: 29
@@ -1170,7 +1183,7 @@ scrshield:
 
 scrsw1:
 	Defaults:
-		Offset: -6, -30
+		Offset: -6, -30, 30
 		UseTilesetCode: true
 	idle:
 		Start: 30
@@ -1201,7 +1214,7 @@ scrsw1:
 
 scrinessencesmall:
 	Defaults: essence
-		# Offset: -6, -30
+		Offset: 0, 0, 30
 		UseTilesetCode: False
 	idle:
 		Start: 21

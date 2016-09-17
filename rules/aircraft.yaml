@@ -574,7 +574,7 @@ MUTHELI:
 		FacingTolerance: 20
 		Voice: Attack
 	AmmoPool:
-		Ammo: 40
+		Ammo: 30
 		PipCount: 8
 		ReloadCount: 20
 		ReloadTicks: 125
@@ -1240,10 +1240,11 @@ STORMRIDERRETURN:
 
 WASP:
 	Inherits: ^Helicopter
+	Inherits@2: ^PermanentSelfHeal
 	Inherits@3: ^SelfReloads
 	Inherits@5: ^CabRender
 	Valued:
-		Cost: 900
+		Cost: 1200
 	Tooltip:
 		Name: Wasp
 		Description: Aerial drone equiped with dual laser cannons.\n\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry, Aircraft.
@@ -1263,13 +1264,12 @@ WASP:
 	Health:
 		HP: 13000
 	Armor:
-		Type: Wood
+		Type: Light
 	Voiced:
 		VoiceSet: Limpet
 	Armament@Primary:
 		Weapon: WaspLasor
 		LocalOffset: 200,350,-100
-
 	Armament@Secondary:
 		Weapon: WaspLasor
 		AmmoPoolName: Rocket

@@ -118,13 +118,24 @@
 		OwnerType: Killer
 		RequiresLobbyCreeps: false
 		DeathType: MilitantFireDeath
+#Scrin Essence
 	SpawnActorOnDeath@ScrinEssence:
 		Actor: scrinessencesmall
 		Probability: 100
 		OwnerType: Killer
 		DeathType: ScrinEssenceKill
 		RequiresLobbyCreeps: false
-
+#Templar debuff
+	SpeedMultiplier@TemplarGrenade:
+		UpgradeTypes: TemplarGrenade
+		Modifier: 90
+	ReloadDelayMultiplier@TemplarGrenade:
+		UpgradeTypes: TemplarGrenade
+		Modifier: 70
+	Targetable@TemplarGrenade:
+		TargetTypes: TemplarGrenade
+		UpgradeTypes: TemplarGrenade
+		UpgradeMinEnabledLevel: 1
 #VENTILATOR BUFF AND DEBUFF
 ^TiberianBuffs:
 	ReloadDelayMultiplier@VentilatorBuff:
@@ -177,6 +188,10 @@
 		UpgradeMinEnabledLevel: 1
 
 ^NodCloakHealing:
+	GainsExperience:
+		Upgrades:
+			400: rank, firepowerexp, damageexp, speedexp, reloadexp
+			800: rank, firepowerexp, damageexp, speedexp, reload, selfheal, MindControlInmune, cloakgenerator
 	SelfHealing@NodCloakHealing:
 		PercentageStep: 2
 		Step: 0
@@ -1090,7 +1105,7 @@
 	ActorLostNotification:
 	Capturable:
 		Type: Vehicle
-		CaptureThreshold: 1
+		CaptureThreshold: 100
 		CancelActivity: True
 	Guard:
 		Voice: Move
@@ -1231,7 +1246,6 @@
 		UpgradeMinEnabledLevel: 1
 		InitialDelay: 0
 		CloakDelay: 90
-		IdealSeparation: 0c512
 		IsPlayerPalette: true
 		CloakSound: cloak5.aud
 		UncloakSound: cloak5.aud

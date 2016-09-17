@@ -131,7 +131,7 @@ HARV:
 			BlueTiberium: 80
 			Veins: 80
 	Health:
-		HP: 100000
+		HP: 75000
 	Targetable@MindControl:
 		TargetTypes: MindControlInmune
 	Armor:
@@ -146,6 +146,8 @@ HARV:
 		Palette: effect
 	SelectionDecorations:
 		VisualBounds: 36,36
+	Capturable:
+		CaptureThreshold: 60
 	RenderSprites:
 		Image: harv.gdi
 		FactionImages:

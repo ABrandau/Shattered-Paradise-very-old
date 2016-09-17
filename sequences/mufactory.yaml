@@ -1,0 +1,155 @@
+muweap:
+	Defaults:
+		Offset: -12, -42, 30
+		DepthSpriteOffset: 18,-42
+		UseTilesetCode: true
+		DepthSprite: isodepth.shp
+	idle: mtweap_1
+		ShadowStart: 3
+		ZOffset: -1024
+		Offset: -12, -42, 5
+		ZRamp: 1
+		-DepthSprite:
+	damaged-idle: mtweap_1
+		Start: 1
+		ShadowStart: 3
+		ZOffset: -1024
+		ZRamp: 1
+		-DepthSprite:
+	idle-roof: mtweap_2
+		ZOffset: 512
+		Offset: -12, -42, 64
+		ShadowStart: 3
+	damaged-idle-roof: mtweap_2
+		ZOffset: 512
+		Start: 1
+		ShadowStart: 3
+	dead: mtweap_2
+		Start: 2
+		ShadowStart: 5
+		ZOffset: -1024
+		Offset: -12, -42, 5
+		ZRamp: 1
+		Tick: 400
+	build-door: mtweap_b
+		Length: 11
+		ShadowStart: 11
+		Offset: -12, -42, 120
+	damaged-build-door: mtweap_b
+		Length: 11
+		ShadowStart: 11
+		Offset: -12, -42, 120
+	make: mtweapmk
+		Length: 60
+		Tick: 40
+		ShadowStart: 60
+		Offset: -12, -42, 43
+		DepthSpriteOffset: -12, 0
+	bib: mtweap_bb
+		ZOffset: -1024
+		Offset: -12, -42, 4
+		ZRamp: 1
+		-DepthSprite:
+	damaged-bib: mtweap_bb
+		Start: 1
+		ZOffset: -1024
+		Offset: -12, -42, 4
+		ZRamp: 1
+		-DepthSprite:
+	dead-bib: mtweap_bb
+		Start: 2
+		ZOffset: -1024
+		Offset: -12, -42, 4
+		ZRamp: 1
+		-DepthSprite:
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+		-DepthSprite:
+	icon: muweapicon
+		Offset: 0, 0
+		UseTilesetCode: false
+		-DepthSprite:
+
+
+cabweap:
+	Defaults:
+		Offset: -12, -42, 30
+		DepthSpriteOffset: 18,-42
+		UseTilesetCode: true
+		DepthSprite: isodepth.shp
+	idle:
+		Start: 87
+		ShadowStart: 76
+		ZOffset: -1024
+		Offset: -12, -42, 2
+		ZRamp: 1
+		-DepthSprite:
+	damaged-idle:
+		Start: 88
+		ShadowStart: 77
+		ZOffset: -1024
+		Offset: -12, -42, 2
+		ZRamp: 1
+		-DepthSprite:
+	dead:
+		Start: 2
+		ShadowStart: 5
+		ZOffset: -1024
+		Offset: -12, -42, 5
+		ZRamp: 1
+		Tick: 400
+	idle-roof:
+		Start: 89
+		ZOffset: 512
+		Offset: -12, -42, 64
+	damaged-idle-roof:
+		Start: 90
+		ZOffset: 512
+		Offset: -12, -42, 64
+	build-door:
+		Start: 36
+		Length: 9
+		Offset: -12, -42, 54
+	damaged-build-door:
+		Start: 36
+		Length: 9
+		Offset: -12, -42, 54
+	make:
+		Start: 4
+		Length: 30
+		Tick: 40
+		ShadowStart: 46
+		Offset: -12, -42, 43
+		DepthSpriteOffset: -12, 0
+	bib:
+		Start: 2
+		ZOffset: -1025
+		Offset: -12, -42, 8
+		ZRamp: 1
+		-DepthSprite:
+	damaged-bib:
+		Start: 3
+		ZOffset: -1025
+		Offset: -12, -42, 16
+		ZRamp: 1
+		-DepthSprite:
+	dead-bib: ctbweap_bb
+		Start: 2
+		Offset: -12, -42, 130
+		ZRamp: 1
+		-DepthSprite:
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0, 23
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+		-DepthSprite:
+	icon: cabweapicon
+		Offset: 0, 0
+		UseTilesetCode: false
+		-DepthSprite:

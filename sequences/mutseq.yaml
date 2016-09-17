@@ -657,7 +657,7 @@ mutheli:
 ##########################################################	
 mupowr:
 	Defaults:
-		Offset: 0, -24
+		Offset: 0, -24, 24
 		UseTilesetCode: true
 	idle:
 		Start: 35
@@ -695,7 +695,7 @@ mupowr:
 		
 murax:
 	Defaults:
-		Offset: 0, -24
+		Offset: 0, -24, 24
 		UseTilesetCode: true
 	idle:
 		Start: 25
@@ -718,72 +718,11 @@ murax:
 		BlendMode: Additive
 	icon: muraxicon
 		Offset: 0, 0
-		UseTilesetCode: false	
-
-muweap:
-	Defaults:
-		Offset: -12, -42
-		UseTilesetCode: true
-	idle: mtweap_1
-		ShadowStart: 3
-		ZOffset: -1024
-	damaged-idle: mtweap_1
-		Start: 1
-		ShadowStart: 3
-		ZOffset: -1024
-	idle-roof: mtweap_2
-		ShadowStart: 3
-		ZOffset: 512
-	damaged-idle-roof: mtweap_2
-		Start: 1
-		ShadowStart: 3
-		ZOffset: 512
-	dead: mtweap_2
-		Start: 2
-		ShadowStart: 5
-		Tick: 400
-	production-lights: ntweap_a
-		Length: 16
-		Tick: 100
-		ZOffset: 2048
-	damaged-production-lights: ntweap_a
-		Start: 16
-		Length: 16
-		Tick: 100
-		ZOffset: 2048
-	build-door: mtweap_b
-		Length: 11
-		ShadowStart: 11
-		ZOffset: 512
-	damaged-build-door: mtweap_b
-		Length: 11
-		ShadowStart: 11
-		ZOffset: 512
-	make: mtweapmk
-		Length: 60
-		Tick: 40
-		ShadowStart: 60
-	bib: mtweap_bb
-		ZOffset: -1024
-	damaged-bib: mtweap_bb
-		Start: 1
-		ZOffset: -1024
-	dead-bib: mtweap_bb
-		Start: 2
-		ZOffset: -1024
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive		
-	icon: muweapicon
-		Offset: 0, 0
-		UseTilesetCode: false		
+		UseTilesetCode: false			
 		
 muair:
 	Defaults:
-		Offset: 24, -36
+		Offset: 24, -36, 36
 		ZOffset: -32	
 		UseTilesetCode: true
 	active:
@@ -819,7 +758,7 @@ muair:
 
 mustable:
 	Defaults:
-		Offset: 10, -36
+		Offset: 10, -36, 36
 		UseTilesetCode: true
 	idle:
 		Start: 30
@@ -847,7 +786,7 @@ mustable:
 		
 muradr:
 	Defaults:
-		Offset: 0, -24
+		Offset: 0, -24, 24
 		UseTilesetCode: true
 	idle:
 		Start: 24
@@ -874,7 +813,7 @@ muradr:
 
 muhall:
 	Defaults:
-		Offset: 12,-36
+		Offset: 12, -36, 36
 		UseTilesetCode: true
 	idle:
 		Start: 26
@@ -903,7 +842,7 @@ muhall:
 ##########################################################	
 wall.mut:
 	Defaults: mutwall
-		Offset: 0, -12
+		Offset: 0, -12, 12
 		UseTilesetCode: true
 	idle: mutwall
 		Length: 16
@@ -918,7 +857,7 @@ wall.mut:
 
 mutgate_a:
 	Defaults: mutgate
-		Offset: -24, -24
+		Offset: -24, -24, 24
 		UseTilesetCode: true
 	idle: mutgate
 		Length: 12
@@ -943,7 +882,7 @@ mutgate_a:
 
 mutgate_b:
 	Defaults: mutgate
-		Offset: 24, -24
+		Offset: 24, -24, 24
 		UseTilesetCode: true
 	idle: mutgate
 		Start: 12
@@ -969,7 +908,7 @@ mutgate_b:
 
 muward:
 	Defaults:
-		Offset: 0, -12
+		Offset: 0, -12, 12
 		UseTilesetCode: true
 		Length: 1
 	idle:
@@ -990,7 +929,7 @@ muward:
 
 mumine:
 	Defaults:
-		Offset: 0, -12
+		Offset: 0, -12, 12
 		UseTilesetCode: true
 		ZOffset: -512
 	idle:
@@ -1010,7 +949,7 @@ mumine:
 
 muflak:
 	Defaults:
-		Offset: 0, -12
+		Offset: 0, -12, 12
 		UseTilesetCode: true
 	idle: dot
 	damaged-idle: dot
@@ -1045,7 +984,7 @@ muflak:
 		
 mubunkr:
 	Defaults:
-		Offset: 0, -24
+		Offset: 0, -24, 24
 		UseTilesetCode: true
 	idle:
 		Start: 10
@@ -1072,7 +1011,7 @@ mubunkr:
 
 muventi
 	Defaults:
-		Offset: 0, -24
+		Offset: 0, -24, 24
 		UseTilesetCode: true
 	idle: dot
 	damaged-idle: dot
@@ -1102,7 +1041,7 @@ muventi
 
 mutsw1:
 	Defaults:
-		Offset: -6, -30
+		Offset: -6, -30, 30
 		UseTilesetCode: true
 	idle:
 		Start: 30
@@ -1129,7 +1068,7 @@ mutsw1:
 
 mutsw2:
 	Defaults:
-		Offset: 0, -36
+		Offset: 0, -36, 36
 		UseTilesetCode: true
 	idle:
 		Start: 31

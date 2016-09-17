@@ -18,6 +18,10 @@ drill sound for abductor
 Make nod feel more guerrilla like, toxins, ambushes, decoy armies and units that can hide.
 If sensor arrays are added, give nod a support ability to detect all sensor arrays in the level.
 Make alien air units behave as reapers.
+Final Fantasy Blue Mage
+a unit that splits into many.
+Harvester / mammoth tank
+a unit that spawns walls in the area of impact
 
 Balance
 marauder bad death anim
@@ -28,6 +32,12 @@ Remove blocks projectiles from some defences.
 ravager useless
 cabal commando storng
 mut quad strong
+Ghostlake add second tib tree.
+nerf forg bunker.
+add more death types to tiberium deaths.
+nerf harvester hp
+wasp op
+Increase the damage most weapons deal to wood.
 
 todo
 
@@ -63,6 +73,7 @@ add floaters.
 Improve mammoth mk, both graphically and gameplay wise.
 Remove health bars on some props.
 remake crates and add a water variation
+Rerender Mutant airstrip and cabal air factory to handle depth.
 
 Graphics
 cnc 3 big tiberium glaciers

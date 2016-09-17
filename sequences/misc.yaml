@@ -1,7 +1,7 @@
 overlay:
 	Defaults: place2
-		Offset: 0, -12
-		ZOffset: -512
+		Offset: 0, -12, 1
+		ZRamp: 1
 	build-valid-snow:
 	build-valid-temperate:
 	build-invalid:
@@ -10,7 +10,8 @@ overlay:
 
 editor-overlay:
 	Defaults: place2
-		Offset: 0, -12
+		Offset: 0, -12, 1
+		ZRamp: 1
 	copy:
 	paste:
 		Start: 1
@@ -20,7 +21,7 @@ resources:
 		UseTilesetExtension: true
 		Length: 12
 		ShadowStart: 12
-		Offset: 0, -12
+		Offset: 0, -12, 1.5
 		ZRamp: 1
 	tib01: tib01
 	tib02: tib02
@@ -52,6 +53,7 @@ explosion:
 	Defaults:
 		Length: *
 		ZOffset: 4048
+		Offset: 0,0,120
 	building: twlt070
 	pulse_explosion: pulsefx2
 		BlendMode: Additive
@@ -183,7 +185,6 @@ explosion:
 	small_grey_explosion: xgrysml2
 	medium_grey_explosion: xgrymed1
 	large_grey_explosion: xgrymed2
-
 	## SP Explos start here
 	## Misc
 	fire1: fire1
@@ -195,16 +196,16 @@ explosion:
 	sparks3: sparks3
 	#GDI
 	fsidlewall: fsidle
-		Offset: 0,-90
+		Offset: 0,-90, 90
 		Tick: 35
 	fsgrndwall: fsgrnd
-		Offset: 0,-48
+		Offset: 0,-48, 48
 		Tick: 35
 	fsidle: fsidle
-		Offset: 0,-78
+		Offset: 0,-78, 78
 		Tick: 35
 	fsgrnd: fsgrnd
-		Offset: 0,-36
+		Offset: 0,-36, 36
 		Tick: 35
 	podring: podring
 	droppod: droppod
@@ -220,19 +221,22 @@ explosion:
 	dig: dignod
 		Length: *
 		Tick: 25
+	hallugren: hallugren
+		Length: *
+		Tick: 65
 	militantfire: militantfire
 		Length: *
-		Offset: 0,-26
+		Offset: 0,-26, 26
 		BlendMode: Additive
 		Tick: 35
 	militantfire2: militantfire2
 		Length: *
-		Offset: 0,-26
+		Offset: 0,-26, 26
 		BlendMode: Additive
 		Tick: 35
 	militantfire3: militantfire3
 		Length: *
-		Offset: 0,-26
+		Offset: 0,-26, 26
 		BlendMode: Additive
 		Tick: 35
 	nuke1: nuke1
@@ -288,7 +292,7 @@ explosion:
 	#CABAL
 	cabexplo: cabexplo
 	lurkertentacle: lurkertentacle
-		Offset: 0, -12
+		Offset: 0, -12, 12
 		Tick: 15
 	#Scrin
 	destroexp: destroexp
@@ -301,9 +305,9 @@ explosion:
 	alienpiff4: alienpiff4
 	alienpiff5: alienpiff5
 	scrinpulse2: scrinpulse2
-		Offset: -5,-12
+		Offset: -5,-12, 12
 	scrinpulse3: scrinpulse3
-		Offset: -5,-12
+		Offset: -5,-12, 12
 	scrinenergyeff: scrinenergyeff
 		Tick: 25
 	firestormexplo: firestormexplo
@@ -342,18 +346,19 @@ beacon:
 		ZOffset: 2047
 	arrow: mouse
 		Start: 6
-		Offset: 1,-12
+		Offset: 1,-12, 12
 		ZOffset: 2535
 	circles: ring
 		Length: 12
 		BlendMode: Additive
 		ZOffset: 2047
+		Offset: 0, 0, 24
 
 crate:
 	idle:
 		ShadowStart: 1
 		UseTilesetExtension: true
-		Offset: 0, -10
+		Offset: 0, -10, 10
 
 crate-effects:
 	Defaults:
@@ -399,51 +404,62 @@ meteor:
 smoketrailsmall:
 	idle:
 		Length: *
-		Offset: 0,-18
-		# Tick: 25
+		Offset: 0,-18, 18
 		ZOffset: 512
 
 sparks: sparks3
 	idle:
 		Length: *
 		Tick: 25
+		Offset: 0,0, 24
 		
 meteor2:
 	Inherits: meteor
 
 tibicon:
+	Offset: 0,0, 15
 	idle: tibicon
 
 bombicon:
+	Offset: 0,0, 15
 	idle: bombicon
 
 holoicon:
+	Offset: 0,0, 15
 	idle: holoicon
 
 wrenchicon:
+	Offset: 0,0, 15
 	idle: wrenchicon	
 
 mpspawn:
 	idle:
+		Offset: 0,0, 15
 		Length: *
 
 waypoint:
+	Offset: 0,0, 15
 	idle:
 		Length: *
 
 camera:
+	Offset: 0,0, 15
 	idle:
 		Length: *
 
 clock:
+	Offset: 0,0, 15
 	idle: gclock2
 		Length: *
 
 darken:
+	Offset: 0,0, 15
 	idle: gclock2
 		Length: 1
 
 pips:
+	Defaults:
+		Offset: 0, 0, 12
 	medic:
 		Start: 6
 	groups: pipsra #TODO: backfall to RA asset
@@ -451,7 +467,7 @@ pips:
 		Length: 10
 	tag-primary: pipsra #TODO: backfall to RA asset
 		Start: 2
-		Offset: 0, 2
+		Offset: 0, 2, 2
 	pip-empty: pips2
 	pip-green: pips2
 		Start: 1
@@ -469,7 +485,7 @@ pips:
 	pip-disguise: pip-disguise
 		Length: *
 		Tick: 300
-		Offset: 0, -6
+		Offset: 0, -6, 6
 
 # TODO:
 	pip-empty-building:
@@ -625,6 +641,7 @@ moveflsh:
 		Length: *
 		Tick: 30
 		ZOffset: 2047
+		Offset: 0,0,24
 
 wake:
 	idle: wake2
@@ -634,7 +651,7 @@ wake:
 
 shroud:
 	Defaults:
-		Offset: 0, -1
+		Offset: 0, -1, 1
 		ZRamp: 1
 	shroud:
 		Length: *
@@ -644,7 +661,7 @@ shroud:
 smallscorches:
 	Defaults:
 		UseTilesetExtension: true
-		Offset: 0, -12
+		Offset: 0, -12, 12
 	sc1: burnt01
 	sc2: burnt02
 	sc3: burnt03
@@ -655,7 +672,7 @@ smallscorches:
 mediumscorches:
 	Defaults:
 		UseTilesetExtension: true
-		Offset: 0, -18
+		Offset: 0, -18, 18
 	sc7: burnt07
 	sc8: burnt08
 	sc9: burnt09
@@ -664,14 +681,14 @@ mediumscorches:
 largescorches:
 	Defaults:
 		UseTilesetExtension: true
-		Offset: 0, -24
+		Offset: 0, -24, 24
 	sc11: burnt11
 	sc12: burnt12
 
 smallcraters:
 	Defaults:
 		UseTilesetExtension: true
-		Offset: 0, -12
+		Offset: 0, -12, 12
 	cr1: crater01
 	cr2: crater02
 	cr3: crater03
@@ -682,7 +699,7 @@ smallcraters:
 mediumcraters:
 	Defaults:
 		UseTilesetExtension: true
-		Offset: 0, -12
+		Offset: 0, -12, 12
 	cr7: crater07
 	cr8: crater08
 	cr9: crater09
@@ -691,7 +708,7 @@ mediumcraters:
 largecraters:
 	Defaults:
 		UseTilesetExtension: true
-		Offset: 0, -24
+		Offset: 0, -24, 24
 	cr11: crater11
 	cr12: crater12
 
@@ -713,7 +730,7 @@ icon:
 clustermissile:
 	up: atnukemini
 		ZOffset: 1023
-		Offset: 0,-45
+		Offset: 0,-45, 45
 	down: atnukemini
 		Start: 1
 		ZOffset: 1023
@@ -729,7 +746,7 @@ toxinmissile:
 ionbeam:
 	idle:
 		Length: *
-		Offset: 0, -78
+		Offset: 0, -78, 78
 		ZOffset: 1023
 
 ionring: 
@@ -738,65 +755,40 @@ ionring:
 		ZOffset: -512
 		Tick: 120
 
-trock01:
+^Rock:
 	idle:
 		ShadowStart: 1
 		UseTilesetExtension: true
-		Offset: 0, -12
+		Offset: 0, -12, 12
+trock01:
+	Inherits: ^Rock
 
 trock02:
-	idle:
-		ShadowStart: 1
-		UseTilesetExtension: true
-		Offset: 0, -12
+	Inherits: ^Rock
 
 trock03:
-	idle:
-		ShadowStart: 1
-		UseTilesetExtension: true
-		Offset: 0, -12
+	Inherits: ^Rock
 
 trock04:
-	idle:
-		ShadowStart: 1
-		UseTilesetExtension: true
-		Offset: 0, -12
+	Inherits: ^Rock
 
 trock05:
-	idle:
-		ShadowStart: 1
-		UseTilesetExtension: true
-		Offset: 0, -12
+	Inherits: ^Rock
 
 srock01:
-	idle:
-		ShadowStart: 1
-		UseTilesetExtension: true
-		Offset: 0, -12
+	Inherits: ^Rock
 
 srock02:
-	idle:
-		ShadowStart: 1
-		UseTilesetExtension: true
-		Offset: 0, -12
+	Inherits: ^Rock
 
 srock03:
-	idle:
-		ShadowStart: 1
-		UseTilesetExtension: true
-		Offset: 0, -12
+	Inherits: ^Rock
 
 srock04:
-	idle:
-		ShadowStart: 1
-		UseTilesetExtension: true
-		Offset: 0, -12
+	Inherits: ^Rock
 
 srock05:
-	idle:
-		ShadowStart: 1
-		UseTilesetExtension: true
-		Offset: 0, -12
+	Inherits: ^Rock
 
 dbrissm:
 	Defaults:
@@ -828,148 +820,115 @@ dbrislg:
 	9: dbris9lg
 	10: dbrs10lg
 
-crat01:
+^CrateArt:
 	idle:
+		UseTilesetExtension: false
+		Offset: 0, -12, 12
+
+crat01:
+	Inherits: ^CrateArt
 
 crat02:
-	idle:
+	Inherits: ^CrateArt
 
 crat03:
-	idle:
+	Inherits: ^CrateArt
 
 crat04:
-	idle:
+	Inherits: ^CrateArt
 
 crat0a:
-	idle:
+	Inherits: ^CrateArt
 
 crat0b:
-	idle:
+	Inherits: ^CrateArt
 
 crat0c:
-	idle:
+	Inherits: ^CrateArt
 
 drum01:
-	idle:
+	Inherits: ^CrateArt
 
 drum02:
-	idle:
+	Inherits: ^CrateArt
 
 palet01:
-	idle:
+	Inherits: ^CrateArt
 
 palet02:
-	idle:
+	Inherits: ^CrateArt
 
 palet03:
-	idle:
+	Inherits: ^CrateArt
 
 palet04:
+	Inherits: ^CrateArt
+
+^Tracks:
+	Inherits: ^CrateArt
 	idle:
+		UseTilesetExtension: true
+		ZOffset: -1c0
 
 tracks01:
-	idle:
-		UseTilesetExtension: true
-		ZOffset: -1c0
+	Inherits: ^Tracks
 
 tracks02:
-	idle:
-		UseTilesetExtension: true
-		ZOffset: -1c0
+	Inherits: ^Tracks
 
 tracks03:
-	idle:
-		UseTilesetExtension: true
-		ZOffset: -1c0
+	Inherits: ^Tracks
 
 tracks04:
-	idle:
-		UseTilesetExtension: true
-		ZOffset: -1c0
+	Inherits: ^Tracks
 
 tracks05:
-	idle:
-		UseTilesetExtension: true
-		ZOffset: -1c0
+	Inherits: ^Tracks
 
 tracks06:
-	idle:
-		UseTilesetExtension: true
-		ZOffset: -1c0
+	Inherits: ^Tracks
 
 tracks07:
-	idle:
-		UseTilesetExtension: true
-		ZOffset: -1c0
+	Inherits: ^Tracks
 
 tracks08:
-	idle:
-		UseTilesetExtension: true
-		ZOffset: -1c0
+	Inherits: ^Tracks
 
 tracks09:
-	idle:
-		UseTilesetExtension: true
-		ZOffset: -1c0
+	Inherits: ^Tracks
 
 tracks10:
-	idle:
-		UseTilesetExtension: true
-		ZOffset: -1c0
+	Inherits: ^Tracks
 
 tracks11:
-	idle:
-		UseTilesetExtension: true
-		ZOffset: -1c0
+	Inherits: ^Tracks
 
 tracks12:
-	idle:
-		UseTilesetExtension: true
-		ZOffset: -1c0
+	Inherits: ^Tracks
 
 tracks13:
-	idle:
-		UseTilesetExtension: true
-		ZOffset: -1c0
+	Inherits: ^Tracks
 
 tracks14:
-	idle:
-		UseTilesetExtension: true
-		ZOffset: -1c0
+	Inherits: ^Tracks
 
 tracks15:
-	idle:
-		UseTilesetExtension: true
-		ZOffset: -1c0
+	Inherits: ^Tracks
 
 tracks16:
-	idle:
-		UseTilesetExtension: true
-		ZOffset: -1c0
+	Inherits: ^Tracks
 
 tuntop01:
-	idle:
-		Offset: 0, -13
-		UseTilesetExtension: true
-		ShadowStart: 1
+	Inherits: ^Tracks
 
 tuntop02:
-	idle:
-		Offset: 0, -13
-		UseTilesetExtension: true
-		ShadowStart: 1
+	Inherits: ^Tracks
 
 tuntop03:
-	idle:
-		Offset: 0, -13
-		UseTilesetExtension: true
-		ShadowStart: 1
+	Inherits: ^Tracks
 
 tuntop04:
-	idle:
-		Offset: 0, -13
-		UseTilesetExtension: true
-		ShadowStart: 1
+	Inherits: ^Tracks
 		
 ######################################
 # SP Starts Here

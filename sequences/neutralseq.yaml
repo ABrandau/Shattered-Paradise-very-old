@@ -20,7 +20,7 @@ cloud1:
 	Inherits: ^EmpOverlay
 	Defaults:
 		Length: *
-		Offset: 0,-6
+		Offset: 0,-6, 12
 		ZOffset: 4096
 	idle:
 	run:

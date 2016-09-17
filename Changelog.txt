@@ -1,5 +1,11 @@
 ﻿YEAR - MONTH - DAY
 
+[2016 - 09 - 17]
+Mutant Changes:
+	Gargoyle: Ammunition: 40 -> 30.
+CABAL Changes:
+	Cost: 900 -> 1200, Auto repairs to full health.
+
 [2016 - 09 - 11]
 General Changes:
 	Increased the amount of tiberium on the bottom spawn point of Cannon Fodder.

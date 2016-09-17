@@ -1,7 +1,9 @@
 ^EmpOverlay:
+	Defaults:
+		Offset: 0, 0, 32
 	emp-overlay: emp_fx01
 		Length: *
-		Offset: 0, 0
+		Offset: 0, 0, 37
 		UseTilesetCode: false
 		ZOffset: 512
 		BlendMode: Additive
@@ -9,18 +11,21 @@
 		Length: 12
 		UseTilesetExtension: true
 		ZOffset: 1023
-		Offset: 0, -12
+		Offset: 0, -12, 37
 	smoketrailsmall: smoketrailsmall
 		Length: *
 	sparks: sparks3
 		Length: *
 	muzzle: gunfire
 		Length: *
+		Offset: 0, 0, 28
 	dummy: dot
 		UseTilesetCode: false
 		ZOffset: -9999
-		
+
 ^InfantryDeathAnims:
+	Defaults:
+		Offset: 0, 0, 32
 	die3: infdie
 		Length: *
 	die4: infdeathexplo1
@@ -53,14 +58,14 @@
 		ZOffset: -511
 	dieevaporate: infgas
 		Length: *
-		Offset: 0,-6
+		Offset: 0,-6, 32
 		Tick: 30
 	diemelt: infmelt
 		Length: *
-		Offset: 0,-6
+		Offset: 0,-6, 32
 	dieshatter: infshatter
 		Length: *
-		Offset: 0,-6
+		Offset: 0,-6, 32
 	diecristalize1: infcrystalize
 		Length: 21
 	diecristalize2: infcrystalize
@@ -71,7 +76,6 @@
 		ShadowStart: 6
 	emp-overlay: emp_fx01
 		Length: *
-		Offset: 0, 0
 		UseTilesetCode: false
 		ZOffset: 512
 		BlendMode: Additive

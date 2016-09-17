@@ -412,7 +412,7 @@ guardiandep:
 ##########################################################	
 gapowr:
 	Defaults:
-		Offset: 0, -24
+		Offset: 0, -24, 24
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -470,7 +470,7 @@ gapowrup:
 
 gapile:
 	Defaults:
-		Offset: 0, -24
+		Offset: 0, -24, 24
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -517,15 +517,23 @@ gapile:
 
 gaweap:
 	Defaults:
-		Offset: -12, -42
+		Offset: -12, -42, 22
+		DepthSpriteOffset: 32, 0
 		UseTilesetCode: true
+		DepthSprite: isodepth.shp
 	idle: gtweap_1
 		ShadowStart: 2
 		ZOffset: -1024
+		Offset: -12, -42, 0
+		ZRamp: 1
+		-DepthSprite:
 	damaged-idle: gtweap_1
 		Start: 1
 		ShadowStart: 3
 		ZOffset: -1024
+		Offset: -12, -42, 0
+		ZRamp: 1
+		-DepthSprite:
 	idle-roof: gtweap_2
 		ShadowStart: 2
 	damaged-idle-roof: gtweap_2
@@ -571,30 +579,43 @@ gaweap:
 		Length: 20
 		Tick: 80
 		ShadowStart: 20
+		Offset: -12, -42, 43
+		DepthSpriteOffset: -12, 0
 	bib: gtweapbb
 		Length: 1
 		ZOffset: -1024
+		Offset: -12, -42, 0
+		ZRamp: 1
+		-DepthSprite:
 	damaged-bib: gtweapbb
 		Start: 1
 		Length: 1
 		ZOffset: -1024
+		Offset: -12, -42, 0
+		ZRamp: 1
+		-DepthSprite:
 	dead-bib: gtweapbb
 		Start: 2
 		Length: 1
 		ZOffset: -1024
+		Offset: -12, -42, 0
+		ZRamp: 1
+		-DepthSprite:
 	emp-overlay: emp_fx01
 		Length: *
-		Offset: 0, 0
+		Offset: 0, 0, 23
 		UseTilesetCode: false
 		ZOffset: 512
 		BlendMode: Additive
+		-DepthSprite:
 	icon: weapicon
 		Offset: 0, 0
 		UseTilesetCode: false
+		-DepthSprite:
 
 gahpad:
 	Defaults:
-		Offset: 0, -24
+		Offset: 0, -24, 24
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -647,7 +668,7 @@ gahpad:
 
 garadr:
 	Defaults:
-		Offset: 0, -24
+		Offset: 0, -24, 24
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -682,7 +703,7 @@ garadr:
 
 gatech:
 	Defaults:
-		Offset: -12, -30
+		Offset: -12, -30, 30
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -717,7 +738,7 @@ gatech:
 
 gaplug:
 	Defaults:
-		Offset: 12, -28
+		Offset: 12, -28, 28
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -792,7 +813,7 @@ gaplug3:
 gactwr:
 	Inherits: ^EmpOverlay
 	Defaults:
-		Offset: 0, -12
+		Offset: 0, -12, 12
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -850,7 +871,7 @@ gactwr:
 gavulc:
 	Inherits: ^EmpOverlay
 	Defaults: gactwr
-		Offset: 0, -12
+		Offset: 0, -12, 12
 		UseTilesetCode: true
 	idle: gactwr
 		ShadowStart: 3
@@ -903,7 +924,7 @@ gavulc:
 garock:
 	Inherits: ^EmpOverlay
 	Defaults: gactwr
-		Offset: 0, -12
+		Offset: 0, -12, 12
 		UseTilesetCode: true
 	idle: gactwr
 		ShadowStart: 3
@@ -933,7 +954,7 @@ garock:
 gacsam:
 	Inherits: ^EmpOverlay
 	Defaults: gactwr
-		Offset: 0, -12
+		Offset: 0, -12, 12
 		UseTilesetCode: true
 	idle: gactwr
 		ShadowStart: 3
@@ -980,7 +1001,7 @@ wall.gdi:
 		
 gate_a.gdi:
 	Defaults: gagate_a
-		Offset: -24, -24
+		Offset: -24, -24, 24
 		UseTilesetCode: true
 	idle: gagate_a
 		Length: 10
@@ -1008,7 +1029,7 @@ gate_a.gdi:
 
 gate_b.gdi:
 	Defaults: gagate_b
-		Offset: 24, -24
+		Offset: 24, -24, 24
 		UseTilesetCode: true
 	idle: gagate_b
 		Length: 10
@@ -1073,7 +1094,7 @@ repairtur:
 		
 gafire:
 	Defaults:
-		Offset: -12, -30
+		Offset: -12, -30, 30
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
@@ -1147,77 +1168,77 @@ ionbeammini:
 	defaults:
 		UseTilesetCode: false
 	idle:
-		Offset: 0,-30
+		Offset: 0,-30, 1024
 		Length: *
 	stand:
-		Offset: 0,-60
+		Offset: 0,-60, 1024
 		Length: *
 	beamsky:
-		Offset: 0,-90
+		Offset: 0,-90, 1024
 		Length: *
 	beamsky2:
-		Offset: 0,-120
+		Offset: 0,-120, 1024
 		Length: *
 	beamsky3:
-		Offset: 0,-150
+		Offset: 0,-150, 1024
 		Length: *
 	beamsky4:
-		Offset: 0,-180
+		Offset: 0,-180, 1024
 		Length: *
 	beamsky5:
-		Offset: 0,-240
+		Offset: 0,-240, 1024
 		Length: *
 	beamsky6:
-		Offset: 0,-270
+		Offset: 0,-270, 1024
 		Length: *
 	beamsky7:
-		Offset: 0,-300
+		Offset: 0,-300, 1024
 		Length: *
 	beamsky8:
-		Offset: 0,-330
+		Offset: 0,-330, 1024
 		Length: *
 	beamsky9:
-		Offset: 0,-360
+		Offset: 0,-360, 1024
 		Length: *
 	beamsky10:
-		Offset: 0,-390
+		Offset: 0,-390, 1024
 		Length: *
 	beamsky11:
-		Offset: 0,-420
+		Offset: 0,-420, 1024
 		Length: *
 	beamsky12:
-		Offset: 0,-450
+		Offset: 0,-450, 1024
 		Length: *
 	beamsky13:
-		Offset: 0,-480
+		Offset: 0,-480, 1024
 		Length: *
 	beamsky14:
-		Offset: 0,-510
+		Offset: 0,-510, 1024
 		Length: *
 	beamsky15:
-		Offset: 0,-540
+		Offset: 0,-540, 1024
 		Length: *
 	beamsky16:
-		Offset: 0,-570
+		Offset: 0,-570, 1024
 		Length: *
 	beamsky17:
-		Offset: 0,-600
+		Offset: 0,-600, 1024
 		Length: *
 	beamsky18:
-		Offset: 0,-630
+		Offset: 0,-630, 1024
 		Length: *
 	beamsky19:
-		Offset: 0,-660
+		Offset: 0,-660, 1024
 		Length: *
 	beamsky20:
-		Offset: 0,-690
+		Offset: 0,-690, 1024
 		Length: *
 	muzzle: ringmini
-		Offset: 0,-6
+		Offset: 0,-6, 1024
 		Length: *
 		Tick: 5
-	muzzle2:ringmini
-		Offset: 0,-6
+	muzzle2: ringmini
+		Offset: 0,-6, 1024
 		Length: *
 		Tick: 10
 	scorch:

@@ -354,7 +354,7 @@ TTNK:
 		UpgradeMinEnabledLevel: 1
 	Armament@PRIMARY:
 		Weapon: Tick90mm
-		LocalOffset: 350,-0,600
+		LocalOffset: 350,-0,400
 		MuzzleSequence: muzzle
 	Armament@DEPLOYED:
 		Name: deployed
@@ -1125,9 +1125,11 @@ SCRHARV:
 	Mobile:
 		Speed: 74
 	Health:
-		HP: 100000
+		HP: 75000
 	Armor:
 		Type: Heavy
+	Capturable:
+		CaptureThreshold: 60
 	-GainsExperience:
 	Explodes:
 		Weapon: TiberiumExplosion
