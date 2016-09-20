@@ -371,7 +371,7 @@ drache:
 	Inherits: ^EmpOverlay
 	Defaults:
 		Tick: 150
-		Offset: 0, 0
+		Offset: 0, 0, 60
 	stand:
 		Facings: 8
 	run:
@@ -503,34 +503,32 @@ tripod:
 ##########################################################
 # Aircraft
 ##########################################################
-scrpod:
+^ScrinAircraft:
 	Inherits: ^EmpOverlay
 	idle:
-		Facings: 32	
+		Facings: 32
+		Offset: 0,0,64
+scrpod:
+	Inherits: ^ScrinAircraft
 	icon: scrdestroyericon
 
 
 stormrider:
-	Inherits: ^EmpOverlay
-	idle:
+	Inherits: ^ScrinAircraft
 	icon: stormridericon
 
 scrglyder1:
-	Inherits: ^EmpOverlay
+	Inherits: ^ScrinAircraft
 	idle: scrglyder
 		Facings: -32
 	icon: glider1icon
 
 scrdestroyer:
-	Inherits: ^EmpOverlay
-	idle:
-		Facings: 32
+	Inherits: ^ScrinAircraft
 	icon: scrdestroyericon	
 	
 scrtrans:
-	Inherits: ^EmpOverlay
-	idle:
-		Facings: -32
+	Inherits: ^ScrinAircraft
 	icon: scrtransporticon	
 
 wyverm2:
@@ -542,13 +540,13 @@ wyverm2:
 	icon: scrbattleshipicon
 
 scrbattleship:
-	Inherits: ^EmpOverlay
-	idle:
-		Facings: 32
+	Inherits: ^ScrinAircraft
 	icon: scrbattleshipicon
 
 mothership:
 	Inherits: ^EmpOverlay
+	Defaults:
+		Offset: 0,0,64
 	stand:
 		Length: 8
 		Facings: -16
@@ -564,7 +562,7 @@ scrincouncil:
 	Inherits: ^EmpOverlay
 	Defaults:
 		Tick: 80
-		Offset: 0, 0
+		Offset: 0,0,64
 	stand:
 		Facings: 1
 	idle:
@@ -618,41 +616,34 @@ drached:
 
 scrpowr:
 	Defaults:
-		Offset: -12, -42, 22
+		Offset: -12, -30, 52
 		DepthSpriteOffset: 32, 0
 		UseTilesetCode: true
 		DepthSprite: isodepth.shp
 	idle:
-		Start: 30
+		Start: 31
+		Length: 8
 		ShadowStart: 81
 		ZOffset: -1024
-		Offset: -12, -42, 0
 		ZRamp: 1
+		Tick: 100
+		-DepthSprite:
 	damaged-idle:
-		Start: 40
+		Start: 41
+		Length: 8
 		ShadowStart: 91
 		ZOffset: -1024
-		Offset: -12, -42, 0
 		ZRamp: 1
+		Tick: 100
 		-DepthSprite:
 	dead:
 		Start: 40
 		ShadowStart: 91
 		Tick: 400
-	idle-lights:
-		Start: 31
-		Length: 8
-		Tick: 200
-		ZOffset: 2048
-	damaged-idle-lights:
-		Start: 41
-		Length: 8
-		Tick: 200
-		ZOffset: 2048
 	make:
 		Length: 30
 		ShadowStart: 51
-		Offset: -12, -42, 43
+		# Offset: -12, -30, 52
 		DepthSpriteOffset: -12, 0
 	emp-overlay: emp_fx01
 		Length: *
@@ -756,55 +747,7 @@ scrproc:
 		BlendMode: Additive
 	icon: scrprocicon
 		Offset: 0, 0
-		UseTilesetCode: false		
-		
-scrweap:
-	Defaults:
-		Offset: -12, -42, 42
-		ZOffset: -2048
-		UseTilesetCode: true
-	idle:
-		Start: 49
-		ShadowStart: 102
-		ZOffset: -1024
-	damaged-idle:
-		Start: 60
-		ShadowStart: 113
-		ZOffset: -1024
-	idle-roof: scrweap_1
-		ShadowStart: 2
-		ZOffset: 2048
-	damaged-idle-roof: scrweap_1
-		Start: 1
-		ShadowStart: 3
-		ZOffset: 2048
-	dead:
-		Start: 51
-		ShadowStart: 113
-		ZOffset: -1024
-	production-lights-white:
-		Start:41
-		Length: 8
-		Tick: 100
-		ZOffset: -1000
-	damaged-production-lights-white:
-		Start: 53
-		Length: 8
-		Tick: 100
-		ZOffset: -1000
-	make:
-		Length: 39
-		Tick: 40
-		ShadowStart: 62
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0
 		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
-	icon: scrweapicon
-		Offset: 0,0
-		UseTilesetCode: false		
 		
 scrair:
 	Defaults:
@@ -1129,7 +1072,7 @@ scrextractor:
 
 scrdrone:
 	Defaults:
-		Offset: 0, -24, 24
+		Offset: 0, -24, 32
 		UseTilesetCode: true
 	idle:
 		Start: 29

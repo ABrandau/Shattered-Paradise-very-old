@@ -348,6 +348,7 @@ mmch:
 		Start: 120
 		Length: 1
 		Facings: -32
+		Offset: 0, 0, 12
 	icon: mmchicon
 
 apc:
@@ -414,6 +415,7 @@ gapowr:
 	Defaults:
 		Offset: 0, -24, 24
 		UseTilesetCode: true
+		DepthSprite: isodepth.shp
 	idle:
 		ShadowStart: 3
 	damaged-idle:
@@ -439,31 +441,33 @@ gapowr:
 	idle-powrupa: gtpowr_b
 		Length: 12
 		Tick: 200
-		Offset: -48, -24
+		Offset: -48, -24, 24
 	damaged-idle-powrupa: gtpowr_b
 		Length: 12
 		Tick: 200
-		Offset: -48, -24
+		Offset: -48, -24, 24
 	idle-powrupb: gtpowr_b
 		Length: 12
 		Tick: 200
-		Offset: -24, -12
+		Offset: -24, -12, 24
 	damaged-idle-powrupb: gtpowr_b
 		Length: 12
 		Tick: 200
-		Offset: -24, -12
+		Offset: -24, -12, 24
 	make: gtpowrmk
 		Length: 20
 		ShadowStart: 20
 	emp-overlay: emp_fx01
 		Length: *
-		Offset: 0, 0
+		Offset: 0, 0, 25
 		UseTilesetCode: false
 		ZOffset: 512
 		BlendMode: Additive
+		-DepthSprite:
 	icon: powricon
 		Offset: 0, 0
 		UseTilesetCode: false
+		-DepthSprite:
 
 gapowrup:
 	icon: turbicon
@@ -615,56 +619,71 @@ gaweap:
 
 gahpad:
 	Defaults:
-		Offset: 0, -24, 24
+		Offset: 0, -24, 1
+		DepthSpriteOffset: 34, 0
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
 		ZOffset: -1c511
+		Offset: 0, -24, 8
+		DepthSprite: isodepth.shp
 	damaged-idle:
 		Start: 1
 		ShadowStart: 4
 		ZOffset: -1c511
+		Offset: 0, -24, 8
+		DepthSprite: isodepth.shp
 	dead:
 		Start: 2
 		ShadowStart: 5
 		ZOffset: -1c511
 		Tick: 400
+		Offset: 0, -24, 8
+		DepthSprite: isodepth.shp
 	idle-platform: gthpadbb
 		ShadowStart: 3
 		ZOffset: -1c511
+		ZRamp: 1
 	damaged-idle-platform: gthpadbb
 		Start: 1
 		ShadowStart: 4
 		ZOffset: -1c511
+		ZRamp: 1
 	dead-platform: gthpadbb
 		Start: 2
 		ShadowStart: 5
 		ZOffset: -1c511
 		Tick: 400
+		ZRamp: 1
 	idle-lights: gthpad_a
 		Length: 8
 		Tick: 200
 		Offset: 0, -36
 		ZOffset: -1c511
+		ZRamp: 1
 	damaged-idle-lights: gthpad_a
 		Start: 8
 		Length: 8
 		Tick: 200
 		Offset: 0, -36
 		ZOffset: -1c511
+		ZRamp: 1
 	make: gthpadmk
 		Length: 18
 		ShadowStart: 18
 		ZOffset: -1c511
+		Offset: 0, -24, 24
+		DepthSpriteOffset: 0, 0
+		DepthSprite: isodepth.shp
 	emp-overlay: emp_fx01
 		Length: *
-		Offset: 0, 0
+		Offset: 0, 0, 2
 		UseTilesetCode: false
 		ZOffset: 512
 		BlendMode: Additive
 	icon: heliicon
 		Offset: 0, 0
-		UseTilesetCode: false		
+		UseTilesetCode: false
 
 garadr:
 	Defaults:

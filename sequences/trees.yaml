@@ -168,7 +168,7 @@ fona15:
 
 
 veinhole:
-	Defaults:
+	Defaults: veinhole
 		UseTilesetExtension: true
 		ZOffset: -512
 		Offset: 0,-64, 64
@@ -183,15 +183,4 @@ veinhole:
 		Length: *
 
 veinholeforg:
-	Defaults: veinhole
-		UseTilesetExtension: true
-		ZOffset: -512
-	idle:
-	stand:
-	dead
-	shoot:
-		Length: 23
-		Tick: 50
-	muzzle: gaslrgmk
-		UseTilesetExtension: false
-		Length: *
+	Inherits: veinhole

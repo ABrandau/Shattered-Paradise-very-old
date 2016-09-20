@@ -364,6 +364,7 @@ crate-effects:
 	Defaults:
 		Length: *
 		ZOffset: 2047
+		Offset: 0,0,12
 	dollar: money
 	reveal-map: reveal
 	hide-map: shroudx
@@ -661,7 +662,8 @@ shroud:
 smallscorches:
 	Defaults:
 		UseTilesetExtension: true
-		Offset: 0, -12, 12
+		Offset: 0, -12, 1
+		ZRamp: 1
 	sc1: burnt01
 	sc2: burnt02
 	sc3: burnt03
@@ -672,7 +674,8 @@ smallscorches:
 mediumscorches:
 	Defaults:
 		UseTilesetExtension: true
-		Offset: 0, -18, 18
+		Offset: 0, -18, 1
+		ZRamp: 1
 	sc7: burnt07
 	sc8: burnt08
 	sc9: burnt09
@@ -681,14 +684,16 @@ mediumscorches:
 largescorches:
 	Defaults:
 		UseTilesetExtension: true
-		Offset: 0, -24, 24
+		Offset: 0, -24, 1
+		ZRamp: 1
 	sc11: burnt11
 	sc12: burnt12
 
 smallcraters:
 	Defaults:
 		UseTilesetExtension: true
-		Offset: 0, -12, 12
+		Offset: 0, -12, 1
+		ZRamp: 1
 	cr1: crater01
 	cr2: crater02
 	cr3: crater03
@@ -699,7 +704,8 @@ smallcraters:
 mediumcraters:
 	Defaults:
 		UseTilesetExtension: true
-		Offset: 0, -12, 12
+		Offset: 0, -12, 1
+		ZRamp: 1
 	cr7: crater07
 	cr8: crater08
 	cr9: crater09
@@ -708,7 +714,8 @@ mediumcraters:
 largecraters:
 	Defaults:
 		UseTilesetExtension: true
-		Offset: 0, -24, 24
+		Offset: 0, -24, 1
+		ZRamp: 1
 	cr11: crater11
 	cr12: crater12
 
@@ -954,7 +961,9 @@ flamebro:
 litning:
 	bright:
 		Length: 4
+		Offset: 0,0,3
 	dim:
+		Offset: 0,0,3
 		Start: 4
 		Length: 4
 

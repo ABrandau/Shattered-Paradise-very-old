@@ -1313,6 +1313,8 @@ REAPERCAB:
 	SupplyTruck
 		Payload: 300
 		Voice: Move
+	Armor:
+		Type: Light
 	Mobile:
 		Speed: 80
 		SharesCell: False

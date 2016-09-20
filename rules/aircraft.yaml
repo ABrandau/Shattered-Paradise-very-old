@@ -713,6 +713,7 @@ STORMRIDER:
 		Bounds: 30,24
 	Voiced:
 		VoiceSet: Limpet
+	Hovers:
 	Aircraft:
 		MaximumPitch: 90
 		TurnSpeed: 8

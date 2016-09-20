@@ -898,6 +898,7 @@
 	-GivesExperience:
 	-Passenger:
 	-DamagedByTerrain:
+	-ActorLostNotification:
 	AttackFrontal:
 	WithDecoration@holoicon:
 		Image: holoicon
@@ -1406,8 +1407,6 @@
 		ResourceType: Tiberium
 		Interval: 45
 	WithIdleAnimation:
-	ExplodeWeapon:
-		Weapon: TibBurst
 
 ^Tree:
 	Inherits@1: ^SpriteActor

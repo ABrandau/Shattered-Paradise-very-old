@@ -602,53 +602,68 @@ naweap:
 
 nahpad:
 	Defaults:
-		Offset: 0, -24, 24
+		Offset: 0, -24, 0
+		DepthSpriteOffset: -24, 0
 		UseTilesetCode: true
 	idle:
 		ShadowStart: 3
 		ZOffset: -1c511
+		Offset: 0, -24, 3
+		DepthSprite: isodepth.shp
 	damaged-idle:
 		Start: 1
 		ShadowStart: 4
 		ZOffset: -1c511
+		Offset: 0, -24, 3
+		DepthSprite: isodepth.shp
 	dead:
 		Start: 2
 		ShadowStart: 5
 		ZOffset: -1c511
 		Tick: 400
+		Offset: 0, -24, 3
+		DepthSprite: isodepth.shp
 	idle-platform: nthpadbb
 		ShadowStart: 3
 		ZOffset: -1c511
+		ZRamp: 1
 	damaged-idle-platform: nthpadbb
 		Start: 1
 		ShadowStart: 4
 		ZOffset: -1c511
+		ZRamp: 1
 	dead-platform: nthpadbb
 		Start: 2
 		ShadowStart: 5
 		ZOffset: -1c511
 		Tick: 400
+		ZRamp: 1
 	idle-lights: nthpad_a
 		Length: 46
 		ZOffset: -1c511
 		Tick: 120
+		ZRamp: 1
 	damaged-idle-lights: nthpad_a
 		Start: 46
 		Length: 46
 		Tick: 120
 		ZOffset: -1c511
+		ZRamp: 1
 	make: nthpadmk
 		Length: 20
 		ShadowStart: 20
+		Offset: 0, -24, 24
+		DepthSpriteOffset: 0, 0
+		DepthSprite: isodepth.shp
 	emp-overlay: emp_fx01
 		Length: *
-		Offset: 0, 0
+		Offset: 0, 0, 2
 		UseTilesetCode: false
 		ZOffset: 512
 		BlendMode: Additive
 	icon: nhpdicon
 		Offset: 0, 0
-		UseTilesetCode: false		
+		UseTilesetCode: false
 
 naradr:
 	Defaults:
@@ -717,8 +732,10 @@ natech:
 
 natmpl:
 	Defaults:
-		Offset: 0, -24, 24
+		Offset: -12,-42, 42
 		UseTilesetCode: true
+		DepthSprite: isodepth.shp
+		DepthSpriteOffset: -12, 0
 	idle:
 		ShadowStart: 3
 	damaged-idle:
@@ -740,13 +757,15 @@ natmpl:
 		ShadowStart: 17
 	emp-overlay: emp_fx01
 		Length: *
-		Offset: 0, 0
+		Offset: 0, 0, 43
 		UseTilesetCode: false
 		ZOffset: 512
 		BlendMode: Additive
+		-DepthSprite:
 	icon: tmplicon
 		Offset: 0, 0
 		UseTilesetCode: false
+		-DepthSprite:
 
 nawast:
 	Defaults: ntwast

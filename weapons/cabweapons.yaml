@@ -520,7 +520,6 @@ AARail:
 	Range: 10c0
 	Report: biggun1.aud
 	ValidTargets: Air
-	MinRange: 3c0
 	Projectile: LaserZap
 		Speed: 20c0
 		Duration: 3

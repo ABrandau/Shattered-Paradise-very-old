@@ -357,6 +357,8 @@ TiberianRocket2:
 	Inherits: TiberianRocket
 	Burst: 2
 	Delay: 20
+	Projectile: Bullet
+		Inaccuracy: 150
 	Warhead@5Actor: SpawnActor
 		Actors: cloud1
 		FallRate: 5000

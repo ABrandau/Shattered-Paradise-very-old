@@ -859,7 +859,7 @@ cabtech:
 ##########################################################	
 cabsentryturret:
 	Defaults:
-		Offset: 0, -12, 12
+		Offset: 0, -12, 18
 		UseTilesetCode: true
 	idle: dot	
 	damaged-idle: dot
@@ -880,11 +880,11 @@ cabsentryturret:
 		BlendMode: Additive		
 	icon: cabcannonicon
 		Offset: 0, 0
-		UseTilesetCode: false	
+		UseTilesetCode: false
 
 cabcannon:
 	Defaults:
-		Offset: 0, -12, 12
+		Offset: 0, -12, 18
 		UseTilesetCode: true
 	idle: dot	
 	damaged-idle: dot
@@ -919,7 +919,7 @@ cabcannon:
 
 cabblast:
 	Defaults:
-		Offset: 0, -12, 12
+		Offset: 0, -12, 18
 		UseTilesetCode: true
 	idle:
 		Start: 94
@@ -951,7 +951,7 @@ cabblast:
 
 cabrail:
 	Defaults:
-		Offset: 0, -12, 12
+		Offset: 0, -12, 18
 		UseTilesetCode: true
 	idle: dot	
 	damaged-idle: dot

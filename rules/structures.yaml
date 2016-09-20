@@ -1255,8 +1255,6 @@ SCRPOWR:
 		Type: Wood
 	RevealsShroud:
 		Range: 4c0
-	WithIdleOverlay@LIGHTS:
-		Sequence: idle-lights
 	Selectable:
 		Bounds: 90, 48, 0, -6
 	Power:
@@ -1795,12 +1793,6 @@ CABWEAP:
 		IsPlayerPalette: false
 	RevealsShroud:
 		Range: 6c0
-	UpgradeActorsNear:
-		Upgrades: StandOnTib
-		Range: 4c0
-	WithRangeCircle:
-		Range: 4c0
-		Type: ScrinEssence
 	Exit@1:
 		SpawnOffset: -384,-384,0
 		ExitCell: 3,1

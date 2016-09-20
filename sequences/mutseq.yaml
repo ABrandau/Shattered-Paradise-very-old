@@ -285,7 +285,7 @@ doggie:
 	Inherits@1: ^InfantryDeathAnims
 	Defaults:
 		Tick: 80
-		Offset: 0, -6		
+		Offset: 0, -12
 	stand:
 		Facings: 8
 		ShadowStart: 119
@@ -949,7 +949,7 @@ mumine:
 
 muflak:
 	Defaults:
-		Offset: 0, -12, 12
+		Offset: 0, -12, 24
 		UseTilesetCode: true
 	idle: dot
 	damaged-idle: dot

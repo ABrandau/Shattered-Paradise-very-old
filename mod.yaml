@@ -178,7 +178,7 @@ MapGrid:
 	Type: RectangularIsometric
 	MaximumTerrainHeight: 16
 	MaximumTileSearchRange: 999
-	EnableDepthBuffer: True
+	EnableDepthBuffer: False#True
 	SubCellOffsets: 0,0,0, -256,128,0, 0,-128,0, 256,128,0
 	DefaultSubCell: 2
 

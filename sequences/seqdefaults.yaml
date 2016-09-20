@@ -25,7 +25,7 @@
 
 ^InfantryDeathAnims:
 	Defaults:
-		Offset: 0, 0, 32
+		Offset: 0, 0, 16
 	die3: infdie
 		Length: *
 	die4: infdeathexplo1

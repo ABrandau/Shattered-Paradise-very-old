@@ -107,7 +107,7 @@ TemplarGrenade:
 	ReloadDelay: 150
 	Range: 4c512
 	Report: grenadelauncherfire.wav
-	ValidTargets: Ground
+	ValidTargets: Infantry, Vehicle
 	InvalidTargets: TemplarGrenade
 	Projectile: Bullet # TODO: Add bounce effect
 		Speed: 320
@@ -119,7 +119,7 @@ TemplarGrenade:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 1
-		ValidTargets: Ground
+		ValidTargets: Infantry, Vehicle
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: hallugren
@@ -265,7 +265,7 @@ DevilsFlame:
 
 FlameHologram:
 	Inherits: ^NoDamage
-	ReloadDelay: 225
+	ReloadDelay: 300
 	Range: 10c0
 	Report: dropup1.aud
 	Projectile: InstantExplode

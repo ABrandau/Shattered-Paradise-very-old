@@ -153,3 +153,53 @@ cabweap:
 		Offset: 0, 0
 		UseTilesetCode: false
 		-DepthSprite:
+
+		
+scrweap:
+	Defaults:
+		Offset: -12, -42, 42
+		ZOffset: -2048
+		UseTilesetCode: true
+	idle:
+		Start: 49
+		ShadowStart: 102
+		Offset: -12, -42, 2
+		ZOffset: -1024
+	damaged-idle:
+		Start: 60
+		ShadowStart: 113
+		ZOffset: -1024
+	idle-roof: scrweap_1
+		ShadowStart: 2
+		ZOffset: 2048
+	damaged-idle-roof: scrweap_1
+		Start: 1
+		ShadowStart: 3
+		ZOffset: 2048
+	dead:
+		Start: 51
+		ShadowStart: 113
+		ZOffset: -1024
+	production-lights-white:
+		Start:41
+		Length: 8
+		Tick: 100
+		ZOffset: -1000
+	damaged-production-lights-white:
+		Start: 53
+		Length: 8
+		Tick: 100
+		ZOffset: -1000
+	make:
+		Length: 39
+		Tick: 40
+		ShadowStart: 62
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: scrweapicon
+		Offset: 0,0
+		UseTilesetCode: false
