@@ -601,10 +601,17 @@ mutapc:
 	muzzle7: mgun-ne
 	icon: mutapcicon	
 
+trike:
+	Inherits: ^EmpOverlay
+	icon: trikeicon
+
+struck:
+	Inherits: ^EmpOverlay
+	icon: battlebusicon
+
 muttank:
 	Inherits: ^EmpOverlay
-	icon: mutankicon	
-
+	icon: mutankicon
 	
 mutquad:
 	Inherits: ^EmpOverlay
@@ -718,8 +725,69 @@ murax:
 		BlendMode: Additive
 	icon: muraxicon
 		Offset: 0, 0
-		UseTilesetCode: false			
-		
+		UseTilesetCode: false
+
+muweap:
+	Defaults:
+		Offset: -12, -42
+		UseTilesetCode: true
+	idle: mtweap_1
+		ShadowStart: 3
+		ZOffset: -1024
+	damaged-idle: mtweap_1
+		Start: 1
+		ShadowStart: 3
+		ZOffset: -1024
+	idle-roof: mtweap_2
+		ShadowStart: 3
+		ZOffset: 512
+	damaged-idle-roof: mtweap_2
+		Start: 1
+		ShadowStart: 3
+		ZOffset: 512
+	dead: mtweap_2
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	production-lights: ntweap_a
+		Length: 16
+		Tick: 100
+		ZOffset: 2048
+	damaged-production-lights: ntweap_a
+		Start: 16
+		Length: 16
+		Tick: 100
+		ZOffset: 2048
+	build-door: mtweap_b
+		Length: 11
+		ShadowStart: 11
+		ZOffset: 512
+	damaged-build-door: mtweap_b
+		Length: 11
+		ShadowStart: 11
+		ZOffset: 512
+	make: mtweapmk
+		Length: 60
+		Tick: 40
+		ShadowStart: 60
+	bib: mtweap_bb
+		ZOffset: -1024
+	damaged-bib: mtweap_bb
+		Start: 1
+		ZOffset: -1024
+	dead-bib: mtweap_bb
+		Start: 2
+		ZOffset: -1024
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	icon: muweapicon
+		Offset: 0, 0
+		UseTilesetCode: false
+
 muair:
 	Defaults:
 		Offset: 24, -36, 36

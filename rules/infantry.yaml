@@ -47,12 +47,12 @@ JUMPJET:
 		Type: none
 	Armament:
 		Weapon: JJCannon
-	# -Crushable:
+	Passenger:
+		PipType: Blue
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:
 		AttackSequence: shoot
-	# -TakeCover:
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 
@@ -230,6 +230,8 @@ CRUSADER:
 	AttackTurreted:
 		Voice: Attack
 	Turreted:
+	Passenger:
+		PipType: Blue
 	WithInfantryBody:
 		AttackSequence: shoot
 	ProducibleWithLevel:
@@ -546,6 +548,8 @@ E3:
 	Armament@GARRISON:
 		Weapon: GSkirmisherRocket
 		LocalOffset: 128,0,640
+	Passenger:
+		PipType: Blue
 	AttackFrontal:
 		Voice: Attack
 		Armaments: OnFoot
@@ -815,6 +819,8 @@ LEGIO:
 	-Crushable:
 	Mobile:
 		Speed: 60
+	Passenger:
+		PipType: Blue
 	Armament:
 		Weapon: LegioNeedler
 		LocalOffset: 350,250,800
@@ -1366,6 +1372,8 @@ GLAD:
 		Voice: Move
 	Selectable:
 		Bounds: 35,30,0,-10
+	Passenger:
+		PipType: Blue
 	Voiced:
 		VoiceSet: Cyborg
 	WithMuzzleOverlay:

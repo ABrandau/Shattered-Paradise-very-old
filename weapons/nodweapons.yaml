@@ -238,14 +238,8 @@ Tick90mm:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 4000
-		Versus:
-			None: 25
-			Wood: 65
-			Light: 75
-			Heavy: 100
-			Concrete: 60
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-		
+
 DevilsFlame:
 	Inherits: ^FlameWarhead
 	Inherits@2: ^FlameScorch

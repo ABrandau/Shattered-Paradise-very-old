@@ -211,6 +211,7 @@ BullBuff:
 		Range: 4c0
 		Duration: 200
 		Upgrades: WolfBuff
+		ValidStances: Ally
 
 DeathclawBlow:
 	Inherits: ^ArtilleryWarhead
@@ -257,11 +258,36 @@ IFVulcan:
 		Damage: 2500
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, TiberiumDeath
 
+TrikeMortar:
+	Inherits: ^GrenadeWarhead
+	Inherits@2: ^Small_Clsn
+	Inherits@3: ^Small_Twlt
+	ReloadDelay: 100
+	Range: 9c0
+	MinRange: 2c0
+	Report: jugger1.aud
+	Projectile: Bullet
+		Speed: 150
+		Image: 120mm
+		Angle: 165
+		Shadow: true
+		Inaccuracy: 1c0
+		Blockable: false
+		ContrailLength: 10
+		ContrailUsePlayerColor: true
+		Palette: ra
+	MinRange: 5c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 250
+		Damage: 7000
+		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
+
 LeonidCannon:
 	Inherits: ^APWarhead
 	Inherits@2: ^Large_Clsn
 	ReloadDelay: 75
 	Range: 4c0
+	Burst: 2
 	Report: 120mmf.aud
 	Projectile: Bullet
 		Speed: 1c512

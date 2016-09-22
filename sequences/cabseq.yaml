@@ -786,6 +786,60 @@ cabradr:
 		Offset: 0, 0
 		UseTilesetCode: false
 
+cabweap:
+	Defaults:
+		Offset: -12, -42
+		UseTilesetCode: true
+	idle:
+		Start: 87
+		ShadowStart: 76
+		ZOffset: -1026
+	damaged-idle:
+		Start: 88
+		ShadowStart: 77
+		ZOffset: -1026
+	idle-roof:
+		Start: 89
+		ZOffset: 1024
+	damaged-idle-roof:
+		Start: 90
+		ZOffset: 1024
+	dead:
+		Start: 2
+		ShadowStart: 5
+		Tick: 400
+	build-door:
+		Start: 36
+		Length: 9
+		ZOffset: -2048
+	damaged-build-door:
+		Start: 36
+		Length: 9
+		ZOffset: -2048
+	make:
+		Start: 4
+		Length: 30
+		Tick: 40
+		ShadowStart: 46
+	bib:
+		Start: 2
+		ZOffset: -2048
+	damaged-bib:
+		Start: 3
+		ZOffset: -2048
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+	dead-bib: ctbweap_bb
+		Start: 2
+		ZOffset: -2048
+	icon: cabweapicon
+		Offset: 0, 0
+		UseTilesetCode: false
+
 cabair:
 	Defaults:
 		Offset: 0, -36, 36

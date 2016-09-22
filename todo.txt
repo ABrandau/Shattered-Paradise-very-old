@@ -23,6 +23,7 @@ turn GDI APCs into bunkers
 Make the wolverine a Jumpjet unit, move it to t2.
 Make Ravagers 
 Make ravagers immune to tib gas.
+Make a siege tank somewhere.
 
 Balance
 marauder bad death anim

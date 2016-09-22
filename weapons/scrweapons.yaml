@@ -10,6 +10,7 @@ SharkJump:
 		Spread: 32
 		Damage: 2000
 		ValidTargets: Infantry
+		ValidStances: Enemy, Neutral
 		DamageTypes: TriggerProne, BulletDeath, ScrinEssenceKill
 
 SharkJump2:
@@ -24,6 +25,7 @@ SharkJump2:
 		Spread: 64
 		Damage: 2000
 		ValidTargets: Building, Defence
+		ValidStances: Enemy, Neutral
 		DamageTypes: TriggerProne, BulletDeath, ScrinEssenceKill
 
 LegioNeedler:
@@ -50,15 +52,16 @@ LegioNeedler:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, ScrinEssenceKill
 
 ColossiTesla:
-	Inherits: ^RifleWarhead
+	Inherits: ^FullDamage
 	ReloadDelay: 80
 	Range: 4c0
+	Report: voltautofire.wav
 	Charges: yes
 	Projectile: TeslaZap
 		Palette: apolbluealpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 3500
+		Damage: 3000
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, ScrinEssenceKill
 	Warhead@op: FireShrapnel
@@ -224,14 +227,8 @@ ScrMbtCannon:
 		Falloff: 100, 100
 		Damage: 500
 		AffectsParent: false
-		Versus:
-			None: 25
-			Wood: 65
-			Light: 75
-			Heavy: 100
-			Concrete: 60
-			HoverTank: 25
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, ScrinEssenceKill
+	-Warhead@BounceUpgrade:
 
 BatteryBuff:
 	Inherits: ^NoDamage
@@ -240,6 +237,110 @@ BatteryBuff:
 	Projectile: InstantExplode
 	Warhead@1Dam: SpreadDamage
 		Damage: 1
+
+BounceExplosion:
+	Inherits: ^GrenadeWarhead
+	ReloadDelay: 25
+	Range: 4c0
+	Projectile: InstantExplode
+	Warhead@op: FireShrapnel
+		Weapon: BounceTesla
+		Amount: 6
+		AimChance: 100
+		ThrowWithoutTarget: false
+		AllowDirectHit: true
+		AimTargetStances: Enemy
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+
+BounceTesla:
+	Inherits: ColossiTesla
+	Inherits@1: ^GrenadeWarhead
+	-Report: voltautofire.wav
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 200
+
+RifleBounce:
+	Inherits: ^NoDamage
+	ReloadDelay: 2
+	Range: 6c0
+	Projectile: InstantExplode
+	Warhead@1Dam: SpreadDamage
+		Damage: 1
+	Warhead@op: FireShrapnel
+		Weapon: RifleBounceWeapon
+		Amount: 1
+		AimChance: 100
+		ThrowWithoutTarget: false
+		AllowDirectHit: true
+		AimTargetStances: Enemy
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+
+RocketBounce:
+	Inherits: RifleBounce
+	Warhead@op: FireShrapnel
+		Weapon: RocketBounceWeapon
+
+APBounce:
+	Inherits: RifleBounce
+	Warhead@op: FireShrapnel
+		Weapon: APBounceWeapon
+
+FlameBounce:
+	Inherits: RifleBounce
+	Warhead@op: FireShrapnel
+		Weapon: FlameBounceWeapon
+
+ArtilleryBounce:
+	Inherits: RifleBounce
+	Warhead@op: FireShrapnel
+		Weapon: ArtilleryBounceWeapon
+
+FullDamageBounce:
+	Inherits: RifleBounce
+	Warhead@op: FireShrapnel
+		Weapon: FullDamageBounceWeapon
+
+RifleBounceWeapon:
+	Inherits: MarineRifle
+	ReloadDelay: 50
+	Range: 5c0
+		Damage: 1500
+
+RocketBounceWeapon:
+	Inherits: SkirmisherRocket
+	ReloadDelay: 50
+	Warhead@1Dam: SpreadDamage
+		Damage: 1500
+
+APBounceWeapon:
+	Inherits: Tick90mm
+	ReloadDelay: 50
+	Range: 5c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 3200
+
+FlameBounceWeapon:
+	Inherits: DevilsFlame
+	ReloadDelay: 50
+	Range: 5c0
+		Damage: 150
+
+ArtilleryBounceWeapon:
+	Inherits: JuggCannon
+	ReloadDelay: 17
+	Range: 8c0
+	Burst: 1
+	MinRange: 1
+	Warhead@1Dam: SpreadDamage
+		Damage: 2250
+
+FullDamageBounceWeapon:
+	Inherits: ColossiTesla
+	ReloadDelay: 50
+	Range: 5c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 1875
 
 Glyder2Cannon:
 	Inherits: ^FullDamage
@@ -394,7 +495,6 @@ BattleshipCannon:
 		Damage: 2500
 		ValidTargets: Ground, Infantry, Vehicle, Air, water
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, ScrinEssenceKill
-
 
 BattleshipRocketDummy:
 	ReloadDelay: 45

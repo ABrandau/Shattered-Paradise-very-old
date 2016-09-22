@@ -4,10 +4,10 @@
 SMECH:
 	Inherits: ^Walker
 	Valued:
-		Cost: 400
+		Cost: 550
 	Tooltip:
 		Name: Wolverine
-		Description: Anti-Personnel Walker.\n\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
+		Description: Anti-Personnel Walker. Constant firing increases\n it's attack speed.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 2
@@ -43,7 +43,7 @@ MMCH:
 		Cost: 900
 	Tooltip:
 		Name: Titan
-		Description: Anti-Armor Walker.\n\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
+		Description: Anti-Armor Walker.\n\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 3
@@ -82,10 +82,10 @@ MMCH:
 APC:
 	Inherits: ^VoxelTank
 	Valued:
-		Cost: 800
+		Cost: 700
 	Tooltip:
 		Name: Amphibious APC
-		Description: Armored infantry transport.\nCan move on water.\n\n  Unarmed
+		Description: Armored infantry transport.\nCan move on water.\n\n  Unarmed.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 30
@@ -96,9 +96,7 @@ APC:
 		TerrainSpeeds:
 			Water: 80
 	Health:
-		HP: 20000
-	Armor:
-		Type: Heavy
+		HP: 27500
 	RevealsShroud:
 		Range: 5c0
 	Turreted:
@@ -126,6 +124,31 @@ APC:
 		TerrainTypes: Water
 		StationaryInterval: 18
 		MovingInterval: 6
+	# AutoTarget:
+	# AttackGarrisoned:
+		# PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
+		# PortYaws: 0, 176, 341, 512, 682, 853#10, 10, 10, 10, 10, 10
+		# PortCones: 1086, 86, 86, 86, 86, 86#10, 10, 10, 10, 10
+		# UpgradeMinEnabledLevel: 1
+		# UpgradeMaxEnabledLevel: 1
+		# UpgradeTypes: damaged
+	# UpgradeOnDamageState@stop:
+		# Upgrades: notmobile, damaged
+		# ValidDamageStates: Heavy, Critical
+	Armor:
+		Type: Light
+		UpgradeTypes: damaged
+		UpgradeMaxEnabledLevel: 0
+	# Armor@deployed:
+		# Type: Concrete
+		# UpgradeTypes: damaged
+		# UpgradeMinEnabledLevel: 1
+	# SelfHealing@APC:
+		# PercentageStep: 1
+		# Step: 0
+		# Delay: 75
+		# DamageCooldown: 100
+		# HealIfBelow: 75
 
 HVR:
 	Inherits: ^VoxelVehicle
@@ -777,10 +800,10 @@ WOLF:
 		BuildPaletteOrder: 27
 		Prerequisites: ~muweap, mustable, muradr
 	Valued:
-		Cost: 1300
+		Cost: 800
 	Tooltip:
 		Name: Tiberian Bull
-		Description: Support Beast, when attacking it expels toxins\nthat damage nearby units but increase their\nfighting capabilities.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
+		Description: Support Beast, when attacking it expels toxins\nthat damage nearby units but increase their\nfighting capabilities.\n\n  Strong vs Ground Units.\n  Weak vs Aircraft, Defences.
 	Voiced:
 		VoiceSet: Fiend
 	SpawnActorOnDeath@conversion:
@@ -799,7 +822,7 @@ WOLF:
 		Range: 4c0
 		Type: cloakgenerator
 	Armament@PRIMARY:
-		Weapon: BullAcid
+		Weapon: ColossiTesla
 		LocalOffset: 128,0,400
 	Armament@Secondary:
 		Weapon: BullBuff
@@ -822,6 +845,7 @@ WOLF:
 DEATHCLAW:
 	Inherits: ^Beast
 	Inherits@1: ^MutRender
+	Inherits@2: ^PermanentSelfHeal
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 31
@@ -833,7 +857,6 @@ DEATHCLAW:
 		Description: Melee Beast, can take a great amount of punishment.\n\n  Strong vs Ground Units\n  Weak vs Aircraft.
 	Voiced:
 		VoiceSet: Fiend
-	-RejectsOrders@berserk:
 	SpawnActorOnDeath@conversion:
 		Actor: cybdog
 		Probability: 100
@@ -874,10 +897,10 @@ MUTAPC:
 	Tooltip:
 		Name: IFV
 		Description: Light combat vehicle, can transport up to 3 soldiers.\n\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 25
-		Prerequisites: ~muweap
+	# Buildable:
+		# Queue: Vehicle
+		# BuildPaletteOrder: 25
+		# Prerequisites: ~muweap
 	Mobile:
 		TurnSpeed: 7
 		Speed: 130
@@ -886,62 +909,58 @@ MUTAPC:
 		HP: 19000
 	Armor:
 		Type: Light
-	Armament:
-		Weapon: IFVulcan
-		LocalOffset: 350,0,500
-		MuzzleSequence: muzzle
-		MuzzleSplitFacings: 8
-	WithMuzzleOverlay:
 	Cargo:
 		Types: Infantry
-		MaxWeight: 3
-		PipCount: 3
+		MaxWeight: 4
+		PipCount: 4
 		UnloadVoice: Unload
 		LoadingUpgrades: notmobile
 		EjectOnDeath: true
-	AttackTurreted:
-		Voice: Attack
 	RenderVoxels:
-		Scale: 1 #0.7
+		Scale: 1
 	Turreted:
 		TurnSpeed: 10
 		Offset: 150,0,0
 	AutoTarget:
 	WithVoxelTurret:
-
-MUTTANK:
-	Inherits: ^VoxelTank
-	Inherits@1:	^Ra2vxl
-	Valued:
-		Cost: 550
-	Tooltip:
-		Name: Leonid Tank
-		Description: Light Tank, average quality but cheap.\n\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 26
-		Prerequisites: ~muweap
-	Mobile:
-		TurnSpeed: 8
-		Speed: 110
-		Crushes: wall, crate, infantry
-	Health:
-		HP: 30000
-	Armor:
-		Type: Heavy
-	Armament:
-		Weapon: LeonidCannon
-		LocalOffset: 600,0,500
-		MuzzleSequence: muzzle
 	WithMuzzleOverlay:
 	AttackTurreted:
 		Voice: Attack
+	Armament:
+		Weapon: IFVulcan
+		LocalOffset: 350,0,500
+		MuzzleSequence: muzzle
+		MuzzleSplitFacings: 8
+
+TRIKE:
+	Inherits: ^VoxelTank
+	Valued:
+		Cost: 450
+	Tooltip:
+		Name: Mortar Trike
+		Description: Light vehicle armed with a mortar.\n\n  Strong vs Structures, Infantry.\n  Weak vs Vehicles, Aircraft, Base defences.
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 25
+		Prerequisites: ~muweap
+	Mobile:
+		TurnSpeed: 9
+		Speed: 120
+		Crushes: wall, crate, infantry
+	Health:
+		HP: 10000
+	Armor:
+		Type: Light
+	Armament:
+		Weapon: TrikeMortar
+		LocalOffset: 600,0,500
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
+	AttackFrontal:
+		Voice: Attack
 	RenderVoxels:
-		Scale: 0.95
-	Turreted:
-		TurnSpeed: 10
+		Scale: 0.9
 	AutoTarget:
-	WithVoxelTurret:
 
 MUTQUAD:
 	Inherits: ^VoxelTank
@@ -953,8 +972,8 @@ MUTQUAD:
 		Description: Heavy armored truck equiped with a quad cannon.\n\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles.
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 27
-		Prerequisites: ~muweap, muradr
+		BuildPaletteOrder: 26
+		Prerequisites: ~muweap
 	Mobile:
 		TurnSpeed: 7
 		Speed: 75
@@ -980,6 +999,76 @@ MUTQUAD:
 	Turreted:
 		TurnSpeed: 7
 		Offset: -300,0,0
+	AutoTarget:
+	WithVoxelTurret:
+
+STRUCK:
+	Inherits: ^VoxelTank
+	Inherits@1:	^Ra2vxl
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Battle Bus
+		Description: Medium transport, can carry up to five soldiers which can fire from inside.\n  Strength varies depending on the infantry it carries.\n  Weak vs Aircraft.
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 27
+		Prerequisites: ~muweap, muradr
+	Mobile:
+		TurnSpeed: 7
+		Speed: 70
+		Crushes: wall, crate, infantry
+	Health:
+		HP: 35000
+	Armor:
+		Type: Heavy
+	Cargo:
+		Types: Infantry
+		MaxWeight: 4
+		PipCount: 4
+		UnloadVoice: Unload
+		LoadingUpgrades: notmobile
+		EjectOnDeath: True
+		InitialUnits: e3
+	RenderVoxels:
+		Scale: 0.8
+	AutoTarget:
+	AttackGarrisoned:
+		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
+		PortYaws: 0, 176, 341, 512, 682, 853#10, 10, 10, 10, 10, 10
+		PortCones: 1086, 86, 86, 86, 86, 86#10, 10, 10, 10, 10,
+
+MUTTANK:
+	Inherits: ^VoxelTank
+	Inherits@1:	^Ra2vxl
+	Valued:
+		Cost: 550
+	Tooltip:
+		Name: Leonid Tank
+		Description: Light Tank, average quality but cheap.\n\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
+	# Buildable:
+		# Queue: Vehicle
+		# BuildPaletteOrder: 26
+		# Prerequisites: ~muweap
+	Mobile:
+		TurnSpeed: 8
+		Speed: 110
+		Crushes: wall, crate, infantry
+	Health:
+		HP: 30000
+	Armor:
+		Type: Heavy
+	Armament:
+		Weapon: LeonidCannon
+		LocalOffset: 600,0,500
+		MuzzleSequence: muzzle
+	WithMuzzleOverlay:
+	AttackTurreted:
+		Voice: Attack
+	RenderVoxels:
+		Scale: 0.95
+	Turreted:
+		TurnSpeed: 10
 	AutoTarget:
 	WithVoxelTurret:
 
@@ -1079,7 +1168,7 @@ FORTRESS:
 	AttackGarrisoned:
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
 		PortYaws: 0, 176, 341, 512, 682, 853#10, 10, 10, 10, 10, 10
-		PortCones: 1086, 86, 86, 86, 86, 86#10, 10, 10, 10, 10,
+		PortCones: 1086, 86, 86, 86, 86, 86#10, 10, 10, 10, 10
 	AutoTarget:
 	WithVoxelBody:
 	LeavesTrails:
@@ -1365,23 +1454,59 @@ TRIPOD:
 SCRDRONEC:
 	Inherits: ^ScrinVehicle
 	Inherits@1: ^HoverVehicle
-	# Buildable:
-		# Queue: Vehicle
-		# BuildPaletteOrder: 34
-		# Prerequisites: ~scrweap, scrtech
+	Inherits@2: ^PermanentSelfHeal
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 34
+		Prerequisites: ~scrweap#, scrtech
 	Valued:
 		Cost: 900
 	Tooltip:
-		Name: Drone Carrier
+		Name: Shield Carrier
 		Description: Hover vehicle designed for scouting and harassment.\nCloaked, doesn't uncloak when attacking.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
 	Health:
-		HP: 24000
+		HP: 120000
 	Mobile:
-		Speed: 128
+		Speed: 65
 	RenderSprites:
+	-Armor:
 	WithFacingSpriteBody:
 	BodyOrientation:
 		QuantizedFacings: 32
+	-Targetable@Essence:
+	-SelfHealing@Scrin:
+	-SelfHealing@ScrinCounter:
+	SpawnActorOnDeath@ScrinEssence:
+		DeathType:
+	-UpgradeOnTerrain@tib:
+	AttackFrontal:
+	Armament:
+		Weapon: BounceExplosion
+	AutoTarget:
+	ExplodeWeapon@Rifle1:
+		Weapon: RifleBounce
+		UpgradeTypes: RifleWarhead
+		UpgradeMinEnabledLevel: 1
+	ExplodeWeapon@Rocket1:
+		Weapon: RocketBounce
+		UpgradeTypes: RocketWarhead
+		UpgradeMinEnabledLevel: 1
+	ExplodeWeapon@AP1:
+		Weapon: APBounce
+		UpgradeTypes: APWarhead
+		UpgradeMinEnabledLevel: 1
+	ExplodeWeapon@Flame1:
+		Weapon: FlameBounce
+		UpgradeTypes: FlameWarhead
+		UpgradeMinEnabledLevel: 1
+	ExplodeWeapon@Artillery1:
+		Weapon: ArtilleryBounce
+		UpgradeTypes: ArtilleryWarhead
+		UpgradeMinEnabledLevel: 1
+	ExplodeWeapon@FullDamage1:
+		Weapon: FullDamageBounce
+		UpgradeTypes: FullDamage
+		UpgradeMinEnabledLevel: 1
 
 ################################################
 # CABAL

@@ -97,7 +97,7 @@ TrooperRail:
 WolverineVulcan:
 	Inherits: ^RifleWarhead
 	Inherits@2: ^Piffs
-	ReloadDelay: 40
+	ReloadDelay: 20
 	Range: 6c0
 	Report: tsgun4.aud
 	Projectile: Bullet
@@ -177,7 +177,6 @@ JuggCannon:
 		ContrailLength: 10
 		ContrailUsePlayerColor: true
 		Palette: ra
-	MinRange: 5c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 350
 		Damage: 4500
