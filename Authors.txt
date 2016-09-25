@@ -43,8 +43,8 @@ wirecase.com	: Guardian Platform model.
 Hassan_2030	: Grinder vxl.
 Jah		: Storm Rider vxl.				
 Sane Disruption	: Forgotten MRLS vxl.
-Orac		: Forgotten Trike.
-OverWatch (PPM User): Forgotten Battle Bus.	
+Orac		: Forgotten Trike vxl.
+OverWatch (PPM User): Forgotten Battle Bus vxl.	
 GameMaster0000	: Tiberian Fiend Icon.
 CyborgCommandoKerem: Black Hand Sniper shp.				
 DonutArnold	: Basilisk torpedo explosion effect, scrin structure, scrin aircraft crash

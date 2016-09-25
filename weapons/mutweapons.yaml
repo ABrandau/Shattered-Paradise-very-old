@@ -224,6 +224,7 @@ DeathclawBlow:
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 4000
+		ValidStances: Enemy, Neutral
 		ValidTargets: Vehicle, Defence, Infantry
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong
 
@@ -238,6 +239,7 @@ DeathclawBlow2:
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 4000
+		ValidStances: Enemy, Neutral
 		ValidTargets: Building
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong			
 
@@ -259,13 +261,13 @@ IFVulcan:
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, TiberiumDeath
 
 TrikeMortar:
-	Inherits: ^GrenadeWarhead
+	Inherits: ^ArtilleryWarhead
 	Inherits@2: ^Small_Clsn
 	Inherits@3: ^Small_Twlt
 	ReloadDelay: 100
-	Range: 9c0
+	Range: 10c0
 	MinRange: 2c0
-	Report: jugger1.aud
+	Report: 120mmf.aud
 	Projectile: Bullet
 		Speed: 150
 		Image: 120mm
@@ -276,10 +278,9 @@ TrikeMortar:
 		ContrailLength: 10
 		ContrailUsePlayerColor: true
 		Palette: ra
-	MinRange: 5c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 250
-		Damage: 7000
+		Damage: 5000
 		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
 
 LeonidCannon:
@@ -518,7 +519,6 @@ FlakFire:
 	ReloadDelay: 75
 	Range: 5c0
 	Report: cygun1.aud
-	MinRange: 1c0
 	ValidTargets: Air
 	Projectile: Bullet
 		Speed: 100c0

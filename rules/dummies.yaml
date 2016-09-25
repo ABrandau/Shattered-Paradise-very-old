@@ -65,6 +65,19 @@ SHAKYSHAKY:
 		Delay: 10
 		HealIfBelow: 200
 
+SHAKYSHAKYMINI:
+	Inherits: ^DUMMYAIRCRAFT
+	ShakeOnDeath:
+		Intensity: 2	
+	RevealsShroud:
+		Range: 3c0
+	Health:
+		HP: 10
+	SelfHealing:
+		Step: -10
+		Delay: 10
+		HealIfBelow: 200
+
 IONBEAMTARGET:
 	Inherits: ^DUMMYAIRCRAFT
 	Inherits@2: ^VisionWhenKilled

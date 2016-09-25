@@ -294,6 +294,7 @@ explosion:
 	lurkertentacle: lurkertentacle
 		Offset: 0, -12, 12
 		Tick: 15
+	cabspark: cabspark
 	#Scrin
 	destroexp: destroexp
 	lightningexplo: lightningexplo
@@ -310,6 +311,8 @@ explosion:
 		Offset: -5,-12, 12
 	scrinenergyeff: scrinenergyeff
 		Tick: 25
+	vanguardshockwave: vanguardshockwave
+		Offset: 0,-12, 12
 	firestormexplo: firestormexplo
 	scrinexplo1: scrinexplo1
 	scrinexplo2: scrinexplo2

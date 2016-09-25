@@ -86,11 +86,14 @@
 		BaseLevel: 1
 # TIMELINE TROLLING
 	SpeedMultiplier@ScrinTimeline:
-		UpgradeTypes: TimeLineTrolling
+		UpgradeTypes: TimeLineTrolling, TimeLineTrollingMini
 		Modifier: -25, -50
 	ReloadDelayMultiplier@ScrinTimeline:
 		UpgradeTypes: TimeLineTrolling
 		Modifier: 1000, 1250
+	ReloadDelayMultiplier@ScrinTimelineMini:
+		UpgradeTypes: TimeLineTrollingMini
+		Modifier: 150, 200
 #HEALTH PERCENTAGE FIREPOWER MULTIPLIER
 	HealthPercentageFirepowerMultiplier:
 		UpgradeTypes: AcidScaleDmg
@@ -109,8 +112,12 @@
 		Percentage: 20
 		ValidStances: Enemy
 		DeathTypes: CabalDeathCrate
-	GivesProximityBounty@BloodDerrick:
-		Percentage: 30
+	GivesProximityBounty@CabGrinder:
+		Percentage: 10
+		# BountyTypes: CabGrinder
+	# GivesProximityBounty@BloodDerrick:
+		# Percentage: 30
+		# BountyTypes: BloodDerrick
 #wiu wiu wiu wiu wiu wiu
 	SpawnActorOnDeath@burns:
 		Actor: fireactor
@@ -608,6 +615,7 @@
 			Rail: 90
 			DirtRoad: 100
 			Rough: 80
+			Bridge: 100
 			Tiberium: 90
 			BlueTiberium: 90
 			Veins: 50

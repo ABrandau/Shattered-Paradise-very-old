@@ -22,6 +22,10 @@ Terrain:
 		Type: Rail
 		Color: 363739
 		TargetTypes: Ground
+	TerrainType@Bridge:
+		Type: Bridge
+		Color: 5A5C5A
+		TargetTypes: Ground
 	TerrainType@Impassable:
 		Type: Impassable
 		Color: 666D76

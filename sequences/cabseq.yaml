@@ -601,7 +601,7 @@ wasp:
 	run:
 		Tick: 90
 		Facings: -32
-	icon: waspicon	
+	icon: waspicon
 	
 firefly:
 	Inherits: ^EmpOverlay
@@ -612,11 +612,20 @@ firefly:
 	run:
 		Tick: 90
 		Facings: -32
-	icon: fireflyicon		
-	
+	icon: fireflyicon
+
+devourer:
+	Inherits: ^EmpOverlay
+	idle:
+		Facings: 8
+	shoot:
+		Facings: 8
+		Length: 30
+	icon: devourericon
+
 basilisk:
 	Inherits: ^EmpOverlay
-	icon: basiliskicon		
+	icon: basiliskicon
 ##########################################################
 # Structures
 ##########################################################	

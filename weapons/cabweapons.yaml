@@ -122,6 +122,7 @@ ProcessingHuman:
 		Spread: 42
 		Damage: 4500
 		ValidTargets: Infantry
+		ValidStances: Enemy, Neutral
 		DamageTypes: Prone50Percent, TriggerProne, CabalDeath
 		
 GLAD120mm:
@@ -175,7 +176,7 @@ CyCannon:
 		Image: TORPEDO
 	Warhead@1Dam: SpreadDamage
 		Spread: 120
-		Damage: 12000
+		Damage: 10000
 		ValidTargets: Ground
 		Versus:
 			None: 350
@@ -389,7 +390,47 @@ WaspLasor:
 		Damage: 1
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	
+
+DevourerGrinder:
+	Inherits: ^ArtilleryWarhead
+	ReloadDelay: 35
+	Range: 200
+	Report: repair11.aud
+	Projectile: Bullet
+		Speed: 5c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 6000
+		Versus:
+		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
+	Warhead@5Actor: SpawnActor
+		Actors: SHAKYSHAKYMINI
+		FallRate: 5000
+		Range: 3
+
+DevourerExplo:
+	ReloadDelay: 3
+	Range: 200
+	Projectile: Bullet
+		Speed: 5c682
+		Inaccuracy: 200
+	Warhead@2Eff: CreateEffect
+		Explosions: cabspark
+		ExplosionPalette: apolra2
+
+DevourerBuff:
+	Inherits: ^NoDamage
+	ReloadDelay: 35
+	Range: 200
+	Projectile: InstantExplode
+	Warhead@Acid: GrantUpgrade
+		Range: 250
+		Duration: 35
+		Upgrades: DevoBuff
+		ValidStances: Ally
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+		AffectsParent: True
+
 BasiliskProton:
 	Inherits: ^ArtilleryWarhead
 	Inherits@2: ^Small_Bang
@@ -508,7 +549,7 @@ BlasterProton:
 		Image: TORPEDO
 		RangeLimit: 35
 	Warhead@1Dam: SpreadDamage
-		Spread: 225
+		Spread: 150
 		Damage: 3000
 		ValidTargets: Ground, Vehicle, Infantry, water
 		Versus:

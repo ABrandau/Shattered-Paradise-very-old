@@ -1,6 +1,6 @@
 SharkJump:
 	Inherits: ^RifleWarhead
-	ValidTargets: Infantry
+	ValidTargets: Infantry, Vehicle
 	ReloadDelay: 20
 	Range: 1c0
 	Report: fiend2.aud
@@ -9,7 +9,7 @@ SharkJump:
 	Warhead@1Dam: SpreadDamage
 		Spread: 32
 		Damage: 2000
-		ValidTargets: Infantry
+		ValidTargets: Infantry, Vehicle
 		ValidStances: Enemy, Neutral
 		DamageTypes: TriggerProne, BulletDeath, ScrinEssenceKill
 
@@ -187,7 +187,7 @@ ScorpAcid:
 		Speed: 200
 		Image: acidall32
 		Inaccuracy: 1c0
-		Palette: apolredalpha
+		Palette: apolgreenalpha
 	BurstDelay: 3
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
@@ -198,7 +198,7 @@ ScorpAcid:
 		InvalidTargets: Vehicle, Building, Wall
 	Warhead@2Eff: CreateEffect
 		Explosions: tibexp2
-		ExplosionPalette: apolredalpha
+		ExplosionPalette: apolgreenalpha
 		ImpactSound: expnew14.aud
 		InvalidImpactTypes: Water
 	Warhead@AcidScaleDmg: GrantUpgrade
@@ -227,6 +227,7 @@ ScrMbtCannon:
 		Falloff: 100, 100
 		Damage: 500
 		AffectsParent: false
+		ValidStances: Enemy, Neutral
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, ScrinEssenceKill
 	-Warhead@BounceUpgrade:
 
@@ -239,13 +240,22 @@ BatteryBuff:
 		Damage: 1
 
 BounceExplosion:
-	Inherits: ^GrenadeWarhead
-	ReloadDelay: 25
+	ReloadDelay: 50
 	Range: 4c0
 	Projectile: InstantExplode
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 2000
+		ValidTargets: Ground
+		Versus:
+			None: 15
+			Wood: 100
+			Light: 10
+			Heavy: 5
+			Concrete: 28
 	Warhead@op: FireShrapnel
 		Weapon: BounceTesla
-		Amount: 6
+		Amount: 3
 		AimChance: 100
 		ThrowWithoutTarget: false
 		AllowDirectHit: true
@@ -254,15 +264,26 @@ BounceExplosion:
 
 BounceTesla:
 	Inherits: ColossiTesla
-	Inherits@1: ^GrenadeWarhead
 	-Report: voltautofire.wav
 	Warhead@1Dam: SpreadDamage
-		Spread: 42
-		Damage: 200
+		Spread: 128
+		Damage: 1500
+		ValidTargets: Ground
+		Versus:
+			None: 15
+			Wood: 100
+			Light: 10
+			Heavy: 5
+			Concrete: 28
+	Warhead@TractorStop: GrantUpgrade
+		Range: 250
+		Duration: 8
+		Upgrades: TimeLineTrollingMini
+		ValidTargets: Building, Vehicle, Infantry
 
 RifleBounce:
 	Inherits: ^NoDamage
-	ReloadDelay: 2
+	ReloadDelay: 3
 	Range: 6c0
 	Projectile: InstantExplode
 	Warhead@1Dam: SpreadDamage
@@ -275,6 +296,9 @@ RifleBounce:
 		AllowDirectHit: true
 		AimTargetStances: Enemy
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+	Warhead@Bouncing: CreateEffect
+		Explosions: vanguardshockwave
+		ExplosionPalette: apolra2ialpha
 
 RocketBounce:
 	Inherits: RifleBounce
@@ -303,18 +327,45 @@ FullDamageBounce:
 
 RifleBounceWeapon:
 	Inherits: MarineRifle
+	Projectile: Bullet
+		Speed: 500
+		Image: purpBullet
+		TrailImage: purpBullet
+		ContrailLength: 5
+		Shadow: true
+		Palette: playerscrin
+		Angle: 15
 	ReloadDelay: 50
-	Range: 5c0
+	Range: 6c0
+	Warhead@1Dam: SpreadDamage
 		Damage: 1500
 
 RocketBounceWeapon:
 	Inherits: SkirmisherRocket
+	Projectile: Bullet
+		Speed: 500
+		Image: purpBullet
+		TrailImage: purpBullet
+		Inaccuracy: 1c0
+		ContrailLength: 5
+		Shadow: true
+		Palette: playerscrin
+		Angle: 15
 	ReloadDelay: 50
 	Warhead@1Dam: SpreadDamage
 		Damage: 1500
 
 APBounceWeapon:
 	Inherits: Tick90mm
+	Projectile: Bullet
+		Speed: 500
+		Image: purpBullet
+		TrailImage: purpBullet
+		Inaccuracy: 1c0
+		ContrailLength: 5
+		Shadow: true
+		Palette: playerscrin
+		Angle: 15
 	ReloadDelay: 50
 	Range: 5c0
 	Warhead@1Dam: SpreadDamage
@@ -322,12 +373,30 @@ APBounceWeapon:
 
 FlameBounceWeapon:
 	Inherits: DevilsFlame
+	Projectile: Bullet
+		Speed: 500
+		Image: purpBullet
+		TrailImage: purpBullet
+		Inaccuracy: 1c0
+		ContrailLength: 5
+		Shadow: true
+		Palette: playerscrin
+		Angle: 15
 	ReloadDelay: 50
 	Range: 5c0
 		Damage: 150
 
 ArtilleryBounceWeapon:
 	Inherits: JuggCannon
+	Projectile: Bullet
+		Speed: 500
+		Image: purpBullet
+		TrailImage: purpBullet
+		Inaccuracy: 1c0
+		ContrailLength: 5
+		Shadow: true
+		Palette: playerscrin
+		Angle: 15
 	ReloadDelay: 17
 	Range: 8c0
 	Burst: 1
@@ -337,6 +406,15 @@ ArtilleryBounceWeapon:
 
 FullDamageBounceWeapon:
 	Inherits: ColossiTesla
+	Projectile: Bullet
+		Speed: 500
+		Image: purpBullet
+		TrailImage: purpBullet
+		Inaccuracy: 1c0
+		ContrailLength: 5
+		Shadow: true
+		Palette: playerscrin
+		Angle: 15
 	ReloadDelay: 50
 	Range: 5c0
 	Warhead@1Dam: SpreadDamage
@@ -668,7 +746,7 @@ NeedlerAcid:
 		Speed: 250
 		Image: acidall32
 		Inaccuracy: 1c0
-		Palette: apolredalpha
+		Palette: apolgreenalpha
 	BurstDelay: 4
 	Warhead@1Dam: SpreadDamage
 		Spread: 80
@@ -679,7 +757,7 @@ NeedlerAcid:
 		InvalidTargets: Vehicle, Building, Wall
 	Warhead@2Eff: CreateEffect
 		Explosions: tibexp2
-		ExplosionPalette: apolredalpha
+		ExplosionPalette: apolgreenalpha
 		ImpactSound: expnew14.aud
 		InvalidImpactTypes: Water
 
@@ -803,6 +881,9 @@ EssenceMissileToBattery:
 	Inherits: EssenceMissile
 	Range: 10c0
 	ValidTargets: EssenceBattery
+	-InvalidTargets: EssenceBattery
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: EssenceBattery
 	Warhead@emp: GrantUpgrade
 		Range: 200
 		Duration: 3

@@ -1,5 +1,23 @@
 ﻿YEAR - MONTH - DAY
 
+[2016 - 09 - 22]
+Mutant Changes:
+	Disabled Forgotten APC and Tank.
+	Quad Cannon moved to tier 1.
+	Added The Forgotten Trike, a fast unit that carries a mortar.
+	Added the Forgotten Battle Bus, a mobile bunker that requires infantry to fire.
+CABAL Changes:
+	Disabled the Grinder, added the devourer, a frigate that specializes in recovery
+	operations.
+	Artillery renamed to Drone Host (was devourer).
+Scrin Changes:
+	Added the Vanguard, a vehicle that doesn't behave like a Scrin unit (essence 
+	  recovery), it zaps units slowing them and reducing their attack speed, and
+	  if the unit is attacked, it will bounce the strikes back at nearby hostile
+	  units, auto repairs over time, and takes full damage against any type of 
+	  unit.
+	Changed color of the Ichor Walker and Waste turret projectile from red to green.
+
 [2016 - 09 - 17]
 Mutant Changes:
 	Gargoyle: Ammunition: 40 -> 30.

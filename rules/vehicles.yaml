@@ -254,7 +254,7 @@ SONIC:
 			Veins: 56
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 45000
+		HP: 55000
 	Armor:
 		Type: Heavy
 	Armor@disruptor:
@@ -505,6 +505,10 @@ SAPC:
 		Weapon: SUBAPCTRAIL
 		UpgradeTypes: airborne
 		UpgradeMaxEnabledLevel: 0
+	Cloak@CLOAKGENERATOR:
+		UpgradeTypes: cloakgenerator
+		CloakSound: subdril1.aud
+		UncloakSound: subdril1.aud
 	Health:
 		HP: 17500
 	Armor:
@@ -935,7 +939,7 @@ MUTAPC:
 TRIKE:
 	Inherits: ^VoxelTank
 	Valued:
-		Cost: 450
+		Cost: 350
 	Tooltip:
 		Name: Mortar Trike
 		Description: Light vehicle armed with a mortar.\n\n  Strong vs Structures, Infantry.\n  Weak vs Vehicles, Aircraft, Base defences.
@@ -945,10 +949,10 @@ TRIKE:
 		Prerequisites: ~muweap
 	Mobile:
 		TurnSpeed: 9
-		Speed: 120
+		Speed: 130
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 10000
+		HP: 12500
 	Armor:
 		Type: Light
 	Armament:
@@ -1009,7 +1013,7 @@ STRUCK:
 		Cost: 900
 	Tooltip:
 		Name: Battle Bus
-		Description: Medium transport, can carry up to five soldiers which can fire from inside.\n  Strength varies depending on the infantry it carries.\n  Weak vs Aircraft.
+		Description: Medium transport, can carry up to four soldiers which can fire from inside.\n  Strength varies depending on the infantry it carries.\n  Weak vs Aircraft.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 27
@@ -1019,7 +1023,7 @@ STRUCK:
 		Speed: 70
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 35000
+		HP: 45000
 	Armor:
 		Type: Heavy
 	Cargo:
@@ -1245,7 +1249,7 @@ SCRSCORPION:
 		Description: Anti-personnel walker. Reduces the damage of targetted \nunits depending on how damaged they are.\n\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 31
+		BuildPaletteOrder: 30
 		Prerequisites: ~scrweap
 	Mobile:
 		TurnSpeed: 6
@@ -1268,6 +1272,63 @@ SCRSCORPION:
 		Bounds: 50, 32, 0, -8
 	-SelfHealing@ELITE:
 
+SCRDRONEC:
+	Inherits: ^ScrinVehicle
+	Inherits@1: ^HoverVehicle
+	Inherits@2: ^PermanentSelfHeal
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 31
+		Prerequisites: ~scrweap#, scrtech
+	Valued:
+		Cost: 900
+	Tooltip:
+		Name: Vanguard
+		Description: Hover drone designed for indirect conflict, it bounces back attacks\nreceived at random hostile targets and also disrupts enemy units.\nCannot collect essence, but autorepairs.\n  Strong vs Structures.\n  Weak vs units meant to counter other unit types.
+	Health:
+		HP: 80000
+	Mobile:
+		Speed: 65
+	RenderSprites:
+	-Armor:
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32
+	-Targetable@Essence:
+	-SelfHealing@Scrin:
+	-SelfHealing@ScrinCounter:
+	SpawnActorOnDeath@ScrinEssence:
+		DeathType:
+	-UpgradeOnTerrain@tib:
+	AttackFrontal:
+	Armament:
+		Weapon: BounceExplosion
+	AutoTarget:
+	ExplodeWeapon@Rifle1:
+		Weapon: RifleBounce
+		UpgradeTypes: RifleWarhead
+		UpgradeMinEnabledLevel: 1
+	ExplodeWeapon@Rocket1:
+		Weapon: RocketBounce
+		UpgradeTypes: RocketWarhead
+		UpgradeMinEnabledLevel: 1
+	ExplodeWeapon@AP1:
+		Weapon: APBounce
+		UpgradeTypes: APWarhead
+		UpgradeMinEnabledLevel: 1
+	ExplodeWeapon@Flame1:
+		Weapon: FlameBounce
+		UpgradeTypes: FlameWarhead
+		UpgradeMinEnabledLevel: 1
+	ExplodeWeapon@Artillery1:
+		Weapon: ArtilleryBounce
+		UpgradeTypes: ArtilleryWarhead
+		UpgradeMinEnabledLevel: 1
+	ExplodeWeapon@FullDamage1:
+		Weapon: FullDamageBounce
+		UpgradeTypes: FullDamage
+		UpgradeMinEnabledLevel: 1
+
 SCRGLYDER2:
 	Inherits: ^ScrinVehicle
 	Inherits@1: ^HoverVehicle
@@ -1277,7 +1338,7 @@ SCRGLYDER2:
 		BuildPaletteOrder: 31
 		Prerequisites: ~scrweap
 	Valued:
-		Cost: 650
+		Cost: 550
 	Tooltip:
 		Name: Glider
 		Description: Specialized weapons platform it can vary from a ground version and\naerial version. The aerial version attacks ground units and vice versa.\n\n Strong vs Armor.\n  Weak vs Light units.
@@ -1316,8 +1377,6 @@ SCRMBT:
 		HP: 30000
 	Armor:
 		Type: Heavy
-	Armor@HoverTank:
-		Type: HoverTank
 	Mobile:
 		Speed: 100
 	Turreted:
@@ -1448,65 +1507,6 @@ TRIPOD:
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	-SelfHealing@ELITE:
-##########################################################
-# Unused
-##########################################################
-SCRDRONEC:
-	Inherits: ^ScrinVehicle
-	Inherits@1: ^HoverVehicle
-	Inherits@2: ^PermanentSelfHeal
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 34
-		Prerequisites: ~scrweap#, scrtech
-	Valued:
-		Cost: 900
-	Tooltip:
-		Name: Shield Carrier
-		Description: Hover vehicle designed for scouting and harassment.\nCloaked, doesn't uncloak when attacking.\n  Strong vs Infantry, Light armor\n  Weak vs Tanks, Aircraft
-	Health:
-		HP: 120000
-	Mobile:
-		Speed: 65
-	RenderSprites:
-	-Armor:
-	WithFacingSpriteBody:
-	BodyOrientation:
-		QuantizedFacings: 32
-	-Targetable@Essence:
-	-SelfHealing@Scrin:
-	-SelfHealing@ScrinCounter:
-	SpawnActorOnDeath@ScrinEssence:
-		DeathType:
-	-UpgradeOnTerrain@tib:
-	AttackFrontal:
-	Armament:
-		Weapon: BounceExplosion
-	AutoTarget:
-	ExplodeWeapon@Rifle1:
-		Weapon: RifleBounce
-		UpgradeTypes: RifleWarhead
-		UpgradeMinEnabledLevel: 1
-	ExplodeWeapon@Rocket1:
-		Weapon: RocketBounce
-		UpgradeTypes: RocketWarhead
-		UpgradeMinEnabledLevel: 1
-	ExplodeWeapon@AP1:
-		Weapon: APBounce
-		UpgradeTypes: APWarhead
-		UpgradeMinEnabledLevel: 1
-	ExplodeWeapon@Flame1:
-		Weapon: FlameBounce
-		UpgradeTypes: FlameWarhead
-		UpgradeMinEnabledLevel: 1
-	ExplodeWeapon@Artillery1:
-		Weapon: ArtilleryBounce
-		UpgradeTypes: ArtilleryWarhead
-		UpgradeMinEnabledLevel: 1
-	ExplodeWeapon@FullDamage1:
-		Weapon: FullDamageBounce
-		UpgradeTypes: FullDamage
-		UpgradeMinEnabledLevel: 1
 
 ################################################
 # CABAL
@@ -1618,10 +1618,10 @@ GRINDER:
 	Tooltip:
 		Name: Grinder
 		Description: Heavy vehicle designed for salvaging Hostiles.\nEnemies killed with this unit reward the player\nwith money.\n\n  Strong vs Light armored targers.\n  Weak vs Aircraft.
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 20
-		Prerequisites: ~cabweap, cabradr
+	# Buildable:
+		# Queue: Vehicle
+		# BuildPaletteOrder: 20
+		# Prerequisites: ~cabweap, cabradr
 	Mobile:
 		TurnSpeed: 8
 		Speed: 100
@@ -1727,7 +1727,7 @@ SPIDERARTY:
 	Valued:
 		Cost: 1500
 	Tooltip:
-		Name: Devourer
+		Name: Drone Host
 		Description: Heavy Artillery that builds drones at the target area.\nConverts kills into cyborgs.\n\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
 	Buildable:
 		Queue: Vehicle
@@ -1784,7 +1784,7 @@ PALADIN:
 		DamageCooldown: 0
 		Delay: 75
 	Health:
-		HP: 100000
+		HP: 90000
 	Voiced:
 		VoiceSet: Cyborg
 	Armor:

@@ -2344,17 +2344,17 @@ BLOODDERRICK:
 	WithAttackAnimation:
 		AttackSequence: move
 	WithRangeCircle:
-		Range: 9c0
-		Type: cloakgenerator
+		Range: 12c0
+		Type: Bounty
 	RejectsOrders:
 	Armament:
 		Weapon: DerrickAnimation
 		TargetStances: Ally, Enemy, Neutral
 	AutoTarget:
 	ProximityBounty:
-		Delay: 1500
+		Delay: 200#1500
 		BountyType: BloodDerrick
-		Range: 9c0
+		Range: 12c0
 
 GASAND:
 	Inherits: ^Wall

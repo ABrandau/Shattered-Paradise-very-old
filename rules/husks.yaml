@@ -190,6 +190,28 @@ WASP.Husk:
 	-WithVoxelBody:
 	FallsToEarth:
 		Explosion: SmallPlaneExplode
+
+DEVOURER.Husk:		
+	Inherits: ^AircraftHusk
+	Inherits@5: ^CabRender
+	Tooltip:
+		Name: Devourer
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 149
+	Selectable:
+		Bounds: 1,1	
+	WithShadow:
+	WithFacingSpriteBody:
+	-Cloak@CLOAKGENERATOR:
+	BodyOrientation:
+		QuantizedFacings: 32	
+	RenderSprites:
+		Image: devourer	
+	-RenderVoxels:
+	-WithVoxelBody:
+	FallsToEarth:
+		Explosion: SmallPlaneExplode
 	
 FIREFLY.Husk:		
 	Inherits: ^AircraftHusk

@@ -806,7 +806,7 @@ SCRGLYDER1:
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^SelfReloads
 	Valued:
-		Cost: 650
+		Cost: 550
 	Tooltip:
 		Name: Glider
 		Description: Specialized weapons platform it can vary from a ground version and\naerial version. The aerial version attacks ground units and vice versa.\n\n Strong vs Armor.\n  Weak vs Light units.
@@ -989,10 +989,10 @@ SCRBATTLESHIP:
 		Type: CenterPosition
 	Armament:
 		Weapon: BattleshipCannon
-		LocalOffset:0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
+		LocalOffset: 0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
 	Armament@2:
 		Weapon: BattleshipRocketDummy
-		LocalOffset:0,0,0
+		LocalOffset: 0,0,0
 	AttackTurreted:
 	Turreted:
 	AmmoPool:
@@ -1348,6 +1348,71 @@ FIREFLY:
 	SpawnActorOnDeath:
 		Actor: FIREFLY.Husk
 
+DEVOURER:
+	Inherits: ^Helicopter
+	Inherits@2: ^PermanentSelfHeal
+	Inherits@3: ^SelfReloads
+	Inherits@5: ^CabRender
+	Valued:
+		Cost: 2400
+	Tooltip:
+		Name: Devourer
+		Description: Slow frigate designed for recovery operations, gives\nthe onwer part of the cost of any unit that dies near.\n\n Strong vs Structures.\n Weak vs Infantry, Vehicles, Aircraft.
+	Buildable:
+		Queue: Air
+		BuildPaletteOrder: 21
+		Prerequisites: ~cabair, cabradr
+	Selectable:
+		Bounds: 120, 75, 0, -35
+	Aircraft:
+		TurnSpeed: 6
+		Speed: 35
+		CruiseAltitude: 0c750
+		Repulsable: true
+		MoveIntoShroud: true
+		TakeoffSound: orcaup1.aud
+		LandingSound: orcadwn1.aud
+	Health:
+		HP: 200000
+	Armor:
+		Type: Light
+	Voiced:
+		VoiceSet: Limpet
+	Armament@Primary:
+		Weapon: DevourerGrinder
+	Armament@Secondary:
+		Weapon: DevourerBuff
+	Armament@Explos:
+		Weapon: DevourerExplo
+	AttackHeli:
+		FacingTolerance: 20
+		Voice: Attack
+	ProximityBounty:
+		Delay: 200#1500
+		# BountyType: CabGrinder
+		Range: 6c0
+	WithRangeCircle:
+		Range: 6c0
+		Type: Bounty
+	AutoTarget:
+		ScanRadius: 5
+	-RenderVoxels:
+	-WithVoxelBody:
+	WithShadow:
+	RenderSprites:
+	WithSpriteBody@idle:
+		UpgradeTypes: DevoBuff
+		UpgradeMaxEnabledLevel: 0
+		Sequence: idle
+	WithSpriteBody@attack:
+		Sequence: shoot
+		UpgradeTypes: DevoBuff
+		UpgradeMinEnabledLevel: 1
+	BodyOrientation:
+		QuantizedFacings: 8
+	SpawnActorOnDeath:
+		Actor: DEVOURER.Husk
+
 BASILISK:
 	Inherits: ^Helicopter
 	Inherits@1: ^Ra2vxl
@@ -1360,7 +1425,7 @@ BASILISK:
 		Description: Light frigate, fires plasma shells and has\nfirestorm bombs.\n  Strong vs Infantry, Buildings.\n\n  Weak vs Aircraft, Vehicles.
 	Buildable:
 		Queue: Air
-		BuildPaletteOrder: 20
+		BuildPaletteOrder: 22
 		Prerequisites: ~cabair, cabtech
 	Selectable:
 		Bounds: 60,48
