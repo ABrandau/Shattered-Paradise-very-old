@@ -274,7 +274,7 @@ HMEC:
 	Inherits: ^VoxelTank
 	Inherits@1: ^PermanentSelfHeal
 	Valued:
-		Cost: 2500
+		Cost: 2000
 	Tooltip:
 		Name: Mammoth Mk. II
 		Description: Slow Heavy Walker armed with dual railguns.\n\n  Strong vs Ground Units.\n  Weak vs  Aircraft\nMaximum 1 can be built.
@@ -289,7 +289,7 @@ HMEC:
 		Crushes: wall, crate, infantry
 	-RejectsOrders@berserk:
 	Health:
-		HP: 80000
+		HP: 150000
 	Armor:
 		Type: Heavy
 	RevealsShroud:
@@ -433,7 +433,6 @@ TTNK:
 		UpgradeMinEnabledLevel: 1
 	AutoTarget:
 
-
 BIKE:
 	Inherits: ^VoxelVehicle
 	Inherits@2: ^NodCloakHealing
@@ -482,22 +481,15 @@ SAPC:
 		TurnSpeed: 5
 		Speed: 50
 		InitialFacing: 0
-		TakeoffSound: subdril1.aud
-		LandingSound: subdril1.aud
 		CruiseAltitude: -2c0
 		MinAirborneAltitude: -500
 		AltitudeVelocity: 0c43
 	-Targetable@GROUND:
-	Targetable@FuckingApc:
+	-Targetable@AIRBORNE:
+	Targetable:
+		TargetTypes: Ground
+	Targetable@vehicle:
 		TargetTypes: Vehicle
-		UpgradeTypes: airborne
-		UpgradeMinEnabledLevel: 1
-		-UpgradeMaxEnabledLevel: 0
-	Targetable@AIRBORNE:
-		TargetTypes: None
-		UpgradeTypes: airborne
-		UpgradeMaxEnabledLevel: 0
-		-UpgradeMinEnabledLevel: 1
 	WithVoxelBody:
 		UpgradeTypes: airborne
 		UpgradeMinEnabledLevel: 1
@@ -506,7 +498,9 @@ SAPC:
 		UpgradeTypes: airborne
 		UpgradeMaxEnabledLevel: 0
 	Cloak@CLOAKGENERATOR:
-		UpgradeTypes: cloakgenerator
+		UpgradeTypes: airborne
+		UpgradeMaxEnabledLevel: 0
+		CloakDelay: 0
 		CloakSound: subdril1.aud
 		UncloakSound: subdril1.aud
 	Health:
@@ -662,7 +656,7 @@ ARMH:
 		Weapon: BCLazor
 		LocalOffset: 350,0,450
 	AmmoPool:
-		Ammo: 10
+		Ammo: 12
 		PipCount: 5
 		PipType: Ammo
 		SelfReloadsTicks: 60
@@ -1191,41 +1185,46 @@ SCRHARV:
 	Inherits@2: ^IncompleteSelfHeal
 	Inherits@3: ^HoverVehicle
 	Valued:
-		Cost: 1100
+		Cost: 550
 	Tooltip:
 		Name: Harvester
-		Description: Collects Ichor for processing.\nIncompatible with human refineries.\n\n  Unarmed.
+		Description: Collects Ichor for processing.\nIncompatible with human refineries.\nCan be sold if near a Service Depot.\n\n  Unarmed.
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 1
+		BuildPaletteOrder: 99
 		Prerequisites: ~scrweap, scrproc
 		InitialActivity: FindResources
 	Selectable:
 		Priority: 7
 		Bounds: 36,36
+		Class: ScrinHarv
 	Targetable@MindControl:
 		TargetTypes: MindControlInmune
 	Harvester:
-		Capacity: 30
+		Capacity: 12
 		Resources: Tiberium, BlueTiberium
 		DeliveryBuildings: scrproc
-		UnloadTicksPerBale: 8
+		UnloadTicksPerBale: 2
 		LoadTicksPerBale: 20
 		SearchFromProcRadius: 36
 		SearchFromOrderRadius: 18
 		HarvestVoice: Attack
 		DeliverVoice: Move
 	Mobile:
-		Speed: 74
+		TurnSpeed: 10
+		Speed: 85
 	Health:
-		HP: 75000
+		HP: 37500
 	Armor:
-		Type: Heavy
+		Type: Light
 	Capturable:
 		CaptureThreshold: 60
 	-GainsExperience:
 	Explodes:
 		Weapon: TiberiumExplosion
+	Sellable:
+		UpgradeTypes: AuraRepair
+		UpgradeMinEnabledLevel: 1
 	WithHarvestOverlay:
 		Offset: 384,0,0
 		Palette: effect
@@ -1236,8 +1235,7 @@ SCRHARV:
 	WithFacingSpriteBody:
 	BodyOrientation:
 		QuantizedFacings: 32
-	-SelfHealing@Scrin:
-	-SelfHealing@ScrinCounter:
+	-DamagedByTerrain@ScrinDamage:
 
 SCRSCORPION:
 	Inherits: ^ScrinVehicle
@@ -1256,7 +1254,7 @@ SCRSCORPION:
 		Speed: 91
 		Crushes: crate
 	Health:
-		HP: 30000
+		HP: 45000
 	Armor:
 		Type: Light
 	AttackFrontal:
@@ -1295,11 +1293,9 @@ SCRDRONEC:
 	BodyOrientation:
 		QuantizedFacings: 32
 	-Targetable@Essence:
-	-SelfHealing@Scrin:
-	-SelfHealing@ScrinCounter:
+	-DamagedByTerrain@ScrinDamage:
 	SpawnActorOnDeath@ScrinEssence:
 		DeathType:
-	-UpgradeOnTerrain@tib:
 	AttackFrontal:
 	Armament:
 		Weapon: BounceExplosion
@@ -1343,11 +1339,12 @@ SCRGLYDER2:
 		Name: Glider
 		Description: Specialized weapons platform it can vary from a ground version and\naerial version. The aerial version attacks ground units and vice versa.\n\n Strong vs Armor.\n  Weak vs Light units.
 	Health:
-		HP: 15000
+		HP: 22500
 	Mobile:
 		Speed: 91
 	Transforms:
 		IntoActor: scrglyder1
+	-DamagedByTerrain@ScrinDamage:
 	Armament:
 		Weapon: Glyder2Cannon
 		Recoil: 85
@@ -1374,7 +1371,7 @@ SCRMBT:
 		Name: Hover Tank
 		Description: Light Tank, good for scouting, deals damage over an area.\n\n Strong vs Light, heavy armor\n  Weak vs Infantry, Aircraft
 	Health:
-		HP: 30000
+		HP: 45000
 	Armor:
 		Type: Heavy
 	Mobile:
@@ -1447,8 +1444,7 @@ SCRRECHARGER:
 		Sequence: stand
 	WithMoveAnimation:
 		MoveSequence: run
-	-SelfHealing@Scrin:
-	-SelfHealing@ScrinCounter:
+	-DamagedByTerrain@ScrinDamage:
 	-SelfHealing@ELITE:
 
 TRIPOD:
@@ -1476,7 +1472,7 @@ TRIPOD:
 		Speed: 70
 		Crushes: crate, infantry
 	Health:
-		HP: 40000
+		HP: 60000
 	Carryable:
 		LocalOffset: 0,0,2500
 	AttackFrontal:

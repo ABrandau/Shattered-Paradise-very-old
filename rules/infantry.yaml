@@ -750,6 +750,21 @@ PSYKER:
 ############################################
 # Scrin
 ############################################
+
+INFANTRYSCRHARV:
+	Inherits: SCRHARV
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 99
+		Prerequisites: ~scrproc
+		InitialActivity: FindResources
+	Selectable:
+		Priority: 7
+		Bounds: 36,36
+		Class: ScrinHarv
+	RenderSprites:
+		Image: scrharv
+
 shark:
 	Inherits: ^ScrinSoldier
 	Buildable:
@@ -764,7 +779,7 @@ shark:
 	Selectable:
 		Class: Shark
 	Health:
-		HP: 17000
+		HP: 25500
 	Mobile:
 		Speed: 90
 		Voice: Move
@@ -810,12 +825,12 @@ LEGIO:
 		BuildPaletteOrder: 25
 		Prerequisites: ~scrrax
 	Valued:
-		Cost: 210
+		Cost: 230
 	Tooltip:
 		Name: Legionnaire
 		Description: Scrin Frontile trooper. Resistant\nto damage. Cannot be crushed.\n\n  Strong vs Vehicles, Buildings.\n  Weak vs Infantry.
 	Health:
-		HP: 15000
+		HP: 22500
 	-Crushable:
 	Mobile:
 		Speed: 60
@@ -875,18 +890,12 @@ COLOSSI:
 	Selectable:
 		Bounds: 26,30,0,-10
 	Health:
-		HP: 44000
+		HP: 6600
 	Mobile:
 		Speed: 60
 		SharesCell: False
 		UpgradeTypes: notmobile
 		UpgradeMaxEnabledLevel: 0
-	SelfHealing@ScrinCounter:
-		PercentageStep: 1
-		Step: 0
-		Delay: 5
-		DamageCooldown: 100
-		HealIfBelow: 75
 	SpawnActorOnDeath@FLAMEGUY:
 	SpawnActorOnDeath@conversion:
 		Actor: cybdog
@@ -944,7 +953,7 @@ STALKER:
 		Name: Stalker
 		Description: Disruption infantry Confuses enemies for shorter periods of time.\nchanging their alegiance.\n\n  Unarmed.
 	Health:
-		HP: 13000
+		HP: 20000
 	Mobile:
 		Speed: 80
 		TerrainSpeeds:
@@ -977,7 +986,7 @@ FLOAT:
 		Name: Purifier
 		Description: Recon unit, suited for harassment.\nCan move through water and Cliffs.\n\n  Strong vs Infantry, Buildings.\n  Weak vs Vehicles, Aircraft.
 	Health:
-		HP: 18000
+		HP: 27000
 	Mobile:
 		Speed: 100
 		TerrainSpeeds:
@@ -1072,12 +1081,12 @@ CABSENTRY:
 	Mobile:
 		Speed: 70
 	SelfHealing:
-		PercentageStep: -10
+		PercentageStep: -50
 		Step: 0
-		Delay: 25
+		Delay: 125
 		HealIfBelow: 200
 	Health:
-		HP: 15000
+		HP: 20000
 	Armament@primary:
 		Weapon: SentryGun
 	AutoTarget:
@@ -1095,7 +1104,7 @@ CABSENTRY:
 CYBORG:
 	Inherits: ^Cyborg
 	Valued:
-		Cost: 350
+		Cost: 400
 	Tooltip:
 		Name: Cyborg Infantry
 		Description: Durable infantry that has good vision and damage. Auto repairs\nslowly up full to health even when under attack.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft

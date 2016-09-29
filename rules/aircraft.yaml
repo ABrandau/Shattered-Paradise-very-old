@@ -753,7 +753,7 @@ drache:
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 110
-		Prerequisites: ~scrair, scrradr
+		Prerequisites: ~scrair, scrdepot
 	Valued:
 		Cost: 1500
 	Tooltip:

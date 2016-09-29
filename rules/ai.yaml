@@ -18,25 +18,25 @@ Player:
 		ProtectUnitScanRadius: 35
 		RushAttackScanRadius: 35
 		RushInterval: 1125
-		StructureProductionInactiveDelay: 25
-		StructureProductionActiveDelay: 0
-		StructureProductionRandomBonusDelay: 25
+		# StructureProductionInactiveDelay: 25
+		StructureProductionActiveDelay: 50
+		StructureProductionRandomBonusDelay: 75
 		MinimumDefenseRadius: 5
 		MaximumDefenseRadius: 40
 		AssignRolesInterval: 75
 		AttackForceInterval: 100
 		IdleBaseUnitsMaximum: 10
 		RallyPointScanRadius: 25
-		MinBaseRadius: 4
+		MinBaseRadius: 5
 		MaxBaseRadius: 40
-		MaxResourceCellsToCheck: 9
+		MaxResourceCellsToCheck: 30
 		ShouldRepairBuildings: True
 		CheckForNewBasesDelay: 1500
 		NewProductionCashThreshold: 90000
 		BuildingLimits:
 #PRODUCTION#
-			proc: 2
-			scrproc: 2
+			proc: 5
+			scrproc: 5
 			gasilo: 0
 #POWER#
 			napowr: 9
@@ -168,8 +168,10 @@ Player:
 			cabair: 5%
 		UnitLimits:
 #Harvesters#
-			harv: 4
-			scrharv: 4
+			harv: 9
+			scrharv: 9
+			infantryharv: 6
+			infantryscrharv: 6
 #T1 Inf#
 			gdie1: 18
 			marauder: 18
@@ -201,11 +203,12 @@ Player:
 #T1 Vehicle#
 			smech: 7
 			bggy: 7
-			mutapc: 7
+			trike: 7
 			dino: 7
 			mmch: 7
-			muttank: 10
+			struck: 10
 			centurion: 10
+			scrdronec: 3
 			scrscorpion: 10
 			scrglyder1: 10
 #T2 Vehicle#
@@ -240,8 +243,10 @@ Player:
 			scrbattleship: 4
 		UnitsToBuild:
 #Harvesters#
-			harv: 7.5%
-			scrharv: 7.5%
+			harv: 40%
+			scrharv: 40%
+			infantryharv: 40%
+			infantryscrharv: 40%
 #T1 Inf#
 			gdie1: 2%
 			altnode1: 2%
@@ -274,10 +279,11 @@ Player:
 			mmch: 5%
 			smech: 7%
 			bggy: 5%
-			mutapc: 5%
-			muttank: 7%
+			trike: 5%
+			struck: 7%
 			dino: 5%
 			centurion: 7%
+			scrdronec: 4%
 			scrscorpion: 5%
 			scrglyder1: 7%
 #T2 Vehicle#
@@ -514,10 +520,10 @@ Player:
 
 			smech: 7
 			bggy: 7
-			mutapc: 7
+			trike: 7
 			dino: 7
 			mmch: 7
-			muttank: 10
+			struck: 10
 			centurion: 10
 			scrscorpion: 10
 			scrglyder1: 10
@@ -587,8 +593,8 @@ Player:
 			mmch: 5%
 			smech: 7%
 			bggy: 5%
-			mutapc: 5%
-			muttank: 7%
+			trike: 5%
+			struck: 7%
 			dino: 5%
 			centurion: 7%
 			scrscorpion: 5%
@@ -832,8 +838,8 @@ Player:
 			ranger: 2
 			awarrior: 2
 			psyker: 1
-			mutapc: 16
-			muttank: 16
+			trike: 16
+			struck: 16
 			mutquad: 16
 			mrls: 16
 			wolf: 16
@@ -902,8 +908,8 @@ Player:
 			ranger: 2.5%
 			awarrior: 2%
 			psyker: 5%
-			mutapc: 27.5%
-			muttank: 27.5%
+			trike: 27.5%
+			struck: 27.5%
 			mutquad: 27.5%
 			mrls: 27.5%
 			wolf: 7.5%
@@ -1135,8 +1141,8 @@ Player:
 			ranger: 20
 			awarrior: 20
 			psyker: 1
-			mutapc: 6
-			muttank: 6
+			trike: 6
+			struck: 6
 			mutquad: 6
 			mrls: 6
 			wolf: 6
@@ -1189,8 +1195,8 @@ Player:
 			ranger: 3.5%
 			awarrior: 2%
 			psyker: 0.1%
-			mutapc: 5.5%
-			muttank: 5.5%
+			trike: 5.5%
+			struck: 5.5%
 			mutquad: 5.5%
 			mrls: 1.5%
 			wolf: 1.5%
@@ -1424,8 +1430,8 @@ Player:
 			ranger: 15
 			awarrior: 15
 			psyker: 1
-			mutapc: 0
-			muttank: 0
+			trike: 0
+			struck: 0
 			mutquad: 16
 			mrls: 16
 			wolf: 16
@@ -1490,7 +1496,7 @@ Player:
 			ranger: 32.5%
 			awarrior: 32%
 			psyker: 35%
-			muttank: 37.5%
+			struck: 37.5%
 			mutquad: 37.5%
 			mrls: 7.5%
 			wolf: 37.5%

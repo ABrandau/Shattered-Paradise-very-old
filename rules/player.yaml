@@ -57,6 +57,7 @@ Player:
 	DeveloperMode:
 		Enabled: true
 	Shroud:
+		ExploredMapEnabled: True
 	FrozenActorLayer:
 	BaseAttackNotifier:
 		NotifyInterval: 20

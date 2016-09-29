@@ -242,7 +242,7 @@ Dogzooka:
 SeekerBazooka:
 	Inherits: ^RocketWarhead
 	Inherits@2: ^Small_Clsn
-	ReloadDelay: 125
+	ReloadDelay: 80
 	Range: 8c0
 	MinRange: 3c0
 	Report: rketinf1.aud

@@ -235,7 +235,7 @@ GARADR:
 		BuildPaletteOrder: 90
 		Prerequisites: proc, ~structures.gdi
 	Valued:
-		Cost: 1000
+		Cost: 1500
 	Tooltip:
 		Name: GDI Radar
 		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
@@ -280,7 +280,7 @@ GATECH:
 		BuildPaletteOrder: 100
 		Prerequisites: gaweap, garadr, ~structures.gdi
 	Valued:
-		Cost: 2000
+		Cost: 3000
 	Tooltip:
 		Name: GDI Tech Center
 		Description: Provides access to advanced cyborg technologies.
@@ -334,7 +334,7 @@ GAPLUG:
 	WithIdleOverlay@STRIP:
 		Sequence: idle-strip
 	Health:
-		HP: 100000
+		HP: 200000
 	Armor:
 		Type: Wood
 	RevealsShroud:
@@ -365,7 +365,7 @@ GAPLUG:
 		ChargeTime: 240
 	SupportPowerChargeBar:
 	Power:
-		Amount: -150
+		Amount: -100
 	Power@ioncannon:
 		UpgradeTypes: plug.ioncannon
 		UpgradeMinEnabledLevel: 1
@@ -687,7 +687,7 @@ NARADR:
 		BuildPaletteOrder: 90
 		Prerequisites: proc, ~structures.nod
 	Valued:
-		Cost: 1000
+		Cost: 1500
 	Tooltip:
 		Name: Nod Radar
 		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
@@ -732,7 +732,7 @@ NATECH:
 		BuildPaletteOrder: 100
 		Prerequisites: naweap, naradr, ~structures.nod
 	Valued:
-		Cost: 2000
+		Cost: 3000
 	Tooltip:
 		Name: Nod Tech Center
 		Description: Provides access to advanced Nod technologies.
@@ -1073,7 +1073,7 @@ MURADR:
 		BuildPaletteOrder: 90
 		Prerequisites: proc, ~structures.mut
 	Valued:
-		Cost: 1000
+		Cost: 1500
 	Tooltip:
 		Name: Dome Radar
 		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
@@ -1116,7 +1116,7 @@ MUHALL:
 		BuildPaletteOrder: 100
 		Prerequisites: muweap, muradr, ~structures.mut
 	Valued:
-		Cost: 2000
+		Cost: 3000
 	Tooltip:
 		Name: Forgotten Hall
 		Description: Provides access to contact with Forgotten Leaders.
@@ -1217,8 +1217,11 @@ drached:
 	RenderSprites:
 	Selectable:
 		Bounds: 144, 60, 0, -6
+	ProductionBar@Building:
+		ProductionType: Building
+	ProductionBar@Defense:
+		ProductionType: Defense
 	ProvidesPrerequisite@scr:
-		# Factions: scr
 		Prerequisite: structures.scr
 	SelectionDecorations:
 		VisualBounds: 144, 80, 0, -12
@@ -1385,9 +1388,9 @@ SCRPROC:
 	Inherits: ^Building
 	Inherits@2: ^ScrinRender
 	Valued:
-		Cost: 1700
+		Cost: 1150
 	CustomSellValue:
-		Value: 300
+		Value: 400
 	Tooltip:
 		Name: Scrin Refinery
 		Description: Processes raw Ichor\ninto usable resources.\nIncompatible with human harvesters.
@@ -1398,7 +1401,7 @@ SCRPROC:
 		BuildPaletteOrder: 20
 		Prerequisites: scrpowr, ~structures.scr
 	Building:
-		Footprint: xxx= xx== xxx=
+		Footprint: xx== xx== xx==
 		Dimensions: 4,3
 	WithBuildingExplosion:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
@@ -1406,7 +1409,7 @@ SCRPROC:
 	Selectable:
 		Bounds: 150, 122, -10, -18
 	Health:
-		HP: 120000
+		HP: 90000
 	RevealsShroud:
 		Range: 6c0
 	Refinery:
@@ -1421,7 +1424,7 @@ SCRPROC:
 		SpawnOffset: 3,1
 		Facing: 160
 	Power:
-		Amount: -30
+		Amount: -20
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 150, 122, -10, -18
@@ -1554,7 +1557,7 @@ SCRDEPOT:
 		Cost: 1200
 	Tooltip:
 		Name: Scrin Maintenance Depot
-		Description: Allows the scrin commander to repair vehicles.
+		Description: Allows the scrin commander to repair vehicles.\nVehicles near it auto repair slowly.
 	WithBuildingExplosion:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
@@ -1571,6 +1574,12 @@ SCRDEPOT:
 		FinishRepairingNotification: UnitRepaired
 		HpPerStep: 2000
 		PlayerExperience: 15
+	UpgradeActorsNear:
+		Upgrades: AuraRepair
+		Range: 4c0
+	WithRangeCircle:
+		Range: 4c0
+		Type: Repair
 	RevealsShroud:
 		Range: 4c0
 	Power:
@@ -1587,7 +1596,7 @@ SCRRADR:
 		BuildPaletteOrder: 90
 		Prerequisites: scrproc, ~structures.scr
 	Valued:
-		Cost: 1000
+		Cost: 1500
 	Tooltip:
 		Name: Scrin Radar
 		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
@@ -1636,7 +1645,7 @@ SCRTECH:
 		BuildPaletteOrder: 100
 		Prerequisites: scrweap, scrradr, ~structures.scr
 	Valued:
-		Cost: 2000
+		Cost: 3000
 	Tooltip:
 		Name: Scrin Laboratory
 		Description: Provides an area for surface sampling\nAllows the Scrin to adapt their most advanced units\nto the host planet.
@@ -1874,7 +1883,7 @@ CABRADR:
 		BuildPaletteOrder: 90
 		Prerequisites: proc, ~structures.cab
 	Valued:
-		Cost: 1000
+		Cost: 1500
 	Tooltip:
 		Name: C.A.B.A.L. Radar
 		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
@@ -1949,7 +1958,7 @@ CABTECH:
 		BuildPaletteOrder: 100
 		Prerequisites: cabweap, cabradr, ~structures.cab
 	Valued:
-		Cost: 2000
+		Cost: 3000
 	Tooltip:
 		Name: Supercomputer
 		Description: Provides access to advanced GDI technologies.

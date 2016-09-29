@@ -1,6 +1,6 @@
 SharkJump:
 	Inherits: ^RifleWarhead
-	ValidTargets: Infantry, Vehicle
+	ValidTargets: Infantry
 	ReloadDelay: 20
 	Range: 1c0
 	Report: fiend2.aud
@@ -147,6 +147,7 @@ FloatTesla:
 DummySparks:
 	Inherits: ColossiTesla
 	Range: 1c0
+	-Warhead@1Dam: SpreadDamage
 	-Warhead@op: FireShrapnel
 
 StalkerSteal:
@@ -858,7 +859,7 @@ EssenceMissile:
 	ValidTargets: ScrinUnit
 	InvalidTargets: EssenceBattery
 	Projectile: Missile
-		Speed: 100
+		Speed: 150
 		Blockable: False
 		Shadow: true
 		RateOfTurn: 8
@@ -871,11 +872,15 @@ EssenceMissile:
 		Palette: apolra2ialpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: -2000
+		Damage: -1000
 		ValidTargets: ScrinUnit
 	Warhead@2Eff: CreateEffect
 		Explosions: tibexp2
 		ExplosionPalette: apolra2ialpha
+	Warhead@emp: GrantUpgrade
+		Range: 200
+		Duration: 500
+		Upgrades: batteryboost
 
 EssenceMissileToBattery:
 	Inherits: EssenceMissile
@@ -898,16 +903,10 @@ HealScrin:
 	Warhead@1Dam: SpreadDamage
 		DebugOverlayColor: 00FF00
 		Spread: 1c0
-		Damage: -3000
+		Damage: -10000
 		AffectsParent: True
 		Versus:
 			None: 50
 			Light: 75
 			Heavy: 100
 		ValidTargets: ScrinUnit
-	Warhead@emp: GrantUpgrade
-		Range: 1c0
-		Duration: 150
-		Upgrades: StandOnTib
-
-

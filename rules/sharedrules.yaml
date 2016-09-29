@@ -52,7 +52,7 @@ MCV:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 110
-		Prerequisites: ~factory, radar
+		Prerequisites: ~factory, gadept
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -92,46 +92,63 @@ MCV:
 			mut: mcv.mut
 			cab: mcv.cab
 
+INFANTRYHARV:
+	Inherits: HARV
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 99
+		Prerequisites: ~proc
+		InitialActivity: FindResources
+	Selectable:
+		Class: HumanHarv
+	WithVoxelUnloadBody:
+	RenderVoxels:
+		Image: harv
+	RenderSprites:
+		Image: harv.gdi
+		FactionImages:
+			gdi: harv.gdi
+			nod: harv.nod
+			mut: harv.mut
+			cab: harv.cab
+
 HARV:
 	Inherits: ^VoxelTank
 	Inherits@2: ^IncompleteSelfHeal
 	Valued:
-		Cost: 1100
+		Cost: 550
 	Tooltip:
 		Name: Harvester
-		Description: Collects Tiberium for processing.\nIncompatible with scrin refineries.\n\n  Unarmed
+		Description: Collects Tiberium for processing.\nIncompatible with scrin refineries.\nCan be sold if near a Service Depot.\n\n  Unarmed
 	Buildable:
 		Queue: Vehicle
-		BuildPaletteOrder: 10
+		BuildPaletteOrder: 99
 		Prerequisites: ~factory, proc
 		InitialActivity: FindResources
 	Selectable:
 		Priority: 7
 		Bounds: 36,36
+		Class: HumanHarv
 	WithVoxelUnloadBody:
 	Harvester:
-		Capacity: 30
+		Capacity: 12
 		DeliveryBuildings: proc
 		Resources: Tiberium, BlueTiberium
-		UnloadTicksPerBale: 8
+		UnloadTicksPerBale: 2
 		LoadTicksPerBale: 20
 		SearchFromProcRadius: 36
 		SearchFromOrderRadius: 18
 		HarvestVoice: Attack
 		DeliverVoice: Action
+	Sellable:
+		UpgradeTypes: AuraRepair
+		UpgradeMinEnabledLevel: 1
 	Mobile:
-		Speed: 71
+		TurnSpeed: 10
+		Speed: 85
 		Crushes: wall, crate, infantry
-		TerrainSpeeds:
-			Clear: 90
-			Rough: 70
-			Road: 100
-			Beach: 70
-			Tiberium: 80
-			BlueTiberium: 80
-			Veins: 80
 	Health:
-		HP: 75000
+		HP: 37500
 	Targetable@MindControl:
 		TargetTypes: MindControlInmune
 	Armor:
@@ -329,9 +346,9 @@ GACNST:
 PROC:
 	Inherits: ^Building
 	Valued:
-		Cost: 1700
+		Cost: 1150
 	CustomSellValue:
-		Value: 300
+		Value: 400
 	Tooltip:
 		Name: Tiberium Refinery
 		Description: Processes raw Tiberium\ninto usable resources.\nIncompatible with scrin harvesters.
@@ -342,12 +359,12 @@ PROC:
 		BuildPaletteOrder: 20
 		Prerequisites: ~humanproc, anypower
 	Building:
-		Footprint: xxx= xx== xxx=
+		Footprint: xx== xx== xx==
 		Dimensions: 4,3
 	Selectable:
 		Bounds: 134, 96, 0, -12
 	Health:
-		HP: 120000
+		HP: 90000
 	RevealsShroud:
 		Range: 6c0
 	TiberianSunRefinery:
@@ -371,7 +388,7 @@ PROC:
 		Sequence: flame
 		Palette: effect
 	Power:
-		Amount: -30
+		Amount: -20
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
 		VisualBounds: 134, 122, 0, -18
@@ -389,7 +406,7 @@ GADEPT:
 		Cost: 1200
 	Tooltip:
 		Name: Service Depot
-		Description: Repairs vehicles.
+		Description: Repairs vehicles.\nVehicles near it auto repair slowly.
 	Buildable:
 		BuildPaletteOrder: 80
 		Prerequisites:  ~humanproc, factory
@@ -427,6 +444,12 @@ GADEPT:
 	WithDeathAnimation@BIB:
 		DeathSequence: dead-ground
 		UseDeathTypeSuffix: false
+	UpgradeActorsNear:
+		Upgrades: AuraRepair
+		Range: 4c0
+	WithRangeCircle:
+		Range: 4c0
+		Type: Repair
 	Power:
 		Amount: -30
 	ProvidesPrerequisite@buildingname:

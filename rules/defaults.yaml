@@ -21,7 +21,7 @@
 	GainsExperience:
 		Upgrades:
 			400: rank, firepowerexp, damageexp, speedexp, reloadexp
-			800: rank, firepowerexp, damageexp, speedexp, reload, selfheal, MindControlInmune
+			800: rank, firepowerexp, damageexp, speedexp, reload, selfheal, rangeexp, MindControlInmune
 	FirepowerMultiplier@EXPERIENCE:
 		UpgradeTypes: firepowerexp
 		Modifier: 105, 110
@@ -34,6 +34,9 @@
 	ReloadDelayMultiplier@EXPERIENCE:
 		UpgradeTypes: reloadexp
 		Modifier: 95, 90
+	RangeMultiplier@EXPERIENCE:
+		UpgradeTypes: rangeexp
+		Modifier: 110, 120
 	SelfHealing@ELITE:
 		PercentageStep: 1
 		Step: 0
@@ -74,15 +77,6 @@
 	DamageMultiplier@firestorm:
 		Modifier: 95, 90
 		UpgradeTypes: FirestormWallUpgrade
-		BaseLevel: 1
-#SCRIN BATTERY
-	FirepowerMultiplier@batteryboost:
-		UpgradeTypes: batteryboost
-		Modifier: 120, 130
-		BaseLevel: 1
-	SpeedMultiplier@batteryboost:
-		UpgradeTypes: batteryboost
-		Modifier: 120, 130
 		BaseLevel: 1
 # TIMELINE TROLLING
 	SpeedMultiplier@ScrinTimeline:
@@ -186,9 +180,9 @@
 
 ^GuardianPlatformSelfHeal:
 	SelfHealing@GuardianPlatformSelfHeal:
-		PercentageStep: 1
+		PercentageStep: 2
 		Step: 0
-		Delay: 100
+		Delay: 300
 		DamageCooldown: 200
 		HealIfBelow: 105
 		UpgradeTypes: AuraRepair
@@ -1746,29 +1740,32 @@
 ^ScrinReaper:
 	Targetable@Essence:
 		TargetTypes: ScrinUnit
-	SelfHealing@Scrin:
-		PercentageStep: -1
-		Step: 0
-		Delay: 75
-		DamageCooldown: 0
-		HealIfBelow: 105
-		DamageTypes: ScrinEssenceKill
+	DamagedByTerrain@ScrinDamage:
+		Damage: 750
+		DamageInterval: 25
+		Terrain: Clear, Road, Rail, Bridge, Impassable, Water, DirtRoad, Rough, Cliff, Veins, Tree, Rock
+		DamageThreshold: 50
+		StartOnThreshold: true
 		UpgradeMaxEnabledLevel: 0
-		UpgradeTypes: StandOnTib, selfheal
-	SelfHealing@ScrinCounter:
-		PercentageStep: 1
-		Step: 0
-		Delay: 75
-		DamageCooldown: 0
-		HealIfBelow: 60
-		DamageTypes: ScrinEssenceKill
-		UpgradeMaxEnabledLevel: 0
-		UpgradeTypes: StandOnTib, selfheal
+		UpgradeTypes: selfheal, batteryboost
 	SpawnActorOnDeath@ScrinEssence:
 		DeathType:
-	UpgradeOnTerrain@tib:
-		Upgrades: StandOnTib
-		TerrainTypes: Tiberium, BlueTiberium
+	UpgradeOnDamageState@ScrinDamageBoost:
+		Upgrades: ScrinDamageBoost
+		ValidDamageStates: Undamaged, Light
+	ReloadDelayMultiplier@ScrinDamageBoost:
+		UpgradeTypes: ScrinDamageBoost
+		Modifier: 100, 130
+	SpeedMultiplier@ScrinDamageBoost:
+		UpgradeTypes: ScrinDamageBoost
+		Modifier: 100, 130
+	SelfHealing@batteryboost:
+		PercentageStep: 1
+		Step: 0
+		Delay: 25
+		HealIfBelow: 101
+		UpgradeTypes: batteryboost
+		UpgradeMinEnabledLevel: 1
 
 ^SelfReloads:
 	AmmoPool:

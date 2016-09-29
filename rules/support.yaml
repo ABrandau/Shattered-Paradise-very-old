@@ -854,7 +854,7 @@ MUBUNKR:
 	-EmitInfantryOnSell@cab:
 	-EmitInfantryOnSell@scr:
 	Health:
-		HP: 80000
+		HP: 65000
 	RevealsShroud:
 		Range: 8c0
 	AutoTarget:

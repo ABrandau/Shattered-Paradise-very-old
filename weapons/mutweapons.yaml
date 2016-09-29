@@ -280,7 +280,7 @@ TrikeMortar:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 250
-		Damage: 5000
+		Damage: 4000
 		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
 
 LeonidCannon:

@@ -303,19 +303,12 @@ SUBAPCTRAIL:
 	Inherits: ^NoDamage
 	ReloadDelay: 200
 	Range: 10c0
-	Report: subdril1.aud
 	Projectile: GravityBomb
 		Speed: -100c0
 		Acceleration: 100
 	ValidTargets: Ground, Infantry, Air, Vehicle, Building, Wall
-	Warhead@1Dam: SpreadDamage
-		Spread: 400
-		Damage: 1
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@2EffAir: CreateEffect
 		Explosions: dig
-		# ImpactSound: expnew12.aud
-		# ValidImpactTypes: Air, AirHit
 
 NODRepair:
 	ReloadDelay: 125

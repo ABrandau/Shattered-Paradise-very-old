@@ -1,11 +1,21 @@
 ﻿YEAR - MONTH - DAY
 
 [2016 - 09 - 22]
+General Changes:
+	Service depots now repair nearby units, slower than a full repair.
+	Veteran units now gain a small range boost.
+	Updated the AI to be able to use the new units.
+	Skirmish matches will start with crates disabled and map explored by default.
+	Tech centers cost rised to $3000 from $2000.
+	Radar cost rised to $1500 from $1000.
+NOD Changes:
+	Removed warning sound from subterranean apc, now its invisible while underground.
 Mutant Changes:
 	Disabled Forgotten APC and Tank.
 	Quad Cannon moved to tier 1.
 	Added The Forgotten Trike, a fast unit that carries a mortar.
 	Added the Forgotten Battle Bus, a mobile bunker that requires infantry to fire.
+	Bunker: HP: 800 -> 650.
 CABAL Changes:
 	Disabled the Grinder, added the devourer, a frigate that specializes in recovery
 	operations.
