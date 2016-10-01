@@ -101,6 +101,14 @@
 		HealIfBelow: 200
 		DamageTypes: TiberiumDeath
 		UpgradeMinEnabledLevel: 1
+	SelfHealing@poisoncloudOP:
+		PercentageStep: -3
+		Step: 0
+		Delay: 5
+		UpgradeTypes: PoisonOP
+		HealIfBelow: 200
+		DamageTypes: ScrinEssenceKill
+		UpgradeMinEnabledLevel: 1
 #BOUNTY
 	GivesBounty@Cabal:
 		Percentage: 20

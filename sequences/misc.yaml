@@ -531,6 +531,17 @@ dragon:
 		Facings: 32
 		ZOffset: 1023
 
+tibshard:
+	idle:
+		Facings: -32
+		ZOffset: 1023
+
+glaive:
+	idle:
+		Length: *
+		Facings: 1
+		ZOffset: 1023
+
 web:
 	idle:
 		Length: *

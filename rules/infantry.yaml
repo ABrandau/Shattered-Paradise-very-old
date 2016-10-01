@@ -14,6 +14,8 @@ GDIE1:
 		Description: General-Purpose Infantry.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Health:
 		HP: 12000
+	Voiced:
+		VoiceSet: Marine
 	Mobile:
 		Speed: 60
 	Armament@PRIMARY:
@@ -38,7 +40,7 @@ JUMPJET:
 		BuildPaletteOrder: 2
 		Prerequisites: ~gapile
 	Voiced:
-		VoiceSet: JumpJet
+		VoiceSet: Marine
 	Mobile:
 		Speed: 55
 	Health:
@@ -79,6 +81,8 @@ GRENADIER:
 	Armament:
 		Weapon: Grenade
 		LocalOffset: 0,0,555
+	Voiced:
+		VoiceSet: Marine
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:
@@ -528,10 +532,10 @@ E3:
 	Inherits: ^Mutant
 	Buildable:
 		Queue: Infantry
-		BuildPaletteOrder: 19
+		BuildPaletteOrder: 21
 		Prerequisites: ~murax
 	Valued:
-		Cost: 180
+		Cost: 140
 	Tooltip:
 		Name: Skirmisher
 		Description: Anti-tank Militia.\n\n  Strong vs Vehicles, Aircraft, Buildings\n  Weak vs Infantry
@@ -542,11 +546,11 @@ E3:
 	Mobile:
 		Speed: 50
 	Armament@PRIMARY:
-		Weapon: SkirmisherRocket
+		Weapon: TrikeMortar
 		LocalOffset: 128,0,640
 		Name: OnFoot
 	Armament@GARRISON:
-		Weapon: GSkirmisherRocket
+		Weapon: GTrikeMortar
 		LocalOffset: 128,0,640
 	Passenger:
 		PipType: Blue
@@ -592,7 +596,7 @@ MUTFIEND:
 		Description: Tiberian Beast, fires tiberium shards at enemies.\nCannot be crushed.\n\n  Strong vs Ground units.\n  Weak vs Aircraft.
 	Buildable:
 		Queue: Infantry
-		BuildPaletteOrder: 21
+		BuildPaletteOrder: 19
 		Prerequisites: ~murax, mustable
 	SpawnActorOnDeath@conversion:
 		Actor: cybdog
@@ -601,14 +605,14 @@ MUTFIEND:
 		DeathType: CabalDeath
 		RequiresLobbyCreeps: true
 	Valued:
-		Cost: 400
+		Cost: 225
 	Health:
-		HP: 28000
+		HP: 18000
 		Shape: Circle
 			Radius: 213
 	-Crushable:
 	Armor:
-		Type: none
+		Type: Light
 	Mobile:
 		Speed: 80
 	Voiced:
@@ -622,53 +626,56 @@ MUTFIEND:
 		Name: OnFoot
 	Armament@Garrison:
 		Weapon: GFiendShard2
-	UpgradeOnTerrain@buff:
-		Upgrades: FiendCloak
-	Cloak@CLOAKGENERATOR:
-		UpgradeTypes: FiendCloak, cloakgenerator
-		UpgradeMinEnabledLevel: 1
-		InitialDelay: 15
-		CloakDelay: 15
-		CloakSound:
-		UncloakSound:
-		IsPlayerPalette: true
-		UncloakOn: Attack, Move
 	AttackFrontal:
 		Voice: Attack
 		Armaments: OnFoot
 
 SEER:
 	Inherits: ^Mutant
-	Inherits@3: ^BasicStealthDetection
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 22
 		Prerequisites: ~murax, muradr
 	Valued:
-		Cost: 550
+		Cost: 300
 	Tooltip:
 		Name: Seer
 		Description: Psychic mutant that works as a reconnaissance unit.\nCan deploy sentry wards and detects cloaked units.\n\n  Unnarmed.
 	Voiced:
 		VoiceSet: Umagon
 	Health:
-		HP: 11000
+		HP: 9000
 	Mobile:
-		Speed: 75
-	-AutoTarget:
+		Speed: 60
+	AutoTarget:
+	DetectCloaked:
+		Range: 3c0
 	RevealsShroud:
-		Range: 11c0
-	Minelayer:
-		Mine: muward
-		RearmBuildings:
-	AmmoPool:
-		Ammo: 1
-		PipCount: 1
-		PipType: Ammo
-		SelfReloadDelay: 500
-		SelfReloads: true
-		PipTypeEmpty: AmmoEmpty
+		Range: 7c0
 	RenderSprites:
+	WithInfantryBody:
+		AttackSequence: shoot
+	Armament@PRIMARY:
+		Weapon: SeerTesla
+		Name: OnFoot
+		FireDelay: 10
+		LocalOffset: 100,0,400
+	Armament@SECONDARY:
+		Weapon: SeerTeslaAA
+		Name: OnFoot
+		FireDelay: 10
+		LocalOffset: 100,0,400
+	Armament@GARRISON:
+		Weapon: SeerTesla
+		LocalOffset: 100,0,400
+	AttackFrontal:
+		Voice: Attack
+		Armaments: OnFoot
+	Explodes:
+		Weapon: SparkExplo
+		EmptyWeapon: SparkExplo
+		LoadedChance: 30
+		Chance: 30
 
 AWARRIOR:
 	Inherits: ^Mutant
@@ -838,7 +845,7 @@ LEGIO:
 		PipType: Blue
 	Armament:
 		Weapon: LegioNeedler
-		LocalOffset: 350,250,800
+		LocalOffset: 350,200,800
 		FireDelay: 5
 	AttackFrontal:
 		Voice: Attack
@@ -890,7 +897,7 @@ COLOSSI:
 	Selectable:
 		Bounds: 26,30,0,-10
 	Health:
-		HP: 6600
+		HP: 66000
 	Mobile:
 		Speed: 60
 		SharesCell: False
@@ -1001,13 +1008,13 @@ FLOAT:
 			Cliff: 80
 			Water: 80
 	Armament@prim:
-		Weapon: FloatTesla
-		LocalOffset: 0,-250,500
+		Weapon: FloatGlaive
+		LocalOffset: 0,0,500
 		FireDelay: 10
-	Armament@sec:
-		Weapon: FloatTesla
-		LocalOffset: 0,250,500
-		FireDelay: 10
+	# Armament@sec:
+		# Weapon: FloatTesla
+		# LocalOffset: 0,250,500
+		# FireDelay: 10
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:

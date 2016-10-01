@@ -244,6 +244,17 @@ HumanHarvesterVO:
 ######################################################################
 #GDI Custom
 ######################################################################
+Marine:
+	Voices:
+		Select: marine0015, marine0016, marine0017, marine0018, marine0019
+		Move: marine0009, marine0010, marine0011, marine0012, marine0014
+		Attack: marine0001, marine0002, marine0003, marine0004
+		Action: marine0009, marine0010, marine0011, marine0012, marine0014
+#		Feedback: 15-i058, 15-i064 # TODO
+		Die: dedman1, dedman3, dedman4, dedman5, dedman6
+		Burned: dedman2
+		Zapped: electro1
+
 GuardianVO:
 	Voices:
 		Select: guardian0001, guardian0002, guardian0003, guardian0004, guardian0005, guardian0006, guardian0007
@@ -278,7 +289,16 @@ StealthTankVO:
 ######################################################################
 #Mutant Custom
 ######################################################################
-
+Trike:
+	Voices:
+		Select: trike0010, trike0011, trike0012, trike0013
+		Move: trike0007, trike0008, trike0009, trike00014
+		Attack: trike0000, trike0001, trike0002, trike0003, trike0004, trike0005, trike0006
+		Action: trike0000, trike0001, trike0002, trike0003, trike0004, trike0005, trike0006
+#		Feedback: 15-i058, 15-i064 # TODO
+		Die: dedman1, dedman3, dedman4, dedman5, dedman6
+		Burned: dedman2
+		Zapped: electro1
 
 ######################################################################
 #CABAL Custom

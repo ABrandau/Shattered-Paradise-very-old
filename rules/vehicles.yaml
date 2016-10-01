@@ -820,10 +820,13 @@ WOLF:
 		Range: 4c0
 		Type: cloakgenerator
 	Armament@PRIMARY:
-		Weapon: ColossiTesla
+		Weapon: BullAcid
 		LocalOffset: 128,0,400
 	Armament@Secondary:
 		Weapon: BullBuff
+		LocalOffset: 0,0,500
+	Armament@Secondary:
+		Weapon: BullShard
 		LocalOffset: 0,0,500
 	Passenger:
 		CargoType: Vehicle
@@ -933,10 +936,10 @@ MUTAPC:
 TRIKE:
 	Inherits: ^VoxelTank
 	Valued:
-		Cost: 350
+		Cost: 250
 	Tooltip:
-		Name: Mortar Trike
-		Description: Light vehicle armed with a mortar.\n\n  Strong vs Structures, Infantry.\n  Weak vs Vehicles, Aircraft, Base defences.
+		Name: Trike
+		Description: Light vehicle with room for a gunner, the vehicle will,\ninherit the weapon of whoever is inside.\n\n  Strong vs Structures, Infantry.\n  Weak vs Vehicles, Aircraft, Base defences.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 25
@@ -946,16 +949,31 @@ TRIKE:
 		Speed: 130
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 12500
+		HP: 13000
+	Voiced:
+		VoiceSet: Trike
+		Volume: 10
 	Armor:
 		Type: Light
-	Armament:
-		Weapon: TrikeMortar
-		LocalOffset: 600,0,500
-		MuzzleSequence: muzzle
-	WithMuzzleOverlay:
-	AttackFrontal:
-		Voice: Attack
+	# Armament:
+		# Weapon: TrikeMortar
+		# LocalOffset: 600,0,500
+		# MuzzleSequence: muzzle
+	Cargo:
+		Types: Infantry
+		MaxWeight: 1
+		PipCount: 1
+		UnloadVoice: Unload
+		LoadingUpgrades: notmobile
+		EjectOnDeath: True
+		InitialUnits: e3
+	AttackGarrisoned:
+		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
+		PortYaws: 0, 176, 341, 512, 682, 853#10, 10, 10, 10, 10, 10
+		PortCones: 1086, 86, 86, 86, 86, 86#10, 10, 10, 10, 10,
+	# WithMuzzleOverlay:
+	# AttackFrontal:
+		# Voice: Attack
 	RenderVoxels:
 		Scale: 0.9
 	AutoTarget:
@@ -980,9 +998,24 @@ MUTQUAD:
 		HP: 30000
 	Armor:
 		Type: Heavy
+	Voiced:
+		VoiceSet: Trike
+		Volume: 10
 	RenderVoxels:
-		Scale: 1 #0.75
+		Scale: 1
 	WithMuzzleOverlay:
+	Minelayer:
+		Mine: muward
+		RearmBuildings:
+		AmmoPoolName: Ward
+	AmmoPool:
+		Ammo: 1
+		Name: Ward
+		PipCount: 1
+		PipType: Ammo
+		SelfReloadDelay: 500
+		SelfReloads: true
+		PipTypeEmpty: AmmoEmpty
 	Armament@primary:
 		Weapon: QuadFire
 		MuzzleSequence: muzzle
@@ -1017,9 +1050,12 @@ STRUCK:
 		Speed: 70
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 45000
+		HP: 35000
 	Armor:
 		Type: Heavy
+	Voiced:
+		VoiceSet: Trike
+		Volume: 10
 	Cargo:
 		Types: Infantry
 		MaxWeight: 4
@@ -1027,7 +1063,7 @@ STRUCK:
 		UnloadVoice: Unload
 		LoadingUpgrades: notmobile
 		EjectOnDeath: True
-		InitialUnits: e3
+		InitialUnits: mutfiend
 	RenderVoxels:
 		Scale: 0.8
 	AutoTarget:
@@ -1087,6 +1123,9 @@ MLRS:
 		Crushes: wall, crate, infantry
 	Health:
 		HP: 15000
+	Voiced:
+		VoiceSet: Trike
+		Volume: 10
 	RenderVoxels:
 		LightAmbientColor: 0.5,0.5,0.5
 		LightDiffuseColor: 0.7,0.7,0.7
@@ -1118,6 +1157,9 @@ HVRTRUK3:
 		Queue: Vehicle
 		BuildPaletteOrder: 29
 		Prerequisites: ~muweap, muhall
+	Voiced:
+		VoiceSet: Trike
+		Volume: 10
 	Mobile:
 		TurnSpeed: 5
 		Speed: 100
@@ -1212,7 +1254,7 @@ SCRHARV:
 		DeliverVoice: Move
 	Mobile:
 		TurnSpeed: 10
-		Speed: 85
+		Speed: 90
 	Health:
 		HP: 37500
 	Armor:
@@ -1245,10 +1287,10 @@ SCRSCORPION:
 	Tooltip:
 		Name: Ichor Walker
 		Description: Anti-personnel walker. Reduces the damage of targetted \nunits depending on how damaged they are.\n\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
-	Buildable:
-		Queue: Vehicle
-		BuildPaletteOrder: 30
-		Prerequisites: ~scrweap
+	# Buildable:
+		# Queue: Vehicle
+		# BuildPaletteOrder: 30
+		# Prerequisites: ~scrweap
 	Mobile:
 		TurnSpeed: 6
 		Speed: 91
@@ -1279,15 +1321,17 @@ SCRDRONEC:
 		BuildPaletteOrder: 31
 		Prerequisites: ~scrweap#, scrtech
 	Valued:
-		Cost: 900
+		Cost: 700
 	Tooltip:
 		Name: Vanguard
 		Description: Hover drone designed for indirect conflict, it bounces back attacks\nreceived at random hostile targets and also disrupts enemy units.\nCannot collect essence, but autorepairs.\n  Strong vs Structures.\n  Weak vs units meant to counter other unit types.
 	Health:
 		HP: 80000
 	Mobile:
-		Speed: 65
+		Speed: 75
 	RenderSprites:
+	SelfHealing@Permanent:
+		Delay: 50
 	-Armor:
 	WithFacingSpriteBody:
 	BodyOrientation:
@@ -1298,7 +1342,7 @@ SCRDRONEC:
 		DeathType:
 	AttackFrontal:
 	Armament:
-		Weapon: BounceExplosion
+		Weapon: VanguardAcid
 	AutoTarget:
 	ExplodeWeapon@Rifle1:
 		Weapon: RifleBounce

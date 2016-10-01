@@ -570,10 +570,6 @@ AARail:
 		Blockable: true
 		Color: 0008ED
 	Warhead@1Dam: SpreadDamage
-		Range: 0, 32
-		Falloff: 100, 100
-		Damage: 2500
-		InfDeath: 6
+		Damage: 5000
 		ValidTargets: Air
-		AffectsParent: false
 		DamageTypes: Prone100Percent, TriggerProne, SmallExplosionDeath

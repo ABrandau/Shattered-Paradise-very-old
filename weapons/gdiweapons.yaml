@@ -183,12 +183,12 @@ JuggCannon:
 		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
 
 SonicZap:
-	ReloadDelay: 120
-	Range: 4c0
+	ReloadDelay: 60
+	Range: 5c0
 	Report: sonic4.aud
 	Projectile: AreaBeam
 		Speed: 0c200
-		Duration: 60
+		Duration: 40
 		DamageInterval: 4 # Roughly 18 impacts.
 		Width: 384
 		Shape: Flat

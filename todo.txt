@@ -1,47 +1,26 @@
 Ideas
-Randomize forg hp when created
-
-add the EMP tank for GDI.
-Give Scrin a shield or sth.
-
 tiberium tornadoes.
 Alien layer that spawns from structures
 place anti light for alien weapons.
 
 drill sound for abductor
 If sensor arrays are added, give nod a support ability to detect all sensor arrays in the level.
-Final Fantasy Blue Mage
-a unit that splits into many.
 Harvester / mammoth tank
 a unit that spawns walls in the area of impact
-Reckoner Logic
-deployable anti infantry vehicle.
-Buff scrin damage when units have most of their health.
-Gattling logic
-Make Tripods bounce bullets
-turn GDI APCs into bunkers
-Make the wolverine a Jumpjet unit, move it to t2.
-Make Ravagers 
-Make ravagers immune to tib gas.
+Replace the forg rocket guy for a mortar guy, make the seer and tib fiend more important to compensate.
 Make a siege tank somewhere.
+Redo floater.
+a unit that splits into many.
 
-Balance
-marauder bad death anim
-remove selectable from a shit ton of actors.
-make flame tanks teleport
+bugs
 double check sandbags
 Remove blocks projectiles from some defences.
-ravager useless
-cabal commando storng
+marauder bad death anim
+
+Balance
+remove selectable from a shit ton of actors.
 mut quad strong
-Ghostlake add second tib tree.
-nerf forg bunker.
-add more death types to tiberium deaths.
-nerf harvester hp
-wasp op
-Increase the damage most weapons deal to wood.
-Wolverine rework.
-Ichor Walker rework.
+Improve mammoth mk, both graphically and gameplay wise.
 
 todo
 
@@ -71,13 +50,10 @@ Fix Temple of NOD offset.
 enlarge map editor selection screen. editor.yaml/Container@EDITOR_WORLD_ROOT/Container@ACTOR_WIDGETS ScrollPanel@ACTORTEMPLATE_LIST
 add the remaining FS assets.
 Scrin ship husks.
-Increase civ building hp
 add floaters.
-Improve mammoth mk, both graphically and gameplay wise.
+Rerender Mutant airstrip and cabal air factory to handle depth.
 Remove health bars on some props.
 remake crates and add a water variation
-Rerender Mutant airstrip and cabal air factory to handle depth.
-Make tanks more assymetric.
 
 Graphics
 cnc 3 big tiberium glaciers
@@ -87,6 +63,7 @@ traffic lights
 
 Light posts
 tankers
+
 Proprs
 trees
 

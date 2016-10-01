@@ -39,7 +39,7 @@ LegioNeedler:
 		Speed: 250
 		Blockable: false
 		Shadow: true
-		palette: apolblue
+		Palette: apblue
 		Image: blueballminitrail
 		RateOfTurn: 8
 		RangeLimit: 15c0
@@ -52,7 +52,7 @@ LegioNeedler:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, ScrinEssenceKill
 
 ColossiTesla:
-	Inherits: ^FullDamage
+	Inherits: ^RifleWarhead
 	ReloadDelay: 80
 	Range: 4c0
 	Report: voltautofire.wav
@@ -61,7 +61,7 @@ ColossiTesla:
 		Palette: apolbluealpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 3000
+		Damage: 6000
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, ScrinEssenceKill
 	Warhead@op: FireShrapnel
@@ -71,11 +71,10 @@ ColossiTesla:
 
 ColossiTeslaSplash:
 	Inherits: ColossiTesla
-	Range: 2c0
+	Range: 3c0
 	Projectile: TeslaZap
 		Palette: apolbluealpha
 	Warhead@1Dam: SpreadDamage
-		Damage: 2000
 	-Warhead@op: FireShrapnel
 
 ColossiBlast:
@@ -126,6 +125,76 @@ ColossiBlastTesla:
 		ExplosionPalette: apollightbluealpha
 		InvalidImpactTypes: Water
 
+FloatGlaive:
+	Inherits: ^FullDamage
+	Inherits@2: ^Scrin_Pulse
+	ReloadDelay: 100
+	Range: 7c0
+	Report: photon1.wav
+	ValidTargets: Ground
+	Projectile: Bullet
+		Speed: 300
+		Blockable: false
+		Shadow: true
+		Palette: apolbluealpha
+		Image: glaive
+	Warhead@1Dam: SpreadDamage
+		Spread: 96
+		-Falloff:
+		Damage: 500
+		Versus:
+		ValidTargets: Ground
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, ScrinEssenceKill
+	Warhead@op: FireShrapnel
+		Weapon: FloatGlaive2
+		Amount: 1
+		AimChance: 100
+		AllowDirectHit: true
+		AimTargetStances: Enemy
+	Warhead@MCRetarget: GrantUpgrade
+		Range: 60
+		Duration: 50
+		Upgrades: PoisonOP
+
+FloatGlaive2:
+	Inherits: FloatGlaive
+	Warhead@op: FireShrapnel
+		Weapon: FloatGlaive3
+
+FloatGlaive3:
+	Inherits: FloatGlaive
+	Warhead@op: FireShrapnel
+		Weapon: FloatGlaive4
+
+FloatGlaive4:
+	Inherits: FloatGlaive
+	Warhead@op: FireShrapnel
+		Weapon: FloatGlaive5
+
+FloatGlaive5:
+	Inherits: FloatGlaive
+	Warhead@op: FireShrapnel
+		Weapon: FloatGlaive6
+
+FloatGlaive6:
+	Inherits: FloatGlaive
+	Warhead@op: FireShrapnel
+		Weapon: FloatGlaive7
+
+FloatGlaive7:
+	Inherits: FloatGlaive
+	Warhead@op: FireShrapnel
+		Weapon: FloatGlaive8
+
+FloatGlaive8:
+	Inherits: FloatGlaive
+	Warhead@op: FireShrapnel
+		Weapon: FloatGlaive9
+
+FloatGlaive9:
+	Inherits: FloatGlaive
+	-Warhead@op: FireShrapnel
+
 FloatTesla:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 80
@@ -133,7 +202,7 @@ FloatTesla:
 	Report: voltautofire.wav
 	Charges: yes
 	Projectile: TeslaZap
-		Palette: apolbluealpha
+		Palette: apolredalpha#apolbluealpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 2800
@@ -207,6 +276,33 @@ ScorpAcid:
 		Duration: 150
 		Upgrades: AcidScaleDmg
 		ValidTargets: Ground, Vehicle, Infantry, Building
+
+VanguardAcid:
+	Inherits: ^AcidWarhead
+	ReloadDelay: 75
+	Range: 4c0
+	Report: flamtnk1.aud
+	ValidTargets: Vehicle, Infantry, Building, Ground, Water
+	Projectile: Bullet
+		Speed: 200
+		Image: acidall32mini
+		Inaccuracy: 384
+		Palette: apolgreenalpha
+	Burst: 6
+	BurstDelay: 5
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 200
+		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong
+		ValidTargets: Vehicle, Infantry, Building, Ground, Water
+	Warhead@2Eff: CreateEffect
+		Explosions: tibexp2mini
+		ExplosionPalette: apolgreenalpha
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3Smu: LeaveSmudge
+		SmudgeType: SmallScorch
+		InvalidTargets: Vehicle, Building, Wall
 
 ScrMbtCannon:
 	Inherits: ^APWarhead

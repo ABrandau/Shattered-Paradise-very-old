@@ -241,6 +241,11 @@ seer:
 		Length: 8
 		Facings: 8
 		ShadowStart: 462
+	shoot:
+		Start: 238
+		Length: 10
+		Facings: 8
+		ShadowStart: 692
 	idle1:
 		Start: 72
 		Length: 13
@@ -256,9 +261,14 @@ seer:
 		ShadowStart: 628
 	prone-stand:
 		Start: 406
-		Stride: 1
+		Stride: 2
 		Facings: 8
 		ShadowStart: 860
+	prone-shoot:
+		Start: 318
+		Length: 11
+		Facings: 8
+		ShadowStart: 772
 	die1:
 		Start: 422
 		Length: 8

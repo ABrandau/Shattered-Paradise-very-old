@@ -145,7 +145,7 @@ HARV:
 		UpgradeMinEnabledLevel: 1
 	Mobile:
 		TurnSpeed: 10
-		Speed: 85
+		Speed: 90
 		Crushes: wall, crate, infantry
 	Health:
 		HP: 37500

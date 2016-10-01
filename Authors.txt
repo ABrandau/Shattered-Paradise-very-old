@@ -64,7 +64,8 @@ abcdefg30	: Scrin mission 01
 
 #Voice Cast
 
-SchismNavigator - Beam Cannon
-DrWhitePsyker - Stealth Tank
-HiJinxy - Harvester
-SkyHunter713 - Guardian Platform
+Comrade Crimson		: GDI Marine.
+DrWhitePsyker		: Stealth Tank
+HiJinxy			: Harvester
+SchismNavigator		: Beam Cannon
+SkyHunter713		: Guardian Platform

@@ -1961,7 +1961,7 @@ CABTECH:
 		Cost: 3000
 	Tooltip:
 		Name: Supercomputer
-		Description: Provides access to advanced GDI technologies.
+		Description: Provides access to advanced CABAL technologies.
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	Building:
