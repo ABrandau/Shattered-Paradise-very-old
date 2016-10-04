@@ -12,6 +12,10 @@
 		UseTilesetExtension: true
 		ZOffset: 1023
 		Offset: 0, -12, 37
+	cloud: cloud2
+		Length: *
+		Offset: 0,-12
+		ZOffset: 512
 	smoketrailsmall: smoketrailsmall
 		Length: *
 	sparks: sparks3
@@ -36,6 +40,10 @@
 		Length: *
 	die7: infdeathexplo3
 		Length: *
+	cloud: cloud2
+		Length: *
+		Offset: 0,-12
+		ZOffset: 512
 	diebody1: death_a
 		Length: *
 		Tick: 1000

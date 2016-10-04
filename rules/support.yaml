@@ -18,8 +18,6 @@ GACTWR:
 	DisabledOverlay:
 	Health:
 		HP: 50000
-	BlocksProjectiles:
-		Height: 768
 	BodyOrientation:
 		QuantizedFacings: 32
 	DetectCloaked:
@@ -123,8 +121,6 @@ GAVULC:
 	RequiresPower:
 	Health:
 		HP: 30000
-	BlocksProjectiles:
-		Height: 768
 	BodyOrientation:
 		QuantizedFacings: 32
 	DetectCloaked:
@@ -177,8 +173,6 @@ GAROCK:
 		Bounds: 48, 36, 0, -6
 	Health:
 		HP: 50000
-	BlocksProjectiles:
-		Height: 768
 	BodyOrientation:
 		QuantizedFacings: 32
 	DetectCloaked:
@@ -227,8 +221,6 @@ GACSAM:
 		Bounds: 48, 36, 0, -6
 	Health:
 		HP: 45000
-	BlocksProjectiles:
-		Height: 768
 	BodyOrientation:
 		QuantizedFacings: 32
 	DetectCloaked:
@@ -404,7 +396,7 @@ GUARDIANDEP:
 		Type: cloakgenerator
 	UpgradeActorsNear@firestorm:
 		Upgrades: AuraRepair
-		Range: 4c0
+		Range: 5c0
 		AffectsParent: false
 	Selectable:
 		Bounds: 110, 60, 3, -4
@@ -416,18 +408,16 @@ GUARDIANDEP:
 		VoiceSet: GuardianVO
 		Volume: 3
 	Armament:
-		Weapon: GuardianRepair
+		Weapon: NODRepair
 		Cursor: repair
 		OutsideRangeCursor: repair
 		TargetStances: Ally
-		ForceTargetStances: None
 	AttackTurreted:
 	Turreted:
 	AutoTarget:
 	Transforms:
 		IntoActor: guardian
 		Voice: Action2
-
 
 ##############################################
 # NOD

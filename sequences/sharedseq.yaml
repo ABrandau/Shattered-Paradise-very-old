@@ -248,27 +248,7 @@ mcv.cab:
 	icon: cabmcvicon
 
 ^Harvester:
-	emp-overlay: emp_fx01
-		Length: *
-		Offset: 0, 0, 37
-		UseTilesetCode: false
-		ZOffset: 512
-		BlendMode: Additive
-	veins: veinatac
-		Length: 12
-		UseTilesetExtension: true
-		ZOffset: 1023
-		Offset: 0, -12
-	smoketrailsmall: smoketrailsmall
-		Length: *
-	sparks: sparks3
-		Length: *
-	muzzle: gunfire
-		Length: *
-		Offset: 0, 0, 28
-	dummy: dot
-		UseTilesetCode: false
-		ZOffset: -9999
+	Inherits: ^EmpOverlay
 	harvest: harvestr
 		Length: *
 		ZRamp: 1

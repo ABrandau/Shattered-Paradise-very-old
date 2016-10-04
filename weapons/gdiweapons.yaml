@@ -2,44 +2,21 @@ MarineRifle:
 	Inherits: ^RifleWarhead
 	Inherits@2: ^Piffs
 	ReloadDelay: 70
-	Range: 5c0
+	Range: 4c512
 	Report: infgun3.aud, gostgun1.aud, slvkgun1.aud
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 2000
+		Damage: 2300
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 
-JJCannon:
-	Inherits: ^RocketWarhead
-	Inherits@2: ^Mediuml_Clsn
-	ReloadDelay: 50
-	Range: 5c0
-	Report: 120mmf.aud
-	ValidTargets: Ground, Helicopter
-	Projectile: Bullet
-		Speed: 682
-		Image: 120mm
-		Shadow: true
-		Palette: ra
-	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 3000
-		ValidTargets: Ground, Helicopter
-			None: 25
-			Wood: 35
-			Light: 75
-			Heavy: 120
-			Concrete: 60
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-
 Grenade:
-	Inherits: ^GrenadeWarhead
+	Inherits: ^RocketWarhead
 	Inherits@2: ^GreyExplo
 	ReloadDelay: 80
-	Range: 7c0
-	MinRange: 2c0
+	Range: 5c0
+	MinRange: 1c512
 	Report: grenadelauncherfire.wav
 	ValidTargets: Ground
 	Projectile: Bullet # TODO: Add bounce effect
@@ -47,28 +24,78 @@ Grenade:
 		Blockable: false
 		Shadow: true
 		Angle: 45
-		Inaccuracy: 0c512
+		Inaccuracy: 1c0
 		Image: DISCUS
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 5000
+		Spread: 300
+		Damage: 2000
 		ValidTargets: Ground
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
+
+JJCannon:
+	Inherits: ^RifleWarhead
+	Inherits@2: ^Piffs
+	ReloadDelay: 40
+	Range: 4c0
+	Report: jumpjet1.aud
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 1500
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+
+JJRocket:
+	Inherits: ^RocketWarhead
+	Inherits@2: ^Small_Clsn
+	ReloadDelay: 200
+	Range: 4c0
+	Report: rketinf1.aud
+	ValidTargets: Ground, Air
+	Projectile: Missile
+		MaximumLaunchSpeed: 213
+		Blockable: false
+		Shadow: true
+		Inaccuracy: 128
+		Image: DRAGON
+		TrailImage: small_smoke_trail
+		HorizontalRateOfTurn: 8
+		RangeLimit: 12c0
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 2000
+		AffectsParent: true
+		ValidTargets: Ground, Air
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+
+JJBuff:
+	Inherits: ^NoDamage
+	ReloadDelay: 35
+	Range: 4c0
+	Projectile: InstantExplode
+	Warhead@Acid: GrantUpgrade
+		Range: 64
+		Duration: 13
+		Upgrades: JJBuff
+		ValidStances: Ally
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
+		AffectsParent: True
 
 Heal:
 	ReloadDelay: 150
 	Range: 3c0
 	Report: healer1.aud
-	ValidTargets: Infantry
+	ValidTargets: Infantry, Jumpjet
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		DebugOverlayColor: 00FF00
-		Spread: 213
+		Spread: 175
 		Damage: -4000
 		Versus:
 			Light: 60
-		ValidTargets: Infantry
+		ValidTargets: Infantry, Jumpjet
 		
 TrooperRail:
 	Inherits: ^FullDamage
@@ -383,21 +410,17 @@ GuardianClaw:
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 
 GuardianRepair:
-	Inherits: ^FullDamage
-	ReloadDelay: 100
+	ReloadDelay: 150
 	Range: 5c0
 	Report: repair11.aud
 	ValidTargets: Repair
 	Projectile: Bullet
-		Speed: 100c0
+		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
-		Spread: 213
-		Damage: -5000
+		DebugOverlayColor: 00FF00
+		Spread: 175
+		Damage: -9000
 		ValidTargets: Repair
-	Warhead@2Eff: CreateEffect
-		Explosions: sparks, sparks2, sparks3
-		ImpactSound: expnew14.aud
-		InvalidImpactTypes: Water
 
 #############################################
 # Defences

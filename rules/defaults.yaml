@@ -79,6 +79,9 @@
 		UpgradeTypes: FirestormWallUpgrade
 		BaseLevel: 1
 # TIMELINE TROLLING
+	SpeedMultiplier@ScrinOrb:
+		UpgradeTypes: ScrinOrb
+		Modifier: 40
 	SpeedMultiplier@ScrinTimeline:
 		UpgradeTypes: TimeLineTrolling, TimeLineTrollingMini
 		Modifier: -25, -50
@@ -94,18 +97,18 @@
 		UpgradeMinEnabledLevel: 1
 #GENERIC POISON EFFECT
 	SelfHealing@poisoncloud:
-		PercentageStep: -4
+		PercentageStep: -1
 		Step: 0
 		Delay: 25
 		UpgradeTypes: Poison
 		HealIfBelow: 200
 		DamageTypes: TiberiumDeath
 		UpgradeMinEnabledLevel: 1
-	SelfHealing@poisoncloudOP:
-		PercentageStep: -3
+	SelfHealing@bugpoison:
+		PercentageStep: -1
 		Step: 0
-		Delay: 5
-		UpgradeTypes: PoisonOP
+		Delay: 25
+		UpgradeTypes: BugPoison
 		HealIfBelow: 200
 		DamageTypes: ScrinEssenceKill
 		UpgradeMinEnabledLevel: 1
@@ -168,6 +171,13 @@
 		Palette: mouse
 		ShowToEnemies: true
 		UpgradeTypes: WolfBuff, VentilatorBuff, VentilatorPoison, ShowTibIcon
+		UpgradeMinEnabledLevel: 1
+	KillsSelf:
+		UpgradeTypes: KillSelf
+		UpgradeMinEnabledLevel: 1
+	Targetable@StalkerTracker:
+		TargetTypes: StalkerTracker
+		UpgradeTypes: StalkerTracker
 		UpgradeMinEnabledLevel: 1
 
 ^IncompleteSelfHeal:
@@ -418,7 +428,7 @@
 		DeathType: TiberiumDeath
 		RequiresLobbyCreeps: true
 	SpawnActorOnDeath@ScrinEssence:
-		Actor: SCRINESSENCEMEDIUM
+		Actor: SCRINESSENCESMALL
 
 ^Building:
 	Inherits@1: ^BasicBuilding
@@ -629,9 +639,21 @@
 		VoiceSet: Infantry
 	IgnoresDisguise:
 	Targetable:
-		TargetTypes: Ground
-	Targetable@Inf:
-		TargetTypes: Infantry
+		TargetTypes: Ground, Infantry
+		UpgradeTypes: VanguardShield
+		UpgradeMaxEnabledLevel: 0
+	Targetable@Shield:
+		TargetTypes: ShieldedUnit
+	WithIdleOverlay@BugPoison:
+		Sequence: cloud
+		IsPlayerPalette: true
+		Palette: cloakscrin
+		UpgradeTypes: BugPoison
+		UpgradeMinEnabledLevel: 1
+	ExplodeWeapon@BugPoison:
+		Weapon: PoisonGlaive
+		UpgradeTypes: BugPoison
+		UpgradeMinEnabledLevel: 1
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	WithInfantryBody:
@@ -1039,6 +1061,16 @@
 		Palette: pips
 	SelfHealing@poisoncloud:
 		PercentageStep: -3
+	ExplodeWeapon@BugPoison:
+		Weapon: PoisonGlaive
+		UpgradeTypes: BugPoison
+		UpgradeMinEnabledLevel: 1
+	WithIdleOverlay@BugPoison:
+		Sequence: cloud
+		IsPlayerPalette: true
+		Palette: cloakscrin
+		UpgradeTypes: BugPoison
+		UpgradeMinEnabledLevel: 1
 	Armor:
 		Type: Light
 	DamagedByTerrain@veins:
@@ -1094,13 +1126,15 @@
 		DeathType: TiberiumDeathStrong
 		RequiresLobbyCreeps: true
 	SpawnActorOnDeath@ScrinEssence:
-		Actor: SCRINESSENCEMEDIUM
+		Actor: SCRINESSENCESMALL
 	Voiced:
 		VoiceSet: Vehicle
 	Targetable:
-		TargetTypes: Ground
-	Targetable@vehicle:
-		TargetTypes: Vehicle
+		TargetTypes: Ground, Vehicle
+		UpgradeTypes: VanguardShield
+		UpgradeMaxEnabledLevel: 0
+	Targetable@Shield:
+		TargetTypes: ShieldedUnit
 	Targetable@repair:
 		TargetTypes: repair
 	Repairable:
@@ -1310,7 +1344,7 @@
 		Range: 12c0
 		Type: CenterPosition
 	Aircraft:
-		LandWhenIdle: no
+		LandWhenIdle: False
 		CruiseAltitude: 2048
 		CanHover: True
 		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
@@ -1325,7 +1359,7 @@
 ^Plane:
 	Inherits: ^Aircraft
 	Aircraft:
-		LandWhenIdle: no
+		LandWhenIdle: False
 		CruiseAltitude: 2560
 	ReturnOnIdle:
 	RevealsShroud:
@@ -1767,6 +1801,10 @@
 	SpeedMultiplier@ScrinDamageBoost:
 		UpgradeTypes: ScrinDamageBoost
 		Modifier: 100, 130
+	Targetable@ScrinUnitBeingHealed:
+		TargetTypes: ScrinUnitBeingHealed
+		UpgradeMinEnabledLevel: 1
+		UpgradeTypes: batteryboost
 	SelfHealing@batteryboost:
 		PercentageStep: 1
 		Step: 0

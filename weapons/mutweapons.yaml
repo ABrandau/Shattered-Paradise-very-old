@@ -7,17 +7,30 @@ MarauderShotgun:
 	Projectile: Bullet
 		Speed: 1c682
 		Image: 120mm
-		Inaccuracy: 1c0
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
+		Damage: 1500
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@op: FireShrapnel
+		Weapon: MarauderShotgunInnacurate
+		Amount: 3
+		AimChance: 30
+		AllowDirectHit: false
+		AimTargetStances: Ally, Neutral, Enemy
+
+MarauderShotgunInnacurate:
+	Inherits: MarauderShotgun
+	Range: 1c0
+	-Report: shotfire.wav
+	Warhead@1Dam: SpreadDamage
 		Damage: 1000
-		DamageTypes: Prone70Percent, TriggerProne, TiberiumDeath
+	-Warhead@op: FireShrapnel
 
 SkirmisherRocket:
 	Inherits: ^RocketWarhead
 	Inherits@2: ^Small_Clsn
-	ReloadDelay: 75
+	ReloadDelay: 125
 	Range: 5c0
 	Report: rketinf1.aud
 	ValidTargets: Ground, Air
@@ -54,7 +67,7 @@ FiendShard2:
 		Palette: greentiberium
 	Warhead@1Dam: SpreadDamage
 		Spread: 60
-		Damage: 1500
+		Damage: 1800
 		ValidTargets: Ground, Helicopter
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeath
 	Warhead@3EffWater: CreateEffect
@@ -87,10 +100,11 @@ SeerTesla:
 			Heavy: 100
 			Concrete: 30
 		ValidTargets: Ground
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+		DamageTypes: Prone50Percent, TriggerProne, EnergyDeath
 
 SeerTeslaAA:
 	Inherits: SeerTesla
+	ReloadDelay: 100
 	ValidTargets: Air
 	Warhead@1Dam: SpreadDamage
 		Spread: 8
@@ -146,7 +160,7 @@ PsykerRay:
 	Warhead@1Dam: SpreadDamage
 		Spread: 298
 		Damage: 3000
-		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+		DamageTypes: Prone70Percent, TriggerProne, EnergyDeath
 	Warhead@3Eff: CreateEffect
 		Explosions: bolt1, bolt2, bolt3, bolt4, bolt5, bolt6, bolt7, bolt8, bolt9, bolt10
 		ImpactSound: expnew09.aud
@@ -164,8 +178,6 @@ PsykerRay:
 GMarauderShotgun:
 	Inherits: MarauderShotgun
 	Range: 6c768
-	Projectile: Bullet
-		Inaccuracy: 1c500
 
 GSkirmisherRocket:
 	Inherits: SkirmisherRocket
@@ -341,7 +353,7 @@ IFVulcan:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 2500
-		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, TiberiumDeath
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, BulletDeath
 
 TrikeMortar:
 	Inherits: ^ArtilleryWarhead
@@ -356,7 +368,7 @@ TrikeMortar:
 		Image: 120mm
 		Angle: 165
 		Shadow: true
-		Inaccuracy: 2c512
+		Inaccuracy: 2c0
 		Blockable: false
 		ContrailLength: 6
 		ContrailUsePlayerColor: true
@@ -404,7 +416,7 @@ QuadFire:
 		ValidTargets: Ground
 		InvalidTargets: Air
 		Damage: 3500
-		DamageTypes: Prone70Percent, TriggerProne, TiberiumDeath
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 
 QuadFireAA:
 	ReloadDelay: 50
@@ -424,7 +436,7 @@ QuadFireAA:
 		Damage: 3000
 		Versus:
 			Concrete: 5
-		DamageTypes: Prone70Percent, TriggerProne, TiberiumDeath
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 		
 TiberianRocket:
 	Inherits: ^ArtilleryWarhead
@@ -521,7 +533,7 @@ GargoylVulcan:
 		Damage: 3000
 		ValidTargets: Infantry
 		Versus:
-		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, TiberiumDeath
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, BulletDeath
 		
 GargoylRocket:
 	Inherits: ^RocketWarhead
@@ -613,7 +625,7 @@ FlakFire:
 		Spread: 128
 		ValidTargets: Air
 		Damage: 3000
-		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, TiberiumDeath
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@2Eff: CreateEffect
 		Explosions: piffs
 		InvalidImpactTypes: Water, air, AirHit

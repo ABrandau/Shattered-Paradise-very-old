@@ -433,7 +433,6 @@ scrscorpion:
 		Tick: 100
 	icon: scrscorpionicon
 
-	
 scrmbt:
 	Inherits: ^EmpOverlay
 	idle:
@@ -445,6 +444,19 @@ scrmbt:
 	# muzzle: gunfire2
 		# Length: 2
 	icon: scrmbticon
+
+scrmobmine:
+	Inherits: ^EmpOverlay
+	idle:
+		Facings: -32
+		ShadowStart: 51
+	icon: scrmobmineicon
+
+gavitymine:
+	idle: scrmobmine
+		Start: 32
+		Length: 17
+		ZOffset: 2048
 
 scrrecharger:
 	Inherits: ^EmpOverlay
@@ -713,6 +725,7 @@ scrrax:
 	ship: scrpodanim
 		UseTilesetCode: false
 		Length: *
+		ZOffset: 4048
 	emp-overlay: emp_fx01
 		Length: *
 		Offset: 0, 0

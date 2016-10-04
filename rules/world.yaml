@@ -14,23 +14,23 @@
 	Faction@0:
 		Name: GDI
 		InternalName: gdi
-		Description: GDI\nBalanced Faction.\n + Has the means to keep units alive.\n + Good Armour.\n + Good Range.\n -  Slow.\n -  Low Rate of fire.\n -  Lacks anti air power.
+		Description: GDI\nBalanced Faction.\n\n + Has the means to keep units alive.\n + Gets advanced defences early.\n + Strong Infantry.\n\n - Lacks mobile anti air support until midgame.
 	Faction@1:
 		Name: Nod
 		InternalName: nod
-		Description: NOD\n Hit and run Faction.\n + Good Speed.\n + Good Damage.+\n + Units heal slowly when cloaked.\n -  Low Health.\n -  Doesn't have many aerial units.
+		Description: NOD\n Hit and run Faction.\n\n + Good speed and damage.\n + Units heal slowly when cloaked.\n\n -  Doesn't have many aerial units.\n -  Low Health.
 	Faction@2:
 		Name: Mutants
 		InternalName: mut
-		Description: Mutants\nSwarmer Oponent.\n + Cheaper units thanks to tiberium immunity.\n + Infantry heals on tiberium.\n + Defences don't require power.\n -  Low powerplant output.\n -  Can mutate enemies or allies when something dies.\n -  Average overall stats.
+		Description: Mutants\nInfantry faction.\n\n + Cheaper units thanks to tiberium immunity.\n + Infantry heals on tiberium.\n + Defences don't require power.\n\n - Units might mutate when killed.\n - Average damage, health and speed.
 	Faction@3:
 		Name: C.A.B.A.L.
 		InternalName: cab
-		Description: C.A.B.A.L.\nController Faction.\n + Has crowd control.\n + Can convert enemies and process them for money.\n + All units self repair.\n -  Not immune to tiberium radiation.\n -  Expensive units.\n -  Slow.
+		Description: C.A.B.A.L.\nController Faction.\n\n + Can convert hostiles for money or soldiers.\n + Good health and damage.\n + All units self repair.\n\n -  Not immune to tiberium radiation.\n -  Expensive and slow units.
 	Faction@4:
 		Name: Scrin
 		InternalName: scr
-		Description: Scrin\nPower hungy and aerial Faction.\n + Infantry are immune to tiberium radiation.\n + Strong air power.\n + Ground units absorb the essence of killed units to heal.\n + Air units slowly repair.\n + High Damage.\n  - High Costs.\n  - Most vehicles can't crush infantry.\n  - Ground units loose health unless they are near an energy source.\n  Energy sources are: Tiberium, Alien powerplants or batteries.
+		Description: Scrin\nPower hungry Faction.\n\n + Infantry are immune to tiberium radiation.\n + Air units are strong and auto repair.\n + Ground units heal when killing hostiles.\n\n - Most vehicles can't crush infantry.\n - Ground units lose any extra health over time.
 	Faction@Random:
 		Name: Random
 		InternalName: Random

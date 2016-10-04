@@ -131,7 +131,7 @@ TemplarGrenade:
 		Duration: 75
 		Upgrades: TemplarGrenade
 		ValidStances: Enemy, Neutral
-		
+
 BHRifle:
 	ReloadDelay: 200
 	Range: 9c0
@@ -325,6 +325,7 @@ NODRepair:
 		Explosions: small_twlt
 		ImpactSound: expnew12.aud
 		ValidImpactTypes: Air, AirHit
+
 BCLazor:
 	Inherits: ^ArtilleryWarhead
 	Inherits@2: ^Large_Explosion

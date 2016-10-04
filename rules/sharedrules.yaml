@@ -120,6 +120,7 @@ HARV:
 	Tooltip:
 		Name: Harvester
 		Description: Collects Tiberium for processing.\nIncompatible with scrin refineries.\nCan be sold if near a Service Depot.\n\n  Unarmed
+	-SpeedMultiplier@ScrinOrb:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 99
@@ -403,7 +404,7 @@ PROC:
 GADEPT:
 	Inherits: ^Building
 	Valued:
-		Cost: 1200
+		Cost: 900
 	Tooltip:
 		Name: Service Depot
 		Description: Repairs vehicles.\nVehicles near it auto repair slowly.

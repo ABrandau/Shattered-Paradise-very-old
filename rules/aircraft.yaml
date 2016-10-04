@@ -195,11 +195,11 @@ GUARDIAN:
 		Cost: 2500
 	Tooltip:
 		Name: Guardian Platform
-		Description: Medium frigate, great for spotting targets.\nIt can land to repair nearby vehicles.\n\nStrong vs Vehicles, Aircraft.\nWeak vs Infantry, Heavy vehicles.\nDoes not need to rearm.
+		Description: Medium frigate, great for spotting targets.\nIt can land to repair nearby vehicles.\n\n  Strong vs Vehicles, Aircraft.\n  Weak vs Infantry, Heavy vehicles.
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 20
-		Prerequisites: ~gahpad, gadept, gatech
+		Prerequisites: ~gahpad, gadept
 	Selectable:
 		Bounds: 110,90
 	Aircraft:
@@ -1400,11 +1400,11 @@ DEVOURER:
 	-WithVoxelBody:
 	WithShadow:
 	RenderSprites:
-	WithSpriteBody@idle:
+	WithFacingSpriteBody@idle:
 		UpgradeTypes: DevoBuff
 		UpgradeMaxEnabledLevel: 0
 		Sequence: idle
-	WithSpriteBody@attack:
+	WithFacingSpriteBody@attack:
 		Sequence: shoot
 		UpgradeTypes: DevoBuff
 		UpgradeMinEnabledLevel: 1

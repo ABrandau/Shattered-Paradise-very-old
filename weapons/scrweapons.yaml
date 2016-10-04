@@ -67,6 +67,7 @@ ColossiTesla:
 	Warhead@op: FireShrapnel
 		Weapon: ColossiTeslaSplash
 		Amount: 2
+		AimChance: 30
 		AllowDirectHit: false
 
 ColossiTeslaSplash:
@@ -125,25 +126,72 @@ ColossiBlastTesla:
 		ExplosionPalette: apollightbluealpha
 		InvalidImpactTypes: Water
 
+DummySparks:
+	Inherits: ColossiTesla
+	Range: 1c0
+	-Warhead@1Dam: SpreadDamage
+	-Warhead@op: FireShrapnel
+
+FloatTesla:
+	Inherits: ^RifleWarhead
+	ReloadDelay: 80
+	Range: 8c0
+	Report: voltautofire.wav
+	Charges: yes
+	ValidTargets: Infantry, Vehicle
+	Projectile: TeslaZap
+		Palette: apolredalpha
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: 6000
+		Versus:
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath, ScrinEssenceKill
+	Warhead@op: FireShrapnel
+		Weapon: EssenceMissileToBattery
+		Amount: 1
+		AimChance: 100
+		AllowDirectHit: True
+
+FloatTeslaHeal:
+	Inherits: ^RifleWarhead
+	ReloadDelay: 80
+	Range: 4c0
+	Report: voltautofire.wav
+	Charges: yes
+	ValidTargets: Infantry, Vehicle, ShieldedUnit
+	InvalidTargets: ScrinUnitBeingHealed, EssenceBattery
+	Projectile: TeslaZap
+		Palette: apolredalpha
+	Warhead@1Dam: SpreadDamage
+		Spread: 42
+		Damage: -2000
+		Versus:
+		DamageTypes: Prone50Percent, TriggerProne, FireDeath, ScrinEssenceKill
+	Warhead@op: FireShrapnel
+		Weapon: EssenceMissile
+		Amount: 2
+		AimChance: 100
+		AllowDirectHit: false
+
 FloatGlaive:
 	Inherits: ^FullDamage
 	Inherits@2: ^Scrin_Pulse
 	ReloadDelay: 100
 	Range: 7c0
 	Report: photon1.wav
-	ValidTargets: Ground
+	ValidTargets: Ground, Air
 	Projectile: Bullet
 		Speed: 300
 		Blockable: false
 		Shadow: true
-		Palette: apolbluealpha
+		Palette: apollightbluealpha
 		Image: glaive
 	Warhead@1Dam: SpreadDamage
 		Spread: 96
 		-Falloff:
 		Damage: 500
 		Versus:
-		ValidTargets: Ground
+		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, ScrinEssenceKill
 	Warhead@op: FireShrapnel
 		Weapon: FloatGlaive2
@@ -151,10 +199,39 @@ FloatGlaive:
 		AimChance: 100
 		AllowDirectHit: true
 		AimTargetStances: Enemy
-	Warhead@MCRetarget: GrantUpgrade
-		Range: 60
-		Duration: 50
-		Upgrades: PoisonOP
+		ValidTargets: Infantry, Vehicle, Building, Ground, Wall, Air, AirHit
+	Warhead@Acid: GrantUpgrade
+		Range: 64
+		Duration: 250
+		Upgrades: BugPoison
+
+PoisonGlaive:
+	ReloadDelay: 100
+	Range: 3c0
+	Report:
+	Projectile: InstantExplode
+	Warhead@1Dam: SpreadDamage
+		Spread: 64
+		Damage: 30000
+		ValidTargets: Stalker
+		AffectsParent: True
+		Versus:
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
+	Warhead@op: FireShrapnel
+		Weapon: FloatGlaive10
+		Amount: 1
+		AimChance: 100
+		AllowDirectHit: true
+		AimTargetStances: Ally, Neutral, Enemy
+		ValidTargets: Infantry, Vehicle, Ground, Wall, Air, AirHit
+
+FloatGlaive10:
+	Inherits: FloatGlaive
+	Range: 2c0
+	-Warhead@op: FireShrapnel
+	Warhead@1Dam: SpreadDamage
+		Spread: 64
+		Damage: 10000
 
 FloatGlaive2:
 	Inherits: FloatGlaive
@@ -168,7 +245,7 @@ FloatGlaive3:
 
 FloatGlaive4:
 	Inherits: FloatGlaive
-	Warhead@op: FireShrapnel
+	-Warhead@op: FireShrapnel
 		Weapon: FloatGlaive5
 
 FloatGlaive5:
@@ -195,54 +272,51 @@ FloatGlaive9:
 	Inherits: FloatGlaive
 	-Warhead@op: FireShrapnel
 
-FloatTesla:
-	Inherits: ^RifleWarhead
-	ReloadDelay: 80
-	Range: 4c0
-	Report: voltautofire.wav
-	Charges: yes
-	Projectile: TeslaZap
-		Palette: apolredalpha#apolbluealpha
-	Warhead@1Dam: SpreadDamage
-		Spread: 42
-		Damage: 2800
-		Versus:
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath, ScrinEssenceKill
-	Warhead@op: FireShrapnel
-		Weapon: DummySparks
-		Amount: 2
-		AllowDirectHit: false
-
-DummySparks:
-	Inherits: ColossiTesla
-	Range: 1c0
-	-Warhead@1Dam: SpreadDamage
-	-Warhead@op: FireShrapnel
-
-StalkerSteal:
+StalkerSuicide:
 	ReloadDelay: 150
-	Range: 8c0
+	Range: 1c0
 	Report:
 	ValidTargets: Infantry, Vehicle
-	InvalidTargets: MindControlInmune
-	Projectile: Bullet
-		Speed: 100c0
-		Image: 120mm
-		Palette: ra
+	InvalidTargets: StalkerTracker
+	Projectile: InstantExplode
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
-		Damage: 100
-		ValidTargets: Infantry, Vehicle
+		Damage: 30000
+		ValidTargets: Stalker
+		AffectsParent: True
 		Versus:
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
-	Warhead@4OwnerChange: ChangeOwner
-		Range: 64
-		Duration: 50
-		InvalidTargets: C4, MindControlInmune
-	Warhead@MCRetarget: GrantUpgrade
+	Warhead@5Actor: SpawnActor
+		Actors: STALKERDUMMY
+		FallRate: 5000
+		Range: 3
+	Warhead@Acid: GrantUpgrade
 		Range: 250
-		Duration: 60
-		Upgrades: MindControlTargetting
+		Duration: 200
+		Upgrades: StalkerTracker
+		ValidStances: Enemy, Ally, Neutral
+
+StalkerGrinder:
+	Inherits: ^ArtilleryWarhead
+	ReloadDelay: 20
+	Range: 500
+	ValidTargets: Infantry, Vehicle, Building
+	Projectile: InstantExplode
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 1500
+		Versus:
+		DamageTypes: Prone100Percent, TriggerProne, ScrinEssenceKill
+		ValidTargets: Infantry, Vehicle, Building
+		ValidStances: Enemy, Neutral
+	Warhead@Bouncing: CreateEffect
+		Explosions: stalkershockwave
+		ExplosionPalette: apolra2alpha
+	Warhead@op: FireShrapnel
+		Weapon: ColossiTeslaSplash
+		Amount: 2
+		AimChance: 30
+		AllowDirectHit: false
 
 #################################################
 # Vehicles
@@ -277,32 +351,33 @@ ScorpAcid:
 		Upgrades: AcidScaleDmg
 		ValidTargets: Ground, Vehicle, Infantry, Building
 
-VanguardAcid:
-	Inherits: ^AcidWarhead
-	ReloadDelay: 75
-	Range: 4c0
-	Report: flamtnk1.aud
-	ValidTargets: Vehicle, Infantry, Building, Ground, Water
-	Projectile: Bullet
-		Speed: 200
-		Image: acidall32mini
-		Inaccuracy: 384
-		Palette: apolgreenalpha
-	Burst: 6
-	BurstDelay: 5
+VanguardShrapnel:
+	ReloadDelay: 50
+	Range: 2c0
+	ValidTargets: ShieldedUnit
+	Projectile: InstantExplode
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 200
-		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong
-		ValidTargets: Vehicle, Infantry, Building, Ground, Water
-	Warhead@2Eff: CreateEffect
-		Explosions: tibexp2mini
-		ExplosionPalette: apolgreenalpha
-		ImpactSound: expnew14.aud
-		InvalidImpactTypes: Water
-	Warhead@3Smu: LeaveSmudge
-		SmudgeType: SmallScorch
-		InvalidTargets: Vehicle, Building, Wall
+		Damage: -1
+		ValidTargets: ShieldedUnit
+	Warhead@op: FireShrapnel
+		Weapon: VanguardDummyLaser
+		Amount: 25
+		AimChance: 100
+		AllowDirectHit: True
+		AimTargetStances: Ally
+
+VanguardDummyLaser:
+	ReloadDelay: 50
+	Range: 2c0
+	ValidTargets: ShieldedUnit
+	Projectile: LaserZap
+		BeamWidth: 2
+		BeamDuration: 20
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: -10
+		ValidTargets: ShieldedUnit
 
 ScrMbtCannon:
 	Inherits: ^APWarhead
@@ -554,7 +629,7 @@ TripodLaser:
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath, ScrinEssenceKill
 	Warhead@op: FireShrapnel
 		Weapon: TripodProton
-		Amount: 30
+		Amount: 20
 		# AimChance: 50
 		AllowDirectHit: false
 
@@ -919,7 +994,7 @@ DronePlane:
 EssenceSmall:
 	ReloadDelay: 45
 	Range: 10c0
-	ValidTargets: ScrinUnit, EssenceBattery
+	ValidTargets: ScrinUnit
 	Projectile: InstantExplode
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
@@ -932,28 +1007,14 @@ EssenceSmall:
 		AimChance: 100
 		ThrowWithoutTarget: False
 		AllowDirectHit: True
-		AimTargetStances: Ally
+		AimTargetStances: Ally, Enemy, Neutral
 		ValidTargets: Ground, ScrinUnit
-	Warhead@opbattery: FireShrapnel
-		Weapon: EssenceMissileToBattery
-		Amount: 1
-		AimChance: 100
-		ThrowWithoutTarget: False
-		AllowDirectHit: True
-		AimTargetStances: Ally
-		ValidTargets: Ground, EssenceBattery
-
-EssenceMedium:
-	Inherits: EssenceSmall
-	Warhead@op: FireShrapnel
-		Amount: 2
 
 EssenceMissile:
 	Inherits: ^FullDamage
 	ReloadDelay: 45
-	Range: 7c0
+	Range: 10c0
 	ValidTargets: ScrinUnit
-	InvalidTargets: EssenceBattery
 	Projectile: Missile
 		Speed: 150
 		Blockable: False
@@ -977,12 +1038,15 @@ EssenceMissile:
 		Range: 200
 		Duration: 500
 		Upgrades: batteryboost
+	Warhead@emp: GrantUpgrade
+		Range: 200
+		Duration: 3
+		Upgrades: EssenceGrab
 
 EssenceMissileToBattery:
 	Inherits: EssenceMissile
 	Range: 10c0
 	ValidTargets: EssenceBattery
-	-InvalidTargets: EssenceBattery
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: EssenceBattery
 	Warhead@emp: GrantUpgrade

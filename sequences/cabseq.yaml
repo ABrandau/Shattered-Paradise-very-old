@@ -617,6 +617,7 @@ firefly:
 devourer:
 	Inherits: ^EmpOverlay
 	idle:
+		Stride: 30
 		Facings: 8
 	shoot:
 		Facings: 8

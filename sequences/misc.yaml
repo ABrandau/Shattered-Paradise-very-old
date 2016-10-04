@@ -313,6 +313,8 @@ explosion:
 		Tick: 25
 	vanguardshockwave: vanguardshockwave
 		Offset: 0,-12, 12
+	stalkershockwave: stalkershockwave
+		Offset: 0,-12, 12
 	firestormexplo: firestormexplo
 	scrinexplo1: scrinexplo1
 	scrinexplo2: scrinexplo2

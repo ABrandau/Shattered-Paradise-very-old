@@ -191,6 +191,7 @@ Player:
 			mutfiend: 9
 			reapercab: 9
 			colossi: 9
+			seer: 9
 #T3 Inf#
 			eagleguard: 7
 			bhs: 1
@@ -266,6 +267,7 @@ Player:
 			mutfiend: 1.5%
 			reapercab: 1.5%
 			colossi: 1.5%
+			seer: 5%
 #T3 Inf#
 			eagleguard: 2.5%
 			bhs: 2.5%

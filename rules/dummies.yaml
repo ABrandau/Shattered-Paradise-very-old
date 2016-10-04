@@ -29,6 +29,8 @@
 	Aircraft:
 		TurnSpeed: 6
 		Speed: 0
+		CanHover: True
+		IdealSeparation: 300
 	HiddenUnderFog:
 	Armor:
 		Type: Wood
@@ -66,17 +68,14 @@ SHAKYSHAKY:
 		HealIfBelow: 200
 
 SHAKYSHAKYMINI:
-	Inherits: ^DUMMYAIRCRAFT
+	Inherits: SHAKYSHAKY
 	ShakeOnDeath:
-		Intensity: 2	
-	RevealsShroud:
-		Range: 3c0
-	Health:
-		HP: 10
-	SelfHealing:
-		Step: -10
-		Delay: 10
-		HealIfBelow: 200
+		Intensity: 2
+
+SHAKYSHAKYMINIMINI:
+	Inherits: SHAKYSHAKY
+	ShakeOnDeath:
+		Intensity: 1
 
 IONBEAMTARGET:
 	Inherits: ^DUMMYAIRCRAFT
@@ -446,6 +445,101 @@ BLACKHANDDUMMY:
 ################################################################################
 #	Scrin
 ################################################################################
+STALKERDUMMY:
+	Inherits: ^DUMMYAIRCRAFT
+	SelfHealing:
+		PercentageStep: -50
+		Step: 0
+		Delay: 1500
+		HealIfBelow: 200
+	Tooltip:
+		Name: Gravity Mine
+	Health:
+		HP: 2000
+		NotifyAppliedDamage: False
+	AttackFrontal:
+	AttackWander:
+		MinMoveDelay: 0
+		MaxMoveDelay: 25
+	AttackMove:
+	Aircraft:
+		TurnSpeed: 20
+		Speed: 100
+		CruiseAltitude: 0
+	AutoTarget:
+		ScanRadius: 8
+	UpgradeActorsNear:
+		Upgrades: ScrinOrb
+		Range: 3c0
+		AffectsParent: false
+		ValidStances: Ally, Neutral, Enemy
+	RenderSprites:
+		Image: gavitymine
+		Palette: playerscrin
+		PlayerPalette: playerscrin
+	Armament:
+		Weapon: StalkerGrinder
+		TargetStances: Enemy, Neutral, Ally
+
+SCRINDISSEASEPIECEDUMMY:
+	Inherits: ^Infantry
+	-Targetable:
+	-UpdatesPlayerStatistics:
+	-AutoSelectionSize:
+	-SelectionDecorations:
+	-Selectable:
+	-AutoTarget:
+	-ActorLostNotification:
+	RenderSprites:
+		Image: blackhanddummy
+	SelfHealing:
+		Step: -10
+		HealIfBelow: 200
+	Health:
+		HP: 5
+		NotifyAppliedDamage: False
+	SpawnActorOnDeath@cabalcrate:
+		Actor: SCRINDISSEASEPIECE
+		Probability: 100
+		OwnerType: InternalName
+		InternalOwner: Creeps
+		RequiresLobbyCreeps: true
+	-SpawnActorOnDeath@nanomachineburst:
+
+SCRINDISSEASEPIECE:
+	Inherits: ^DUMMYAIRCRAFT
+	SelfHealing:
+		PercentageStep: -50
+		Step: 0
+		Delay: 1000
+		HealIfBelow: 200
+	Tooltip:
+		Name: Essence
+	-Aircraft:
+	Mobile:
+		Speed: 0
+		TerrainSpeeds:
+			Clear: 90
+			Road: 100
+			Rail: 90
+			DirtRoad: 100
+			Rough: 80
+			Bridge: 100
+			Tiberium: 90
+			BlueTiberium: 90
+			Veins: 50
+	Crushable:
+		CrushClasses: crate
+	UpgradeCrusher:
+		Upgrades: KillSelf
+		Duration: 100
+	Health:
+		HP: 10000
+		NotifyAppliedDamage: False
+	Turreted:
+		TurnSpeed: 99
+	-RevealsShroud:
+
 SCRINESSENCESMALL:
 	Inherits: ^DUMMYAIRCRAFT
 	SelfHealing:
@@ -471,9 +565,4 @@ SCRINESSENCESMALL:
 		PlayerPalette: apolra2ialpha
 	Armament:
 		Weapon: EssenceSmall
-		TargetStances: Ally, Neutral, Enemy
-
-SCRINESSENCEMEDIUM:
-	Inherits: SCRINESSENCESMALL
-	Armament:
-		Weapon: EssenceMedium
+		TargetStances: Ally, Enemy, Neutral

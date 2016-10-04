@@ -1,4 +1,5 @@
 Ideas
+
 tiberium tornadoes.
 Alien layer that spawns from structures
 place anti light for alien weapons.
@@ -7,20 +8,33 @@ drill sound for abductor
 If sensor arrays are added, give nod a support ability to detect all sensor arrays in the level.
 Harvester / mammoth tank
 a unit that spawns walls in the area of impact
-Replace the forg rocket guy for a mortar guy, make the seer and tib fiend more important to compensate.
 Make a siege tank somewhere.
 Redo floater.
 a unit that splits into many.
+Make aircraft reload if they are in proximity to helipads.
+paradroper apc
+sonic beam ship for gdi
 
 bugs
+
 double check sandbags
 Remove blocks projectiles from some defences.
 marauder bad death anim
+remove selectable from a shit ton of actors.
 
 Balance
-remove selectable from a shit ton of actors.
+
+rewrite ion storm
 mut quad strong
-Improve mammoth mk, both graphically and gameplay wise.
+battle bus range nerf
+mortar nerf
+correct sounds
+increase the reload speed of the scrin commando
+reduce scrin artillery bullet speed
+increase battlecruiser cost
+increase railgun damage
+orca bomber buff --> cost
+nerf buggy AA
 
 todo
 
@@ -53,6 +67,7 @@ Scrin ship husks.
 add floaters.
 Rerender Mutant airstrip and cabal air factory to handle depth.
 Remove health bars on some props.
+Improve mammoth mk, both graphically and gameplay wise.
 remake crates and add a water variation
 
 Graphics

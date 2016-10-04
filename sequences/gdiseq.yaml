@@ -92,7 +92,7 @@ grenadier:
 	prone-stand:
 		Start: 414
 		Facings: 8
-		Stride: 1
+		Stride: 2
 		ShadowStart: 596
 	die1:
 		Start: 255
@@ -115,7 +115,7 @@ grenadier:
 		ShadowStart: 732
 	prone-shoot:
 		Start: 358
-		Length: 6
+		Length: 7
 		Facings: 8
 		ShadowStart: 788
 	standup-0:
@@ -181,8 +181,24 @@ jumpjet:
 		Length: 2
 		Facings: 8
 		ShadowStart: 711
+	icon: jjeticon
+
+jumpjetair:
+	Inherits@1: ^InfantryDeathAnims
+	stand: jumpjet
+		Start: 340
+		Length: 6
+		Facings: 8
+	run: jumpjet
+		Start: 292
+		Length: 6
+		Facings: 8
+	shoot: jumpjet
+		Start: 388
+		Length: 6
+		Facings: 8
 	icon: jjeticon	
-	
+
 medic:
 	Inherits@1: ^InfantryDeathAnims
 	Defaults:

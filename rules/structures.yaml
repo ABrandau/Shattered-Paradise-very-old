@@ -1554,7 +1554,7 @@ SCRDEPOT:
 		BuildPaletteOrder: 100
 		Prerequisites: scrweap, ~structures.scr
 	Valued:
-		Cost: 1200
+		Cost: 900
 	Tooltip:
 		Name: Scrin Maintenance Depot
 		Description: Allows the scrin commander to repair vehicles.\nVehicles near it auto repair slowly.

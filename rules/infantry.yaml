@@ -11,7 +11,7 @@ GDIE1:
 		Cost: 130
 	Tooltip:
 		Name: Marine
-		Description: General-Purpose Infantry.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: General-Purpose Infantry.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
 	Health:
 		HP: 12000
 	Voiced:
@@ -28,49 +28,19 @@ GDIE1:
 		Prerequisites: barracks.upgraded
 	RenderSprites:
 
-JUMPJET:
-	Inherits: ^Soldier
-	Valued:
-		Cost: 250
-	Tooltip:
-		Name: Jumpjet Infantry
-		Description: Airborne Soldier, equipped with an AP rifle.\nCan target helicopters and battleships.\nWIP unit - Cannot fly.\n\n  Strong vs Heavy Vehicles, Helicopters.\n  Weak vs Infantry, Light Vehicles, Structures.
-	Buildable:
-		Queue: Infantry
-		BuildPaletteOrder: 2
-		Prerequisites: ~gapile
-	Voiced:
-		VoiceSet: Marine
-	Mobile:
-		Speed: 55
-	Health:
-		HP: 16000
-	Armor:
-		Type: none
-	Armament:
-		Weapon: JJCannon
-	Passenger:
-		PipType: Blue
-	AttackFrontal:
-		Voice: Attack
-	WithInfantryBody:
-		AttackSequence: shoot
-	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
-
 GRENADIER:
 	Inherits: ^Soldier
 	Buildable:
 		Queue: Infantry
-		BuildPaletteOrder: 3
-		Prerequisites: ~gapile, garadr
+		BuildPaletteOrder: 2
+		Prerequisites: ~gapile
 	Valued:
 		Cost: 210
 	Tooltip:
 		Name: Grenadier
-		Description: Support Infantry armed with grenade launchers.\nCan explode violently when killed.\n\n  Strong vs Buildings, Infantry, Light Vehicles.\n  Weak vs Vehicles, Aircraft
+		Description: Support Infantry armed with anti armor grenade launchers.\nCan explode violently when killed.\n\n  Strong vs Vehicles, Buildings.\n  Weak vs Infantry, Aircraft.
 	Health:
-		HP: 9000
+		HP: 11000
 	Mobile:
 		Speed: 55
 	Explodes:
@@ -90,6 +60,123 @@ GRENADIER:
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 
+JUMPJET:
+	Inherits: ^Soldier
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Jumpjet Infantry
+		Description: Airborne Soldier, equipped with a chaingun and a rocket launcher rifle.\nnBug: Loses accumulated experience if ordered to alternate modes.\nStarts in airborne mode.\n\n  Strong vs Ground units.\n  Weak vs Aircraft, Anti air.
+	Voiced:
+		VoiceSet: Marine
+	Mobile:
+		Speed: 55
+	Health:
+		HP: 13000
+	Transforms:
+		IntoActor: jumpjetair
+	Armament@1:
+		Weapon: JJCannon
+	Armament@2:
+		Weapon: JJRocket
+		LocalOffset: 0, 200, 500
+	Passenger:
+		PipType: Blue
+	AttackFrontal:
+		Voice: Attack
+	WithInfantryBody:
+		AttackSequence: shoot
+	ProducibleWithLevel:
+		Prerequisites: barracks.upgraded
+
+JUMPJETAIR:
+	Inherits: JUMPJET
+	Transforms:
+		IntoActor: jumpjet
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 3
+		Prerequisites: ~gapile, garadr
+	-Mobile:
+	-WithInfantryBody
+	WithFacingSpriteBody@idle:
+		UpgradeTypes: JJBuff
+		UpgradeMaxEnabledLevel: 0
+		Sequence: run
+	WithFacingSpriteBody@attack:
+		Sequence: shoot
+		UpgradeTypes: JJBuff
+		UpgradeMinEnabledLevel: 1
+	WithShadow:
+	Hovers@CRUISING:
+		UpgradeTypes: cruising
+		UpgradeMinEnabledLevel: 1
+	Aircraft:
+		TurnSpeed: 10
+		Speed: 65
+		AirborneUpgrades: airborne
+		CruisingUpgrades: cruising
+		CruiseAltitude: 2c500
+		IdealSeparation: 0c300
+		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
+		LandWhenIdle: False
+		CanHover: true
+		Repulsable: true
+		MoveIntoShroud: true
+		-TakeoffSound: orcaup1.aud
+		-LandingSound: orcadwn1.aud
+	-Targetable:
+	Armor:
+		UpgradeTypes: airborne
+		UpgradeMaxEnabledLevel: 0
+	Armor@Flying:
+		Type: Light
+		UpgradeTypes: airborne
+		UpgradeMinEnabledLevel: 1
+	Targetable@GROUND:
+		TargetTypes: Infantry, Ground
+		UpgradeTypes: airborne
+		UpgradeMaxEnabledLevel: 0
+	Targetable@AIRBORNE:
+		TargetTypes: Air, Helicopter, Jumpjet
+		UpgradeTypes: airborne
+		UpgradeMinEnabledLevel: 1
+	Armament@SelfBuff:
+		Weapon: JJBuff
+	RevealsShroud:
+		Range: 8c0
+		Type: CenterPosition
+	DamagedByTerrain:
+		UpgradeTypes: airborne
+		UpgradeMaxEnabledLevel: 0
+	-TakeCover:
+	-WithDeathAnimation@normal:
+	-WithDeathAnimation@tib:
+	-WithDeathAnimation@explosion:
+	-WithDeathAnimation@energy:
+	WithDeathAnimation@body:
+		DeathSequencePalette: gensmkexploj
+		DeathPaletteIsPlayerPalette: False
+		DeathTypes: #1 2 normals, 3 headshot, 4 explosion
+			BulletDeath: 4, 5, 7
+			CabalDeath: 4, 5, 7
+			CabalDeathCrate: 4, 5, 7
+			BlackHandRfle: 4, 5, 7
+			HeadshotDeath: 4, 5, 7
+			SmallExplosionDeath: 4, 5, 7
+			EnergyDeath: 4, 5, 7
+			ExplosionDeath: 4, 5, 7
+	-SpawnActorOnDeath@FLAMEGUY:
+	-SpawnActorOnDeath@FLAMEGUY2:
+	-SpawnActorOnDeath@tiberium:
+	-SpawnActorOnDeath@tiberium2:
+	-SpawnActorOnDeath@berserk:
+	-SpawnActorOnDeath@tiberium3:
+	-SpawnActorOnDeath@tiberium4:
+	-SpawnActorOnDeath@berserk2:
+	-SpawnActorOnDeath@conversion:
+	-SpawnActorOnDeath@blackhand:
+
 MEDIC:
 	Inherits: ^Soldier
 	Valued:
@@ -100,7 +187,7 @@ MEDIC:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 4
-		Prerequisites: ~gapile, garadr
+		Prerequisites: ~gapile
 	Voiced:
 		VoiceSet: Medic
 	Mobile:
@@ -286,7 +373,7 @@ MHIJACK:
 		BuildPaletteOrder: 9
 		Prerequisites: ~nahand, naradr
 	Valued:
-		Cost: 600
+		Cost: 400
 	Tooltip:
 		Name: Hijacker
 		Description: NOD Agent, can steal enemy vehicles\nand infiltrate powerplants.\nCloaks when deployed but becomes immobile.\n\n  Unarmed
@@ -294,7 +381,7 @@ MHIJACK:
 		VoiceSet: Spy
 	-Crushable:
 	Health:
-		HP: 11000
+		HP: 9000
 	Targetable@MindControlImmunity:
 		TargetTypes: MindControlInmune
 	Mobile:
@@ -451,33 +538,6 @@ MARAUDER:
 		MuzzleSplitFacings: 8
 		MuzzlePalette: playermut
 	Armament@2:
-		Weapon: MarauderShotgun
-		Name: OnFoot
-		MuzzleSequence: muzzle
-		MuzzleSplitFacings: 8
-		MuzzlePalette: playermut
-	Armament@3:
-		Weapon: MarauderShotgun
-		Name: OnFoot
-		MuzzleSequence: muzzle
-		MuzzleSplitFacings: 8
-		MuzzlePalette: playermut
-	Armament@4:
-		Weapon: MarauderShotgun
-		Name: OnFoot
-		MuzzleSequence: muzzle
-		MuzzleSplitFacings: 8
-		MuzzlePalette: playermut
-	Armament@GARRISON1:
-		Weapon: GMarauderShotgun
-		MuzzlePalette: playermut
-	Armament@GARRISON2:
-		Weapon: GMarauderShotgun
-		MuzzlePalette: playermut
-	Armament@GARRISON3:
-		Weapon: GMarauderShotgun
-		MuzzlePalette: playermut
-	Armament@GARRISON4:
 		Weapon: GMarauderShotgun
 		MuzzlePalette: playermut
 	DeployToUpgrade:
@@ -538,7 +598,7 @@ E3:
 		Cost: 140
 	Tooltip:
 		Name: Skirmisher
-		Description: Anti-tank Militia.\n\n  Strong vs Vehicles, Aircraft, Buildings\n  Weak vs Infantry
+		Description: Siege Militia armed with mortars.\n\n  Strong vs Infantry, Buildings.\n  Weak vs Vehicles, Aircraft.
 	Voiced:
 		VoiceSet: Rocket
 	Health:
@@ -593,7 +653,7 @@ MUTFIEND:
 	Inherits: ^Beast
 	Tooltip:
 		Name: Tiberian Fiend
-		Description: Tiberian Beast, fires tiberium shards at enemies.\nCannot be crushed.\n\n  Strong vs Ground units.\n  Weak vs Aircraft.
+		Description: Tiberian Beast, fires tiberium shards at enemies.\nCannot be crushed.\n\n  Strong vs Vehicles, Helicopters.\n  Weak vs Infantry.
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 19
@@ -611,8 +671,8 @@ MUTFIEND:
 		Shape: Circle
 			Radius: 213
 	-Crushable:
-	Armor:
-		Type: Light
+	# Armor:
+		# Type: Light
 	Mobile:
 		Speed: 80
 	Voiced:
@@ -640,7 +700,7 @@ SEER:
 		Cost: 300
 	Tooltip:
 		Name: Seer
-		Description: Psychic mutant that works as a reconnaissance unit.\nCan deploy sentry wards and detects cloaked units.\n\n  Unnarmed.
+		Description: Psychic mutant that is able to fire lightning\nat hostile units, can detect cloaked units.\n\n  Strong vs Vehicles, Aircraft.\n Weak vs Infantry.
 	Voiced:
 		VoiceSet: Umagon
 	Health:
@@ -658,12 +718,12 @@ SEER:
 	Armament@PRIMARY:
 		Weapon: SeerTesla
 		Name: OnFoot
-		FireDelay: 10
+		FireDelay: 5
 		LocalOffset: 100,0,400
 	Armament@SECONDARY:
 		Weapon: SeerTeslaAA
 		Name: OnFoot
-		FireDelay: 10
+		FireDelay: 5
 		LocalOffset: 100,0,400
 	Armament@GARRISON:
 		Weapon: SeerTesla
@@ -692,6 +752,7 @@ AWARRIOR:
 	Voiced:
 		VoiceSet: Rocket
 	-UpdatesPlayerStatistics:
+	-TakeCover:
 	Health:
 		HP: 15000
 	Mobile:
@@ -955,12 +1016,18 @@ STALKER:
 	Selectable:
 		Class: Stalker
 	Valued:
-		Cost: 350
+		Cost: 600
+	# Buildable:
+		# Queue: Infantry
+		# BuildPaletteOrder: 27
+		# Prerequisites: ~scrrax, scrradr
 	Tooltip:
 		Name: Stalker
-		Description: Disruption infantry Confuses enemies for shorter periods of time.\nchanging their alegiance.\n\n  Unarmed.
+		Description: Disruption infantry, explodes on contact releasing a energy orb that\nfollows enemy units Damaging and slowing them\n\n  Strong vs Unit acumulations.\n  Unarmed.
 	Health:
-		HP: 20000
+		HP: 13000
+	Targetable@Stalker:
+		TargetTypes: Stalker
 	Mobile:
 		Speed: 80
 		TerrainSpeeds:
@@ -969,7 +1036,7 @@ STALKER:
 	RevealsShroud:
 		Range: 6c0
 	Armament@prim:
-		Weapon: StalkerSteal
+		Weapon: StalkerSuicide
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:
@@ -983,7 +1050,7 @@ FLOAT:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 29
-		Prerequisites: ~scrrax, scrtech
+		Prerequisites: ~scrrax, scrradr
 	Selectable:
 		Class: FLoat
 	Valued:
@@ -991,11 +1058,11 @@ FLOAT:
 	-Crushable:
 	Tooltip:
 		Name: Purifier
-		Description: Recon unit, suited for harassment.\nCan move through water and Cliffs.\n\n  Strong vs Infantry, Buildings.\n  Weak vs Vehicles, Aircraft.
+		Description: asd
 	Health:
 		HP: 27000
 	Mobile:
-		Speed: 100
+		Speed: 65
 		TerrainSpeeds:
 			Clear: 100
 			Road: 100
@@ -1007,14 +1074,38 @@ FLOAT:
 			Veins: 100
 			Cliff: 80
 			Water: 80
-	Armament@prim:
-		Weapon: FloatGlaive
+	Armament@1:
+		Weapon: FloatTesla
 		LocalOffset: 0,0,500
 		FireDelay: 10
-	# Armament@sec:
-		# Weapon: FloatTesla
-		# LocalOffset: 0,250,500
-		# FireDelay: 10
+		ForceTargetStances: Enemy
+	Armament@2:
+		Weapon: FloatTeslaHeal
+		ForceTargetStances: None
+		AmmoPoolName: Essence
+		LocalOffset: 0,0,500
+	Armament@3:
+		TargetStances: Ally
+		Weapon: FloatTeslaHeal
+		ForceTargetStances: None
+		AmmoPoolName: Essence
+		LocalOffset: 0,0,500
+	AmmoPool:
+		Ammo: 4
+		Name: Essence
+		InitialAmmo: 0
+		ReloadDelay: 1
+		SelfReloadDelay: 1
+	ReloadAmmoWhenEnabled:
+		ReloadCount: 1
+		Name: Essence
+		ReloadDelay: 1
+		UpgradeTypes: EssenceGrab
+		UpgradeMinEnabledLevel: 1
+	Targetable@EssenceBattery:
+		TargetTypes: EssenceBattery
+	DamagedByTerrain@ScrinDamage:
+		DamageThreshold: 40
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:
@@ -1025,10 +1116,10 @@ FLOAT:
 		
 BUG:
 	Inherits: ^ScrinSoldier
-	# Buildable:
-		# Queue: Infantry
-		# BuildPaletteOrder: 30
-		# Prerequisites: ~scrrax, scrtech
+	Buildable:
+		Queue: Infantry
+		BuildPaletteOrder: 30
+		Prerequisites: ~scrrax, scrtech
 	Valued:
 		Cost: 650
 	Tooltip:
@@ -1051,7 +1142,7 @@ BUG:
 	Armor:
 		Type: none
 	Armament:
-		Weapon: StalkerSteal
+		Weapon: FloatGlaive
 		FireDelay: 5
 	AttackFrontal:
 		Voice: Attack
