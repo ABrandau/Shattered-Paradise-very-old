@@ -50,7 +50,32 @@ SkirmisherRocket:
 		AffectsParent: true
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-		
+
+SkirmisherMortar:
+	Inherits: ^ArtilleryWarhead
+	Inherits@2: ^Small_Clsn
+	Inherits@3: ^Small_Twlt
+	ReloadDelay: 150
+	Range: 8c0
+	MinRange: 1c0
+	Report: 120mmf.aud
+	Projectile: Bullet
+		Speed: 120
+		Image: 120mm
+		Angle: 165
+		Shadow: true
+		Inaccuracy: 2c0
+		Blockable: false
+		ContrailLength: 6
+		ContrailUsePlayerColor: true
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 256
+		Damage: 3500
+		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
+	-Warhead@4Smu: LeaveSmudge
+	-Warhead@5Smu: LeaveSmudge
+
 FiendShard2:
 	Inherits: ^APWarhead
 	ReloadDelay: 70
@@ -191,8 +216,9 @@ GFiendShard2:
 	Projectile: Bullet
 		Inaccuracy: 1c500
 
-GTrikeMortar:
-	Inherits: TrikeMortar
+GSkirmisherMortar:
+	Inherits: SkirmisherMortar
+	Range: 8c200
 	Warhead@1Dam: SpreadDamage
 		Spread: 500
 
@@ -354,31 +380,6 @@ IFVulcan:
 		Spread: 128
 		Damage: 2500
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath, BulletDeath
-
-TrikeMortar:
-	Inherits: ^ArtilleryWarhead
-	Inherits@2: ^Small_Clsn
-	Inherits@3: ^Small_Twlt
-	ReloadDelay: 150
-	Range: 8c0
-	MinRange: 1c0
-	Report: 120mmf.aud
-	Projectile: Bullet
-		Speed: 120
-		Image: 120mm
-		Angle: 165
-		Shadow: true
-		Inaccuracy: 2c0
-		Blockable: false
-		ContrailLength: 6
-		ContrailUsePlayerColor: true
-		Palette: ra
-	Warhead@1Dam: SpreadDamage
-		Spread: 300
-		Damage: 5000
-		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
-	-Warhead@4Smu: LeaveSmudge
-	-Warhead@5Smu: LeaveSmudge
 
 LeonidCannon:
 	Inherits: ^APWarhead
@@ -580,7 +581,7 @@ GargoylRocketAA:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 110
-		Damage: 1000
+		Damage: 2000
 		ValidTargets: Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 

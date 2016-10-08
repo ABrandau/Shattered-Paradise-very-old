@@ -525,12 +525,16 @@ centurion:
 		Length: 1
 		ShadowStart:  278
 		Offset: 0, 12
+	shield: shieldlarge
+		Length: *
 	icon: centurionicon
 	
 cabapc:
 	Inherits: ^EmpOverlay
 	icon: cabapcicon
 	idle:	
+	shield: shieldlarge
+		Length: *
 
 ecm:
 	Inherits: ^EmpOverlay
@@ -558,6 +562,8 @@ spiderarty:
 		Facings: 8
 		Tick: 110
 		ShadowStart: 136
+	shield: shieldlarge
+		Length: *
 	icon: spiderartyicon
 		Offset: 0, 0
 
@@ -589,6 +595,8 @@ paladin:
 		Facings: 8
 		ShadowStart: 192	
 	icon: paladinicon	
+	shield: shieldlarge
+		Length: *
 ##########################################################
 # Aircraft
 ##########################################################	

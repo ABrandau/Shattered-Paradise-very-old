@@ -244,7 +244,7 @@ SeekerBazooka:
 	Inherits@2: ^Small_Clsn
 	ReloadDelay: 80
 	Range: 8c0
-	MinRange: 3c0
+	MinRange: 1c0
 	Report: rketinf1.aud
 	ValidTargets: Ground, Air
 	Projectile: Missile
@@ -262,6 +262,16 @@ SeekerBazooka:
 		Damage: 5000
 		ValidTargets: Ground, Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+
+SeekerBazookaAA:
+	Inherits: SeekerBazooka
+	Range: 8c0
+	MinRange: 1c0
+	ValidTargets: Air
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 2000
+		ValidTargets: Air
 
 CenturionVulcan:
 	Inherits: ^RifleWarhead
@@ -367,14 +377,21 @@ WaspBullet:
 	ReloadDelay: 50
 	Range: 6c0
 	Report: lastur1.aud
-	ValidTargets: Ground, Air
+	ValidTargets: Ground
 	Projectile:	Bullet
 		Speed: 100c0		
 	Warhead@1Dam: SpreadDamage
 		Spread: 125
 		Damage: 3500
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
-		ValidTargets: Ground, Air
+		ValidTargets: Ground
+
+WaspBulletAA:
+	Inherits: WaspBullet
+	ValidTargets: Air
+	Warhead@1Dam: SpreadDamage
+		Damage: 1500
+		ValidTargets: Air
 
 WaspLasor:
 	ReloadDelay: 50

@@ -598,7 +598,7 @@ E3:
 		Cost: 140
 	Tooltip:
 		Name: Skirmisher
-		Description: Siege Militia armed with mortars.\n\n  Strong vs Infantry, Buildings.\n  Weak vs Vehicles, Aircraft.
+		Description: Siege Militia armed with mortars.\nExtremely strong in groups.\n\n  Strong vs Infantry, Buildings.\n  Weak vs Vehicles, Aircraft.
 	Voiced:
 		VoiceSet: Rocket
 	Health:
@@ -606,11 +606,11 @@ E3:
 	Mobile:
 		Speed: 50
 	Armament@PRIMARY:
-		Weapon: TrikeMortar
+		Weapon: SkirmisherMortar
 		LocalOffset: 128,0,640
 		Name: OnFoot
 	Armament@GARRISON:
-		Weapon: GTrikeMortar
+		Weapon: GSkirmisherMortar
 		LocalOffset: 128,0,640
 	Passenger:
 		PipType: Blue
@@ -754,9 +754,9 @@ AWARRIOR:
 	-UpdatesPlayerStatistics:
 	-TakeCover:
 	Health:
-		HP: 15000
+		HP: 20000
 	Mobile:
-		Speed: 68
+		Speed: 75
 	AutoTarget:
 		ScanRadius: 6
 	Armament@PRIMARY:
@@ -840,14 +840,14 @@ shark:
 		BuildPaletteOrder: 24
 		Prerequisites: ~scrrax
 	Valued:
-		Cost: 300
+		Cost: 100
 	Tooltip:
 		Name: Razorshark
-		Description: Anti-infantry creature, fast and deadly.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Structures, Aircraft.
+		Description: Anti-infantry creature, can only target infantry.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Structures, Aircraft.
 	Selectable:
 		Class: Shark
 	Health:
-		HP: 25500
+		HP: 14000
 	Mobile:
 		Speed: 90
 		Voice: Move
@@ -866,9 +866,9 @@ shark:
 	-SpawnActorOnDeath@berserk2:
 	RevealsShroud:
 		Range: 5c0
-	Armament:
-		Weapon: SharkJump
 	Armament@1:
+		Weapon: SharkJump
+	Armament@2:
 		Weapon: SharkJump2
 	AttackFrontal:
 		Voice: Attack
@@ -958,7 +958,7 @@ COLOSSI:
 	Selectable:
 		Bounds: 26,30,0,-10
 	Health:
-		HP: 66000
+		HP: 70000
 	Mobile:
 		Speed: 60
 		SharesCell: False
@@ -1058,7 +1058,7 @@ FLOAT:
 	-Crushable:
 	Tooltip:
 		Name: Purifier
-		Description: asd
+		Description: Support unit that steals essence from enemy units, heals\nnearby friendly aliens if it has essence available.\n\n  Somewhat good vs Infantry.\n  Weak vs Vehicles, Aircraft.
 	Health:
 		HP: 27000
 	Mobile:
@@ -1074,24 +1074,19 @@ FLOAT:
 			Veins: 100
 			Cliff: 80
 			Water: 80
-	Armament@1:
+	Armament@maquinademierda:
 		Weapon: FloatTesla
 		LocalOffset: 0,0,500
 		FireDelay: 10
 		ForceTargetStances: Enemy
-	Armament@2:
-		Weapon: FloatTeslaHeal
-		ForceTargetStances: None
-		AmmoPoolName: Essence
+	Armament@orareculiao:
+		Weapon: FloatTesla
 		LocalOffset: 0,0,500
-	Armament@3:
-		TargetStances: Ally
-		Weapon: FloatTeslaHeal
-		ForceTargetStances: None
+		FireDelay: 10
+		ForceTargetStances: Enemy
 		AmmoPoolName: Essence
-		LocalOffset: 0,0,500
 	AmmoPool:
-		Ammo: 4
+		Ammo: 2
 		Name: Essence
 		InitialAmmo: 0
 		ReloadDelay: 1
@@ -1102,8 +1097,8 @@ FLOAT:
 		ReloadDelay: 1
 		UpgradeTypes: EssenceGrab
 		UpgradeMinEnabledLevel: 1
-	Targetable@EssenceBattery:
-		TargetTypes: EssenceBattery
+	# Targetable@EssenceBattery:
+		# TargetTypes: EssenceBattery
 	DamagedByTerrain@ScrinDamage:
 		DamageThreshold: 40
 	AttackFrontal:
@@ -1123,8 +1118,8 @@ BUG:
 	Valued:
 		Cost: 650
 	Tooltip:
-		Name: Overtaker
-		Description: Alien species that can mind control enemies for brief moments.\n\n  Strong vs Ground units.\n  Weak vs Aircraft.
+		Name: Plague Carrier
+		Description: Special alien breed that focuses on infecting units. Infected\nunits take damage over time and spread their plague\nto other units that are nearby.\n\n  Strong vs Ground units.\n  Weak vs Aircraft.
 	Targetable@MindControlImmunity:
 		TargetTypes: MindControlInmune
 	Selectable:
@@ -1143,7 +1138,6 @@ BUG:
 		Type: none
 	Armament:
 		Weapon: FloatGlaive
-		FireDelay: 5
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:

@@ -512,7 +512,9 @@ tripod:
 		Start: 291
 		Length: 36
 		ShadowStart: 618
-	icon: tripodicon	
+	shield: shieldtrip
+		Length: *
+	icon: tripodicon
 ##########################################################
 # Aircraft
 ##########################################################

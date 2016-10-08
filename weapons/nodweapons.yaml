@@ -430,25 +430,14 @@ Proton:
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 		
 ProtonAA:
-	Inherits: ^FullDamage
-	Inherits@2: ^Small_Bang
-	ReloadDelay: 50
-	Range: 5c0
-	Report: scrin5b.aud
+	Inherits: Proton
 	Burst: 9
 	BurstDelay: 3
 	ValidTargets: Air
-	Projectile: Missile
-		Speed: 341
-		Blockable: false
-		Shadow: true
-		Image: TORPEDO
-		RangeLimit: 15c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 1200
 		ValidTargets: Air
-		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath
 
 ##################################################
 # Defences

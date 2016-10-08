@@ -133,7 +133,7 @@ HARV:
 	WithVoxelUnloadBody:
 	Harvester:
 		Capacity: 12
-		DeliveryBuildings: proc
+		DeliveryBuildings: proc, muproc
 		Resources: Tiberium, BlueTiberium
 		UnloadTicksPerBale: 2
 		LoadTicksPerBale: 20
@@ -326,9 +326,9 @@ GACNST:
 	ProvidesPrerequisite@walls:
 		Factions: gdi, nod, cab
 		Prerequisite: sharedwall
-	ProvidesPrerequisite@humanproc:
+	ProvidesPrerequisite@humanstuff:
 		Factions: gdi, nod, cab, mut
-		Prerequisite: humanproc
+		Prerequisite: humanstuff
 	ProvidesPrerequisite@gdi:
 		Factions: gdi
 		Prerequisite: structures.gdi
@@ -338,6 +338,9 @@ GACNST:
 	ProvidesPrerequisite@mut:
 		Factions: mut
 		Prerequisite: structures.mut
+	ProvidesPrerequisite@mut2:
+		Factions: mut
+		Prerequisite: forgproc
 	ProvidesPrerequisite@cab:
 		Factions: cab
 		Prerequisite: structures.cab
@@ -353,8 +356,9 @@ PROC:
 	Tooltip:
 		Name: Tiberium Refinery
 		Description: Processes raw Tiberium\ninto usable resources.\nIncompatible with scrin harvesters.
-	Armor:
-		Type: Heavy
+	ProvidesPrerequisite:
+		Factions: gdi, cab, mut, nod
+		Prerequisite: proc
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 20
@@ -410,7 +414,7 @@ GADEPT:
 		Description: Repairs vehicles.\nVehicles near it auto repair slowly.
 	Buildable:
 		BuildPaletteOrder: 80
-		Prerequisites:  ~humanproc, factory
+		Prerequisites:  ~humanstuff, factory
 		Queue: Building
 	Building:
 		Footprint: =x= xxx =x=
@@ -469,7 +473,7 @@ GASILO:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 70
-		Prerequisites: ~humanproc, proc
+		Prerequisites: ~humanstuff, proc
 	Valued:
 		Cost: 150
 	Tooltip:
@@ -589,7 +593,7 @@ NAPULS:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
-		Prerequisites: ~humanproc, radar
+		Prerequisites: ~humanstuff, radar
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2

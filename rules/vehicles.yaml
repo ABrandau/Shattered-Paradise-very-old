@@ -165,11 +165,14 @@ HVR:
 		LocalOffset: 100,150,384, 100,-150,384
 	Turreted:
 		TurnSpeed: 8
-		Offset: -128,0,85
+		Offset: -150,0,100
 	AttackTurreted:
 		Voice: Attack
 	AutoTarget:
 	WithVoxelTurret:
+	RenderVoxels:
+		LightAmbientColor: 0.4, 0.4, 0.4
+		LightDiffuseColor: 0.6, 0.6, 0.6
 
 JUGGER:
 	Inherits: ^Walker
@@ -830,7 +833,7 @@ DEATHCLAW:
 		Cost: 900
 	Tooltip:
 		Name: Ravager
-		Description: Melee Beast, can take a great amount of punishment.\n\n  Strong vs Ground Units\n  Weak vs Aircraft.
+		Description: Melee Beast, usefull as a shock unit.\n\n  Strong vs Ground Units\n  Weak vs Aircraft.
 	Voiced:
 		VoiceSet: Fiend
 	SpawnActorOnDeath@conversion:
@@ -921,7 +924,7 @@ TRIKE:
 		Prerequisites: ~muweap
 	Mobile:
 		TurnSpeed: 9
-		Speed: 130
+		Speed: 110
 		Crushes: wall, crate, infantry
 	Health:
 		HP: 13000
@@ -951,6 +954,8 @@ TRIKE:
 		# Voice: Attack
 	RenderVoxels:
 		Scale: 0.9
+		LightAmbientColor: 0.4, 0.4, 0.4
+		LightDiffuseColor: 0.6, 0.6, 0.6
 	AutoTarget:
 
 MUTQUAD:
@@ -978,6 +983,8 @@ MUTQUAD:
 		Volume: 10
 	RenderVoxels:
 		Scale: 1
+		LightAmbientColor: 0.4, 0.4, 0.4
+		LightDiffuseColor: 0.6, 0.6, 0.6
 	WithMuzzleOverlay:
 	Minelayer:
 		Mine: muward
@@ -1041,6 +1048,8 @@ STRUCK:
 		InitialUnits: mutfiend
 	RenderVoxels:
 		Scale: 0.8
+		LightAmbientColor: 0.4, 0.4, 0.4
+		LightDiffuseColor: 0.6, 0.6, 0.6
 	AutoTarget:
 	AttackGarrisoned:
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
@@ -1309,6 +1318,7 @@ SCRDRONEC:
 	SelfHealing@Permanent:
 		Delay: 25
 	-Armor:
+	-WithIdleOverlay@shield:
 	WithFacingSpriteBody:
 	-Cloak@CLOAKGENERATOR:
 	BodyOrientation:
@@ -1327,6 +1337,7 @@ SCRDRONEC:
 		Range: 2c0
 		AffectsParent: false
 	Targetable:
+		TargetTypes: Vanguard, Ground, Vehicle
 		-UpgradeTypes: VanguardShield
 		-UpgradeMaxEnabledLevel: 0
 	AutoTarget:
@@ -1364,7 +1375,7 @@ SCRGLYDER2:
 		BuildPaletteOrder: 31
 		Prerequisites: ~scrweap
 	Valued:
-		Cost: 550
+		Cost: 450
 	Tooltip:
 		Name: Glider
 		Description: Specialized weapons platform it can vary from a ground version and\naerial version. The aerial version attacks ground units and vice versa.\n\n Strong vs Armor.\n  Weak vs Light units.
@@ -1410,10 +1421,11 @@ SCRMOBMINE:
 	-DamagedByTerrain@ScrinDamage:
 	Armament:
 		Weapon: StalkerSuicide
-	Explodes:
-		Weapon: StalkerSuicide
-		EmptyWeapon: UnitExplode
-		LoadedChance: 40
+	SpawnActorOnDeath@Mine:
+		Actor: stalkerdummy
+		Probability: 80
+		OwnerType: Victim
+		RequiresLobbyCreeps: false
 	AutoTarget:
 		ScanRadius: 4
 	AttackFrontal:
@@ -1573,7 +1585,7 @@ DINO:
 	Inherits@5: ^CabRender
 	Inherits@3: ^BasicStealthDetection
 	Valued:
-		Cost: 650
+		Cost: 600
 	Tooltip:
 		Name: Seeker
 		Description: Basic Walker, equiped with long range missiles.\n\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
@@ -1583,7 +1595,7 @@ DINO:
 		Prerequisites: ~cabweap
 	Mobile:
 		TurnSpeed: 12
-		Speed: 120
+		Speed: 100
 		Crushes: crate
 	Voiced:
 		VoiceSet: Limpet
@@ -1594,8 +1606,12 @@ DINO:
 	WithInfantryBody:
 	AttackFrontal:
 	WithMuzzleOverlay:
-	Armament:
+	Armament@1:
 		Weapon: SeekerBazooka
+		LocalOffset: 200,0,750
+		MuzzleSequence: muzzle
+	Armament@aa:
+		Weapon: SeekerBazookaAA
 		LocalOffset: 200,0,750
 		MuzzleSequence: muzzle
 	AutoTarget:

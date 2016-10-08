@@ -966,6 +966,34 @@ MURAX:
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
 
+MUPROC:
+	Inherits: PROC
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 20
+		Prerequisites: ~forgproc, anypower
+	Tooltip:
+		Name: Forgotten Refinery
+		Description: Processes raw Tiberium\ninto usable resources.\nIncompatible with scrin harvesters.
+	Building:
+		Footprint: xxx== xxx== xxx==
+		Dimensions: 5,3
+	TiberianSunRefinery:
+		DockOffset: 4,1
+	FreeActor:
+		SpawnOffset: 4,1
+	RenderSprites:
+		PlayerPalette: playermut
+		Image: muproc
+		-FactionImages:
+	-WithIdleOverlay@REDLIGHTS:
+	Cloak@CLOAKGENERATOR:
+		Palette: cloakmut
+	WithDeathAnimation:
+		DeathSequencePalette: playermut
+		CrushedSequencePalette: playermut
+		CrushedPaletteIsPlayerPalette: true	
+
 MUWEAP:
 	Inherits: ^Building
 	Valued:
@@ -1193,12 +1221,6 @@ drached:
 	Tooltip:
 		Name: Deployed Host Station
 		Description: Builds base structures.
-	UpgradeActorsNear:
-		Upgrades: StandOnTib
-		Range: 5c0
-	WithRangeCircle:
-		Range: 5c0
-		Type: ScrinEssence
 	WithBuildingExplosion:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
@@ -1237,7 +1259,7 @@ SCRPOWR:
 		Cost: 400
 	Tooltip:
 		Name: Scrin Generator
-		Description: Provides power for other structures. Aliens near\nthis structure stop degenerating health.
+		Description: Provides power for other structures.
 	ProvidesPrerequisite:
 		Prerequisite: scrpowr
 	Building:
@@ -1246,12 +1268,6 @@ SCRPOWR:
 	WithBuildingExplosion:
 		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
 		Palette: apolbluealpha
-	UpgradeActorsNear:
-		Upgrades: StandOnTib
-		Range: 5c0
-	WithRangeCircle:
-		Range: 5c0
-		Type: ScrinEssence
 	Health:
 		HP: 100000
 	Armor:
@@ -1282,15 +1298,9 @@ SCRADVPOWR:
 		Cost: 1000
 	Tooltip:
 		Name: Tiberium Reactior
-		Description: Provides power for other structures and also stores resources\nAliens near this structure stop degenerating health.
+		Description: Provides power for other structures and also stores resources.
 	ProvidesPrerequisite:
 		Prerequisite: scrpowr
-	UpgradeActorsNear:
-		Upgrades: StandOnTib
-		Range: 9c0
-	WithRangeCircle:
-		Range: 9c0
-		Type: ScrinEssence
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -1344,7 +1354,7 @@ SCRRAX:
 	Selectable:
 		Bounds: 88, 48, 0, -8
 	UpgradeActorsNear:
-		Upgrades: MineReam, StandOnTib
+		Upgrades: MineReam
 		Range: 4c0
 	WithRangeCircle:
 		Range: 4c0
@@ -1456,12 +1466,6 @@ SCRWEAP:
 		HP: 130000
 	Armor:
 		Type: Heavy
-	UpgradeActorsNear:
-		Upgrades: StandOnTib
-		Range: 4c0
-	WithRangeCircle:
-		Range: 4c0
-		Type: Mines
 	RallyPoint:
 		Offset: 4,1
 		Palette: mouse

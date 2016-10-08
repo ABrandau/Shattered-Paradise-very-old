@@ -8,7 +8,7 @@ MarineRifle:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 2300
+		Damage: 2000
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 
 Grenade:

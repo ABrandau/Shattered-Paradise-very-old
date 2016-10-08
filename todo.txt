@@ -24,17 +24,16 @@ remove selectable from a shit ton of actors.
 
 Balance
 
-rewrite ion storm
-mut quad strong
-battle bus range nerf
-mortar nerf
-correct sounds
-increase the reload speed of the scrin commando
-reduce scrin artillery bullet speed
-increase battlecruiser cost
-increase railgun damage
-orca bomber buff --> cost
-nerf buggy AA
+fix refinery armor
+Dinosaur rework
+super weapons useless
+battleship selection boxes
+fireprojectile sw, can't unselect
+harpies garbage vs wasp
+revert refinery ammo
+make helipad not need to reload.
+gdi too strong
+bike hologram
 
 todo
 

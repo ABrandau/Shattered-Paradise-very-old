@@ -479,7 +479,7 @@ STALKERDUMMY:
 		PlayerPalette: playerscrin
 	Armament:
 		Weapon: StalkerGrinder
-		TargetStances: Enemy, Neutral, Ally
+		TargetStances: Enemy, Neutral
 
 SCRINDISSEASEPIECEDUMMY:
 	Inherits: ^Infantry
@@ -506,46 +506,12 @@ SCRINDISSEASEPIECEDUMMY:
 		RequiresLobbyCreeps: true
 	-SpawnActorOnDeath@nanomachineburst:
 
-SCRINDISSEASEPIECE:
-	Inherits: ^DUMMYAIRCRAFT
-	SelfHealing:
-		PercentageStep: -50
-		Step: 0
-		Delay: 1000
-		HealIfBelow: 200
-	Tooltip:
-		Name: Essence
-	-Aircraft:
-	Mobile:
-		Speed: 0
-		TerrainSpeeds:
-			Clear: 90
-			Road: 100
-			Rail: 90
-			DirtRoad: 100
-			Rough: 80
-			Bridge: 100
-			Tiberium: 90
-			BlueTiberium: 90
-			Veins: 50
-	Crushable:
-		CrushClasses: crate
-	UpgradeCrusher:
-		Upgrades: KillSelf
-		Duration: 100
-	Health:
-		HP: 10000
-		NotifyAppliedDamage: False
-	Turreted:
-		TurnSpeed: 99
-	-RevealsShroud:
-
 SCRINESSENCESMALL:
 	Inherits: ^DUMMYAIRCRAFT
 	SelfHealing:
 		PercentageStep: -50
 		Step: 0
-		Delay: 2000
+		Delay: 1000
 		HealIfBelow: 200
 	Tooltip:
 		Name: Essence
@@ -565,4 +531,4 @@ SCRINESSENCESMALL:
 		PlayerPalette: apolra2ialpha
 	Armament:
 		Weapon: EssenceSmall
-		TargetStances: Ally, Enemy, Neutral
+		TargetStances: Ally

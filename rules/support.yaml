@@ -1339,6 +1339,8 @@ CABSENTRYTURRET:
 	BodyOrientation:
 		QuantizedFacings: 32
 	-CanPowerDown:
+	-DetectCloaked:
+	-RenderDetectionCircle:
 	Turreted:
 		TurnSpeed: 10
 		InitialFacing: 50

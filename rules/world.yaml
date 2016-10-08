@@ -30,7 +30,7 @@
 	Faction@4:
 		Name: Scrin
 		InternalName: scr
-		Description: Scrin\nPower hungry Faction.\n\n + Infantry are immune to tiberium radiation.\n + Air units are strong and auto repair.\n + Ground units heal when killing hostiles.\n\n - Most vehicles can't crush infantry.\n - Ground units lose any extra health over time.
+		Description: Scrin\nPower hungry Faction.\n\n + Infantry are immune to tiberium radiation.\n + Air units are strong and auto repair.\n + Ground units heal when killing hostiles.\n\n - Most vehicles can't crush infantry.
 	Faction@Random:
 		Name: Random
 		InternalName: Random

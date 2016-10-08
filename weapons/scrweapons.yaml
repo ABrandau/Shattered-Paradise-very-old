@@ -1,6 +1,6 @@
 SharkJump:
 	Inherits: ^RifleWarhead
-	ValidTargets: Infantry
+	ValidTargets: Infantry, Vanguard
 	ReloadDelay: 20
 	Range: 1c0
 	Report: fiend2.aud
@@ -8,23 +8,23 @@ SharkJump:
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 32
-		Damage: 2000
-		ValidTargets: Infantry, Vehicle
+		Damage: 1000
+		ValidTargets: Ground
 		ValidStances: Enemy, Neutral
 		DamageTypes: TriggerProne, BulletDeath, ScrinEssenceKill
 
 SharkJump2:
 	Inherits: ^RifleWarhead
-	ValidTargets: Building, Defence
+	ValidTargets: Building, Vehicle, Defence
 	ReloadDelay: 20
-	Range: 2c0
+	Range: 1c0
 	Report: fiend2.aud
 	Projectile: Bullet
 		Speed: 100c0
 	Warhead@1Dam: SpreadDamage
-		Spread: 64
-		Damage: 2000
-		ValidTargets: Building, Defence
+		Spread: 32
+		Damage: 1000
+		ValidTargets: Building, Vehicle, Defence
 		ValidStances: Enemy, Neutral
 		DamageTypes: TriggerProne, BulletDeath, ScrinEssenceKill
 
@@ -61,13 +61,13 @@ ColossiTesla:
 		Palette: apolbluealpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 6000
+		Damage: 7000
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, ScrinEssenceKill
 	Warhead@op: FireShrapnel
 		Weapon: ColossiTeslaSplash
 		Amount: 2
-		AimChance: 30
+		AimChance: 70
 		AllowDirectHit: false
 
 ColossiTeslaSplash:
@@ -76,6 +76,7 @@ ColossiTeslaSplash:
 	Projectile: TeslaZap
 		Palette: apolbluealpha
 	Warhead@1Dam: SpreadDamage
+		Damage: 4000
 	-Warhead@op: FireShrapnel
 
 ColossiBlast:
@@ -138,40 +139,19 @@ FloatTesla:
 	Range: 8c0
 	Report: voltautofire.wav
 	Charges: yes
-	ValidTargets: Infantry, Vehicle
+	ValidTargets: Infantry, Vehicle, Building
 	Projectile: TeslaZap
 		Palette: apolredalpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 6000
-		Versus:
-		DamageTypes: Prone50Percent, TriggerProne, FireDeath, ScrinEssenceKill
-	Warhead@op: FireShrapnel
-		Weapon: EssenceMissileToBattery
-		Amount: 1
-		AimChance: 100
-		AllowDirectHit: True
-
-FloatTeslaHeal:
-	Inherits: ^RifleWarhead
-	ReloadDelay: 80
-	Range: 4c0
-	Report: voltautofire.wav
-	Charges: yes
-	ValidTargets: Infantry, Vehicle, ShieldedUnit
-	InvalidTargets: ScrinUnitBeingHealed, EssenceBattery
-	Projectile: TeslaZap
-		Palette: apolredalpha
-	Warhead@1Dam: SpreadDamage
-		Spread: 42
-		Damage: -2000
+		Damage: 3000
 		Versus:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath, ScrinEssenceKill
 	Warhead@op: FireShrapnel
 		Weapon: EssenceMissile
-		Amount: 2
+		Amount: 1
 		AimChance: 100
-		AllowDirectHit: false
+		AllowDirectHit: True
 
 FloatGlaive:
 	Inherits: ^FullDamage
@@ -189,10 +169,10 @@ FloatGlaive:
 	Warhead@1Dam: SpreadDamage
 		Spread: 96
 		-Falloff:
-		Damage: 500
+		Damage: 1000
 		Versus:
 		ValidTargets: Ground, Air
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, ScrinEssenceKill
+		DamageTypes: SmallExplosionDeath, ScrinEssenceKill
 	Warhead@op: FireShrapnel
 		Weapon: FloatGlaive2
 		Amount: 1
@@ -201,22 +181,15 @@ FloatGlaive:
 		AimTargetStances: Enemy
 		ValidTargets: Infantry, Vehicle, Building, Ground, Wall, Air, AirHit
 	Warhead@Acid: GrantUpgrade
-		Range: 64
-		Duration: 250
+		Range: 96
+		Duration: 200
 		Upgrades: BugPoison
 
 PoisonGlaive:
-	ReloadDelay: 100
-	Range: 3c0
+	ReloadDelay: 75
+	Range: 2c0
 	Report:
 	Projectile: InstantExplode
-	Warhead@1Dam: SpreadDamage
-		Spread: 64
-		Damage: 30000
-		ValidTargets: Stalker
-		AffectsParent: True
-		Versus:
-		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@op: FireShrapnel
 		Weapon: FloatGlaive10
 		Amount: 1
@@ -231,7 +204,7 @@ FloatGlaive10:
 	-Warhead@op: FireShrapnel
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
-		Damage: 10000
+		Damage: 750
 
 FloatGlaive2:
 	Inherits: FloatGlaive
@@ -357,26 +330,8 @@ VanguardShrapnel:
 	ValidTargets: ShieldedUnit
 	Projectile: InstantExplode
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
+		Spread: 24
 		Damage: -1
-		ValidTargets: ShieldedUnit
-	Warhead@op: FireShrapnel
-		Weapon: VanguardDummyLaser
-		Amount: 25
-		AimChance: 100
-		AllowDirectHit: True
-		AimTargetStances: Ally
-
-VanguardDummyLaser:
-	ReloadDelay: 50
-	Range: 2c0
-	ValidTargets: ShieldedUnit
-	Projectile: LaserZap
-		BeamWidth: 2
-		BeamDuration: 20
-	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: -10
 		ValidTargets: ShieldedUnit
 
 ScrMbtCannon:
@@ -592,26 +547,6 @@ FullDamageBounceWeapon:
 	Warhead@1Dam: SpreadDamage
 		Damage: 1875
 
-Glyder2Cannon:
-	Inherits: ^FullDamage
-	Inherits@2: ^Scrin_Pulse	
-	ReloadDelay: 100
-	Range: 6c0
-	Burst: 4
-	Report: photon1.wav
-	ValidTargets: Air
-	Projectile: Missile
-		Speed: 350
-		Image: torpedo
-		Inaccuracy: 1c0
-		Shadow: true
-		Palette: apblue
-	Warhead@1Dam: SpreadDamage
-		Spread: 350
-		Damage: 2000
-		ValidTargets: Air
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, ScrinEssenceKill
-
 TripodLaser:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 80
@@ -680,27 +615,16 @@ StormRiderBlast:
 		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath, ScrinEssenceKill
 
 StormRiderBlastAA:
+	Inherits@2: StormRiderBlast
 	Inherits: ^FullDamage
-	Inherits@2: ^Scrin_Explo
 	ReloadDelay: 75
-	Report: laserpistol.wav
-	Range: 6c512
 	ValidTargets: Air
 	Projectile: Bullet # TODO: Add bounce effect
 		Speed: 800
-		Blockable: false
-		Shadow: true
-		Angle: 45
-		Palette: pips
-		TrailImage: blueballminitrail
-		ContrailLength: 5
-		Inaccuracy: 384
-		Image: blueplasma
 	Warhead@1Dam: SpreadDamage
 		Spread: 171
-		Damage: 2500
+		Damage: 1500
 		ValidTargets: Air
-		DamageTypes: Prone70Percent, TriggerProne, ExplosionDeath
 
 Glyder1Cannon:
 	Inherits: ^RocketWarhead
@@ -710,17 +634,23 @@ Glyder1Cannon:
 	Burst: 5
 	Report: photon1.wav
 	ValidTargets: Ground
-	Projectile: Bullet
+	Projectile: Missile
 		Speed: 350
 		Image: torpedo
 		Inaccuracy: 1c0
 		Shadow: true
 		Palette: apblue
 	Warhead@1Dam: SpreadDamage
-		Spread: 200
+		Spread: 350
 		Damage: 1700
 		ValidTargets: Ground
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+
+Glyder2Cannon:
+	Inherits: Glyder1Cannon
+	ValidTargets: Air
+	Warhead@1Dam: SpreadDamage
+		ValidTargets: Air
 
 BattleshipCannon:
 	Inherits: ^GrenadeWarhead
@@ -1007,7 +937,7 @@ EssenceSmall:
 		AimChance: 100
 		ThrowWithoutTarget: False
 		AllowDirectHit: True
-		AimTargetStances: Ally, Enemy, Neutral
+		AimTargetStances: Ally
 		ValidTargets: Ground, ScrinUnit
 
 EssenceMissile:
@@ -1035,7 +965,7 @@ EssenceMissile:
 		Explosions: tibexp2
 		ExplosionPalette: apolra2ialpha
 	Warhead@emp: GrantUpgrade
-		Range: 200
+		Range: 150
 		Duration: 500
 		Upgrades: batteryboost
 	Warhead@emp: GrantUpgrade
@@ -1045,14 +975,12 @@ EssenceMissile:
 
 EssenceMissileToBattery:
 	Inherits: EssenceMissile
-	Range: 10c0
+	-ValidTargets: ScrinUnit
 	ValidTargets: EssenceBattery
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: EssenceBattery
 	Warhead@emp: GrantUpgrade
-		Range: 200
-		Duration: 3
-		Upgrades: EssenceGrab
+		ValidTargets: EssenceBattery
 
 HealScrin:
 	ReloadDelay: 150
@@ -1070,3 +998,7 @@ HealScrin:
 			Light: 75
 			Heavy: 100
 		ValidTargets: ScrinUnit
+	Warhead@emp: GrantUpgrade
+		Range: 200
+		Duration: 50
+		Upgrades: ScrinDamageBoost

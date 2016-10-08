@@ -23,6 +23,8 @@
 	muzzle: gunfire
 		Length: *
 		Offset: 0, 0, 28
+	shield: shieldmedium
+		Length: *
 	dummy: dot
 		UseTilesetCode: false
 		ZOffset: -9999
@@ -82,6 +84,8 @@
 	webguy: webguy
 		Length: 6
 		ShadowStart: 6
+	shield: shieldsmall
+		Length: *
 	emp-overlay: emp_fx01
 		Length: *
 		UseTilesetCode: false
