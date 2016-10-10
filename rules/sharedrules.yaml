@@ -133,7 +133,7 @@ HARV:
 	WithVoxelUnloadBody:
 	Harvester:
 		Capacity: 12
-		DeliveryBuildings: proc, muproc
+		DeliveryBuildings: proc, muproc, cabproc
 		Resources: Tiberium, BlueTiberium
 		UnloadTicksPerBale: 2
 		LoadTicksPerBale: 20
@@ -329,6 +329,9 @@ GACNST:
 	ProvidesPrerequisite@humanstuff:
 		Factions: gdi, nod, cab, mut
 		Prerequisite: humanstuff
+	ProvidesPrerequisite@humanproc:
+		Factions: gdi, nod
+		Prerequisite: humanproc
 	ProvidesPrerequisite@gdi:
 		Factions: gdi
 		Prerequisite: structures.gdi
@@ -344,6 +347,9 @@ GACNST:
 	ProvidesPrerequisite@cab:
 		Factions: cab
 		Prerequisite: structures.cab
+	ProvidesPrerequisite@cab2:
+		Factions: cab
+		Prerequisite: cabproc
 	SelectionDecorations:
 		VisualBounds: 144, 80, 0, -12
 

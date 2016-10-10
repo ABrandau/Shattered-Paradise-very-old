@@ -171,6 +171,10 @@
 		TargetTypes: StalkerTracker
 		UpgradeTypes: StalkerTracker
 		UpgradeMinEnabledLevel: 1
+	Targetable@SeekerTracker:
+		TargetTypes: SeekerTarget
+		UpgradeTypes: SeekerTarget
+		UpgradeMinEnabledLevel: 1
 
 ^IncompleteSelfHeal:
 	SelfHealing@Incomplete:
@@ -373,6 +377,10 @@
 		Palette: pips
 	Selectable:
 		Priority: 3
+	Targetable@SeekerTracker:
+		TargetTypes: SeekerTarget
+		UpgradeTypes: SeekerTarget
+		UpgradeMinEnabledLevel: 1
 	Valued:
 		Cost: 300
 	Targetable:

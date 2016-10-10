@@ -308,6 +308,8 @@ VISC_LRG:
 		MoveSequence: idle
 		AttackSequence: muzzle
 		StandSequences: idle
+	Targetable:
+		TargetTypes: Ground, Infantry, NeutralTibCritter
 	AttackFrontal:
 		Voice: Attack
 	AttackWander:
@@ -385,7 +387,7 @@ ZOMBIE:
 	Voiced:
 		VoiceSet: Fiend
 	Targetable:
-		TargetTypes: Ground, NeutralTibCritter
+		TargetTypes: Ground, Infantry, NeutralTibCritter
 	Armament:
 		Weapon: SlimeAttack
 	WithInfantryBody:

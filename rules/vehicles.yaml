@@ -171,6 +171,7 @@ HVR:
 	AutoTarget:
 	WithVoxelTurret:
 	RenderVoxels:
+		Scale: 12
 		LightAmbientColor: 0.4, 0.4, 0.4
 		LightDiffuseColor: 0.6, 0.6, 0.6
 
@@ -373,7 +374,7 @@ TTNK:
 	RenderSprites:
 		Image: ttnk
 	DeployToUpgrade:
-		DeployedUpgrades: deployed, notmobile
+		DeployedUpgrades: deployed, notmobile, cloakgenerator, NodCloakHealing
 		UndeployedUpgrades: undeployed
 		DeployAnimation: make
 		Facing: 160
@@ -1306,7 +1307,7 @@ SCRDRONEC:
 		BuildPaletteOrder: 31
 		Prerequisites: ~scrweap#, scrtech
 	Valued:
-		Cost: 800
+		Cost: 600
 	Tooltip:
 		Name: Vanguard
 		Description: Support hover drone, makes nearby units untargetable and\nbounces back part of the it reveices to random hostile targets.\nCannot collect essence, but autorepairs.
@@ -1337,7 +1338,7 @@ SCRDRONEC:
 		Range: 2c0
 		AffectsParent: false
 	Targetable:
-		TargetTypes: Vanguard, Ground, Vehicle
+		TargetTypes: Ground, Vehicle
 		-UpgradeTypes: VanguardShield
 		-UpgradeMaxEnabledLevel: 0
 	AutoTarget:
@@ -1581,21 +1582,21 @@ TRIPOD:
 ################################################
 DINO:
 	Inherits: ^Walker
-	Inherits@2:	^IncompleteSelfHeal
-	Inherits@5: ^CabRender
+	Inherits@2:	^PermanentSelfHeal
 	Inherits@3: ^BasicStealthDetection
+	Inherits@4: ^CabRender
 	Valued:
 		Cost: 600
 	Tooltip:
 		Name: Seeker
-		Description: Basic Walker, equiped with long range missiles.\n\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+		Description: Basic Walker, equiped with long range missiles.\nCan be ordered to deploy to become immobile but\ncreate support drones over time.\n\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 18
 		Prerequisites: ~cabweap
 	Mobile:
 		TurnSpeed: 12
-		Speed: 100
+		Speed: 97
 		Crushes: crate
 	Voiced:
 		VoiceSet: Limpet
@@ -1603,17 +1604,46 @@ DINO:
 		HP: 22500
 	BodyOrientation:
 		QuantizedFacings: 32
-	WithInfantryBody:
-	AttackFrontal:
 	WithMuzzleOverlay:
+	SelfHealing@Permanent:
+		DamageCooldown: 0
 	Armament@1:
 		Weapon: SeekerBazooka
 		LocalOffset: 200,0,750
-		MuzzleSequence: muzzle
-	Armament@aa:
+	Armament@2:
 		Weapon: SeekerBazookaAA
 		LocalOffset: 200,0,750
-		MuzzleSequence: muzzle
+	ExplodeWeapon@MAQUINACONCHADETUMARE:
+		Weapon: SeekerDroneSpawn
+		UpgradeTypes: deployed
+		UpgradeMinEnabledLevel: 1
+		ResetReloadWhenEnabled: False
+	Targetable@Seeker:
+		TargetTypes: Seeker
+	AttackFrontal:
+		UpgradeTypes: undeployed
+		UpgradeMinEnabledLevel: 1
+	AttackOmni:
+		UpgradeTypes: deployed
+		UpgradeMinEnabledLevel: 1
+	RangeMultiplier@Seeker:
+		UpgradeTypes: deployed
+		Modifier: 100, 80		
+	DeployToUpgrade:
+		DeployedUpgrades: deployed, notmobile
+		UndeployedUpgrades: undeployed
+		DeployAnimation: make
+		Facing: 160
+		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
+		DeploySound: place2.aud
+		UndeploySound: clicky1.aud
+	WithInfantryBody:
+		UpgradeTypes: undeployed
+		UpgradeMinEnabledLevel: 1
+	WithSpriteBody@deployed:
+		Sequence: deployed
+		UpgradeTypes: undeployed
+		UpgradeMaxEnabledLevel: 0
 	AutoTarget:
 	Selectable:
 		Bounds: 40, 36, 0, -16
@@ -1625,7 +1655,7 @@ CENTURION:
 		Cost: 1200
 	Tooltip:
 		Name: Centurion
-		Description: Heavy deployable mech, equipped withchainguns.\nCan deploy to improve its armor.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: Heavy deployable mech, equipped withchainguns.\nCan deploy to improve its damage resistance\nand deploy combat drones.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 19
@@ -1640,6 +1670,9 @@ CENTURION:
 		VoiceSet: Cyborg
 	Armor:
 		Type: Heavy
+	DamageMultiplier@Centu:
+		Modifier: 100, 90
+		UpgradeTypes: deployed
 	BodyOrientation:
 		QuantizedFacings: 32
 	Turreted:
@@ -1664,6 +1697,13 @@ CENTURION:
 	WithSpriteBody@deployed:
 		UpgradeTypes: undeployed
 		UpgradeMaxEnabledLevel: 0
+	ExplodeWeapon@MAQUINACONCHADETUMARE:
+		Weapon: CenturionDroneSpawn
+		UpgradeTypes: deployed
+		UpgradeMinEnabledLevel: 1
+		ResetReloadWhenEnabled: False
+	Targetable@Seeker:
+		TargetTypes: Seeker
 	WithMuzzleOverlay:
 	Armament:
 		Weapon: CenturionVulcan
@@ -1750,6 +1790,12 @@ ECM:
 		SelfReloadDelay: 300
 		SelfReloads: true
 		PipTypeEmpty: AmmoEmpty
+	ExplodeWeapon@MAQUINACONCHADETUMARE:
+		Weapon: EcmDroneSpawn
+		UpgradeTypes: maquinareculia
+		UpgradeMaxEnabledLevel: 0
+	Targetable@Seeker:
+		TargetTypes: Seeker
 	WithVoxelBody:
 	RenderVoxels:
 		LightAmbientColor: 0.4,0.4,0.4
@@ -1830,6 +1876,12 @@ SPIDERARTY:
 		Weapon: DevourerShellSpawner
 		LocalOffset: -500,150,900, -300,-150,1200
 		MuzzleSequence: muzzle
+	ExplodeWeapon@MAQUINACONCHADETUMARE:
+		Weapon: DevourerDroneSpawn
+		UpgradeTypes: maquinareculia
+		UpgradeMaxEnabledLevel: 0
+	Targetable@Seeker:
+		TargetTypes: Seeker
 	AutoTarget:
 	Selectable:
 		Bounds: 60, 65, 0, -14

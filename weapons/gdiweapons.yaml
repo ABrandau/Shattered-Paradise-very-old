@@ -515,7 +515,7 @@ FirestormSpawner:
 		ValidTargets: Ground
 	Warhead@op: FireShrapnel
 		Weapon: FirestormExplo
-		Amount: 12
+		Amount: 24
 
 FirestormExplo:
 	Inherits: ^FullDamage

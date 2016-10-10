@@ -992,7 +992,7 @@ MUPROC:
 	WithDeathAnimation:
 		DeathSequencePalette: playermut
 		CrushedSequencePalette: playermut
-		CrushedPaletteIsPlayerPalette: true	
+		CrushedPaletteIsPlayerPalette: true
 
 MUWEAP:
 	Inherits: ^Building
@@ -1776,6 +1776,34 @@ CABCLAW:
 		ZOffset: 9999
 		UpgradeTypes: primary
 		UpgradeMinEnabledLevel: 1
+
+CABPROC:
+	Inherits: PROC
+	Buildable:
+		Queue: Building
+		BuildPaletteOrder: 20
+		Prerequisites: ~cabproc, anypower
+	Tooltip:
+		Name: C.A.B.A.L. Refinery
+		Description: Processes raw Tiberium\ninto usable resources.\nIncompatible with scrin harvesters.
+	Building:
+		Footprint: xxx== xxx== xxx==
+		Dimensions: 5,3
+	TiberianSunRefinery:
+		DockOffset: 4,1
+	FreeActor:
+		SpawnOffset: 4,1
+	RenderSprites:
+		PlayerPalette: playermut
+		Image: cabproc
+		-FactionImages:
+	-WithIdleOverlay@REDLIGHTS:
+	Cloak@CLOAKGENERATOR:
+		Palette: cloakmut
+	WithDeathAnimation:
+		DeathSequencePalette: playermut
+		CrushedSequencePalette: playermut
+		CrushedPaletteIsPlayerPalette: true
 
 CABWEAP:
 	Inherits: ^Building

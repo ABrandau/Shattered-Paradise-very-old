@@ -468,21 +468,28 @@ dino:
 		# Offset: 0, -8
 	shoot:
 		Facings: 8
-		ShadowStart: 72
+		ShadowStart: 86
 	idle:
 		Facings: 8
-		ShadowStart: 72
+		ShadowStart: 86
 	stand:
 		Facings: 8
-		ShadowStart: 72
+		ShadowStart: 86
 	run:
 		Start: 8
 		Length: 8
 		Facings: 8
 		Tick: 70
-		ShadowStart: 80
+		ShadowStart: 94
 	muzzle: gunfire
 		Length: *
+	make:
+		Start: 72
+		Length: 13
+		ShadowStart: 158
+	deployed:
+		Start: 85
+		ShadowStart: 171
 	emp-overlay: emp_fx01
 		Length: *
 		ZOffset: 512
@@ -600,6 +607,17 @@ paladin:
 ##########################################################
 # Aircraft
 ##########################################################	
+miniwyverm:
+	Inherits: ^EmpOverlay
+	idle:
+		Facings: -32
+	stand:
+		Facings: -32
+	run:
+		Tick: 90
+		Facings: -32
+	icon: waspicon
+
 wasp:
 	Inherits: ^EmpOverlay
 	idle:
@@ -708,7 +726,64 @@ cabclaw:
 		Tick: 150
 	icon: cabclawicon
 		Offset: 0, 0
-		UseTilesetCode: false		
+		UseTilesetCode: false
+
+cabproc:
+	Defaults: cabproc
+		Offset: -12, -40, 20
+		DepthSpriteOffset: 22, 0
+		UseTilesetCode: true
+		DepthSprite: isodepth.shp
+	idle:
+		Start: 32
+		ShadowStart: 66
+	damaged-idle:
+		Start: 34
+		ShadowStart: 69
+	dead:
+		Start: 34
+		ShadowStart: 69
+		Tick: 400
+	make:
+		Length: 29
+		ShadowStart: 35
+		Offset: -12, -40, 43
+		DepthSpriteOffset: -12, 0
+	flame: ntrefn_b
+		Length: *
+	unload-overlay: narefn_a
+		Length: *
+		Offset: 24, -12
+		ZOffset: 1024
+	bib:
+		Start: 33
+		ZOffset: -1024
+		Offset: -12, -40, 5
+		ZRamp: 1
+		-DepthSprite:
+	damaged-bib:
+		Start: 35
+		ZOffset: -1024
+		Offset: -12, -40, 5
+		ZRamp: 1
+		-DepthSprite:
+	dead-bib:
+		Start: 35
+		ZOffset: -1024
+		Offset: -12, -40, 5
+		ZRamp: 1
+		-DepthSprite:
+	emp-overlay: emp_fx01
+		Length: *
+		Offset: 0, 0, 21
+		UseTilesetCode: false
+		ZOffset: 512
+		BlendMode: Additive
+		-DepthSprite:
+	icon: cabref
+		Offset: 0, 0
+		UseTilesetCode: false
+		-DepthSprite:		
 
 cabgrinder:
 	Defaults:

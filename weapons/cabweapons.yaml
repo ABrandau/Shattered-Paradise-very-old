@@ -238,15 +238,16 @@ Dogzooka:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 ########################################################################
 # Vehicles
-########################################################################		
+########################################################################
+
 SeekerBazooka:
 	Inherits: ^RocketWarhead
 	Inherits@2: ^Small_Clsn
-	ReloadDelay: 80
+	ReloadDelay: 100
 	Range: 8c0
-	MinRange: 1c0
+	MinRange: 3c0
 	Report: rketinf1.aud
-	ValidTargets: Ground, Air
+	ValidTargets: Ground
 	Projectile: Missile
 		Speed: 213
 		Blockable: false
@@ -260,18 +261,92 @@ SeekerBazooka:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 5000
-		ValidTargets: Ground, Air
+		ValidTargets: Ground
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 
 SeekerBazookaAA:
 	Inherits: SeekerBazooka
-	Range: 8c0
-	MinRange: 1c0
 	ValidTargets: Air
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 2000
+		Damage: 3000
 		ValidTargets: Air
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+
+CombatDroneAproach:
+	ReloadDelay: 25
+	Range: 2c0
+	ValidTargets: Seeker
+	Projectile: Bullet
+		Speed: 100c0
+	Warhead@1Dam: SpreadDamage
+		Spread: 96
+		Damage: 1
+		ValidTargets: Seeker
+	Warhead@emp: GrantUpgrade
+		Range: 128
+		Duration: 150
+		ValidTargets: Seeker
+		Upgrades: maquinareculia
+
+CombatDroneLasorSpawn:
+	ReloadDelay: 50
+	Range: 10c0
+	ValidTargets: Infantry, Building, Vehicle, Defence, Air, Airhit
+	Projectile: InstantExplode
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: -1
+		ValidTargets: SeekerTarget
+	Warhead@op: FireShrapnel
+		Weapon: CombatDroneLasor
+		Amount: 1
+		AimChance: 100
+		AllowDirectHit: true
+		ValidStances: Enemy
+		ValidTargets: Infantry, Building, Vehicle, Defence, Air, Airhit
+
+CombatDroneLasor:
+	ReloadDelay: 50
+	Report: lastur1.aud
+	Range: 7c0
+	ValidTargets: Infantry, Building, Vehicle, Defence, Air, Airhit
+	Projectile: LaserZap
+		Width: 25
+		BeamDuration: 5
+		Color: 0dc7b8
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 1000
+		ValidStances: Enemy
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+
+SeekerDroneSpawn:
+	ReloadDelay: 800
+	Range: 8c0
+	ValidTargets: Ground, Building, Defence, Vehicle, Infantry
+	Projectile: InstantExplode
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 1
+		ValidTargets: Ground, Air
+	Warhead@5Actor: SpawnActor
+		Actors: MINIWYVERM
+		FallRate: 5000
+		Range: 3
+		ValidTargets: Ground, Infantry, Air, Vehicle, Building, Wall
+
+CenturionDroneSpawn:
+	Inherits: SeekerDroneSpawn
+	ReloadDelay: 300
+
+DevourerDroneSpawn:
+	Inherits: SeekerDroneSpawn
+	Burst: 2
+
+EcmDroneSpawn:
+	Inherits: SeekerDroneSpawn
+	Burst: 3
 
 CenturionVulcan:
 	Inherits: ^RifleWarhead

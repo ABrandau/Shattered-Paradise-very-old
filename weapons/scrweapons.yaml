@@ -1,6 +1,6 @@
 SharkJump:
 	Inherits: ^RifleWarhead
-	ValidTargets: Infantry, Vanguard
+	ValidTargets: Infantry, Vehicle
 	ReloadDelay: 20
 	Range: 1c0
 	Report: fiend2.aud
@@ -9,13 +9,13 @@ SharkJump:
 	Warhead@1Dam: SpreadDamage
 		Spread: 32
 		Damage: 1000
-		ValidTargets: Ground
+		ValidTargets: Ground, Infantry, Vehicle
 		ValidStances: Enemy, Neutral
 		DamageTypes: TriggerProne, BulletDeath, ScrinEssenceKill
 
 SharkJump2:
 	Inherits: ^RifleWarhead
-	ValidTargets: Building, Vehicle, Defence
+	ValidTargets: Building, Defence
 	ReloadDelay: 20
 	Range: 1c0
 	Report: fiend2.aud
@@ -24,7 +24,7 @@ SharkJump2:
 	Warhead@1Dam: SpreadDamage
 		Spread: 32
 		Damage: 1000
-		ValidTargets: Building, Vehicle, Defence
+		ValidTargets: Building, Defence
 		ValidStances: Enemy, Neutral
 		DamageTypes: TriggerProne, BulletDeath, ScrinEssenceKill
 
