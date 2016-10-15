@@ -116,7 +116,7 @@ HARV:
 	Inherits: ^VoxelTank
 	Inherits@2: ^IncompleteSelfHeal
 	Valued:
-		Cost: 550
+		Cost: 625
 	Tooltip:
 		Name: Harvester
 		Description: Collects Tiberium for processing.\nIncompatible with scrin refineries.\nCan be sold if near a Service Depot.\n\n  Unarmed
@@ -132,7 +132,7 @@ HARV:
 		Class: HumanHarv
 	WithVoxelUnloadBody:
 	Harvester:
-		Capacity: 12
+		Capacity: 15
 		DeliveryBuildings: proc, muproc, cabproc
 		Resources: Tiberium, BlueTiberium
 		UnloadTicksPerBale: 2
@@ -361,7 +361,7 @@ PROC:
 		Value: 400
 	Tooltip:
 		Name: Tiberium Refinery
-		Description: Processes raw Tiberium\ninto usable resources.\nIncompatible with scrin harvesters.
+		Description: Processes raw Tiberium into usable resources.\nIncompatible with scrin harvesters.
 	ProvidesPrerequisite:
 		Factions: gdi, cab, mut, nod
 		Prerequisite: proc

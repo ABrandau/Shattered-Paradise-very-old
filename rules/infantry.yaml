@@ -1172,6 +1172,7 @@ CABSENTRY:
 	-SpawnActorOnDeath@nanomachineburst:
 	Mobile:
 		Speed: 70
+		Crushes: nada
 	SelfHealing:
 		PercentageStep: -50
 		Step: 0

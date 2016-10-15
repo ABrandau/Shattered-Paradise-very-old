@@ -213,7 +213,7 @@ BikeExplo:
 	ValidTargets: Ground, Water, Air
 	Warhead@1Dam_impact: SpreadDamage
 		Spread: 700
-		Damage: 150000
+		Damage: 80000
 		ValidTargets: Ground, Water, Air
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
@@ -243,14 +243,14 @@ Tick90mm:
 DevilsFlame:
 	Inherits: ^FlameWarhead
 	Inherits@2: ^FlameScorch
-	ReloadDelay: 125
+	ReloadDelay: 60
 	Range: 4c256
 	Report: flamtnk1.aud
 	Projectile: Bullet
 		Speed: 130
 		Image: FLAMEALL
 		Inaccuracy: 1c3
-	Burst: 10
+	Burst: 5
 	BurstDelay: 3
 	Warhead@1Dam: SpreadDamage
 		Spread: 200

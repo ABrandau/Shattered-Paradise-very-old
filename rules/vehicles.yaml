@@ -420,7 +420,7 @@ BIKE:
 	Inherits: ^VoxelVehicle
 	Inherits@2: ^NodCloakHealing
 	Valued:
-		Cost: 600
+		Cost: 700
 	Tooltip:
 		Name: Demo Cycle
 		Description: Suicide Vehicle armed with an explosive warhead.\nExplodes its warhead when destroyed.\nCan be carried on subterranean APCs.\n\n Strong vs Light armored ground units.\n  Weak vs Structures.
@@ -431,7 +431,7 @@ BIKE:
 	-ActorLostNotification:
 	Mobile:
 		TurnSpeed: 10
-		Speed: 180
+		Speed: 150
 		Crushes: crate
 	Health:
 		HP: 7000
@@ -598,6 +598,17 @@ SUBTANK:
 		HP: 30000
 	Armor:
 		Type: Heavy
+	PortableChrono:
+		ChargeDelay: 600
+		TargetCursor: emp
+		TargetBlockedCursor: emp-blocked
+	Cargo:
+		Types: Infantry
+		MaxWeight: 8
+		PipCount: 8
+		UnloadVoice: Unload
+		LoadingUpgrades: notmobile
+		EjectOnDeath: true
 	Armament:
 		Weapon: DevilsFlame
 		LocalOffset: 0,200,0
@@ -1212,7 +1223,7 @@ SCRHARV:
 	Inherits@2: ^IncompleteSelfHeal
 	Inherits@3: ^HoverVehicle
 	Valued:
-		Cost: 550
+		Cost: 625
 	Tooltip:
 		Name: Harvester
 		Description: Collects Ichor for processing.\nIncompatible with human refineries.\nCan be sold if near a Service Depot.\n\n  Unarmed.
@@ -1229,7 +1240,7 @@ SCRHARV:
 		TargetTypes: MindControlInmune
 	-SpeedMultiplier@ScrinOrb:
 	Harvester:
-		Capacity: 12
+		Capacity: 15
 		Resources: Tiberium, BlueTiberium
 		DeliveryBuildings: scrproc
 		UnloadTicksPerBale: 2
@@ -1618,6 +1629,7 @@ DINO:
 		UpgradeTypes: deployed
 		UpgradeMinEnabledLevel: 1
 		ResetReloadWhenEnabled: False
+		LocalOffset: 0,0,500
 	Targetable@Seeker:
 		TargetTypes: Seeker
 	AttackFrontal:
@@ -1644,6 +1656,9 @@ DINO:
 		Sequence: deployed
 		UpgradeTypes: undeployed
 		UpgradeMaxEnabledLevel: 0
+	DamageMultiplier@seeker:
+		Modifier: 80
+		UpgradeTypes: deployed
 	AutoTarget:
 	Selectable:
 		Bounds: 40, 36, 0, -16
@@ -1671,7 +1686,7 @@ CENTURION:
 	Armor:
 		Type: Heavy
 	DamageMultiplier@Centu:
-		Modifier: 100, 90
+		Modifier: 80
 		UpgradeTypes: deployed
 	BodyOrientation:
 		QuantizedFacings: 32
@@ -1702,6 +1717,7 @@ CENTURION:
 		UpgradeTypes: deployed
 		UpgradeMinEnabledLevel: 1
 		ResetReloadWhenEnabled: False
+		LocalOffset: 0,0,500
 	Targetable@Seeker:
 		TargetTypes: Seeker
 	WithMuzzleOverlay:
@@ -1792,8 +1808,7 @@ ECM:
 		PipTypeEmpty: AmmoEmpty
 	ExplodeWeapon@MAQUINACONCHADETUMARE:
 		Weapon: EcmDroneSpawn
-		UpgradeTypes: maquinareculia
-		UpgradeMaxEnabledLevel: 0
+		LocalOffset: 0,0,500
 	Targetable@Seeker:
 		TargetTypes: Seeker
 	WithVoxelBody:
@@ -1878,8 +1893,7 @@ SPIDERARTY:
 		MuzzleSequence: muzzle
 	ExplodeWeapon@MAQUINACONCHADETUMARE:
 		Weapon: DevourerDroneSpawn
-		UpgradeTypes: maquinareculia
-		UpgradeMaxEnabledLevel: 0
+		LocalOffset: 0,0,500
 	Targetable@Seeker:
 		TargetTypes: Seeker
 	AutoTarget:

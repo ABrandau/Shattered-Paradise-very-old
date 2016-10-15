@@ -255,6 +255,7 @@ SeekerBazooka:
 		Inaccuracy: 128
 		Image: DRAGON
 		TrailImage: small_smoke_trail
+		HorizontalRateOfTurn: 15
 		RateOfTurn: 10
 		RangeLimit: 15c0
 		Palette: ra
@@ -283,15 +284,43 @@ CombatDroneAproach:
 		Spread: 96
 		Damage: 1
 		ValidTargets: Seeker
-	Warhead@emp: GrantUpgrade
-		Range: 128
-		Duration: 150
+
+ReturnDroneSummon:
+	ReloadDelay: 25
+	Range: 5c0
+	ValidTargets: Seeker
+	Warhead@op: FireShrapnel
+		Weapon: DroneMissile
+		Amount: 1
+		AimChance: 100
+		AllowDirectHit: true
+		ValidStances: Ally
+		ValidTargets: Seeker, Ground, Air
+
+DroneMissile:
+	ReloadDelay: 100
+	Range: 2c0
+	ValidTargets: Seeker
+	Projectile: Missile
+		Speed: 213
+		Blockable: false
+		Shadow: true
+		Inaccuracy: 128
+		Image: miniwyverm
+		RateOfTurn: 10
+		HorizontalRateOfTurn: 99
+		VerticalRateOfTurn: 40
+		RangeLimit: 15c0
+		AirburstAltitude: 750
+		Palette: playercab
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 1
 		ValidTargets: Seeker
-		Upgrades: maquinareculia
 
 CombatDroneLasorSpawn:
 	ReloadDelay: 50
-	Range: 10c0
+	Range: 8c0
 	ValidTargets: Infantry, Building, Vehicle, Defence, Air, Airhit
 	Projectile: InstantExplode
 	Warhead@1Dam: SpreadDamage
@@ -309,7 +338,7 @@ CombatDroneLasorSpawn:
 CombatDroneLasor:
 	ReloadDelay: 50
 	Report: lastur1.aud
-	Range: 7c0
+	Range: 8c0
 	ValidTargets: Infantry, Building, Vehicle, Defence, Air, Airhit
 	Projectile: LaserZap
 		Width: 25
@@ -317,12 +346,12 @@ CombatDroneLasor:
 		Color: 0dc7b8
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 1000
+		Damage: 1300
 		ValidStances: Enemy
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 
 SeekerDroneSpawn:
-	ReloadDelay: 800
+	ReloadDelay: 300
 	Range: 8c0
 	ValidTargets: Ground, Building, Defence, Vehicle, Infantry
 	Projectile: InstantExplode
@@ -338,15 +367,20 @@ SeekerDroneSpawn:
 
 CenturionDroneSpawn:
 	Inherits: SeekerDroneSpawn
-	ReloadDelay: 300
+	ReloadDelay: 400
+	Burst: 2
 
 DevourerDroneSpawn:
 	Inherits: SeekerDroneSpawn
-	Burst: 2
+	ReloadDelay: 100
 
 EcmDroneSpawn:
 	Inherits: SeekerDroneSpawn
-	Burst: 3
+	ReloadDelay: 150
+
+FlyierDevourerDroneSpawn:
+	Inherits: SeekerDroneSpawn
+	ReloadDelay: 40
 
 CenturionVulcan:
 	Inherits: ^RifleWarhead

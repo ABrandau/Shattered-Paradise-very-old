@@ -1210,7 +1210,7 @@ STORMRIDERRETURN:
 	Inherits: STORMRIDERSPAWN
 	Aircraft:
 		InitialFacing: 360
-		# CanHover: true
+		Repulsable: False
 	SelfHealing:
 		PercentageStep: -5
 	RejectsOrders:
@@ -1248,8 +1248,11 @@ MINIWYVERM:
 	-GainsExperience:
 	Valued:
 		Cost: 100
-	Selectable:
-		Bounds: 20,20
+	AutoSelectionSize:
+	-Selectable:
+	-AppearsOnRadar:
+	-SelectionDecorations:
+	-ActorLostNotification:
 	Health:
 		HP: 60
 	RevealsShroud:
@@ -1257,15 +1260,18 @@ MINIWYVERM:
 	SelfHealing:
 		PercentageStep: -50
 		Step: 0
-		Delay: 1000
+		Delay: 250
 		HealIfBelow: 200
 	Aircraft:
 		IdealSeparation: 300
 		Speed: 110
+	Targetable@Drone:
+		TargetTypes: AttackDrone
 	Targetable@GROUND:
 		TargetTypes: Vehicle
 		-UpgradeTypes: airborne
 		-UpgradeMaxEnabledLevel: 0
+	-UpdatesPlayerStatistics:
 	-Targetable@AIRBORNE:
 	RejectsOrders:
 	AutoTarget:
@@ -1283,10 +1289,10 @@ MINIWYVERM:
 		MinMoveDelay: 0
 		MaxMoveDelay: 10
 		WanderMoveRadius: 10
+	Explodes:
+		Weapon: ReturnDroneSummon
+		EmptyWeapon: ReturnDroneSummon
 	-SpawnActorOnDeath:
-	# Explodes:
-		# Weapon: DroneExplode
-		# EmptyWeapon: DroneExplode
 
 WASP:
 	Inherits: ^Helicopter
@@ -1435,6 +1441,11 @@ DEVOURER:
 		Weapon: DevourerBuff
 	Armament@Explos:
 		Weapon: DevourerExplo
+	ExplodeWeapon@MAQUINACONCHADETUMARE:
+		Weapon: DevourerDroneSpawn
+		LocalOffset: 0,0,2000
+	Targetable@Seeker:
+		TargetTypes: Seeker
 	AttackHeli:
 		FacingTolerance: 20
 		Voice: Attack

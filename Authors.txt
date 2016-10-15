@@ -44,7 +44,7 @@ wirecase.com	: Guardian Platform model.
 Hassan_2030	: Grinder vxl.
 Jah		: Storm Rider vxl.				
 Sane Disruption	: Forgotten MRLS vxl.
-HG_Scipción	: Scrin powerplant model.
+HG_Scipción	: Scrin powerplant and Cabal refinery model.
 Orac		: Forgotten Trike vxl.
 OverWatch (PPM User): Forgotten Battle Bus vxl.	
 GameMaster0000	: Tiberian Fiend Icon.
@@ -66,7 +66,7 @@ abcdefg30	: Scrin mission 01
 
 #Voice Cast
 
-Comrade Crimson		: GDI Marine.
+Comrade Crimson		: GDI Marine, Mutant Vehicle quotes.
 DrWhitePsyker		: Stealth Tank
 HiJinxy			: Harvester
 SchismNavigator		: Beam Cannon

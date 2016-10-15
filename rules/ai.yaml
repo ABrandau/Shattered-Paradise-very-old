@@ -6,7 +6,7 @@ Player:
 		MinimumExcessPower: 40
 		BuildingCommonNames:
 			ConstructionYard: gacnst, drached
-			Refinery: proc, scrproc
+			Refinery: proc, scrproc, cabproc, muproc
 			Power: gapowr, napowor, naapwr, cabpowr, mutpowr, scrpowr
 			Barracks: gapile, nahand, mutrax, cabrax, scrrax
 			VehiclesFactory: gaweap, naweap, mutweap, cabweap, scrweap
@@ -37,6 +37,8 @@ Player:
 #PRODUCTION#
 			proc: 5
 			scrproc: 5
+			cabproc: 5
+			muproc: 5
 			gasilo: 0
 #POWER#
 			napowr: 9
@@ -104,6 +106,8 @@ Player:
 #PRODUCTION#
 			proc: 99%
 			scrproc: 99%
+			cabproc: 99%
+			muproc: 99%
 #POWER#
 			napowr: 30%
 			naapwr: 30%
