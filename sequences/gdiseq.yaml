@@ -62,6 +62,65 @@ gdie1:
 		ShadowStart: 552
 	icon: sidebar-gdi|e1icon
 
+marauder2:
+	Inherits@1: ^InfantryDeathAnims
+	Defaults:
+		Tick: 80
+	stand:
+		Facings: 8
+		ShadowStart: 218
+	run:
+		Start: 13
+		Length: 6
+		Facings: 8
+		ShadowStart: 230
+	prone-run:
+		Start: 65
+		Length: 8
+		Facings: 8
+		ShadowStart: 283
+	idle1:
+		Start: 159
+		Length: 27
+		ShadowStart: 378
+	idle2:
+		Start: 185
+		Length: 17
+		ShadowStart: 403
+	prone-stand:
+		Facings: 8
+		ShadowStart: 219
+	die1:
+		Start: 203
+		Length: 7
+		ShadowStart: 420
+	die2:
+		Start: 210
+		Length: 7
+		ShadowStart: 427
+	die-crushed: gdie1
+		Start: 160
+		Length: 5
+		ShadowStart: 452
+		Tick: 800
+		ZOffset: -511
+	shoot:
+		Start: 127
+		Length: 4
+		Facings: 8
+		ShadowStart: 344
+	prone-shoot:
+		Start: 128
+		Length: 4
+		Facings: 8
+		ShadowStart: 344
+	standup-0: gdie1
+		Start: 260
+		Length: 2
+		Facings: 8
+		ShadowStart: 552
+	icon: sidebar-gdi|e1icon
+
 grenadier:
 	Inherits@1: ^InfantryDeathAnims
 	Defaults:

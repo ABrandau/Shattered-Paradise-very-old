@@ -267,7 +267,7 @@ harv.mut:
 	Inherits: ^Harvester
 	icon: mutharvicon
 
-harv.cab:
+cabharv:
 	Inherits: ^Harvester
 	icon: cabharvicon
 

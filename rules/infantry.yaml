@@ -113,7 +113,7 @@ JUMPJETAIR:
 		UpgradeMinEnabledLevel: 1
 	Aircraft:
 		TurnSpeed: 10
-		Speed: 65
+		Speed: 90
 		AirborneUpgrades: airborne
 		CruisingUpgrades: cruising
 		CruiseAltitude: 2c500

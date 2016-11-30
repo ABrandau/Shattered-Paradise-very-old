@@ -602,13 +602,6 @@ SUBTANK:
 		ChargeDelay: 600
 		TargetCursor: emp
 		TargetBlockedCursor: emp-blocked
-	Cargo:
-		Types: Infantry
-		MaxWeight: 8
-		PipCount: 8
-		UnloadVoice: Unload
-		LoadingUpgrades: notmobile
-		EjectOnDeath: true
 	Armament:
 		Weapon: DevilsFlame
 		LocalOffset: 0,200,0

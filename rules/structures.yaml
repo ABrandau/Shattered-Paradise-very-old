@@ -976,12 +976,12 @@ MUPROC:
 		Name: Forgotten Refinery
 		Description: Processes raw Tiberium\ninto usable resources.\nIncompatible with scrin harvesters.
 	Building:
-		Footprint: xxx== xxx== xxx==
-		Dimensions: 5,3
+		Footprint: xx== xx== xx==
+		Dimensions: 4,3
 	TiberianSunRefinery:
-		DockOffset: 4,1
+		DockOffset: 3,1
 	FreeActor:
-		SpawnOffset: 4,1
+		SpawnOffset: 3,1
 	RenderSprites:
 		PlayerPalette: playermut
 		Image: muproc
@@ -1787,12 +1787,13 @@ CABPROC:
 		Name: C.A.B.A.L. Refinery
 		Description: Processes raw Tiberium\ninto usable resources.\nIncompatible with scrin harvesters.
 	Building:
-		Footprint: xxx== xxx== xxx==
-		Dimensions: 5,3
+		Footprint: xx== xx== xx==
+		Dimensions: 4,3
 	TiberianSunRefinery:
-		DockOffset: 4,1
+		DockOffset: 3,1
 	FreeActor:
-		SpawnOffset: 4,1
+		SpawnOffset: 3,1
+		Actor: CABHARV
 	RenderSprites:
 		PlayerPalette: playermut
 		Image: cabproc

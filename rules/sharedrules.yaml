@@ -97,11 +97,9 @@ INFANTRYHARV:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 99
-		Prerequisites: ~proc
 		InitialActivity: FindResources
 	Selectable:
 		Class: HumanHarv
-	WithVoxelUnloadBody:
 	RenderVoxels:
 		Image: harv
 	RenderSprites:
@@ -110,7 +108,14 @@ INFANTRYHARV:
 			gdi: harv.gdi
 			nod: harv.nod
 			mut: harv.mut
-			cab: harv.cab
+			cab: cabharv
+
+InfantryCabHarv:
+	Inherits: INFANTRYHARV
+	Buildable:
+		Prerequisites: ~cabproc, anypower
+	RenderVoxels:
+		Image: cabharv
 
 HARV:
 	Inherits: ^VoxelTank
@@ -124,7 +129,7 @@ HARV:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 99
-		Prerequisites: ~factory, proc
+		Prerequisites: ~humanproc, proc
 		InitialActivity: FindResources
 	Selectable:
 		Priority: 7
@@ -172,10 +177,17 @@ HARV:
 			gdi: harv.gdi
 			nod: harv.nod
 			mut: harv.mut
-			cab: harv.cab
+			cab: cabharv
 	Voiced:
 		VoiceSet: HumanHarvesterVO
 		Volume: 4
+
+CabHarv:
+	Inherits: HARV
+	Buildable:
+		Prerequisites: ~cabproc, anypower
+	RenderVoxels:
+		Image: cabharv
 
 LPST:
 	Inherits: ^VoxelVehicle
@@ -326,12 +338,15 @@ GACNST:
 	ProvidesPrerequisite@walls:
 		Factions: gdi, nod, cab
 		Prerequisite: sharedwall
+		ResetOnOwnerChange: True
 	ProvidesPrerequisite@humanstuff:
 		Factions: gdi, nod, cab, mut
 		Prerequisite: humanstuff
+		ResetOnOwnerChange: True
 	ProvidesPrerequisite@humanproc:
 		Factions: gdi, nod
 		Prerequisite: humanproc
+		ResetOnOwnerChange: True
 	ProvidesPrerequisite@gdi:
 		Factions: gdi
 		Prerequisite: structures.gdi
@@ -344,12 +359,14 @@ GACNST:
 	ProvidesPrerequisite@mut2:
 		Factions: mut
 		Prerequisite: forgproc
+		ResetOnOwnerChange: True
 	ProvidesPrerequisite@cab:
 		Factions: cab
 		Prerequisite: structures.cab
 	ProvidesPrerequisite@cab2:
 		Factions: cab
 		Prerequisite: cabproc
+		ResetOnOwnerChange: True
 	SelectionDecorations:
 		VisualBounds: 144, 80, 0, -12
 

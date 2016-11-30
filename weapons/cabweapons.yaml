@@ -15,7 +15,6 @@ CyborgVulcan:
 		Damage: 1200
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 
-
 SentryGun:
 	Inherits: ^FullDamage
 	Inherits@1: ^Mediuml_Clsn

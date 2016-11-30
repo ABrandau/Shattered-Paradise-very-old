@@ -72,7 +72,11 @@ grinder:
 	
 ecm:	
 	idle:
-	
+
+cabharv:
+	idle:
+	unload:
+
 devourer:	
 	idle:	
 

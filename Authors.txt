@@ -29,7 +29,7 @@ If an asset doesn't have credit, then either it was made by WW or we missed it, 
 
 #Game Art
 
-Agent Z		: GDI MRLS Voxel.
+Agent Z		: GDI MRLS Voxel, CABAL Harvester.
 Nolt		: Everything that is not listed here or belongs to westwood.
 The_Dementor	: Cameos: Skirmisher, EMP pulse Icons, Harvester and MCV (mut and cab), 
 The_Dementor	: cyborg commando cameo, Wrench and Tiberium Icons.

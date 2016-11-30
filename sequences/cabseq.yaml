@@ -730,7 +730,7 @@ cabclaw:
 
 cabproc:
 	Defaults: cabproc
-		Offset: -12, -40, 20
+		Offset: -24, -52, 20
 		DepthSpriteOffset: 22, 0
 		UseTilesetCode: true
 		DepthSprite: isodepth.shp
@@ -747,7 +747,7 @@ cabproc:
 	make:
 		Length: 29
 		ShadowStart: 35
-		Offset: -12, -40, 43
+		Offset: -24, -52, 20
 		DepthSpriteOffset: -12, 0
 	flame: ntrefn_b
 		Length: *
@@ -758,19 +758,19 @@ cabproc:
 	bib:
 		Start: 33
 		ZOffset: -1024
-		Offset: -12, -40, 5
+		Offset: -24, -52, 20
 		ZRamp: 1
 		-DepthSprite:
 	damaged-bib:
 		Start: 35
 		ZOffset: -1024
-		Offset: -12, -40, 5
+		Offset: -24, -52, 20
 		ZRamp: 1
 		-DepthSprite:
 	dead-bib:
 		Start: 35
 		ZOffset: -1024
-		Offset: -12, -40, 5
+		Offset: -24, -52, 20
 		ZRamp: 1
 		-DepthSprite:
 	emp-overlay: emp_fx01
