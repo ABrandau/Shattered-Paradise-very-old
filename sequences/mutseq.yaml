@@ -68,6 +68,11 @@ marauder:
 		Start: 440
 		Facings: 8
 		ShadowStart: 888
+	turret-shoot:
+		Start: 376
+		Length: 8
+		Facings: 8
+		ShadowStart: 824
 	idle:
 		Start: 440
 		Facings: 8
@@ -211,12 +216,12 @@ e2:
 		ShadowStart: 451
 		Tick: 800
 		ZOffset: -511
-	throw:
+	shoot:
 		Start: 164
 		Length: 6
 		Facings: 8
 		ShadowStart: 456
-	prone-throw:
+	prone-shoot:
 		Tick: 80
 		Start: 212
 		Length: 6

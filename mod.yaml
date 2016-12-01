@@ -220,6 +220,7 @@ ChromeLayout:
 	ra|chrome/lobby-options.yaml
 	ra|chrome/lobby-music.yaml
 	ra|chrome/lobby-kickdialogs.yaml
+	ts|chrome/mainmenu-prerelease-notification.yaml
 	ra|chrome/lobby-globalchat.yaml
 	sp|chrome/color-picker.yaml
 	ra|chrome/map-chooser.yaml

@@ -22,8 +22,6 @@ GDIE1:
 		Weapon: MarineRifle
 	AttackFrontal:
 		Voice: Attack
-	WithInfantryBody:
-		AttackSequence: shoot
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	RenderSprites:
@@ -55,8 +53,6 @@ GRENADIER:
 		VoiceSet: Marine
 	AttackFrontal:
 		Voice: Attack
-	WithInfantryBody:
-		AttackSequence: shoot
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 
@@ -84,8 +80,6 @@ JUMPJET:
 		PipType: Blue
 	AttackFrontal:
 		Voice: Attack
-	WithInfantryBody:
-		AttackSequence: shoot
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 
@@ -203,8 +197,6 @@ MEDIC:
 		Weapon: Heal
 		ForceTargetStances: None
 	AttackFrontal:
-	WithInfantryBody:
-		AttackSequence: heal
 	SelfHealing:
 		Delay: 60
 	Passenger:
@@ -236,8 +228,6 @@ EAGLEGUARD:
 	-Crushable:
 	AttackFrontal:
 		Voice: Attack
-	WithInfantryBody:
-		AttackSequence: shoot
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 #######################################################
@@ -282,8 +272,6 @@ ALTNODE1:
         UpgradeMaxAcceptedLevel: 1
     AttackFrontal:
         Voice: Attack
-    WithInfantryBody:
-        AttackSequence: shoot
     ProducibleWithLevel:
         Prerequisites: barracks.upgraded
     RenderSprites:
@@ -323,8 +311,6 @@ CRUSADER:
 	Turreted:
 	Passenger:
 		PipType: Blue
-	WithInfantryBody:
-		AttackSequence: shoot
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	RenderSprites:
@@ -357,8 +343,6 @@ TEMPLAR:
 		WarnProbability: 90
 	AttackFrontal:
 		Voice: Attack
-	WithInfantryBody:
-		AttackSequence: shoot
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 	RenderSprites:
@@ -402,8 +386,6 @@ MHIJACK:
 	RenderSprites:
 		Image: Chamspy
 	-AutoTarget:
-	WithInfantryBody:
-		AttackSequence: shoot
 	Passenger:
 		GrantUpgrades: HijackerHologram
     DeployToUpgrade:
@@ -451,8 +433,6 @@ BHS:
 	Demolition:
 		DetonationDelay: 45
 		Voice: Attack
-	WithInfantryBody:
-		AttackSequence: shoot
 	Cloak@CLOAKGENERATOR:
 		UpgradeMinEnabledLevel: 0
 		InitialDelay: 50
@@ -713,8 +693,6 @@ SEER:
 	RevealsShroud:
 		Range: 7c0
 	RenderSprites:
-	WithInfantryBody:
-		AttackSequence: shoot
 	Armament@PRIMARY:
 		Weapon: SeerTesla
 		Name: OnFoot
@@ -878,7 +856,6 @@ shark:
 		ScanRadius: 8
 		InitialStance: AttackAnything
 	WithInfantryBody:
-		AttackSequence: shoot
 		StandSequences: stand
 		IdleSequences: idle1, idle2, idle3, idle4
 	IgnoresDisguise:
@@ -910,8 +887,6 @@ LEGIO:
 		FireDelay: 5
 	AttackFrontal:
 		Voice: Attack
-	WithInfantryBody:
-		AttackSequence: throw
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
 
@@ -989,7 +964,6 @@ COLOSSI:
 		DeploySound:
 		UndeploySound:
 	WithInfantryBody:
-		AttackSequence: throw
 		UpgradeTypes: undeployed, WebDisable
 		UpgradeMaxEnabledLevel: 1
 	WithSpriteBody@deployed:
@@ -1103,8 +1077,6 @@ FLOAT:
 		DamageThreshold: 40
 	AttackFrontal:
 		Voice: Attack
-	WithInfantryBody:
-		AttackSequence: throw
 	-TakeCover:
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -1140,8 +1112,6 @@ BUG:
 		Weapon: FloatGlaive
 	AttackFrontal:
 		Voice: Attack
-	WithInfantryBody:
-		AttackSequence: throw
 	-TakeCover:
 	ProducibleWithLevel:
 		Prerequisites: barracks.upgraded
@@ -1260,7 +1230,6 @@ PDRONE:
 	Health:
 		HP: 9500
 	WithInfantryBody:
-		AttackSequence: shoot
 		IdleSequences: idle1,idle2
 	AutoTarget:
 		ScanRadius: 8
@@ -1568,8 +1537,6 @@ WORKER:
 		Weapon: Minigun
 	AttackFrontal:
 		Voice: Attack
-	WithInfantryBody:
-		AttackSequence: shoot
 	RenderSprites:
 	-SpawnActorOnDeath@nanomachineburst:
 	-SpawnActorOnDeath@conversion:

@@ -800,7 +800,7 @@
 		DamageTriggers: TriggerProne
 	WithInfantryBody:
 		IdleSequences: idle1,idle2
-		AttackSequence: shoot
+		DefaultAttackSequence: shoot
 	WithDeathAnimation:
 		CrushedSequence: die-crushed
 		CrushedSequencePalette: player
@@ -886,7 +886,7 @@
 	MustBeDestroyed:
 	WithPermanentInjury:
 	WithInfantryBody:
-		AttackSequence: shoot
+		DefaultAttackSequence: shoot
 		IdleSequences: idle1, idle2
 	UpgradeOnDamageState@CRITICAL:
 		Upgrades: criticalspeed

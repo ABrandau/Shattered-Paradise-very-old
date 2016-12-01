@@ -822,8 +822,6 @@ WOLF:
 	Mobile:
 		Speed: 80
 		SharesCell: false
-	WithInfantryBody:
-		AttackSequence: shoot
 	-WithDecoration@tibicon:
 
 DEATHCLAW:
@@ -1576,7 +1574,7 @@ TRIPOD:
 		Weapon: TripodLaser
 		LocalOffset: 100,-225,2400
 	WithInfantryBody:
-		AttackSequence: shoot
+		DefaultAttackSequence: shoot
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	-SelfHealing@ELITE:
@@ -1874,7 +1872,7 @@ SPIDERARTY:
 		QuantizedFacings: 32
 	WithMuzzleOverlay:
 	WithInfantryBody:
-		AttackSequence: shoot
+		DefaultAttackSequence: shoot
 	AttackFrontal:
 	Armament:
 		Weapon: DevourerShell
@@ -1920,15 +1918,10 @@ PALADIN:
 		VoiceSet: Cyborg
 	Armor:
 		Type: Heavy
-	# DeployToTimedUpgrade:
-		# DeployedUpgrades: Trolling
-		# CooldownTicks: 3000
-		# StartsFullyCharged: true
-		# DeployedTicks: 300
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithInfantryBody:
-		AttackSequence: shoot
+		DefaultAttackSequence: shoot
 	AttackFrontal:
 		Voice: Attack
 	RenderSprites:

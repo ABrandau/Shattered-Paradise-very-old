@@ -307,7 +307,7 @@ medic:
 		Length: 2
 		Facings: 8
 		ShadowStart: 567
-	heal:
+	shoot:
 		Start: 292
 		Length: 14
 		ShadowStart: 599

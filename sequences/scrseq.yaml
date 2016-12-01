@@ -103,12 +103,12 @@ legio:
 		Length: 7
 		ShadowStart: 434
 		ZOffset: -511
-	throw:
+	shoot:
 		Start: 170
 		Length: 6
 		Facings: 8
 		ShadowStart: 508
-	prone-throw:
+	prone-shoot:
 		Tick: 80
 		Start: 290
 		Length: 6
@@ -223,7 +223,7 @@ bug:
 		Length: 6
 		ShadowStart: 418
 		ZOffset: -511
-	throw:
+	shoot:
 		Start: 134
 		Length: 6
 		Facings: 8
@@ -263,7 +263,7 @@ float:
 		Length: 11
 		ShadowStart: 372
 		ZOffset: -511
-	throw:
+	shoot:
 		Start: 109
 		Length: 9
 		Facings: 8
@@ -291,7 +291,7 @@ stalker:
 		Start: 21
 		Length: 13
 		ShadowStart: 212
-	throw:
+	shoot:
 		Start: 131
 		Length: 5
 		Facings: -8
@@ -346,7 +346,7 @@ colossi:
 		Start: 218
 		Length: 6
 		ShadowStart: 465
-	throw:
+	shoot:
 		Start: 72
 		Length: 8
 		Facings: 8
