@@ -373,7 +373,7 @@ GACNST:
 PROC:
 	Inherits: ^Building
 	Valued:
-		Cost: 1150
+		Cost: 1700
 	CustomSellValue:
 		Value: 400
 	Tooltip:
@@ -404,6 +404,10 @@ PROC:
 		PipCount: 15
 		Capacity: 1500
 	FreeActor:
+		Actor: HARV
+		SpawnOffset: 3,1
+		Facing: 160
+	FreeActor@1:
 		Actor: HARV
 		SpawnOffset: 3,1
 		Facing: 160

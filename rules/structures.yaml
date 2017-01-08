@@ -982,6 +982,8 @@ MUPROC:
 		DockOffset: 3,1
 	FreeActor:
 		SpawnOffset: 3,1
+	FreeActor@1:
+		SpawnOffset: 3,1
 	RenderSprites:
 		PlayerPalette: playermut
 		Image: muproc
@@ -1398,7 +1400,7 @@ SCRPROC:
 	Inherits: ^Building
 	Inherits@2: ^ScrinRender
 	Valued:
-		Cost: 1150
+		Cost: 1700
 	CustomSellValue:
 		Value: 400
 	Tooltip:
@@ -1430,6 +1432,10 @@ SCRPROC:
 		PipCount: 15
 		Capacity: 1500
 	FreeActor:
+		Actor: SCRHARV
+		SpawnOffset: 3,1
+		Facing: 160
+	FreeActor@1:
 		Actor: SCRHARV
 		SpawnOffset: 3,1
 		Facing: 160
@@ -1792,6 +1798,9 @@ CABPROC:
 	TiberianSunRefinery:
 		DockOffset: 3,1
 	FreeActor:
+		SpawnOffset: 3,1
+		Actor: CABHARV
+	FreeActor@1:
 		SpawnOffset: 3,1
 		Actor: CABHARV
 	RenderSprites:
