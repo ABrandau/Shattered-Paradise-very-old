@@ -350,55 +350,48 @@ GAPLUG:
 		Weapon: IonCannonSpawner
 		OrderName: IonCannon2
 		Cursor: ioncannon
-		RequiresCondition: plug.ioncannon
-		ConditionMinEnabledLevel: 1
+		RequiresCondition: plug.ioncannona || plug.ioncannonb
 	DetonateWeaponPower@pods:
 		Icon: droppods
+		ActivationSequence: idle
 		DisplayTimer: True
 		DisplayBeacon: True
 		Description: Helldiver Drop
 		LongDesc: Deploys shock troopers at the targetted location.
 		OrderName: Droppod
 		Weapon: DroppodSpawner
-		RequiresCondition: plug.hunterseeker
-		ConditionMinEnabledLevel: 1
+		RequiresCondition: plug.hunterseekera || plug.hunterseekerb
 		ChargeTime: 240
 	SupportPowerChargeBar:
 	Power:
 		Amount: -100
 	Power@ioncannon:
-		RequiresCondition: plug.ioncannon
-		ConditionMinEnabledLevel: 1
+		RequiresCondition: plug.ioncannona || plug.ioncannonb
 		Amount: -100
 	Power@hunterseeker:
-		RequiresCondition: plug.hunterseeker
-		ConditionMinEnabledLevel: 1
+		RequiresCondition: plug.hunterseekera || plug.hunterseekerb
 		Amount: -50
 	Pluggable@pluga:
 		Offset: 0,2
 		Conditions:
-			plug.ioncannon: plug.ioncannon, plug.ioncannona
-			plug.hunterseeker: plug.hunterseeker, plug.hunterseekera
+			plug.ioncannon: plug.ioncannona
+			plug.hunterseeker: plug.hunterseekera
 	WithIdleOverlay@ioncannona:
 		RequiresCondition: plug.ioncannona
-		ConditionMinEnabledLevel: 1
 		Sequence: idle-ioncannona
 	WithIdleOverlay@hunterseekera:
 		RequiresCondition: plug.hunterseekera
-		ConditionMinEnabledLevel: 1
 		Sequence: idle-hunterseekera
 	Pluggable@plugb:
 		Offset: 1,2
 		Conditions:
-			plug.ioncannon: plug.ioncannon, plug.ioncannonb
-			plug.hunterseeker: plug.hunterseeker, plug.hunterseekerb
+			plug.ioncannon: plug.ioncannonb
+			plug.hunterseeker: plug.hunterseekerb
 	WithIdleOverlay@ioncannonb:
 		RequiresCondition: plug.ioncannonb
-		ConditionMinEnabledLevel: 1
 		Sequence: idle-ioncannonb
 	WithIdleOverlay@hunterseekerb:
 		RequiresCondition: plug.hunterseekerb
-		ConditionMinEnabledLevel: 1
 		Sequence: idle-hunterseekerb
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:

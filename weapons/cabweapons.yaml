@@ -544,7 +544,7 @@ DevourerExplo:
 		ExplosionPalette: apolra2
 
 DevourerBuff:
-	Inherits: ^NoDamage
+	Inherits: ^RifleWarhead
 	ReloadDelay: 35
 	Range: 200
 	Projectile: InstantExplode

@@ -94,17 +94,14 @@ JUMPJETAIR:
 	-Mobile:
 	-WithInfantryBody
 	WithFacingSpriteBody@idle:
-		RequiresCondition: JJBuff
-		ConditionMaxEnabledLevel: 0
+		RequiresCondition: !JJBuff
 		Sequence: run
 	WithFacingSpriteBody@attack:
 		Sequence: shoot
 		RequiresCondition: JJBuff
-		ConditionMinEnabledLevel: 1
 	WithShadow:
 	Hovers@CRUISING:
 		RequiresCondition: cruising
-		ConditionMinEnabledLevel: 1
 	Aircraft:
 		TurnSpeed: 10
 		Speed: 90
@@ -121,12 +118,10 @@ JUMPJETAIR:
 		-LandingSound: orcadwn1.aud
 	-Targetable:
 	Armor:
-		RequiresCondition: airborne
-		ConditionMaxEnabledLevel: 0
+		RequiresCondition: !airborne
 	Armor@Flying:
 		Type: Light
 		RequiresCondition: airborne
-		ConditionMinEnabledLevel: 1
 	Targetable@GROUND:
 		TargetTypes: Infantry, Ground
 		RequiresCondition: airborne
@@ -134,15 +129,13 @@ JUMPJETAIR:
 	Targetable@AIRBORNE:
 		TargetTypes: Air, Helicopter, Jumpjet
 		RequiresCondition: airborne
-		ConditionMinEnabledLevel: 1
 	Armament@SelfBuff:
 		Weapon: JJBuff
 	RevealsShroud:
 		Range: 8c0
 		Type: CenterPosition
 	DamagedByTerrain:
-		RequiresCondition: airborne
-		ConditionMaxEnabledLevel: 0
+		RequiresCondition: !airborne
 	-TakeCover:
 	-WithDeathAnimation@normal:
 	-WithDeathAnimation@tib:
@@ -170,6 +163,9 @@ JUMPJETAIR:
 	-SpawnActorOnDeath@berserk2:
 	-SpawnActorOnDeath@conversion:
 	-SpawnActorOnDeath@blackhand:
+	ExternalConditions@JJBuff:
+		Conditions: JJBuff
+
 
 MEDIC:
 	Inherits: ^Soldier
@@ -263,13 +259,10 @@ ALTNODE1:
     -TakeCover:
     Armament:
         Weapon: MilitantRifle
-        RequiresCondition: deployed
-        ConditionMaxEnabledLevel: 0
+        RequiresCondition: !deployed
     Armament@killsself:
         Weapon: MilitantExplode
         RequiresCondition: deployed
-        ConditionMinEnabledLevel: 1
-        ConditionMaxAcceptedLevel: 1
     AttackFrontal:
         Voice: Attack
     ProducibleWithLevel:
@@ -282,7 +275,6 @@ ALTNODE1:
 		Palette: mouse
 		ShowToEnemies: true
 		RequiresCondition: deployed
-		ConditionMinEnabledLevel: 1
 	Passenger:
 		GrantCondition: FlameWarriorHologram
 
@@ -509,7 +501,7 @@ MARAUDER:
 		ScanRadius: 8
 	Mobile:
 		Speed: 55
-		RequiresCondition: !notmobile
+		RequiresCondition: undeployed
 	Armament@1:
 		Weapon: MarauderShotgun
 		Name: OnFoot
@@ -520,7 +512,7 @@ MARAUDER:
 		Weapon: GMarauderShotgun
 		MuzzlePalette: playermut
 	GrantConditionOnDeploy:
-		DeployedCondition: deployed ||  notmobile
+		DeployedCondition: deployed
 		UndeployedCondition: undeployed
 		DeployAnimation: make
 		Facing: 160
@@ -528,12 +520,12 @@ MARAUDER:
 		DeploySound:
 		UndeploySound:
 	WithInfantryBody:
-		RequiresCondition: !deployed ||  !WebDisable
+		RequiresCondition: undeployed
 	WithInfantryBody@deployed:
 		StandSequences: turret
-		RequiresCondition: !undeployed ||  !WebDisable
+		RequiresCondition: deployed
 	WithMuzzleOverlay:
-		RequiresCondition: !undeployed ||  !WebDisable
+		RequiresCondition: deployed
 	Turreted:
 		TurnSpeed: 50
 		InitialFacing: 160

@@ -131,15 +131,10 @@
 		Condition: FullDamage
 
 ^NoDamage:	#Inherits: ^NoDamage
+	ValidTargets: Ground, Infantry, Vehicle, Building
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: 1
-		Versus:
-			None: 1
-			Wood: 1
-			Light: 1
-			Heavy: 1
-			Concrete: 1
 
 ^ExploDefaults:	#Inherits: ^ExploDefaults
 	Warhead@op: FireShrapnel

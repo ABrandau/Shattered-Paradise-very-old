@@ -346,6 +346,7 @@ TTNK:
 		TurnSpeed: 5
 		Speed: 85
 		Crushes: wall, crate, infantry
+		RequiresCondition: undeployed
 	Health:
 		HP: 35000
 	Armor:
@@ -367,7 +368,7 @@ TTNK:
 	RenderSprites:
 		Image: ttnk
 	GrantConditionOnDeploy:
-		DeployedCondition: deployed ||  notmobile, cloakgenerator, NodCloakHealing
+		DeployedCondition: deployed
 		UndeployedCondition: undeployed
 		DeployAnimation: make
 		Facing: 160
@@ -534,6 +535,13 @@ HOLOGRAMPROJECTOR:
 		UnloadVoice: Unload
 		LoadingCondition: notmobile
 		EjectOnDeath: true
+		PassengerConditions:
+			altnode1: FlameWarriorHologram
+			crusader: CrusaderHologram
+			engineer: EngineerHologram
+			templar: TemplarHologram
+			mhijack: HijackerHologram
+			bhs: HandHologram
 	ExplodeWeapon@Flame:
 		Weapon: FlameHologram
 		RequiresCondition: FlameWarriorHologram
@@ -558,6 +566,8 @@ HOLOGRAMPROJECTOR:
 		Weapon: HandHologram
 		RequiresCondition: HandHologram
 		ConditionMinEnabledLevel: 1
+	ExternalConditions@hologams:
+		Conditions: FlameWarriorHologram, CrusaderHologram, EngineerHologram, TemplarHologram, HijackerHologram, HandHologram
 
 SUBTANK:
 	Inherits: ^VoxelTank
@@ -768,12 +778,6 @@ WOLF:
 		Description: Support Beast, expels toxins when attacking that\ndamage nearby units but increase their fighting\n capabilities.\n\n  Somewhat strong vs Ground Units.\n  Weak vs Aircraft, Defences.
 	Voiced:
 		VoiceSet: Fiend
-	SpawnActorOnDeath@conversion:
-		Actor: cybdog
-		Probability: 100
-		OwnerType: Killer
-		DeathType: CabalDeathInfantry
-		RequiresLobbyCreeps: true
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark
 	-Crushable:
@@ -788,7 +792,7 @@ WOLF:
 	Armament@Secondary:
 		Weapon: BullBuff
 		LocalOffset: 0,0,500
-	Armament@Secondary:
+	Armament@Thertiary:
 		Weapon: BullShard
 		LocalOffset: 0,0,500
 	Passenger:
@@ -819,12 +823,6 @@ DEATHCLAW:
 		Description: Melee Beast, usefull as a shock unit.\n\n  Strong vs Ground Units\n  Weak vs Aircraft.
 	Voiced:
 		VoiceSet: Fiend
-	SpawnActorOnDeath@conversion:
-		Actor: cybdog
-		Probability: 100
-		OwnerType: Killer
-		DeathType: CabalDeathInfantry
-		RequiresLobbyCreeps: true
 	Passenger:
 		CargoType: Vehicle
 		Voice: Move
@@ -1308,6 +1306,7 @@ SCRDRONEC:
 		QuantizedFacings: 32
 	-Targetable@Essence:
 	-Targetable@Shield:
+	-ExternalConditions@VanguardShield:
 	-DamagedByTerrain@ScrinDamage:
 	SpawnActorOnDeath@ScrinEssence:
 		DeathType:
@@ -1341,6 +1340,8 @@ SCRDRONEC:
 	ExplodeWeapon@FullDamage1:
 		Weapon: FullDamageBounce
 		RequiresCondition: FullDamage
+	ExternalConditions@Vanguard:
+		Conditions: RifleWarhead, RocketWarhead, APWarhead, FlameWarhead, ArtilleryWarhead, FullDamage
 
 SCRGLYDER2:
 	Inherits: ^ScrinVehicle

@@ -242,7 +242,7 @@ LPST:
 # Aircraft
 ######################################################
 HUNTER:
-	Inherits@1: ^GenericBuffsDebuffs
+	Inherits@1: ^GenericEffects
 	Inherits@2: ^ExistsInWorld
 	Valued:
 		Cost: 1000

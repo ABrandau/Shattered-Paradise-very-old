@@ -23,7 +23,6 @@ CLOUD1:
 	-Targetable@GROUND:
 	-Targetable@AIRBORNE:
 	-RevealsShroud:
-	-SelfHealing@poisoncloud
 	-SpawnActorOnDeath@vision:
 	-Voiced:
 	Health:
@@ -1188,6 +1187,8 @@ STORMRIDERSPAWN:
 	AutoTarget:
 		ScanRadius: 20
 		InitialStance: AttackAnything
+	ExternalConditions@Return:
+		Conditions: ForceReturn
 
 STORMRIDERSPAWN2:
 	Inherits: STORMRIDERSPAWN
@@ -1227,6 +1228,8 @@ STORMRIDERRETURN:
 	SpawnActorOnDeath:
 		Actor: WYVERM2.Husk
 		DeathType: 	BulletDeath, TiberiumDeath,	CabalDeath, CabalDeathCrate, BlackHandRfle,	HeadshotDeath, SmallExplosionDeath, EnergyDeath, ExplosionDeath, FireDeath
+	ExternalConditions@Return:
+		Conditions: Return
 
 ##########################################################
 # CABAL
@@ -1463,6 +1466,8 @@ DEVOURER:
 		QuantizedFacings: 8
 	SpawnActorOnDeath:
 		Actor: DEVOURER.Husk
+	ExternalConditions@DevoBuff:
+		Conditions: DevoBuff
 
 BASILISK:
 	Inherits: ^Helicopter

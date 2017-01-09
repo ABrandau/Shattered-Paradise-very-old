@@ -1,5 +1,5 @@
 CABHUT:
-	Inherits: ^BasicBuilding
+	Inherits: ^CivBuilding
 	Tooltip:
 		Name: Bridge repair hut
 	Building:

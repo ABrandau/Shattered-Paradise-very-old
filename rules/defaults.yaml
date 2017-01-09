@@ -58,9 +58,7 @@
 		RequiresCondition: rank2
 		ZOffset: 256
 
-^GenericBuffsDebuffs:
-#BUFFS / DEBUFFS
-#FIREFLY
+^FireflyDebuff
 	SpeedMultiplier@firefly:
 		RequiresCondition: fireflystop
 		Modifier: 40
@@ -76,15 +74,19 @@
 	TimedConditionBar@firefly:
 		Condition: fireflystop
 		Color: FFFFFF
-#FIRESTORM GEN
+^FirestormGenBuff:
 	DamageMultiplier@firestorm:
 		Modifier: 95#, 90
 		RequiresCondition: FirestormWallCondition
-		BaseLevel: 1
-# TIMELINE TROLLING
+	ExternalConditions@FirestormWallCondition:
+		Conditions: FirestormWallCondition
+
+^TimeLineDebuff:
 	SpeedMultiplier@ScrinOrb:
 		RequiresCondition: ScrinOrb
 		Modifier: 40
+	ExternalConditions@ScrinOrb:
+		Conditions: ScrinOrb
 	SpeedMultiplier@ScrinTimeline:
 		RequiresCondition: TimeLineTrolling || TimeLineTrollingMini
 		Modifier: -25#, -50
@@ -94,11 +96,17 @@
 	ReloadDelayMultiplier@ScrinTimelineMini:
 		RequiresCondition: TimeLineTrollingMini
 		Modifier: 150#, 200
-#HEALTH PERCENTAGE FIREPOWER MULTIPLIER
+	ExternalConditions@ScrinTimelineMini:
+		Conditions: ScrinTimelineMini, TimeLineTrolling
+
+^HealthPercentageFirepowerMultiplier:
 	HealthPercentageFirepowerMultiplier:
 		RequiresCondition: AcidScaleDmg
 		ConditionMinEnabledLevel: 1
-#GENERIC POISON EFFECT
+	ExternalConditions@AcidScaleDmg:
+		Conditions: AcidScaleDmg
+
+^CloudPoison:
 	SelfHealing@poisoncloud:
 		PercentageStep: -1
 		Step: 0
@@ -106,28 +114,34 @@
 		RequiresCondition: Poison
 		HealIfBelow: 200
 		DamageTypes: TiberiumDeath
-#BOUNTY
+	ExternalConditions@CloudPoison:
+		Conditions: CloudPoison
+
+^Bounty:
 	GivesBounty@Cabal:
 		Percentage: 20
 		ValidStances: Enemy
 		DeathTypes: CabalDeathCrate
 	GivesProximityBounty@CabGrinder:
 		Percentage: 10
-#wiu wiu wiu wiu wiu wiu
+
+^wiuwiuwiu:
 	SpawnActorOnDeath@burns:
 		Actor: fireactor
 		Probability: 100
 		OwnerType: Killer
 		RequiresLobbyCreeps: false
 		DeathType: MilitantFireDeath
-#Scrin Essence
+
+^ScrinEssence:
 	SpawnActorOnDeath@ScrinEssence:
 		Actor: scrinessencesmall
 		Probability: 100
 		OwnerType: Killer
 		DeathType: ScrinEssenceKill
 		RequiresLobbyCreeps: false
-#Templar debuff
+
+^TemplarDebuff:
 	SpeedMultiplier@TemplarGrenade:
 		RequiresCondition: TemplarGrenade
 		Modifier: 90
@@ -137,8 +151,10 @@
 	Targetable@TemplarGrenade:
 		TargetTypes: TemplarGrenade
 		RequiresCondition: TemplarGrenade
-#VENTILATOR BUFF AND DEBUFF
-^TiberianBuffs:
+	ExternalConditions@TemplarGrenade:
+		Conditions: TemplarGrenade
+
+^WolfBuffs:
 #WOLF BUFFS AND DEBUFFS
 	StackedCondition:
 		Condition: WolfBuff
@@ -163,19 +179,22 @@
 		Palette: mouse
 		ShowToEnemies: true
 		RequiresCondition: WolfBuff || ShowTibIcon
-		ConditionMinEnabledLevel: 1
+	ExternalConditions@SeekerTarget:
+		Conditions: WolfBuff, WolfBuff2, ShowTibIcon
+
+^KillSelf:
 	KillsSelf:
 		RequiresCondition: KillSelf
+
+^SeekerTracker:
 	Targetable@StalkerTracker:
 		TargetTypes: StalkerTracker
 		RequiresCondition: StalkerTracker
 	Targetable@SeekerTracker:
 		TargetTypes: SeekerTarget
 		RequiresCondition: SeekerTarget
-	ExternalConditions@MiscEffects:
-		Conditions: fireflystop, Poison, FirestormWallCondition, ScrinOrb, TimeLineTrolling, TimeLineTrollingMini, AcidScaleDmg, ShowTibIcon
-	ExternalConditions@MiscEffects2:
-		Conditions: TemplarGrenade, WolfBuff, WolfBuff2, SeekerTarget, KillSelf, StalkerTracker
+	ExternalConditions@SeekerTarget:
+		Conditions: SeekerTarget, StalkerTracker
 
 ^Cloakable:
 	Cloak@CLOAKGENERATOR:
@@ -230,6 +249,18 @@
 		HealIfBelow: 105
 		RequiresCondition: cloakgenerator
 
+^BugPoison:
+	WithIdleOverlay@BugPoison:
+		Sequence: cloud
+		IsPlayerPalette: true
+		Palette: cloakscrin
+		RequiresCondition: BugPoison
+	ExplodeWeapon@BugPoison:
+		Weapon: PoisonGlaive
+		RequiresCondition: BugPoison
+	ExternalConditions@BugPoison:
+		Conditions: BugPoison
+
 ^NodVehicleRepair:
 	SelfHealing@NodVehicleRepair:
 		PercentageStep: 1
@@ -241,49 +272,12 @@
 	ExternalConditions@NodVehicleRepair:
 		Conditions: NodVehicleRepair
 
-^VentilatorBuff: #Only affects infantry.
-	SelfHealing@VentilatorBuff:
-		PercentageStep: 1
-		Step: 0
-		Delay: 100
-		RequiresCondition: VentilatorBuff
-		HealIfBelow: 200
-		DamageTypes: TiberiumDeath
-		ConditionMinEnabledLevel: 1
-	ExternalConditions@VentilatorBuff:
-		Conditions: VentilatorBuff
-
 ^RejectsOrdersBerkserk:
 	RejectsOrders@berserk:
 		RequiresCondition: berserk
 		ConditionMinEnabledLevel: 1
 	ExternalConditions@berserk:
 		Conditions: berserk
-
-#EMP ON CYBORGS
-^EmpOnCyborgs:
-	SpeedMultiplier@cyborgemp:
-		RequiresCondition: empdisable
-		Modifier: 75
-		BaseLevel: 1
-	ReloadDelayMultiplier@cyborgemp:
-		RequiresCondition: empdisable
-		Modifier: 125
-		BaseLevel: 1
-	UpgradeOverlay@cyborgemp:
-		RequiresCondition: empdisable
-		Palette: disabled
-	TimedConditionBar@cyborgemp:
-		Condition: empdisable
-		Color: FFFFFF
-	WithIdleOverlay@cyborgemp:
-		Sequence: emp-overlay
-		Palette: effect
-		RequiresCondition: empdisable
-		ShowToEnemies: true
-		ZOffset: 512
-	ExternalConditions@empdisable:
-		Conditions: empdisable
 
 ^EmpDisable:
 	UpgradeOverlay@EMPDISABLE:
@@ -304,7 +298,12 @@
 		RequiresCondition: empdisable
 		Modifier: 0
 	ExternalConditions@empdisable:
-		Conditions: empdisable
+		Conditions: empdisable, notmobile
+
+^EmpDisableMobile:
+	Inherits: ^EmpDisable
+	Mobile:
+		RequiresCondition: !notmobile
 
 ^WebDisable:
 	UpgradeOverlay@WebDisable:
@@ -324,13 +323,7 @@
 		Palette: player
 		RequiresCondition: WebDisable
 	ExternalConditions@WebDisable:
-		Conditions: WebDisable
-
-^MindControllable:
-	TemporaryOwnerManager:
-	Targetable@MindControl:
-		TargetTypes: MindControlInmune
-		RequiresCondition: MindControlTargetting
+		Conditions: WebDisable, notmobile
 
 ^BurstRecovery:
 	SelfHealing@NanomachineBurst:
@@ -347,11 +340,6 @@
 	ExternalConditions@nanomachineburst:
 		Conditions: nanomachineburst
 
-^EmpDisableMobile:
-	Inherits: ^EmpDisable
-	Mobile:
-		RequiresCondition: !notmobile
-
 ^tractorstop:
 	SpeedMultiplier:
 		RequiresCondition: tractorstop
@@ -364,20 +352,82 @@
 	ExternalConditions@tractorstop:
 		Conditions: tractorstop
 
+^DisplayVanguardShield:
+	WithIdleOverlay@shield:
+		Sequence: shield
+		IsPlayerPalette: true
+		Palette: cloakscrin
+		RequiresCondition: VanguardShield
+	ExternalConditions@VanguardShield:
+		Conditions: VanguardShield
+	Targetable@Shield:
+		TargetTypes: ShieldedUnit
+
+^GenericEffects:
+	Inherits: ^VisionWhenKilled
+	Inherits@0: ^KillSelf
+	Inherits@1: ^Cloakable
+	Inherits@2: ^Bounty
+	Inherits@3: ^ScrinEssence
+	Inherits@4: ^BurstRecovery
+	Inherits@5: ^FirestormGenBuff
+	Inherits@6: ^GuardianPlatformSelfHeal
+	RevealOnFire:
+
+^StructureEffects:
+	Inherits: ^GenericEffects
+	Inherits@1: ^CloudPoison
+	Inherits@2: ^EmpDisable
+
+^InfantryEffects:
+	Inherits: ^GenericEffects
+	Inherits@0: ^CloudPoison
+	Inherits@1: ^HealthPercentageFirepowerMultiplier
+	Inherits@2: ^SeekerTracker
+	Inherits@3: ^WolfBuffs
+	Inherits@4: ^BugPoison
+	Inherits@5: ^RejectsOrdersBerkserk
+	Inherits@6: ^WebDisable
+	Inherits@7: ^TemplarDebuff
+	Inherits@8: ^wiuwiuwiu
+	Inherits@9: ^TimeLineDebuff
+	Inherits@10: ^DisplayVanguardShield
+
+^VehicleEffects:
+	Inherits: ^GenericEffects
+	Inherits@0: ^CloudPoison
+	Inherits@1: ^HealthPercentageFirepowerMultiplier
+	Inherits@2: ^SeekerTracker
+	Inherits@3: ^WolfBuffs
+	Inherits@4: ^BugPoison
+	Inherits@5: ^RejectsOrdersBerkserk
+	Inherits@6: ^EmpDisableMobile
+	Inherits@7: ^TemplarDebuff
+	Inherits@8: ^wiuwiuwiu
+	Inherits@9: ^TimeLineDebuff
+	Inherits@10: ^FireflyDebuff
+	Inherits@11: ^DisplayVanguardShield
+	Inherits@12:^NodVehicleRepair
+
+^AircraftEffects:
+	Inherits: ^GenericEffects
+	Inherits@0: ^tractorstop
+	Inherits@1: ^FireflyDebuff
+	Inherits@2:^NodVehicleRepair
+	Inherits@3: ^PermanentSelfHeal
+
 ^BasicBuilding:
-	Inherits@1: ^GenericBuffsDebuffs
+	Inherits@1: ^StructureEffects
 	Inherits@1: ^ExistsInWorld
 	Inherits@2: ^SpriteActor
-	Inherits@3: ^VisionWhenKilled
-	Inherits@4: ^Cloakable
 	WithTextControlGroupDecoration:
 	SelectionDecorations:
 		Palette: pips
 	Selectable:
 		Priority: 3
-	Targetable@SeekerTracker:
-		TargetTypes: SeekerTarget
-		RequiresCondition: SeekerTarget
+	# Targetable@SeekerTracker:
+		# TargetTypes: SeekerTarget
+		# RequiresCondition: SeekerTarget
 	Valued:
 		Cost: 300
 	Targetable:
@@ -409,8 +459,6 @@
 		Shape: Circle
 			Radius: 500
 	Demolishable:
-	ExternalConditions@cloakgenerator:
-		Conditions: cloakgenerator
 	SpawnActorOnDeath@tiberium2:
 		Actor: visc_lrg
 		Probability: 10
@@ -474,6 +522,7 @@
 ^CivBuilding:
 	Inherits: ^BasicBuilding
 	-UpdatesPlayerStatistics:
+	-WithIdleOverlay@EMPDISABLE:
 	Health:
 		HP: 90000
 	Armor:
@@ -572,18 +621,13 @@
 		RemoveInstead: true
 	RenderSprites:
 
+
+
 ^Infantry:
 	Inherits@0: ^GainsExperience
-	Inherits@1: ^GenericBuffsDebuffs
+	Inherits@1: ^InfantryEffects
 	Inherits@2: ^ExistsInWorld
 	Inherits@3: ^SpriteActor
-	Inherits@4: ^WebDisable
-	Inherits@5: ^BurstRecovery
-	Inherits@6: ^RejectsOrdersBerkserk
-	Inherits@9: ^VisionWhenKilled
-	Inherits@11: ^MindControllable
-	Inherits@12: ^TiberianBuffs
-	Inherits@13: ^Cloakable
 	DrawLineToTarget:
 	WithTextControlGroupDecoration:
 	Health:
@@ -621,21 +665,6 @@
 	Targetable:
 		TargetTypes: Ground, Infantry
 		RequiresCondition: !VanguardShield
-	WithIdleOverlay@shield:
-		Sequence: shield
-		IsPlayerPalette: true
-		Palette: cloakscrin
-		RequiresCondition: VanguardShield
-	Targetable@Shield:
-		TargetTypes: ShieldedUnit
-	WithIdleOverlay@BugPoison:
-		Sequence: cloud
-		IsPlayerPalette: true
-		Palette: cloakscrin
-		RequiresCondition: BugPoison
-	ExplodeWeapon@BugPoison:
-		Weapon: PoisonGlaive
-		RequiresCondition: BugPoison
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	WithInfantryBody:
@@ -804,6 +833,12 @@
 	-SpawnActorOnDeath@berserk:
 		Probability: 40
 	-SpawnActorOnDeath@berserk2:
+	SpawnActorOnDeath@conversion:
+		Actor: cybdog
+		Probability: 100
+		OwnerType: Killer
+		DeathType: CabalDeathInfantry
+		RequiresLobbyCreeps: true
 	SpeedMultiplier@beastberserk:
 		RequiresCondition: beastdamaged
 		Modifier: 120
@@ -845,7 +880,6 @@
 
 ^Cyborg:
 	Inherits@1: ^Infantry
-	# Inherits@2: ^EmpOnCyborgs
 	Inherits@3:	^IncompleteSelfHeal
 	-SpawnActorOnDeath@conversion:
 	-Crushable:
@@ -996,20 +1030,13 @@
 		PlayerExperience: 50
 	Passenger:
 		GrantCondition: EngineerHologram
+	ExternalConditions@AcidScaleDmg@MineReam
+		Conditions: MineReam
 
 ^Vehicle:
 	Inherits@0: ^GainsExperience
-	Inherits@1: ^GenericBuffsDebuffs
+	Inherits@1: ^VehicleEffects
 	Inherits@2: ^ExistsInWorld
-	Inherits@3: ^EmpDisableMobile
-	Inherits@4: ^BurstRecovery
-	Inherits@5: ^RejectsOrdersBerkserk
-	Inherits@6: ^VisionWhenKilled
-	Inherits@7:^NodVehicleRepair
-	Inherits@8: ^MindControllable
-	Inherits@9:	^GuardianPlatformSelfHeal
-	Inherits@11: ^TiberianBuffs
-	Inherits@12: ^Cloakable
 	DrawLineToTarget:
 	WithTextControlGroupDecoration:
 	Mobile:
@@ -1102,14 +1129,6 @@
 	Targetable:
 		TargetTypes: Ground, Vehicle
 		RequiresCondition: !VanguardShield
-	WithIdleOverlay@shield:
-		Sequence: shield
-		IsPlayerPalette: true
-		Palette: cloakscrin
-		RequiresCondition: VanguardShield
-		ConditionMinEnabledLevel: 1
-	Targetable@Shield:
-		TargetTypes: ShieldedUnit
 	Targetable@repair:
 		TargetTypes: repair
 	Repairable:
@@ -1236,13 +1255,9 @@
 
 ^Aircraft:
 	Inherits@0: ^GainsExperience
-	Inherits@1: ^GenericBuffsDebuffs
+	Inherits@1: ^AircraftEffects
 	Inherits@2: ^ExistsInWorld
-	Inherits@4: ^tractorstop
 	Inherits@5: ^PermanentSelfHeal
-	Inherits@6: ^VisionWhenKilled
-	Inherits@7:	^GuardianPlatformSelfHeal
-	Inherits@8: ^Cloakable
 	DrawLineToTarget:
 	TemporaryOwnerManager:
 	WithTextControlGroupDecoration:
@@ -1480,10 +1495,9 @@
 		Type: Heavy
 
 ^DeployedVehicle:
-	Inherits@1: ^GenericBuffsDebuffs
-	Inherits@2: ^ExistsInWorld
-	Inherits@3: ^SpriteActor
-	Inherits@4: ^Cloakable
+	Inherits: ^GenericEffects
+	Inherits@0: ^ExistsInWorld
+	Inherits@1: ^SpriteActor
 	Voiced:
 		VoiceSet: Vehicle
 	AttackTurreted:

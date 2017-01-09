@@ -204,7 +204,7 @@ FloatGlaive10:
 	-Warhead@op: FireShrapnel
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
-		Damage: 1500
+		Damage: 2000
 
 FloatGlaive2:
 	Inherits: FloatGlaive
