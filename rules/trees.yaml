@@ -240,8 +240,8 @@ VEINHOLE:
 		Weapon: VeinholeExplosion
 		EmptyWeapon: VeinholeExplosion
 	-UpgradeOverlay@EMPDISABLE:
-	-DisableOnUpgrade@EMPDISABLE:
-	-TimedUpgradeBar@EMPDISABLE:
+	-DisableOnCondition@EMPDISABLE:
+	-TimedConditionBar@EMPDISABLE:
 	-WithIdleOverlay@EMPDISABLE:
 	-PowerMultiplier@EMPDISABLE:
 

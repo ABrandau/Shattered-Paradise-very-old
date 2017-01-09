@@ -63,14 +63,14 @@ EMPulseCannon:
 		Speed: 425
 		Blockable: false
 		Shadow: true
-		Angle: 62
+		LaunchAngle: 62
 		Image: pulsball
 	Warhead@1Eff: CreateEffect
 		Explosions: pulse_explosion
-	Warhead@berserk: GrantUpgrade
+	Warhead@berserk: GrantExternalCondition
 		Range: 4c0
 		Duration: 250
-		Upgrades: empdisable, notmobile
+		Condition: empdisable, notmobile
 		ValidTargets: Vehicle, Building
 
 ########################################################
@@ -414,10 +414,10 @@ ToxinMissile:
 		InvalidTargets: Vehicle, Building, Wall
 		Delay: 5
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
-	Warhead@emp: GrantUpgrade
+	Warhead@emp: GrantExternalCondition
 		Range: 4c0
 		Duration: 200
-		Upgrades: berserk
+		Condition: berserk
 		ValidTargets: Infantry, Vehicle, Building
 		ValidStances: Ally, Enemy, Neutral
 	Warhead@5Actor: SpawnActor
@@ -442,17 +442,17 @@ EnergyAssimilator:
 		Explosions: scrinenergyeff
 		ExplosionPalette: scrinenergystuffsalpha
 		ImpactSound: ion1.aud
-	Warhead@energy: GrantUpgrade
+	Warhead@energy: GrantExternalCondition
 		Range: 15c0
 		Duration: 400
-		Upgrades: empdisable
+		Condition: empdisable
 		ValidTargets: Powerplant
 		ValidStances: Enemy, Neutral
 		Delay: 15
-	Warhead@trolling: GrantUpgrade
+	Warhead@trolling: GrantExternalCondition
 		Range: 15c0
 		Duration: 200
-		Upgrades: TimeLineTrolling
+		Condition: TimeLineTrolling
 		ValidTargets: Ground, Air, Infantry, Vehicle, Aircraft
 		ValidStances: Ally, Enemy, Neutral
 		Delay: 15
@@ -575,7 +575,7 @@ CabalCannon:
 		Speed: 300
 		Inaccuracy: 40c0
 		Image: cabswproj
-		Angle: 90
+		LaunchAngle: 90
 		Shadow: true
 		Palette: apcyan
 		TrailImage: cabswproj2

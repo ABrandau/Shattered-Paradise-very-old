@@ -2,7 +2,7 @@
 	Inherits: ^BasicBuilding
 	-Targetable:
 	-WithSpriteBody:
-	-WithBuildingExplosion:
+	-Explodes:
 	-ShakeOnDeath:
 	-UpdatesPlayerStatistics:
 	-SoundOnDamageTransition:
@@ -163,7 +163,7 @@ IONBEAMMINI:
 		DeathSequencePalette: effectalpha
 		DeathPaletteIsPlayerPalette: false
 	RejectsOrders@berserk:
-		UpgradeMinEnabledLevel: 0
+		RequiresCondition: !lawea
 	RenderSprites:
 		Palette: effectalpha
 	WithFacingSpriteBody:
@@ -240,7 +240,7 @@ IONBEAMROAMER:
 		Voice: Attack
 	AttackWander:
 	RejectsOrders@berserk:
-		UpgradeMinEnabledLevel: 0
+		RequiresCondition: !lawea
 	RenderSprites:
 		Image: ionbeam
 		Palette: effectalpha
@@ -325,8 +325,8 @@ NANOMACHINEBURSTDUMMY:
 	Health:
 		HP: 40
 		NotifyAppliedDamage: False
-	UpgradeActorsNear:
-		Upgrades: nanomachineburst
+	ProximityExternalCondition:
+		Condition: nanomachineburst
 		Range: 6c0
 	WithMakeAnimation:
 	WithIdleOverlay:
@@ -468,8 +468,8 @@ STALKERDUMMY:
 		CruiseAltitude: 0
 	AutoTarget:
 		ScanRadius: 8
-	UpgradeActorsNear:
-		Upgrades: ScrinOrb
+	ProximityExternalCondition:
+		Condition: ScrinOrb
 		Range: 3c0
 		AffectsParent: false
 		ValidStances: Ally, Neutral, Enemy

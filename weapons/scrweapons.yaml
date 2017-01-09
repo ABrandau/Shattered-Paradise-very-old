@@ -180,10 +180,10 @@ FloatGlaive:
 		AllowDirectHit: true
 		AimTargetStances: Enemy
 		ValidTargets: Infantry, Vehicle, Building, Ground, Wall, Air, AirHit
-	Warhead@Acid: GrantUpgrade
+	Warhead@Acid: GrantExternalCondition
 		Range: 96
 		Duration: 200
-		Upgrades: BugPoison
+		Condition: BugPoison
 
 PoisonGlaive:
 	ReloadDelay: 75
@@ -263,10 +263,10 @@ StalkerSuicide:
 		Actors: STALKERDUMMY
 		FallRate: 5000
 		Range: 3
-	Warhead@Acid: GrantUpgrade
+	Warhead@Acid: GrantExternalCondition
 		Range: 250
 		Duration: 200
-		Upgrades: StalkerTracker
+		Condition: StalkerTracker
 		ValidStances: Enemy, Ally, Neutral
 
 StalkerGrinder:
@@ -318,10 +318,10 @@ ScorpAcid:
 		ExplosionPalette: apolgreenalpha
 		ImpactSound: expnew14.aud
 		InvalidImpactTypes: Water
-	Warhead@AcidScaleDmg: GrantUpgrade
+	Warhead@AcidScaleDmg: GrantExternalCondition
 		Range: 300
 		Duration: 150
-		Upgrades: AcidScaleDmg
+		Condition: AcidScaleDmg
 		ValidTargets: Ground, Vehicle, Infantry, Building
 
 VanguardShrapnel:
@@ -402,10 +402,10 @@ BounceTesla:
 			Light: 10
 			Heavy: 5
 			Concrete: 28
-	Warhead@TractorStop: GrantUpgrade
+	Warhead@TractorStop: GrantExternalCondition
 		Range: 250
 		Duration: 8
-		Upgrades: TimeLineTrollingMini
+		Condition: TimeLineTrollingMini
 		ValidTargets: Building, Vehicle, Infantry
 
 RifleBounce:
@@ -461,7 +461,7 @@ RifleBounceWeapon:
 		ContrailLength: 5
 		Shadow: true
 		Palette: playerscrin
-		Angle: 15
+		LaunchAngle: 15
 	ReloadDelay: 50
 	Range: 6c0
 	Warhead@1Dam: SpreadDamage
@@ -477,7 +477,7 @@ RocketBounceWeapon:
 		ContrailLength: 5
 		Shadow: true
 		Palette: playerscrin
-		Angle: 15
+		LaunchAngle: 15
 	ReloadDelay: 50
 	Warhead@1Dam: SpreadDamage
 		Damage: 1500
@@ -492,7 +492,7 @@ APBounceWeapon:
 		ContrailLength: 5
 		Shadow: true
 		Palette: playerscrin
-		Angle: 15
+		LaunchAngle: 15
 	ReloadDelay: 50
 	Range: 5c0
 	Warhead@1Dam: SpreadDamage
@@ -508,7 +508,7 @@ FlameBounceWeapon:
 		ContrailLength: 5
 		Shadow: true
 		Palette: playerscrin
-		Angle: 15
+		LaunchAngle: 15
 	ReloadDelay: 50
 	Range: 5c0
 		Damage: 150
@@ -523,7 +523,7 @@ ArtilleryBounceWeapon:
 		ContrailLength: 5
 		Shadow: true
 		Palette: playerscrin
-		Angle: 15
+		LaunchAngle: 15
 	ReloadDelay: 17
 	Range: 8c0
 	Burst: 1
@@ -541,7 +541,7 @@ FullDamageBounceWeapon:
 		ContrailLength: 5
 		Shadow: true
 		Palette: playerscrin
-		Angle: 15
+		LaunchAngle: 15
 	ReloadDelay: 50
 	Range: 5c0
 	Warhead@1Dam: SpreadDamage
@@ -556,7 +556,7 @@ TripodLaser:
 		Speed: 350
 		Image: greenplasma
 		Shadow: true
-		Angle: 62
+		LaunchAngle: 62
 		Palette: apolgreenalpha
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
@@ -602,7 +602,7 @@ StormRiderBlast:
 		Speed: 600
 		Blockable: false
 		Shadow: true
-		Angle: 45
+		LaunchAngle: 45
 		Palette: pips
 		TrailImage: blueballminitrail
 		ContrailLength: 5
@@ -669,7 +669,7 @@ BattleshipCannon:
 		ContrailLength: 5
 		Shadow: true
 		Palette: playerscrin
-		Angle: 15
+		LaunchAngle: 15
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 2500
@@ -735,7 +735,7 @@ DestroyerCannon:
 		TrailImage: blueballminitrail
 		Palette: pips
 		Shadow: false
-		Angle: 62
+		LaunchAngle: 62
 	Warhead@1Dam: SpreadDamage
 		Spread: 400
 		Damage: 17000
@@ -787,7 +787,7 @@ WyvermBlast:
 		Speed: 700
 		Blockable: false
 		Shadow: true
-		Angle: 45
+		LaunchAngle: 45
 		Palette: pips
 		TrailImage: blueballminitrail
 		ContrailLength: 5
@@ -879,10 +879,10 @@ TractorBeam:
 		Damage: 800
 		ValidTargets: Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@TractorStop: GrantUpgrade
+	Warhead@TractorStop: GrantExternalCondition
 		Range: 1c0
 		Duration: 35
-		Upgrades: tractorstop
+		Condition: tractorstop
 		ValidTargets: Air
 
 DronePlane:
@@ -897,7 +897,7 @@ DronePlane:
 		Image: viscproj
 		Shadow: true
 		Palette: effect
-		Angle: 50
+		LaunchAngle: 50
 	Warhead@1Dam: SpreadDamage
 		Spread: 150
 		Damage: 3000
@@ -964,14 +964,14 @@ EssenceMissile:
 	Warhead@2Eff: CreateEffect
 		Explosions: tibexp2
 		ExplosionPalette: apolra2ialpha
-	Warhead@emp: GrantUpgrade
+	Warhead@emp: GrantExternalCondition
 		Range: 150
 		Duration: 500
-		Upgrades: batteryboost
-	Warhead@emp: GrantUpgrade
+		Condition: batteryboost
+	Warhead@emp: GrantExternalCondition
 		Range: 200
 		Duration: 3
-		Upgrades: EssenceGrab
+		Condition: EssenceGrab
 
 EssenceMissileToBattery:
 	Inherits: EssenceMissile
@@ -979,7 +979,7 @@ EssenceMissileToBattery:
 	ValidTargets: EssenceBattery
 	Warhead@1Dam: SpreadDamage
 		ValidTargets: EssenceBattery
-	Warhead@emp: GrantUpgrade
+	Warhead@emp: GrantExternalCondition
 		ValidTargets: EssenceBattery
 
 HealScrin:
@@ -998,7 +998,7 @@ HealScrin:
 			Light: 75
 			Heavy: 100
 		ValidTargets: ScrinUnit
-	Warhead@emp: GrantUpgrade
+	Warhead@emp: GrantExternalCondition
 		Range: 200
 		Duration: 50
-		Upgrades: ScrinDamageBoost
+		Condition: ScrinDamageBoost

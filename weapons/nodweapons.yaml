@@ -71,7 +71,7 @@ CrusaderBazooka:
 		Shadow: true
 		Inaccuracy: 350
 		Image: DRAGON
-		Angle: 90
+		LaunchAngle: 90
 		TrailImage: small_smoke_trail
 		RateOfTurn: 8
 		RangeLimit: 15c0
@@ -113,7 +113,7 @@ TemplarGrenade:
 		Speed: 320
 		Blockable: false
 		Shadow: true
-		Angle: 45
+		LaunchAngle: 45
 		Inaccuracy: 0c512
 		Image: DISCUS
 	Warhead@1Dam: SpreadDamage
@@ -126,10 +126,10 @@ TemplarGrenade:
 		ImpactSound: expnew12.aud
 		ExplosionPalette: apolra2yalpha
 		InvalidImpactTypes: Water, Air, AirHit
-	Warhead@emp: GrantUpgrade
+	Warhead@emp: GrantExternalCondition
 		Range: 2c0
 		Duration: 75
-		Upgrades: TemplarGrenade
+		Condition: TemplarGrenade
 		ValidStances: Enemy, Neutral
 
 BHRifle:
@@ -217,10 +217,10 @@ BikeExplo:
 		ValidTargets: Ground, Water, Air
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
-	Warhead@emp: GrantUpgrade
+	Warhead@emp: GrantExternalCondition
 		Range: 4c0
 		Duration: 75
-		Upgrades: berserk
+		Condition: berserk
 		ValidStances: Enemy, Neutral
 
 Tick90mm:
@@ -233,7 +233,7 @@ Tick90mm:
 		Speed: 682
 		Image: 120mm
 		Shadow: true
-		Angle: 75
+		LaunchAngle: 75
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
@@ -349,10 +349,10 @@ ToxinBerserk:
 		Spread: 213
 		Damage: -1
 		ValidTargets: Repair
-	Warhead@emp: GrantUpgrade
+	Warhead@emp: GrantExternalCondition
 		Range: 4c0
 		Duration: 75
-		Upgrades: berserk
+		Condition: berserk
 		ValidStances: Enemy, Neutral
 
 StealthRocket:

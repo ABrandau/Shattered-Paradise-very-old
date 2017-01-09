@@ -22,61 +22,61 @@ GACTWR:
 		QuantizedFacings: 32
 	DetectCloaked:
 		Range: 4c0
-		UpgradeTypes: tower
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: tower
+		ConditionMinEnabledLevel: 1
 	Turreted:
 		TurnSpeed: 10
 		InitialFacing: 50
 	AttackTurreted:
-		UpgradeTypes: tower
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: tower
+		ConditionMinEnabledLevel: 1
 	CanPowerDown:
 		IndicatorPalette: mouse
 		PowerupSpeech: EnablePower
 		PowerdownSpeech: DisablePower
 	WithSpriteTurret@VULC:
-		UpgradeTypes: tower.vulcan
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: tower.vulcan
+		ConditionMinEnabledLevel: 1
 		Recoils: no
 		Sequence: turret-vulcan
 	WithSpriteTurret@ROCKET:
-		UpgradeTypes: tower.rocket
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: tower.rocket
+		ConditionMinEnabledLevel: 1
 		Recoils: no
 		Sequence: turret-rocket
 	WithSpriteTurret@SAM:
-		UpgradeTypes: tower.sam
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: tower.sam
+		ConditionMinEnabledLevel: 1
 		Recoils: no
 		Sequence: turret-sam
 	Armament@VULCPRIMARY:
-		UpgradeTypes: tower.vulcan
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: tower.vulcan
+		ConditionMinEnabledLevel: 1
 		Weapon: VulcanTower
 		LocalOffset: 768,85,512
 		MuzzleSequence: muzzle
 		MuzzleSplitFacings: 8
 	Armament@VULCSECONDARY:
-		UpgradeTypes: tower.vulcan
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: tower.vulcan
+		ConditionMinEnabledLevel: 1
 		Name: secondary
 		Weapon: VulcanTower
 		LocalOffset: 768,-85,512
 		MuzzleSequence: muzzle
 		MuzzleSplitFacings: 8
 	Armament@ROCKET:
-		UpgradeTypes: tower.rocket
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: tower.rocket
+		ConditionMinEnabledLevel: 1
 		Weapon: RPGTower
 		LocalOffset: 512,-128,512
 	Armament@SAM:
-		UpgradeTypes: tower.sam
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: tower.sam
+		ConditionMinEnabledLevel: 1
 		Weapon: GdiRedEye
 		LocalOffset: 512,0,512
 	WithMuzzleOverlay:
-		UpgradeTypes: tower.vulcan
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: tower.vulcan
+		ConditionMinEnabledLevel: 1
 	WithIdleOverlay@LIGHTS:
 		Sequence: idle-lights
 	LineBuildNode:
@@ -84,15 +84,15 @@ GACTWR:
 	Power@base:
 		Amount: -10
 	Power@turrets:
-		UpgradeTypes: tower
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: tower
+		ConditionMinEnabledLevel: 1
 		Amount: -20
 	Power@samextra:
-		UpgradeTypes: tower.sam
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: tower.sam
+		ConditionMinEnabledLevel: 1
 		Amount: -10
 	Pluggable:
-		Upgrades:
+		Conditions:
 			tower.vulcan: tower, tower.vulcan
 			tower.rocket: tower, tower.rocket
 			tower.sam: tower, tower.sam
@@ -125,7 +125,7 @@ GAVULC:
 		QuantizedFacings: 32
 	DetectCloaked:
 		Range: 4c0
-		UpgradeTypes: tower
+		RequiresCondition: tower
 	Turreted:
 		TurnSpeed: 10
 		InitialFacing: 50
@@ -346,22 +346,22 @@ GAFIRE:
 		Range: 12c0
 		Type: cloakgenerator
 	PowerMultiplier:
-		UpgradeTypes: FirestormGen
+		RequiresCondition: FirestormGen
 		Modifier: -600
-	DeployToTimedUpgrade:
-		DeployedUpgrades: FirestormGen
+	GrantTimedConditionOnDeploy:
+		DeployedCondition: FirestormGen
 		CooldownTicks: 3000
 		StartsFullyCharged: true
 		DeployedTicks: 300
 	ExplodeWeapon:
-		Weapon: FirestormWallUpgrade
-		UpgradeTypes: FirestormGen
-		UpgradeMinEnabledLevel: 1
+		Weapon: FirestormWallCondition
+		RequiresCondition: FirestormGen
+		ConditionMinEnabledLevel: 1
 		ResetReloadWhenEnabled: false
 	ExplodeWeapon:
 		Weapon: FirestormSpawner
-		UpgradeTypes: FirestormGen
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: FirestormGen
+		ConditionMinEnabledLevel: 1
 		ResetReloadWhenEnabled: false
 	Selectable:
 		Bounds: 110, 60, 3, -4
@@ -394,8 +394,8 @@ GUARDIANDEP:
 	WithRangeCircle:
 		Range: 4c0
 		Type: cloakgenerator
-	UpgradeActorsNear@firestorm:
-		Upgrades: AuraRepair
+	ProximityExternalCondition@firestorm:
+		Condition: AuraRepair
 		Range: 5c0
 		AffectsParent: false
 	Selectable:
@@ -562,8 +562,8 @@ MASTL:
 		TransformSounds: place2.aud
 		NoTransformSounds:
 		Voice: Move
-	UpgradeActorsNear:
-		Upgrades: cloakgenerator, NodCloakHealing
+	ProximityExternalCondition:
+		Condition: cloakgenerator
 		Range: 5c0
 		EnableSound: cloak5.aud
 		DisableSound: cloak5.aud
@@ -599,8 +599,8 @@ DLIMPET:
 		Type: cloakgenerator
 	Selectable:
 		Bounds: 12, 30, 0, 0
-	UpgradeActorsNear@toxin:
-		Upgrades: AcidScaleDmg
+	ProximityExternalCondition@toxin:
+		Condition: AcidScaleDmg
 		ValidStances: Enemy
 		Range: 8c0
 	ExplodeWeapon:
@@ -713,10 +713,10 @@ NAMISL:
 		OrderName: ToxinMissile
 		BeaconPoster:
 		CameraActor: camera
-		UpgradeTypes: ToxinMissile
-		UpgradeMinEnabledLevel: 1
-	GlobalUpgradable:
-		Upgrades: ToxinMissile
+		RequiresCondition: ToxinMissile
+		ConditionMinEnabledLevel: 1
+	GrantConditionOnPrerequisite:
+		Condition: ToxinMissile
 		Prerequisites: ToxinMissile
 	SelectionDecorations:
 		VisualBounds: 75,48
@@ -949,7 +949,7 @@ MUWARD:
 	BodyOrientation:
 		QuantizedFacings: 32
 	Cloak@cloakgenerator:
-		UpgradeTypes:
+		RequiresCondition: !lawea
 		InitialDelay: 50
 		CloakDelay: 50
 		CloakSound: 
@@ -1033,13 +1033,11 @@ SCRWALL:
 SCRGATE_A:
 	Inherits: ^Gate_A
 	Inherits@2: ^ScrinRender
+	Inherits@3: ^ScrinDeathExplo
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 100
 		Prerequisites: ~structures.scr
-	WithBuildingExplosion:
-		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
-		Palette: apolbluealpha
 	Tooltip:
 		Name: Energy Gate
 	Gate:
@@ -1048,13 +1046,11 @@ SCRGATE_A:
 SCRGATE_B:
 	Inherits: ^Gate_B
 	Inherits@2: ^ScrinRender
+	Inherits@3: ^ScrinDeathExplo
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 100
 		Prerequisites: ~structures.scr
-	WithBuildingExplosion:
-		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
-		Palette: apolbluealpha
 	Tooltip:
 		Name: Energy Gate
 	Gate:
@@ -1064,6 +1060,7 @@ SCRNEEDLER:
 	Inherits: ^Defense
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^TowerStealthDetection
+	Inherits@4: ^ScrinDeathExplo
 	Valued:
 		Cost: 500
 	Tooltip:
@@ -1077,9 +1074,6 @@ SCRNEEDLER:
 	Selectable:
 		Bounds: 40, 30, -3, -8
 	RequiresPower:
-	WithBuildingExplosion:
-		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
-		Palette: apolbluealpha
 	DisabledOverlay:
 	Health:
 		HP: 50000
@@ -1088,7 +1082,7 @@ SCRNEEDLER:
 	RenderRangeCircle:
 		RangeCircleType: aa
 	Cloak@CLOAKGENERATOR:
-		UpgradeMinEnabledLevel: 0
+		ConditionMinEnabledLevel: 0
 		Palette: cloakscrin
 		InitialDelay: 150
 		CloakDelay: 150
@@ -1114,6 +1108,7 @@ SCRTRACTOR:
 	Inherits: ^Defense
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^TowerStealthDetection
+	Inherits@4: ^ScrinDeathExplo
 	Valued:
 		Cost: 450
 	Tooltip:
@@ -1123,9 +1118,6 @@ SCRTRACTOR:
 		Queue: Defense
 		Prerequisites: scrrax, ~structures.scr
 		BuildPaletteOrder: 40
-	WithBuildingExplosion:
-		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
-		Palette: apolbluealpha
 	Building:
 	Selectable:
 		Bounds: 40, 30, -3, -8
@@ -1155,6 +1147,7 @@ SCRDRONE:
 	Inherits: ^Defense
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^TowerStealthDetection
+	Inherits@4: ^ScrinDeathExplo
 	Valued:
 		Cost: 1300
 	Tooltip:
@@ -1164,9 +1157,6 @@ SCRDRONE:
 		Queue: Defense
 		BuildPaletteOrder: 60
 		Prerequisites: scrtech, ~structures.scr
-	WithBuildingExplosion:
-		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
-		Palette: apolbluealpha
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1191,6 +1181,7 @@ SCRDRONE:
 SCREXTRACTOR:
 	Inherits: ^Building
 	Inherits@2: ^ScrinRender
+	Inherits@3: ^ScrinDeathExplo
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -1200,9 +1191,6 @@ SCREXTRACTOR:
 		Queue: Defense
 		BuildPaletteOrder: 60
 		Prerequisites: scrtech, ~structures.scr
-	WithBuildingExplosion:
-		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
-		Palette: apolbluealpha
 	Building:
 		Footprint: x
 		Dimensions: 1,1
@@ -1226,6 +1214,7 @@ SCREXTRACTOR:
 SCRSW1:
 	Inherits: ^Building
 	Inherits@2: ^ScrinRender
+	Inherits@3: ^ScrinDeathExplo
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 90
@@ -1262,6 +1251,7 @@ SCRSW1:
 SCRSHIELD:
 	Inherits: ^Building
 	Inherits@2: ^ScrinRender
+	Inherits@3: ^ScrinDeathExplo
 	Valued:
 		Cost: 1000
 	Tooltip:
@@ -1271,9 +1261,6 @@ SCRSHIELD:
 		Queue: Defense
 		BuildPaletteOrder: 80
 		Prerequisites: scrradr, ~structures.scr
-	WithBuildingExplosion:
-		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
-		Palette: apolbluealpha
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2

@@ -19,7 +19,7 @@ E1:
 	WithInfantryBody:
 		AttackSequence: shoot
 	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
+		Prerequisites: barracks.Conditiond
 	RenderSprites:
 		Image: e1.gdi
 		FactionImages:
@@ -147,8 +147,8 @@ HARV:
 		HarvestVoice: Attack
 		DeliverVoice: Action
 	Sellable:
-		UpgradeTypes: AuraRepair
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: AuraRepair
+		ConditionMinEnabledLevel: 1
 	Mobile:
 		TurnSpeed: 10
 		Speed: 90
@@ -216,9 +216,9 @@ LPST:
 		FactionImages:
 			gdi: lpst.gdi
 			nod: lpst.nod
-	DeployToUpgrade:
-		DeployedUpgrades: deployed, notmobile
-		UndeployedUpgrades: undeployed
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed, notmobile
+		UndeployedCondition: undeployed
 		DeployAnimation: make
 		Facing: 160
 		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
@@ -226,14 +226,14 @@ LPST:
 		UndeploySound: clicky1.aud
 	WithVoxelBody:
 		Image: lpst
-		UpgradeTypes: undeployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: undeployed
+		ConditionMinEnabledLevel: 1
 	WithSpriteBody@deployed:
-		UpgradeTypes: undeployed
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: undeployed
+		ConditionMaxEnabledLevel: 0
 	DetectCloaked:
-		UpgradeTypes: deployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: deployed
+		ConditionMinEnabledLevel: 1
 		Range: 18c0
 	RenderDetectionCircle:
 		TrailCount: 3
@@ -271,8 +271,8 @@ HUNTER:
 		Image: GGHUNT
 	WithFacingSpriteBody:
 	Hovers@CRUISING:
-		UpgradeTypes: cruising
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: cruising
+		ConditionMinEnabledLevel: 1
 	QuantizeFacingsFromSequence:
 	AutoSelectionSize:
 	DrawLineToTarget:
@@ -476,8 +476,8 @@ GADEPT:
 	WithDeathAnimation@BIB:
 		DeathSequence: dead-ground
 		UseDeathTypeSuffix: false
-	UpgradeActorsNear:
-		Upgrades: AuraRepair
+	ProximityExternalCondition:
+		Condition: AuraRepair
 		Range: 4c0
 	WithRangeCircle:
 		Range: 4c0
@@ -606,8 +606,8 @@ SHAWALL:
 			nod: wall.nod
 	ExplodeWeapon@1:
 		Weapon: FirestormExploWalls
-		UpgradeTypes: FirestormWallUpgrade
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: FirestormWallCondition
+		ConditionMinEnabledLevel: 1
 		ResetReloadWhenEnabled: false
 
 NAPULS:
@@ -735,7 +735,7 @@ MUMINE:
 	BodyOrientation:
 		QuantizedFacings: 32
 	Cloak@cloakgenerator:
-		UpgradeTypes:
+		RequiresCondition: !lawea
 		CloakSound:
 		InitialDelay: 50
 		CloakDelay: 50

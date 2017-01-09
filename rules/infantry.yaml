@@ -23,7 +23,7 @@ GDIE1:
 	AttackFrontal:
 		Voice: Attack
 	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
+		Prerequisites: barracks.Conditiond
 	RenderSprites:
 
 GRENADIER:
@@ -54,7 +54,7 @@ GRENADIER:
 	AttackFrontal:
 		Voice: Attack
 	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
+		Prerequisites: barracks.Conditiond
 
 JUMPJET:
 	Inherits: ^Soldier
@@ -81,7 +81,7 @@ JUMPJET:
 	AttackFrontal:
 		Voice: Attack
 	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
+		Prerequisites: barracks.Conditiond
 
 JUMPJETAIR:
 	Inherits: JUMPJET
@@ -94,22 +94,22 @@ JUMPJETAIR:
 	-Mobile:
 	-WithInfantryBody
 	WithFacingSpriteBody@idle:
-		UpgradeTypes: JJBuff
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: JJBuff
+		ConditionMaxEnabledLevel: 0
 		Sequence: run
 	WithFacingSpriteBody@attack:
 		Sequence: shoot
-		UpgradeTypes: JJBuff
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: JJBuff
+		ConditionMinEnabledLevel: 1
 	WithShadow:
 	Hovers@CRUISING:
-		UpgradeTypes: cruising
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: cruising
+		ConditionMinEnabledLevel: 1
 	Aircraft:
 		TurnSpeed: 10
 		Speed: 90
-		AirborneUpgrades: airborne
-		CruisingUpgrades: cruising
+		AirborneCondition: airborne
+		CruisingCondition: cruising
 		CruiseAltitude: 2c500
 		IdealSeparation: 0c300
 		LandableTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green, Tiberium, BlueTiberium
@@ -121,28 +121,28 @@ JUMPJETAIR:
 		-LandingSound: orcadwn1.aud
 	-Targetable:
 	Armor:
-		UpgradeTypes: airborne
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: airborne
+		ConditionMaxEnabledLevel: 0
 	Armor@Flying:
 		Type: Light
-		UpgradeTypes: airborne
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: airborne
+		ConditionMinEnabledLevel: 1
 	Targetable@GROUND:
 		TargetTypes: Infantry, Ground
-		UpgradeTypes: airborne
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: airborne
+		ConditionMaxEnabledLevel: 0
 	Targetable@AIRBORNE:
 		TargetTypes: Air, Helicopter, Jumpjet
-		UpgradeTypes: airborne
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: airborne
+		ConditionMinEnabledLevel: 1
 	Armament@SelfBuff:
 		Weapon: JJBuff
 	RevealsShroud:
 		Range: 8c0
 		Type: CenterPosition
 	DamagedByTerrain:
-		UpgradeTypes: airborne
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: airborne
+		ConditionMaxEnabledLevel: 0
 	-TakeCover:
 	-WithDeathAnimation@normal:
 	-WithDeathAnimation@tib:
@@ -229,7 +229,7 @@ EAGLEGUARD:
 	AttackFrontal:
 		Voice: Attack
 	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
+		Prerequisites: barracks.Conditiond
 #######################################################
 #NOD
 #######################################################
@@ -251,9 +251,9 @@ ALTNODE1:
 		TargetTypes: FlameWarrior
     Mobile:
         Speed: 70
-    DeployToUpgrade:
-        DeployedUpgrades: deployed
-        UndeployedUpgrades: undeployed
+    GrantConditionOnDeploy:
+        DeployedCondition: deployed
+        UndeployedCondition: undeployed
         DeployAnimation:
         Facing: 160
         AllowedTerrainTypes:
@@ -263,17 +263,17 @@ ALTNODE1:
     -TakeCover:
     Armament:
         Weapon: MilitantRifle
-        UpgradeTypes: deployed
-        UpgradeMaxEnabledLevel: 0
+        RequiresCondition: deployed
+        ConditionMaxEnabledLevel: 0
     Armament@killsself:
         Weapon: MilitantExplode
-        UpgradeTypes: deployed
-        UpgradeMinEnabledLevel: 1
-        UpgradeMaxAcceptedLevel: 1
+        RequiresCondition: deployed
+        ConditionMinEnabledLevel: 1
+        ConditionMaxAcceptedLevel: 1
     AttackFrontal:
         Voice: Attack
     ProducibleWithLevel:
-        Prerequisites: barracks.upgraded
+        Prerequisites: barracks.Conditiond
     RenderSprites:
 	WithDecoration@bombicon:
 		Image: bombicon
@@ -281,10 +281,10 @@ ALTNODE1:
 		ReferencePoint: Bottom, Left
 		Palette: mouse
 		ShowToEnemies: true
-		UpgradeTypes: deployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: deployed
+		ConditionMinEnabledLevel: 1
 	Passenger:
-		GrantUpgrades: FlameWarriorHologram
+		GrantCondition: FlameWarriorHologram
 
 CRUSADER:
 	Inherits: ^Soldier
@@ -312,10 +312,10 @@ CRUSADER:
 	Passenger:
 		PipType: Blue
 	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
+		Prerequisites: barracks.Conditiond
 	RenderSprites:
 	Passenger:
-		GrantUpgrades: CrusaderHologram
+		GrantCondition: CrusaderHologram
 
 TEMPLAR:
 	Inherits: ^Mutant
@@ -344,10 +344,10 @@ TEMPLAR:
 	AttackFrontal:
 		Voice: Attack
 	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
+		Prerequisites: barracks.Conditiond
 	RenderSprites:
 	Passenger:
-		GrantUpgrades: TemplarHologram
+		GrantCondition: TemplarHologram
 
 MHIJACK:
 	Inherits: ^Mutant
@@ -370,15 +370,15 @@ MHIJACK:
 		TargetTypes: MindControlInmune
 	Mobile:
 		Speed: 76
-		UpgradeTypes: notmobile
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: notmobile
+		ConditionMaxEnabledLevel: 0
 	Infiltrates:
 		Types: SpyInfiltrate
 	Captures:
 		CaptureTypes: Vehicle
 		Sabotage: True
 	Cloak@CLOAKGENERATOR:
-		UpgradeMinEnabledLevel: 0
+		ConditionMinEnabledLevel: 0
 		InitialDelay: 100
 		CloakDelay: 100
 		IsPlayerPalette: true
@@ -387,10 +387,10 @@ MHIJACK:
 		Image: Chamspy
 	-AutoTarget:
 	Passenger:
-		GrantUpgrades: HijackerHologram
-    DeployToUpgrade:
-        DeployedUpgrades: cloakgenerator, NodCloakHealing, deployed, notmobile
-        UndeployedUpgrades: undeployed
+		GrantCondition: HijackerHologram
+    GrantConditionOnDeploy:
+        DeployedCondition: cloakgenerator, NodCloakHealing, deployed ||  notmobile
+        UndeployedCondition: undeployed
         DeployAnimation:
         Facing: 160
         AllowedTerrainTypes:
@@ -434,16 +434,16 @@ BHS:
 		DetonationDelay: 45
 		Voice: Attack
 	Cloak@CLOAKGENERATOR:
-		UpgradeMinEnabledLevel: 0
+		ConditionMinEnabledLevel: 0
 		InitialDelay: 50
 		CloakDelay: 50
 		IsPlayerPalette: true
 		UncloakOn: Attack
 	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
+		Prerequisites: barracks.Conditiond
 	RenderSprites:
 	Passenger:
-		GrantUpgrades: HandHologram
+		GrantCondition: HandHologram
 
 FlameHologram:
 	Inherits@2: ^Hologram
@@ -509,8 +509,7 @@ MARAUDER:
 		ScanRadius: 8
 	Mobile:
 		Speed: 55
-		UpgradeTypes: notmobile
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: !notmobile
 	Armament@1:
 		Weapon: MarauderShotgun
 		Name: OnFoot
@@ -520,38 +519,32 @@ MARAUDER:
 	Armament@2:
 		Weapon: GMarauderShotgun
 		MuzzlePalette: playermut
-	DeployToUpgrade:
-		DeployedUpgrades: deployed, notmobile
-		UndeployedUpgrades: undeployed
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed ||  notmobile
+		UndeployedCondition: undeployed
 		DeployAnimation: make
 		Facing: 160
 		AllowedTerrainTypes: Tiberium, BlueTiberium
 		DeploySound:
 		UndeploySound:
 	WithInfantryBody:
-		UpgradeTypes: deployed, WebDisable
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: !deployed ||  !WebDisable
 	WithInfantryBody@deployed:
 		StandSequences: turret
-		UpgradeTypes: undeployed, WebDisable
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: !undeployed ||  !WebDisable
 	WithMuzzleOverlay:
-		UpgradeTypes: undeployed, WebDisable
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: !undeployed ||  !WebDisable
 	Turreted:
 		TurnSpeed: 50
 		InitialFacing: 160
 	AttackFrontal:
 		Armaments: OnFoot
 		Voice: Attack
-		UpgradeTypes: undeployed
-		UpgradeMinEnabledLevel: 1
-		UpgradeMaxAcceptedLevel: 1
+		RequiresCondition: undeployed
 	AttackTurreted@deployed:
 		Armaments: OnFoot
 		Voice: Attack
-		UpgradeTypes: deployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: deployed
 	SpawnActorOnDeath@tiberium:
 		Probability: 10
 		DeathType:
@@ -560,12 +553,12 @@ MARAUDER:
 		DeathType:
 	RangeMultiplier@deployed:
 		Modifier: 120
-		UpgradeTypes: deployed
+		RequiresCondition: deployed
 	DamageMultiplier@deployed:
-		UpgradeTypes: deployed
+		RequiresCondition: deployed
 		Modifier: 75
 	FirepowerMultiplier@deployed:
-		UpgradeTypes: deployed
+		RequiresCondition: deployed
 		Modifier: 140
 
 E3:
@@ -888,7 +881,7 @@ LEGIO:
 	AttackFrontal:
 		Voice: Attack
 	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
+		Prerequisites: barracks.Conditiond
 
 SHAPESHIFTER:
 	Inherits: ^Soldier
@@ -937,8 +930,7 @@ COLOSSI:
 	Mobile:
 		Speed: 60
 		SharesCell: False
-		UpgradeTypes: notmobile
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: !deployed
 	SpawnActorOnDeath@FLAMEGUY:
 	SpawnActorOnDeath@conversion:
 		Actor: cybdog
@@ -949,41 +941,34 @@ COLOSSI:
 	Armament:
 		Weapon: ColossiTesla
 		LocalOffset: 300,0,1000
-		UpgradeTypes: undeployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: undeployed
 	-Crushable:
 	-TakeCover:
 	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
-	DeployToUpgrade:
-		DeployedUpgrades: deployed, notmobile, damage, damage
-		UndeployedUpgrades: undeployed
+		Prerequisites: barracks.Conditiond
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed
+		UndeployedCondition: undeployed
 		DeployAnimation: make
 		Facing: 160
 		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
 		DeploySound:
 		UndeploySound:
 	WithInfantryBody:
-		UpgradeTypes: undeployed, WebDisable
-		UpgradeMaxEnabledLevel: 1
+		RequiresCondition: undeployed ||  WebDisable
 	WithSpriteBody@deployed:
 		StandSequences: dummy
 		Sequence: dummy
-		UpgradeTypes: undeployed
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: !undeployed
 	WithIdleOverlay@anim:
 		Sequence: deployed
-		UpgradeTypes: undeployed
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: !undeployed
 	AttackFrontal:
 		Voice: Attack
-		UpgradeTypes: undeployed
-		UpgradeMinEnabledLevel: 1
-		UpgradeMaxAcceptedLevel: 1
+		RequiresCondition: undeployed
 	ExplodeWeapon:
 		Weapon: ColossiBlast
-		UpgradeTypes: deployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: deployed
 
 STALKER:
 	Inherits: ^ScrinSoldier
@@ -1017,7 +1002,7 @@ STALKER:
 		AttackSequence: throw
 	-TakeCover:
 	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
+		Prerequisites: barracks.Conditiond
 
 FLOAT:
 	Inherits: ^ScrinSoldier
@@ -1069,8 +1054,8 @@ FLOAT:
 		ReloadCount: 1
 		Name: Essence
 		ReloadDelay: 1
-		UpgradeTypes: EssenceGrab
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: EssenceGrab
+		ConditionMinEnabledLevel: 1
 	# Targetable@EssenceBattery:
 		# TargetTypes: EssenceBattery
 	DamagedByTerrain@ScrinDamage:
@@ -1079,7 +1064,7 @@ FLOAT:
 		Voice: Attack
 	-TakeCover:
 	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
+		Prerequisites: barracks.Conditiond
 		
 BUG:
 	Inherits: ^ScrinSoldier
@@ -1114,7 +1099,7 @@ BUG:
 		Voice: Attack
 	-TakeCover:
 	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
+		Prerequisites: barracks.Conditiond
 
 ############################################
 # CABAL
@@ -1217,7 +1202,7 @@ PDRONE:
 	Hovers:
 	Mobile:
 		Speed: 75
-		-UpgradeTypes: WebDisable
+		-RequiresCondition: WebDisable
 		TerrainSpeeds:
 			Clear: 100
 			Road: 100
@@ -1239,8 +1224,8 @@ PDRONE:
 	AttackFrontal:
 		Voice: Attack
 	-UpgradeOverlay@WebDisable:
-	-DisableOnUpgrade@WebDisable:
-	-TimedUpgradeBar@WebDisable:
+	-DisableOnCondition@WebDisable:
+	-TimedConditionBar@WebDisable:
 	WithDeathAnimation@normal:
 		DeathTypes:
 			BulletDeath: 1
@@ -1316,57 +1301,57 @@ MOTH:
 			BlueTiberium: 100
 			Veins: 100
 			Water: 80
-		UpgradeTypes: notmobile
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: notmobile
+		ConditionMaxEnabledLevel: 0
 	Health:
 		HP: 15000
 	Selectable:
 		Priority: 7
 	SelectionDecorations:
 		VisualBounds: 22,32,-1,-9
-	DeployToUpgrade:
-		DeployedUpgrades: deployed, notmobile
-		UndeployedUpgrades: undeployed
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed ||  notmobile
+		UndeployedCondition: undeployed
 		DeployAnimation: make
 		Facing: 160
 		AllowedTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green
 		DeploySound: place2.aud
 		UndeploySound: clicky1.aud
 	Hovers:
-		UpgradeTypes: undeployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: undeployed
+		ConditionMinEnabledLevel: 1
 	WithInfantryBody:
-		UpgradeTypes: undeployed
-		UpgradeMinEnabledLevel: 1
-		UpgradeMaxEnabledLevel: 2
+		RequiresCondition: undeployed
+		ConditionMinEnabledLevel: 1
+		ConditionMaxEnabledLevel: 2
 	WithSpriteBody@deployed:
 		StartSequence: dot
 		Sequence: dot
-		UpgradeTypes: undeployed
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: undeployed
+		ConditionMaxEnabledLevel: 0
 	Cloak@asd:
 		Palette: cloakcab
 		IsPlayerPalette: true
-		UpgradeTypes: deployed
-		UpgradeMinEnabledLevel: 1
-		WhileCloakedUpgrades: armor
+		RequiresCondition: deployed
+		ConditionMinEnabledLevel: 1
+		WhileCloakedCondition: armor
 		UncloakOn: Demolish
 	-WithIdleOverlay@web:
 	DamageMultiplier@abudctorarmor:
-		UpgradeTypes: deployed
+		RequiresCondition: deployed
 		BaseLevel: 1
 		Modifier: 75
 	WithIdleOverlay:
 		Sequence: idle
-		UpgradeTypes: deployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: deployed
+		ConditionMinEnabledLevel: 1
 	Armament@primary:
 		Weapon: LurkerHit
-		UpgradeTypes: deployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: deployed
+		ConditionMinEnabledLevel: 1
 	AttackOmni:
-		UpgradeTypes: deployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: deployed
+		ConditionMinEnabledLevel: 1
 
 REAPERCAB:
 	Inherits: ^CabalDroneInfantry
@@ -1395,7 +1380,7 @@ REAPERCAB:
 	Mobile:
 		Speed: 80
 		SharesCell: False
-		-UpgradeTypes: WebDisable
+		-RequiresCondition: WebDisable
 	Explodes:
 		Weapon: UnitExplodeSmall
 		EmptyWeapon: UnitExplodeSmall
@@ -1417,10 +1402,10 @@ REAPERCAB:
 	AttackFrontal:
 		Voice: Attack
 	-UpgradeOverlay@WebDisable:
-	-DisableOnUpgrade@WebDisable:
-	-TimedUpgradeBar@WebDisable:
+	-DisableOnCondition@WebDisable:
+	-TimedConditionBar@WebDisable:
 	WithInfantryBody:
-		UpgradeMaxEnabledLevel: 50	
+		ConditionMaxEnabledLevel: 50	
 	-WithIdleOverlay@web:
 
 GLAD:
@@ -1491,7 +1476,7 @@ CYC2:
 	Mobile:
 		Speed: 56
 	Cloak@CLOAKGENERATOR:
-		UpgradeTypes:
+		RequiresCondition: !lawea
 		InitialDelay: 0
 		CloakDelay: 90
 		IsPlayerPalette: true

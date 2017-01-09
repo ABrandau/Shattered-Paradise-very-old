@@ -38,19 +38,19 @@ GAPOWR:
 	ScalePowerWithHealth:
 	DisabledOverlay:
 	Pluggable@pluga:
-		Upgrades:
+		Conditions:
 			powrup: powrup.a
 	Power@pluga:
-		UpgradeTypes: powrup.a
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: powrup.a
+		ConditionMinEnabledLevel: 1
 		Amount: 100
 	WithIdleOverlay@pluga:
-		UpgradeTypes: powrup.a
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: powrup.a
+		ConditionMinEnabledLevel: 1
 		Sequence: idle-powrupa
 	WithIdleOverlay@plugb:
-		UpgradeTypes: powrup.a
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: powrup.a
+		ConditionMinEnabledLevel: 1
 		Sequence: idle-powrupb
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
@@ -72,8 +72,8 @@ GAPILE:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
-	UpgradeActorsNear:
-		Upgrades: MineReam
+	ProximityExternalCondition:
+		Condition: MineReam
 		Range: 4c0
 	WithRangeCircle:
 		Range: 4c0
@@ -113,8 +113,8 @@ GAPILE:
 		ReferencePoint: Top
 		Color: E0D048
 		ZOffset: 9999
-		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: primary
+		ConditionMinEnabledLevel: 1
 
 GAWEAP:
 	Inherits: ^Building
@@ -173,8 +173,8 @@ GAWEAP:
 		ReferencePoint: Top
 		Color: E0D048
 		ZOffset: 9999
-		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: primary
+		ConditionMinEnabledLevel: 1
 
 GAHPAD:
 	Inherits: ^Building
@@ -225,8 +225,8 @@ GAHPAD:
 		ReferencePoint: Top
 		Color: E0D048
 		ZOffset: 9999
-		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: primary
+		ConditionMinEnabledLevel: 1
 
 GARADR:
 	Inherits: ^Building
@@ -311,7 +311,7 @@ GAPLUG:
 		Cost: 1500
 	Tooltip:
 		Name: GDI Upgrade Center
-		Description: Can be upgraded for additional technology.
+		Description: Can be Conditiond for additional technology.
 	Selectable:
 		Bounds: 115,72,0,-12
 	Buildable:
@@ -350,55 +350,55 @@ GAPLUG:
 		Weapon: IonCannonSpawner
 		OrderName: IonCannon2
 		Cursor: ioncannon
-		UpgradeTypes: plug.ioncannon
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: plug.ioncannon
+		ConditionMinEnabledLevel: 1
 	DetonateWeaponPower@pods:
 		Icon: droppods
 		DisplayTimer: True
 		DisplayBeacon: True
-		Description: Drop Pods
+		Description: Helldiver Drop
 		LongDesc: Deploys shock troopers at the targetted location.
 		OrderName: Droppod
 		Weapon: DroppodSpawner
-		UpgradeTypes: plug.hunterseeker
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: plug.hunterseeker
+		ConditionMinEnabledLevel: 1
 		ChargeTime: 240
 	SupportPowerChargeBar:
 	Power:
 		Amount: -100
 	Power@ioncannon:
-		UpgradeTypes: plug.ioncannon
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: plug.ioncannon
+		ConditionMinEnabledLevel: 1
 		Amount: -100
 	Power@hunterseeker:
-		UpgradeTypes: plug.hunterseeker
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: plug.hunterseeker
+		ConditionMinEnabledLevel: 1
 		Amount: -50
 	Pluggable@pluga:
 		Offset: 0,2
-		Upgrades:
+		Conditions:
 			plug.ioncannon: plug.ioncannon, plug.ioncannona
 			plug.hunterseeker: plug.hunterseeker, plug.hunterseekera
 	WithIdleOverlay@ioncannona:
-		UpgradeTypes: plug.ioncannona
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: plug.ioncannona
+		ConditionMinEnabledLevel: 1
 		Sequence: idle-ioncannona
 	WithIdleOverlay@hunterseekera:
-		UpgradeTypes: plug.hunterseekera
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: plug.hunterseekera
+		ConditionMinEnabledLevel: 1
 		Sequence: idle-hunterseekera
 	Pluggable@plugb:
 		Offset: 1,2
-		Upgrades:
+		Conditions:
 			plug.ioncannon: plug.ioncannon, plug.ioncannonb
 			plug.hunterseeker: plug.hunterseeker, plug.hunterseekerb
 	WithIdleOverlay@ioncannonb:
-		UpgradeTypes: plug.ioncannonb
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: plug.ioncannonb
+		ConditionMinEnabledLevel: 1
 		Sequence: idle-ioncannonb
 	WithIdleOverlay@hunterseekerb:
-		UpgradeTypes: plug.hunterseekerb
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: plug.hunterseekerb
+		ConditionMinEnabledLevel: 1
 		Sequence: idle-hunterseekerb
 	ProvidesPrerequisite@buildingname:
 	SelectionDecorations:
@@ -527,8 +527,8 @@ NAHAND:
 		Description: Produces infantry.
 	ProvidesPrerequisite@engineer:
 		Prerequisite: barracks
-	UpgradeActorsNear:
-		Upgrades: MineReam
+	ProximityExternalCondition:
+		Condition: MineReam
 		Range: 4c0
 	WithRangeCircle:
 		Range: 4c0
@@ -569,8 +569,8 @@ NAHAND:
 		ReferencePoint: Top
 		Color: E0D048
 		ZOffset: 9999
-		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: primary
+		ConditionMinEnabledLevel: 1
 
 NAWEAP:
 	Inherits: ^Building
@@ -625,8 +625,8 @@ NAWEAP:
 		ReferencePoint: Top
 		Color: E0D048
 		ZOffset: 9999
-		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: primary
+		ConditionMinEnabledLevel: 1
 
 NAHPAD:
 	Inherits: ^Building
@@ -677,8 +677,8 @@ NAHPAD:
 		ReferencePoint: Top
 		Color: E0D048
 		ZOffset: 9999
-		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: primary
+		ConditionMinEnabledLevel: 1
 
 NARADR:
 	Inherits: ^Building
@@ -816,12 +816,12 @@ NASTLH:
 	WithRangeCircle:
 		Range: 12c0
 		Type: cloakgenerator
-	UpgradeActorsNear:
-		Upgrades: cloakgenerator, NodCloakHealing
+	ProximityExternalCondition:
+		Condition: cloakgenerator
 		Range: 12c0
 		EnableSound: cloak5.aud
 		DisableSound: cloak5.aud
-		AffectsParent: false
+		AffectsParent: true
 	Power:
 		Amount: -300
 	RequiresPower:
@@ -930,8 +930,8 @@ MURAX:
 		Dimensions: 2,2
 	Selectable:
 		Bounds: 88, 48, 0, -8
-	UpgradeActorsNear:
-		Upgrades: MineReam
+	ProximityExternalCondition:
+		Condition: MineReam
 		Range: 4c0
 	WithRangeCircle:
 		Range: 4c0
@@ -963,8 +963,8 @@ MURAX:
 		ReferencePoint: Top
 		Color: E0D048
 		ZOffset: 9999
-		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: primary
+		ConditionMinEnabledLevel: 1
 
 MUPROC:
 	Inherits: PROC
@@ -1047,8 +1047,8 @@ MUWEAP:
 		ReferencePoint: Top
 		Color: E0D048
 		ZOffset: 9999
-		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: primary
+		ConditionMinEnabledLevel: 1
 
 MUAIR:
 	Inherits: ^Building
@@ -1093,8 +1093,8 @@ MUAIR:
 		ReferencePoint: Top
 		Color: E0D048
 		ZOffset: 9999
-		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: primary
+		ConditionMinEnabledLevel: 1
 
 MURADR:
 	Inherits: ^Building
@@ -1203,9 +1203,16 @@ MUSTABLE:
 ##########################################################
 # SCRIN
 ##########################################################
+^ScrinDeathExplo:
+	Explodes:
+		Weapon: ScrinBuildingExplode
+		EmptyWeapon: ScrinBuildingExplode
+		Type: Footprint
+
 drached:
 	Inherits: ^Building
 	Inherits@2: ^ScrinRender
+	Inherits@3: ^ScrinDeathExplo
 	Building:
 		Footprint: xxx xxx xxx
 		BuildSounds: facbld1.aud
@@ -1223,9 +1230,6 @@ drached:
 	Tooltip:
 		Name: Deployed Host Station
 		Description: Builds base structures.
-	WithBuildingExplosion:
-		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
-		Palette: apolbluealpha
 	BaseBuilding:
 	Transforms:
 		IntoActor: drache
@@ -1253,6 +1257,7 @@ drached:
 SCRPOWR:
 	Inherits: ^Building
 	Inherits@2: ^ScrinRender
+	Inherits@3: ^ScrinDeathExplo
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 0
@@ -1267,9 +1272,6 @@ SCRPOWR:
 	Building:
 		Footprint: xx xx xx
 		Dimensions: 3,2
-	WithBuildingExplosion:
-		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
-		Palette: apolbluealpha
 	Health:
 		HP: 100000
 	Armor:
@@ -1292,6 +1294,7 @@ SCRPOWR:
 SCRADVPOWR:
 	Inherits: ^Building
 	Inherits@2: ^ScrinRender
+	Inherits@3: ^ScrinDeathExplo
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 2
@@ -1306,9 +1309,6 @@ SCRADVPOWR:
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
-	WithBuildingExplosion:
-		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
-		Palette: apolbluealpha
 	Health:
 		HP: 110000
 	Armor:
@@ -1336,6 +1336,7 @@ SCRADVPOWR:
 SCRRAX:
 	Inherits: ^Building
 	Inherits@2: ^ScrinRender
+	Inherits@3: ^ScrinDeathExplo
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 30
@@ -1347,16 +1348,13 @@ SCRRAX:
 		Description: Allows the player to call in Scrin Infantry.
 	ProvidesPrerequisite:
 		Prerequisite: scrrax
-	WithBuildingExplosion:
-		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
-		Palette: apolbluealpha
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
 	Selectable:
 		Bounds: 88, 48, 0, -8
-	UpgradeActorsNear:
-		Upgrades: MineReam
+	ProximityExternalCondition:
+		Condition: MineReam
 		Range: 4c0
 	WithRangeCircle:
 		Range: 4c0
@@ -1393,12 +1391,13 @@ SCRRAX:
 		ReferencePoint: Top
 		Color: E0D048
 		ZOffset: 9999
-		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: primary
+		ConditionMinEnabledLevel: 1
 
 SCRPROC:
 	Inherits: ^Building
 	Inherits@2: ^ScrinRender
+	Inherits@3: ^ScrinDeathExplo
 	Valued:
 		Cost: 1700
 	CustomSellValue:
@@ -1415,9 +1414,6 @@ SCRPROC:
 	Building:
 		Footprint: xx== xx== xx==
 		Dimensions: 4,3
-	WithBuildingExplosion:
-		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
-		Palette: apolbluealpha
 	Selectable:
 		Bounds: 150, 122, -10, -18
 	Health:
@@ -1449,14 +1445,12 @@ SCRPROC:
 SCRWEAP:
 	Inherits: ^Building
 	Inherits@2: ^ScrinRender
+	Inherits@3: ^ScrinDeathExplo
 	Valued:
 		Cost: 2000
 	Tooltip:
 		Name: Scrin Forge
 		Description: Produces vehicles.
-	WithBuildingExplosion:
-		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
-		Palette: apolbluealpha
 	ProvidesPrerequisite:
 		Prerequisite: scrweap
 	Buildable:
@@ -1499,12 +1493,13 @@ SCRWEAP:
 		ReferencePoint: Top
 		Color: E0D048
 		ZOffset: 9999
-		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: primary
+		ConditionMinEnabledLevel: 1
 
 SCRAIR:
 	Inherits: ^Building
 	Inherits@2: ^ScrinRender
+	Inherits@3: ^ScrinDeathExplo
 	Valued:
 		Cost: 1500
 	Tooltip:
@@ -1514,9 +1509,6 @@ SCRAIR:
 		BuildPaletteOrder: 60
 		Queue: Building
 		Prerequisites: scrproc, ~structures.scr
-	WithBuildingExplosion:
-		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
-		Palette: apolbluealpha
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -1553,12 +1545,13 @@ SCRAIR:
 		ReferencePoint: Top
 		Color: E0D048
 		ZOffset: 9999
-		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: primary
+		ConditionMinEnabledLevel: 1
 		
 SCRDEPOT:
 	Inherits: ^Building
 	Inherits@2: ^ScrinRender
+	Inherits@3: ^ScrinDeathExplo
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 100
@@ -1568,9 +1561,6 @@ SCRDEPOT:
 	Tooltip:
 		Name: Scrin Maintenance Depot
 		Description: Allows the scrin commander to repair vehicles.\nVehicles near it auto repair slowly.
-	WithBuildingExplosion:
-		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
-		Palette: apolbluealpha
 	Building:
 		Footprint: _x_ xxx _x_
 		Dimensions: 3,3
@@ -1584,8 +1574,8 @@ SCRDEPOT:
 		FinishRepairingNotification: UnitRepaired
 		HpPerStep: 2000
 		PlayerExperience: 15
-	UpgradeActorsNear:
-		Upgrades: AuraRepair
+	ProximityExternalCondition:
+		Condition: AuraRepair
 		Range: 4c0
 	WithRangeCircle:
 		Range: 4c0
@@ -1601,6 +1591,7 @@ SCRDEPOT:
 SCRRADR:
 	Inherits: ^Building
 	Inherits@2: ^ScrinRender
+	Inherits@3: ^ScrinDeathExplo
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 90
@@ -1612,9 +1603,6 @@ SCRRADR:
 		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
 	ProvidesPrerequisite:
 		Prerequisite: radar
-	WithBuildingExplosion:
-		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
-		Palette: apolbluealpha
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -1650,6 +1638,7 @@ SCRRADR:
 SCRTECH:
 	Inherits: ^Building
 	Inherits@2: ^ScrinRender
+	Inherits@3: ^ScrinDeathExplo
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 100
@@ -1661,9 +1650,6 @@ SCRTECH:
 		Description: Provides an area for surface sampling\nAllows the Scrin to adapt their most advanced units\nto the host planet.
 	ProvidesPrerequisite:
 		Prerequisite: tech
-	WithBuildingExplosion:
-		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
-		Palette: apolbluealpha
 	Building:
 		Footprint: xx xx xx
 		Dimensions: 2,3
@@ -1746,8 +1732,8 @@ CABCLAW:
 		Dimensions: 2,3
 	Selectable:
 		Bounds: 96, 70, 0, -24
-	UpgradeActorsNear:
-		Upgrades: MineReam
+	ProximityExternalCondition:
+		Condition: MineReam
 		Range: 4c0
 	WithRangeCircle:
 		Range: 4c0
@@ -1780,8 +1766,8 @@ CABCLAW:
 		ReferencePoint: Top
 		Color: E0D048
 		ZOffset: 9999
-		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: primary
+		ConditionMinEnabledLevel: 1
 
 CABPROC:
 	Inherits: PROC
@@ -1867,8 +1853,8 @@ CABWEAP:
 		ReferencePoint: Top
 		Color: E0D048
 		ZOffset: 9999
-		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: primary
+		ConditionMinEnabledLevel: 1
 
 CABAIR:
 	Inherits: ^Building
@@ -1914,8 +1900,8 @@ CABAIR:
 		ReferencePoint: Top
 		Color: E0D048
 		ZOffset: 9999
-		UpgradeTypes: primary
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: primary
+		ConditionMinEnabledLevel: 1
 
 CABRADR:
 	Inherits: ^Building

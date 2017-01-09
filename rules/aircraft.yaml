@@ -35,8 +35,8 @@ CLOUD1:
 		DamageTypes: CloudDie
 	Armor:
 		Type: Wood
-	UpgradeActorsNear:
-		Upgrades: Poison
+	ProximityExternalCondition:
+		Condition: Poison
 		Range: 1c512
 		ValidStances: Ally, Enemy, Neutral
 	AttackHeli:
@@ -123,7 +123,7 @@ ORCAB:
 		MaximumPitch: 120
 		TurnSpeed: 4
 		Speed: 120
-		AirborneUpgrades: airborne
+		AirborneCondition: airborne
 		MoveIntoShroud: true
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
@@ -148,8 +148,7 @@ ORCAB:
 	AutoTarget:
 	RenderSprites:
 	Hovers@CRUISING:
-		UpgradeTypes: cruising
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: cruising
 	SpawnActorOnDeath:
 		Actor: ORCAB.Husk
 
@@ -405,13 +404,11 @@ APACHE:
 	WithIdleOverlay@ROTORAIR:
 		Offset: 85,0,384
 		Sequence: rotor
-		UpgradeTypes: airborne
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: airborne
 	WithIdleOverlay@ROTORGROUND:
 		Offset: 85,0,384
 		Sequence: slow-rotor
-		UpgradeTypes: airborne
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: !airborne
 	RenderSprites:
 	SpawnActorOnDeath:
 		Actor: APACHE.Husk
@@ -445,7 +442,7 @@ SCRIN:
 		MaximumPitch: 90
 		TurnSpeed: 6
 		Speed: 180
-		AirborneUpgrades: airborne
+		AirborneCondition: airborne
 		MoveIntoShroud: true
 		TakeoffSound: dropup1.aud
 		LandingSound: dropdwn1.aud
@@ -558,13 +555,11 @@ MUTHELI:
 	WithIdleOverlay@ROTORAIR:
 		Offset: 85,0,384
 		Sequence: rotor
-		UpgradeTypes: airborne
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: airborne
 	WithIdleOverlay@ROTORGROUND:
 		Offset: 85,0,384
 		Sequence: slow-rotor
-		UpgradeTypes: airborne
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: !airborne
 	Armament@primary:
 		Weapon: GargoylVulcan
 	Armament@secondary:
@@ -605,7 +600,7 @@ WETP:
 		MaximumPitch: 120
 		TurnSpeed: 6
 		Speed: 150
-		AirborneUpgrades: airborne
+		AirborneCondition: airborne
 		MoveIntoShroud: true
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
@@ -636,8 +631,7 @@ WETP:
 		ScanRadius: 8
 	RenderSprites:
 	Hovers@CRUISING:
-		UpgradeTypes: cruising
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: cruising
 	SpawnActorOnDeath:
 		Actor: WETP.Husk
 
@@ -676,7 +670,7 @@ SCRPOD:
 		CruiseAltitude: 3000
 		TurnSpeed: 5
 		Speed: 500
-		AirborneUpgrades: airborne
+		AirborneCondition: airborne
 		MoveIntoShroud: true
 		TakeoffSound: dropup1.aud
 		LandingSound: dropdwn1.aud
@@ -719,7 +713,7 @@ STORMRIDER:
 		MaximumPitch: 90
 		TurnSpeed: 8
 		Speed: 160
-		AirborneUpgrades: airborne
+		AirborneCondition: airborne
 		MoveIntoShroud: true
 		TakeoffSound: dropup1.aud
 		LandingSound: dropdwn1.aud
@@ -925,7 +919,7 @@ SCRTRANS:
 		MaxWeight: 15
 		PipCount: 15
 		UnloadVoice: Unload
-		LoadingUpgrades: notmobile
+		LoadingCondition: notmobile
 	Selectable:
 		Bounds: 100,50
 	Aircraft:
@@ -1114,13 +1108,13 @@ MOTHERSHIP:
 	Armament:
 		Weapon: FighterSpawn
 		ForceTargetStances: Enemy
-	UpgradeActorsNear:
+	ProximityExternalCondition:
 		Range: 3c0
-		Upgrades: Return
+		Condition: Return
 		ValidStances: Ally
-	UpgradeActorsNear@asd:
+	ProximityExternalCondition@asd:
 		Range: 30c0
-		Upgrades: ForceReturn
+		Condition: ForceReturn
 		ValidStances: Ally
 	AmmoPool:
 		Ammo: 4
@@ -1182,8 +1176,7 @@ STORMRIDERSPAWN:
 		PercentageStep: -100
 		Delay: 1
 		HealIfBelow: 101
-		UpgradeTypes: ForceReturn
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: !ForceReturn
 	-UpdatesPlayerStatistics:
 	-ActorLostNotification:
 	-AppearsOnRadar:
@@ -1227,8 +1220,7 @@ STORMRIDERRETURN:
 		PercentageStep: -100
 		Delay: 1
 		HealIfBelow: 101
-		UpgradeTypes: Return
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: Return
 	AutoTarget:
 		ScanRadius: 99
 		InitialStance: AttackAnything
@@ -1269,8 +1261,7 @@ MINIWYVERM:
 		TargetTypes: AttackDrone
 	Targetable@GROUND:
 		TargetTypes: Vehicle
-		-UpgradeTypes: airborne
-		-UpgradeMaxEnabledLevel: 0
+		-RequiresCondition: airborne
 	-UpdatesPlayerStatistics:
 	-Targetable@AIRBORNE:
 	RejectsOrders:
@@ -1463,13 +1454,11 @@ DEVOURER:
 	WithShadow:
 	RenderSprites:
 	WithFacingSpriteBody@idle:
-		UpgradeTypes: DevoBuff
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: !DevoBuff
 		Sequence: idle
 	WithFacingSpriteBody@attack:
 		Sequence: shoot
-		UpgradeTypes: DevoBuff
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: DevoBuff
 	BodyOrientation:
 		QuantizedFacings: 8
 	SpawnActorOnDeath:

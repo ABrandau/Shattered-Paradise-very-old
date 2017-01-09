@@ -1,4 +1,6 @@
 ^RifleWarhead:	#Inherits: ^RifleWarhead
+	Projectile: Bullet
+		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 20
@@ -8,10 +10,10 @@
 			Light: 25
 			Heavy: 15
 			Concrete: 5
-	Warhead@BounceUpgrade: GrantUpgrade
+	Warhead@BounceUpgrade: GrantExternalCondition
 		Range: 150
 		Duration: 5
-		Upgrades: RifleWarhead
+		Condition: RifleWarhead
 
 ^RocketWarhead:	#Inherits: ^RocketWarhead
 	Warhead@1Dam: SpreadDamage
@@ -21,10 +23,10 @@
 			Light: 100
 			Heavy: 100
 			Concrete: 60
-	Warhead@BounceUpgrade: GrantUpgrade
+	Warhead@BounceUpgrade: GrantExternalCondition
 		Range: 150
 		Duration: 5
-		Upgrades: RocketWarhead
+		Condition: RocketWarhead
 
 ^APWarhead:	#Inherits: ^APWarhead , Tanks, Wasps and Gladiators use this.
 	Warhead@1Dam: SpreadDamage
@@ -34,10 +36,10 @@
 			Light: 100
 			Heavy: 130
 			Concrete: 45
-	Warhead@BounceUpgrade: GrantUpgrade
+	Warhead@BounceUpgrade: GrantExternalCondition
 		Range: 150
 		Duration: 5
-		Upgrades: APWarhead
+		Condition: APWarhead
 
 ^FlameWarhead:	#Inherits: ^FlameWarhead , Specific Anti infantry.
 	Warhead@1Dam: SpreadDamage
@@ -47,10 +49,10 @@
 			Light: 59
 			Heavy: 6
 			Concrete: 2
-	Warhead@BounceUpgrade: GrantUpgrade
+	Warhead@BounceUpgrade: GrantExternalCondition
 		Range: 150
 		Duration: 5
-		Upgrades: FlameWarhead
+		Condition: FlameWarhead
 
 ^ArtilleryWarhead: #Inherits: ^ArtilleryWarhead , Inverted curve.
 	Warhead@1Dam: SpreadDamage
@@ -60,10 +62,10 @@
 			Light: 68
 			Heavy: 35
 			Concrete: 35
-	Warhead@BounceUpgrade: GrantUpgrade
+	Warhead@BounceUpgrade: GrantExternalCondition
 		Range: 150
 		Duration: 5
-		Upgrades: ArtilleryWarhead
+		Condition: ArtilleryWarhead
 
 #Mostly Unused.
 
@@ -76,10 +78,10 @@
 			Light: 75
 			Heavy: 45
 			Concrete: 100
-	Warhead@BounceUpgrade: GrantUpgrade
+	Warhead@BounceUpgrade: GrantExternalCondition
 		Range: 150
 		Duration: 5
-		Upgrades: ArtilleryWarhead
+		Condition: ArtilleryWarhead
 			
 ^GrenadeWarhead:	#Inherits: ^GrenadeWarhead , Used by grenadiers and Battleships.
 	Warhead@1Dam: SpreadDamage
@@ -92,10 +94,10 @@
 			Light: 40
 			Heavy: 15
 			Concrete: 28
-	Warhead@BounceUpgrade: GrantUpgrade
+	Warhead@BounceUpgrade: GrantExternalCondition
 		Range: 150
 		Duration: 5
-		Upgrades: ArtilleryWarhead
+		Condition: ArtilleryWarhead
 
 ^AcidWarhead:	#Inherits: ^AcidWarhead Used by knights, scrin turrets, scorpions and some critters.
 	Warhead@1Dam: SpreadDamage
@@ -105,10 +107,10 @@
 			Light: 80
 			Heavy: 60
 			Concrete: 2
-	Warhead@BounceUpgrade: GrantUpgrade
+	Warhead@BounceUpgrade: GrantExternalCondition
 		Range: 150
 		Duration: 5
-		Upgrades: FlameWarhead
+		Condition: FlameWarhead
 
 ^DecentFalloff:	#Inherits: ^DecentFalloff
 	Warhead@1Dam: SpreadDamage
@@ -123,10 +125,10 @@
 			Light: 100
 			Heavy: 100
 			Concrete: 25
-	Warhead@BounceUpgrade: GrantUpgrade
+	Warhead@BounceUpgrade: GrantExternalCondition
 		Range: 150
 		Duration: 5
-		Upgrades: FullDamage
+		Condition: FullDamage
 
 ^NoDamage:	#Inherits: ^NoDamage
 	Warhead@1Dam: SpreadDamage

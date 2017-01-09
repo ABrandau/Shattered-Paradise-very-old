@@ -106,28 +106,22 @@ APC:
 		MaxWeight: 5
 		PipCount: 5
 		UnloadVoice: Unload
-		LoadingUpgrades: notmobile
+		LoadingCondition: notmobile
 		EjectOnDeath: true
-	UpgradeOnTerrain:
-		Upgrades: inwater
+	GrantConditionOnTerrain:
+		Condition: inwater
 		TerrainTypes: Water
 	WithVoxelBody:
-		UpgradeTypes: inwater
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: !inwater
 	WithVoxelBody@water:
 		Sequence: water
-		UpgradeTypes: inwater
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: inwater
 	LeavesTrails:
 		Image: wake
 		Palette: effect
 		TerrainTypes: Water
 		StationaryInterval: 18
 		MovingInterval: 6
-	Armor:
-		Type: Light
-		UpgradeTypes: damaged
-		UpgradeMaxEnabledLevel: 0
 
 HVR:
 	Inherits: ^VoxelVehicle
@@ -356,8 +350,7 @@ TTNK:
 		HP: 35000
 	Armor:
 		Type: Light
-		UpgradeTypes: undeployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: undeployed
 	Armament@PRIMARY:
 		Weapon: Tick90mm
 		LocalOffset: 350,-0,400
@@ -373,25 +366,21 @@ TTNK:
 		Range: 5c0
 	RenderSprites:
 		Image: ttnk
-	DeployToUpgrade:
-		DeployedUpgrades: deployed, notmobile, cloakgenerator, NodCloakHealing
-		UndeployedUpgrades: undeployed
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed ||  notmobile, cloakgenerator, NodCloakHealing
+		UndeployedCondition: undeployed
 		DeployAnimation: make
 		Facing: 160
 		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
 		DeploySound: place2.aud
 		UndeploySound: clicky1.aud
 	WithVoxelBody:
-		UpgradeTypes: undeployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: undeployed
 	WithSpriteBody@deployed:
-		UpgradeTypes: undeployed
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: !undeployed
 	AttackFrontal:
 		Voice: Attack
-		UpgradeTypes: undeployed
-		UpgradeMinEnabledLevel: 1
-		UpgradeMaxAcceptedLevel: 1
+		RequiresCondition: undeployed
 	Turreted:
 		TurnSpeed: 6
 		Turret: deployed
@@ -400,20 +389,16 @@ TTNK:
 	WithVoxelBarrel:
 		Armament: deployed
 		LocalOffset: 128, 0, 256
-		UpgradeTypes: deployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: deployed
 	WithVoxelTurret@deployed:
 		Turret: deployed
-		UpgradeTypes: deployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: deployed
 	AttackTurreted@deployed:
 		Voice: Attack
-		UpgradeTypes: deployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: deployed
 	Armor@deployed:
 		Type: Concrete
-		UpgradeTypes: deployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: deployed
 	AutoTarget:
 
 BIKE:
@@ -471,18 +456,14 @@ SAPC:
 	-Targetable@AIRBORNE:
 	Targetable:
 		TargetTypes: Ground, Vehicle, Repair
-		UpgradeTypes: airborne
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: airborne
 	WithVoxelBody:
-		UpgradeTypes: airborne
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: airborne
 	ExplodeWeapon:
 		Weapon: SUBAPCTRAIL
-		UpgradeTypes: airborne
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: !airborne
 	Cloak@CLOAKGENERATOR:
-		UpgradeTypes: airborne
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: !airborne
 		CloakDelay: 0
 		CloakSound: subdril1.aud
 		UncloakSound: subdril1.aud
@@ -496,7 +477,7 @@ SAPC:
 		MaxWeight: 5
 		PipCount: 5
 		UnloadVoice: Unload
-		LoadingUpgrades: notmobile
+		LoadingCondition: notmobile
 
 REPAIR:
 	Inherits: ^VoxelTank
@@ -551,32 +532,32 @@ HOLOGRAMPROJECTOR:
 		MaxWeight: 1
 		PipCount: 1
 		UnloadVoice: Unload
-		LoadingUpgrades: notmobile
+		LoadingCondition: notmobile
 		EjectOnDeath: true
 	ExplodeWeapon@Flame:
 		Weapon: FlameHologram
-		UpgradeTypes: FlameWarriorHologram
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: FlameWarriorHologram
+		ConditionMinEnabledLevel: 1
 	ExplodeWeapon@Crusa:
 		Weapon: CrusaHologram
-		UpgradeTypes: CrusaderHologram
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: CrusaderHologram
+		ConditionMinEnabledLevel: 1
 	ExplodeWeapon@Engineer:
 		Weapon: EngineerHologram
-		UpgradeTypes: EngineerHologram
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: EngineerHologram
+		ConditionMinEnabledLevel: 1
 	ExplodeWeapon@Templar:
 		Weapon: TemplarHologram
-		UpgradeTypes: TemplarHologram
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: TemplarHologram
+		ConditionMinEnabledLevel: 1
 	ExplodeWeapon@Hijacker:
 		Weapon: HijackerHologram
-		UpgradeTypes: HijackerHologram
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: HijackerHologram
+		ConditionMinEnabledLevel: 1
 	ExplodeWeapon@Hand:
 		Weapon: HandHologram
-		UpgradeTypes: HandHologram
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: HandHologram
+		ConditionMinEnabledLevel: 1
 
 SUBTANK:
 	Inherits: ^VoxelTank
@@ -684,7 +665,7 @@ STNK:
 	Armor:
 		Type: Light
 	Cloak@cloakgenerator:
-		UpgradeTypes:
+		RequiresCondition: !lawea
 		InitialDelay: 80
 		CloakDelay: 80
 		CloakSound: cloak5.aud
@@ -796,7 +777,6 @@ WOLF:
 	Targetable:
 		TargetTypes: Ground, Infantry, Razorshark
 	-Crushable:
-	-SelfHealing@VentilatorPoison:
 	AttackFrontal:
 	AutoTarget:
 	WithRangeCircle:
@@ -896,7 +876,7 @@ MUTAPC:
 		MaxWeight: 4
 		PipCount: 4
 		UnloadVoice: Unload
-		LoadingUpgrades: notmobile
+		LoadingCondition: notmobile
 		EjectOnDeath: true
 	RenderVoxels:
 		Scale: 1
@@ -945,7 +925,7 @@ TRIKE:
 		MaxWeight: 1
 		PipCount: 1
 		UnloadVoice: Unload
-		LoadingUpgrades: notmobile
+		LoadingCondition: notmobile
 		EjectOnDeath: True
 		InitialUnits: e3
 	AttackGarrisoned:
@@ -1046,7 +1026,7 @@ STRUCK:
 		MaxWeight: 4
 		PipCount: 4
 		UnloadVoice: Unload
-		LoadingUpgrades: notmobile
+		LoadingCondition: notmobile
 		EjectOnDeath: True
 		InitialUnits: mutfiend
 	RenderVoxels:
@@ -1191,7 +1171,7 @@ FORTRESS:
 		PipCount: 8
 		InitialUnits: e3, e3, marauder, marauder
 		UnloadVoice: Unload
-		LoadingUpgrades: notmobile
+		LoadingCondition: notmobile
 	AttackGarrisoned:
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
 		PortYaws: 0, 176, 341, 512, 682, 853#10, 10, 10, 10, 10, 10
@@ -1253,8 +1233,8 @@ SCRHARV:
 	Explodes:
 		Weapon: TiberiumExplosion
 	Sellable:
-		UpgradeTypes: AuraRepair
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: AuraRepair
+		ConditionMinEnabledLevel: 1
 	WithHarvestOverlay:
 		Offset: 384,0,0
 		Palette: effect
@@ -1275,10 +1255,10 @@ SCRSCORPION:
 	Tooltip:
 		Name: Ichor Walker
 		Description: Anti-personnel walker. Reduces the damage of targetted \nunits depending on how damaged they are.\n\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
-	# Buildable:
-		# Queue: Vehicle
-		# BuildPaletteOrder: 30
-		# Prerequisites: ~scrweap
+	Buildable:
+		Queue: Vehicle
+		BuildPaletteOrder: 30
+		Prerequisites: ~scrweap
 	Mobile:
 		TurnSpeed: 6
 		Speed: 91
@@ -1335,39 +1315,32 @@ SCRDRONEC:
 	Armament:
 		Weapon: VanguardShrapnel
 		TargetStances: Ally
-	UpgradeActorsNear@VanguardShield:
-		Upgrades: VanguardShield
+	ProximityExternalCondition@VanguardShield:
+		Condition: VanguardShield
 		Range: 2c0
 		AffectsParent: false
 	Targetable:
 		TargetTypes: Ground, Vehicle
-		-UpgradeTypes: VanguardShield
-		-UpgradeMaxEnabledLevel: 0
+		-RequiresCondition: VanguardShield
 	AutoTarget:
 	ExplodeWeapon@Rifle1:
 		Weapon: RifleBounce
-		UpgradeTypes: RifleWarhead
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: RifleWarhead
 	ExplodeWeapon@Rocket1:
 		Weapon: RocketBounce
-		UpgradeTypes: RocketWarhead
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: RocketWarhead
 	ExplodeWeapon@AP1:
 		Weapon: APBounce
-		UpgradeTypes: APWarhead
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: APWarhead
 	ExplodeWeapon@Flame1:
 		Weapon: FlameBounce
-		UpgradeTypes: FlameWarhead
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: FlameWarhead
 	ExplodeWeapon@Artillery1:
 		Weapon: ArtilleryBounce
-		UpgradeTypes: ArtilleryWarhead
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: ArtilleryWarhead
 	ExplodeWeapon@FullDamage1:
 		Weapon: FullDamageBounce
-		UpgradeTypes: FullDamage
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: FullDamage
 
 SCRGLYDER2:
 	Inherits: ^ScrinVehicle
@@ -1376,7 +1349,7 @@ SCRGLYDER2:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 31
-		Prerequisites: ~scrweap
+		Prerequisites: ~scrweap, scrradr
 	Valued:
 		Cost: 450
 	Tooltip:
@@ -1511,8 +1484,8 @@ SCRRECHARGER:
 		ReloadCount: 1
 		Name: Essence
 		ReloadDelay: 1
-		UpgradeTypes: EssenceGrab
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: EssenceGrab
+		ConditionMinEnabledLevel: 1
 	Targetable@EssenceBattery:
 		TargetTypes: EssenceBattery
 	WithMuzzleOverlay:
@@ -1617,39 +1590,34 @@ DINO:
 		LocalOffset: 200,0,750
 	ExplodeWeapon@MAQUINACONCHADETUMARE:
 		Weapon: SeekerDroneSpawn
-		UpgradeTypes: deployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: deployed
 		ResetReloadWhenEnabled: False
 		LocalOffset: 0,0,500
 	Targetable@Seeker:
 		TargetTypes: Seeker
 	AttackFrontal:
-		UpgradeTypes: undeployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: undeployed
 	AttackOmni:
-		UpgradeTypes: deployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: deployed
 	RangeMultiplier@Seeker:
-		UpgradeTypes: deployed
-		Modifier: 100, 80		
-	DeployToUpgrade:
-		DeployedUpgrades: deployed, notmobile
-		UndeployedUpgrades: undeployed
+		RequiresCondition: deployed
+		Modifier: 80		
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed ||  notmobile
+		UndeployedCondition: undeployed
 		DeployAnimation: make
 		Facing: 160
 		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
 		DeploySound: place2.aud
 		UndeploySound: clicky1.aud
 	WithInfantryBody:
-		UpgradeTypes: undeployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: undeployed
 	WithSpriteBody@deployed:
 		Sequence: deployed
-		UpgradeTypes: undeployed
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: !undeployed
 	DamageMultiplier@seeker:
 		Modifier: 80
-		UpgradeTypes: deployed
+		RequiresCondition: deployed
 	AutoTarget:
 	Selectable:
 		Bounds: 40, 36, 0, -16
@@ -1678,7 +1646,7 @@ CENTURION:
 		Type: Heavy
 	DamageMultiplier@Centu:
 		Modifier: 80
-		UpgradeTypes: deployed
+		RequiresCondition: deployed
 	BodyOrientation:
 		QuantizedFacings: 32
 	Turreted:
@@ -1687,9 +1655,9 @@ CENTURION:
 		Voice: Attack
 	WithSpriteTurret:
 		Recoils: no
-	DeployToUpgrade:
-		DeployedUpgrades: deployed, notmobile
-		UndeployedUpgrades: undeployed
+	GrantConditionOnDeploy:
+		DeployedCondition: deployed ||  notmobile
+		UndeployedCondition: undeployed
 		DeployAnimation: make
 		Facing: 160
 		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
@@ -1698,15 +1666,13 @@ CENTURION:
 	RenderSprites:
 		Scale: 0.8
 	WithInfantryBody:
-		UpgradeTypes: undeployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: undeployed
+		ConditionMinEnabledLevel: 1
 	WithSpriteBody@deployed:
-		UpgradeTypes: undeployed
-		UpgradeMaxEnabledLevel: 0
+		RequiresCondition: !undeployed
 	ExplodeWeapon@MAQUINACONCHADETUMARE:
 		Weapon: CenturionDroneSpawn
-		UpgradeTypes: deployed
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: deployed
 		ResetReloadWhenEnabled: False
 		LocalOffset: 0,0,500
 	Targetable@Seeker:
@@ -1836,7 +1802,7 @@ CABAPC:
 		MaxWeight: 8
 		PipCount: 8
 		UnloadVoice: Unload
-		LoadingUpgrades: notmobile
+		LoadingCondition: notmobile
 		EjectOnDeath: true
 	SelectionDecorations:
 		VisualBounds: 75, 45 , 0, -6

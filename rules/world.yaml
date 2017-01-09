@@ -73,6 +73,7 @@
 		AllowUnderActors: true
 		TerrainType: Veins
 	TerrainGeometryOverlay:
+	CliffBackImpassabilityLayer:
 
 World:
 	Inherits: ^BaseWorld
@@ -84,6 +85,7 @@ World:
 	ProductionQueueFromSelection:
 		ProductionPaletteWidget: PRODUCTION_PALETTE
 	DomainIndex:
+	BridgeLayer:
 	SmudgeLayer@SMALLSCORCH:
 		Type: SmallScorch
 		Sequence: smallscorches

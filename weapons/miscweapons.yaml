@@ -8,7 +8,7 @@ FiendShard:
 		Image: CRYSTAL4
 		Inaccuracy: 512
 		Shadow: true
-		Angle: 60
+		LaunchAngle: 60
 		Palette: greentiberium
 	Warhead@1Dam: SpreadDamage
 		Damage: 3500
@@ -39,7 +39,7 @@ ThrowSmoke:
 	ValidTargets: Ground, Air
 	Projectile: Missile
 		MaximumLaunchSpeed: 50
-		MaximumLaunchAngle: 255
+		MaximumLaunchLaunchAngle: 255
 		Arm: 100
 		Speed: 50
 		Blockable: false
@@ -168,3 +168,11 @@ TiberiumHeal:
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
 		Damage: -2
+
+Demolish:
+	Warhead@1Dam: SpreadDamage
+		DamageTypes: DefaultDeath
+	Warhead@2Eff: CreateEffect
+		Explosions: large_twlt
+		ExplosionPalette: effectalpha75
+		ImpactSounds: expnew09.aud

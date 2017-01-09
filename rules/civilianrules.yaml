@@ -30,7 +30,7 @@ GHOST:
 	WithInfantryBody:
 		AttackSequence: shoot
 	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
+		Prerequisites: barracks.Conditiond
 
 
 WEEDGUY:
@@ -75,7 +75,7 @@ UMAGON:
 	WithInfantryBody:
 		AttackSequence: shoot
 	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
+		Prerequisites: barracks.Conditiond
 
 CHAMSPY:
 	Inherits: ^Soldier
@@ -99,8 +99,8 @@ CHAMSPY:
 		Palette: pips
 		ReferencePoint: Top, Right
 		ZOffset: 256
-		UpgradeTypes: disguise
-		UpgradeMinEnabledLevel: 1
+		RequiresCondition: disguise
+		ConditionMinEnabledLevel: 1
 	Infiltrates:
 		Types: SpyInfiltrate
 	-AutoTarget:
@@ -129,7 +129,7 @@ MUTANT:
 	WithInfantryBody:
 		AttackSequence: shoot
 	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
+		Prerequisites: barracks.Conditiond
 
 MWMN:
 	Inherits: ^Mutant
@@ -152,7 +152,7 @@ MWMN:
 	WithInfantryBody:
 		AttackSequence: shoot
 	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
+		Prerequisites: barracks.Conditiond
 
 MUTANT3:
 	Inherits: ^Mutant
@@ -175,7 +175,7 @@ MUTANT3:
 	WithInfantryBody:
 		AttackSequence: shoot
 	ProducibleWithLevel:
-		Prerequisites: barracks.upgraded
+		Prerequisites: barracks.Conditiond
 
 TRATOS:
 	Inherits: ^Mutant
@@ -457,8 +457,8 @@ FLOATER:
 		Weapon: VeinholeAttack
 	-SpawnActorOnDeath@conversion:
 	-UpgradeOverlay@EMPDISABLE:
-	-DisableOnUpgrade@EMPDISABLE:
-	-TimedUpgradeBar@EMPDISABLE:
+	-DisableOnCondition@EMPDISABLE:
+	-TimedConditionBar@EMPDISABLE:
 	-WithIdleOverlay@EMPDISABLE:
 	-PowerMultiplier@EMPDISABLE:
 	QuantizeFacingsFromSequence:
@@ -695,7 +695,7 @@ BUS:
 		# MaxWeight: 20
 		# PipCount: 5
 		# UnloadVoice: Unload
-		# LoadingUpgrades: notmobile
+		# LoadingCondition: notmobile
 
 PICK:
 	Inherits: ^CivilianVoxelVehicle
@@ -717,7 +717,7 @@ PICK:
 		# MaxWeight: 2
 		# PipCount: 5
 		# UnloadVoice: Unload
-		# LoadingUpgrades: notmobile
+		# LoadingCondition: notmobile
 
 CAR:
 	Inherits: ^CivilianVoxelVehicle
@@ -739,7 +739,7 @@ CAR:
 		# MaxWeight: 4
 		# PipCount: 5
 		# UnloadVoice: Unload
-		# LoadingUpgrades: notmobile
+		# LoadingCondition: notmobile
 
 WINI:
 	Inherits: ^CivilianVoxelVehicle
@@ -761,7 +761,7 @@ WINI:
 		# MaxWeight: 5
 		# PipCount: 5
 		# UnloadVoice: Unload
-		# LoadingUpgrades: notmobile
+		# LoadingCondition: notmobile
 
 LOCOMOTIVE:
 	Inherits: ^Train
@@ -1653,7 +1653,7 @@ CAARMR:
 	RenderSprites:
 		Palette: player
 	ProvidesPrerequisite:
-		Prerequisite: barracks.upgraded
+		Prerequisite: barracks.Conditiond
 	Capturable:
 
 CABHUT:
@@ -2420,8 +2420,8 @@ GALITE:
 	-WithMakeAnimation:
 	-WithDeathAnimation:
 	-UpgradeOverlay@EMPDISABLE:
-	-DisableOnUpgrade@EMPDISABLE:
-	-TimedUpgradeBar@EMPDISABLE:
+	-DisableOnCondition@EMPDISABLE:
+	-TimedConditionBar@EMPDISABLE:
 	-WithIdleOverlay@EMPDISABLE:
 	-PowerMultiplier@EMPDISABLE:
 	Health:

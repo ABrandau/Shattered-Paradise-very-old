@@ -10,6 +10,42 @@ MineExplode:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 		InvalidTargets: Mine
 
+BuildingExplode:
+	Inherits: ^ExploDefaults
+	Inherits@2: ^Large_twlt
+	Warhead@1Dam: SpreadDamage
+		Spread: 3c0
+		Damage: 5000
+		AffectsParent: true
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		Versus:
+			None: 200
+			Wood: 150
+			Light: 100
+			Heavy: 75
+			Concrete: 40
+	Warhead@4EffAir: CreateEffect
+		Explosions: jtwlt100, jtwlt100b, jtwlt070, jtwlt070b, jstumu42, jstumu42b ,jstumu60, jstumu60b, jbrrlexp1, jsbang34, jsbang34b, jsbang48, jsbang48b, jbrrlexp1b
+		ExplosionPalette: gensmkexploj
+		
+ScrinBuildingExplode:
+	Inherits: ^ExploDefaults
+	Inherits@2: ^Large_twlt
+	Warhead@1Dam: SpreadDamage
+		Spread: 3c0
+		Damage: 5000
+		AffectsParent: true
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+		Versus:
+			None: 200
+			Wood: 150
+			Light: 100
+			Heavy: 75
+			Concrete: 40
+	Warhead@4EffAir: CreateEffect
+		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
+		ExplosionPalette: apolbluealpha
+
 ReactorExplode:
 	Inherits: ^ExploDefaults
 	Inherits@2: ^Large_twlt
@@ -93,10 +129,10 @@ BlackHandExplode:
 	Warhead@2Eff: CreateEffect
 		Explosions: large_twlt
 		ImpactSound: expnew09.aud
-	Warhead@AcidScaleDmg: GrantUpgrade
+	Warhead@AcidScaleDmg: GrantExternalCondition
 		Range: 300
 		Duration: 150
-		Upgrades: AcidScaleDmg
+		Condition: AcidScaleDmg
 		ValidTargets: Ground, Vehicle, Infantry, Building
 
 VeinholeExplosion:
@@ -223,7 +259,7 @@ SmallDebris:
 	Report:
 	Projectile: Bullet
 		Speed: 50, 125
-		Angle: 91, 255
+		LaunchAngle: 91, 255
 		Image: dbrissm
 		Sequences: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 		Shadow: true
@@ -235,7 +271,7 @@ LargeDebris:
 	Report:
 	Projectile: Bullet
 		Speed: 50, 125
-		Angle: 91, 255
+		LaunchAngle: 91, 255
 		Image: dbrislg
 		Sequences: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
 		Shadow: true

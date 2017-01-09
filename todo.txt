@@ -1,20 +1,5 @@
 Ideas
 
-tiberium tornadoes.
-Alien layer that spawns from structures
-place anti light for alien weapons.
-
-drill sound for abductor
-If sensor arrays are added, give nod a support ability to detect all sensor arrays in the level.
-Harvester / mammoth tank
-a unit that spawns walls in the area of impact
-Make a siege tank somewhere.
-Redo floater.
-a unit that splits into many.
-Make aircraft reload if they are in proximity to helipads.
-paradroper apc
-sonic beam ship for gdi
-
 bugs
 
 double check sandbags
@@ -44,11 +29,7 @@ juggernaut barrel
 
 Veterancy Chevrons
 
-make sure units match their looks.
 grenadier sequence bug
-
-remake scrin stargate
-Worker rise anim
 add radiation to nod nuke.
 Re render cabal stuff and remove black colors.
 figure a way to make visceroids combine.
@@ -65,23 +46,8 @@ enlarge map editor selection screen. editor.yaml/Container@EDITOR_WORLD_ROOT/Con
 add the remaining FS assets.
 Scrin ship husks.
 add floaters.
-Rerender Mutant airstrip and cabal air factory to handle depth.
 Remove health bars on some props.
-Improve mammoth mk, both graphically and gameplay wise.
-remake crates and add a water variation
 
-Graphics
-cnc 3 big tiberium glaciers
-boxes
-
-traffic lights
-
-Light posts
-tankers
-
-Proprs
-trees
-
-houses
-buildings made out of planks.
-Forgotten civ structures
+Update Fix:
+	Stat Changes.
+	Dino Stat changes when deployed.

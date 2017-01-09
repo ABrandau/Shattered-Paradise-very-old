@@ -23,7 +23,7 @@
 		Speed: 682
 		Image: 120mm
 		Shadow: true
-		Angle: 62
+		LaunchAngle: 62
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
@@ -39,7 +39,7 @@
 	Projectile: Bullet
 		Speed: 170
 		Image: 120mm
-		Angle: 165
+		LaunchAngle: 165
 		Shadow: true
 		Blockable: false
 		Palette: ra

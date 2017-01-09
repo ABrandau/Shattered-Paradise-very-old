@@ -4,8 +4,6 @@ MarauderShotgun:
 	ReloadDelay: 60
 	Range: 3c512
 	Report: shotfire.wav
-	Projectile: Bullet
-		Speed: 1c682
 		Image: 120mm
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
@@ -62,7 +60,7 @@ SkirmisherMortar:
 	Projectile: Bullet
 		Speed: 120
 		Image: 120mm
-		Angle: 165
+		LaunchAngle: 165
 		Shadow: true
 		Inaccuracy: 2c0
 		Blockable: false
@@ -88,7 +86,7 @@ FiendShard2:
 		Image: CRYSTAL4
 		Inaccuracy: 512
 		Shadow: true
-		Angle: 60
+		LaunchAngle: 60
 		Palette: greentiberium
 	Warhead@1Dam: SpreadDamage
 		Spread: 60
@@ -328,10 +326,10 @@ BullBuff:
 	Warhead@2Eff: CreateEffect
 		Explosions: bullparticle
 		ExplosionPalette: apolgreenalpha
-	Warhead@Acid: GrantUpgrade
+	Warhead@Acid: GrantExternalCondition
 		Range: 4c0
 		Duration: 200
-		Upgrades: WolfBuff
+		Condition: WolfBuff
 		ValidStances: Ally
 
 DeathclawBlow:
@@ -408,7 +406,7 @@ QuadFire:
 	MinRange: 1c0
 	Projectile: Bullet
 		Speed: 1000
-		Angle: 30
+		LaunchAngle: 30
 		Image: 120mm
 		Innacuracy: 0c512
 		Palette: ra
@@ -452,7 +450,7 @@ TiberianRocket:
 		Speed: 350
 		Blockable: false
 		Shadow: true
-		Angle: 62	
+		LaunchAngle: 62	
 		Inaccuracy: 3c0
 		Image: DRAGON
 		TrailImage: small_smoke_trail

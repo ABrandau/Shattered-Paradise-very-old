@@ -42,18 +42,18 @@ ReaperWeb:
 		Speed: 150
 		Image: web
 		Shadow: true
-		Angle: 130
+		LaunchAngle: 130
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 500
 		ValidTargets: Infantry
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@emp: GrantUpgrade
+	Warhead@emp: GrantExternalCondition
 		Range: 1c0
 		Duration: 35
 		ValidTargets: Infantry
-		Upgrades: WebDisable	
+		Condition: WebDisable	
 	
 ReaperScythe:
 	Inherits: ^RocketWarhead
@@ -428,7 +428,7 @@ DevourerShell:
 		Inaccuracy: 1c0
 		ContrailLength: 10
 		ContrailUsePlayerColor: true
-		Angle: 150
+		LaunchAngle: 150
 		RangeLimit: 25
 	Warhead@1Dam: SpreadDamage
 		Spread: 210
@@ -453,10 +453,10 @@ ecmwave:
 	Projectile: Bullet
 		Speed: 100c0
 		Blockable: false
-	Warhead@movestop: GrantUpgrade
+	Warhead@movestop: GrantExternalCondition
 		Range: 2c0
 		Duration: 100
-		Upgrades: fireflystop
+		Condition: fireflystop
 		ValidTargets: Vehicle
 	Warhead@3Dam: SpreadDamage
 		Spread: 128
@@ -548,10 +548,10 @@ DevourerBuff:
 	ReloadDelay: 35
 	Range: 200
 	Projectile: InstantExplode
-	Warhead@Acid: GrantUpgrade
+	Warhead@Acid: GrantExternalCondition
 		Range: 250
 		Duration: 35
-		Upgrades: DevoBuff
+		Condition: DevoBuff
 		ValidStances: Ally
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 		AffectsParent: True
@@ -590,7 +590,7 @@ BasiliskBomb:
 		Speed: 150
 		Blockable: false
 		Shadow: true
-		Angle: 62	
+		LaunchAngle: 62	
 		Inaccuracy: 0c510
 		Image: DRAGON
 		TrailImage: small_smoke_trail
@@ -651,7 +651,7 @@ CTurretCannon:
 		Speed: 682
 		Image: 120mm
 		Shadow: true
-		Angle: 62
+		LaunchAngle: 62
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
