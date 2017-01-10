@@ -238,6 +238,7 @@ IONBEAMROAMER:
 	AttackHeli:
 		FacingTolerance: 20
 		Voice: Attack
+	AttackMove:
 	AttackWander:
 	RejectsOrders@berserk:
 		RequiresCondition: !lawea
@@ -480,31 +481,6 @@ STALKERDUMMY:
 	Armament:
 		Weapon: StalkerGrinder
 		TargetStances: Enemy, Neutral
-
-SCRINDISSEASEPIECEDUMMY:
-	Inherits: ^Infantry
-	-Targetable:
-	-UpdatesPlayerStatistics:
-	-AutoSelectionSize:
-	-SelectionDecorations:
-	-Selectable:
-	-AutoTarget:
-	-ActorLostNotification:
-	RenderSprites:
-		Image: blackhanddummy
-	SelfHealing:
-		Step: -10
-		HealIfBelow: 200
-	Health:
-		HP: 5
-		NotifyAppliedDamage: False
-	SpawnActorOnDeath@cabalcrate:
-		Actor: SCRINDISSEASEPIECE
-		Probability: 100
-		OwnerType: InternalName
-		InternalOwner: Creeps
-		RequiresLobbyCreeps: true
-	-SpawnActorOnDeath@nanomachineburst:
 
 SCRINESSENCESMALL:
 	Inherits: ^DUMMYAIRCRAFT

@@ -171,7 +171,6 @@
 	ReloadDelayMultiplier@WolfBuff2:
 		RequiresCondition: WolfBuff2
 		Modifier: 80
-#DECORATIONS
 	WithDecoration@tibicon:
 		Image: tibicon
 		Sequence: idle
@@ -185,6 +184,8 @@
 ^KillSelf:
 	KillsSelf:
 		RequiresCondition: KillSelf
+	ExternalConditions@KillSelf:
+		Conditions: KillSelf
 
 ^SeekerTracker:
 	Targetable@StalkerTracker:

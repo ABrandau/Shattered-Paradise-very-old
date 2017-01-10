@@ -267,7 +267,6 @@ FlameHologram:
 	Warhead@1Dam: SpreadDamage
 		Spread: 400
 		Damage: 1
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 	Warhead@5Actor: SpawnActor
 		Actors: FLAMEHOLOGRAM
 		FallRate: 5000

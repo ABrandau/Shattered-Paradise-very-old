@@ -454,7 +454,8 @@ CrusaHologram:
 
 EngineerHologram:
 	Inherits@2: ^Hologram
-	-AttackFrontal
+	-AttackFrontal:
+	-AutoTarget:
 	RenderSprites:
 		Image: engineer
 
