@@ -410,7 +410,7 @@ TermitaGrinder:
 		Versus:
 		DamageTypes: Prone100Percent, TriggerProne, CabalDeathCrate
 
-DevourerShell:
+DroneHostShell:
 	Inherits: ^ArtilleryWarhead
 	Inherits@2: ^Small_Clsn
 	ReloadDelay: 150
@@ -432,14 +432,11 @@ DevourerShell:
 		RangeLimit: 25
 	Warhead@1Dam: SpreadDamage
 		Spread: 210
-		Damage: 3000
+		Damage: 1000
 		Versus:
 			Worker: 25
 		ValidTargets: Ground, Vehicle, Infantry, water
 		DamageTypes: Prone50Percent, TriggerProne, CabalDeath
-
-DevourerShellSpawner:
-	Inherits: DevourerShell
 	Warhead@5Actor: SpawnActor
 		Actors: CABSENTRY
 		FallRate: 5000

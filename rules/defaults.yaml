@@ -14,6 +14,7 @@
 	QuantizeFacingsFromSequence:
 	AutoSelectionSize:
 	RenderSprites:
+	RevealOnFire:
 
 ^GainsExperience:
 #EXPERIENCE
@@ -276,7 +277,6 @@
 ^RejectsOrdersBerkserk:
 	RejectsOrders@berserk:
 		RequiresCondition: berserk
-		ConditionMinEnabledLevel: 1
 	ExternalConditions@berserk:
 		Conditions: berserk
 
@@ -373,7 +373,6 @@
 	Inherits@4: ^BurstRecovery
 	Inherits@5: ^FirestormGenBuff
 	Inherits@6: ^GuardianPlatformSelfHeal
-	RevealOnFire:
 
 ^StructureEffects:
 	Inherits: ^GenericEffects
@@ -823,9 +822,10 @@
 
 ^Beast:
 	Inherits: ^Mutant
+	Inherits@1: ^RejectsOrdersBerkserk
 	-TakeCover:
 	GrantConditionOnDamageState@beastberserk:
-		Condition: beastdamaged, berserk
+		Condition: berserk
 		ValidDamageStates: Heavy, Critical
 	SpawnActorOnDeath@tiberium2:
 		Probability: 20
@@ -849,7 +849,6 @@
 	DamageMultiplier@beastberserk:
 		Modifier: 120
 		RequiresCondition: beastdamaged
-		BaseLevel: 1
 	SelfHealing@BerserkBeast:
 		PercentageStep: 1
 		Step: 0
@@ -994,7 +993,6 @@
 		Cost: 500
 	Tooltip:
 		Name: Engineer
-		Description: Utility unit that can captures enemy structures. Detect\nand place mines, repair allied buildings instantly. Mines\nream automatically but do so faster near a barracks.\n\n  Unarmed
 	Selectable:
 		Priority: 6
 	Mobile:

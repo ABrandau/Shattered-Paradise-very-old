@@ -109,8 +109,8 @@ GAVULC:
 		Cost: 350
 	Tooltip:
 		Name: Vulcan Tower
-		Description: Basic base defense.\n\n  Strong vs Infantry.\n  Weak vs Aircraft.
 	Buildable:
+		Description: Basic base defense.\n\n  Strong vs Infantry.\n  Weak vs Aircraft.
 		Queue: Defense
 		BuildPaletteOrder: 40
 		Prerequisites: gapile, ~structures.gdi
@@ -161,8 +161,8 @@ GAROCK:
 		Cost: 700
 	Tooltip:
 		Name: RPG Tower
-		Description: GDI Advanced base defense.\n\n  Strong vs Vehicles.\n  Weak vs Aircraft.
 	Buildable:
+		Description: GDI Advanced base defense.\n\n  Strong vs Vehicles.\n  Weak vs Aircraft.
 		Queue: Defense
 		BuildPaletteOrder: 40
 		Prerequisites: gapile, garadr, ~structures.gdi
@@ -204,14 +204,13 @@ GACSAM:
 	Power:
 		Amount: -30
 	WithSpriteBody:
-	# WithWallSpriteBody:
 	Valued:
 		Cost: 600
 	Tooltip:
 		Name: SAM Tower
-		Description: GDI Anti-Air base defense.\nStronger than average AA.\n\n  Strong vs Aircraft.\n  Weak vs Infantry, Vehicles.
 	Buildable:
 		Queue: Defense
+		Description: GDI Anti-Air base defense.\nStronger than average AA.\n\n  Strong vs Aircraft.\n  Weak vs Infantry, Vehicles.
 		BuildPaletteOrder: 40
 		Prerequisites: gapile, ~structures.gdi
 	DisabledOverlay:
@@ -250,8 +249,8 @@ GAPOWRUP:
 		Cost: 300
 	Tooltip:
 		Name: Power Turbine
-		Description: Provides extra power generation. Place\nthem on the smokestack of the structure.
 	Buildable:
+		Description: Provides extra power generation. Place\nthem on the smokestack of the structure.
 		Queue: Defense
 		BuildPaletteOrder: 10
 		Prerequisites: gapowr, ~structures.gdi
@@ -266,8 +265,8 @@ GAPLUG2:
 		Cost: 1000
 	Tooltip:
 		Name: Drop pod Control
-		Description: Enables use of the drop pods.
 	Buildable:
+		Description: Enables use of the drop pods.
 		Queue: Defense
 		BuildPaletteOrder: 1000
 		Prerequisites: gaplug, gatech, gaweap, ~structures.gdi
@@ -282,8 +281,8 @@ GAPLUG3:
 		Cost: 1500
 	Tooltip:
 		Name: Ion Cannon Uplink
-		Description: Enables use of the Ion Cannon.
 	Buildable:
+		Description: Enables use of the Ion Cannon.
 		Queue: Defense
 		BuildPaletteOrder: 1000
 		Prerequisites: gaplug, gatech, ~structures.gdi
@@ -333,12 +332,12 @@ GAFIRE:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 100
+		Description: Support structure that generates a barrier around it when activated,\nit makes friendly units inside it harder to kill, deals damage\nto enemies in the border and consumes power when active.
 		Prerequisites: gatech, ~structures.gdi
 	Valued:
 		Cost: 2000
 	Tooltip:
 		Name: Firestorm Generator
-		Description: Support structure that generates a barrier around it when activated,\nit makes friendly units inside it harder to kill, deals damage\nto enemies in the border and consumes power when active.
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
@@ -430,8 +429,8 @@ NALASR:
 		Cost: 300
 	Tooltip:
 		Name: Laser Turret
-		Description: Basic base defense.\nRequires power to operate.\n\n  Strong vs Ground units\n  Weak vs Aircraft
 	Buildable:
+		Description: Basic base defense.\nRequires power to operate.\n\n  Strong vs Ground units\n  Weak vs Aircraft
 		Queue: Defense
 		Prerequisites: nahand, ~structures.nod
 		BuildPaletteOrder: 50
@@ -464,8 +463,8 @@ NAOBEL:
 		Cost: 1500
 	Tooltip:
 		Name: Obelisk of Light
-		Description: Advanced base defense.\nRequires power to operate.\n\n  Strong vs Ground units\n  Weak vs Aircraft
 	Buildable:
+		Description: Advanced base defense.\nRequires power to operate.\n\n  Strong vs Ground units\n  Weak vs Aircraft
 		Queue: Defense
 		BuildPaletteOrder: 90
 		Prerequisites: natech, ~structures.nod
@@ -506,8 +505,8 @@ NASAM:
 		Cost: 600
 	Tooltip:
 		Name: S.A.M. Site
-		Description: Nod Anti-Air base defense.\nRequires power to operate.\n\n  Strong vs Aircraft\n  Weak vs Ground units
 	Buildable:
+		Description: Nod Anti-Air base defense.\nRequires power to operate.\n\n  Strong vs Aircraft\n  Weak vs Ground units
 		Queue: Defense
 		Prerequisites: nahand, ~structures.nod
 		BuildPaletteOrder: 60
@@ -639,12 +638,12 @@ NAMISL:
 		Queue: Defense
 		BuildPaletteOrder: 100
 		Prerequisites: natech, ~structures.nod
+		Description: Allows the player to launch Missiles.\nRequires power to operate.
 		BuildLimit: 1
 	Valued:
 		Cost: 2500
 	Tooltip:
 		Name: Nod Missile Silo
-		Description: Allows the player to launch Missiles.\nRequires power to operate.
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	Building:
@@ -730,6 +729,7 @@ MUTWALL:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 1001
+		Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks\nMay make you sell your conyard\nIf you're not careful.
 		Prerequisites: ~structures.mut, !structures.cab
 	SoundOnDamageTransition:
 		DamagedSounds:
@@ -740,7 +740,6 @@ MUTWALL:
 		Value: 0
 	Tooltip:
 		Name: Forgotten Wall
-		Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks\nMay make you sell your conyard\nIf you're not careful.
 	Health:
 		HP: 30000
 	-Cloak@CLOAKGENERATOR:
@@ -787,9 +786,9 @@ MUFLAK:
 		Cost: 300
 	Tooltip:
 		Name: Flak Station
-		Description: Anti-Air base defense. Doesn't require power to operate.\n\n  Strong vs Aircraft\n  Weak vs Ground units
 	Buildable:
 		Queue: Defense
+		Description: Anti-Air base defense. Doesn't require power to operate.\n\n  Strong vs Aircraft\n  Weak vs Ground units
 		Prerequisites: proc, murax, ~structures.mut
 		BuildPaletteOrder: 60
 	Building:
@@ -826,8 +825,8 @@ MUBUNKR:
 		Cost: 900
 	Tooltip:
 		Name: Bunker
-		Description: Fortified position where infantry can fire from within.\nCan hold up to 6 soldiers, starts with a Marauder and\n a Skirmisher on it.\n\n  Strength depends on garrisoned units.\n  Cannot target air units.
 	Buildable:
+		Description: Fortified position where infantry can fire from within.\nCan hold up to 6 soldiers, starts with a Marauder and\n a Skirmisher on it.\n\n  Strength depends on garrisoned units.\n  Cannot target air units.
 		Queue: Defense
 		BuildPaletteOrder: 30
 		Prerequisites: murax, proc, ~structures.mut
@@ -868,12 +867,12 @@ MUTSW1:
 		Queue: Defense
 		BuildPaletteOrder: 90
 		Prerequisites: muhall, ~structures.mut
+		Description: Allows the player to generate Ion Storms.
 		BuildLimit: 1
 	Valued:
 		Cost: 2500
 	Tooltip:
 		Name: Meditation Hall
-		Description: Allows the player to generate Ion Storms.
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
@@ -902,12 +901,12 @@ MUTSW2:
 		Queue: Defense
 		BuildPaletteOrder: 90
 		Prerequisites: muhall, ~structures.mut
+		Description: Allows the player to summon\nveinhole monsters on the battlefield.
 		BuildLimit: 1
 	Valued:
 		Cost: 2000
 	Tooltip:
 		Name: Mother Veinhole
-		Description: Allows the player to summon\nveinhole monsters on the battlefield.
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -965,12 +964,12 @@ MUVENTI:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 95
+		Description: Releases tiberium toxins into the area, harming\non mutant infantry and healing any mutant\n in the area.\nDoesn't stop operating while in low power.
 		Prerequisites: ~structures.mut, muhall
 	Valued:
 		Cost: 1500
 	Tooltip:
 		Name: Tiberium Ventilator
-		Description: Releases tiberium toxins into the area, harming\non mutant infantry and healing any mutant\n in the area.\nDoesn't stop operating while in low power.
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1007,6 +1006,7 @@ SCRWALL:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 1001
+		Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.\nMay make you sell your conyard\nIf you're not careful.
 		Prerequisites: ~structures.scr, !structures.cab
 	SoundOnDamageTransition:
 		DamagedSounds:
@@ -1018,7 +1018,6 @@ SCRWALL:
 	-Cloak@CLOAKGENERATOR:
 	Tooltip:
 		Name: Energy Wall
-		Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.\nMay make you sell your conyard\nIf you're not careful.
 	Health:
 		HP: 30000
 	Armor:
@@ -1065,9 +1064,9 @@ SCRNEEDLER:
 		Cost: 500
 	Tooltip:
 		Name: Ichor Waste Turret
-		Description: Basic defense, cloaks when idle.\nRequires power to operate.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
 	Buildable:
 		Queue: Defense
+		Description: Basic defense, cloaks when idle.\nRequires power to operate.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
 		Prerequisites: scrrax, ~structures.scr
 		BuildPaletteOrder: 30
 	Building:
@@ -1113,8 +1112,8 @@ SCRTRACTOR:
 		Cost: 450
 	Tooltip:
 		Name: Tractor Beam
-		Description: Scrin Anti-Air base defense, deals little damage\nbut slows down the targetted aircraft.\nRequires power to operate.\n\n  Strong vs Aircraft\n  Weak vs Ground units
 	Buildable:
+		Description: Scrin Anti-Air base defense, deals little damage\nbut slows down the targetted aircraft.\nRequires power to operate.\n\n  Strong vs Aircraft\n  Weak vs Ground units
 		Queue: Defense
 		Prerequisites: scrrax, ~structures.scr
 		BuildPaletteOrder: 40
@@ -1152,10 +1151,10 @@ SCRDRONE:
 		Cost: 1300
 	Tooltip:
 		Name: Visceroid Hive
-		Description: Advanced base defense.\nThrows Visceroids near the enemies.\nRequires power to operate.\n\n  Strong vs Ground Units.\n  Weak vs Aircraft.
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 60
+		Description: Advanced base defense.\nThrows Visceroids near the enemies.\nRequires power to operate.\n\n  Strong vs Ground Units.\n  Weak vs Aircraft.
 		Prerequisites: scrtech, ~structures.scr
 	Building:
 		Footprint: xx xx
@@ -1186,20 +1185,16 @@ SCREXTRACTOR:
 		Cost: 1000
 	Tooltip:
 		Name: Tiberium Extractor
-		Description: Low output extractor that passively seeds tiberium.
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 60
+		Description: Low output extractor that passively seeds tiberium.
 		Prerequisites: scrtech, ~structures.scr
 	Building:
 		Footprint: x
 		Dimensions: 1,1
 	Selectable:
 		Bounds: 40, 30, -3, -8
-	SeedsResource:
-		ResourceType: Tiberium
-		Interval: 225
-		MaxRange: 1
 	RequiresPower:
 	DisabledOverlay:
 	Health:
@@ -1210,6 +1205,18 @@ SCREXTRACTOR:
 		Amount: -125
 	SelectionDecorations:
 		VisualBounds: 40, 36, -3, -8
+	SeedsResource@asd:
+		ResourceType: Tiberium
+		Interval: 1
+		MaxRange: 1
+		RequiresCondition: Tiberium
+	GrantPeriodicCondition@asd:
+		Condition: Tiberium
+		CooldownDuration: 500
+		ActiveDuration:  15
+		StartsGranted: true
+	ExternalConditions@asd:
+		Conditions: Tiberium
 
 SCRSW1:
 	Inherits: ^Building
@@ -1219,12 +1226,12 @@ SCRSW1:
 		Queue: Defense
 		BuildPaletteOrder: 90
 		Prerequisites: scrtech, ~structures.scr
+		Description: Allows the player to call in meteor storm strikes.
 		BuildLimit: 1
 	Valued:
 		Cost: 2500
 	Tooltip:
 		Name: Signal Transmiter
-		Description: Allows the player to call in meteor storm strikes.
 	Building:
 		Footprint: xxx xxx
 		Dimensions: 3,2
@@ -1256,9 +1263,9 @@ SCRSHIELD:
 		Cost: 1000
 	Tooltip:
 		Name: Stasis Field Generator
-		Description: Disables vehicles.\nRequires power to operate.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Buildable:
 		Queue: Defense
+		Description: Disables vehicles.\nRequires power to operate.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 		BuildPaletteOrder: 80
 		Prerequisites: scrradr, ~structures.scr
 	Building:
@@ -1316,7 +1323,6 @@ CABSENTRYTURRET:
 		Cost: 800
 	Tooltip:
 		Name: Artisan Turret
-		Description: Anti Armor turret.\nRequires power to operate.\n  Strong vs Aircraft\n  Weak vs Ground units
 	Building:
 	Selectable:
 		Bounds: 40, 30, -3, -8
@@ -1350,9 +1356,9 @@ CABCANNON:
 		Cost: 500
 	Tooltip:
 		Name: Cannon Turret
-		Description: Anti-Armor turret.\nRequires power to operate.\n\n  Strong vs Vehicles.\n  Weak vs Infantry, Aircraft.
 	Buildable:
 		Queue: Defense
+		Description: Anti-Armor turret.\nRequires power to operate.\n\n  Strong vs Vehicles.\n  Weak vs Infantry, Aircraft.
 		Prerequisites: cabclaw, ~structures.cab
 		BuildPaletteOrder: 30
 	Building:
@@ -1389,9 +1395,9 @@ CABRAIL:
 		Cost: 800
 	Tooltip:
 		Name: Railgun Turret
-		Description: Anti-Air defence with low rate of fire.\nRequires power to operate.\n\n  Strong vs Aircraft.\n  Weak vs Infantry, Vehicles. 
 	Buildable:
 		Queue: Defense
+		Description: Anti-Air defence with low rate of fire.\nRequires power to operate.\n\n  Strong vs Aircraft.\n  Weak vs Infantry, Vehicles. 
 		Prerequisites: cabclaw, ~structures.cab
 		BuildPaletteOrder: 30
 	Building:
@@ -1431,9 +1437,9 @@ CABBLAST:
 		Cost: 1200
 	Tooltip:
 		Name: Blaster Turret
-		Description: Artillery, fires plasma.\nHas a minimun range of fire.\nRequires power to operate.\n\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft.
 	Buildable:
 		Queue: Defense
+		Description: Artillery, fires plasma.\nHas a minimun range of fire.\nRequires power to operate.\n\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft.
 		Prerequisites: cabtech, ~structures.cab
 		BuildPaletteOrder: 60
 	Building:
@@ -1466,12 +1472,12 @@ CABEYE:
 	Buildable:
 		Queue: Defense
 		BuildPaletteOrder: 95
+		Description: Provides vision on a great area, stealth\ndetection and also shrouds the enemy vision\nif no enemy units are nearby.
 		Prerequisites: ~structures.cab, cabtech
 	Valued:
 		Cost: 900
 	Tooltip:
 		Name: Eye of Cabal
-		Description: Provides vision on a great area, stealth\ndetection and also shrouds the enemy vision\nif no enemy units are nearby.
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
@@ -1504,10 +1510,10 @@ CABSW1:
 		Cost: 2500
 	Tooltip:
 		Name: Iron Savior
-		Description: Super Weapon.
 	Buildable:
 		Queue: Defense
 		Prerequisites: cabtech, ~structures.cab
+		Description: Super Weapon.
 		BuildPaletteOrder: 90
 		BuildLimit: 1
 	Building:
@@ -1562,10 +1568,10 @@ cabobelisk:
 		Cost: 2000
 	Tooltip:
 		Name: Nanomachine Core
-		Description: Allows you to create nanomachine swarms.
 	Buildable:
 		Queue: Defense
 		Prerequisites: cabtech, ~structures.cab
+		Description: Allows you to create nanomachine swarms.
 		BuildPaletteOrder: 90
 		BuildLimit: 1
 	Building:

@@ -7,9 +7,9 @@ SMECH:
 		Cost: 550
 	Tooltip:
 		Name: Wolverine
-		Description: Anti-Personnel Walker. Constant firing increases\n it's attack speed.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
 	Buildable:
 		Queue: Vehicle
+		Description: Anti-Personnel Walker. Constant firing increases\n it's attack speed.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
 		BuildPaletteOrder: 2
 		Prerequisites: ~gaweap
 	Mobile:
@@ -43,10 +43,10 @@ MMCH:
 		Cost: 900
 	Tooltip:
 		Name: Titan
-		Description: Anti-Armor Walker.\n\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 3
+		Description: Anti-Armor Walker.\n\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft.
 		Prerequisites: ~gaweap
 	Mobile:
 		TurnSpeed: 5
@@ -85,9 +85,9 @@ APC:
 		Cost: 700
 	Tooltip:
 		Name: Amphibious APC
-		Description: Armored infantry transport.\nCan move on water.\n\n  Unarmed.
 	Buildable:
 		Queue: Vehicle
+		Description: Armored infantry transport.\nCan move on water.\n\n  Unarmed.
 		BuildPaletteOrder: 30
 		Prerequisites: ~gaweap, gapile
 	Mobile:
@@ -131,9 +131,9 @@ HVR:
 		Cost: 700
 	Tooltip:
 		Name: Hover MLRS
-		Description: Hover Vehicle armed with\nheat seeking missiles.\n\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
 	Buildable:
 		Queue: Vehicle
+		Description: Hover Vehicle armed with\nheat seeking missiles.\n\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
 		BuildPaletteOrder: 5
 		Prerequisites: ~gaweap, garadr
 	Mobile:
@@ -175,9 +175,9 @@ JUGGER:
 		Cost: 900
 	Tooltip:
 		Name: Juggernaut
-		Description: GDI Light Artillery.\n\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft
 	Buildable:
 		Queue: Vehicle
+		Description: GDI Light Artillery.\n\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft
 		BuildPaletteOrder: 6
 		Prerequisites: ~gaweap, gatech
 	Mobile:
@@ -211,9 +211,9 @@ SONIC:
 		Cost: 1500
 	Tooltip:
 		Name: Disruptor
-		Description: Armored Vehicle with a long range sonic cannon.\nResistant to sonic damage. Auto repairs up to half health.\n\n  Strong vs Ground units.\n  Weak vs Aircraft.
 	Buildable:
 		Queue: Vehicle
+		Description: Armored Vehicle with a long range sonic cannon.\nResistant to sonic damage. Auto repairs up to half health.\n\n  Strong vs Ground units.\n  Weak vs Aircraft.
 		BuildPaletteOrder: 7
 		Prerequisites: ~gaweap, gatech
 	-RejectsOrders@berserk:
@@ -254,11 +254,11 @@ HMEC:
 		Cost: 2000
 	Tooltip:
 		Name: Mammoth Mk. II
-		Description: Slow Heavy Walker armed with dual railguns.\n\n  Strong vs Ground Units.\n  Weak vs  Aircraft\nMaximum 1 can be built.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 8
 		Prerequisites: ~gaweap, gatech
+		Description: Slow Heavy Walker armed with dual railguns.\n\n  Strong vs Ground Units.\n  Weak vs  Aircraft\nMaximum 1 can be built.
 		BuildLimit: 1
 	Mobile:
 		TurnSpeed: 3
@@ -299,9 +299,9 @@ BGGY:
 		Cost: 500
 	Tooltip:
 		Name: Raider Buggy
-		Description: Fast scout designed for harassment.\n\n  Strong vs Infantry, Armor, Aircraft.\n  Weak vs Vehicles.
 	Buildable:
 		Queue: Vehicle
+		Description: Fast scout designed for harassment.\n\n  Strong vs Infantry, Armor, Aircraft.\n  Weak vs Vehicles.
 		BuildPaletteOrder: 9
 		Prerequisites: ~naweap
 	Mobile:
@@ -337,10 +337,10 @@ TTNK:
 		Cost: 800
 	Tooltip:
 		Name: Tick Tank
-		Description: Nod's main battle tank.\nCan deploy to gain extra protection.\n\n  Strong vs Vehicles.\n  Weak vs Infantry, Aircraft.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 11
+		Description: Nod's main battle tank.\nCan deploy to gain extra protection.\n\n  Strong vs Vehicles.\n  Weak vs Infantry, Aircraft.
 		Prerequisites: ~naweap
 	Mobile:
 		TurnSpeed: 5
@@ -409,10 +409,10 @@ BIKE:
 		Cost: 700
 	Tooltip:
 		Name: Demo Cycle
-		Description: Suicide Vehicle armed with an explosive warhead.\nExplodes its warhead when destroyed.\nCan be carried on subterranean APCs.\n\n Strong vs Light armored ground units.\n  Weak vs Structures.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 12
+		Description: Suicide Vehicle armed with an explosive warhead.\nExplodes its warhead when destroyed.\nCan be carried on subterranean APCs.\n\n Strong vs Light armored ground units.\n  Weak vs Structures.
 		Prerequisites: ~naweap, naradr
 	-ActorLostNotification:
 	Mobile:
@@ -438,9 +438,9 @@ SAPC:
 		Cost: 800
 	Tooltip:
 		Name: Subterranean APC
-		Description: Troop transport that can move underground to avoid detection.\nPassengers don't suvive the destruction of this vehicle.\n\n  Unarmed
 	Buildable:
 		Queue: Vehicle
+		Description: Troop transport that can move underground to avoid detection.\nPassengers don't suvive the destruction of this vehicle.\n\n  Unarmed
 		BuildPaletteOrder: 13
 		Prerequisites: ~naweap, naradr
 	Selectable:
@@ -511,12 +511,12 @@ HOLOGRAMPROJECTOR:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 14
+		Description: Creates fake units based on the unit that is inside the vehicle.\n\n  Unarmed
 		Prerequisites: ~naweap, naradr
 	Valued:
 		Cost: 1000
 	Tooltip:
 		Name: Hologram Projector
-		Description: Creates fake units based on the unit that is inside the vehicle.\n\n  Unarmed
 	Health:
 		HP: 20000
 	Selectable:
@@ -576,9 +576,9 @@ SUBTANK:
 		Cost: 800
 	Tooltip:
 		Name: Devil's Tongue
-		Description: Subterranean Flame Tank.\nIs able to move underground.\nWIP Unit, cannot burrow yet.\n  Strong vs Infantry, Buildings\n  Weak vs Tanks, Aircraft
 	Buildable:
 		Queue: Vehicle
+		Description: Subterranean Flame Tank.\nIs able to move underground.\nWIP Unit, cannot burrow yet.\n  Strong vs Infantry, Buildings\n  Weak vs Tanks, Aircraft
 		BuildPaletteOrder: 15
 		Prerequisites: ~naweap, naradr
 	Mobile:
@@ -611,9 +611,9 @@ ARMH:
 		Cost: 1000
 	Tooltip:
 		Name: Beam Cannon
-		Description: NOD Artillery, fires a laser beam at the target\nIt cannot fire continuosly for a long time.\n\n  Strong vs Ground units\n  Weak vs Aircraft
 	Buildable:
 		Queue: Vehicle
+		Description: NOD Artillery, fires a laser beam at the target\nIt cannot fire continuosly for a long time.\n\n  Strong vs Ground units\n  Weak vs Aircraft
 		BuildPaletteOrder: 16
 		Prerequisites: ~naweap, natech
 	Health:
@@ -659,10 +659,10 @@ STNK:
 		Cost: 1100
 	Tooltip:
 		Name: Stealth Tank
-		Description: Lightly armoured tank equipped with a personal\nstealth generator. Armed with missiles.\nCan be spotted by infantry at close range.\n\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
 	Buildable:
 		BuildPaletteOrder: 17
 		Prerequisites: ~naweap, natech
+		Description: Lightly armoured tank equipped with a personal\nstealth generator. Armed with missiles.\nCan be spotted by infantry at close range.\n\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
 		Queue: Vehicle
 	Mobile:
 		TurnSpeed: 9
@@ -740,9 +740,9 @@ SGEN:
 		Cost: 1400
 	Tooltip:
 		Name: Mobile Stealth Generator
-		Description: High tech vehicle that can cloak nearby \nunits and structures when deployed.\n\nCloaked NOD units heal slowly.\n  Unarmed
 	Buildable:
 		Queue: Vehicle
+		Description: High tech vehicle that can cloak nearby \nunits and structures when deployed.\n\nCloaked NOD units heal slowly.\n  Unarmed
 		BuildPaletteOrder: 19
 		Prerequisites: ~naweap, naradr
 	Mobile:
@@ -770,12 +770,12 @@ WOLF:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 27
+		Description: Support Beast, expels toxins when attacking that\ndamage nearby units but increase their fighting\n capabilities.\n\n  Somewhat strong vs Ground Units.\n  Weak vs Aircraft, Defences.
 		Prerequisites: ~muweap, mustable, muradr
 	Valued:
 		Cost: 800
 	Tooltip:
 		Name: Tiberian Bull
-		Description: Support Beast, expels toxins when attacking that\ndamage nearby units but increase their fighting\n capabilities.\n\n  Somewhat strong vs Ground Units.\n  Weak vs Aircraft, Defences.
 	Voiced:
 		VoiceSet: Fiend
 	Targetable:
@@ -807,6 +807,10 @@ WOLF:
 		Speed: 80
 		SharesCell: false
 	-WithDecoration@tibicon:
+	RejectsOrders@berserk:
+		RequiresCondition: berserk
+	ExternalConditions@berserk:
+		Conditions: berserk
 
 DEATHCLAW:
 	Inherits: ^Beast
@@ -815,12 +819,12 @@ DEATHCLAW:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 31
+		Description: Melee Beast, usefull as a shock unit.\n\n  Strong vs Ground Units\n  Weak vs Aircraft.
 		Prerequisites: ~muweap, mustable, muhall
 	Valued:
 		Cost: 900
 	Tooltip:
 		Name: Ravager
-		Description: Melee Beast, usefull as a shock unit.\n\n  Strong vs Ground Units\n  Weak vs Aircraft.
 	Voiced:
 		VoiceSet: Fiend
 	Passenger:
@@ -898,10 +902,10 @@ TRIKE:
 		Cost: 250
 	Tooltip:
 		Name: Trike
-		Description: Light vehicle with room for a gunner, the vehicle will,\ninherit the weapon of whoever is inside.\n\n  Strong vs Structures, Infantry.\n  Weak vs Vehicles, Aircraft, Base defences.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 25
+		Description: Light vehicle with room for a gunner, the vehicle will,\ninherit the weapon of whoever is inside.\n\n  Strong vs Structures, Infantry.\n  Weak vs Vehicles, Aircraft, Base defences.
 		Prerequisites: ~muweap
 	Mobile:
 		TurnSpeed: 9
@@ -914,10 +918,6 @@ TRIKE:
 		Volume: 10
 	Armor:
 		Type: Light
-	# Armament:
-		# Weapon: TrikeMortar
-		# LocalOffset: 600,0,500
-		# MuzzleSequence: muzzle
 	Cargo:
 		Types: Infantry
 		MaxWeight: 1
@@ -930,9 +930,6 @@ TRIKE:
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
 		PortYaws: 0, 176, 341, 512, 682, 853#10, 10, 10, 10, 10, 10
 		PortCones: 1086, 86, 86, 86, 86, 86#10, 10, 10, 10, 10,
-	# WithMuzzleOverlay:
-	# AttackFrontal:
-		# Voice: Attack
 	RenderVoxels:
 		Scale: 0.9
 		LightAmbientColor: 0.4, 0.4, 0.4
@@ -946,10 +943,10 @@ MUTQUAD:
 		Cost: 700
 	Tooltip:
 		Name: Quad Cannon
-		Description: Heavy armored truck equiped with a quad cannon.\n\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 26
+		Description: Heavy armored truck equiped with a quad cannon.\n\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles.
 		Prerequisites: ~muweap
 	Mobile:
 		TurnSpeed: 7
@@ -1003,8 +1000,8 @@ STRUCK:
 		Cost: 900
 	Tooltip:
 		Name: Battle Bus
-		Description: Medium transport, can carry up to four soldiers which can fire from inside.\n  Strength varies depending on the infantry it carries.\n  Weak vs Aircraft.
 	Buildable:
+		Description: Medium transport, can carry up to four soldiers which can fire from inside.\n  Strength varies depending on the infantry it carries.\n  Weak vs Aircraft.
 		Queue: Vehicle
 		BuildPaletteOrder: 27
 		Prerequisites: ~muweap, muradr
@@ -1044,8 +1041,8 @@ MUTTANK:
 		Cost: 550
 	Tooltip:
 		Name: Leonid Tank
-		Description: Light Tank, average quality but cheap.\n\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
 	# Buildable:
+		# Description: Light Tank, average quality but cheap.\n\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
 		# Queue: Vehicle
 		# BuildPaletteOrder: 26
 		# Prerequisites: ~muweap
@@ -1077,10 +1074,10 @@ MLRS:
 		Cost: 900
 	Tooltip:
 		Name: Forgotten MLRS
-		Description: Light artillery outfitted with Tiberium rockets.\ndeals damage on a wide area. Spawns \ngas clouds on impact.\n\n  Strong vs Infantry, Buildings\n  Weak vs Armored Targets.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 31
+		Description: Light artillery outfitted with Tiberium rockets.\ndeals damage on a wide area. Spawns \ngas clouds on impact.\n\n  Strong vs Infantry, Buildings\n  Weak vs Armored Targets.
 		Prerequisites: ~muweap, muhall
 	Mobile:
 		TurnSpeed: 9
@@ -1117,8 +1114,8 @@ HVRTRUK3:
 		Cost: 1300
 	Tooltip:
 		Name: Demo Truck
-		Description: Hovering demolitions truck.\nDetonates its warhead when destroyed.\nCan move across water.\n\n  Unarmed
 	Buildable:
+		Description: Hovering demolitions truck.\nDetonates its warhead when destroyed.\nCan move across water.\n\n  Unarmed
 		Queue: Vehicle
 		BuildPaletteOrder: 29
 		Prerequisites: ~muweap, muhall
@@ -1145,8 +1142,8 @@ FORTRESS:
 		Cost: 1600
 	Tooltip:
 		Name: Battle Fortress
-		Description: Armored battle wagon.\nWorks as an APC.\nInfantry can fire from inside.\nCan move over water.\n  Weak vs anti armor weapons
 	# Buildable:
+		# Description: Armored battle wagon.\nWorks as an APC.\nInfantry can fire from inside.\nCan move over water.\n  Weak vs anti armor weapons
 		# Queue: Vehicle
 		# BuildPaletteOrder: 30
 		# Prerequisites: ~muweap, muhall
@@ -1195,8 +1192,8 @@ SCRHARV:
 		Cost: 625
 	Tooltip:
 		Name: Harvester
-		Description: Collects Ichor for processing.\nIncompatible with human refineries.\nCan be sold if near a Service Depot.\n\n  Unarmed.
 	Buildable:
+		Description: Collects Ichor for processing.\nIncompatible with human refineries.\nCan be sold if near a Service Depot.\n\n  Unarmed.
 		Queue: Vehicle
 		BuildPaletteOrder: 99
 		Prerequisites: ~scrweap, scrproc
@@ -1252,10 +1249,10 @@ SCRSCORPION:
 		Cost: 550
 	Tooltip:
 		Name: Ichor Walker
-		Description: Anti-personnel walker. Reduces the damage of targetted \nunits depending on how damaged they are.\n\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 30
+		Description: Anti-personnel walker. Reduces the damage of targetted \nunits depending on how damaged they are.\n\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
 		Prerequisites: ~scrweap
 	Mobile:
 		TurnSpeed: 6
@@ -1285,12 +1282,12 @@ SCRDRONEC:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 31
+		Description: Support hover drone, makes nearby units untargetable and\nbounces back part of the it reveices to random hostile targets.\nCannot collect essence, but autorepairs.
 		Prerequisites: ~scrweap#, scrtech
 	Valued:
 		Cost: 600
 	Tooltip:
 		Name: Vanguard
-		Description: Support hover drone, makes nearby units untargetable and\nbounces back part of the it reveices to random hostile targets.\nCannot collect essence, but autorepairs.
 	Health:
 		HP: 40000
 	Mobile:
@@ -1350,12 +1347,12 @@ SCRGLYDER2:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 31
+		Description: Specialized weapons platform it can vary from a ground version and\naerial version. The aerial version attacks ground units and vice versa.\n\n Strong vs Armor.\n  Weak vs Light units.
 		Prerequisites: ~scrweap, scrradr
 	Valued:
 		Cost: 450
 	Tooltip:
 		Name: Glider
-		Description: Specialized weapons platform it can vary from a ground version and\naerial version. The aerial version attacks ground units and vice versa.\n\n Strong vs Armor.\n  Weak vs Light units.
 	Health:
 		HP: 22500
 	Mobile:
@@ -1383,12 +1380,12 @@ SCRMOBMINE:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 31
+		Description: Hover drone that carries mobile orb that attaches itself to nearby tanks or infantry\nOnce triggered it deals average damage to nearby units and slows them.\nDoes not slowdown harvesters.\n\n Strong vs Armor.\n  Weak vs Light units.
 		Prerequisites: ~scrweap, scrradr
 	Valued:
 		Cost: 1200
 	Tooltip:
 		Name: Gravity Mine
-		Description: Hover drone that carries mobile orb that attaches itself to nearby tanks or infantry\nOnce triggered it deals average damage to nearby units and slows them.\nDoes not slowdown harvesters.\n\n Strong vs Armor.\n  Weak vs Light units.
 	Health:
 		HP: 22500
 	Targetable@Stalker:
@@ -1418,12 +1415,12 @@ SCRMBT:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 32
+		Description: Light Tank, good for scouting, deals damage over an area.\n\n Strong vs Light, heavy armor\n  Weak vs Infantry, Aircraft
 		Prerequisites: ~scrweap, scrradr
 	Valued:
 		Cost: 900
 	Tooltip:
 		Name: Hover Tank
-		Description: Light Tank, good for scouting, deals damage over an area.\n\n Strong vs Light, heavy armor\n  Weak vs Infantry, Aircraft
 	Health:
 		HP: 45000
 	Armor:
@@ -1453,10 +1450,10 @@ SCRRECHARGER:
 		Cost: 800
 	Tooltip:
 		Name: Essence Battery
-		Description: Support walker. Stores essence from fallen units\nand spends it to heal Scrin units.\n\n  Unarmed.
 	# Buildable:
 		# Queue: Vehicle
 		# BuildPaletteOrder: 33
+		# Description: Support walker. Stores essence from fallen units\nand spends it to heal Scrin units.\n\n  Unarmed.
 		# Prerequisites: ~scrweap, scrradr
 	Mobile:
 		TurnSpeed: 6
@@ -1508,13 +1505,13 @@ TRIPOD:
 		Cost: 1400
 	Tooltip:
 		Name: Anhilator Tripod
-		Description: Advanced Combat walker.\n\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft.
 	Selectable:
 		Bounds: 50,100, 0, -30
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 35
 		Prerequisites: ~scrweap, scrtech
+		Description: Advanced Combat walker.\n\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft.
 		IconPalette: chromescrin
 	Mobile:
 		TurnSpeed: 8
@@ -1565,14 +1562,14 @@ DINO:
 		Cost: 600
 	Tooltip:
 		Name: Seeker
-		Description: Basic Walker, equiped with long range missiles.\nCan be ordered to deploy to become immobile but\ncreate support drones over time.\n\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 18
+		Description: Basic Walker, equiped with long range missiles.\nCan be ordered to deploy to become immobile but\ncreate support drones over time.\n\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
 		Prerequisites: ~cabweap
 	Mobile:
 		TurnSpeed: 12
-		Speed: 97
+		Speed: 60
 		Crushes: crate
 	Voiced:
 		VoiceSet: Limpet
@@ -1589,36 +1586,8 @@ DINO:
 	Armament@2:
 		Weapon: SeekerBazookaAA
 		LocalOffset: 200,0,750
-	ExplodeWeapon@MAQUINACONCHADETUMARE:
-		Weapon: SeekerDroneSpawn
-		RequiresCondition: deployed
-		ResetReloadWhenEnabled: False
-		LocalOffset: 0,0,500
-	Targetable@Seeker:
-		TargetTypes: Seeker
 	AttackFrontal:
-		RequiresCondition: undeployed
-	AttackOmni:
-		RequiresCondition: deployed
-	RangeMultiplier@Seeker:
-		RequiresCondition: deployed
-		Modifier: 80		
-	GrantConditionOnDeploy:
-		DeployedCondition: deployed ||  notmobile
-		UndeployedCondition: undeployed
-		DeployAnimation: make
-		Facing: 160
-		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
-		DeploySound: place2.aud
-		UndeploySound: clicky1.aud
 	WithInfantryBody:
-		RequiresCondition: undeployed
-	WithSpriteBody@deployed:
-		Sequence: deployed
-		RequiresCondition: !undeployed
-	DamageMultiplier@seeker:
-		Modifier: 80
-		RequiresCondition: deployed
 	AutoTarget:
 	Selectable:
 		Bounds: 40, 36, 0, -16
@@ -1630,10 +1599,10 @@ CENTURION:
 		Cost: 1200
 	Tooltip:
 		Name: Centurion
-		Description: Heavy deployable mech, equipped withchainguns.\nCan deploy to improve its damage resistance\nand deploy combat drones.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 19
+		Description: Heavy deployable mech, equipped withchainguns.\nCan deploy to improve its damage resistance\nand deploy combat drones.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 		Prerequisites: ~cabweap
 	Mobile:
 		TurnSpeed: 5
@@ -1645,9 +1614,6 @@ CENTURION:
 		VoiceSet: Cyborg
 	Armor:
 		Type: Heavy
-	DamageMultiplier@Centu:
-		Modifier: 80
-		RequiresCondition: deployed
 	BodyOrientation:
 		QuantizedFacings: 32
 	Turreted:
@@ -1656,28 +1622,8 @@ CENTURION:
 		Voice: Attack
 	WithSpriteTurret:
 		Recoils: no
-	GrantConditionOnDeploy:
-		DeployedCondition: deployed ||  notmobile
-		UndeployedCondition: undeployed
-		DeployAnimation: make
-		Facing: 160
-		AllowedTerrainTypes: Clear, Road, DirtRoad, Rough
-		DeploySound: place2.aud
-		UndeploySound: clicky1.aud
 	RenderSprites:
-		Scale: 0.8
 	WithInfantryBody:
-		RequiresCondition: undeployed
-		ConditionMinEnabledLevel: 1
-	WithSpriteBody@deployed:
-		RequiresCondition: !undeployed
-	ExplodeWeapon@MAQUINACONCHADETUMARE:
-		Weapon: CenturionDroneSpawn
-		RequiresCondition: deployed
-		ResetReloadWhenEnabled: False
-		LocalOffset: 0,0,500
-	Targetable@Seeker:
-		TargetTypes: Seeker
 	WithMuzzleOverlay:
 	Armament:
 		Weapon: CenturionVulcan
@@ -1703,11 +1649,6 @@ GRINDER:
 		Cost: 800
 	Tooltip:
 		Name: Grinder
-		Description: Heavy vehicle designed for salvaging Hostiles.\nEnemies killed with this unit reward the player\nwith money.\n\n  Strong vs Light armored targers.\n  Weak vs Aircraft.
-	# Buildable:
-		# Queue: Vehicle
-		# BuildPaletteOrder: 20
-		# Prerequisites: ~cabweap, cabradr
 	Mobile:
 		TurnSpeed: 8
 		Speed: 100
@@ -1735,10 +1676,10 @@ ECM:
 		Cost: 1200
 	Tooltip:
 		Name: Artisan
-		Description: Support vehicle that deploys turrets.\nBuilds new turrets over time.\n\n  Unarmed.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 21
+		Description: Support vehicle that deploys turrets.\nBuilds new turrets over time.\n\n  Unarmed.
 		Prerequisites: ~cabweap, cabradr
 	Mobile:
 		TurnSpeed: 6
@@ -1784,9 +1725,9 @@ CABAPC:
 		Cost: 750
 	Tooltip:
 		Name: Hover APC
-		Description: Armored infantry transport. Can move on water.\n\n  Unarmed
 	Buildable:
 		Queue: Vehicle
+		Description: Armored infantry transport. Can move on water.\n\n  Unarmed
 		BuildPaletteOrder: 22
 		Prerequisites: ~cabweap, cabradr
 	Mobile:
@@ -1819,10 +1760,10 @@ SPIDERARTY:
 		Cost: 1500
 	Tooltip:
 		Name: Drone Host
-		Description: Heavy Artillery that builds drones at the target area.\nConverts kills into cyborgs.\n\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 23
+		Description: Heavy Artillery that builds drones at the target area.\nConverts kills into cyborgs.\n\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
 		Prerequisites: ~cabweap, cabtech
 	Mobile:
 		TurnSpeed: 12
@@ -1842,14 +1783,10 @@ SPIDERARTY:
 		DefaultAttackSequence: shoot
 	AttackFrontal:
 	Armament:
-		Weapon: DevourerShell
-		LocalOffset: -500,-150,900, -300,150,1200
+		Weapon: DroneHostShell
+		LocalOffset: -500,-150,900, -300,150,1200, -500,150,900, -300,-150,1200
 		MuzzleSequence: muzzle
-	Armament@2:
-		Weapon: DevourerShellSpawner
-		LocalOffset: -500,150,900, -300,-150,1200
-		MuzzleSequence: muzzle
-	ExplodeWeapon@MAQUINACONCHADETUMARE:
+	ExplodeWeapon:
 		Weapon: DevourerDroneSpawn
 		LocalOffset: 0,0,500
 	Targetable@Seeker:
@@ -1866,10 +1803,10 @@ PALADIN:
 		Cost: 2000
 	Tooltip:
 		Name: Paladin
-		Description: Advanced Walker equiped with Laser Cannons.\nIt's damage is avergage but it autorepairs.\nDeals full damage to all armours.\n\n  Strong vs Infantry, Vehicles.\n  Weak vs Aircraft.
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 24
+		Description: Advanced Walker equiped with Laser Cannons.\nIt's damage is avergage but it autorepairs.\nDeals full damage to all armours.\n\n  Strong vs Infantry, Vehicles.\n  Weak vs Aircraft.
 		Prerequisites: ~cabweap, cabtech
 	Mobile:
 		TurnSpeed: 6

@@ -30,6 +30,9 @@ ENGINEER:
 	Inherits: ^Soldier
 	Inherits@2: ^NodCloakHealing
 	Inherits@3:	^Engineer
+	Tooltip:
+		Name: Engineer
+		Description: Utility unit that can captures enemy structures. Detect\nand place mines, repair allied buildings instantly. Mines\nream automatically but do so faster near a barracks.\n\n  Unarmed.
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 8
@@ -373,7 +376,7 @@ GACNST:
 PROC:
 	Inherits: ^Building
 	Valued:
-		Cost: 1700
+		Cost: 1500
 	CustomSellValue:
 		Value: 400
 	Tooltip:

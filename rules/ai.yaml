@@ -495,74 +495,74 @@ Player:
 			harv: 2
 			scrharv: 2
 #T1 Inf#
-			gdie1: 18
-			marauder: 18
-			cyborg: 18
-			shark: 18
-			jumpjet: 13
-			altnode1: 13
-			crusader: 13
-			e3: 13
-			cabsentry: 13
-			pdrone: 13
-			legio: 13
+			gdie1: 6
+			marauder: 6
+			cyborg: 6
+			shark: 6
+			jumpjet: 3
+			altnode1: 3
+			crusader: 3
+			e3: 3
+			cabsentry: 3
+			pdrone: 3
+			legio: 3
 #T2 Inf#
-			grenadier: 9
-			medic: 9
-			templar: 9
-			mutfiend: 9
-			reapercab: 9
-			colossi: 9
+			grenadier: 2
+			medic: 2
+			templar: 2
+			mutfiend: 2
+			reapercab: 2
+			colossi: 2
 #T3 Inf#
-			eagleguard: 7
+			eagleguard: 1
 			bhs: 1
-			awarrior: 7
+			awarrior: 1
 			psyker: 1
-			glad: 7
+			glad: 1
 			cyc2: 1
-			float: 7
-			bug: 4
+			float: 1
+			bug: 1
 #T1 Vehicle#
 
-			smech: 7
-			bggy: 7
-			trike: 7
-			dino: 7
-			mmch: 7
-			struck: 10
-			centurion: 10
-			scrscorpion: 10
-			scrglyder1: 10
+			smech: 2
+			bggy: 2
+			trike: 2
+			dino: 2
+			mmch: 2
+			struck: 3
+			centurion: 3
+			scrscorpion: 3
+			scrglyder1: 3
 #T2 Vehicle#
-			hvr: 8
-			ttnk: 8
-			subtank: 8
-			mutquad: 8
-			wolf: 8
-			grinder: 8
-			scrmbt: 8
-			scrrecharger: 3
+			hvr: 2
+			ttnk: 2
+			subtank: 2
+			mutquad: 2
+			wolf: 2
+			grinder: 2
+			scrmbt: 2
+			scrrecharger: 2
 #T3 Vehicle#
-			sonic: 7
-			deathclaw: 7
-			paladin: 7
-			stnk: 7
-			tripod: 7
+			sonic: 1
+			deathclaw: 1
+			paladin: 1
+			stnk: 1
+			tripod: 1
 			hmec: 1
-			armh: 5
-			jugger: 5
-			spiderarty: 5
-			mrls: 5
+			armh: 1
+			jugger: 1
+			spiderarty: 1
+			mrls: 1
 #T1 Air#
-			wasp: 10
-			stormrider: 5
-			scrglyder2: 5
+			wasp: 3
+			stormrider: 1
+			scrglyder2: 1
 #T2 Air#
-			scrdestroyer: 5
+			scrdestroyer: 1
 #T3 Air#
-			guardian: 4
-			basilisk: 4
-			scrbattleship: 4
+			guardian: 1
+			basilisk: 1
+			scrbattleship: 1
 		UnitsToBuild:
 #Harvesters#
 			harv: 7.5%

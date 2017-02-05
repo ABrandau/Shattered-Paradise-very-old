@@ -7,11 +7,11 @@ GAPOWR:
 		Queue: Building
 		BuildPaletteOrder: 0
 		Prerequisites: ~structures.gdi
+		Description: Provides power for other structures.
 	Valued:
 		Cost: 300
 	Tooltip:
 		Name: GDI Power Plant
-		Description: Provides power for other structures.
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Building:
@@ -61,12 +61,12 @@ GAPILE:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 30
+		Description: Produces infantry.
 		Prerequisites: anypower, ~structures.gdi
 	Valued:
 		Cost: 300
 	Tooltip:
 		Name: GDI Barracks
-		Description: Produces infantry.
 	ProvidesPrerequisite:
 		Prerequisite: barracks
 	Building:
@@ -122,12 +122,12 @@ GAWEAP:
 		Cost: 2000
 	Tooltip:
 		Name: GDI War Factory
-		Description: Produces vehicles.
 	ProvidesPrerequisite:
 		Prerequisite: factory
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 50
+		Description: Produces vehicles.
 		Prerequisites: proc, ~structures.gdi
 	Building:
 		Footprint: xxx= xxx= xxx=
@@ -182,10 +182,10 @@ GAHPAD:
 		Cost: 500
 	Tooltip:
 		Name: Helipad
-		Description: Produces, rearms and\nrepairs helicopters.
 	Buildable:
 		BuildPaletteOrder: 60
 		Queue: Building
+		Description: Produces, rearms and\nrepairs helicopters.
 		Prerequisites: proc, garadr, ~structures.gdi
 	Building:
 		Footprint: xx xx
@@ -233,12 +233,12 @@ GARADR:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 90
+		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
 		Prerequisites: proc, ~structures.gdi
 	Valued:
 		Cost: 1500
 	Tooltip:
 		Name: GDI Radar
-		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
 	ProvidesPrerequisite:
 		Prerequisite: radar
 	Building:
@@ -278,12 +278,12 @@ GATECH:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 100
+		Description: Provides access to advanced cyborg technologies.
 		Prerequisites: gaweap, garadr, ~structures.gdi
 	Valued:
 		Cost: 3000
 	Tooltip:
 		Name: GDI Tech Center
-		Description: Provides access to advanced cyborg technologies.
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	Building:
@@ -311,12 +311,12 @@ GAPLUG:
 		Cost: 1500
 	Tooltip:
 		Name: GDI Upgrade Center
-		Description: Can be Conditiond for additional technology.
 	Selectable:
 		Bounds: 115,72,0,-12
 	Buildable:
 		BuildPaletteOrder: 100
 		Prerequisites: proc, gatech, ~structures.gdi
+		Description: Can be Conditiond for additional technology.
 		Queue: Building
 	Building:
 		Footprint: xxx xxx
@@ -402,10 +402,6 @@ GAPLUG:
 #######################################################
 GAWALL:
 	Inherits: ^Wall
-	# Buildable:
-		# Queue: Defense
-		# BuildPaletteOrder: 20
-		# Prerequisites: ~structures.gdi
 	SoundOnDamageTransition:
 		DamagedSounds:
 		DestroyedSounds:
@@ -415,7 +411,6 @@ GAWALL:
 		Value: 0
 	Tooltip:
 		Name: Concrete Wall
-		Description: Stops infantry and blocks enemy fire.\nCan NOT be crushed by tanks.
 	Health:
 		HP: 30000
 	Armor:
@@ -438,12 +433,12 @@ NAPOWR:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 0
+		Description: Provides power for other structures.
 		Prerequisites: ~structures.nod
 	Valued:
 		Cost: 300
 	Tooltip:
 		Name: Nod Power Plant
-		Description: Provides power for other structures.
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Building:
@@ -475,12 +470,12 @@ NAAPWR:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 5
+		Description: Provides twice as much power as\nthe normal Power Plant.
 		Prerequisites: factory, ~structures.nod
 	Valued:
 		Cost: 600
 	Tooltip:
 		Name: Advanced Power Plant
-		Description: Provides twice as much power as\nthe normal Power Plant.
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Building:
@@ -512,12 +507,12 @@ NAHAND:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 30
+		Description: Produces infantry.
 		Prerequisites: anypower, ~structures.nod
 	Valued:
 		Cost: 300
 	Tooltip:
 		Name: Hand of Nod
-		Description: Produces infantry.
 	ProvidesPrerequisite@engineer:
 		Prerequisite: barracks
 	ProximityExternalCondition:
@@ -571,12 +566,12 @@ NAWEAP:
 		Cost: 2000
 	Tooltip:
 		Name: Nod War Factory
-		Description: Produces vehicles.
 	ProvidesPrerequisite:
 		Prerequisite: factory
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 50
+		Description: Produces vehicles.
 		Prerequisites: proc, ~structures.nod
 	Building:
 		Footprint: xxx= xxx= xxx=
@@ -627,10 +622,10 @@ NAHPAD:
 		Cost: 500
 	Tooltip:
 		Name: Helipad
-		Description: Produces, rearms and\nrepairs helicopters.
 	Buildable:
 		BuildPaletteOrder: 60
 		Queue: Building
+		Description: Produces, rearms and\nrepairs helicopters.
 		Prerequisites: proc, naradr, ~structures.nod
 	Building:
 		Footprint: xx xx
@@ -678,12 +673,12 @@ NARADR:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 90
+		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
 		Prerequisites: proc, ~structures.nod
 	Valued:
 		Cost: 1500
 	Tooltip:
 		Name: Nod Radar
-		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
 	ProvidesPrerequisite:
 		Prerequisite: radar
 	Building:
@@ -723,12 +718,12 @@ NATECH:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 100
+		Description: Provides access to advanced Nod technologies.
 		Prerequisites: naweap, naradr, ~structures.nod
 	Valued:
 		Cost: 3000
 	Tooltip:
 		Name: Nod Tech Center
-		Description: Provides access to advanced Nod technologies.
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	Building:
@@ -756,13 +751,13 @@ NATMPL:
 		Queue: Building
 		BuildPaletteOrder: 200
 		Prerequisites: natech, ~structures.nod
+		Description: Allows the player to prepare\nToxin Missiles from missile\nsilos.
 		BuildLimit: 1
 	ProvidesPrerequisite@buildingname:
 	Valued:
 		Cost: 2000
 	Tooltip:
 		Name: Temple of Nod
-		Description: Allows the player to prepare\nToxin Missiles from missile\nsilos.
 	Building:
 		Adjacent: 3
 		Footprint: xxxx xxxx xxxx
@@ -789,10 +784,10 @@ NASTLH:
 		Cost: 2500
 	Tooltip:
 		Name: Stealth Generator
-		Description: Generates a cloaking field that hides\nnearby units and structures, Cloaked NOD units heal slowly.
 	Buildable:
 		BuildPaletteOrder: 80
 		Prerequisites: proc, natech, ~structures.nod
+		Description: Generates a cloaking field that hides\nnearby units and structures, Cloaked NOD units heal slowly.
 		Queue: Defense
 	Building:
 		Footprint: xxx xxx
@@ -871,12 +866,12 @@ MUPOWR:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 0
+		Description: Provides power for other structures.
 		Prerequisites: ~structures.mut
 	Valued:
 		Cost: 230
 	Tooltip:
 		Name: Mutant Power Plant
-		Description: Provides power for other structures.
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Building:
@@ -910,12 +905,12 @@ MURAX:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 30
+		Description: Forgotten Weapons stash, arms soldiers for battle.
 		Prerequisites: anypower, ~structures.mut
 	Valued:
 		Cost: 300
 	Tooltip:
 		Name: Mutant Armory
-		Description: Forgotten Weapons stash, arms soldiers for battle.
 	ProvidesPrerequisite:
 		Prerequisite: murax
 	Building:
@@ -964,10 +959,10 @@ MUPROC:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 20
+		Description: Processes raw Tiberium\ninto usable resources.\nIncompatible with scrin harvesters.
 		Prerequisites: ~forgproc, anypower
 	Tooltip:
 		Name: Forgotten Refinery
-		Description: Processes raw Tiberium\ninto usable resources.\nIncompatible with scrin harvesters.
 	Building:
 		Footprint: xx== xx== xx==
 		Dimensions: 4,3
@@ -995,12 +990,12 @@ MUWEAP:
 		Cost: 1800
 	Tooltip:
 		Name: Mutant War Factory
-		Description: Produces vehicles.
 	ProvidesPrerequisite:
 		Prerequisite: factory
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 50
+		Description: Produces vehicles.
 		Prerequisites: proc, ~structures.mut
 	Building:
 		Footprint: xxx= xxx= xxx=
@@ -1050,10 +1045,10 @@ MUAIR:
 		Cost: 300
 	Tooltip:
 		Name: Mutant Airstrip
-		Description: Produces, rearms and\nrepairs helicopters and Jets.
 	Buildable:
 		BuildPaletteOrder: 60
 		Queue: Building
+		Description: Produces, rearms and\nrepairs helicopters and Jets.
 		Prerequisites: proc, muradr, ~structures.mut
 	Building:
 		Footprint: xxxx xxxx
@@ -1093,13 +1088,13 @@ MURADR:
 	Inherits: ^Building
 	Buildable:
 		Queue: Building
+		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
 		BuildPaletteOrder: 90
 		Prerequisites: proc, ~structures.mut
 	Valued:
 		Cost: 1500
 	Tooltip:
 		Name: Dome Radar
-		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
 	ProvidesPrerequisite:
 		Prerequisite: radar
 	Building:
@@ -1137,12 +1132,12 @@ MUHALL:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 100
+		Description: Provides access to contact with Forgotten Leaders.
 		Prerequisites: muweap, muradr, ~structures.mut
 	Valued:
 		Cost: 3000
 	Tooltip:
 		Name: Forgotten Hall
-		Description: Provides access to contact with Forgotten Leaders.
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	Building:
@@ -1168,12 +1163,12 @@ MUSTABLE:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 100
+		Description: Allows beast herding.\nBeasts become stronger when hurt,\ngain regenerative capabilities but \nthey can't be ordered while in  this state.
 		Prerequisites: murax, ~structures.mut
 	Valued:
 		Cost: 500
 	Tooltip:
 		Name: Training Grounds
-		Description: Allows beast herding.\nBeasts become stronger when hurt,\ngain regenerative capabilities but \nthey can't be ordered while in  this state.
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	Building:
@@ -1254,12 +1249,12 @@ SCRPOWR:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 0
+		Description: Provides power for other structures.
 		Prerequisites: ~structures.scr
 	Valued:
 		Cost: 400
 	Tooltip:
 		Name: Scrin Generator
-		Description: Provides power for other structures.
 	ProvidesPrerequisite:
 		Prerequisite: scrpowr
 	Building:
@@ -1333,12 +1328,12 @@ SCRRAX:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 30
+		Description: Allows the player to call in Scrin Infantry.
 		Prerequisites: scrpowr, ~structures.scr
 	Valued:
 		Cost: 300
 	Tooltip:
 		Name: Landing Zone
-		Description: Allows the player to call in Scrin Infantry.
 	ProvidesPrerequisite:
 		Prerequisite: scrrax
 	Building:
@@ -1369,10 +1364,6 @@ SCRRAX:
 		Produces: Infantry
 	WithIdleOverlay@ship:
 		Sequence: ship
-	# ProductionAirdrop:
-		# Produces: Infantry
-		# ActorType: scrpod
-		# ReadyAudio: UnitReady
 	PrimaryBuilding:
 	ProductionBar:
 	Power:
@@ -1397,12 +1388,12 @@ SCRPROC:
 		Value: 400
 	Tooltip:
 		Name: Scrin Refinery
-		Description: Processes raw Ichor\ninto usable resources.\nIncompatible with human harvesters.
 	Armor:
 		Type: Heavy
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 20
+		Description: Processes raw Ichor\ninto usable resources.\nIncompatible with human harvesters.
 		Prerequisites: scrpowr, ~structures.scr
 	Building:
 		Footprint: xx== xx== xx==
@@ -1443,11 +1434,11 @@ SCRWEAP:
 		Cost: 2000
 	Tooltip:
 		Name: Scrin Forge
-		Description: Produces vehicles.
 	ProvidesPrerequisite:
 		Prerequisite: scrweap
 	Buildable:
 		Queue: Building
+		Description: Produces vehicles.
 		BuildPaletteOrder: 50
 		Prerequisites: scrproc, ~structures.scr
 	Building:
@@ -1497,11 +1488,11 @@ SCRAIR:
 		Cost: 1500
 	Tooltip:
 		Name: Stargate
-		Description: Warps in warships from the fleet.
 	Buildable:
 		BuildPaletteOrder: 60
+		Description: Warps in warships from the fleet.
 		Queue: Building
-		Prerequisites: scrproc, ~structures.scr
+		Prerequisites: scrproc, scrradr, ~structures.scr
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -1548,12 +1539,12 @@ SCRDEPOT:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 100
+		Description: Allows the scrin commander to repair vehicles.\nVehicles near it auto repair slowly.
 		Prerequisites: scrweap, ~structures.scr
 	Valued:
 		Cost: 900
 	Tooltip:
 		Name: Scrin Maintenance Depot
-		Description: Allows the scrin commander to repair vehicles.\nVehicles near it auto repair slowly.
 	Building:
 		Footprint: _x_ xxx _x_
 		Dimensions: 3,3
@@ -1588,12 +1579,12 @@ SCRRADR:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 90
+		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
 		Prerequisites: scrproc, ~structures.scr
 	Valued:
 		Cost: 1500
 	Tooltip:
 		Name: Scrin Radar
-		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
 	ProvidesPrerequisite:
 		Prerequisite: radar
 	Building:
@@ -1635,12 +1626,12 @@ SCRTECH:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 100
+		Description: Provides an area for surface sampling\nAllows the Scrin to adapt their most advanced units\nto the host planet.
 		Prerequisites: scrweap, scrradr, ~structures.scr
 	Valued:
 		Cost: 3000
 	Tooltip:
 		Name: Scrin Laboratory
-		Description: Provides an area for surface sampling\nAllows the Scrin to adapt their most advanced units\nto the host planet.
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	Building:
@@ -1669,12 +1660,12 @@ CABPOWR:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 0
+		Description: Provides power for other structures.\nPower output does not decrease with damage.\nDamages itself when on critical health.
 		Prerequisites: ~structures.cab
 	Valued:
 		Cost: 750
 	Tooltip:
 		Name: Firestorm Power Plant
-		Description: Provides power for other structures.\nPower output does not decrease with damage.\nDamages itself when on critical health.
 	ProvidesPrerequisite:
 		Prerequisite: anypower
 	Building:
@@ -1712,12 +1703,12 @@ CABCLAW:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 30
+		Description: Produces infantry.
 		Prerequisites: anypower, ~structures.cab
 	Valued:
 		Cost: 300
 	Tooltip:
 		Name: C.A.B.A.L. Claw
-		Description: Produces infantry.
 	ProvidesPrerequisite:
 		Prerequisite: cabclaw
 	Building:
@@ -1767,10 +1758,10 @@ CABPROC:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 20
+		Description: Processes raw Tiberium\ninto usable resources.\nIncompatible with scrin harvesters.
 		Prerequisites: ~cabproc, anypower
 	Tooltip:
 		Name: C.A.B.A.L. Refinery
-		Description: Processes raw Tiberium\ninto usable resources.\nIncompatible with scrin harvesters.
 	Building:
 		Footprint: xx== xx== xx==
 		Dimensions: 4,3
@@ -1801,12 +1792,12 @@ CABWEAP:
 		Cost: 2000
 	Tooltip:
 		Name: C.A.B.A.L. War Factory
-		Description: Produces vehicles.
 	ProvidesPrerequisite:
 		Prerequisite: factory
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 50
+		Description: Produces vehicles.
 		Prerequisites: proc, ~structures.cab
 	Building:
 		Footprint: xxx= xxx= xxx=
@@ -1856,11 +1847,11 @@ CABAIR:
 		Cost: 1000
 	Tooltip:
 		Name: Air Factory
-		Description: Produces aircraft, does not rearm\n or repair aerial units.
 	Buildable:
 		BuildPaletteOrder: 60
 		Queue: Building
-		Prerequisites: proc, ~structures.cab
+		Description: Produces aircraft, does not rearm\n or repair aerial units.
+		Prerequisites: proc, cabradr, ~structures.cab
 	Building:
 		Footprint: xxx xxx xxx
 		Dimensions: 3,3
@@ -1902,12 +1893,12 @@ CABRADR:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 90
+		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
 		Prerequisites: proc, ~structures.cab
 	Valued:
 		Cost: 1500
 	Tooltip:
 		Name: C.A.B.A.L. Radar
-		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
 	ProvidesPrerequisite:
 		Prerequisite: radar
 	Building:
@@ -1945,12 +1936,12 @@ CABGRINDER:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 71
+		Description: Storage site for cyborg canditates.\nIt allows you to refund CABAL\ninfantry for half its cost.
 		Prerequisites: cabclaw, ~structures.cab
 	Valued:
 		Cost: 350
 	Tooltip:
 		Name: Stasis Chamber
-		Description: Storage site for cyborg canditates.\nIt allows you to refund CABAL\ninfantry for half its cost.
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	AcceptsSupplies:
@@ -1977,12 +1968,12 @@ CABTECH:
 	Buildable:
 		Queue: Building
 		BuildPaletteOrder: 100
+		Description: Provides access to advanced CABAL technologies.
 		Prerequisites: cabweap, cabradr, ~structures.cab
 	Valued:
 		Cost: 3000
 	Tooltip:
 		Name: Supercomputer
-		Description: Provides access to advanced CABAL technologies.
 	ProvidesPrerequisite:
 		Prerequisite: tech
 	Building:

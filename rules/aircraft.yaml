@@ -68,8 +68,8 @@ ORCA:
 		Cost: 900
 	Tooltip:
 		Name: Orca Fighter
-		Description: Rapid Assault Gunship with\ndual missile launchers.\n\n  Strong vs Armored Targets.\n  Weak vs Infantry, Aircraft.
 	Buildable:
+		Description: Rapid Assault Gunship with\ndual missile launchers.\n\n  Strong vs Armored Targets.\n  Weak vs Infantry, Aircraft.
 		Queue: Air
 		BuildPaletteOrder: 20
 		Prerequisites: ~gahpad
@@ -110,8 +110,8 @@ ORCAB:
 		Cost: 1500
 	Tooltip:
 		Name: Orca Bomber
-		Description: Heavy carpet Bomber.\nSlow but highly armored.\n\n  Strong vs Ground Units.\n  Weak vs Anti Air, Aircraft
 	Buildable:
+		Description: Heavy carpet Bomber.\nSlow but highly armored.\n\n  Strong vs Ground Units.\n  Weak vs Anti Air, Aircraft
 		Queue: Air
 		BuildPaletteOrder: 20
 		Prerequisites: ~gahpad, gatech
@@ -157,8 +157,8 @@ TRNSPORT:
 		Cost: 750
 	Tooltip:
 		Name: Carryall
-		Description: VTOL Aircraft capable of lifting\nand transporting Vehicles.\n\n  Unarmed
 	Buildable:
+		Description: VTOL Aircraft capable of lifting\nand transporting Vehicles.\n\n  Unarmed
 		Queue: Air
 		BuildPaletteOrder: 20
 		Prerequisites: ~gahpad, gadept
@@ -192,8 +192,8 @@ GUARDIAN:
 		Cost: 2500
 	Tooltip:
 		Name: Guardian Platform
-		Description: Medium frigate, great for spotting targets.\nIt can land to repair nearby vehicles.\n\n  Strong vs Vehicles, Aircraft.\n  Weak vs Infantry, Heavy vehicles.
 	Buildable:
+		Description: Medium frigate, great for spotting targets.\nIt can land to repair nearby vehicles.\n\n  Strong vs Vehicles, Aircraft.\n  Weak vs Infantry, Heavy vehicles.
 		Queue: Air
 		BuildPaletteOrder: 20
 		Prerequisites: ~gahpad, gadept
@@ -360,8 +360,8 @@ APACHE:
 		Cost: 500
 	Tooltip:
 		Name: Harpy
-		Description: Scout helicopter armed with dual chain guns.\nIncinirates infantry similar to the Flame warrior.\nDetects cloaked units.\nCloaks when idle.\nDetects cloaked units.\n\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles
 	Buildable:
+		Description: Scout helicopter armed with dual chain guns.\nIncinirates infantry similar to the Flame warrior.\nDetects cloaked units.\nCloaks when idle.\nDetects cloaked units.\n\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles
 		Queue: Air
 		BuildPaletteOrder: 20
 		Prerequisites: ~nahpad
@@ -384,9 +384,11 @@ APACHE:
 		CloakSound: cloak5.aud
 		UncloakSound: cloak5.aud
 		IsPlayerPalette: true
-		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage, Move
+		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage#, Move
 	Armament:
 		Weapon: HarpyClaw
+	Armament@1:
+		Weapon: HarpyAA
 	AttackHeli:
 		FacingTolerance: 20
 		Voice: Attack
@@ -418,8 +420,8 @@ SCRIN:
 		Cost: 1500
 	Tooltip:
 		Name: Banshee Fighter
-		Description: Advanced fighter-bomber craft\nwith twin plasma cannons.\n\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
 	Buildable:
+		Description: Advanced fighter-bomber craft\nwith twin plasma cannons.\n\n  Strong vs Buildings, Vehicles\n  Weak vs Infantry, Aircraft
 		Queue: Air
 		BuildPaletteOrder: 20
 		Prerequisites: ~nahpad, natech
@@ -480,8 +482,8 @@ MUTBIRD:
 		Cost: 600
 	Tooltip:
 		Name: Seeder Bird
-		Description: Scout unit, places crab eggs.\nTiberian Crabs are hostile to ANYONE.\n\n  Unnarmed.
 	Buildable:
+		Description: Scout unit, places crab eggs.\nTiberian Crabs are hostile to ANYONE.\n\n  Unnarmed.
 		Queue: Air
 		BuildPaletteOrder: 20
 		Prerequisites: ~muair, mustable
@@ -531,8 +533,8 @@ MUTHELI:
 		Cost: 700
 	Tooltip:
 		Name: Gargoyle
-		Description: Heavy assault gunship with dual\nmissile launchers.\n\n  Strong vs Infantry, Light Vehicles.\n  Weak vs Anti air.
 	Buildable:
+		Description: Heavy assault gunship with dual\nmissile launchers.\n\n  Strong vs Infantry, Light Vehicles.\n  Weak vs Anti air.
 		Queue: Air
 		BuildPaletteOrder: 20
 		Prerequisites: ~muair
@@ -587,8 +589,8 @@ WETP:
 		Cost: 1300
 	Tooltip:
 		Name: Falcon
-		Description: Light Bomber, it deals damage on a small area\nwhile also spawns gas clouds.\n\n  Strong vs Ground units.\n  Weak vs Aircraft, Anti air units.
 	Buildable:
+		Description: Light Bomber, it deals damage on a small area\nwhile also spawns gas clouds.\n\n  Strong vs Ground units.\n  Weak vs Aircraft, Anti air units.
 		Queue: Air
 		BuildPaletteOrder: 20
 		Prerequisites: ~muair, muhall
@@ -698,8 +700,8 @@ STORMRIDER:
 		Cost: 300
 	Tooltip:
 		Name: Storm Rider
-		Description: Scrin fighter equiped with a blaster turret\nCan fire while moving.\n\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles, Anti Air weapons.
 	Buildable:
+		Description: Scrin fighter equiped with a blaster turret\nCan fire while moving.\n\n  Strong vs Infantry, Aircraft\n  Weak vs Vehicles, Anti Air weapons.
 		Queue: Air
 		BuildPaletteOrder: 18
 		Prerequisites: ~scrair
@@ -747,12 +749,12 @@ drache:
 	Buildable:
 		Queue: Air
 		BuildPaletteOrder: 110
+		Description: Deploys into another Construction Yard.\n\n  Unarmed
 		Prerequisites: ~scrair, scrdepot
 	Valued:
 		Cost: 1500
 	Tooltip:
 		Name: Scrin Host Station
-		Description: Deploys into another Construction Yard.\n\n  Unarmed
 	Selectable:
 		Bounds: 144, 60, 0, -6
 		Priority: 4
@@ -803,8 +805,8 @@ SCRGLYDER1:
 		Cost: 450
 	Tooltip:
 		Name: Glider
-		Description: Specialized weapons platform it can vary from a ground version and\naerial version. The aerial version attacks ground units and vice versa.\n\n Strong vs Armor.\n  Weak vs Light units.
 	Buildable:
+		Description: Specialized weapons platform it can vary from a ground version and\naerial version. The aerial version attacks ground units and vice versa.\n\n Strong vs Armor.\n  Weak vs Light units.
 		Queue: Air
 		BuildPaletteOrder: 20
 		Prerequisites: ~scrair
@@ -856,8 +858,8 @@ SCRDESTROYER:
 		Cost: 1750
 	Tooltip:
 		Name: Destroyer
-		Description: Scrin light frigate, designed for long range harassment.\nEquivalent to an artillery unit.\n\n  Strong vs Infantry, Buildings.\n  Weak vs Aircraft, Anti Air units.
 	Buildable:
+		Description: Scrin light frigate, designed for long range harassment.\nEquivalent to an artillery unit.\n\n  Strong vs Infantry, Buildings.\n  Weak vs Aircraft, Anti Air units.
 		Queue: Air
 		BuildPaletteOrder: 21
 		Prerequisites: ~scrair, scrradr
@@ -907,8 +909,8 @@ SCRTRANS:
 		Cost: 1000
 	Tooltip:
 		Name: Scrin Transport
-		Description: Scrin equivalent to an APC.\nTransports infantry around the field.\n\n  Unarmed
 	Buildable:
+		Description: Scrin equivalent to an APC.\nTransports infantry around the field.\n\n  Unarmed
 		Queue: Air
 		Prerequisites: ~scrair, scrdepot
 	Voiced:
@@ -956,8 +958,8 @@ SCRBATTLESHIP:
 		Cost: 3000
 	Tooltip:
 		Name: Battlecruiser
-		Description: Scrin spacecraft designed for frontline combat.\nFires volleys at ground targets and rockets.\n\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft.
 	Buildable:
+		Description: Scrin spacecraft designed for frontline combat.\nFires volleys at ground targets and rockets.\n\n  Strong vs Infantry, Buildings\n  Weak vs Vehicles, Aircraft.
 		Queue: Air
 		BuildPaletteOrder: 21
 		Prerequisites: ~scrair, scrtech
@@ -1013,12 +1015,12 @@ SCRINCOUNCIL:
 		Queue: Air
 		BuildPaletteOrder: 22
 		Prerequisites: ~scrair, scrtech
+		Description: Mobile Support Superweapon, it can constructs vehicles.\nAnd also slow down the flow of combat map wide.\n\n  Unarmed.
 		BuildLimit: 1
 	Valued:
 		Cost: 3000
 	Tooltip:
 		Name: Creation engine
-		Description: Mobile Support Superweapon, it can constructs vehicles.\nAnd also slow down the flow of combat map wide.\n\n  Unarmed.
 	Selectable:
 		Bounds: 100,90
 	Voiced:
@@ -1074,8 +1076,8 @@ MOTHERSHIP:
 		Cost: 3000
 	Tooltip:
 		Name: Mothership
-		Description: Scrin Flagship, it sends fighters at enemies.\n\n Strong vs Ground Units.\n Weak vs Air units.
 	Buildable:
+		Description: Scrin Flagship, it sends fighters at enemies.\n\n Strong vs Ground Units.\n Weak vs Air units.
 		Queue: Air
 		BuildPaletteOrder: 21
 		Prerequisites: ~scrair, scrtech, ~!mothershipdep
@@ -1094,9 +1096,7 @@ MOTHERSHIP:
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 150000
-	Armor:
-		Type: Heavy
+		HP: 100000
 	RevealsShroud:
 		Range: 16c0
 		Type: CenterPosition
@@ -1297,8 +1297,8 @@ WASP:
 		Cost: 1200
 	Tooltip:
 		Name: Wasp
-		Description: Aerial drone equiped with dual laser cannons.\n\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry, Aircraft.
 	Buildable:
+		Description: Aerial drone equiped with dual laser cannons.\n\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry, Aircraft.
 		Queue: Air
 		BuildPaletteOrder: 20
 		Prerequisites: ~cabair
@@ -1355,8 +1355,8 @@ FIREFLY:
 		Cost: 700
 	Tooltip:
 		Name: Firefly
-		Description: Support drone, reduces enemy attack speed.\nof targetted vehicles.\nDetects cloaked units.\n\n Unarmed.
 	Buildable:
+		Description: Support drone, reduces enemy attack speed.\nof targetted vehicles.\nDetects cloaked units.\n\n Unarmed.
 		Queue: Air
 		BuildPaletteOrder: 20
 		Prerequisites: ~cabair, cabradr
@@ -1408,9 +1408,9 @@ DEVOURER:
 		Cost: 2400
 	Tooltip:
 		Name: Devourer
-		Description: Slow frigate designed for recovery operations, gives\nthe onwer part of the cost of any unit that dies near.\n\n Strong vs Structures.\n Weak vs Infantry, Vehicles, Aircraft.
 	Buildable:
 		Queue: Air
+		Description: Slow frigate designed for recovery operations, gives\nthe onwer part of the cost of any unit that dies near.\n\n Strong vs Structures.\n Weak vs Infantry, Vehicles, Aircraft.
 		BuildPaletteOrder: 21
 		Prerequisites: ~cabair, cabradr
 	Selectable:
@@ -1478,8 +1478,8 @@ BASILISK:
 		Cost: 1800
 	Tooltip:
 		Name: Basilisk
-		Description: Light frigate, fires plasma shells and has\nfirestorm bombs.\n  Strong vs Infantry, Buildings.\n\n  Weak vs Aircraft, Vehicles.
 	Buildable:
+		Description: Light frigate, fires plasma shells and has\nfirestorm bombs.\n  Strong vs Infantry, Buildings.\n\n  Weak vs Aircraft, Vehicles.
 		Queue: Air
 		BuildPaletteOrder: 22
 		Prerequisites: ~cabair, cabtech

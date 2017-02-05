@@ -62,7 +62,7 @@ SkirmisherMortar:
 		Image: 120mm
 		LaunchAngle: 165
 		Shadow: true
-		Inaccuracy: 2c0
+		Inaccuracy: 0c512
 		Blockable: false
 		ContrailLength: 6
 		ContrailUsePlayerColor: true

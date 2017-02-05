@@ -6,12 +6,12 @@ GDIE1:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 1
+		Description: General-Purpose Infantry.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
 		Prerequisites: ~gapile
 	Valued:
 		Cost: 130
 	Tooltip:
 		Name: Marine
-		Description: General-Purpose Infantry.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
 	Health:
 		HP: 12000
 	Voiced:
@@ -36,7 +36,6 @@ GRENADIER:
 		Cost: 210
 	Tooltip:
 		Name: Grenadier
-		Description: Support Infantry armed with anti armor grenade launchers.\nCan explode violently when killed.\n\n  Strong vs Vehicles, Buildings.\n  Weak vs Infantry, Aircraft.
 	Health:
 		HP: 11000
 	Mobile:
@@ -62,7 +61,6 @@ JUMPJET:
 		Cost: 400
 	Tooltip:
 		Name: Jumpjet Infantry
-		Description: Airborne Soldier, equipped with a chaingun and a rocket launcher rifle.\nnBug: Loses accumulated experience if ordered to alternate modes.\nStarts in airborne mode.\n\n  Strong vs Ground units.\n  Weak vs Aircraft, Anti air.
 	Voiced:
 		VoiceSet: Marine
 	Mobile:
@@ -80,25 +78,38 @@ JUMPJET:
 		PipType: Blue
 	AttackFrontal:
 		Voice: Attack
-	ProducibleWithLevel:
-		Prerequisites: barracks.Conditiond
 
 JUMPJETAIR:
-	Inherits: JUMPJET
-	Transforms:
-		IntoActor: jumpjet
+	Inherits: ^Aircraft
+	Valued:
+		Cost: 400
+	Tooltip:
+		Name: Jumpjet Infantry
+		Description: Airborne Soldier, equipped with a chaingun and a rocket launcher rifle.\nnBug: Loses accumulated experience if ordered to alternate modes.\nStarts in airborne mode.\n\n  Strong vs Ground units.\n  Weak vs Aircraft, Anti air.
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 3
 		Prerequisites: ~gapile, garadr
-	-Mobile:
-	-WithInfantryBody
+	Voiced:
+		VoiceSet: Marine
+	Selectable:
+		Bounds: 22,30,0,-10
+	Health:
+		HP: 13000
+	Armament@1:
+		Weapon: JJCannon
+	Armament@2:
+		Weapon: JJRocket
+		LocalOffset: 0, 200, 500
+	Transforms:
+		IntoActor: jumpjet
 	WithFacingSpriteBody@idle:
 		RequiresCondition: !JJBuff
 		Sequence: run
 	WithFacingSpriteBody@attack:
 		Sequence: shoot
 		RequiresCondition: JJBuff
+	RenderSprites:
 	WithShadow:
 	Hovers@CRUISING:
 		RequiresCondition: cruising
@@ -114,55 +125,20 @@ JUMPJETAIR:
 		CanHover: true
 		Repulsable: true
 		MoveIntoShroud: true
-		-TakeoffSound: orcaup1.aud
-		-LandingSound: orcadwn1.aud
-	-Targetable:
-	Armor:
-		RequiresCondition: !airborne
-	Armor@Flying:
-		Type: Light
-		RequiresCondition: airborne
 	Targetable@GROUND:
 		TargetTypes: Infantry, Ground
-		RequiresCondition: airborne
-		ConditionMaxEnabledLevel: 0
+		RequiresCondition: !airborne
 	Targetable@AIRBORNE:
 		TargetTypes: Air, Helicopter, Jumpjet
 		RequiresCondition: airborne
+	AttackHeli:
+	-RenderVoxels:
+	-WithVoxelBody:
 	Armament@SelfBuff:
 		Weapon: JJBuff
 	RevealsShroud:
 		Range: 8c0
 		Type: CenterPosition
-	DamagedByTerrain:
-		RequiresCondition: !airborne
-	-TakeCover:
-	-WithDeathAnimation@normal:
-	-WithDeathAnimation@tib:
-	-WithDeathAnimation@explosion:
-	-WithDeathAnimation@energy:
-	WithDeathAnimation@body:
-		DeathSequencePalette: gensmkexploj
-		DeathPaletteIsPlayerPalette: False
-		DeathTypes: #1 2 normals, 3 headshot, 4 explosion
-			BulletDeath: 4, 5, 7
-			CabalDeath: 4, 5, 7
-			CabalDeathCrate: 4, 5, 7
-			BlackHandRfle: 4, 5, 7
-			HeadshotDeath: 4, 5, 7
-			SmallExplosionDeath: 4, 5, 7
-			EnergyDeath: 4, 5, 7
-			ExplosionDeath: 4, 5, 7
-	-SpawnActorOnDeath@FLAMEGUY:
-	-SpawnActorOnDeath@FLAMEGUY2:
-	-SpawnActorOnDeath@tiberium:
-	-SpawnActorOnDeath@tiberium2:
-	-SpawnActorOnDeath@berserk:
-	-SpawnActorOnDeath@tiberium3:
-	-SpawnActorOnDeath@tiberium4:
-	-SpawnActorOnDeath@berserk2:
-	-SpawnActorOnDeath@conversion:
-	-SpawnActorOnDeath@blackhand:
 	ExternalConditions@JJBuff:
 		Conditions: JJBuff
 
@@ -173,10 +149,10 @@ MEDIC:
 		Cost: 300
 	Tooltip:
 		Name: Medic
-		Description: Heals nearby infantry.\n\n  Unarmed
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 4
+		Description: Heals nearby infantry.\n\n  Unarmed
 		Prerequisites: ~gapile
 	Voiced:
 		VoiceSet: Medic
@@ -204,8 +180,8 @@ EAGLEGUARD:
 		Cost: 600
 	Tooltip:
 		Name: Eagle Guard
-		Description: Elite Infantry, armed with power armor and a an EMP ray.\nIts attacks disable vehicles briefly.\n\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft.
 	Buildable:
+		Description: Elite Infantry, armed with power armor and a an EMP ray.\nIts attacks disable vehicles briefly.\n\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft.
 		Queue: Infantry
 		BuildPaletteOrder: 5
 		Prerequisites: ~gapile, gatech
@@ -235,12 +211,12 @@ ALTNODE1:
     Buildable:
         Queue: Infantry
         BuildPaletteOrder: 6
-        Prerequisites: ~nahand
+		Description: Light infantry variant. Fires inflamable bullets that incinerate\nunits, damaging units that are nearby the killed unit. They can\nbe ordered to suicide, setting any nearby unit ablaze, dealing\ndamage as mentioned before.\n\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft
+		Prerequisites: ~nahand
     Valued:
         Cost: 150
     Tooltip:
         Name: Militant
-        Description: Light infantry variant. Fires inflamable bullets that incinerate\nunits, damaging units that are nearby the killed unit. They can\nbe ordered to suicide, setting any nearby unit ablaze, dealing\ndamage as mentioned before.\n\n  Strong vs Infantry, Structures.\n  Weak vs Vehicles, Aircraft
     Health:
         HP: 10000
 	Targetable@FlameWarrior:
@@ -284,12 +260,12 @@ CRUSADER:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 7
+		Description: Anti Armour Infantry, equiped with a Rocket\nlauncher backpack, can fire while moving.\nCan also set units on fire.\n\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry.
 		Prerequisites: ~nahand
 	Valued:
 		Cost: 210
 	Tooltip:
 		Name: Crusader
-		Description: Anti Armour Infantry, equiped with a Rocket\nlauncher backpack, can fire while moving.\nCan also set units on fire.\n\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry.
 	Health:
 		HP: 11000
 	Mobile:
@@ -315,12 +291,12 @@ TEMPLAR:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 8
+		Description: Heavy weapons soldier, good for supressing infantry, heals on Tiberium.\n\n  Deals full damage to ground units.\n  Weak vs Anti infantry weapons, Aircraft.
 		Prerequisites: ~nahand, naradr
 	Valued:
 		Cost: 450
 	Tooltip:
 		Name: Templar
-		Description: Heavy weapons soldier, good for supressing infantry, heals on Tiberium.\n\n  Deals full damage to ground units.\n  Weak vs Anti infantry weapons, Aircraft.
 	Health:
 		HP: 17500
 	Mobile:
@@ -347,12 +323,12 @@ MHIJACK:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 9
+		Description: NOD Agent, can steal enemy vehicles\nand infiltrate powerplants.\nCloaks when deployed but becomes immobile.\n\n  Unarmed
 		Prerequisites: ~nahand, naradr
 	Valued:
 		Cost: 400
 	Tooltip:
 		Name: Hijacker
-		Description: NOD Agent, can steal enemy vehicles\nand infiltrate powerplants.\nCloaks when deployed but becomes immobile.\n\n  Unarmed
 	Voiced:
 		VoiceSet: Spy
 	-Crushable:
@@ -396,13 +372,13 @@ BHS:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 10
+		Description: Nod Commando, sniper unit.\nCloaked when not attacking.\nCan demolish structures using C4.\nInfantry killed by this unit explode.\nHeals near Tiberium.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
 		Prerequisites: ~nahand, natech
 		BuildLimit: 1
 	Valued:
 		Cost: 1000
 	Tooltip:
 		Name: Hand of Kane
-		Description: Nod Commando, sniper unit.\nCloaked when not attacking.\nCan demolish structures using C4.\nInfantry killed by this unit explode.\nHeals near Tiberium.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
 	Targetable@MindControlImmunity:
 		TargetTypes: MindControlInmune
 	SelfHealing@NodCloakHealing:
@@ -488,12 +464,12 @@ MARAUDER:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 18
+		Description: Mutant Militia, equipped with shotguns. They can\nfortify themselves while on tiberium fields, becoming\nstronger but immobile.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft, Base Defences.
 		Prerequisites: ~murax
 	Valued:
 		Cost: 110
 	Tooltip:
 		Name: Marauder
-		Description: Mutant Militia, equipped with shotguns. They can\nfortify themselves while on tiberium fields, becoming\nstronger but immobile.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft, Base Defences.
 	Voiced:
 		VoiceSet: Rocket
 	Health:
@@ -559,12 +535,12 @@ E3:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 21
+		Description: Siege Militia armed with mortars.\nExtremely strong in groups.\n\n  Strong vs Infantry, Buildings.\n  Weak vs Vehicles, Aircraft.
 		Prerequisites: ~murax
 	Valued:
 		Cost: 140
 	Tooltip:
 		Name: Skirmisher
-		Description: Siege Militia armed with mortars.\nExtremely strong in groups.\n\n  Strong vs Infantry, Buildings.\n  Weak vs Vehicles, Aircraft.
 	Voiced:
 		VoiceSet: Rocket
 	Health:
@@ -597,6 +573,7 @@ E2:
 		Cost: 400
 	Tooltip:
 		Name: Mutant Engineer
+		Description: Utility unit that can captures enemy structures. Detect\nand place mines, repair allied buildings instantly. Mines\nream automatically but do so faster near a barracks.\n\n  Unarmed.
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 20
@@ -619,10 +596,10 @@ MUTFIEND:
 	Inherits: ^Beast
 	Tooltip:
 		Name: Tiberian Fiend
-		Description: Tiberian Beast, fires tiberium shards at enemies.\nCannot be crushed.\n\n  Strong vs Vehicles, Helicopters.\n  Weak vs Infantry.
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 19
+		Description: Tiberian Beast, fires tiberium shards at enemies.\nCannot be crushed.\n\n  Strong vs Vehicles, Helicopters.\n  Weak vs Infantry.
 		Prerequisites: ~murax, mustable
 	SpawnActorOnDeath@conversion:
 		Actor: cybdog
@@ -637,8 +614,6 @@ MUTFIEND:
 		Shape: Circle
 			Radius: 213
 	-Crushable:
-	# Armor:
-		# Type: Light
 	Mobile:
 		Speed: 80
 	Voiced:
@@ -661,12 +636,12 @@ SEER:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 22
+		Description: Psychic mutant that is able to fire lightning\nat hostile units, can detect cloaked units.\n\n  Strong vs Vehicles, Aircraft.\n Weak vs Infantry.
 		Prerequisites: ~murax, muradr
 	Valued:
 		Cost: 300
 	Tooltip:
 		Name: Seer
-		Description: Psychic mutant that is able to fire lightning\nat hostile units, can detect cloaked units.\n\n  Strong vs Vehicles, Aircraft.\n Weak vs Infantry.
 	Voiced:
 		VoiceSet: Umagon
 	Health:
@@ -707,12 +682,12 @@ AWARRIOR:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 23
+		Description: Elite Infantry armed with gas throwers, they have a\nsmall change of turning into Ravagers when killed.\n\n  Strong vs Infantry, Buildings.\n  Weak vs Aircraft, Vehicles.
 		Prerequisites: ~murax, muhall
 	Valued:
 		Cost: 350
 	Tooltip:
 		Name: Forgotten Knight
-		Description: Elite Infantry armed with gas throwers, they have a\nsmall change of turning into Ravagers when killed.\n\n  Strong vs Infantry, Buildings.\n  Weak vs Aircraft, Vehicles.
 	Voiced:
 		VoiceSet: Rocket
 	-UpdatesPlayerStatistics:
@@ -751,12 +726,12 @@ PSYKER:
 		Queue: Infantry
 		BuildPaletteOrder: 24
 		Prerequisites: ~murax, muhall
+		Description: Forgotten Commando. Pure strain\nforgotten that can call down lightning.\nAttacks from afar.\n\n  Strong vs Vehicles, Aircraft, Buildings\n  Weak vs Infantry
 		BuildLimit: 1
 	Valued:
 		Cost: 900
 	Tooltip:
 		Name: Mind Walker
-		Description: Forgotten Commando. Pure strain\nforgotten that can call down lightning.\nAttacks from afar.\n\n  Strong vs Vehicles, Aircraft, Buildings\n  Weak vs Infantry
 	Voiced:
 		VoiceSet: Umagon
 	Health:
@@ -802,12 +777,12 @@ shark:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 24
+		Description: Anti-infantry creature, can only target infantry.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Structures, Aircraft.
 		Prerequisites: ~scrrax
 	Valued:
 		Cost: 100
 	Tooltip:
 		Name: Razorshark
-		Description: Anti-infantry creature, can only target infantry.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Structures, Aircraft.
 	Selectable:
 		Class: Shark
 	Health:
@@ -854,12 +829,12 @@ LEGIO:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 25
+		Description: Scrin Frontile trooper. Resistant\nto damage. Cannot be crushed.\n\n  Strong vs Vehicles, Buildings.\n  Weak vs Infantry.
 		Prerequisites: ~scrrax
 	Valued:
 		Cost: 230
 	Tooltip:
 		Name: Legionnaire
-		Description: Scrin Frontile trooper. Resistant\nto damage. Cannot be crushed.\n\n  Strong vs Vehicles, Buildings.\n  Weak vs Infantry.
 	Health:
 		HP: 22500
 	-Crushable:
@@ -883,6 +858,7 @@ SHAPESHIFTER:
 		Cost: 500
 	Tooltip:
 		Name: Shapeshifter
+		Description: Utility unit that can captures enemy structures. Detect\nand place mines, repair allied buildings instantly. Mines\nream automatically but do so faster near a barracks.\n\n  Unarmed.
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 26
@@ -908,12 +884,12 @@ COLOSSI:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 27
+		Description: Heavy duty alien that can take lots of punishment\nand electrify its sorroundings when ordered to.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
 		Prerequisites: ~scrrax, scrradr
 	Valued:
 		Cost: 600
 	Tooltip:
 		Name: Colossus
-		Description: Heavy duty alien that can take lots of punishment\nand electrify its sorroundings when ordered to.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft.
 	Targetable@Colossi:
 		TargetTypes: Colossi
 	Selectable:
@@ -969,10 +945,6 @@ STALKER:
 		Class: Stalker
 	Valued:
 		Cost: 600
-	# Buildable:
-		# Queue: Infantry
-		# BuildPaletteOrder: 27
-		# Prerequisites: ~scrrax, scrradr
 	Tooltip:
 		Name: Stalker
 		Description: Disruption infantry, explodes on contact releasing a energy orb that\nfollows enemy units Damaging and slowing them\n\n  Strong vs Unit acumulations.\n  Unarmed.
@@ -1002,6 +974,7 @@ FLOAT:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 29
+		Description: Support unit that steals essence from enemy units, heals\nnearby friendly aliens if it has essence available.\n\n  Somewhat good vs Infantry.\n  Weak vs Vehicles, Aircraft.
 		Prerequisites: ~scrrax, scrradr
 	Selectable:
 		Class: FLoat
@@ -1010,7 +983,6 @@ FLOAT:
 	-Crushable:
 	Tooltip:
 		Name: Purifier
-		Description: Support unit that steals essence from enemy units, heals\nnearby friendly aliens if it has essence available.\n\n  Somewhat good vs Infantry.\n  Weak vs Vehicles, Aircraft.
 	Health:
 		HP: 27000
 	Mobile:
@@ -1064,12 +1036,12 @@ BUG:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 30
+		Description: Special alien breed that focuses on infecting units. Infected\nunits take damage over time and spread their plague\nto other units that are nearby.\n\n  Strong vs Ground units.\n  Weak vs Aircraft.
 		Prerequisites: ~scrrax, scrtech
 	Valued:
 		Cost: 650
 	Tooltip:
 		Name: Plague Carrier
-		Description: Special alien breed that focuses on infecting units. Infected\nunits take damage over time and spread their plague\nto other units that are nearby.\n\n  Strong vs Ground units.\n  Weak vs Aircraft.
 	Targetable@MindControlImmunity:
 		TargetTypes: MindControlInmune
 	Selectable:
@@ -1109,7 +1081,6 @@ CABSENTRY:
 		Cost: 90
 	Tooltip:
 		Name: Sentry Drone
-		Description: Hover Drone armed with armor piercing weaponry.\nVery fragile, it can hide and cannot attack aircraft.\n  Strong vs Vehicles, Buildings\n  Weak vs Infantry, Aircraft
 	Explodes:
 		Weapon: DroneExplode
 		EmptyWeapon: DroneExplode
@@ -1127,7 +1098,7 @@ CABSENTRY:
 		Delay: 125
 		HealIfBelow: 200
 	Health:
-		HP: 20000
+		HP: 5000
 	Armament@primary:
 		Weapon: SentryGun
 	AutoTarget:
@@ -1148,10 +1119,10 @@ CYBORG:
 		Cost: 400
 	Tooltip:
 		Name: Cyborg Infantry
-		Description: Durable infantry that has good vision and damage. Auto repairs\nslowly up full to health even when under attack.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 11
+		Description: Durable infantry that has good vision and damage. Auto repairs\nslowly up full to health even when under attack.\n\n  Strong vs Infantry.\n  Weak vs Vehicles, Aircraft
 		Prerequisites: ~cabclaw
 	Selectable:
 		Bounds: 22,32,-1,-9
@@ -1185,9 +1156,9 @@ PDRONE:
 		Voice: Move
 	Tooltip:
 		Name: Reclaimer
-		Description: Melee drone, soldiers killed by this unit will be turned into\nworkers. Can only target infantry.\n\n  Strong vs Infantry\n  Weak vs Everything else.
 	Buildable:
 		Queue: Infantry
+		Description: Melee drone, soldiers killed by this unit will be turned into\nworkers. Can only target infantry.\n\n  Strong vs Infantry\n  Weak vs Everything else.
 		BuildPaletteOrder: 12
 		Prerequisites: ~cabclaw, cabgrinder
 	Selectable:
@@ -1244,6 +1215,7 @@ SWARMLING:
 	Inherits@1:	^Engineer
 	Tooltip:
 		Name: Swarmling
+		Description: Utility unit that can captures enemy structures. Detect\nand place mines, repair allied buildings instantly. Mines\nream automatically but do so faster near a barracks.\n\n  Unarmed.
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 13
@@ -1269,10 +1241,10 @@ MOTH:
 		Cost: 700
 	Tooltip:
 		Name: Abductor
-		Description: Ambusher drone that needs to deploy to attack.\nWhen deployed it burrows underground \nand fires spikes at nearby enemies.\nEnemy units are converted into cyborgs.\n\n  Strong vs Infantry, Light Vehicles.\n  Weak vs Aircraft, Detectors.
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 15
+		Description: Ambusher drone that needs to deploy to attack.\nWhen deployed it burrows underground \nand fires spikes at nearby enemies.\nEnemy units are converted into cyborgs.\n\n  Strong vs Infantry, Light Vehicles.\n  Weak vs Aircraft, Detectors.
 		Prerequisites: ~cabclaw, cabradr, cabgrinder
 	Explodes:
 		Weapon: DroneExplode
@@ -1354,11 +1326,11 @@ REAPERCAB:
 		Cost: 1300
 	Tooltip:
 		Name: Cyborg Reaper
-		Description: Cyborg construct, equipped with multi missiles\nand web launchers that can ensrane infantry.\nDetects cloaked units.\n\n Strong vs Vehicles, Aircraft\n Weak vs Infantry.
 	Buildable:
 		Queue: Infantry
 		SharesCell: false
 		BuildPaletteOrder: 16
+		Description: Cyborg construct, equipped with multi missiles\nand web launchers that can ensrane infantry.\nDetects cloaked units.\n\n Strong vs Vehicles, Aircraft\n Weak vs Infantry.
 		Prerequisites: ~cabclaw, cabtech
 	Repairable:
 		RepairBuildings: gadept
@@ -1411,8 +1383,8 @@ GLAD:
 		Voice: Move
 	Tooltip:
 		Name: Gladiator
-		Description: Advanced cyborg construct, extremely resilient\nand capable of piercing enemy armor.\n\n  Strong vs Vehicles.\n  Weak vs Infantry, Aircraft.
 	Buildable:
+		Description: Advanced cyborg construct, extremely resilient\nand capable of piercing enemy armor.\n\n  Strong vs Vehicles.\n  Weak vs Infantry, Aircraft.
 		Queue: Infantry
 		BuildPaletteOrder: 14
 		Prerequisites: ~cabclaw, cabradr
@@ -1451,8 +1423,8 @@ CYC2:
 		Cost: 1200
 	Tooltip:
 		Name: Cyborg Commando
-		Description: Elite cybernetic infantry unit, equipped with a plasma cannon.\n\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft\nMaximum 1 can be trained.
 	Buildable:
+		Description: Elite cybernetic infantry unit, equipped with a plasma cannon.\n\n  Strong vs Infantry, Vehicles, Buildings\n  Weak vs Aircraft\nMaximum 1 can be trained.
 		Queue: Infantry
 		BuildPaletteOrder: 17
 		Prerequisites: ~cabclaw, cabtech
@@ -1499,7 +1471,6 @@ WORKER:
 		Cost: 120
 	Tooltip:
 		Name: Worker Unit
-		Description: General-purpose infantry.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 	Health:
 		HP: 9000
 	Mobile:
@@ -1526,7 +1497,6 @@ PALADIN2:
 		Cost: 800
 	Tooltip:
 		Name: Sentinel
-		Description: General purpose mechanized walker.\n  Strong vs Vehicles\n  Weak vs Infantry, Aircraft
 	Mobile:
 		TurnSpeed: 5
 		Speed: 56
@@ -1569,7 +1539,6 @@ cybdog:
 		Cost: 650
 	Tooltip:
 		Name: Cyberdog
-		Description: Cybernetic infantry unit.\n  Strong vs Infantry, Light armor\n  Weak vs Vehicles, Aircraft
 	Selectable:
 		Bounds: 16,31,0,-10
 	Voiced:

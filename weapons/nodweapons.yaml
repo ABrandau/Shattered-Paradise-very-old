@@ -78,7 +78,7 @@ CrusaderBazooka:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 2000
+		Damage: 2700
 		ValidTargets: Ground, Vehicle, Air, Building, Infantry
 		DamageTypes: Prone50Percent, TriggerProne, MilitantFireDeath#SmallExplosionDeath
 
@@ -359,7 +359,7 @@ StealthRocket:
 	Inherits@2: ^Small_Clsn
 	ReloadDelay: 125
 	Range: 6c0
-	Burst: 5
+	Burst: 7
 	Report: misl1.aud
 	ValidTargets: Ground
 	Projectile: Missile
@@ -381,7 +381,7 @@ StealthRocket:
 		
 StealthRocketAA:
 	Inherits: StealthRocket
-	Burst: 4
+	Burst: 6
 	ValidTargets: Air
 	Warhead@1Dam: SpreadDamage
 		Damage: 800
@@ -396,15 +396,39 @@ HarpyClaw:
 	ReloadDelay: 50
 	Range: 5c0
 	Report: cygun1.aud
-	ValidTargets: Ground, Vehicle, Building, Infantry, Air
+	ValidTargets: Ground, Vehicle, Building, Infantry
 	Projectile: Bullet
 		Speed: 1c682
-		ValidTargets: Ground, Vehicle, Building, Infantry, Air
+		ValidTargets: Ground, Vehicle, Building, Infantry
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 4000
-		ValidTargets: Ground, Vehicle, Building, Infantry, Air
+		ValidTargets: Ground, Vehicle, Building, Infantry
 		DamageTypes: Prone70Percent, TriggerProne, MilitantFireDeath
+
+HarpyAA:
+	Inherits: ^RocketWarhead
+	Inherits@2: ^Small_Clsn
+	ReloadDelay: 125
+	Range: 6c0
+	Report: misl1.aud
+	ValidTargets: Air
+	Projectile: Missile
+		MaximumLaunchSpeed: 171
+		Arm: 2
+		Blockable: false
+		Shadow: true
+		Inaccuracy: 0c512
+		Image: DRAGON
+		TrailImage: small_smoke_trail
+		HorizontalRateOfTurn: 8
+		RangeLimit: 15c0
+		Palette: ra
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 10000
+		ValidTargets: Air
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 
 Proton:
 	Inherits: ^APWarhead
