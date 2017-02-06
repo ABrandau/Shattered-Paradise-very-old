@@ -16,6 +16,8 @@ SchismNavigator		: Worked on SP for some time.
 4XS			: For his help with concept art.
 Lucassss		: Testing and balancing.
 Murto The Ray		: Testing and Balancing.
+Voidwalker		: Testing and Balancing.
+ZxGanon			: Testing and Balancing.
 Skyhunter713		: Mapping.
 Apollo			: Knowledge about palettes and explosion making.
 

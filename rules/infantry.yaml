@@ -298,7 +298,7 @@ TEMPLAR:
 	Tooltip:
 		Name: Templar
 	Health:
-		HP: 17500
+		HP: 22500
 	Mobile:
 		Speed: 55
 	Armament@1:
@@ -338,15 +338,12 @@ MHIJACK:
 		TargetTypes: MindControlInmune
 	Mobile:
 		Speed: 76
-		RequiresCondition: notmobile
-		ConditionMaxEnabledLevel: 0
 	Infiltrates:
 		Types: SpyInfiltrate
 	Captures:
 		CaptureTypes: Vehicle
 		Sabotage: True
 	Cloak@CLOAKGENERATOR:
-		ConditionMinEnabledLevel: 0
 		InitialDelay: 100
 		CloakDelay: 100
 		IsPlayerPalette: true
@@ -356,15 +353,6 @@ MHIJACK:
 	-AutoTarget:
 	Passenger:
 		GrantCondition: HijackerHologram
-    GrantConditionOnDeploy:
-        DeployedCondition: cloakgenerator, NodCloakHealing, deployed ||  notmobile
-        UndeployedCondition: undeployed
-        DeployAnimation:
-        Facing: 160
-        AllowedTerrainTypes:
-		CanDeployOnRamps: true
-        DeploySound:
-        UndeploySound:
 
 BHS:
 	Inherits: ^Mutant
@@ -758,20 +746,6 @@ PSYKER:
 # Scrin
 ############################################
 
-INFANTRYSCRHARV:
-	Inherits: SCRHARV
-	Buildable:
-		Queue: Infantry
-		BuildPaletteOrder: 99
-		Prerequisites: ~scrproc
-		InitialActivity: FindResources
-	Selectable:
-		Priority: 7
-		Bounds: 36,36
-		Class: ScrinHarv
-	RenderSprites:
-		Image: scrharv
-
 shark:
 	Inherits: ^ScrinSoldier
 	Buildable:
@@ -960,7 +934,7 @@ STALKER:
 	RevealsShroud:
 		Range: 6c0
 	Armament@prim:
-		Weapon: StalkerSuicide
+		Weapon: GravMineSuicide
 	AttackFrontal:
 		Voice: Attack
 	WithInfantryBody:
@@ -1266,8 +1240,7 @@ MOTH:
 			BlueTiberium: 100
 			Veins: 100
 			Water: 80
-		RequiresCondition: notmobile
-		ConditionMaxEnabledLevel: 0
+		RequiresCondition: !deployed
 	Health:
 		HP: 15000
 	Selectable:
@@ -1275,7 +1248,7 @@ MOTH:
 	SelectionDecorations:
 		VisualBounds: 22,32,-1,-9
 	GrantConditionOnDeploy:
-		DeployedCondition: deployed ||  notmobile
+		DeployedCondition: deployed
 		UndeployedCondition: undeployed
 		DeployAnimation: make
 		Facing: 160
@@ -1284,21 +1257,16 @@ MOTH:
 		UndeploySound: clicky1.aud
 	Hovers:
 		RequiresCondition: undeployed
-		ConditionMinEnabledLevel: 1
 	WithInfantryBody:
 		RequiresCondition: undeployed
-		ConditionMinEnabledLevel: 1
-		ConditionMaxEnabledLevel: 2
 	WithSpriteBody@deployed:
 		StartSequence: dot
 		Sequence: dot
 		RequiresCondition: undeployed
-		ConditionMaxEnabledLevel: 0
 	Cloak@asd:
 		Palette: cloakcab
 		IsPlayerPalette: true
 		RequiresCondition: deployed
-		ConditionMinEnabledLevel: 1
 		WhileCloakedCondition: armor
 		UncloakOn: Demolish
 	-WithIdleOverlay@web:
@@ -1309,14 +1277,11 @@ MOTH:
 	WithIdleOverlay:
 		Sequence: idle
 		RequiresCondition: deployed
-		ConditionMinEnabledLevel: 1
 	Armament@primary:
 		Weapon: LurkerHit
 		RequiresCondition: deployed
-		ConditionMinEnabledLevel: 1
 	AttackOmni:
 		RequiresCondition: deployed
-		ConditionMinEnabledLevel: 1
 
 REAPERCAB:
 	Inherits: ^CabalDroneInfantry

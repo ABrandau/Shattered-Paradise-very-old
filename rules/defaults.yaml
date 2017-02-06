@@ -200,15 +200,15 @@
 
 ^Cloakable:
 	Cloak@CLOAKGENERATOR:
-		RequiresCondition: cloakgenerator
-		InitialDelay: 0
-		CloakDelay: 90
-		IsPlayerPalette: true
-		CloakSound: cloak5.aud
-		UncloakSound: cloak5.aud
-		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+        RequiresCondition: cloakgenerator || crate-cloak
+        InitialDelay: 0
+        CloakDelay: 90
+        IsPlayerPalette: true
+        CloakSound: cloak5.aud
+        UncloakSound: cloak5.aud
+        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
 	ExternalConditions@CLOAKGENERATOR:
-		Conditions: cloakgenerator
+		Conditions: cloakgenerator, crate-cloak
 
 ^IncompleteSelfHeal:
 	SelfHealing@Incomplete:
@@ -305,6 +305,8 @@
 	Inherits: ^EmpDisable
 	Mobile:
 		RequiresCondition: !notmobile
+	ExternalConditions@empdisable:
+		Conditions: empdisable, notmobile
 
 ^WebDisable:
 	UpgradeOverlay@WebDisable:
@@ -345,11 +347,9 @@
 	SpeedMultiplier:
 		RequiresCondition: tractorstop
 		Modifier: 15
-		BaseLevel: 1
 	ReloadDelayMultiplier:
 		RequiresCondition: tractorstop
 		Modifier: 150
-		BaseLevel: 1
 	ExternalConditions@tractorstop:
 		Conditions: tractorstop
 
@@ -358,11 +358,21 @@
 		Sequence: shield
 		IsPlayerPalette: true
 		Palette: cloakscrin
-		RequiresCondition: VanguardShield
+		RequiresCondition: VanguardShield && !ShieldBroken
 	ExternalConditions@VanguardShield:
-		Conditions: VanguardShield
+		Conditions: VanguardShield, BreakShield, ShieldBroken, asdf
 	Targetable@Shield:
 		TargetTypes: ShieldedUnit
+		RequiresCondition: VanguardShield
+	StackedCondition@Boarding:
+		Condition: BreakShield
+		StackedConditions: asdf, asdf, asdf, asdf, asdf, asdf, asdf, ShieldBroken
+	RangeMultiplier@Boarded12321:
+		RequiresCondition: ShieldBroken || BreakShield || VanguardShield || asdf
+		Modifier: 100
+	DamageMultiplier@Boarded6:
+		RequiresCondition: VanguardShield && !ShieldBroken
+		Modifier: 0
 
 ^GenericEffects:
 	Inherits: ^VisionWhenKilled
@@ -392,6 +402,8 @@
 	Inherits@8: ^wiuwiuwiu
 	Inherits@9: ^TimeLineDebuff
 	Inherits@10: ^DisplayVanguardShield
+	ExternalConditions@VanguardShield:
+		Conditions: VanguardShield, BreakShield, ShieldBroken, asdf
 
 ^VehicleEffects:
 	Inherits: ^GenericEffects
@@ -408,6 +420,8 @@
 	Inherits@10: ^FireflyDebuff
 	Inherits@11: ^DisplayVanguardShield
 	Inherits@12:^NodVehicleRepair
+	ExternalConditions@VanguardShield:
+		Conditions: VanguardShield, BreakShield, ShieldBroken, asdf
 
 ^AircraftEffects:
 	Inherits: ^GenericEffects
@@ -578,41 +592,6 @@
 	CustomSelectionSize:
 		CustomBounds: 24,24
 
-^Wall:
-	Inherits@1: ^SpriteActor
-	CombatDebugOverlay:
-	FrozenUnderFog:
-	AppearsOnRadar:
-	Building:
-		Dimensions: 1,1
-		Footprint: x
-		BuildSounds: place2.aud
-		Adjacent: 7
-		TerrainTypes: Clear, Rough, Road, DirtRoad, Green, Sand, Pavement
-	SoundOnDamageTransition:
-		DamagedSounds: expnew01.aud
-		DestroyedSounds: crmble2.aud
-	Crushable:
-		CrushClasses: wall
-	LineBuild:
-		Range: 8
-		NodeTypes: wall
-	LineBuildNode:
-		Types: wall
-	Targetable:
-		TargetTypes: Ground, Wall, C4, DetonateAttack
-	WithWallSpriteBody:
-		Type: wall
-	AutoTargetIgnore:
-	Sellable:
-		SellSounds: cashturn.aud
-	Demolishable:
-	ScriptTriggers:
-	ConditionManager:
-	Health:
-		Shape: Circle
-			Radius: 363
-
 ^BuildingPlug:
 	AlwaysVisible:
 	Building:
@@ -620,8 +599,6 @@
 	KillsSelf:
 		RemoveInstead: true
 	RenderSprites:
-
-
 
 ^Infantry:
 	Inherits@0: ^GainsExperience
@@ -664,7 +641,6 @@
 	IgnoresDisguise:
 	Targetable:
 		TargetTypes: Ground, Infantry
-		RequiresCondition: !VanguardShield
 	QuantizeFacingsFromSequence:
 		Sequence: stand
 	WithInfantryBody:
@@ -1127,7 +1103,6 @@
 		VoiceSet: Vehicle
 	Targetable:
 		TargetTypes: Ground, Vehicle
-		RequiresCondition: !VanguardShield
 	Targetable@repair:
 		TargetTypes: repair
 	Repairable:
@@ -1290,6 +1265,8 @@
 		AltitudeVelocity: 250
 	Passenger:
 		CargoType: Aircraft
+	ProductionFromMapEdge:
+		Produces: Aircraft
 	Voiced:
 		VoiceSet: Heli
 	HiddenUnderFog:
@@ -1600,10 +1577,48 @@
 	CustomSelectionSize:
 		CustomBounds: 220,220
 
+
+^Wall:
+	Inherits@1: ^SpriteActor
+	CombatDebugOverlay:
+	FrozenUnderFog:
+	AppearsOnRadar:
+	Valued:
+		Cost: 200
+	Building:
+		Dimensions: 1,1
+		Footprint: x
+		BuildSounds: place2.aud
+		Adjacent: 7
+		TerrainTypes: Clear, Rough, Road, DirtRoad, Green, Sand, Pavement
+	SoundOnDamageTransition:
+		DamagedSounds: expnew01.aud
+		DestroyedSounds: crmble2.aud
+	Crushable:
+		CrushClasses: wall
+	LineBuild:
+		Range: 8
+		NodeTypes: wall
+	LineBuildNode:
+		Types: wall
+	Targetable:
+		TargetTypes: Ground, Wall, C4, DetonateAttack
+	WithWallSpriteBody:
+		Type: wall
+	AutoTargetIgnore:
+	Sellable:
+		SellSounds: cashturn.aud
+	Demolishable:
+	ScriptTriggers:
+	ConditionManager:
+	Health:
+		Shape: Circle
+			Radius: 363
+
 ^Gate:
 	Inherits: ^Building
 	Valued:
-		Cost: 250
+		Cost: 50
 	Health:
 		HP: 35000
 	Armor:
@@ -1691,7 +1706,6 @@
 ^BuildingCloak:
 	Cloak@CLOAKGENERATOR:
 		RequiresCondition: cloakgenerator
-		ConditionMinEnabledLevel: 1
 	ExternalConditions@cloakgenerator:
 		Conditions: cloakgenerator
 

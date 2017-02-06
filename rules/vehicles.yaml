@@ -512,9 +512,9 @@ HOLOGRAMPROJECTOR:
 		Queue: Vehicle
 		BuildPaletteOrder: 14
 		Description: Creates fake units based on the unit that is inside the vehicle.\n\n  Unarmed
-		Prerequisites: ~naweap, naradr
+		Prerequisites: ~naweap
 	Valued:
-		Cost: 1000
+		Cost: 500
 	Tooltip:
 		Name: Hologram Projector
 	Health:
@@ -629,15 +629,6 @@ ARMH:
 	Armament:
 		Weapon: BCLazor
 		LocalOffset: 350,0,450
-	AmmoPool:
-		Ammo: 12
-		PipCount: 5
-		PipType: Ammo
-		SelfReloadsTicks: 60
-		SelfReloads: true
-		ReloadCount: 1
-		ReloadTicks: 50
-		PipTypeEmpty: AmmoEmpty
 	AttackFrontal:
 		Voice: Attack
 	AutoTarget:
@@ -1302,9 +1293,6 @@ SCRDRONEC:
 	BodyOrientation:
 		QuantizedFacings: 32
 	-Targetable@Essence:
-	-Targetable@Shield:
-	-ExternalConditions@VanguardShield:
-	-DamagedByTerrain@ScrinDamage:
 	SpawnActorOnDeath@ScrinEssence:
 		DeathType:
 	AttackFrontal:
@@ -1317,7 +1305,6 @@ SCRDRONEC:
 		AffectsParent: false
 	Targetable:
 		TargetTypes: Ground, Vehicle
-		-RequiresCondition: VanguardShield
 	AutoTarget:
 	ExplodeWeapon@Rifle1:
 		Weapon: RifleBounce
@@ -1337,8 +1324,8 @@ SCRDRONEC:
 	ExplodeWeapon@FullDamage1:
 		Weapon: FullDamageBounce
 		RequiresCondition: FullDamage
-	ExternalConditions@Vanguard:
-		Conditions: RifleWarhead, RocketWarhead, APWarhead, FlameWarhead, ArtilleryWarhead, FullDamage
+	ExternalConditions@VanguardShield:
+		Conditions: RifleWarhead, RocketWarhead, APWarhead, FlameWarhead, ArtilleryWarhead, FullDamage, VanguardShield, BreakShield, ShieldBroken
 
 SCRGLYDER2:
 	Inherits: ^ScrinVehicle
@@ -1388,13 +1375,17 @@ SCRMOBMINE:
 		Name: Gravity Mine
 	Health:
 		HP: 22500
-	Targetable@Stalker:
-		TargetTypes: Stalker
+	Targetable@GravMine:
+		TargetTypes: GravMine
 	Mobile:
 		Speed: 91
 	-DamagedByTerrain@ScrinDamage:
 	Armament:
-		Weapon: StalkerSuicide
+		Weapon: GravMineSuicide
+	ExternalConditions@GravMineSuicide:
+		Conditions: GravMineSuicide
+	KillsSelf@GravMineSuicide:
+		RequiresCondition: GravMineSuicide
 	SpawnActorOnDeath@Mine:
 		Actor: stalkerdummy
 		Probability: 80
@@ -1702,7 +1693,7 @@ ECM:
 		Ammo: 8
 		PipCount: 8
 		PipType: Ammo
-		SelfReloadDelay: 300
+		SelfReloadDelay: 600
 		SelfReloads: true
 		PipTypeEmpty: AmmoEmpty
 	ExplodeWeapon@MAQUINACONCHADETUMARE:

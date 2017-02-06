@@ -245,7 +245,7 @@ FloatGlaive9:
 	Inherits: FloatGlaive
 	-Warhead@op: FireShrapnel
 
-StalkerSuicide:
+GravMineSuicide:
 	ReloadDelay: 150
 	Range: 1c0
 	Report:
@@ -254,20 +254,20 @@ StalkerSuicide:
 	Projectile: InstantExplode
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
-		Damage: 30000
-		ValidTargets: Stalker
+		Damage: 1
+		ValidTargets: GravMine
 		AffectsParent: True
 		Versus:
-		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	Warhead@5Actor: SpawnActor
 		Actors: STALKERDUMMY
 		FallRate: 5000
 		Range: 3
 	Warhead@Acid: GrantExternalCondition
-		Range: 250
+		Range: 64
 		Duration: 200
-		Condition: StalkerTracker
-		ValidStances: Enemy, Ally, Neutral
+		Condition: GravMineSuicide
+		ValidStances: Ally
+		ValidTargets: GravMine
 
 StalkerGrinder:
 	Inherits: ^ArtilleryWarhead

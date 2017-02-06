@@ -166,11 +166,13 @@ CyCannon:
 	Range: 7c0
 	Report: scrin5b.aud
 	ValidTargets: Ground
-	Projectile: Bullet
-		MaximumLaunchSpeed: 192
+	Projectile: Missile
 		Blockable: false
-		HorizontalRateOfTurn: 2
-		Speed: 350
+		HorizontalRateOfTurn: 10
+		Speed: 250
+		MinimumLaunchSpeed: 10
+		# MaximunLaunchSpeed: 200
+		Acceleration: 50
 		Shadow: true
 		Image: TORPEDO
 	Warhead@1Dam: SpreadDamage
@@ -415,7 +417,7 @@ DroneHostShell:
 	Inherits@2: ^Small_Clsn
 	ReloadDelay: 150
 	Range: 14c0
-	Burst: 2
+	Burst: 4
 	BurstDelay: 15
 	MinRange: 4c0
 	Report: 120mmf.aud
@@ -462,15 +464,16 @@ ecmwave:
 
 PalaLazor:
 	Inherits: ^ArtilleryWarhead
-	ReloadDelay: 90
+	ReloadDelay: 25
 	Range: 6c0
-	Report: obelray1.aud
+	Report: obelcor3.aud
 	Projectile: LaserZap
 		BeamWidth: 3
 		BeamDuration: 7
+		Color: 0000FF
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 6000
+		Damage: 2000
 		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
 
 ########################################################################

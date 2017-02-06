@@ -68,7 +68,7 @@ MCV:
 	Armor:
 		Type: Light
 	Mobile:
-		Speed: 85
+		Speed: 40
 		Crushes: wall, crate, infantry
 	RevealsShroud:
 		Range: 4c0
@@ -94,31 +94,6 @@ MCV:
 			nod: mcv.nod
 			mut: mcv.mut
 			cab: mcv.cab
-
-INFANTRYHARV:
-	Inherits: HARV
-	Buildable:
-		Queue: Infantry
-		BuildPaletteOrder: 99
-		InitialActivity: FindResources
-	Selectable:
-		Class: HumanHarv
-	RenderVoxels:
-		Image: harv
-	RenderSprites:
-		Image: harv.gdi
-		FactionImages:
-			gdi: harv.gdi
-			nod: harv.nod
-			mut: harv.mut
-			cab: cabharv
-
-InfantryCabHarv:
-	Inherits: INFANTRYHARV
-	Buildable:
-		Prerequisites: ~cabproc, anypower
-	RenderVoxels:
-		Image: cabharv
 
 HARV:
 	Inherits: ^VoxelTank
@@ -389,6 +364,8 @@ PROC:
 		Queue: Building
 		BuildPaletteOrder: 20
 		Prerequisites: ~humanproc, anypower
+	Armor:
+		Type: Heavy
 	Building:
 		Footprint: xx== xx== xx==
 		Dimensions: 4,3
@@ -585,8 +562,6 @@ SHAWALL:
 		DamagedSounds:
 		DestroyedSounds:
 	-AppearsOnRadar:
-	Valued:
-		Cost: 50
 	CustomSellValue:
 		Value: 0
 	Tooltip:

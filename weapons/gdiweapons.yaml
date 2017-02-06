@@ -116,7 +116,11 @@ TrooperRail:
 	Warhead@emp: GrantExternalCondition
 		Range: 1c0
 		Duration: 30
-		Condition: empdisable, notmobile
+		Condition: notmobile
+	Warhead@emp2: GrantExternalCondition
+		Range: 1c0
+		Duration: 30
+		Condition: empdisable
 
 #############################################
 # Vehicles

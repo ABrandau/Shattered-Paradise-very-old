@@ -465,7 +465,7 @@ guardian:
 	stand:
 		Facings: 32
 	idle:
-		Facings: 32		
+		Facings: 32
 	run:
 		Tick: 90
 		Facings: 32
@@ -476,6 +476,9 @@ guardiandep:
 	Defaults:
 		Offset: 0,-18
 		UseTilesetCode: true
+	dead:
+		Start: 0
+		Length: 1
 	make
 		ShadowStart: 1
 	stand:

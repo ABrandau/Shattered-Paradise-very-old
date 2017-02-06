@@ -64,7 +64,7 @@ GAPILE:
 		Description: Produces infantry.
 		Prerequisites: anypower, ~structures.gdi
 	Valued:
-		Cost: 300
+		Cost: 500
 	Tooltip:
 		Name: GDI Barracks
 	ProvidesPrerequisite:
@@ -510,7 +510,7 @@ NAHAND:
 		Description: Produces infantry.
 		Prerequisites: anypower, ~structures.nod
 	Valued:
-		Cost: 300
+		Cost: 500
 	Tooltip:
 		Name: Hand of Nod
 	ProvidesPrerequisite@engineer:
@@ -778,50 +778,6 @@ NATMPL:
 		Prerequisite: ToxinMissile
 		Factions: gdi, nod, cab, mut, scr
 
-NASTLH:
-	Inherits: ^Building
-	Valued:
-		Cost: 2500
-	Tooltip:
-		Name: Stealth Generator
-	Buildable:
-		BuildPaletteOrder: 80
-		Prerequisites: proc, natech, ~structures.nod
-		Description: Generates a cloaking field that hides\nnearby units and structures, Cloaked NOD units heal slowly.
-		Queue: Defense
-	Building:
-		Footprint: xxx xxx
-		Dimensions: 3,2
-	Health:
-		HP: 60000
-	Armor:
-		Type: Wood
-	RevealsShroud:
-		Range: 6c0
-	WithIdleOverlay@pulse:
-		Sequence: pulse
-		PauseOnLowPower: true
-	WithRangeCircle:
-		Range: 12c0
-		Type: cloakgenerator
-	ProximityExternalCondition:
-		Condition: cloakgenerator
-		Range: 12c0
-		EnableSound: cloak5.aud
-		DisableSound: cloak5.aud
-		AffectsParent: true
-	Power:
-		Amount: -300
-	RequiresPower:
-	CanPowerDown:
-		PowerupSpeech: EnablePower
-		PowerdownSpeech: DisablePower
-		IndicatorPalette: mouse
-	Selectable:
-		Bounds: 106, 48, 8, -6
-	SelectionDecorations:
-		VisualBounds: 106, 60, 8, -15
-
 NAWAST:
 	Inherits: ^Building
 	Valued:
@@ -908,7 +864,7 @@ MURAX:
 		Description: Forgotten Weapons stash, arms soldiers for battle.
 		Prerequisites: anypower, ~structures.mut
 	Valued:
-		Cost: 300
+		Cost: 500
 	Tooltip:
 		Name: Mutant Armory
 	ProvidesPrerequisite:
@@ -1331,7 +1287,7 @@ SCRRAX:
 		Description: Allows the player to call in Scrin Infantry.
 		Prerequisites: scrpowr, ~structures.scr
 	Valued:
-		Cost: 300
+		Cost: 500
 	Tooltip:
 		Name: Landing Zone
 	ProvidesPrerequisite:
@@ -1687,7 +1643,6 @@ CABPOWR:
 	AffectedByPowerOutage:
 	Targetable:
 		TargetTypes: Building, Ground, C4, DetonateAttack, SpyInfiltrate, Powerplant
-	# ScalePowerWithHealth:
 	SelfHealing@reactorcritical:
 		Step: -5
 		Delay: 25
@@ -1706,7 +1661,7 @@ CABCLAW:
 		Description: Produces infantry.
 		Prerequisites: anypower, ~structures.cab
 	Valued:
-		Cost: 300
+		Cost: 500
 	Tooltip:
 		Name: C.A.B.A.L. Claw
 	ProvidesPrerequisite:

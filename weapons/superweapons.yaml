@@ -459,22 +459,25 @@ EnergyAssimilator:
 
 MeteorSpawner:
 	ReloadDelay: 6
-	Range: 12c0
-	Projectile: InstantExplode
+	Burst: 6
+	BurstDelay: 35
+	Range: 999c0
+	Projectile: Bullet
+		Speed: 9999
 	Warhead@op: FireShrapnel
 		Weapon: MeteorElevator
-		Amount: 15
+		Amount: 2
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 	Warhead@op2: FireShrapnel
 		Weapon: MeteorElevator2
-		Amount: 15
+		Amount: 2
 		Delay: 10
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 	Warhead@op3: FireShrapnel
 		Weapon: MeteorElevator3
-		Amount: 15
+		Amount: 2
 		Delay: 15
 		AllowDirectHit: false
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
@@ -485,7 +488,7 @@ MeteorSpawner:
 		
 MeteorElevator:
 	ReloadDelay: 6
-	Range: 5c0
+	Range: 2c0
 	MinRange: 1c0
 	Projectile: AthenaProjectile
 		Altitude: 8000
@@ -515,13 +518,13 @@ MeteorRainNormal:
 		Image: meteor2
 		Palette: effect
 		Shadow: true
-		Inaccuracy: 600
+		Inaccuracy: 300
 		TrailImage: meteortrail #metstral
 		TrailPalette: effectalpha
 		TrailInterval: 1
 	Warhead@1Dam: SpreadDamage
 		Spread: 350
-		Damage: 10000
+		Damage: 7500
 		ValidTargets: Ground, Vehicle, Building, Infantry, Water
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@2Smu: LeaveSmudge
@@ -647,8 +650,7 @@ IonRaySpawner:
 IonRay:
 	Inherits: ^ArtilleryWarhead
 	ReloadDelay: 6
-	Range: 10c0
-	Inaccuracy: 10
+	Range: 7c0
 	Report: expnew08.aud
 	Projectile: Bullet
 		Speed: 100c0

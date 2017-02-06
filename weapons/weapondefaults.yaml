@@ -1,4 +1,15 @@
+^WeaponGenericUpgrades:
+	Warhead@BounceUpgrade: GrantExternalCondition
+		Range: 150
+		Duration: 5
+		Condition: RifleWarhead
+	Warhead@ShieldUpgrade: GrantExternalCondition
+		Condition: BreakShield
+		Range: 64
+		Duration: 500
+
 ^RifleWarhead:	#Inherits: ^RifleWarhead
+	Inherits: ^WeaponGenericUpgrades
 	Projectile: Bullet
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
@@ -11,11 +22,10 @@
 			Heavy: 15
 			Concrete: 5
 	Warhead@BounceUpgrade: GrantExternalCondition
-		Range: 150
-		Duration: 5
 		Condition: RifleWarhead
 
 ^RocketWarhead:	#Inherits: ^RocketWarhead
+	Inherits: ^WeaponGenericUpgrades
 	Warhead@1Dam: SpreadDamage
 		Versus:
 			None: 10
@@ -24,11 +34,10 @@
 			Heavy: 100
 			Concrete: 60
 	Warhead@BounceUpgrade: GrantExternalCondition
-		Range: 150
-		Duration: 5
 		Condition: RocketWarhead
 
 ^APWarhead:	#Inherits: ^APWarhead , Tanks, Wasps and Gladiators use this.
+	Inherits: ^WeaponGenericUpgrades
 	Warhead@1Dam: SpreadDamage
 		Versus:
 			None: 35
@@ -37,11 +46,10 @@
 			Heavy: 130
 			Concrete: 45
 	Warhead@BounceUpgrade: GrantExternalCondition
-		Range: 150
-		Duration: 5
 		Condition: APWarhead
 
 ^FlameWarhead:	#Inherits: ^FlameWarhead , Specific Anti infantry.
+	Inherits: ^WeaponGenericUpgrades
 	Warhead@1Dam: SpreadDamage
 		Versus:
 			None: 600
@@ -50,11 +58,10 @@
 			Heavy: 6
 			Concrete: 2
 	Warhead@BounceUpgrade: GrantExternalCondition
-		Range: 150
-		Duration: 5
 		Condition: FlameWarhead
 
 ^ArtilleryWarhead: #Inherits: ^ArtilleryWarhead , Inverted curve.
+	Inherits: ^WeaponGenericUpgrades
 	Warhead@1Dam: SpreadDamage
 		Versus:
 			None: 100
@@ -63,13 +70,12 @@
 			Heavy: 35
 			Concrete: 35
 	Warhead@BounceUpgrade: GrantExternalCondition
-		Range: 150
-		Duration: 5
 		Condition: ArtilleryWarhead
 
 #Mostly Unused.
 
 ^BombWarhead: #Inherits: ^BombWarhead , Used by the Orca Bomber and Demo Cycle.
+	Inherits: ^WeaponGenericUpgrades
 	Warhead@1Dam: SpreadDamage
 		Falloff: 300, 150, 100, 50, 0
 		Versus:
@@ -79,11 +85,10 @@
 			Heavy: 45
 			Concrete: 100
 	Warhead@BounceUpgrade: GrantExternalCondition
-		Range: 150
-		Duration: 5
 		Condition: ArtilleryWarhead
 			
 ^GrenadeWarhead:	#Inherits: ^GrenadeWarhead , Used by grenadiers and Battleships.
+	Inherits: ^WeaponGenericUpgrades
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 40
@@ -95,11 +100,10 @@
 			Heavy: 15
 			Concrete: 28
 	Warhead@BounceUpgrade: GrantExternalCondition
-		Range: 150
-		Duration: 5
 		Condition: ArtilleryWarhead
 
 ^AcidWarhead:	#Inherits: ^AcidWarhead Used by knights, scrin turrets, scorpions and some critters.
+	Inherits: ^WeaponGenericUpgrades
 	Warhead@1Dam: SpreadDamage
 		Versus:
 			None: 300
@@ -108,15 +112,15 @@
 			Heavy: 60
 			Concrete: 2
 	Warhead@BounceUpgrade: GrantExternalCondition
-		Range: 150
-		Duration: 5
 		Condition: FlameWarhead
 
 ^DecentFalloff:	#Inherits: ^DecentFalloff
+	Inherits: ^WeaponGenericUpgrades
 	Warhead@1Dam: SpreadDamage
 		Falloff: 100, 50, 25, 12, 0
 
 ^FullDamage:	#Inherits: ^FullDamage
+	Inherits: ^WeaponGenericUpgrades
 	Warhead@1Dam: SpreadDamage
 		Falloff: 100, 100, 100, 100, 100
 		Versus:
@@ -126,8 +130,6 @@
 			Heavy: 100
 			Concrete: 25
 	Warhead@BounceUpgrade: GrantExternalCondition
-		Range: 150
-		Duration: 5
 		Condition: FullDamage
 
 ^NoDamage:	#Inherits: ^NoDamage

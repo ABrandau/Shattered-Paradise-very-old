@@ -378,13 +378,6 @@ APACHE:
 	RevealsShroud:
 		Range: 15c0
 		Type: CenterPosition
-	Cloak:
-		InitialDelay: 90
-		CloakDelay: 90
-		CloakSound: cloak5.aud
-		UncloakSound: cloak5.aud
-		IsPlayerPalette: true
-		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage#, Move
 	Armament:
 		Weapon: HarpyClaw
 	Armament@1:
@@ -768,7 +761,7 @@ drache:
 		TargetTypes: MindControlInmune
 	Aircraft:
 		TurnSpeed: 5
-		Speed: 50
+		Speed: 40
 		MoveIntoShroud: true
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud

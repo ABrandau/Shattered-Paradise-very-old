@@ -14,7 +14,7 @@ BuildingExplode:
 	Inherits: ^ExploDefaults
 	Inherits@2: ^Large_twlt
 	Warhead@1Dam: SpreadDamage
-		Spread: 3c0
+		Spread: 762
 		Damage: 5000
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
