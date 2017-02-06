@@ -427,7 +427,7 @@ DroneHostShell:
 		Blockable: false
 		Shadow: true
 		Image: DRAGON
-		Inaccuracy: 1c0
+		Inaccuracy: 1c512
 		ContrailLength: 10
 		ContrailUsePlayerColor: true
 		LaunchAngle: 150
@@ -468,7 +468,7 @@ PalaLazor:
 	Range: 6c0
 	Report: obelcor3.aud
 	Projectile: LaserZap
-		BeamWidth: 3
+		Width: 60
 		BeamDuration: 7
 		Color: 0000FF
 	Warhead@1Dam: SpreadDamage

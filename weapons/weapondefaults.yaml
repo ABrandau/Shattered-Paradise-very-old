@@ -53,7 +53,7 @@
 	Warhead@1Dam: SpreadDamage
 		Versus:
 			None: 600
-			Wood: 148
+			Wood: 250
 			Light: 59
 			Heavy: 6
 			Concrete: 2
@@ -71,6 +71,9 @@
 			Concrete: 35
 	Warhead@BounceUpgrade: GrantExternalCondition
 		Condition: ArtilleryWarhead
+	Warhead@ShieldUpgrade: GrantExternalCondition
+		Range: 256
+		Duration: 750
 
 #Mostly Unused.
 

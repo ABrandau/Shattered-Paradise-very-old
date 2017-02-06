@@ -135,8 +135,8 @@ DummySparks:
 
 FloatTesla:
 	Inherits: ^RifleWarhead
-	ReloadDelay: 80
-	Range: 8c0
+	ReloadDelay: 100
+	Range: 7c0
 	Report: voltautofire.wav
 	Charges: yes
 	ValidTargets: Infantry, Vehicle, Building
@@ -250,7 +250,6 @@ GravMineSuicide:
 	Range: 1c0
 	Report:
 	ValidTargets: Infantry, Vehicle
-	InvalidTargets: StalkerTracker
 	Projectile: InstantExplode
 	Warhead@1Dam: SpreadDamage
 		Spread: 64
@@ -262,12 +261,13 @@ GravMineSuicide:
 		Actors: STALKERDUMMY
 		FallRate: 5000
 		Range: 3
-	Warhead@Acid: GrantExternalCondition
-		Range: 64
+	Warhead@fdafdsafda: GrantExternalCondition
+		Range: 96
 		Duration: 200
 		Condition: GravMineSuicide
 		ValidStances: Ally
 		ValidTargets: GravMine
+		AffectsParent: True
 
 StalkerGrinder:
 	Inherits: ^ArtilleryWarhead
@@ -357,6 +357,16 @@ ScrMbtCannon:
 		ValidStances: Enemy, Neutral
 		DamageTypes: Prone50Percent, TriggerProne, ExplosionDeath, ScrinEssenceKill
 	-Warhead@BounceUpgrade:
+	-Warhead@ShieldUpgrade:
+
+ScrMbtCannonDummy:
+	Inherits: ScrMbtCannon
+	Inherits@1: ^APWarhead
+	Projectile: Bullet
+		Speed: 100c0
+	Warhead@1Dam: SpreadDamage
+		Damage: 1
+		Spread: 1
 
 BatteryBuff:
 	Inherits: ^NoDamage
@@ -888,7 +898,7 @@ TractorBeam:
 DronePlane:
 	Inherits: ^BombWarhead
 	ReloadDelay: 150
-	Range: 11c0
+	Range: 8c0
 	MinRange: 2c0
 	# Report: 120mmf.aud
 	ValidTargets: Infantry, Vehicle, Building

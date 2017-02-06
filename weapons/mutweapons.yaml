@@ -217,8 +217,6 @@ GFiendShard2:
 GSkirmisherMortar:
 	Inherits: SkirmisherMortar
 	Range: 8c200
-	Warhead@1Dam: SpreadDamage
-		Spread: 500
 
 GSeerTesla:
 	Inherits: SeerTesla

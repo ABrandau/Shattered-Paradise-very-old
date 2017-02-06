@@ -29,22 +29,9 @@ BuildingExplode:
 		ExplosionPalette: gensmkexploj
 		
 ScrinBuildingExplode:
-	Inherits: ^ExploDefaults
-	Inherits@2: ^Large_twlt
-	Warhead@1Dam: SpreadDamage
-		Spread: 3c0
-		Damage: 5000
-		AffectsParent: true
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-		Versus:
-			None: 200
-			Wood: 150
-			Light: 100
-			Heavy: 75
-			Concrete: 40
+	Inherits: BuildingExplode
 	Warhead@4EffAir: CreateEffect
-		Sequences: building, scrinexplo3, scrinexplo4, scrinexplo5
-		ExplosionPalette: apolbluealpha
+		ExplosionPalette: gensmkexplojFblue
 
 ReactorExplode:
 	Inherits: ^ExploDefaults

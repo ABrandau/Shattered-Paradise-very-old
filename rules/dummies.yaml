@@ -455,6 +455,7 @@ STALKERDUMMY:
 		HealIfBelow: 200
 	Tooltip:
 		Name: Gravity Mine
+	WithShadow:
 	Health:
 		HP: 2000
 		NotifyAppliedDamage: False

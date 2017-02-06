@@ -1,7 +1,7 @@
  Metadata:
 	Title: Shattered Paradise
 	Description: Live the Second Tiberium War in a perspective you have never seen before.\nFind your place in this apocalyptic wasteland and make your enemies fear you!\n\nShattered Paradise that brings three new factions to Tiberian Sun and\ntries to mimic the gameplay style of the original game while also adding\nmore content to the game like units and mechanics.
-	Version: {Test_Version_20170205}
+	Version: {Test_Version_20170207}
 	Author: Nolt, with the help of a lot of people.
 
 RequiresMods:
@@ -255,7 +255,7 @@ Translations:
 
 LoadScreen: LogoStripeLoadScreen
 	Image: sp|uibits/loadscreen.png
-	Text: Exterminating the Martian race..., Sending the tacitus to Earth..., Developing human civilization..., Allowing Tiberium to go rampant...,Increasing political tension..., Reinstalling bugs..., Searching for life outside earth...
+	Text: Exterminating the Martian race..., Sending the tacitus to Earth..., Developing human civilization..., Allowing Tiberium to go rampant...,Increasing political tension..., Finishing the TD Campaign..., Reinstalling bugs..., Searching for life outside earth..., Renaming bugs into easter eggs...
 
 ServerTraits:
 	LobbyCommands

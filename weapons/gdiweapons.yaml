@@ -274,6 +274,17 @@ MechRailgun:
 			Heavy: 100
 			Concrete: 25
 		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
+
+MechDummy:
+	Inherits: ^RifleWarhead
+	ReloadDelay: 20
+	Range: 8c0
+	Projectile: Bullet
+		Speed: 1c682
+	Warhead@1Dam: SpreadDamage
+		Spread: 1
+		Damage: 1
+		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 	
 MammothTusk:
 	Inherits@2: ^Mediumtwlt

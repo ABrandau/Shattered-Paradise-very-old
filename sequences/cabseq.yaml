@@ -861,7 +861,7 @@ cabradr:
 	damaged-idle:
 		Start: 46
 		Length: 14
-		Tick: 400
+		Tick: 100
 		ShadowStart: 107
 	dead:
 		Start: 45

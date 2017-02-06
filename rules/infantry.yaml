@@ -948,12 +948,12 @@ FLOAT:
 	Buildable:
 		Queue: Infantry
 		BuildPaletteOrder: 29
-		Description: Support unit that steals essence from enemy units, heals\nnearby friendly aliens if it has essence available.\n\n  Somewhat good vs Infantry.\n  Weak vs Vehicles, Aircraft.
+		Description: Support unit that steals essence from enemy units, heals\nnearby friendly aliens when attacking.\n\n  Somewhat good vs Infantry.\n  Weak vs Vehicles, Aircraft.
 		Prerequisites: ~scrrax, scrradr
 	Selectable:
 		Class: FLoat
 	Valued:
-		Cost: 450  
+		Cost: 550  
 	-Crushable:
 	Tooltip:
 		Name: Purifier
@@ -977,24 +977,6 @@ FLOAT:
 		LocalOffset: 0,0,500
 		FireDelay: 10
 		ForceTargetStances: Enemy
-	Armament@orareculiao:
-		Weapon: FloatTesla
-		LocalOffset: 0,0,500
-		FireDelay: 10
-		ForceTargetStances: Enemy
-		AmmoPoolName: Essence
-	AmmoPool:
-		Ammo: 2
-		Name: Essence
-		InitialAmmo: 0
-		ReloadDelay: 1
-		SelfReloadDelay: 1
-	ReloadAmmoWhenEnabled:
-		ReloadCount: 1
-		Name: Essence
-		ReloadDelay: 1
-		RequiresCondition: EssenceGrab
-		ConditionMinEnabledLevel: 1
 	# Targetable@EssenceBattery:
 		# TargetTypes: EssenceBattery
 	DamagedByTerrain@ScrinDamage:
@@ -1066,11 +1048,13 @@ CABSENTRY:
 	Mobile:
 		Speed: 70
 		Crushes: nada
-	SelfHealing:
-		PercentageStep: -50
-		Step: 0
-		Delay: 125
-		HealIfBelow: 200
+	GrantPeriodicCondition:
+		Condition: KillMe
+		CooldownDuration: 250
+	KillsSelf@KillMe:
+		RequiresCondition: KillMe
+	ExternalConditions@KillMe:
+		Conditions: KillMe
 	Health:
 		HP: 5000
 	Armament@primary:
@@ -1250,7 +1234,7 @@ MOTH:
 	GrantConditionOnDeploy:
 		DeployedCondition: deployed
 		UndeployedCondition: undeployed
-		DeployAnimation: make
+		# DeployAnimation: make
 		Facing: 160
 		AllowedTerrainTypes: Clear, Rough, Road, DirtRoad, Ground, Green
 		DeploySound: place2.aud
@@ -1262,7 +1246,7 @@ MOTH:
 	WithSpriteBody@deployed:
 		StartSequence: dot
 		Sequence: dot
-		RequiresCondition: undeployed
+		RequiresCondition: deployed
 	Cloak@asd:
 		Palette: cloakcab
 		IsPlayerPalette: true
@@ -1409,10 +1393,6 @@ CYC2:
 		RequiresCondition: !lawea
 		InitialDelay: 0
 		CloakDelay: 90
-		IsPlayerPalette: true
-		CloakSound: cloak5.aud
-		UncloakSound: cloak5.aud
-		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
 	Health:
 		HP: 30000
 	Targetable@MindControlImmunity:

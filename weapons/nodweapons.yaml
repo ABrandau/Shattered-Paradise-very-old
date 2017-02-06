@@ -63,6 +63,7 @@ CrusaderBazooka:
 	Inherits@2: ^Small_Clsn
 	ReloadDelay: 50
 	Range: 6c600
+	MinRange: 2c0
 	Report: scifiexplo.wav
 	ValidTargets: Ground, Vehicle, Air, Building, Infantry
 	Projectile: Missile
@@ -71,7 +72,8 @@ CrusaderBazooka:
 		Shadow: true
 		Inaccuracy: 350
 		Image: DRAGON
-		LaunchAngle: 90
+		MinimumLaunchAngle: 90
+		MaximumLaunchAngle: 270
 		TrailImage: small_smoke_trail
 		RateOfTurn: 8
 		RangeLimit: 15c0
@@ -89,13 +91,13 @@ TemplarLasor:
 	Range: 4c512
 	Report: laserriflefire01.wav
 	Projectile: LaserZap
-		BeamWidth: 1
+		Width: 40
 		BeamDuration: 2
 		Inaccuracy: 150
 	Warhead@1Dam: SpreadDamage
 		Spread: 125
 		Damage: 1200
-		DamageTypes: Prone60Percent, TriggerProne, EnergyDeath
+		DamageTypes: Prone60Percent, TriggerProne, EnergyDeathz
 
 TemplarGrenade:
 	Inherits: ^GrenadeWarhead

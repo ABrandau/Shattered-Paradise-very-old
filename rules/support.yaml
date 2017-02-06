@@ -539,7 +539,7 @@ NASAM:
 NASTLH:
 	Inherits: ^Building
 	Valued:
-		Cost: 2000
+		Cost: 1500
 	Tooltip:
 		Name: Stealth Generator
 	Buildable:
@@ -567,9 +567,11 @@ NASTLH:
 		Range: 12c0
 		EnableSound: cloak5.aud
 		DisableSound: cloak5.aud
-		AffectsParent: true
+		AffectsParent: false
+	Cloak@CLOAKGENERATOR:
+        RequiresCondition: HolaSoyVinceConSlapShopMiraLaPapaUnCorteNoSePuedeCortar
 	Power:
-		Amount: -200
+		Amount: -150
 	RequiresPower:
 	CanPowerDown:
 		PowerupSpeech: EnablePower

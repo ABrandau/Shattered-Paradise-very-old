@@ -260,6 +260,12 @@
 	ExplodeWeapon@BugPoison:
 		Weapon: PoisonGlaive
 		RequiresCondition: BugPoison
+	SelfHealing@BugPoison:
+		PercentageStep: -1
+		Step: 0
+		Delay: 50
+		HealIfBelow: 101
+		RequiresCondition: BugPoison
 	ExternalConditions@BugPoison:
 		Conditions: BugPoison
 
@@ -270,7 +276,6 @@
 		Delay: 10
 		HealIfBelow: 101
 		RequiresCondition: NodVehicleRepair
-		ConditionMinEnabledLevel: 1
 	ExternalConditions@NodVehicleRepair:
 		Conditions: NodVehicleRepair
 
@@ -296,7 +301,7 @@
 		ShowToEnemies: true
 		ZOffset: 512
 	PowerMultiplier@EMPDISABLE:
-		RequiresCondition: empdisable
+		RequiresCondition: empdisable || notmobile
 		Modifier: 0
 	ExternalConditions@empdisable:
 		Conditions: empdisable, notmobile
@@ -326,7 +331,7 @@
 		Palette: player
 		RequiresCondition: WebDisable
 	ExternalConditions@WebDisable:
-		Conditions: WebDisable, notmobile
+		Conditions: WebDisable
 
 ^BurstRecovery:
 	SelfHealing@NanomachineBurst:
@@ -1738,7 +1743,7 @@
 		ConditionMinEnabledLevel: 1
 		RequiresCondition: batteryboost
 	SelfHealing@batteryboost:
-		PercentageStep: 2
+		PercentageStep: 1
 		Step: 0
 		Delay: 25
 		HealIfBelow: 101

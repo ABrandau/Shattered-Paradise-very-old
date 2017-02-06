@@ -227,6 +227,11 @@
 		Filename: gensmkexploj.pal
 		Premultiply: false
 		AllowModifiers: false
+	PaletteFromJasc32File@gensmkexplojFblue:
+		Name: gensmkexplojFblue
+		Filename: gensmkexplojFblue.pal
+		Premultiply: false
+		AllowModifiers: false
 	PaletteFromFile@silo:
 		Name: silo
 		AllowModifiers: false

@@ -2640,7 +2640,7 @@ C_KODIAK:
 EGGS:
 	Inherits: ^CivBuilding
 	Tooltip:
-		Name: Eggs
+		Name: Crab Eggs (Kill me)
 	Building:
 		Footprint: x
 		Dimensions: 1, 1

@@ -496,7 +496,7 @@ MUTBIRD:
 	RevealsShroud:
 		Range: 6c0
 	Health:
-		HP: 15000
+		HP: 7500
 	Armor:
 		Type: Wood
 	Minelayer:
@@ -1204,6 +1204,8 @@ STORMRIDERRETURN:
 	Armament:
 		Weapon: Return
 		TargetStances: Ally
+	Health:
+		HP: 3000
 	Armament@aa:
 		Weapon: Return
 		TargetStances: Ally

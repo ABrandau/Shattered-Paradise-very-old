@@ -274,12 +274,14 @@ HMEC:
 	AttackFrontal:
 		Voice: Attack
 	AutoTarget:
-	Armament@MISSILES:
+	Armament:
 		Weapon: MammothTusk
 		LocalOffset: -172,-260,854, -172,260,854
-	Armament@RAILGUN:
+	Armament@1:
 		Weapon: MechRailgun
 		LocalOffset: 260,-220,728, 260,220,728
+	Armament@2:
+		Weapon: MechDummy
 	Targetable@MindControl:
 		TargetTypes: MindControlInmune
 	-WithVoxelBody:
@@ -628,7 +630,7 @@ ARMH:
 		Scale: 0.7
 	Armament:
 		Weapon: BCLazor
-		LocalOffset: 350,0,450
+		LocalOffset: 350,0,450z
 	AttackFrontal:
 		Voice: Attack
 	AutoTarget:
@@ -1386,11 +1388,11 @@ SCRMOBMINE:
 		Conditions: GravMineSuicide
 	KillsSelf@GravMineSuicide:
 		RequiresCondition: GravMineSuicide
-	SpawnActorOnDeath@Mine:
-		Actor: stalkerdummy
-		Probability: 80
-		OwnerType: Victim
-		RequiresLobbyCreeps: false
+	# SpawnActorOnDeath@Mine:
+		# Actor: stalkerdummy
+		# Probability: 80
+		# OwnerType: Victim
+		# RequiresLobbyCreeps: false
 	AutoTarget:
 		ScanRadius: 4
 	AttackFrontal:
@@ -1406,7 +1408,7 @@ SCRMBT:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 32
-		Description: Light Tank, good for scouting, deals damage over an area.\n\n Strong vs Light, heavy armor\n  Weak vs Infantry, Aircraft
+		Description: Light Tank, good for scouting, deals damage over an area.\n\n Strong vs Light, heavy armor\n  Weak vs Infantry, Aircraft\nBUG: This unit CANNOT break vanguard Shields.\n(It won't be fixed in a while).
 		Prerequisites: ~scrweap, scrradr
 	Valued:
 		Cost: 900
@@ -1424,6 +1426,8 @@ SCRMBT:
 		Weapon: ScrMbtCannon
 		LocalOffset: 250,0,900
 		MuzzleSequence: muzzle
+	Armament@1:
+		Weapon: ScrMbtCannonDummy
 	AttackTurreted:
 	WithSpriteTurret:
 	AutoTarget:
@@ -1556,7 +1560,7 @@ DINO:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 18
-		Description: Basic Walker, equiped with long range missiles.\nCan be ordered to deploy to become immobile but\ncreate support drones over time.\n\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry
+		Description: Basic Walker, equiped with long range missiles.\n  Strong vs Vehicles, Aircraft\n  Weak vs Infantry.
 		Prerequisites: ~cabweap
 	Mobile:
 		TurnSpeed: 12
@@ -1573,10 +1577,10 @@ DINO:
 		DamageCooldown: 0
 	Armament@1:
 		Weapon: SeekerBazooka
-		LocalOffset: 200,0,750
+		LocalOffset: 250,0,700
 	Armament@2:
 		Weapon: SeekerBazookaAA
-		LocalOffset: 200,0,750
+		LocalOffset: 250,0,700
 	AttackFrontal:
 	WithInfantryBody:
 	AutoTarget:
@@ -1593,7 +1597,7 @@ CENTURION:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 19
-		Description: Heavy deployable mech, equipped withchainguns.\nCan deploy to improve its damage resistance\nand deploy combat drones.\n\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
+		Description: Heavy deployable mech, equipped withchainguns.\n  Strong vs Infantry\n  Weak vs Vehicles, Aircraft
 		Prerequisites: ~cabweap
 	Mobile:
 		TurnSpeed: 5
@@ -1822,10 +1826,10 @@ PALADIN:
 	RenderSprites:
 	Armament@primary:
 		Weapon: PalaLazor
-		LocalOffset: 475,300,1050
+		LocalOffset: 400,300,1050
 	Armament@secondary:
 		Weapon: PalaLazor
-		LocalOffset:  475,-300,1050
+		LocalOffset:  400,-300,1050
 	AutoTarget:
 	Selectable:
 		Bounds: 40, 60, 0, -20
