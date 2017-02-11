@@ -407,6 +407,38 @@ APACHE:
 	SpawnActorOnDeath:
 		Actor: APACHE.Husk
 
+APACHEHOLOGRAM:
+	Inherits: APACHE
+	-Buildable:
+	RenderSprites:
+		Image: apache
+	RenderVoxels:
+		Image: apache
+	WithDecoration@holoicon:
+		Image: holoicon
+		Sequence: idle
+		ReferencePoint: Bottom, Right
+		Palette: mouse
+	-SpawnActorOnDeath:
+	FirepowerMultiplier@Hologram:
+		Modifier: 20
+		BaseLevel: 0
+	WithDeathAnimation@body:
+		DeathSequencePalette: apolra2i
+		DeathPaletteIsPlayerPalette: False
+		DeathTypes: #1 2 normals, 3 headshot, 4 explosion
+			BulletDeath: evaporate
+			CabalDeath: evaporate
+			CabalDeathCrate: evaporate
+			BlackHandRfle: evaporate
+			HeadshotDeath: evaporate
+			SmallExplosionDeath: evaporate
+			FireDeath: evaporate
+			TiberiumDeath: evaporate
+			TiberiumDeathStrong: evaporate
+			EnergyDeath: evaporate
+			ExplosionDeath: evaporate
+
 SCRIN:
 	Inherits: ^Plane
 	Valued:
@@ -463,6 +495,77 @@ SCRIN:
 	DeathSounds:
 	SpawnActorOnDeath:
 		Actor: SCRIN.Husk
+
+CERBERUS:
+	Inherits: ^Helicopter
+	Inherits@3: ^BasicStealthDetection
+	Inherits@4: ^PermanentSelfHeal
+	Valued:
+		Cost: 2500
+	Tooltip:
+		Name: Cerberus
+	Buildable:
+		Description: NOD frigate, designed to cause confusion and intercept aerial targets.\n  Strong vs Vehicles, Aircraft.\n  Weak vs Infantry, Heavy vehicles.
+		Queue: Air
+		BuildPaletteOrder: 20
+		Prerequisites: ~nahpad, natmpl
+	Selectable:
+		Bounds: 110,90
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 70
+		Repulsable: true
+		MoveIntoShroud: true
+		TakeoffSound: orcaup1.aud
+		LandingSound: orcadwn1.aud
+	Health:
+		HP: 65000
+	Armor:
+		Type: Heavy
+	RevealsShroud:
+		Range: 7c0
+		Type: CenterPosition
+	Armament@primary:
+		Weapon: CerberusLazor
+	Armament@secondary:
+		Weapon: CerberusLasorSpawn
+	AttackHeli:
+		FacingTolerance: 240
+		Voice: Attack
+	AmmoPool:
+		Ammo: 999
+		PipCount: 0
+		PipType: Ammo
+		SelfReloads: true
+		SelfReloadDelay: 1
+		PipTypeEmpty: AmmoEmpty
+	AutoTarget:
+	-RenderVoxels:
+	-WithVoxelBody:
+	WithShadow:
+	RenderSprites:
+		PlayerPalette: playertemperate
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32
+	SpawnActorOnDeath:
+		Actor: GUARDIAN.Husk
+	GrantTimedConditionOnDeploy:
+		DeployedCondition: HologramSpawn
+		CooldownTicks: 3000
+		DeployedTicks: 10
+		StartsFullyCharged: True
+	ExternalConditions@MineSpawn:
+		Conditions: HologramSpawn
+	ExplodeWeapon:
+		Weapon: ApacheHoloShrapnel
+		RequiresCondition: HologramSpawn
+	ExplodeWeapon@1:
+		Weapon: BuggyHoloShrapnel
+		RequiresCondition: HologramSpawn
+	ExplodeWeapon@2:
+		Weapon: TickHoloShrapnel
+		RequiresCondition: HologramSpawn
 
 ##########################################################
 # Mutants

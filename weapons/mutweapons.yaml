@@ -401,7 +401,7 @@ QuadFire:
 	Inherits: ^RifleWarhead
 	Inherits@2: ^Piffs
 	ReloadDelay: 50
-	Burst: 2
+	Burst: 4
 	Range: 6c0
 	Report: cygun1.aud
 	ValidTargets: Ground
@@ -417,7 +417,7 @@ QuadFire:
 		Spread: 128
 		ValidTargets: Ground
 		InvalidTargets: Air
-		Damage: 3500
+		Damage: 1750
 		DamageTypes: Prone70Percent, TriggerProne, BulletDeath
 
 QuadFireAA:

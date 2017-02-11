@@ -309,7 +309,7 @@ ClusterMissile:
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
 	Warhead@ClusterDamage3: SpreadDamage
 		Spread: 2c0
-		Damage: 7000
+		Damage: 21000
 		Falloff: 1000, 368, 135, 50, 18, 7, 0
 		Delay: 15
 		ValidTargets: Ground, Water, Air

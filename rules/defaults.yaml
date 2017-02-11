@@ -921,7 +921,7 @@
 	RevealsShroud:
 		Range: 3c0
 	Health:
-		HP: 3500
+		HP: 4500
 	-Armor:
 	-GainsExperience:
 	-GivesExperience:

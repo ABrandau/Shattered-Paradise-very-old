@@ -332,6 +332,40 @@ BGGY:
 	AutoTarget:
 	WithMuzzleOverlay:
 
+BUGGYHOLOGRAM:
+	Inherits: BGGY
+	-Buildable:
+	WithDecoration@holoicon:
+		Image: holoicon
+		Sequence: idle
+		ReferencePoint: Bottom, Right
+		Palette: mouse
+	Mobile:
+		Crushes: crate
+	-Explodes:
+	RenderSprites:
+		Image: bggy
+	RenderVoxels:
+		Image: bggy
+	FirepowerMultiplier@Hologram:
+		Modifier: 20
+		BaseLevel: 0
+	WithDeathAnimation@body:
+		DeathSequencePalette: apolra2i
+		DeathPaletteIsPlayerPalette: False
+		DeathTypes: #1 2 normals, 3 headshot, 4 explosion
+			BulletDeath: evaporate
+			CabalDeath: evaporate
+			CabalDeathCrate: evaporate
+			BlackHandRfle: evaporate
+			HeadshotDeath: evaporate
+			SmallExplosionDeath: evaporate
+			FireDeath: evaporate
+			TiberiumDeath: evaporate
+			TiberiumDeathStrong: evaporate
+			EnergyDeath: evaporate
+			ExplosionDeath: evaporate
+
 TTNK:
 	Inherits: ^VoxelTank
 	Inherits@2: ^NodCloakHealing
@@ -403,6 +437,41 @@ TTNK:
 		Type: Concrete
 		RequiresCondition: deployed
 	AutoTarget:
+
+TICKHOLOGRAM:
+	Inherits: TTNK
+	-Buildable:
+	WithDecoration@holoicon:
+		Image: holoicon
+		Sequence: idle
+		ReferencePoint: Bottom, Right
+		Palette: mouse
+	Mobile:
+		Crushes: crate
+	-Explodes:
+	-GrantConditionOnDeploy:
+	RenderSprites:
+		Image: ttnk
+	RenderVoxels:
+		Image: ttnk
+	FirepowerMultiplier@Hologram:
+		Modifier: 20
+		BaseLevel: 0
+	WithDeathAnimation@body:
+		DeathSequencePalette: apolra2i
+		DeathPaletteIsPlayerPalette: False
+		DeathTypes: #1 2 normals, 3 headshot, 4 explosion
+			BulletDeath: evaporate
+			CabalDeath: evaporate
+			CabalDeathCrate: evaporate
+			BlackHandRfle: evaporate
+			HeadshotDeath: evaporate
+			SmallExplosionDeath: evaporate
+			FireDeath: evaporate
+			TiberiumDeath: evaporate
+			TiberiumDeathStrong: evaporate
+			EnergyDeath: evaporate
+			ExplosionDeath: evaporate
 
 BIKE:
 	Inherits: ^VoxelVehicle
@@ -545,29 +614,23 @@ HOLOGRAMPROJECTOR:
 			mhijack: HijackerHologram
 			bhs: HandHologram
 	ExplodeWeapon@Flame:
-		Weapon: FlameHologram
+		Weapon: FlameHoloShrapnel
 		RequiresCondition: FlameWarriorHologram
-		ConditionMinEnabledLevel: 1
 	ExplodeWeapon@Crusa:
-		Weapon: CrusaHologram
+		Weapon: CrusaHoloShrapnel
 		RequiresCondition: CrusaderHologram
-		ConditionMinEnabledLevel: 1
 	ExplodeWeapon@Engineer:
-		Weapon: EngineerHologram
+		Weapon: EngineerHoloShrapnel
 		RequiresCondition: EngineerHologram
-		ConditionMinEnabledLevel: 1
 	ExplodeWeapon@Templar:
-		Weapon: TemplarHologram
+		Weapon: TemplarHoloShrapnel
 		RequiresCondition: TemplarHologram
-		ConditionMinEnabledLevel: 1
 	ExplodeWeapon@Hijacker:
-		Weapon: HijackerHologram
+		Weapon: HijackerHoloShrapnel
 		RequiresCondition: HijackerHologram
-		ConditionMinEnabledLevel: 1
 	ExplodeWeapon@Hand:
-		Weapon: HandHologram
+		Weapon: FlameHoloShrapnel
 		RequiresCondition: HandHologram
-		ConditionMinEnabledLevel: 1
 	ExternalConditions@hologams:
 		Conditions: FlameWarriorHologram, CrusaderHologram, EngineerHologram, TemplarHologram, HijackerHologram, HandHologram
 
@@ -630,7 +693,7 @@ ARMH:
 		Scale: 0.7
 	Armament:
 		Weapon: BCLazor
-		LocalOffset: 350,0,450z
+		LocalOffset: 500,0,450
 	AttackFrontal:
 		Voice: Attack
 	AutoTarget:
@@ -1189,7 +1252,7 @@ SCRHARV:
 		Description: Collects Ichor for processing.\nIncompatible with human refineries.\nCan be sold if near a Service Depot.\n\n  Unarmed.
 		Queue: Vehicle
 		BuildPaletteOrder: 99
-		Prerequisites: ~scrweap, scrproc
+		Prerequisites: ~scrweap, structures.scr
 		InitialActivity: FindResources
 	Selectable:
 		Priority: 7

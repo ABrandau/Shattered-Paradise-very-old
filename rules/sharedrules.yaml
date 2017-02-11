@@ -107,7 +107,7 @@ HARV:
 	Buildable:
 		Queue: Vehicle
 		BuildPaletteOrder: 99
-		Prerequisites: ~humanproc, proc
+		Prerequisites: ~proc, ~!structures.scr
 		InitialActivity: FindResources
 	Selectable:
 		Priority: 7
@@ -163,7 +163,7 @@ HARV:
 CabHarv:
 	Inherits: HARV
 	Buildable:
-		Prerequisites: ~cabproc, anypower
+		Prerequisites: ~cabproc, ~!proc
 	RenderVoxels:
 		Image: cabharv
 
@@ -402,6 +402,8 @@ PROC:
 	Power:
 		Amount: -20
 	ProvidesPrerequisite@buildingname:
+	ProvidesPrerequisite@proc:
+		ProvidesPrerequisite: proc
 	SelectionDecorations:
 		VisualBounds: 134, 122, 0, -18
 	RenderSprites:

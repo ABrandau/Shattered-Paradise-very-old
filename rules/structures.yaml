@@ -1714,7 +1714,7 @@ CABPROC:
 		Queue: Building
 		BuildPaletteOrder: 20
 		Description: Processes raw Tiberium\ninto usable resources.\nIncompatible with scrin harvesters.
-		Prerequisites: ~cabproc, anypower
+		Prerequisites: anypower, ~structures.cab
 	Tooltip:
 		Name: C.A.B.A.L. Refinery
 	Building:
@@ -1733,6 +1733,7 @@ CABPROC:
 		Image: cabproc
 		-FactionImages:
 	-WithIdleOverlay@REDLIGHTS:
+	-ProvidesPrerequisite@proc:
 	Cloak@CLOAKGENERATOR:
 		Palette: cloakmut
 	WithDeathAnimation:

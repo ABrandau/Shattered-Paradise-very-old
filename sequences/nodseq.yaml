@@ -328,6 +328,10 @@ bggy:
 	muzzle5: mgun-se
 	muzzle6: mgun-e
 	muzzle7: mgun-ne
+	dieevaporate: infgas
+		Length: *
+		Offset: 0,-6, 32
+		Tick: 30
 	icon: bggyicon
 
 ttnk:
@@ -343,6 +347,10 @@ ttnk:
 		Length: 24
 		ShadowStart: 24
 		Offset: 0, -12
+	dieevaporate: infgas
+		Length: *
+		Offset: 0,-6, 32
+		Tick: 30
 	icon: tickicon
 
 sapc:
@@ -1144,10 +1152,6 @@ nastlh:
 ##########################################################
 # Aircraft
 ##########################################################
-scrin:
-	Inherits: ^EmpOverlay
-	icon: proicon
-
 apache:
 	Inherits: ^EmpOverlay
 	icon: apchicon
@@ -1155,7 +1159,26 @@ apache:
 		Length: 4
 	slow-rotor: lrotor
 		Start: 4
-		Length: 8	
+		Length: 8
+	dieevaporate: infgas
+		Length: *
+		Offset: 0,-6, 32
+		Tick: 30
+
+scrin:
+	Inherits: ^EmpOverlay
+	icon: proicon
+
+cerberus:
+	Inherits: ^EmpOverlay
+	stand:
+		Facings: -32
+	idle:
+		Facings: -32
+	run:
+		Tick: 90
+		Facings: -32
+	icon: cerberusicon		
 ##########################################################
 # Other
 ##########################################################		
