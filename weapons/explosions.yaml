@@ -232,9 +232,10 @@ ZombieExplosion:
 			Light: 60
 			Heavy: 25
 		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeath
-	Warhead@2Res: CreateResource
-		AddsResourceType: Tiberium
-		Size: 1,1
+	Warhead@5Actor: SpawnActor
+		Actors: cloud1
+		FallRate: 5000
+		Range: 3
 	Warhead@3Eff: CreateEffect
 		Explosions: tibexp
 		ImpactSound: expnew09.aud

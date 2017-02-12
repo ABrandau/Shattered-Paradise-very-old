@@ -248,6 +248,14 @@ explosion:
 	nuke3: nuke3
 		ZOffset: 1024
 		BlendMode: Additive
+	holosmoke1: holosmoke1
+		ZOffset: 1024
+	holosmoke2: holosmoke2
+		ZOffset: 1024
+	holosmoke3: holosmoke3
+		ZOffset: 1024
+	holosmoke4: holosmoke4
+		ZOffset: 1024
 	#Mutants
 	bolt1: lightningbolts
 		Length: 1

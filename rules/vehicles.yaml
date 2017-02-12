@@ -4,7 +4,7 @@
 SMECH:
 	Inherits: ^Walker
 	Valued:
-		Cost: 550
+		Cost: 400
 	Tooltip:
 		Name: Wolverine
 	Buildable:
@@ -15,6 +15,7 @@ SMECH:
 	Mobile:
 		TurnSpeed: 5
 		Speed: 99
+		Crushes: crate
 	Health:
 		HP: 17500
 	Armor:
@@ -40,7 +41,7 @@ SMECH:
 MMCH:
 	Inherits: ^Walker
 	Valued:
-		Cost: 900
+		Cost: 800
 	Tooltip:
 		Name: Titan
 	Buildable:
@@ -50,7 +51,7 @@ MMCH:
 		Prerequisites: ~gaweap
 	Mobile:
 		TurnSpeed: 5
-		Speed: 56
+		Speed: 75
 		Crushes: wall, crate, infantry
 	Health:
 		HP: 40000
@@ -325,10 +326,11 @@ BGGY:
 	Armament@AA:
 		Weapon: BikeMissileAA
 		LocalOffset: -128,-170,213, -128,170,213
-	Turreted:
-		Rof: 10
-	AttackTurreted:
-		Voice: Attack
+	AttackFrontal:
+	# Turreted:
+		# Rof: 10
+	# AttackTurreted:
+		# Voice: Attack
 	AutoTarget:
 	WithMuzzleOverlay:
 
@@ -342,6 +344,7 @@ BUGGYHOLOGRAM:
 		Palette: mouse
 	Mobile:
 		Crushes: crate
+	-ThrowsShrapnel:
 	-Explodes:
 	RenderSprites:
 		Image: bggy
@@ -370,7 +373,7 @@ TTNK:
 	Inherits: ^VoxelTank
 	Inherits@2: ^NodCloakHealing
 	Valued:
-		Cost: 800
+		Cost: 900
 	Tooltip:
 		Name: Tick Tank
 	Buildable:
@@ -472,7 +475,18 @@ TICKHOLOGRAM:
 			TiberiumDeathStrong: evaporate
 			EnergyDeath: evaporate
 			ExplosionDeath: evaporate
-
+	-ThrowsShrapnel:
+	Mobile:
+		-RequiresCondition: undeployed
+	-Turreted:
+	-WithVoxelBarrel:
+	-WithSpriteBody@deployed:
+	-WithVoxelTurret@deployed:
+	WithVoxelBody:
+		-RequiresCondition: undeployed
+	-AttackTurreted@deployed:
+	AttackFrontal:
+		-RequiresCondition: undeployed
 BIKE:
 	Inherits: ^VoxelVehicle
 	Inherits@2: ^NodCloakHealing
@@ -490,6 +504,8 @@ BIKE:
 		TurnSpeed: 10
 		Speed: 150
 		Crushes: crate
+	Armor@Bike:
+		Type: Bike
 	Health:
 		HP: 7000
 	Passenger:
@@ -793,7 +809,7 @@ SGEN:
 	Inherits: ^VoxelTank
 	Inherits@2: ^NodCloakHealing
 	Valued:
-		Cost: 1400
+		Cost: 1100
 	Tooltip:
 		Name: Mobile Stealth Generator
 	Buildable:
@@ -971,7 +987,7 @@ TRIKE:
 		HP: 13000
 	Voiced:
 		VoiceSet: Trike
-		Volume: 10
+		Volume: 7
 	Armor:
 		Type: Light
 	Cargo:
@@ -980,7 +996,6 @@ TRIKE:
 		PipCount: 1
 		UnloadVoice: Unload
 		LoadingCondition: notmobile
-		EjectOnDeath: True
 		InitialUnits: e3
 	AttackGarrisoned:
 		PortOffsets: 384,0,128, 224,-341,128, -224,-341,128, -384,0,128, -224,341,128, 224,341,128
@@ -996,7 +1011,7 @@ MUTQUAD:
 	Inherits: ^VoxelTank
 	Inherits@1:	^Ra2vxl
 	Valued:
-		Cost: 700
+		Cost: 600
 	Tooltip:
 		Name: Quad Cannon
 	Buildable:
@@ -1014,7 +1029,7 @@ MUTQUAD:
 		Type: Heavy
 	Voiced:
 		VoiceSet: Trike
-		Volume: 10
+		Volume: 7
 	RenderVoxels:
 		Scale: 1
 		LightAmbientColor: 0.4, 0.4, 0.4
@@ -1053,7 +1068,7 @@ STRUCK:
 	Inherits: ^VoxelTank
 	Inherits@1:	^Ra2vxl
 	Valued:
-		Cost: 900
+		Cost: 600
 	Tooltip:
 		Name: Battle Bus
 	Buildable:
@@ -1066,20 +1081,19 @@ STRUCK:
 		Speed: 70
 		Crushes: wall, crate, infantry
 	Health:
-		HP: 35000
+		HP: 45000
 	Armor:
 		Type: Heavy
 	Voiced:
 		VoiceSet: Trike
-		Volume: 10
+		Volume: 7
 	Cargo:
 		Types: Infantry
 		MaxWeight: 4
 		PipCount: 4
 		UnloadVoice: Unload
 		LoadingCondition: notmobile
-		EjectOnDeath: True
-		InitialUnits: mutfiend
+		# InitialUnits: mutfiend
 	RenderVoxels:
 		Scale: 0.8
 		LightAmbientColor: 0.4, 0.4, 0.4
@@ -1143,7 +1157,7 @@ MLRS:
 		HP: 15000
 	Voiced:
 		VoiceSet: Trike
-		Volume: 10
+		Volume: 7
 	RenderVoxels:
 		LightAmbientColor: 0.5,0.5,0.5
 		LightDiffuseColor: 0.7,0.7,0.7
@@ -1177,7 +1191,7 @@ HVRTRUK3:
 		Prerequisites: ~muweap, muhall
 	Voiced:
 		VoiceSet: Trike
-		Volume: 10
+		Volume: 7
 	Mobile:
 		TurnSpeed: 5
 		Speed: 100
@@ -1339,7 +1353,7 @@ SCRDRONEC:
 		Queue: Vehicle
 		BuildPaletteOrder: 31
 		Description: Support hover drone, makes nearby units untargetable and\nbounces back part of the it reveices to random hostile targets.\nCannot collect essence, but autorepairs.
-		Prerequisites: ~scrweap#, scrtech
+		Prerequisites: ~scrweap, scrradr
 	Valued:
 		Cost: 600
 	Tooltip:
@@ -1451,11 +1465,6 @@ SCRMOBMINE:
 		Conditions: GravMineSuicide
 	KillsSelf@GravMineSuicide:
 		RequiresCondition: GravMineSuicide
-	# SpawnActorOnDeath@Mine:
-		# Actor: stalkerdummy
-		# Probability: 80
-		# OwnerType: Victim
-		# RequiresLobbyCreeps: false
 	AutoTarget:
 		ScanRadius: 4
 	AttackFrontal:
@@ -1472,7 +1481,7 @@ SCRMBT:
 		Queue: Vehicle
 		BuildPaletteOrder: 32
 		Description: Light Tank, good for scouting, deals damage over an area.\n\n Strong vs Light, heavy armor\n  Weak vs Infantry, Aircraft\nBUG: This unit CANNOT break vanguard Shields.\n(It won't be fixed in a while).
-		Prerequisites: ~scrweap, scrradr
+		Prerequisites: ~scrweap
 	Valued:
 		Cost: 900
 	Tooltip:
@@ -1632,7 +1641,7 @@ DINO:
 	Voiced:
 		VoiceSet: Limpet
 	Health:
-		HP: 22500
+		HP: 30000
 	BodyOrientation:
 		QuantizedFacings: 32
 	WithMuzzleOverlay:
@@ -1654,7 +1663,7 @@ CENTURION:
 	Inherits: ^Walker
 	Inherits@2:	^PermanentSelfHeal
 	Valued:
-		Cost: 1200
+		Cost: 1000
 	Tooltip:
 		Name: Centurion
 	Buildable:
@@ -1754,14 +1763,11 @@ ECM:
 		Range: 11c0
 	Minelayer:
 		Mine: cabsentryturret
-		RearmBuildings:
+		RearmBuildings: gadept
 	AmmoPool:
-		InitialAmmo: 0
-		Ammo: 8
-		PipCount: 8
+		Ammo: 5
+		PipCount: 5
 		PipType: Ammo
-		SelfReloadDelay: 600
-		SelfReloads: true
 		PipTypeEmpty: AmmoEmpty
 	ExplodeWeapon@MAQUINACONCHADETUMARE:
 		Weapon: EcmDroneSpawn

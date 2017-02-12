@@ -111,7 +111,7 @@
 	SelfHealing@poisoncloud:
 		PercentageStep: -1
 		Step: 0
-		Delay: 25
+		Delay: 12
 		RequiresCondition: Poison
 		HealIfBelow: 200
 		DamageTypes: TiberiumDeath
@@ -206,7 +206,7 @@
         IsPlayerPalette: true
         CloakSound: cloak5.aud
         UncloakSound: cloak5.aud
-        UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+        UncloakOn: Attack, Unload, Infiltrate, Demolish, Dock
 	ExternalConditions@CLOAKGENERATOR:
 		Conditions: cloakgenerator, crate-cloak
 
@@ -230,11 +230,10 @@
 	SelfHealing@GuardianPlatformSelfHeal:
 		PercentageStep: 2
 		Step: 0
-		Delay: 300
+		Delay: 200
 		DamageCooldown: 200
 		HealIfBelow: 105
 		RequiresCondition: AuraRepair
-		ConditionMinEnabledLevel: 1
 	ExternalConditions@AuraRepair:
 		Conditions: AuraRepair
 
@@ -1270,8 +1269,6 @@
 		AltitudeVelocity: 250
 	Passenger:
 		CargoType: Aircraft
-	ProductionFromMapEdge:
-		Produces: Aircraft
 	Voiced:
 		VoiceSet: Heli
 	HiddenUnderFog:
@@ -1398,7 +1395,7 @@
 		StartsRevealed: true
 	SeedsResource:
 		ResourceType: Tiberium
-		Interval: 45
+		Interval: 30
 	WithIdleAnimation:
 
 ^Tree:
@@ -1589,7 +1586,7 @@
 	FrozenUnderFog:
 	AppearsOnRadar:
 	Valued:
-		Cost: 200
+		Cost: 100
 	Building:
 		Dimensions: 1,1
 		Footprint: x

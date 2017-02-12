@@ -32,6 +32,7 @@ GRENADIER:
 		Queue: Infantry
 		BuildPaletteOrder: 2
 		Prerequisites: ~gapile
+		Description: Anti armor infantry.\n\n  Strong vs Armor.\n  Weak vs Infantry, Armor.
 	Valued:
 		Cost: 210
 	Tooltip:
@@ -269,7 +270,7 @@ CRUSADER:
 	Health:
 		HP: 11000
 	Mobile:
-		Speed: 65
+		Speed: 60
 	Armament@PRIMARY:
 		Weapon: CrusaderBazooka
 		LocalOffset: 0,0,600
@@ -686,16 +687,25 @@ AWARRIOR:
 		Speed: 75
 	AutoTarget:
 		ScanRadius: 6
-	Armament@PRIMARY:
+	Armament@1:
 		Weapon: KnightAcid
 		Name: OnFoot
 		Muzzle: flamebro
-		LocalOffset: 250,75,500
+		LocalOffset: 500,75,500
 		MuzzleSequence: muzzle
 		MuzzlePalette: apolgreenalpha
 		MuzzleSplitFacings: 8
+	Armament@2:
+		Weapon: KnightAcid2
+		Name: OnFoot
+		MuzzlePalette: apolgreenalpha
+		LocalOffset: 500,75,500
 	Armament@GARRISON:
-		Weapon: GKnightGun
+		Weapon: GKnightAcid
+		MuzzlePalette: apolgreenalpha
+		LocalOffset: 250,0,400
+	Armament@GARRISON2:
+		Weapon: GKnightAcid2
 		MuzzlePalette: apolgreenalpha
 		LocalOffset: 250,0,400
 	AttackFrontal:
@@ -1389,10 +1399,6 @@ CYC2:
 		VoiceSet: CyborgCommando
 	Mobile:
 		Speed: 56
-	Cloak@CLOAKGENERATOR:
-		RequiresCondition: !lawea
-		InitialDelay: 0
-		CloakDelay: 90
 	Health:
 		HP: 30000
 	Targetable@MindControlImmunity:

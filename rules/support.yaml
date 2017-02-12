@@ -594,7 +594,7 @@ MASTL:
 	-AutoTarget:
 	-RenderRangeCircle:
 	WithRangeCircle:
-		Range: 5c0
+		Range: 6c0
 		Type: cloakgenerator
 	Selectable:
 		Priority: 6
@@ -987,9 +987,11 @@ MUWARD:
 	-AttackTurreted:
 	-AutoTarget:
 	-RenderRangeCircle:
+    Selectable:
+        Priority: 3
 	-Voiced:
 	RevealsShroud:
-		Range: 7c0
+		Range: 5c0
 	BodyOrientation:
 		QuantizedFacings: 32
 	Cloak@cloakgenerator:
@@ -1001,7 +1003,7 @@ MUWARD:
 		Palette: cloakmut
 		IsPlayerPalette: true
 		CloakTypes: cloakgenerator
-		UncloakOn: Attack, Unload, Infiltrate, Demolish, Damage
+		UncloakOn: Attack, Unload, Infiltrate, Demolish
 
 MUVENTI:
 	Inherits: ^Building
@@ -1403,10 +1405,13 @@ CABSENTRYTURRET:
 	AttackTurreted:
 	WithSpriteTurret:
 		Recoils: no
+	ExplodeWeapon:
+		Weapon: ArtisanDroneSpawn
+		LocalOffset: 0,0,500
+	Targetable@Seeker:
+		TargetTypes: Seeker
 	Armament@1:
-		Weapon: CyborgVulcan
-	Armament@2:
-		Weapon: SentryTurretGun
+		Weapon: ArtisanTurretLasor
 	SelectionDecorations:
 		VisualBounds: 40, 36, -3, -8
 
@@ -1595,7 +1600,7 @@ CABSW1:
 	Armor:
 		Type: Wood
 	Turreted:
-		TurnSpeed: 1
+		TurnSpeed: 2
 		InitialFacing: 50
 	AttackTurreted:
 	WithSpriteTurret:

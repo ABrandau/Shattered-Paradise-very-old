@@ -155,21 +155,49 @@ SeerTeslaSpark:
 KnightAcid:
 	Inherits: ^AcidWarhead
 	ReloadDelay: 75
-	Range: 2c0
-	Report: chemweaponfire.wav#flamtnk1.aud
-	ValidTargets: Ground
+	Range: 4c0
+	Burst: 6
+	Report: chemweaponfire.wav
+	ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water
 	Projectile: Bullet
-		Speed: 100c0
-		Inaccuracy: 384
+		Speed: 250
+		Image: acidall32mini
+		Inaccuracy: 2c0
 		Palette: apolgreenalpha
 	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 2000
-		ValidTargets: Ground	
+		Spread: 256
+		Damage: 300
 		DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong
-	Warhead@2Smu: LeaveSmudge
+		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water
+	Warhead@2Eff: CreateEffect
+		Explosions: tib_expsmall
+		ExplosionPalette: apolgreenalpha
+		ImpactSound: expnew14.aud
+		InvalidImpactTypes: Water
+	Warhead@3Smu: LeaveSmudge
 		SmudgeType: SmallScorch
-		InvalidTargets: Vehicle, Building, Wall
+
+KnightAcid2:
+	Inherits: KnightAcid
+	Projectile: Bullet
+		Innacuracy: 256
+	# Inherits: ^AcidWarhead
+	# ReloadDelay: 75
+	# Range: 2c0
+	# Report: chemweaponfire.wav#flamtnk1.aud
+	# ValidTargets: Ground
+	# Projectile: Bullet
+		# Speed: 100c0
+		# Inaccuracy: 384
+		# Palette: apolgreenalpha
+	# Warhead@1Dam: SpreadDamage
+		# Spread: 128
+		# Damage: 2000
+		# ValidTargets: Ground	
+		# DamageTypes: Prone100Percent, TriggerProne, TiberiumDeathStrong
+	# Warhead@2Smu: LeaveSmudge
+		# SmudgeType: SmallScorch
+		# InvalidTargets: Vehicle, Building, Wall
 
 PsykerRay:
 	Inherits: ^FullDamage
@@ -182,7 +210,7 @@ PsykerRay:
 		Inaccuracy: 3c0
 	Warhead@1Dam: SpreadDamage
 		Spread: 298
-		Damage: 3000
+		Damage: 10000
 		DamageTypes: Prone70Percent, TriggerProne, EnergyDeath
 	Warhead@3Eff: CreateEffect
 		Explosions: bolt1, bolt2, bolt3, bolt4, bolt5, bolt6, bolt7, bolt8, bolt9, bolt10
@@ -225,28 +253,34 @@ GSeerTesla:
 		Spread: 30
 		Damage: 2500
 
-GKnightGun:
-	Inherits: ^GrenadeWarhead
-	ReloadDelay: 60
+GKnightAcid:
+	Inherits: KnightAcid
 	Range: 6c768
-	Report: rketinf1.aud
-	ValidTargets: Ground
-	Projectile: Bullet
-		Speed: 300
-		Shadow: true
-		Inaccuracy: 1c500
-		Image: DISCUS
-	Warhead@1Dam: SpreadDamage
-		Spread: 125
-		Damage: 3000
-		ValidTargets: Ground
-		DamageTypes: Prone50Percent, TriggerProne, TiberiumDeathStrong
-	Warhead@2Eff: CreateEffect
-		Explosions: tib_expsmall
-		ImpactSound: expnew12.aud
-	Warhead@5Smu: LeaveSmudge
-		SmudgeType: SmallCrater
-		InvalidTargets: Vehicle, Building, Wall
+GKnightAcid2:
+	Inherits: KnightAcid2
+	Range: 6c768
+
+	# Inherits: ^GrenadeWarhead
+	# ReloadDelay: 60
+	# Range: 6c768
+	# Report: rketinf1.aud
+	# ValidTargets: Ground
+	# Projectile: Bullet
+		# Speed: 300
+		# Shadow: true
+		# Inaccuracy: 1c500
+		# Image: DISCUS
+	# Warhead@1Dam: SpreadDamage
+		# Spread: 125
+		# Damage: 3000
+		# ValidTargets: Ground
+		# DamageTypes: Prone50Percent, TriggerProne, TiberiumDeathStrong
+	# Warhead@2Eff: CreateEffect
+		# Explosions: tib_expsmall
+		# ImpactSound: expnew12.aud
+	# Warhead@5Smu: LeaveSmudge
+		# SmudgeType: SmallCrater
+		# InvalidTargets: Vehicle, Building, Wall
 
 GPsykerRay:
 	Inherits: PsykerRay
@@ -337,7 +371,7 @@ BullBuff:
 
 DeathclawBlow:
 	Inherits: ^ArtilleryWarhead
-	ReloadDelay: 60
+	ReloadDelay: 30
 	Range: 1c0
 	Report: fiend2.aud
 	ValidTargets: Vehicle, Defence, Infantry

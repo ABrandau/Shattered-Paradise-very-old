@@ -20,7 +20,6 @@ SentryGun:
 	Inherits@1: ^Mediuml_Clsn
 	ReloadDelay: 60
 	Range: 4c0
-	Report: 120mmf.aud
 	Projectile: Bullet
 		Speed: 682
 		Image: 120mm
@@ -28,7 +27,7 @@ SentryGun:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 60
-		Damage: 600
+		Damage: 800
 		DamageTypes: Prone50Percent, TriggerProne, CabalDeath
 
 ReaperWeb:
@@ -275,6 +274,20 @@ SeekerBazookaAA:
 		ValidTargets: Air
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 
+ArtisanTurretLasor:
+	ReloadDelay: 50
+	Report: lastur1.aud
+	Range: 6c0
+	ValidTargets: Infantry, Building, Vehicle, Defence, Airhit, Ground
+	Projectile: LaserZap
+		Width: 25
+		BeamDuration: 5
+		Color: 0dc7b8
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: 1400
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+
 CombatDroneAproach:
 	ReloadDelay: 25
 	Range: 2c0
@@ -351,6 +364,38 @@ CombatDroneLasor:
 		ValidStances: Enemy
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 
+HealerDroneLasorSpawn:
+	Inherits: CombatDroneLasorSpawn
+	ReloadDelay: 50
+	Range: 6c0
+	ValidTargets: Infantry, Building, Vehicle, Defence, Air, Airhit
+	Projectile: InstantExplode
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: -1
+		ValidTargets: SeekerTarget
+	Warhead@op: FireShrapnel
+		Weapon: HealerDroneLasor
+		Amount: 2
+		AimChance: 100
+		AllowDirectHit: true
+		ValidStances: Ally
+		ValidTargets: Infantry, Building, Vehicle, Defence, Air, Airhit
+
+HealerDroneLasor:
+	ReloadDelay: 50
+	Range: 6c0
+	ValidTargets: Infantry, Building, Vehicle, Defence, Air, Airhit
+	Projectile: LaserZap
+		Width: 25
+		BeamDuration: 5
+		Color: 228B22
+	Warhead@1Dam: SpreadDamage
+		Spread: 128
+		Damage: -1000
+		ValidStances: Ally
+		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
+
 SeekerDroneSpawn:
 	ReloadDelay: 300
 	Range: 8c0
@@ -366,10 +411,12 @@ SeekerDroneSpawn:
 		Range: 3
 		ValidTargets: Ground, Infantry, Air, Vehicle, Building, Wall
 
-CenturionDroneSpawn:
+ArtisanDroneSpawn:
 	Inherits: SeekerDroneSpawn
-	ReloadDelay: 400
-	Burst: 2
+	ReloadDelay: 425
+	Burst: 1
+	Warhead@5Actor: SpawnActor
+		Actors: MINIWYVERM2
 
 DevourerDroneSpawn:
 	Inherits: SeekerDroneSpawn
@@ -427,7 +474,7 @@ DroneHostShell:
 		Blockable: false
 		Shadow: true
 		Image: DRAGON
-		Inaccuracy: 1c512
+		Inaccuracy: 2c0
 		ContrailLength: 10
 		ContrailUsePlayerColor: true
 		LaunchAngle: 150
@@ -466,7 +513,7 @@ PalaLazor:
 	Inherits: ^ArtilleryWarhead
 	ReloadDelay: 25
 	Range: 6c0
-	Report: obelcor3.aud
+	Report: lastur1.aud
 	Projectile: LaserZap
 		Width: 60
 		BeamDuration: 7
@@ -519,13 +566,13 @@ WaspLasor:
 DevourerGrinder:
 	Inherits: ^ArtilleryWarhead
 	ReloadDelay: 35
-	Range: 200
+	Range: 300
 	Report: repair11.aud
 	Projectile: Bullet
 		Speed: 5c682
 	Warhead@1Dam: SpreadDamage
 		Spread: 42
-		Damage: 6000
+		Damage: 9000
 		Versus:
 		DamageTypes: Prone100Percent, TriggerProne, BulletDeath
 	Warhead@5Actor: SpawnActor
@@ -546,10 +593,10 @@ DevourerExplo:
 DevourerBuff:
 	Inherits: ^RifleWarhead
 	ReloadDelay: 35
-	Range: 200
+	Range: 300
 	Projectile: InstantExplode
 	Warhead@Acid: GrantExternalCondition
-		Range: 250
+		Range: 350
 		Duration: 35
 		Condition: DevoBuff
 		ValidStances: Ally

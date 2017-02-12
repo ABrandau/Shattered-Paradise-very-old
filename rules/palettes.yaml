@@ -217,6 +217,7 @@
 		Name: apolra2yalpha
 		BasePalette: apolra2y
 		Alpha: 0.7
+#Jasc Pals
 	PaletteFromJasc32File@gradgreen:
 		Name: gradgreen
 		Filename: gradgreen.pal
@@ -232,6 +233,12 @@
 		Filename: gensmkexplojFblue.pal
 		Premultiply: false
 		AllowModifiers: false
+	PaletteFromJasc32File@cyanjascpal:
+		Name: cyanjascpal
+		Filename: cyanjascpal.pal
+		Premultiply: true
+		AllowModifiers: false
+####
 	PaletteFromFile@silo:
 		Name: silo
 		AllowModifiers: false

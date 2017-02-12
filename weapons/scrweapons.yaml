@@ -338,7 +338,7 @@ ScrMbtCannon:
 	Inherits: ^APWarhead
 	ReloadDelay: 25
 	Range: 5c0
-	Report: sonic4.aud
+	# Report: sonic4.aud
 	Projectile: AreaBeam
 		Speed: 450
 		Duration: 30
@@ -669,7 +669,7 @@ BattleshipCannon:
 	Range: 5c768
 	Report: battleshipgun1.wav
 	Burst: 8
-	BurstDelay: 4
+	BurstDelay: 3
 	ValidTargets: Ground, Infantry, Vehicle, water
 	Projectile: Bullet
 		Speed: 500
@@ -682,30 +682,9 @@ BattleshipCannon:
 		LaunchAngle: 15
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 2500
+		Damage: 5000
 		ValidTargets: Ground, Infantry, Vehicle, Air, water
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, ScrinEssenceKill
-
-BattleshipRocketDummy:
-	ReloadDelay: 45
-	Range: 5c768
-	Report: battleshipgun1.wav
-	ValidTargets: Ground, Infantry, Vehicle, Air, water
-	Projectile: Missile
-		RangeLimit: 1
-	Warhead@1Dam: SpreadDamage
-		Spread: 128
-		Damage: 1
-		ValidTargets: Ground, Infantry, Vehicle, Air, water
-		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
-	Warhead@op: FireShrapnel
-		Weapon: BattleshipRocket
-		Amount: 2
-		AimChance: 100
-		ThrowWithoutTarget: false
-		AllowDirectHit: true
-		AimTargetStances: Neutral, Enemy
-		ValidTargets: Air, Ground, Water
 
 BattleshipRocket:
 	Inherits: ^RocketWarhead
@@ -713,7 +692,7 @@ BattleshipRocket:
 	ReloadDelay: 45
 	Range: 5c768
 	Report: battleshipgun1.wav
-	ValidTargets: Ground, Infantry, Vehicle, Air, water
+	ValidTargets: Air, Airhit
 	Projectile: Missile
 		Speed: 250
 		Blockable: false
@@ -727,7 +706,7 @@ BattleshipRocket:
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
 		Damage: 4000
-		ValidTargets: Ground, Infantry, Vehicle, Air, water
+		ValidTargets: Air, Airhit
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath, ScrinEssenceKill
 		
 DestroyerCannon:

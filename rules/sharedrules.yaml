@@ -387,6 +387,12 @@ PROC:
 		Actor: HARV
 		SpawnOffset: 3,1
 		Facing: 160
+	Explodes:
+		Weapon: TiberiumExplosion
+		EmptyWeapon: TiberiumExplosion
+	Explodes@1:
+		Weapon: TiberiumExplosion
+		EmptyWeapon: TiberiumExplosion
 	FreeActor@1:
 		Actor: HARV
 		SpawnOffset: 3,1
@@ -484,7 +490,7 @@ GASILO:
 		BuildPaletteOrder: 70
 		Prerequisites: ~humanstuff, proc
 	Valued:
-		Cost: 150
+		Cost: 100
 	Tooltip:
 		Name: Silo
 		Description: Stores excess Tiberium.
@@ -493,6 +499,9 @@ GASILO:
 		Dimensions: 2, 2
 	Selectable:
 		Bounds: 80, 48, -5, 0
+	Explodes:
+		Weapon: TiberiumExplosion
+		EmptyWeapon: TiberiumExplosion
 	-GivesBuildableArea:
 	Health:
 		HP: 30000
@@ -517,7 +526,7 @@ GASILO:
 		PipCount: 5
 		Capacity: 1500
 	Power:
-		Amount: -10
+		Amount: -5
 	SelectionDecorations:
 		VisualBounds: 80, 48, -5, 0
 

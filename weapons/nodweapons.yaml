@@ -211,10 +211,13 @@ BikeExplo:
 	ValidTargets: Ground, Water, Air
 	Warhead@1Dam_impact: SpreadDamage
 		Spread: 700
-		Damage: 80000
+		Damage: 90000
 		ValidTargets: Ground, Water, Air
 		AffectsParent: true
 		DamageTypes: Prone50Percent, TriggerProne, FireDeath
+		Versus:
+			Bike: 1
+			Wood: 200
 	Warhead@emp: GrantExternalCondition
 		Range: 4c0
 		Duration: 75
@@ -259,11 +262,12 @@ FlameHoloShrapnel:
 	Inherits: ^NoDamage
 	ReloadDelay: 300
 	Range: 3c0
-	Burst: 1
+	Burst: 5
+	BurstDelay: 2
 	Warhead@op: FireShrapnel
 		Weapon: FlameHologram
-		Amount: 5
-		AimChance: 10
+		Amount: 1
+		AimChance: 1
 		ThrowWithoutTarget: True
 		ValidTargets: Infantry, Vehicle, Building, Wall, Ground, Water, Air, AirHit
 
@@ -322,6 +326,11 @@ FlameHologram:
 		Actors: FLAMEHOLOGRAM
 		FallRate: 5000
 		Range: 5
+		Delay: 10
+		ValidTargets: Ground, Infantry, Air, Vehicle, Building, Wall
+	Warhead@4EffAir: CreateEffect
+		Explosions: holosmoke1, holosmoke2, holosmoke3, holosmoke4
+		ExplosionPalette: cyanjascpal
 		ValidTargets: Ground, Infantry, Air, Vehicle, Building, Wall
 
 CrusaHologram:
@@ -353,11 +362,13 @@ BuggyHologram:
 	Inherits: FlameHologram
 	Warhead@5Actor: SpawnActor
 		Actors: BUGGYHOLOGRAM
+		Amount: 3
 
 TickHologram:
 	Inherits: FlameHologram
 	Warhead@5Actor: SpawnActor
 		Actors: TICKHOLOGRAM
+		Amount: 1
 
 ApacheHologram:
 	Inherits: FlameHologram

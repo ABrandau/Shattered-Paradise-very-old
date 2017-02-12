@@ -65,7 +65,7 @@ CLOUD1:
 ORCA:
 	Inherits: ^Helicopter
 	Valued:
-		Cost: 900
+		Cost: 750
 	Tooltip:
 		Name: Orca Fighter
 	Buildable:
@@ -105,56 +105,55 @@ ORCA:
 		Actor: ORCA.Husk
 
 ORCAB:
-	Inherits: ^Plane
-	Valued:
-		Cost: 1500
-	Tooltip:
-		Name: Orca Bomber
-	Buildable:
-		Description: Heavy carpet Bomber.\nSlow but highly armored.\n\n  Strong vs Ground Units.\n  Weak vs Anti Air, Aircraft
-		Queue: Air
-		BuildPaletteOrder: 20
-		Prerequisites: ~gahpad, gatech
-	Selectable:
-		Bounds: 30,24
-	Aircraft:
-		CruiseAltitude: 3072
-		MaximumPitch: 120
-		TurnSpeed: 4
-		Speed: 120
-		AirborneCondition: airborne
-		MoveIntoShroud: true
-		TakeoffSound: orcaup1.aud
-		LandingSound: orcadwn1.aud
-	Health:
-		HP: 22500
-	Armor:
-		Type: Heavy
-	Armament:
-		Weapon: OBBomb
-	Armament@1:
-		Weapon: OBBomb2
-	AttackPlane:
-		Voice: Attack
-		FacingTolerance: 20
-	AmmoPool:
-		Ammo: 10
-		PipCount: 2
-		ReloadCount: 5
-		ReloadTicks: 200
-		PipType: Ammo
-		PipTypeEmpty: AmmoEmpty
-	AutoTarget:
-	RenderSprites:
-	Hovers@CRUISING:
-		RequiresCondition: cruising
-	SpawnActorOnDeath:
-		Actor: ORCAB.Husk
+    Inherits: ^Plane
+    Valued:
+        Cost: 1500
+    Tooltip:
+        Name: Orca Bomber
+    Buildable:
+        Description: Heavy carpet Bomber.\nSlow but highly armored.\n\n  Strong vs Ground Units.\n  Weak vs Anti Air, Aircraft
+        Queue: Air
+        BuildPaletteOrder: 20
+        Prerequisites: ~gahpad, gatech
+    Selectable:
+        Bounds: 30,24
+    Aircraft:
+        CruiseAltitude: 3072
+        MaximumPitch: 120
+        TurnSpeed: 4
+        IdealSeparation: 256
+        Speed: 120
+        AirborneCondition: airborne
+        MoveIntoShroud: true
+        TakeoffSound: orcaup1.aud
+        LandingSound: orcadwn1.aud
+    Health:
+        HP: 17500
+    Armor:
+        Type: Heavy
+    Armament@primary:
+        Weapon: OBBomb
+    AttackTurreted:
+    Turreted:
+        TurnSpeed: 360
+    AmmoPool:
+        Ammo: 10
+        PipCount: 2
+        ReloadCount: 5
+        ReloadTicks: 200
+        PipType: Ammo
+        PipTypeEmpty: AmmoEmpty
+    AutoTarget:
+    RenderSprites:
+    Hovers@CRUISING:
+        RequiresCondition: cruising
+    SpawnActorOnDeath:
+        Actor: ORCAB.Husk
 
 TRNSPORT:
 	Inherits: ^Helicopter
 	Valued:
-		Cost: 750
+		Cost: 500
 	Tooltip:
 		Name: Carryall
 	Buildable:
@@ -527,8 +526,10 @@ CERBERUS:
 		Type: CenterPosition
 	Armament@primary:
 		Weapon: CerberusLazor
+		LocalOffset: 500,0,0
 	Armament@secondary:
 		Weapon: CerberusLasorSpawn
+		LocalOffset: 300,200,0, 300,-200,0, -300,200,0, -300,-200,0
 	AttackHeli:
 		FacingTolerance: 240
 		Voice: Attack
@@ -549,7 +550,7 @@ CERBERUS:
 	BodyOrientation:
 		QuantizedFacings: 32
 	SpawnActorOnDeath:
-		Actor: GUARDIAN.Husk
+		Actor: CERBERUS.Husk
 	GrantTimedConditionOnDeploy:
 		DeployedCondition: HologramSpawn
 		CooldownTicks: 3000
@@ -565,6 +566,12 @@ CERBERUS:
 		RequiresCondition: HologramSpawn
 	ExplodeWeapon@2:
 		Weapon: TickHoloShrapnel
+		RequiresCondition: HologramSpawn
+	ExplodeWeapon@3:
+		Weapon: FlameHoloShrapnel
+		RequiresCondition: HologramSpawn
+	ExplodeWeapon@4:
+		Weapon: FlameHoloShrapnel
 		RequiresCondition: HologramSpawn
 
 ##########################################################
@@ -1083,7 +1090,7 @@ SCRBATTLESHIP:
 		Weapon: BattleshipCannon
 		LocalOffset: 0,0,0, 450,-200,0, -750,500,0, 600,-500,0, -750,0,300
 	Armament@2:
-		Weapon: BattleshipRocketDummy
+		Weapon: BattleshipRocket
 		LocalOffset: 0,0,0
 	AttackTurreted:
 	Turreted:
@@ -1386,6 +1393,13 @@ MINIWYVERM:
 		EmptyWeapon: ReturnDroneSummon
 	-SpawnActorOnDeath:
 
+MINIWYVERM2:
+	Inherits: MINIWYVERM
+	ExplodeWeapon:
+		Weapon: HealerDroneLasorSpawn
+	RenderSprites:
+		Image: miniwyverm
+
 WASP:
 	Inherits: ^Helicopter
 	Inherits@2: ^PermanentSelfHeal
@@ -1515,16 +1529,14 @@ DEVOURER:
 		Bounds: 120, 75, 0, -35
 	Aircraft:
 		TurnSpeed: 6
-		Speed: 35
+		Speed: 50
 		CruiseAltitude: 0c750
 		Repulsable: true
 		MoveIntoShroud: true
 		TakeoffSound: orcaup1.aud
 		LandingSound: orcadwn1.aud
 	Health:
-		HP: 200000
-	Armor:
-		Type: Light
+		HP: 175000
 	Voiced:
 		VoiceSet: Limpet
 	Armament@Primary:

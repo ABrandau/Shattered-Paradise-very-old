@@ -196,11 +196,11 @@ GAHPAD:
 		Range: 5c0
 	Exit@1:
 		SpawnOffset: 0,-256,0
+	ProductionFromMapEdge:
+		Produces: Air
 	RallyPoint:
 		Palette: mouse
 		IsPlayerPalette: false
-	Production:
-		Produces: Air
 	PrimaryBuilding:
 	Reservable:
 	RepairsUnits:
@@ -236,7 +236,7 @@ GARADR:
 		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
 		Prerequisites: proc, ~structures.gdi
 	Valued:
-		Cost: 1500
+		Cost: 1250
 	Tooltip:
 		Name: GDI Radar
 	ProvidesPrerequisite:
@@ -281,7 +281,7 @@ GATECH:
 		Description: Provides access to advanced cyborg technologies.
 		Prerequisites: gaweap, garadr, ~structures.gdi
 	Valued:
-		Cost: 3000
+		Cost: 2500
 	Tooltip:
 		Name: GDI Tech Center
 	ProvidesPrerequisite:
@@ -405,8 +405,6 @@ GAWALL:
 	SoundOnDamageTransition:
 		DamagedSounds:
 		DestroyedSounds:
-	Valued:
-		Cost: 50
 	CustomSellValue:
 		Value: 0
 	Tooltip:
@@ -630,6 +628,8 @@ NAHPAD:
 	Building:
 		Footprint: xx xx
 		Dimensions: 2,2
+	ProductionFromMapEdge:
+		Produces: Air
 	Health:
 		HP: 60000
 	RevealsShroud:
@@ -639,8 +639,6 @@ NAHPAD:
 	RallyPoint:
 		Palette: mouse
 		IsPlayerPalette: false
-	Production:
-		Produces: Air
 	PrimaryBuilding:
 		Interval: 1
 	Reservable:
@@ -676,7 +674,7 @@ NARADR:
 		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
 		Prerequisites: proc, ~structures.nod
 	Valued:
-		Cost: 1500
+		Cost: 1250
 	Tooltip:
 		Name: Nod Radar
 	ProvidesPrerequisite:
@@ -721,7 +719,7 @@ NATECH:
 		Description: Provides access to advanced Nod technologies.
 		Prerequisites: naweap, naradr, ~structures.nod
 	Valued:
-		Cost: 3000
+		Cost: 2500
 	Tooltip:
 		Name: Nod Tech Center
 	ProvidesPrerequisite:
@@ -1009,6 +1007,8 @@ MUAIR:
 	Building:
 		Footprint: xxxx xxxx
 		Dimensions: 2,4
+	ProductionFromMapEdge:
+		Produces: Air
 	Health:
 		HP: 60000
 	RevealsShroud:
@@ -1018,8 +1018,6 @@ MUAIR:
 	RallyPoint:
 		Palette: mouse
 		IsPlayerPalette: false
-	Production:
-		Produces: Air
 	PrimaryBuilding:
 	Reservable:
 	RepairsUnits:
@@ -1048,7 +1046,7 @@ MURADR:
 		BuildPaletteOrder: 90
 		Prerequisites: proc, ~structures.mut
 	Valued:
-		Cost: 1500
+		Cost: 1250
 	Tooltip:
 		Name: Dome Radar
 	ProvidesPrerequisite:
@@ -1091,7 +1089,7 @@ MUHALL:
 		Description: Provides access to contact with Forgotten Leaders.
 		Prerequisites: muweap, muradr, ~structures.mut
 	Valued:
-		Cost: 3000
+		Cost: 2500
 	Tooltip:
 		Name: Forgotten Hall
 	ProvidesPrerequisite:
@@ -1246,7 +1244,7 @@ SCRADVPOWR:
 	Valued:
 		Cost: 1000
 	Tooltip:
-		Name: Tiberium Reactior
+		Name: Tiberium Reactor
 		Description: Provides power for other structures and also stores resources.
 	ProvidesPrerequisite:
 		Prerequisite: scrpowr
@@ -1339,7 +1337,7 @@ SCRPROC:
 	Inherits@2: ^ScrinRender
 	Inherits@3: ^ScrinDeathExplo
 	Valued:
-		Cost: 1700
+		Cost: 1500
 	CustomSellValue:
 		Value: 400
 	Tooltip:
@@ -1360,6 +1358,12 @@ SCRPROC:
 		HP: 90000
 	RevealsShroud:
 		Range: 6c0
+	Explodes:
+		Weapon: TiberiumExplosion
+		EmptyWeapon: TiberiumExplosion
+	Explodes@1:
+		Weapon: TiberiumExplosion
+		EmptyWeapon: TiberiumExplosion
 	Refinery:
 		DockAngle: 160
 		DockOffset: 3,1
@@ -1516,9 +1520,9 @@ SCRDEPOT:
 		PlayerExperience: 15
 	ProximityExternalCondition:
 		Condition: AuraRepair
-		Range: 4c0
+		Range: 5c0
 	WithRangeCircle:
-		Range: 4c0
+		Range: 5c0
 		Type: Repair
 	RevealsShroud:
 		Range: 4c0
@@ -1538,7 +1542,7 @@ SCRRADR:
 		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
 		Prerequisites: scrproc, ~structures.scr
 	Valued:
-		Cost: 1500
+		Cost: 1250
 	Tooltip:
 		Name: Scrin Radar
 	ProvidesPrerequisite:
@@ -1585,7 +1589,7 @@ SCRTECH:
 		Description: Provides an area for surface sampling\nAllows the Scrin to adapt their most advanced units\nto the host planet.
 		Prerequisites: scrweap, scrradr, ~structures.scr
 	Valued:
-		Cost: 3000
+		Cost: 2500
 	Tooltip:
 		Name: Scrin Laboratory
 	ProvidesPrerequisite:
@@ -1852,7 +1856,7 @@ CABRADR:
 		Description: Provides an overview of the battlefield.\nCan detect cloaked units.\nRequires power to operate.
 		Prerequisites: proc, ~structures.cab
 	Valued:
-		Cost: 1500
+		Cost: 1250
 	Tooltip:
 		Name: C.A.B.A.L. Radar
 	ProvidesPrerequisite:
@@ -1927,7 +1931,7 @@ CABTECH:
 		Description: Provides access to advanced CABAL technologies.
 		Prerequisites: cabweap, cabradr, ~structures.cab
 	Valued:
-		Cost: 3000
+		Cost: 2500
 	Tooltip:
 		Name: Supercomputer
 	ProvidesPrerequisite:

@@ -121,6 +121,26 @@ APACHE.Husk:
 	FallsToEarth:
 		Explosion: SmallPlaneExplode
 
+CERBERUS.Husk:		
+	Inherits: ^AircraftHusk
+	Tooltip:
+		Name: Cerberus
+	Selectable:
+		Bounds: 1,1
+	Aircraft:
+		TurnSpeed: 5
+		Speed: 149
+	FallsToEarth:
+		Spins: False
+	WithShadow:
+	WithFacingSpriteBody:
+	BodyOrientation:
+		QuantizedFacings: 32	
+	RenderSprites:
+		Image: cerberus	
+	-RenderVoxels:
+	-WithVoxelBody:
+
 ############################################################
 #		MUT
 ############################################################

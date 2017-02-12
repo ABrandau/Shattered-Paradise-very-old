@@ -91,8 +91,8 @@ Heal:
 		Speed: 1c682
 	Warhead@1Dam: SpreadDamage
 		DebugOverlayColor: 00FF00
-		Spread: 175
-		Damage: -4000
+		Spread: 350
+		Damage: -5000
 		Versus:
 			Light: 60
 		ValidTargets: Infantry, Jumpjet
@@ -172,7 +172,7 @@ HoverMissile:
 		Palette: ra
 	Warhead@1Dam: SpreadDamage
 		Spread: 128
-		Damage: 3000
+		Damage: 4500
 		ValidTargets: Ground
 		Versus:
 			None: 25
@@ -362,33 +362,24 @@ AAFighterHellfire:
 		DamageTypes: Prone50Percent, TriggerProne, SmallExplosionDeath
 
 OBBomb:
-	Inherits: ^BombWarhead
-	Inherits@2: ^Large_Explosion
-	ReloadDelay: 30
-	Burst: 4
-	BurstDelay: 7
-	ValidTargets: Ground, Building, Infantry, Vehicle
-	Range: 3c0
-	Projectile: GravityBomb
-		Speed: 170
-		Image: 120mm
-		Shadow: true
-		Palette: ra
-	Warhead@1Dam: SpreadDamage
-		Falloff: 100, 80, 70, 60, 50
-		Spread: 400
-		Damage: 7000
-		ValidTargets: Ground, Building, Infantry, Vehicle
-		DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
-
-OBBomb2:
-	Inherits: OBBomb
-	Range: 1c0
-	Burst: 1
-	Projectile: Bullet
-		Speed: 170
-		Image: 120mm
-		Shadow: true
+    Inherits: ^BombWarhead
+    Inherits@2: ^Large_Explosion
+    ReloadDelay: 30
+    Burst: 5
+    BurstDelay: 6
+    ValidTargets: Ground, Building, Infantry, Vehicle
+    Range: 1c512
+    Projectile: GravityBomb
+        Speed: 170
+        Image: 120mm
+        Shadow: true
+        Palette: ra
+    Warhead@1Dam: SpreadDamage
+        Falloff: 100, 80, 70, 60, 50
+        Spread: 400
+        Damage: 7000
+        ValidTargets: Ground, Building, Infantry, Vehicle
+        DamageTypes: Prone100Percent, TriggerProne, ExplosionDeath
 
 GuardianRail:
 	Inherits: ^FullDamage
